@@ -1,0 +1,225 @@
+{
+  "keyword": "data-analist",
+  "count": 4,
+  "results": [
+    {
+      "numerooffreforem": "1992350",
+      "titreoffre": "Data Analist | Oudenaarde | Vast contract (H/F/X)",
+      "lieuxtravaillocalite": [
+        "OUDENAARDE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9700"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.604002,
+          "lat": 50.842609
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "478-10873-LEFOREM-BE-230714",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1992350",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-09-03",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1982298",
+      "titreoffre": "Lead Data analist (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUGGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.225324,
+          "lat": 51.20953
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Liantis talent services",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14242565_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1982298",
+      "datedebutdiffusion": "2026-07-14",
+      "datefindiffusion": "2026-09-12",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1982434",
+      "titreoffre": "Corporate data analist (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUGGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.225324,
+          "lat": 51.20953
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Liantis talent services",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14243608_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1982434",
+      "datedebutdiffusion": "2026-07-14",
+      "datefindiffusion": "2026-09-12",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1961774",
+      "titreoffre": "Data analist (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province de Flandre Occidentale",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE25",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Liantis talent services",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14067219_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1961774",
+      "datedebutdiffusion": "2026-06-29",
+      "datefindiffusion": "2026-08-28",
+      "metier": null,
+      "metiercodedimeco": null
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "idOffreEmploi": 2004838,
+  "numero": "2004838",
+  "titreOffre": "BI Analyst-Developer, Smals (H/F/X)",
+  "datePublication": "03/08/2026",
+  "dateFinDiffusion": "14/09/2026",
+  "dateDebutDiffusion": "03/08/2026",
+  "nomEmployeur": "Smals",
+  "nomPartenaire": "StepStone",
+  "secteurActiviteEmployeur": "Autres activités informatiques",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "SAINT-GILLES"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "B1 - Intermédiaire"
+    }
+  ],
+  "nombrePostes": 1,
+  "descriptionJob": "Smals réalise des projets ICT innovants dans l'e-gouvernement et l'e-santé pour les institutions de la sécurité sociale et des soins de santé. Pour Smals, \"ICT for society\" n'est pas qu'un slogan : tous nos projets profitent à la société. Smals contribue au portail de la sécurité sociale et à la plateforme eHealth. Les projets novateurs sont notre spécialité : Student@Work, Orgadon, digitalisation des prescriptions médicales, consultation de l'historique de la carrière, transmission plus rapide des résultats de test à son médecin...<br/>                 En tant que BI Analyst-Developer, vous analysez, concevez, développez et maintenez des processus ETL afin d'assurer des flux de données fiables, performants et pérennes. À partir des analyses fonctionnelles, vous réalisez des études techniques et développez des scripts ETL que vous optimisez principalement avec Talend. Vous contribuez également à la migration des processus existants vers Apache Hop.<br /> <br /> Vous êtes responsable du contrôle de la qualité des données et de l'exécution de scénarios de tests structurels, tout en assurant une documentation complète et claire des flux de données mis en place.<br /> <br /> Par ailleurs, vous participez activement à la création de tableaux de bord et de rapports destinés à soutenir la prise de décision basée sur les données. À ce titre, vous traduisez les besoins métier en solutions de visualisation pertinentes, développez des tableaux de bord performants et ergonomiques dans Tableau, optimisez les visualisations tant sur le plan des performances que de l'expérience utilisateur, et documentez les modèles de données ainsi que les visualisations associées.<br /> <br /> Vous intervenez également dans la mise en place, la configuration et la maintenance des environnements de développement et de test. Vous veillez à la stabilité, à la continuité et à la qualité globale de l'infrastructure BI et des flux de données. Vous surveillez le bon fonctionnement des traitements ETL et des tableaux de bord existants, intervenez en cas d'incident ou de problème de qualité des données, et mettez en œuvre des améliorations visant à renforcer la fiabilité et les performances. Vous assurez le suivi et la documentation des incidents et contribuez à la gestion opérationnelle de l'infrastructure afin de garantir la continuité du service.            ",
+  "metier": "Business Analyst TIC",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "webAddress": "https://www.stepstone.be/offres-d-emploi----2234646-inline.html?cid=Partner_LeForem___1-FRNL",
+    "formattedName": "Stepstone"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Business Analyst TIC",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Enseignement secondaire (deuxième cycle)"
+    },
+    {
+      "libelle": "Baccalauréat universitaire ou équivalent"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "03/08/2026",
+  "competencies": [],
+  "benefitsComments": "Titulaire d'un Bachelor ou d'un master en informatique, vous disposez d'une expérience avérée dans l'implémentation de processus ETL ainsi que dans la modélisation, le développement et la maintenance de tableaux de bord, de rapports et de data warehouses. Vous possédez de solides connaissances en ETL et traitement des données, conception et visualisation de tableaux de bord, bases de données et data warehouse, ainsi qu'en SQL, PL/SQL, Talend, Apache Hop, Tableau, Python et Oracle.<br /> <br /> Doté d'une grande capacité d'apprentissage et d'excellentes aptitudes analytiques, vous savez organiser votre travail de manière efficace.<br /> <br /> Votre sens de la communication vous permet de vulgariser des données complexes auprès d'un public non technique.<br /> <br /> Vous appréciez le travail en équipe tout en étant capable de travailler de manière autonome. Rigoureux et responsable, vous accordez une importance particulière à la qualité du travail livré.<br /> <br /> Enfin, vous disposez de connaissances passives en néerlandais et en anglais.",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "BI Analyst-Developer, Smals (H/F/X)",
+    "description": "Smals réalise des projets ICT innovants dans l'e-gouvernement et l'e-santé pour les institutions de la sécurité sociale et des soins de santé. Pour Smals, \"ICT for society\" n'est pas qu'un slogan : tous nos projets profitent à la société. Smals contribue au portail de la sécurité sociale et à la plateforme eHealth. Les projets novateurs sont notre spécialité : Student@Work, Orgadon, digitalisation des prescriptions médicales, consultation de l'historique de la carrière, transmission plus rapide des résultats de test à son médecin...<br/>                 En tant que BI Analyst-Developer, vous analysez, concevez, développez et maintenez des processus ETL afin d'assurer des flux de données fiables, performants et pérennes. À partir des analyses fonctionnelles, vous réalisez des études techniques et développez des scripts ETL que vous optimisez principalement avec Talend. Vous contribuez également à la migration des processus existants vers Apache Hop.<br /> <br /> Vous êtes responsable du contrôle de la qualité des données et de l'exécution de scénarios de tests structurels, tout en assurant une documentation complète et claire des flux de données mis en place.<br /> <br /> Par ailleurs, vous participez activement à la création de tableaux de bord et de rapports destinés à soutenir la prise de décision basée sur les données. À ce titre, vous traduisez les besoins métier en solutions de visualisation pertinentes, développez des tableaux de bord performants et ergonomiques dans Tableau, optimisez les visualisations tant sur le plan des performances que de l'expérience utilisateur, et documentez les modèles de données ainsi que les visualisations associées.<br /> <br /> Vous intervenez également dans la mise en place, la configuration et la maintenance des environnements de développement et de test. Vous veillez à la stabilité, à la continuité et à la qualité globale de l'infrastructure BI et des flux de données. Vous surveillez le bon fonctionnement des traitements ETL et des tableaux de bord existants, intervenez en cas d'incident ou de problème de qualité des données, et mettez en œuvre des améliorations visant à renforcer la fiabilité et les performances. Vous assurez le suivi et la documentation des incidents et contribuez à la gestion opérationnelle de l'infrastructure afin de garantir la continuité du service.            ",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "Smals",
+      "value": "2004838"
+    },
+    "datePosted": "03/08/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "Smals",
+      "sameAs": "Smals"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "2234646"
+}

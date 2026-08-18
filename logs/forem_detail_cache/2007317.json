@@ -1,0 +1,117 @@
+{
+  "idOffreEmploi": 2007317,
+  "numero": "2007317",
+  "titreOffre": "Lab Engineer - HPLC / LC-MS (H/F/X)",
+  "datePublication": "05/08/2026",
+  "dateFinDiffusion": "16/09/2026",
+  "dateDebutDiffusion": "05/08/2026",
+  "nomEmployeur": "QUALITY ASSISTANCE",
+  "secteurActiviteEmployeur": "Autres activités de contrôle et analyses techniques",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "regimeTravailPrecision": "Travail de jour",
+  "lieuxTravail": [
+    "Thuin"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "B2 - Avancé",
+      "comment": ""
+    },
+    {
+      "code": "EN",
+      "libelle": "Anglais",
+      "required": true,
+      "experience": "B1 - Intermédiaire",
+      "comment": ""
+    }
+  ],
+  "nombrePostes": 1,
+  "logoEmployeur": "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t2oAAAA4dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55+Vd5NwAAACF0RVh0aWNjOmRlc2NyaXB0aW9uAHNSR0IgSUVDNjE5NjYtMi4xV63aRwAAACZ0RVh0aWNjOm1hbnVmYWN0dXJlcgBJRUMgaHR0cDovL3d3dy5pZWMuY2gcfwBMAAAAN3RFWHRpY2M6bW9kZWwASUVDIDYxOTY2LTIuMSBEZWZhdWx0IFJHQiBjb2xvdXIgc3BhY2UgLSBzUkdCRFNIqQAAACJ0RVh0aWxsdXN0cmF0b3I6Q3JlYXRvclN1YlRvb2wAQUlSb2Jpbgr8dswAAAAqdEVYdGlsbHVzdHJhdG9yOklzRmlsZVNhdmVkVmlhSW5zdGFudFNhdmUAVHJ1ZalbQIEAAAAedEVYdGlsbHVzdHJhdG9yOlN0YXJ0dXBQcm9maWxlAFdlYqtR+HcAAAAkdEVYdHBkZjpQcm9kdWNlcgBBZG9iZSBQREYgbGlicmFyeSAxNy4wMAXvdAsAAAAadEVYdHBkZng6Q3JlYXRvclZlcnNpb24AMjEuMC4w5Pal3QAAACh0RVh0eG1wOkNyZWF0ZURhdGUAMjAyNi0wMS0wOFQwOTo1MjowMCswMTowMFku+MIAAAAwdEVYdHhtcDpDcmVhdG9yVG9vbABBZG9iZSBJbGx1c3RyYXRvciAzMC4wIChXaW5kb3dzKR1cznUAAAAqdEVYdHhtcDpNZXRhZGF0YURhdGUAMjAyNi0wMS0wOFQwOTo1MjowMCswMTowMNF0l0UAAAAjdEVYdHhtcDpNb2RpZnlEYXRlADIwMjYtMDEtMDhUMDg6NTI6MDBa31/M4gAAABt0RVh0eG1wTU06RGVyaXZlZEZyb20AcHJvb2Y6cGRmthUt5QAAAD10RVh0eG1wTU06RG9jdW1lbnRJRAB4bXAuZGlkOmU2MThhYWFhLTVjMzctM2U0Ny04OGE4LTQwMWI3MjE5ZTA5N0gSBSMAAAA9dEVYdHhtcE1NOkluc3RhbmNlSUQAeG1wLmlpZDplNjE4YWFhYS01YzM3LTNlNDctODhhOC00MDFiNzIxOWUwOTc+NZIpAAAAPnRFWHR4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQAdXVpZDo2NUU2MzkwNjg2Q0YxMURCQTZFMkQ4ODdDRUFDQjQwN1hO8WkAAAAedEVYdHhtcE1NOlJlbmRpdGlvbkNsYXNzAHByb29mOnBkZoSm34kAAAAASUVORK5CYII=",
+  "logoMimeType": "image/png",
+  "descriptionEmployeur": "<p></p>\n<h2>Who we are</h2>\n<h3>And why it matters</h3>\n<p>We are a leading European analytical CRO dedicated to accelerating access to life-changing therapies. For more than 40 years, we have supported innovative drug development through analytical excellence, regulatory reliability and trusted partnerships.</p>\n<p>From our GMP-certified Belgian facility, more than 280 specialists contribute to the development of complex modalities including biologics, nanomedicines, mRNA technologies and cell and gene therapies. Having supported over 2,000 drug candidates, we continue to invest heavily in technology, expertise and people to help innovative medicines reach patients with uncompromising speed and quality.</p>\n<p></p>",
+  "descriptionJob": "<p></p>\n<h2>Your next challenge</h2>\n<h3>Ready to make a difference? Here's what awaits you.</h3>\n<p>As an<span>&nbsp;</span><strong>HPLC / LC-MS Laboratory Engineer</strong>, you will join a team of five scientists and report directly to the Technical Leader. Working with a remarkable diversity of samples, including small molecules, proteins, oligonucleotides, viral vectors, mRNA vaccines, peptides, formulation excipients and nanoparticles, you will play a direct role in generating the analytical evidence that supports the development of future medicines.</p>\n<p>From early research activities through to clinical development and commercialisation, your expertise in liquid chromatography coupled with mass spectrometry will help ensure the quality, reliability and regulatory compliance of pharmaceutical products. Every analysis you perform contributes to bringing safe and effective therapies to patients faster.</p>\n<h2></h2>\n<h2></h2>\n<h2>Your key responsibilities</h2>\n<h3><strong>Here's what you'll be in charge of:</strong></h3>\n<ul>\n<li>Applying existing analytical methods to determine the identity, purity, and assay of various products in compliance with GMP requirements</li>\n<li>Applying existing analytical in the context of bioanalytical studies in compliance with GLP (Good Laboratory Practice) and GcLP (Good Clinical Laboratory Practice) requirements</li>\n<li>Developing, validating, and adapting analytical protocols to meet specific project needs</li>\n<li>Performing analyses using state-of-the-art LC-MS instrumentation, including XevoTQ systems, QDa, and LC-SQD2</li>\n<li>Conducting stability studies and QC release testing</li>\n<li>Processing and interpreting analytical data</li>\n<li>Preparing analytical reports and related scientific documentation</li>\n</ul>\n<p></p>",
+  "metier": "Laborantin industriel / Laborantine industrielle",
+  "positionDateInfo": {},
+  "shift": {
+    "shiftPeriod": "",
+    "hours": "38"
+  },
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "personNameAffix": "2",
+    "prefferedGivenName": "Celia",
+    "familyName": "Cosseddu",
+    "webAddress": "https://www.quality-assistance.com/en/jobs/17458-lab-engineer-hplc-lc-ms",
+    "formattedName": "Celia Cosseddu"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "H150301-1",
+      "libelle": "Laborantin industriel / Laborantine industrielle",
+      "experience": "Entre 2 et 5 ans - "
+    }
+  ],
+  "recentExperience": [],
+  "permisConduire": [
+    {
+      "code": "5101005",
+      "libelle": "Permis de conduire validé pour une catégorie B",
+      "required": true,
+      "experience": "0",
+      "valeur": "B"
+    }
+  ],
+  "permisConduireSimplified": "Permis de conduire validé pour une catégorie B",
+  "certifications": [],
+  "etudes": [
+    {
+      "code": "Formation supérieure initiale de type court (Baccalauréat)",
+      "libelle": "Chimie"
+    },
+    {
+      "code": "Formation supérieure initiale de type long (Master)",
+      "libelle": "Sciences"
+    },
+    {
+      "code": "Formation supérieure initiale de type long (Master)",
+      "libelle": "Chimie"
+    }
+  ],
+  "dateModification": "05/08/2026",
+  "competencies": [],
+  "niveauEtude": "<p></p>\n<h2>Skills you'll need to bring</h2>\n<p>To succeed in this role, you'll demonstrate:</p>\n<ul>\n<li>A scientific Bachelor's degree (BAC+3) or Master's degree (BAC+5)</li>\n<li>Initial professional experience in liquid chromatography and/or liquid chromatography coupled with mass spectrometry (LC-MS)</li>\n<li>Knowledge of analytical method application, validation, and development principles</li>\n<li>The ability to interpret analytical data and draw scientific conclusions</li>\n<li>Knowledge of GMP and/or GLP environments is considered an asset</li>\n<li>Experience with Empower and/or MassLynx software is an asset</li>\n</ul>\n<p></p>",
+  "benefitsComments": "<p></p>\n<h2>Our commitment to you</h2>\n<p>Join us and make a real impact on patients&rsquo; lives while growing your career in a supportive, innovative environment.<span>&nbsp;</span>Here's why you'll love working with us.</p>\n<p>At Quality Assistance, your expertise will contribute to some of today&rsquo;s most innovative therapeutic programmes while continuously expanding your scientific knowledge.</p>\n<p>You can expect:</p>\n<ul>\n<li>Exposure to a broad portfolio of projects covering biologics, mRNA, nanomedicines, gene therapies and other emerging modalities</li>\n<li>Access to state-of-the-art analytical technologies and continuously evolving laboratory capabilities</li>\n<li>Ongoing learning opportunities through our internal<span>&nbsp;</span>Pharma Academy</li>\n<li>A collaborative scientific environment where excellence is recognised and knowledge sharing is encouraged</li>\n<li>Strong support for work-life balance and employee well-being</li>\n<li>The opportunity to grow within a company that is expanding its analytical capacity and international reach</li>\n</ul>\n<p></p>",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Lab Engineer - HPLC / LC-MS (H/F/X)",
+    "description": "<p></p>\n<h2>Your next challenge</h2>\n<h3>Ready to make a difference? Here's what awaits you.</h3>\n<p>As an<span>&nbsp;</span><strong>HPLC / LC-MS Laboratory Engineer</strong>, you will join a team of five scientists and report directly to the Technical Leader. Working with a remarkable diversity of samples, including small molecules, proteins, oligonucleotides, viral vectors, mRNA vaccines, peptides, formulation excipients and nanoparticles, you will play a direct role in generating the analytical evidence that supports the development of future medicines.</p>\n<p>From early research activities through to clinical development and commercialisation, your expertise in liquid chromatography coupled with mass spectrometry will help ensure the quality, reliability and regulatory compliance of pharmaceutical products. Every analysis you perform contributes to bringing safe and effective therapies to patients faster.</p>\n<h2></h2>\n<h2></h2>\n<h2>Your key responsibilities</h2>\n<h3><strong>Here's what you'll be in charge of:</strong></h3>\n<ul>\n<li>Applying existing analytical methods to determine the identity, purity, and assay of various products in compliance with GMP requirements</li>\n<li>Applying existing analytical in the context of bioanalytical studies in compliance with GLP (Good Laboratory Practice) and GcLP (Good Clinical Laboratory Practice) requirements</li>\n<li>Developing, validating, and adapting analytical protocols to meet specific project needs</li>\n<li>Performing analyses using state-of-the-art LC-MS instrumentation, including XevoTQ systems, QDa, and LC-SQD2</li>\n<li>Conducting stability studies and QC release testing</li>\n<li>Processing and interpreting analytical data</li>\n<li>Preparing analytical reports and related scientific documentation</li>\n</ul>\n<p></p>",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "QUALITY ASSISTANCE",
+      "value": "2007317"
+    },
+    "datePosted": "05/08/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "QUALITY ASSISTANCE",
+      "sameAs": "QUALITY ASSISTANCE"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  }
+}

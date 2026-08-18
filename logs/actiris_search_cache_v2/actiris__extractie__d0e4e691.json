@@ -1,0 +1,54 @@
+{
+  "keyword": "extractie",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5923315",
+      "codeDomaineImt": "L''4",
+      "codeModeGestion": null,
+      "codePostal": "1180",
+      "employeur": null,
+      "regimeTravail": "NO",
+      "titreFr": "Electricien H/F/X",
+      "titreNl": "Electricien H/F/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Select",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0239843188",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-11T14:49:53+02:00",
+      "dateModification": "2026-08-12T13:59:53+02:00"
+    },
+    {
+      "reference": "5919552",
+      "codeDomaineImt": "V'2",
+      "codeModeGestion": null,
+      "codePostal": "1348",
+      "employeur": {
+        "nomFr": "ANGEL YEAST EUROPEAN INNOVATION CENTER",
+        "nomNl": null,
+        "numeroEntreprise": "1037188930"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Bakery Engineer / R&amp;D Technologist M/W/X",
+      "titreNl": "Bakery Engineer / R&amp;D Technologist M/W/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": "Louvain-la-Neuve",
+      "communeNl": "Louvain-la-Neuve",
+      "numeroEntreprise": "1037188930",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-06T11:45:00+02:00",
+      "dateModification": "2026-08-06T11:45:00+02:00"
+    }
+  ]
+}

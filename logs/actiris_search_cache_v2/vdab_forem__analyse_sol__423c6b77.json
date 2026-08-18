@@ -1,0 +1,58 @@
+{
+  "keyword": "analyse sol",
+  "provenance_mode": "VDAB_FOREM",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5924953",
+      "codeDomaineImt": "A'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "AUSTIN BRIGHT",
+        "nomNl": "AUSTIN BRIGHT",
+        "numeroEntreprise": "0600938952"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Comptable Senior | Trésorerie, Analyse & Clôtures  M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Bruxelles",
+      "communeNl": "Brussel",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-13T07:10:03.4889934+02:00",
+      "dateModification": "2026-08-13T07:10:03.4889934+02:00"
+    },
+    {
+      "reference": "4290979",
+      "codeDomaineImt": "Y'2",
+      "codeModeGestion": null,
+      "codePostal": "2570",
+      "employeur": {
+        "nomFr": "JOBLINK",
+        "nomNl": "JOBLINK",
+        "numeroEntreprise": "0767817356"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur de travail du sol H/F/X",
+      "titreNl": "Opérateur de travail du sol M/V/X",
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Duffel",
+      "communeNl": "Duffel",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2024-01-02T18:11:16+01:00",
+      "dateModification": "2026-06-16T20:25:55+02:00"
+    }
+  ]
+}

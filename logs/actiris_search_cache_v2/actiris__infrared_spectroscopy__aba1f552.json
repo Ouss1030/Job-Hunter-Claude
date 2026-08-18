@@ -1,0 +1,33 @@
+{
+  "keyword": "infrared spectroscopy",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5925099",
+      "codeDomaineImt": "L''3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "ECOLE ROYALE MILITAIRE",
+        "nomNl": "KONINKLIJKE MILITAIRE SCHOOL",
+        "numeroEntreprise": "0209460513"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Research technician (WARCOM) M/W/X",
+      "titreNl": "Research technician (WARCOM) M/W/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0209460513",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-13T10:45:48+02:00",
+      "dateModification": "2026-08-13T10:53:32+02:00"
+    }
+  ]
+}

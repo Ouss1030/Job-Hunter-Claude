@@ -1,0 +1,341 @@
+{
+  "keyword": "kwaliteitscontrole",
+  "count": 6,
+  "results": [
+    {
+      "numerooffreforem": "2015031",
+      "titreoffre": "Kwaliteitscontroleur | Veurne (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VEURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8630"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.654885,
+          "lat": 51.071043
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "137-49814-LEFOREM-BE-120811",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015031",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Intervention technique en contrôle essai qualité en électricité et électronique",
+      "metiercodedimeco": "H1504"
+    },
+    {
+      "numerooffreforem": "2014959",
+      "titreoffre": "Medewerker kwaliteitscontrole Metaal | Waregem (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8790"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.425738,
+          "lat": 50.8762
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Construction de bâtiments",
+        "promotion immobilière"
+      ],
+      "secteurscodenace": [
+        "41"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "337-46241-LEFOREM-BE-120810",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014959",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Intervention technique qualité en mécanique et travail des métaux",
+      "metiercodedimeco": "H1506"
+    },
+    {
+      "numerooffreforem": "2012925",
+      "titreoffre": "Kwaliteitscontroleur | Veurne (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VEURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8630"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.654885,
+          "lat": 51.071043
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "137-49657-LEFOREM-BE-100823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2012925",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Intervention technique en contrôle essai qualité en électricité et électronique",
+      "metiercodedimeco": "H1504"
+    },
+    {
+      "numerooffreforem": "2011579",
+      "titreoffre": "Kwaliteitscontroleur Labo 2-Ploegen | Quality Control Medewerker | Laborant Voedingsindustrie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ZONNEBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8980"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.987467,
+          "lat": 50.873188
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français",
+        "Néerlandais",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51224-LEFOREM-BE-090823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011579",
+      "datedebutdiffusion": "2026-08-09",
+      "datefindiffusion": "2026-09-20",
+      "metier": "Intervention technique en contrôle essai qualité en électricité et électronique",
+      "metiercodedimeco": "H1504"
+    },
+    {
+      "numerooffreforem": "2011503",
+      "titreoffre": "kwaliteitscontrole (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HEUVELLAND"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8958"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.771596,
+          "lat": 50.782581
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Forum Jobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "References",
+      "referenceexterne": "10551908",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011503",
+      "datedebutdiffusion": "2026-08-08",
+      "datefindiffusion": "2026-09-19",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2010622",
+      "titreoffre": "kwaliteitscontrole (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HEUVELLAND"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8950"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.825053,
+          "lat": 50.745861
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14501204_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010622",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Conduite d'équipement de conditionnement",
+      "metiercodedimeco": "H3301"
+    }
+  ]
+}

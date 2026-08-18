@@ -1,0 +1,691 @@
+{
+  "keyword": "data engineer",
+  "count": 12,
+  "results": [
+    {
+      "numerooffreforem": "2011040",
+      "titreoffre": "Data Engineer - Microsoft Fabric / Azure, Nationale Loterij (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.351697,
+          "lat": 50.846557
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Nationale Loterij",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Administration publique et défense",
+        "sécurité sociale obligatoire"
+      ],
+      "secteurscodenace": [
+        "84"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2235510",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011040",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Data engineer",
+      "metiercodedimeco": "M180101-4"
+    },
+    {
+      "numerooffreforem": "2010470",
+      "titreoffre": "Data Engineer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "COMINES-WARNETON"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7780"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.001907,
+          "lat": 50.7712
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "TALENTUS - Talentus",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010470",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Data engineer",
+      "metiercodedimeco": "M180101-4"
+    },
+    {
+      "numerooffreforem": "2009955",
+      "titreoffre": "Data Engineer Health Sector, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2235112",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009955",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Data manager",
+      "metiercodedimeco": "M180101-1"
+    },
+    {
+      "numerooffreforem": "2009954",
+      "titreoffre": "Data Engineer Health Sector, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2235113",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009954",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Data manager",
+      "metiercodedimeco": "M180101-1"
+    },
+    {
+      "numerooffreforem": "2005222",
+      "titreoffre": "Data Engineer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ANTWERPEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province d'Anvers",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE21",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.397798,
+          "lat": 51.204691
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "AG Digipolis Antwerpen",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Programmation, conseil et autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "62"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14453003_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005222",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-10-23",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1999754",
+      "titreoffre": "Senior tender Engineer | Data centers | CDI (H/F/X)",
+      "lieuxtravaillocalite": [
+        "COURCELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6180"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.37634,
+          "lat": 50.460157
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "379-4636-LEFOREM-BE-300700",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1999754",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-09-10",
+      "metier": "Assistanat en ressources humaines",
+      "metiercodedimeco": "M1501"
+    },
+    {
+      "numerooffreforem": "1996971",
+      "titreoffre": "Machine Learning Engineer, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2233219",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1996971",
+      "datedebutdiffusion": "2026-07-27",
+      "datefindiffusion": "2026-09-07",
+      "metier": "Data scientist",
+      "metiercodedimeco": "M140301-2"
+    },
+    {
+      "numerooffreforem": "1986887",
+      "titreoffre": "Data Engineer Health Sector (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345186,
+          "lat": 50.82513
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "SMALS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Programmation, conseil et autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "62"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14283502_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1986887",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Administration de systèmes d'information",
+      "metiercodedimeco": "M1801"
+    },
+    {
+      "numerooffreforem": "1986888",
+      "titreoffre": "Data Engineer Health Sector (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345186,
+          "lat": 50.82513
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "SMALS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Programmation, conseil et autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "62"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14283502_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1986888",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Administration de systèmes d'information",
+      "metiercodedimeco": "M1801"
+    },
+    {
+      "numerooffreforem": "1966431",
+      "titreoffre": "Data-Engineer /X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "THE PROFILE GROUP",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14108179_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1966431",
+      "datedebutdiffusion": "2026-07-02",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Administration de systèmes d'information",
+      "metiercodedimeco": "M1801"
+    },
+    {
+      "numerooffreforem": "1968601",
+      "titreoffre": "Data-Engineer  (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1130"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.418294,
+          "lat": 50.891956
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Profile Group",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Recherche-développement scientifique"
+      ],
+      "secteurscodenace": [
+        "72"
+      ],
+      "source": "References",
+      "referenceexterne": "10534280",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1968601",
+      "datedebutdiffusion": "2026-07-02",
+      "datefindiffusion": "2026-08-16",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1966432",
+      "titreoffre": "Data-Engineer /X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "THE PROFILE GROUP",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14108179_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1966432",
+      "datedebutdiffusion": "2026-07-02",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Administration de systèmes d'information",
+      "metiercodedimeco": "M1801"
+    }
+  ]
+}

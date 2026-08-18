@@ -1,0 +1,108 @@
+{
+  "keyword": "physical chemistry",
+  "provenance_mode": "PARTNER",
+  "total_reported": 4,
+  "count_saved": 4,
+  "results": [
+    {
+      "reference": "5919807",
+      "codeDomaineImt": "W'2",
+      "codeModeGestion": null,
+      "codePostal": "8630",
+      "employeur": {
+        "nomFr": null,
+        "nomNl": "KS - CONSULTING",
+        "numeroEntreprise": "0778600489"
+      },
+      "regimeTravail": "PT",
+      "titreFr": null,
+      "titreNl": "Security Engineer - Risk & Physical Security M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Avekapelle",
+      "communeNl": "Avekapelle",
+      "numeroEntreprise": "0778600489",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-06T00:00:00+02:00",
+      "dateModification": "2026-08-06T00:00:00+02:00"
+    },
+    {
+      "reference": "5916763",
+      "codeDomaineImt": "V'1",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "STEPSTONE",
+        "nomNl": "STEPSTONE",
+        "numeroEntreprise": "0459971228"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Onsite Associate II, Inventory & Material H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Bruxelles",
+      "communeNl": "Brussel",
+      "numeroEntreprise": "0459971228",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-04T00:00:00+02:00",
+      "dateModification": "2026-08-04T00:00:00+02:00"
+    },
+    {
+      "reference": "5914399",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "TALENCIA CONSULTING",
+        "nomNl": "TALENCIA CONSULTING",
+        "numeroEntreprise": "0502698441"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Talencia Consulting - Business Analyst H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-31T00:00:00+02:00",
+      "dateModification": "2026-07-31T00:00:00+02:00"
+    },
+    {
+      "reference": "2391922",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "2030",
+      "employeur": {
+        "nomFr": "SGS BELGIUM",
+        "nomNl": "SGS BELGIUM",
+        "numeroEntreprise": "0404882750"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Analyste - Chemistry Mono H/F/X",
+      "titreNl": "Analyste - Chemistry Mono M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0459971228",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-04-13T00:00:00+02:00",
+      "dateModification": "2025-08-18T20:27:15+02:00"
+    }
+  ]
+}

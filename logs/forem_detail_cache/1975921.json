@@ -1,0 +1,191 @@
+{
+  "idOffreEmploi": 1975921,
+  "numero": "1975921",
+  "titreOffre": " Assistant qualité / Assistante qualité (H/F/X)",
+  "datePublication": "09/07/2026",
+  "dateFinDiffusion": "20/08/2026",
+  "dateDebutDiffusion": "09/07/2026",
+  "nomEmployeur": "THE JOB STORE - THE JOB STORE",
+  "secteurActiviteEmployeur": "Activités des agences de placement de main-d'oeuvre",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "Deinze"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "B2 - Avancé",
+      "comment": ""
+    },
+    {
+      "code": "NL",
+      "libelle": "Néerlandais",
+      "required": true,
+      "experience": "C2 - Expert",
+      "comment": ""
+    },
+    {
+      "code": "EN",
+      "libelle": "Anglais",
+      "required": true,
+      "experience": "B2 - Avancé",
+      "comment": ""
+    }
+  ],
+  "nombrePostes": 1,
+  "logoEmployeur": "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",
+  "logoMimeType": "image/png",
+  "descriptionJob": "<p></p>\n<p>Notre agence The Job Store recherche pour son client un Assistant qualit&eacute; trilingue et experiment&eacute;.</p>\n<p><strong>Vos missions :&nbsp;</strong></p>\n<p>Vous soutenez les processus qualit&eacute; en combinant travail terrain, administratif et am&eacute;lioration continue.<br>Vous r&eacute;alisez des contr&ocirc;les, analyses de risques, proc&eacute;dures et actions pr&eacute;ventives li&eacute;es &agrave; la s&eacute;curit&eacute;, l&rsquo;environnement et la conformit&eacute; r&eacute;glementaire.<br>Vous collaborez avec la production, g&eacute;rez les donn&eacute;es CRM et veillez au respect des normes en vigueur.<br>Vous participez activement &agrave; l&rsquo;optimisation des proc&eacute;dures qualit&eacute; et &agrave; l&rsquo;&eacute;volution du service.</p>\n<p><strong>Profil :&nbsp;</strong></p>\n<p>Titulaire d&rsquo;un Bachelor ou Master en bio-ing&eacute;nierie, vous &ecirc;tes int&eacute;ress&eacute;(e) par le secteur alimentaire.<br>Vous parlez le NL + bonne ma&icirc;trise du fran&ccedil;ais et de l&rsquo;anglais,<br>Vous &ecirc;tes &agrave; l&rsquo;aise avec les outils informatiques et apprenez rapidement de nouveaux logiciels.<br>Vous &ecirc;tes rigoureux(se), analytique, organis&eacute;(e) et orient&eacute;(e) solutions, avec un bon esprit critique et pragmatique.<br>Vous aimez contribuer &agrave; l&rsquo;am&eacute;lioration des proc&eacute;dures et faites preuve de flexibilit&eacute;, de fiabilit&eacute; et de maturit&eacute; professionnelle.</p>\n<p><strong>Offre :&nbsp;</strong></p>\n<p></p>\n<p>Vous int&eacute;grez directement l&rsquo;entreprise en CDI, dans un environnement familial, convivial et &agrave; taille humaine.<br>Vous b&eacute;n&eacute;ficiez d&rsquo;un poste vari&eacute; &agrave; temps plein, avec un package salarial attractif et des avantages extral&eacute;gaux.<br>L&rsquo;entreprise valorise la confiance, la qualit&eacute; et la durabilit&eacute;, tout en offrant un cadre propice &agrave; l&rsquo;apprentissage et au d&eacute;veloppement.<br>Des perspectives d&rsquo;&eacute;volution sont possibles, notamment vers un r&ocirc;le de conseiller en pr&eacute;vention selon vos int&eacute;r&ecirc;ts.</p>\n<p>Cette offre correspond &agrave; votre profil ? Faites-nous parvenir votre CV par mail sur mouscron@thejobstore.be ou appelez-nous au 056 48 89 93 !</p>\n<p></p>\n<p></p>",
+  "metier": "Laborantin industriel / Laborantine industrielle",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "personNameAffix": "2",
+    "prefferedGivenName": "The JobStore",
+    "familyName": "Intérim",
+    "email": "mouscron@thejobstore.be",
+    "webAddress": "https://thejobstore.be/vacancy&id=5927",
+    "formattedName": "The JobStore Intérim"
+  },
+  "softSkills": [
+    {
+      "code": "01",
+      "libelle": "Acceptation de la critique",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "08",
+      "libelle": "Faculté d’adaptation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "05",
+      "libelle": "Esprit d’équipe",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "12",
+      "libelle": "Respect des règles",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "officeSkills": [
+    {
+      "code": "10",
+      "libelle": "Traitement de l'information",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "20",
+      "libelle": "Communication",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "30",
+      "libelle": "Création de contenu",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "40",
+      "libelle": "Sécurité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "50",
+      "libelle": "Résolution de problèmes",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "experience": [
+    {
+      "code": "H150301-1",
+      "libelle": "Laborantin industriel / Laborantine industrielle",
+      "required": true,
+      "experience": "Entre 2 et 5 ans - "
+    }
+  ],
+  "recentExperience": [],
+  "permisConduire": [
+    {
+      "code": "5101005",
+      "libelle": "Permis de conduire validé pour une catégorie B",
+      "experience": "0",
+      "valeur": "B"
+    }
+  ],
+  "permisConduireSimplified": "Permis de conduire validé pour une catégorie B",
+  "certifications": [
+    {
+      "code": "4202001",
+      "libelle": "Attestation de bonnes pratiques d'hygiène dans le secteur alimentaire (BPH)",
+      "experience": "0",
+      "valeur": "1ALH001"
+    }
+  ],
+  "etudes": [
+    {
+      "code": "Formation supérieure initiale de type long (Master)",
+      "libelle": "Biotechnologie"
+    }
+  ],
+  "dateModification": "09/07/2026",
+  "competencies": [
+    {
+      "code": "24200",
+      "libelle": "Réaliser des analyses en  : Bactériologie",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "24201",
+      "libelle": "Réaliser des analyses en  : Biochimie",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "24202",
+      "libelle": "Réaliser des analyses en  : Biologie, microbiologie",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": " Assistant qualité / Assistante qualité (H/F/X)",
+    "description": "<p></p>\n<p>Notre agence The Job Store recherche pour son client un Assistant qualit&eacute; trilingue et experiment&eacute;.</p>\n<p><strong>Vos missions :&nbsp;</strong></p>\n<p>Vous soutenez les processus qualit&eacute; en combinant travail terrain, administratif et am&eacute;lioration continue.<br>Vous r&eacute;alisez des contr&ocirc;les, analyses de risques, proc&eacute;dures et actions pr&eacute;ventives li&eacute;es &agrave; la s&eacute;curit&eacute;, l&rsquo;environnement et la conformit&eacute; r&eacute;glementaire.<br>Vous collaborez avec la production, g&eacute;rez les donn&eacute;es CRM et veillez au respect des normes en vigueur.<br>Vous participez activement &agrave; l&rsquo;optimisation des proc&eacute;dures qualit&eacute; et &agrave; l&rsquo;&eacute;volution du service.</p>\n<p><strong>Profil :&nbsp;</strong></p>\n<p>Titulaire d&rsquo;un Bachelor ou Master en bio-ing&eacute;nierie, vous &ecirc;tes int&eacute;ress&eacute;(e) par le secteur alimentaire.<br>Vous parlez le NL + bonne ma&icirc;trise du fran&ccedil;ais et de l&rsquo;anglais,<br>Vous &ecirc;tes &agrave; l&rsquo;aise avec les outils informatiques et apprenez rapidement de nouveaux logiciels.<br>Vous &ecirc;tes rigoureux(se), analytique, organis&eacute;(e) et orient&eacute;(e) solutions, avec un bon esprit critique et pragmatique.<br>Vous aimez contribuer &agrave; l&rsquo;am&eacute;lioration des proc&eacute;dures et faites preuve de flexibilit&eacute;, de fiabilit&eacute; et de maturit&eacute; professionnelle.</p>\n<p><strong>Offre :&nbsp;</strong></p>\n<p></p>\n<p>Vous int&eacute;grez directement l&rsquo;entreprise en CDI, dans un environnement familial, convivial et &agrave; taille humaine.<br>Vous b&eacute;n&eacute;ficiez d&rsquo;un poste vari&eacute; &agrave; temps plein, avec un package salarial attractif et des avantages extral&eacute;gaux.<br>L&rsquo;entreprise valorise la confiance, la qualit&eacute; et la durabilit&eacute;, tout en offrant un cadre propice &agrave; l&rsquo;apprentissage et au d&eacute;veloppement.<br>Des perspectives d&rsquo;&eacute;volution sont possibles, notamment vers un r&ocirc;le de conseiller en pr&eacute;vention selon vos int&eacute;r&ecirc;ts.</p>\n<p>Cette offre correspond &agrave; votre profil ? Faites-nous parvenir votre CV par mail sur mouscron@thejobstore.be ou appelez-nous au 056 48 89 93 !</p>\n<p></p>\n<p></p>",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "THE JOB STORE - THE JOB STORE",
+      "value": "1975921"
+    },
+    "datePosted": "09/07/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "THE JOB STORE - THE JOB STORE",
+      "sameAs": "THE JOB STORE - THE JOB STORE"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "keyword": "process analyst",
+  "count": 2,
+  "results": [
+    {
+      "numerooffreforem": "1958739",
+      "titreoffre": "Product Owner & Business Analyst Back Office-processen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LEUVEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "3000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.714342,
+          "lat": 50.883081
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "PRAGMA",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14040012_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1958739",
+      "datedebutdiffusion": "2026-06-25",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Expertise et support technique en systèmes d'information",
+      "metiercodedimeco": "M1806"
+    },
+    {
+      "numerooffreforem": "1958724",
+      "titreoffre": "Business Analyst Back Office-processen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LEUVEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "3000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.714342,
+          "lat": 50.883081
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "PRAGMA",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14039904_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1958724",
+      "datedebutdiffusion": "2026-06-25",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Études et développement informatique",
+      "metiercodedimeco": "M1805"
+    }
+  ]
+}

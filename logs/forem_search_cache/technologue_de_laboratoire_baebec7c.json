@@ -1,0 +1,173 @@
+{
+  "keyword": "technologue de laboratoire",
+  "count": 3,
+  "results": [
+    {
+      "numerooffreforem": "2017500",
+      "titreoffre": "Technologue de laboratoire médical (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HUY"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4500"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.239486,
+          "lat": 50.518593
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "EXPRESS MEDICAL",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités pour la santé humaine"
+      ],
+      "secteurscodenace": [
+        "86"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14566561_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017500",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-11",
+      "metier": "Analyses médicales",
+      "metiercodedimeco": "J1302"
+    },
+    {
+      "numerooffreforem": "2011899",
+      "titreoffre": "Technicien de Laboratoire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HERSTAL"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4040"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.631262,
+          "lat": 50.665527
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Select HR",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des services annexes à la pêche en mer à l'exclusion des services de soutien à la pêche sportive ou récréative"
+      ],
+      "secteurscodenace": [
+        "0311003"
+      ],
+      "source": "Select HR",
+      "referenceexterne": "962872749",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011899",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Technologue de laboratoire médical",
+      "metiercodedimeco": "J130201-1"
+    },
+    {
+      "numerooffreforem": "1990802",
+      "titreoffre": "technicien laboratoire HPLC (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DROGENBOS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Brabant Flamand",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1620"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE24",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.317354,
+          "lat": 50.786532
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "TALENTUS - Talentus",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": "Technologue de laboratoire médical",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1990802",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-09-02",
+      "metier": "Technologue de laboratoire médical",
+      "metiercodedimeco": "J130201-1"
+    }
+  ]
+}

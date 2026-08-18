@@ -1,0 +1,33 @@
+{
+  "keyword": "chimie",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5922227",
+      "codeDomaineImt": "T'6",
+      "codeModeGestion": null,
+      "codePostal": "1083",
+      "employeur": {
+        "nomFr": "STUDENT ACADEMY ASBL",
+        "nomNl": "STUDENT ACADEMY ASBL",
+        "numeroEntreprise": "0542884056"
+      },
+      "regimeTravail": "PT",
+      "titreFr": "Professeur particulier de chimie H/F/X",
+      "titreNl": "Professeur particulier de chimie H/F/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": "Ganshoren",
+      "communeNl": "Ganshoren",
+      "numeroEntreprise": "0542884056",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-10T15:33:32+02:00",
+      "dateModification": "2026-08-10T16:00:08+02:00"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "keyword": "distillation",
+  "provenance_mode": "PARTNER",
+  "total_reported": 5,
+  "count_saved": 5,
+  "results": [
+    {
+      "reference": "5925523",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-13T00:00:00+02:00",
+      "dateModification": "2026-08-13T00:00:00+02:00"
+    },
+    {
+      "reference": "5913510",
+      "codeDomaineImt": "L''2",
+      "codeModeGestion": null,
+      "codePostal": "3560",
+      "employeur": {
+        "nomFr": "ACTIEF",
+        "nomNl": "ACTIEF",
+        "numeroEntreprise": "0447394880"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien de maintenance H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0728656674",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-31T00:00:00+02:00",
+      "dateModification": "2026-07-31T00:00:00+02:00"
+    },
+    {
+      "reference": "5901545",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "3560",
+      "employeur": {
+        "nomFr": "ACTIEF INTERIM",
+        "nomNl": "ACTIEF INTERIM",
+        "numeroEntreprise": "0433344035"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur - opératrice de production H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-16T00:00:00+02:00",
+      "dateModification": "2026-07-16T00:00:00+02:00"
+    },
+    {
+      "reference": "5901504",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-16T00:00:00+02:00",
+      "dateModification": "2026-07-16T00:00:00+02:00"
+    },
+    {
+      "reference": "5897958",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-13T00:00:00+02:00",
+      "dateModification": "2026-07-13T00:00:00+02:00"
+    }
+  ]
+}

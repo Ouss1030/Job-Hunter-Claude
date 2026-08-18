@@ -1,0 +1,58 @@
+{
+  "keyword": "analytical chemistry",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5923246",
+      "codeDomaineImt": "V'2",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "ECOLE ROYALE MILITAIRE",
+        "nomNl": "KONINKLIJKE MILITAIRE SCHOOL",
+        "numeroEntreprise": "0209460513"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Researcher in Weapon Systems and Ballistics (RAPTOR) M/W/X",
+      "titreNl": "Researcher in Weapon Systems and Ballistics (RAPTOR) M/W/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0209460513",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-11T13:22:15+02:00",
+      "dateModification": "2026-08-11T13:46:55+02:00"
+    },
+    {
+      "reference": "5825515",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "BPOST",
+        "nomNl": "BPOST",
+        "numeroEntreprise": "0214596464"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Senior Data Architect H/F/X",
+      "titreNl": "Senior Data Architect M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0214596464",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-04-23T14:30:16+02:00",
+      "dateModification": "2026-08-06T10:32:19+02:00"
+    }
+  ]
+}

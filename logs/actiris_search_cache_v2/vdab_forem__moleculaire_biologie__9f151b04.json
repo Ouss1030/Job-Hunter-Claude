@@ -1,0 +1,33 @@
+{
+  "keyword": "moleculaire biologie",
+  "provenance_mode": "VDAB_FOREM",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5923065",
+      "codeDomaineImt": "A'1",
+      "codeModeGestion": null,
+      "codePostal": "1090",
+      "employeur": {
+        "nomFr": "V.U.B.",
+        "nomNl": "V.U.B.",
+        "numeroEntreprise": "0449012406"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Administratief bediende - Laboratorium Klinische Biologie M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Jette",
+      "communeNl": "Jette",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-11T10:11:01+02:00",
+      "dateModification": "2026-08-11T10:11:01+02:00"
+    }
+  ]
+}

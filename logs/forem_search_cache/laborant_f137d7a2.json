@@ -1,0 +1,1148 @@
+{
+  "keyword": "laborant",
+  "count": 20,
+  "results": [
+    {
+      "numerooffreforem": "2018555",
+      "titreoffre": "Laborantin GQP (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SPA"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.863251,
+          "lat": 50.492363
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Industry Battice",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production de produits alimentaires à base de légumes"
+      ],
+      "secteurscodenace": [
+        "1039101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "963989736",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2018555",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-11-02",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "2014664",
+      "titreoffre": "Assistant laborantin (mi-temps) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SPA"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.863251,
+          "lat": 50.492363
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps partiel",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14540700_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014664",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "2014947",
+      "titreoffre": "Collaborateur qualité et laboratoire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.351697,
+          "lat": 50.846557
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "TALENTUS - Talentus",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014947",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "2011889",
+      "titreoffre": "JobdayFlémalle Laborantin / Laborantine (H/F/X)",
+      "lieuxtravaillocalite": [
+        "FLÉMALLE-HAUTE"
+      ],
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.447468,
+          "lat": 50.601843
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ARCELORMITTAL BELGIUM - AMB RAMET",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Sidérurgie"
+      ],
+      "secteurscodenace": [
+        "24100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011889",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "2011579",
+      "titreoffre": "Kwaliteitscontroleur Labo 2-Ploegen | Quality Control Medewerker | Laborant Voedingsindustrie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ZONNEBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8980"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.987467,
+          "lat": 50.873188
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français",
+        "Néerlandais",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51224-LEFOREM-BE-090823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011579",
+      "datedebutdiffusion": "2026-08-09",
+      "datefindiffusion": "2026-09-20",
+      "metier": "Intervention technique en contrôle essai qualité en électricité et électronique",
+      "metiercodedimeco": "H1504"
+    },
+    {
+      "numerooffreforem": "2007317",
+      "titreoffre": "Lab Engineer - HPLC / LC-MS (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type long (Master)",
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2007317",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "2004147",
+      "titreoffre": "Technisch Laborant (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MENEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8930"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.103644,
+          "lat": 50.790697
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "BEAULIEU INTERNATIONAL GROUP",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication de meubles"
+      ],
+      "secteurscodenace": [
+        "31"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14443395_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004147",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1962053",
+      "titreoffre": "Technicien·ne-préleveur·euse (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ATH"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.792679,
+          "lat": 50.639504
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Centre pour l'agronomie et l'agro-industrie de la province de hainaut - Centre pour l'agronomie et l'agro-industrie de la province de hainaut",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 3,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 2eme degré",
+        "Enseignement secondaire technique - 3eme degré (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Recherche-développement en autres sciences physiques et naturelles"
+      ],
+      "secteurscodenace": [
+        "72190"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1962053",
+      "datedebutdiffusion": "2026-07-28",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1993376",
+      "titreoffre": "Laborantin (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LEUZE-EN-HAINAUT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.617736,
+          "lat": 50.599042
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "RIS Lutosa",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production de produits alimentaires à base de légumes"
+      ],
+      "secteurscodenace": [
+        "1039101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "959203822",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993376",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-10-12",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1993761",
+      "titreoffre": "Analytical Chemistry Engineer - Mass Spectrometry (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE - QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": "Laborantin industriel / Laborantine industrielle",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993761",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1993407",
+      "titreoffre": "Laboratory Technician - Cell Culture (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993407",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1988908",
+      "titreoffre": "Laborantin junior (/X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HALLE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1500"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.237157,
+          "lat": 50.736656
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'autres produits minéraux non métalliques"
+      ],
+      "secteurscodenace": [
+        "23"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "237847-LEFOREM-BE-200711",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1988908",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1981404",
+      "titreoffre": "Laborantin / Laborantine  (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province du Luxembourg",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE34",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "IBOO - IBOO",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 3,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1981404",
+      "datedebutdiffusion": "2026-07-14",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1980273",
+      "titreoffre": "Cuisinier  (H/F/X)",
+      "lieuxtravaillocalite": [
+        "PETIT-RECHAIN"
+      ],
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.834178,
+          "lat": 50.614304
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DELKA - DELKA",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 3eme degré (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication de condiments et d'assaisonnements"
+      ],
+      "secteurscodenace": [
+        "10840"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1980273",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1978554",
+      "titreoffre": "Laborantin (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LOUVAIN-LA-NEUVE",
+        "OTTIGNIES-LOUVAIN-LA-NEUVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1348",
+        "1348"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.614156,
+          "lat": 50.674168
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Accent",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication de composants électroniques"
+      ],
+      "secteurscodenace": [
+        "26110"
+      ],
+      "source": "Accent Job",
+      "referenceexterne": "956627230",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1978554",
+      "datedebutdiffusion": "2026-07-10",
+      "datefindiffusion": "2026-08-21",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1975921",
+      "titreoffre": "Assistant qualité / Assistante qualité (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DEINZE"
+      ],
+      "lieuxtravailregion": [
+        "Province de Flandre Orientale",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE23",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.527401,
+          "lat": 50.984052
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "THE JOB STORE - THE JOB STORE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Néerlandais",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL",
+        "EN"
+      ],
+      "experiencerequise": "Laborantin industriel / Laborantine industrielle",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1975921",
+      "datedebutdiffusion": "2026-07-09",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1970546",
+      "titreoffre": "Laboratory Analyst - Physico-Chemistry (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 2,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": "Laborantin industriel / Laborantine industrielle",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1970546",
+      "datedebutdiffusion": "2026-07-06",
+      "datefindiffusion": "2026-08-17",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1967979",
+      "titreoffre": "Laborantin (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ANTOING"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7643"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.473307,
+          "lat": 50.568199
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Office & admin Hainaut BW",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production de produits alimentaires à base de légumes"
+      ],
+      "secteurscodenace": [
+        "1039101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "955190645",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1967979",
+      "datedebutdiffusion": "2026-07-03",
+      "datefindiffusion": "2026-08-21",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1963871",
+      "titreoffre": "Laborantin CESS (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SPA"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.863251,
+          "lat": 50.492363
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Industry Battice",
+      "regimetravail": "Temps partiel",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production de produits alimentaires à base de légumes"
+      ],
+      "secteurscodenace": [
+        "1039101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "954592782",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1963871",
+      "datedebutdiffusion": "2026-06-30",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1626043",
+      "titreoffre": "Laborantin.e chimiste (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7500"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.387615,
+          "lat": 50.605415
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "11619225_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1626043",
+      "datedebutdiffusion": "2025-11-17",
+      "datefindiffusion": "2025-12-15",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    }
+  ]
+}

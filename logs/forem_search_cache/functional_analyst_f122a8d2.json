@@ -1,0 +1,331 @@
+{
+  "keyword": "functional analyst",
+  "count": 6,
+  "results": [
+    {
+      "numerooffreforem": "2018304",
+      "titreoffre": "Functional Analyst SAP FI-CO (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6010"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.47213,
+          "lat": 50.386478
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "SWDE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Administration publique et défense",
+        "sécurité sociale obligatoire"
+      ],
+      "secteurscodenace": [
+        "84"
+      ],
+      "source": "Societe wallonne des eaux",
+      "referenceexterne": "963969454",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2018304",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-25",
+      "metier": "Analyste TIC",
+      "metiercodedimeco": "M180501-1"
+    },
+    {
+      "numerooffreforem": "2005467",
+      "titreoffre": "Business Functional Analyst BU Gestion Clientèle (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ANDERLECHT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1070"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.307077,
+          "lat": 50.836605
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ONAFHANKELIJKE ZIEKENFONDSEN - ZORGKAS VLAANDEREN",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités pour la santé humaine"
+      ],
+      "secteurscodenace": [
+        "86"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14454552_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005467",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-10-03",
+      "metier": "Études et développement informatique",
+      "metiercodedimeco": "M1805"
+    },
+    {
+      "numerooffreforem": "2005469",
+      "titreoffre": "Business Functional Analyst BU Klantenbeheer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ANDERLECHT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1070"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.307077,
+          "lat": 50.836605
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ONAFHANKELIJKE ZIEKENFONDSEN - ZORGKAS VLAANDEREN",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités pour la santé humaine"
+      ],
+      "secteurscodenace": [
+        "86"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14454552_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005469",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-10-03",
+      "metier": "Études et développement informatique",
+      "metiercodedimeco": "M1805"
+    },
+    {
+      "numerooffreforem": "2004833",
+      "titreoffre": "Functional Analyst, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2234640",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004833",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Analyste TIC",
+      "metiercodedimeco": "M180501-1"
+    },
+    {
+      "numerooffreforem": "2004844",
+      "titreoffre": "Functional Analyst, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2234639",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004844",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Analyste TIC",
+      "metiercodedimeco": "M180501-1"
+    },
+    {
+      "numerooffreforem": "1963212",
+      "titreoffre": "Senior Functional Analyst (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345186,
+          "lat": 50.82513
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "SMALS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Programmation, conseil et autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "62"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14079990_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1963212",
+      "datedebutdiffusion": "2026-06-30",
+      "datefindiffusion": "2026-08-29",
+      "metier": "Études et développement informatique",
+      "metiercodedimeco": "M1805"
+    }
+  ]
+}

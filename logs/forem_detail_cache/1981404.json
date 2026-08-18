@@ -1,0 +1,187 @@
+{
+  "idOffreEmploi": 1981404,
+  "numero": "1981404",
+  "titreOffre": "Laborantin / Laborantine  (H/F/X)",
+  "datePublication": "14/07/2026",
+  "dateFinDiffusion": "25/08/2026",
+  "dateDebutDiffusion": "14/07/2026",
+  "nomEmployeur": "IBOO - IBOO",
+  "secteurActiviteEmployeur": "Activités des agences de placement de main-d'oeuvre",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "regimeTravailPrecision": "Travail posté 3 pauses",
+  "lieuxTravail": [
+    "Arrondissement de Neufchâteau"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "experience": "C2 - Expert",
+      "comment": ""
+    },
+    {
+      "code": "EN",
+      "libelle": "Anglais",
+      "experience": "B2 - Avancé",
+      "comment": ""
+    }
+  ],
+  "nombrePostes": 3,
+  "logoEmployeur": "iVBORw0KGgoAAAANSUhEUgAAAQAAAABVCAYAAACmRjqWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAAnSwAAJ0sAdjuhBgAAAAHdElNRQfpCQEHBQ7Xsyo5AAAry0lEQVR42u2dd3wUVdfHfzNbsult03snhRCSkARC701KAEVRVLCgiII+qCA8YgPhsSC+YMGK0gRBEorUhIAQeoD0RkIKqZtskt3Nbnbmvn8su7JkNwRICGW+fvJRp565s/fMuefcew5FCCHoJM6fP4cZTz2F5uZmUBSl204IgYmJCX7+5VcMGDCgs27HwcFxl/A782IsS6BSqaBUKvUUAABQFAWWZbv7eTk4OG6gUxWAFoqi2lgAAEDd6QU5ODi6hHYVQElJMXKyc6BmGPj6+iIgIAB8fpfoDA4Ojm7AYG9WqVT4/bff8N1336KsrAyEENjZ2WHS5MmYP38BxGJxd8vNwcHRCbRRAIQQbNm8Gcs+WAaFXA6apgEA1dXV+O7bb6GQK/DxJ5/A1NS0u2Xn4OC4S+ibN1y7dg3fr/8eCrkcPB5PN56naRoURWHnzh04f/58d8vNwcHRCbRRAEVFRSi9elX35dc7mKbR1NSEzMyM7pabg4OjE2jby9GRaQGcP5+D42GgjQLw8fGFu7u7wZg9y7KwsrJCWFhYd8vNwcHRCbRRAC4uLpg1ezZEIhEYhgEhBIQQsCwLQggmJyQgMjKyu+Xm4ODoBNpEAWiaxowZT0OlUmH999/j2rVrAAAbGxtMnpyAN996CyKRqLvl5uDg6AQMzgMQiUSYM+cVjBgxEpmZmWAYBv7+/ggODoZAIOhumTk4ODoJo9P6KIqCv78//P39u1tGDg6OLoK++0twcHA8qHAKgIPjEYZTABwcjzCcAuDgeIQx6AS8VeKOm9f73w0qlQrXrlXgypVilJWVol5SD1WrCkKhEHZ2dnB394CPjzdcXFy7NQKhVqvBMAwATaiUx+MZnC7d3bCEBcOqQQgLUBR4FA88mlvCzWEYg7+MzZs2ITn5CGgeT287y7AIDQ3Fa/Pm3XVnLC8vx5Ejh3Ho4EFkZGSgprYWypYW3YQj7QIkkUgEBwcHhPfqhbFjxmLI0KGwt7fv0kaRyWQoKSlBbm4uCgsKUF5RjnpJPRQtChCWhUAohJWlJRydnODj44OgoCD4+fnDwcGh0xRjR2AJgzp5JYrrc1Bcn42yxkJI5JWQqRrRyqpAUzREfDNYi8RwtvCCl20P+NqGwMXKGyK+2T2Tk+P+xaACuHDhArZt2wbBTck/1AwDiaQOr7z66h0pAJrHQ01NDbZu3YKtW7YgP78AanWrbqUhAPBuUDqEELS0tODq1asoLi7G/r//RkREb7w852WMHj0GQqGw0xqCZVnk5ebiwIEDSE4+gtzcXDQ0NEClUukU0o1ot/F4PJibm8PDwwNxcX0xZuxY9OnTB+bm5l320hqV9bhQcRSpV3bhcuVJVDVfhUKtANvOMg4KgIDHg43IAf724Yj3God4r7Fwt+bCvI8yBhUAzaMh4PPBv7mTX//B3xEUheTkI1i1aiVOpaWBZVnQNN1uhiFtp9NaA2q1GqdOpSEzMwMznn4aCxa82SnJSXJysrHh1w3Ys2c3rl27ppONoqhbZkAihEAmkyErKwuZmZn444+t6NuvH55/fhYGDRrUqUpK3tqE1Cu7sDPze2RVn4ZCrQStaVpQAPi3GJEwLINaeSWqZZU4VXoAWy+vweiAp/BY8Cy4WHp3mpwcDw73bHCoUirx7TffQKVS6cbQt4u2QyoUCs005YoKfLJ8BVxcXO5IJplMhs2bNuHb775FSXGxzrdxO2nPbrZc5HI5Duzfj7STJzFlylTMe/11eHp63nX75dacx0/nPsE/JXugVCtBU7fu8G1l1SgKmgIIAcqkhfjh7Ec4emUXno9ajMG+CeDT3EzPR4l7ogAoigIhBGq1Ws/cv5Ebs5Pfahyt3Z+UlASKovG/zz6DnZ3dbclUXl6OFcuXY+fOHTql1Bnjd60Ckclk+OWXn3Hp8iV88MGHiIuLu6PrsSyDw0Xb8E3aeyiVFoGmAF4n+B61yoAQIK/2Ej5OfgH5tRfxTO93YGFiffc34HgguGdubO3X9eZswQzDQK1W6yIPWkWh3WasbIF2WLB7dxJWr/4SKpWqw7IUFBTgjdfnYevWLVCr1brMRzdz40pIrZwMw4BhmHZlu1G+c2fP4rW5r+LggQO33WZqthXbM9fh06OvoFRaBB6t6biGIETzxxKAYf/9Y8m/+wzLqVEoitZm/HphJVb/swANLbV3/b45Hgy6JT6k7fhmZmYIDAxEREQEfP38YGVpdT0seA2ZmRm4ePEiqqurdZ3pZrSWxYZfNyAqKhoTJ0685b2Li4vxn7fexPHjx9vt+FqFZGpqCjs7O9jY2EAkEoElBHKZDPX19WhoaIBSqdRZD4ZqIfD5fJSUlGDh2wvxpUCAIUOGdKiNGJbBzszvsC5tMeStzUa/+tpOz6MBC6ENbERimAutwKN5UDFKNCulkLbUQdbaDJbVmP+GlAhFAYSwSMr5BQDB/PjVnCXwCHBPFYC2Y5mammLw4MF48qmnEBMTCzs7uzadp6WlBXl5edi6ZQu2bfsD9fX1Bv0GFEVBJmvG/339NWJjY+Hs7Gz0/vX1Eix7/7/4559/jHZ+rQMwJDQUI4aPQN9+/eDj4wNra2sIhQIQopFNIpEgPz8Px48fR0pyMoqLi3Xn3gyPx0N5WRmWvLcY369fj9DQWydUOXplJ747/V/IW5tBG+iw2o5vLbJBpNtg9PMciyBxb4jNXSDim4GmeFCzrZC3NqGquRRZ1Wdw8uo+XK48CZlKZlARaJQAwe7c32Bv5oIX+iyDgNd5TkyO+497pgC0nT8oKAhvvDEfY8eNazdUJhKJEB4ejtDQUPQf0B/L3n8fRUVFBpUATdO4dOki/tq5Ey/PmWOwY6vVanz37XfYt2+fwfG+Vj43Nze88MKLmDJ1ClxcXA3KZmVlBUdHR/To0QPjxz+G4uJi/LF1K377bQOqqqoMXp/H4yE3NxfLly/H2rXrYGNjY/TZiySZ+ObUe5C21Bv88hMC0BQP8V6jMSPiLfR07gshz3COBmuRPVwsvRHhMgCTQl7C+fIUbLm0GmfLk0EIa0QJMNh6+WsEOkRgmN/jXfq74Ohe7okPQDtWHjFiJH786WdMe/zxDsfJeTwexowZiy++/BKenp662Xg3oi079uef21FXV2fwOqdOpeGXX342GtNnWRaRUVH4fv16vDZvntHOb+jePj4+ePudd/Dd9+vROzLSqH+Ax+PhyOHD+GPrVqP+A6W6BRsufIri+jwYmmjIEsCEb4bnohbhg+G/I8ptiNHOfzNmAgv09x6PT0ZuxbOR70LENzM4d4CiAJmqGb+cW46q5tIOvmWOB5F75gQUCoV44cUXERQUdEfnx8f3x6LFi2Fubm6w89A0jZycHJw5fbrNPrlcju+//x61tbUGTXSWZREVFY01a75GTEzsHclHURTi4+Oxdu069O3b1+B0aoqioFar8csvP+Pq1asGr3Ou/AhSinZqTPSb9hECmPBEeCF6KWZFLYWlic0dyWotsseL0e9jTuzHMBWYG3QQ0hSQW3sJe3J+QSfWj+W4z7inUQA+/w4nEV3nsccmYPz48UY7l0KhQEpKSpv9p0+fRmpqqsHhA8uy8PDwwMeffHLHyulGAgIC8OnKVQgKCjJordA0jYKCAiQmJrbpWCp1CxJzfkSzStbGNNccSmFCyCw8ET7/rsfmfJ4Q03q+hhm9FoCmeG2UgNYf8Hf+Rs4KeIi5t6tZ7vJDYmJigpnPPgc7OzujSuDChQtobGzUbWMYBruTEtHU2GjQ9OfxeHh5ziuIiorqtMcMCQnBfxYuNGitaCIXLPbu2Q2pVKq3r6g+E+fLjxp0+rEECBSHY2bvd2HC75ycjHxagOm93kSMxzCDQwGaAkob8nG67GCntQ3H/cX9t5ztFoSHhyM6OtqoAigrK8W1igrdturqapw8edKox79nz3BMmTKl0xfxjBo1GkOGDDViBWgcglmZmXrbz5YdQUNLnUHTn0/zMCnkZThZeHSqnFYmtngyfAEshBYGrYBWlkXa1b+hZls79b4c9wcPnAIQiUSI798fNE0b/Lo2NjaitKxMty0vLxdlZWVtxv5aZ+C4ceO6pNipqakppk6bClNTU4Nj6KamJpw9d073/2pGhUuV/4AlbcNzBICblQ/ivcZ1SZv2chmAns59jVoBebUXIJFXdcm9ObqXB04BAEBYWE+jxUlbW1tReT2VOQDkZOdAoVAYPNbKygrx8fFdJmdUVDQ8PT3bWCvaCUxZmRk6C6FRWY+r0jyDNZdYAoQ6xcLB3K1L5DQVmCPWY+T1cb/+PgpArbwSFY1XuqydOLqPB1IBuLq6wMrKyqAFwLIs6iSaUCAhBMUlmgk6N5v4LMvCxcUFXl5eXSanWCxGYGCQUS96aWmZTjnVK2pQr6gx6PyjKSDIIRI8+u6cqO0RJI6EKd+wUm1Ry3GtqbjL7s3RfTyQCsDCwhIWFhYGOxYhBHKZHICmk9fW1Bi8BiEEjo5OsLSy7DI5+Xw+PDwNj9kpikJ9Qz3kMhkAoFEpgVItN2gB8GkeXCy7TlEBgNjcFeZCK4N+WoYlqJNXdun9ObqHB1IBCASCdtfZq9VqAJoIgOy6MjCEpZUl+PyuXf5qY21jcDtFUWhRKNCiVAIAWtQyo442Ps2HhbBr5+WbCsxhYsAC0FokstbG27wix4PAA6kACCFg25mcwrthvkF7+Q1pqnOWALcHRRvPn8iyLFhW4wNgSXt5GClQVNe+Kur6P4YgABguCvBQ8kAqAGVLC1oUCoMdi6Io3TRjmqYhNDFuKcgVcoNhus6kubnZqA+Ax+OBx9MsxxDQQqOdnCFqtLTKulROJaOAilEa3KfJNsQtCnoYeSAVgKS+Ho1GJvbQNA17O03SUB6PBxtra4MdkKIo1NbUQC7vuo7FsiwqyisM7iOEwMzMTFdo1cLEGkLaxOCxakaNGlkFupJ6RQ1krY0G5yBQFO542jHH/c0DqQAKCwvR1NRkcJ9AIICLqyZFGEVRcHVzM2opVFRUoKLiGroKqVSKgoJ8ozkH7O3tddaKjcgBFibWbZxwFAUwBCiou9Slc/KvSDKhMGJl8Ci6y0KQHN3LA6cAWJbFqVNpUKlUBi0Aa2treHj8m4MvICAAAoHAYMhQIpHg7JkzXSZrTk4OioqKjNYP8PHx1VkANiIxnCw8DC7MoQBcrjoJaUsdugI124qz5clQs8RgshBzoSVcrXy7rJ04uo8HTgFUVlbiWGqq4a8qy8LT0xOurv8u5Q0ODoGtrZ1BBaBWq7F7dxKam5s7XU6GYZCUlKi3LkEn5/U1CBERETrlYCqwQKA40mAYjqaAIkkWzlUkd0mbXpFk4XxFstE1CM6W3nC19OmSe3N0Lw+UAiCEIDFxFwoKCgx+VQmA6OhoWFr+G9v39vZGaGiIwWgAj8dDWloaDhzY3+myXrx4EUmJiQZThRFCIBaLEd2nj24bRVGIdhsCEV9gcE6+Uq3Ejoxv0Ngi6VQ51WwrdmZ9i5rmSoMxAAIg3LkfrES3l3SV48HggVIAuTk5+Pmnn8AwjMFOZWFhgSFDh+ntMzMzw6jRo8Hj8QxaAQqFAl+tXo2C/PxOk1MikeDzzz5DZWWl0fwDffrEwN9fvyhHuHM8vG2Djc7JP1+Riu0Za8Gw6k6TNaVoJ/blbdRkCTYwC9FcYIaB3hNAd3EYkqN7eGDeak1NDT7++GOjacEYhkGvXr0MLusdNWo0/P39DVoBNE0jKysLS5YuQXl5Ge6WpqYmrFz5KQ4fPmTYSrnu/Z82bRpMTPS9/ramjhjhPx00RRm0AhjC4Pf0z7En99dbzBvoGOfKk7E27R3IVE0Gx/4sAXq5xKOnc9etl+DoXu6tArjDOTeVlZVYumQJDh48YLRTmZiY4MmnnoK1ddsZc+7u7pjx9NNGrQCapnHk8GHMf2M+Mm9aons7XLt2Df9duhQbfv3VYOoxQKOoBg0ajEGDB7dtHorCqIAZ8LcPNWoFNKukWHNiIbZe+sqo1/5WMCyDlKKd+CT5BZRJi40mHTUTmmNq2FyYC7tuujRH93JPFUBr6+2Zrmq1GsePH8crc+Zgx44/AcBopxowcCDGjBlr8DoUReGJJ6ajX3y80ZyCFEUhJSUZs2c9j19+/hm1tR3PjS+TybBv7168MHs2Nm783eDiI0Bj+js7O2PevHmwsLAweC1nS088HfE2RAJTo6m6GpX1WJv2LpanvIDMqlO3tVa/VJqPdacW4ePkWSi7XmvgZrQZh0f6T0ecx6jbemccDxb3rjSYSoX/rVqFkydOoGd4T/j4+EAsdoCFhQUEAoHu66xSqSCRSJCZmYF9e/fi4MGDqKurM1q5h2EYuLq64s0Fbxr8+muxt7fHu+8uwpWiIpSVlbUZRmgLfRYWFmLx4kXYvHkzRo0ehb59+8LLyxtWVlYQCAS66IFMJkNFRQXOnzuH/fv/RlpaGmQyWbuVj4RCIV5//Q09558hhvpNQ0bVSWzL+AYwkB+ApoBWRoW/87bgTNlhxHqMRD/PsQgQ94K9mTNM+KbgUdfbk1FCqqxDcX02TpcexPGS3SiVFmpKhBlR/ywBwpz64Pmo9yDspOxDHPcn97Q02LlzZ3H27BkIhUJYWlrCxsYGNjY2sLCwgFAoBMsSNDU1oqqqCtXV1VAoFO3WEWRZFubm5li48G30iYm5pRx9+vTBkqVL8e4770AqlRrN4c8wDM6fP4fz58/B0tISDg6OEIvFsLCwAE1rHId1dRJUV1ehoaEBDMNcn9ZrWE7tcOD5WbPwzMyZRucFaDHhizA7+n1UNpci9cpuXQFQ/TYFeBQgUdRgb+5GHCzYAmuRPezNnGFlYgchTwSGqNGsbIBEUQWJvBotaqWuJJixJRAMC3ja+GFB/9VwteJCfw8798wC0H5hAc1Xu6GhARKJJqR187i8I5V5WZaFSCTC/AUL8MT06R1a1ENRFCZNmgy5XI6PPvyw3WIjWotEJpOhqakQhYUFbY6hr7vObyUnn8/HzGefxcKFbxtNZHIzdmZO+E//r6FmW3GyZP/1e7Y9jqYAUJpxfZ28GrWyak2bauXEv3UA26spqDX7PW388e6gbxDu3O+23zHHg0e3RAG0Y27tV5PP5+v9tVeoU1tWzNraGosWLcYrr7x6WyW4eTwennpqBj79dCXc3d2hVqvbrT+olfNmGXk8HqgOyGlhYYE35s/HkiVLYWVldVvt5GLljcWD12NU4HRQFG3QMfivrNAVDuXRmsrB/Ov/bawc2L+yXjf7nWPw/rBf0cd9eCe9aY77nU62ADQ/em2H6uylttqCGyEhIVj49jsYM2bMHZUZ5/F4SJgyBe4e7lixYgVOnjgBhmE6pUKwtqAoIQQ9egTjzbfewvjx4yEQ3FneAScLD7wz8Bv42IZg6+WvIZHX3LJDd1xWTcc3FZhhZMB0zIpawpn9jxidqgBcXV0xevQYHD2agrq6ujad6k46142FOp2cnDBp8mTMnv0CfHzu/ocaExOL9et/wKaNG/H7xt9RfOWKXn2/jsqrVXhaOZ2dnTF5cgKen/U8fHzufg69hYkNnot6DxGuA7Ep/QucKTsEWatcVzzkdpqVEM3wgCWACU+AUKdYPNFzHvp7T+i0dOMcDw4UMWD//uc/b+GH9evbjG0ZhsHQoUOxcdNm3SKWm1EqlcjNzcXxY8dw8uRJ5ObmoLq6GnK5XNdBblYIWiehFu0XlKIomJqawsfHB8OGDcPESZMRFhZ2R1/9W1FYWIikxETs27cXeXl5unX8N07lpaBf2uBGOc3MzODr64fhw4djwsSJCA0NvaWz705QtDbjbHkyDuRvwoWKY6iVV2gW8VyXDzdVFCL4N9EngWZYYGvqhDCnOAz3exxxnqNgLbLvdDk5HgwMKoDDhw8h/UJ6mx8wS1h4e3lj4qRJ7Tq+tKhUKlRXV+HKlWLk5+ehsKAQV0uvorq6GtIGKRQKOVQqlS5uzufzYWpqBltbW7i7uyM4JBiRkVHo2TMMjo5O96RBJBIJMjIycPbsGWRkZKD0ainq6yVQKBRQq9U3yGkKW1tbeHh4ICQkFJFRUQgLC4ODg8M9kVPNtqJMWoCMqlPIqj6N4vps1MqvQaZqRCujBAEBDRoCngnMhVawN3OBl00Qgh2jEeoYAw+bgA7XFOR4eDGoALqS1tZWKBQKyOUyyOUKKJVKMIymYwmFQpiZmcPCwgLm5uYdUjJdiVqtRnNzM5qbmiCTy9Ha2goKgEAohLmZGSwsLe8LOQFN5l6ZqhFyVROUjAIsYUBTfJjwTWEusISZ0BIivll3i8lxn3HPFQAHB8f9wwOzGIiDg6Pz4RQAB8cjDKcAODgeYTgFwMHxCNNh93VpaSn++ec4/Hz9dAtv0tPTkZ2dhdjYWPj6+nX3s3B0Amq1GqmpqaiXSDBk6FDY2dmhqakJhw8fhqmpCEOGDL2tqdcc9zcdtgDS09Px+rx52Lxls27brr/+wry5c3Hy5Mnufg6OTqK1tRVff70GCxf+B6WlpQCAmppqLHlvMVatXAm5XH6Xd+C4n7iNIQDR+9dNWzkeJgy8VC5Y/HDC+QA4OB5hOAXAwfEIwweA2tpaHD92DHn5eaAoCmGhYeg/YIBefv3bRSKRIDs7G5WVlRAKBfD19UVAQKDOgSSVSpGamgqhUIiBAwfqJcqorq7GiRMn0DMsDH43pM5mGAYnTpxATU014uL66hUA0ZKdnY2MjAx4enoiJiZGb0VfUVERzp8/D2dnZ/Tt21e3qEgqlSInOxvlFRXg8Wh4e3kjqEcQRCLTNveWSCQYOGAAbO3+zZOfkZGB3JwcREZFdWiVolwuR9rJk0i/mA6VSoXAwEAMGjgI9mIxWJbFmTNncLWkBO4eHoiNjdVbk9Hc3Ixjx1Ihk8kRERGhSy3OsiwyMzNx5sxp1NbUwNLKCuHhvRAREaErPwYAVVVVOHbsGAoK8iEUChEZGYW4uDiji7tuRVlpKY4dO4bi4mKYm5ujT0wMoqOjdcuf5XI5UlOPgqIoxMX1xaVLF3H27FmYmJhgwICBCAsLa7PqUiqVIi0tDTnZ2VC1quDh4YE+fWLg4+OjawuGYXDp0iWkpaWhXiKBi6sLBg4cBD8/zhl9WxQWFpIpCZOJo4OYODqIidjejri6OJPX580jUqmUaElM3EUcxPZkwfz5um3L3n+f2NnakN9//023Ta1Wk8TERDJq5Aji7uaqu25ggD+Z99pcUlRURAghpL6+njw2fhzx8vQgycnJuvNZliVfr1lDxPZ25LW5c4lKpdLty8/PJ70jepHI3hGkoKCAGOLo0aPE18eb9OsbR65eLdFtV6lUZO7cV4m9nS35/LPPCMMwhGVZcuTIYTJxwmPE08NdJ6ufrw+ZNet5kpmZqTtfoVCQKVMSiI+3Fzl//rzePT/66ENib2dLNmz4ldyKqqoqMnfuq8TdzZW4uboQTw934uzkSKYkTCb5+fmEZVly8OABEhIcTIJ7BJF9+/bqPcOKFcuJs5MjGTVyBCksLNDJtnr1lyQkuAext7PVvUdPD3eyffs23fnnzp0jY0aPIk6ODsTTw113/0WL3iWNjY2EEELkcjmZNHEi8fH2Iunp6YQQQgoLC0hIcDAZOmQwqa+v110vJSWFDBo4QHc9Vxdn4uvjTVau/JQoFApCCCFlZWUkOiqShIWGkJdefJGEhAQTP18f4uggJr3Ce5KkpETCsqzumjk5OWT6E08QF2cnIra3I44OYmJvZ0tGjRpJampqCCGEtLS0kDVffUWCAgOIs5Mj8fL0IE6ODiQ2pg85sH+/3vU42oeflZWJ/PwCvPjiS4iLi4OkXoJ1a9fijz+2YsTIkRg/fnyHlQkhBLt2/YW3Fy7UZOKdPh2hoaGQNkix/8B+bNq0CaWlZVi7bh1cXV0xOSEBJ0+exI4/tyM+Ph4CgQASiQSJiYlgWRYpKcnIz89DSEgoCCHYu2cPSkpK8PLLc+Dt7W1QhpiYGAwZMhQ7d+7Arl27MHfua6AoChkZl3HwwAF4eXlh4qRJoGkahw8fxhuvz0NzczMmTJiA3r0jIZfLceTIYSTu2oWS4mJ8+9138PcP0D0fMeANI7okIO23T2trK9Z89RW2btmCsWPH4bnnn4OZmTn27duL77/7Dv9btRKrv1qDYcOGY/F7i7F40SIseW8J7O3t0adPDP7YuhXr1q6Fq6srPvroY/j6+oEQgm3b/sCqlSthaWmJ+fMXoFdEBBrq63Ho0CGo1ZpMzNXVVVi65D1cunQJc+e+hpGjRkEul+GHH37ATz/+CD9fP8yaPbvD7/rKlSt4b/FiVFSU45133kX/AQMgkUiwdu3/Yc2aNQgMDMSkSZN1x2vyPFbhyy9Xw8XFGQcOHMDnn3+ONV99hX59+8HO3h71Egn+u3QJDh06hH794jFt2jTY2tkiKzMLWdlZumfZs2c3Vq1aCV9fXyxfvgJe3l64dOkSPvvfZ1i2bBkCg4Lg5eV1Tz6gDzzp6ekkJSWFMAyj0wpffPE5sbWxJmvWfKXb1hELoKK8nAzo3594e3mSHX/+qXfNymvXyHPPziR2tjZk5cpPCcuypKysjPSNiyPBwT1IRkYGIYSQv/76i7i5uhAvTw/iILYnq1atJIQQUlNTTYYOGUz8fH3I6dOn2tVqycnJxMvTgwwc0J9UVFQQhmHI4kWLiK2NNflg2TLCMAypr68n48eNI64uzuSnn37UszQkEgl5443XiZ2tDXn77YVErVYThUJBEhImE28vz7YWwIcfEDtbG/Lrr+1bADk5OSQkuAcZOKA/uXbtmm67SqUiM556kvj5+pD0Cxd02z7/7DPi5OhARowYTn768UcSGhpC/Px8SWJiou7curo6Mnz4MOLm6kI2bdqo9/VTKBQ6K27z5s3EQWxP3nh9nt57KSwsJOE9w8iY0aNJY2MjUSgUHbIAvl6zhtjb2ZKPPvxQ7xnPnTtH/Hx9yNMzZhCVSkXKy8pIVGRvEhLcg1y+fFl3nFTaQIYPG0Z8fbzJxYsXCSGE7Nixgzg5OpBRo0aSq1ev6l1XIpEQlUpFZLJmkpAwmXh5epCUlBS9Y1av/pKI7e3ITz/9eMdfxEcNfnh4uG4MplAokJubi7y8PF3669tSJhcvIi8vF6NGjcb4xx7TG7s6OTtjziuvIiUlBclHkvHKK6/C1dUVEyZMwP/+twpJiYnw8/PDzh07AAAvvfwyNm3ahN1JuzFr1mykHk1FRkYGxo4bh/DwXu3KERcXh6FDhyEpSZPgY9CgwdizZzdcXd0wdepU0DSN3JwcXLp0EVFRUZg27XG9lF22traYM+cVHDxwAMdSU1FXVwcbG5u7VrZ5ebmoq6uDo6MjNm78HZQ2dQcFNDQ0oF4iQV5+PnpFREAgEGDOnDmoqqrChg2/IjMjA3w+H+8tWYKxY/+tf1BSUoLCggKEhoZh3LjxeuNpkUgEkUgEQggupqeDYRjU1zdg9eovdaE+VasmH8OVK0Worq6Gh4dHu89AQTP+Tk9Pv15ivRxffP65br9MJtM9q7Sh4XqyF8DU1Az2N/hNTE3N4OTshOzsLF1x1nNnz0KlUmFKwpQ2ctja2gIAysvLUJCfD5FIhNTUozh39qzumPz8fKjValy+fNloYRYOffgURaGxsRGJu3Zhz949aG5uRotCcUeNV1NdjVaVCt4+3gZz4Lm7ucHW1hZ1dbWQyZphaWmJCRMn4rffNmDv3j0IDgnBiRP/IDQ0FC+88CIqysuxbds27E5KwsFDB8Hj8TB16tQ2JbVuRiQS4ZlnnsHhw4ewZfNm5OTkoKysDLNmz0ZQjx4ANI5PhUIBT09PPSeZFicnJzg4OKCqqgqNUqnuB3g3NDU1g2VZKJVK5GTn4MaAu6ubG6ZOexxOjo66bWbm5nhm5kzs3bsH5eXliIyMREJCgl5GpKamRrQolXB0coSZmVk7924ETdOQ1EuQnZWNG/MG9+3XDxYWFjAxMTGaIFUHRYFlWTQ3N4GmaVRXV6O19cbCJBSGDh0GsVgMmscD0e3THz5RFAUerXkOcr3MWX1DPfh8PlzdXI3eXqFogVKpBKBx6vJvaAuKojB16jSEhobe9bt6VODXSyRYunQpUlKS8dLLLyMhIQF///03zp8/f9sXs7SyAs3joaqySpcr/0bqJBI0NTXBzc0NQqGmEwcGBmLEyJHYumULln/yMaRSKR6bMBGOjo6YPDkBSUlJ+Oqr1airq0PvyEjEx/fvkCxxfftiyJCh2Lt3D7KysiAWi/HEE9N1MllaWkIgEKC6uhpKpbKNF1wqlaKhQQpTU1OITDVfUfp66jJyc43BDipLW1sbUBSF4JAQrPvmmzbtc3MGpsbGRnzzzTrU1NTA2toaWVnZ+Pbbb7Fw4ds6JWhuZg6hQIia62nXjGUetrWzA8uymDRxEmbNnm0wFTugsQLbg1wvbW5zXSE+M3MmJkyY2KZzaz8g5eXlHf/9WFpCrVbjWsU1o8eYm5vD1NQUAoEAH3/8MVxc9JWF9t63VGQcAAD64MGD+PPP7XhswgS8/vobcHf3AJ+nWSJA3WYxv549e8LN3R1Hj6bg2LFjevtkMhk2/v476urqEB3dR1fFh8/nY8qUqTAzM0NBQQHc3NwwevRoAEBMbCwio6JQUlKClpYWJExO6LApbmpqimdmzoSFhQUUCgWGDx+O8J49dfsDgwLh6+uHM2fOYP9+/fLgSqUSWzZvRllZKXpFRMDBwRE8Hg/mFhZoaWlBTU2N7liGYSCp61jJ7uDgEHh4eOD4seM4diwVNE3r/iiKQmFhIaqqqgBo0qmt/b//w7Y//kBsbCzWrPka3t5e+GbdOvzyy8+6EmeeXl7w9vFGRkYGdu9OalMAVTuMi4mJgVAoxPbt21F69arevdVqNbKyMqHooOVH0zRiY2PBsiy2bN6Cmpoaveu1tLQgMzPzJsugHa731d69I8Hn8/Hnn9tRUlKidwjLsmAYBo6OjggPD0dxcTG2b9uuSzyr/aupqUFhQUHH7ssBfkNDA9RqNSqvVaK6uhpqtRoX0i8AhKC5uRmFhYXw8PDokDLw8fHBrFmzsGL5ciyY/waeemoGwsLCIJPJ8Pf+v7E7KQmBgYF47vnn9L5+UVFRiI2Lw769ezFs2HBdLN3S0hKTJ03GP8ePw9fXDyNH3V6dOn9/f9jYaL5U06c/CcENi1icnJzx0ssvYfGiRVj07ju4dOkiIiMjoVKpkHzkCHbs2AFXV1e8+OJLOtO4Z1hPJO7ahQ0bNsBeLIbIxAT79u1DUlJShxKVenp4YMaMp7FixXK8uWABnnhiOoKDg6FoUeBi+kUcPXoUKz79FI6Ojti6dQvWrVsLHx8ffPDhR7p4/uuvz8OqlSvhIHbA5IQEiMViPP300/jv0qVY9v77yMrKQkyMZu5AZkYGxGIxZs2ejYEDB2HY8OHYt3cvXnrpRUxOSICzszPqautw/PhxVFRUYMNvv7VbXu1Gxo4Ziz+3b8fBgwcw5+WXMP6xx2BvZ4/KqkocTUmBqrUVv/664baGkkOHDkV8fDxSU4/i5ZdewtSpU+Hu4YH6egkuXbyIZ2Y+i5CQEDz33PM4efIkvvjic1wpvoJ+/eLB4/FQkJ+Pv/f/jXHjxuGtt/5zF93iESI3N5cMHz6MODk6kP7x8WT8+HG6WHFggD+ZNet50tTURJKSEjs0D0Amk5Evv/iChIYE62LSDmJ74uzkSB4bP46cOHHCoDdy+/btJMDfjxw7lqq3vbysjMTFxpBly97X8153hPXr1xOxvR157tmZurj0jSiVSvLDD+tJ74heupizg9ieODk6kOHDhpIDBw7oedVLSkp0cya8vTxJUGAgGTN6NEmYPJmI7e1uGQUghBCpVEre/+9S4ufrQ+xsbYiD2J44iO2Jm6sLmTIlgRQVFZEjhw+T4B5BJCgwgOzbt093Lsuy5I8//iC+Pt6kZ1goSU5OJizLEplMRj7//DO9eQDa+Pl7ixfpzs/PzydPPjmduDg7EXs7W929/Xx9yLvvvkNkMtn1KMAE/ShAQQEJCe5Bhtw0DyA9PZ1MeGw8cXJ00LteUGAA+XTFCqJSqUhZWRmJ7B1BoiJ7k/KyMt25ra2tZOYzTxNXF2dy/Ngx3fbMzEzy+OPTiKuLM7G3syVOjg7EQWxPAvz9yLmzZwkhmrkmGzduJJG9I4i9nS0R29vp3lu/vnHkwIH9d+0df1SgCCGkoKAARw4fRqu6FdHR0fD09MLevXuhUioxdNgwBAYGorS0FMePH4Ofnz9iY2MBABcuXEBWVibi4vrqzcBiWRY5OTk4feoUKq5VwFRkih7BwYiNjYGdneEU1BKJBAcPHsT48eP1nHLkevw/MCgIAQEBHVZstbW1eOrJ6cjOzsaPP/5k1HoghKCwoABpaWkoLSuFUCBEQGAAYmPj4OTUNhNxdVUVDh06hJKSEnh5eWHosGGorqrC5cuXERsXp5uZ1x4qlQrp6em4dPEiGpsaYWlhiaCgIPSKiIClpSVOnDiBK1eK4OXlhf79B+j5BhiGQWrqUZSVlcHX1xdxcX119Qyzs7Nx5vRpzexLEyF8fHwQExMLd3d33flSqRSnTqUhPy8fqlYVxGIH9OzZEyEhIRAKhVCr1TiakgKJRIJhw4drlgM3NuLgoYMwNTXFsGHD9ZYD19bWIi0tDVeKisCwDJycnNCrVwQCAwPB5/Mhk8lw6NAhAMCIEcNhZmau+40cP34MFRUVGDJkqF5ba2Q8haysTMhlctjb2yM0NBRR0dG6GaOEEBQU5OP06TOorqqCUCiEt7c3ekdGwsXFhYsAdJCHNino5k2bMH/+Gxg0eDB++ulno+W4OTgeZR7KxUBSqRRbtmwGTdN48sknuc7PwWGEh1IBpKQk48yZM4iOjsaQIUO7WxwOjvuWh04BNDc3Y+uWLSCEYPr0JztlBh8Hx8PKQ+cDaG5uxj///AOWZREfH3/bJbk5OB4lHjoFwMHB0XH+H1sIamV3LEsTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA5LTAxVDA3OjA1OjEzKzAwOjAwUSZKYQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wOS0wMVQwNzowNToxMyswMDowMCB78t0AAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDktMDFUMDc6MDU6MTMrMDA6MDB3btMCAAAAAElFTkSuQmCC",
+  "logoMimeType": "image/png",
+  "descriptionEmployeur": "<p></p>\n<ul>\n<li>\n<p>iboo vous aidera &agrave; retrouver le sourire!</p>\n</li>\n<li>\n<p>Nous travaillons en toute discr&eacute;tion!</p>\n</li>\n<li>\n<p>Nous vous proposons plusieurs opportunit&eacute;s afin que vous puissiez trouver le job de vos r&ecirc;ves!</p>\n</li>\n</ul>\n<p></p>",
+  "descriptionJob": "<p></p>\n<ul>\n<li>Vous r&eacute;alisez des analyses de routine sur les mati&egrave;res premi&egrave;res, les produits en cours de fabrication et les produits finis</li>\n<li>Vous effectuez des pr&eacute;l&egrave;vements et des contr&ocirc;les afin de garantir la qualit&eacute; des produits et des installations</li>\n<li>Vous participez aux analyses li&eacute;es au d&eacute;veloppement de nouveaux produits ainsi qu'aux investigations en cas de non-conformit&eacute;s</li>\n<li>Vous assurez le contr&ocirc;le, la v&eacute;rification et le suivi des &eacute;quipements de laboratoire et des instruments de mesure</li>\n<li>Vous collaborez avec les autres membres de l'&eacute;quipe et veillez au suivi des consommables n&eacute;cessaires au bon fonctionnement du laboratoire</li>\n</ul>\n<p></p>\n<p></p>",
+  "metier": "Laborantin industriel / Laborantine industrielle",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "personNameAffix": "2",
+    "prefferedGivenName": "Lina",
+    "familyName": "Lamoline",
+    "email": "libramont@iboojobs.be",
+    "formattedName": "Lina Lamoline"
+  },
+  "softSkills": [
+    {
+      "code": "07",
+      "libelle": "Assiduité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "10",
+      "libelle": "Attention",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "25",
+      "libelle": "Efficacité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "02",
+      "libelle": "Esprit d’analyse",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "05",
+      "libelle": "Esprit d’équipe",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "08",
+      "libelle": "Faculté d’adaptation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "11",
+      "libelle": "Fiabilité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "14",
+      "libelle": "Hygiène corporelle",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "23",
+      "libelle": "Maîtrise de soi",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "26",
+      "libelle": "Motivation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "18",
+      "libelle": "Sens de l'organisation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "21",
+      "libelle": "Sens des responsabilités",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "24",
+      "libelle": "Soin",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "H150301-1",
+      "libelle": "Laborantin industriel / Laborantine industrielle",
+      "experience": "Sans importance"
+    }
+  ],
+  "recentExperience": [],
+  "permisConduire": [
+    {
+      "code": "5101005",
+      "libelle": "Permis de conduire validé pour une catégorie B",
+      "experience": "0",
+      "valeur": "B"
+    }
+  ],
+  "permisConduireSimplified": "Permis de conduire validé pour une catégorie B",
+  "certifications": [],
+  "etudes": [],
+  "dateModification": "28/07/2026",
+  "competencies": [
+    {
+      "code": "24202",
+      "libelle": "Réaliser des analyses en  : Biologie, microbiologie",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "24207",
+      "libelle": "Réaliser des analyses en  : Physico-chimie",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Laborantin / Laborantine  (H/F/X)",
+    "description": "<p></p>\n<ul>\n<li>Vous r&eacute;alisez des analyses de routine sur les mati&egrave;res premi&egrave;res, les produits en cours de fabrication et les produits finis</li>\n<li>Vous effectuez des pr&eacute;l&egrave;vements et des contr&ocirc;les afin de garantir la qualit&eacute; des produits et des installations</li>\n<li>Vous participez aux analyses li&eacute;es au d&eacute;veloppement de nouveaux produits ainsi qu'aux investigations en cas de non-conformit&eacute;s</li>\n<li>Vous assurez le contr&ocirc;le, la v&eacute;rification et le suivi des &eacute;quipements de laboratoire et des instruments de mesure</li>\n<li>Vous collaborez avec les autres membres de l'&eacute;quipe et veillez au suivi des consommables n&eacute;cessaires au bon fonctionnement du laboratoire</li>\n</ul>\n<p></p>\n<p></p>",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "IBOO - IBOO",
+      "value": "1981404"
+    },
+    "datePosted": "14/07/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "IBOO - IBOO",
+      "sameAs": "IBOO - IBOO"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  }
+}

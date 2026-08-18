@@ -1,0 +1,33 @@
+{
+  "keyword": "inorganic chemistry",
+  "provenance_mode": "PARTNER",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "2391922",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "2030",
+      "employeur": {
+        "nomFr": "SGS BELGIUM",
+        "nomNl": "SGS BELGIUM",
+        "numeroEntreprise": "0404882750"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Analyste - Chemistry Mono H/F/X",
+      "titreNl": "Analyste - Chemistry Mono M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0459971228",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-04-13T00:00:00+02:00",
+      "dateModification": "2025-08-18T20:27:15+02:00"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "keyword": "GMP",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5920719",
+      "codeDomaineImt": "Y'2",
+      "codeModeGestion": null,
+      "codePostal": "1120",
+      "employeur": {
+        "nomFr": "START PEOPLE",
+        "nomNl": "START PEOPLE",
+        "numeroEntreprise": "0456512385"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Op&#233;rateur filling et pr&#233;l&#232;vements en zones aseptiques  - industrie pharmaceutique H/F/X",
+      "titreNl": "Op&#233;rateur filling et pr&#233;l&#232;vements en zones aseptiques  - industrie pharmaceutique H/F/X",
+      "typeContrat": "INTERIM",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0456512385",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-07T13:03:36+02:00",
+      "dateModification": "2026-08-07T13:06:56+02:00"
+    }
+  ]
+}

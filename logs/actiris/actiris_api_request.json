@@ -1,0 +1,42 @@
+[
+  {
+    "method": "POST",
+    "url": "https://www.actiris.brussels/Umbraco/api/OffersApi/GetAllOffers",
+    "query": {},
+    "post_data_raw": "{\"pageOption\":{\"page\":1,\"from\":0,\"pageSize\":10},\"offreFilter\":{\"texte\":\"data analyst\",\"regimesTravail\":null,\"dateDerniereModification\":null,\"langue\":null,\"codesPostal\":[],\"codesContrat\":[],\"domainesImt\":[],\"secteursPanorama\":[],\"references\":null,\"localisation\":\"Tout\",\"keywordSearchType\":\"Partout\",\"isOffreActiris\":false,\"isOffreVdabForem\":false,\"isOfferPartner\":false,\"isOffreHandicap\":false,\"employerFilter\":[]}}",
+    "post_data_json": {
+      "pageOption": {
+        "page": 1,
+        "from": 0,
+        "pageSize": 10
+      },
+      "offreFilter": {
+        "texte": "data analyst",
+        "regimesTravail": null,
+        "dateDerniereModification": null,
+        "langue": null,
+        "codesPostal": [],
+        "codesContrat": [],
+        "domainesImt": [],
+        "secteursPanorama": [],
+        "references": null,
+        "localisation": "Tout",
+        "keywordSearchType": "Partout",
+        "isOffreActiris": false,
+        "isOffreVdabForem": false,
+        "isOfferPartner": false,
+        "isOffreHandicap": false,
+        "employerFilter": []
+      }
+    },
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.actiris.brussels/fr/citoyens/offres-d-emploi/?keywords=data%20analyst",
+      "accept-language": "fr",
+      "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"HeadlessChrome\";v=\"151\", \"Chromium\";v=\"151\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0 Safari/537.36"
+    }
+  }
+]

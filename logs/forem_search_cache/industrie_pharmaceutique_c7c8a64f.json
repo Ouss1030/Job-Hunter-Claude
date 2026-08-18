@@ -1,0 +1,493 @@
+{
+  "keyword": "industrie pharmaceutique",
+  "count": 9,
+  "results": [
+    {
+      "numerooffreforem": "2015248",
+      "titreoffre": "opérateur pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIÈGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4031"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.599669,
+          "lat": 50.611546
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Talent Center RS 20",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail d'accessoires, de pièces détachées et d'équipements divers pour véhicules automobiles, y compris la vente de détail de pièces détachées et d'équipements automobiles d'occasion"
+      ],
+      "secteurscodenace": [
+        "4532001"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "963404155",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015248",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2009944",
+      "titreoffre": "Technicien de maintenance - Secteur Pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.444103,
+          "lat": 50.411434
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14496445_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009944",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Installation et maintenance d'équipements industriels et d'exploitation",
+      "metiercodedimeco": "I1304"
+    },
+    {
+      "numerooffreforem": "2009205",
+      "titreoffre": "Opérateur technique de production (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province du Brabant Wallon",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE31",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "HAYS - Hays NV",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009205",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2001735",
+      "titreoffre": "Opérateur/Opératrice de production salle blanche (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "123CDI - UDIL.GE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 2,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autre mise à disposition de ressources humaines"
+      ],
+      "secteurscodenace": [
+        "78300"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001735",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-09-11",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "1998046",
+      "titreoffre": "QA Documentation Officer en industrie pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NEDER-OVER-HEEMBEEK",
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1120",
+        "1120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.390488,
+          "lat": 50.897796
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14386291_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1998046",
+      "datedebutdiffusion": "2026-07-28",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Rédaction technique",
+      "metiercodedimeco": "H1207"
+    },
+    {
+      "numerooffreforem": "1997802",
+      "titreoffre": "QA Documentation Officer en industrie pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NEDER-OVER-HEEMBEEK",
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1120",
+        "1120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.390488,
+          "lat": 50.897796
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2021935_FR-LEFOREM-BE-280717",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1997802",
+      "datedebutdiffusion": "2026-07-28",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Rédaction technique",
+      "metiercodedimeco": "H1207"
+    },
+    {
+      "numerooffreforem": "1991106",
+      "titreoffre": "opérateur pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MANAGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7170"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.233998,
+          "lat": 50.503708
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Operational La Louvière",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail de viandes et produits à base de viande exploité par les bouchers/charcutiers"
+      ],
+      "secteurscodenace": [
+        "4722101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "958845963",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991106",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2011059",
+      "titreoffre": "Lead Technician I, Pfizer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "PUURS-SINT-AMANDS",
+        "PUURS"
+      ],
+      "lieuxtravailregion": [
+        "Province d'Anvers",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2870",
+        "2870"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE21",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.286192,
+          "lat": 51.071998
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Pfizer",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des médecins généralistes"
+      ],
+      "secteurscodenace": [
+        "8621"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2223848",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011059",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Technicien / Technicienne de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-3"
+    },
+    {
+      "numerooffreforem": "1979869",
+      "titreoffre": "Opérateur.trice de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GHISLENGHIEN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7822"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.875818,
+          "lat": 50.656686
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MATERNI - Materni",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'autres articles en matières plastiques"
+      ],
+      "secteurscodenace": [
+        "22290"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1979869",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    }
+  ]
+}

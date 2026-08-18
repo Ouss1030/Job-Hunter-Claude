@@ -1,0 +1,186 @@
+[
+  {
+    "method": "GET",
+    "resource_type": "document",
+    "url": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select",
+    "post_data": null,
+    "content_type": null,
+    "referer": null
+  },
+  {
+    "method": "GET",
+    "resource_type": "stylesheet",
+    "url": "https://www.actiris.brussels/styles/style.min-h-6699234A.css",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/i1rn5305/logo_actiris_fr-h-E8CCAF08.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://my.actiris.brussels/Repository/Tiers/0239843188/fr.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/v4kfwrka/bf_logo_couleur_rvb.70h-h-4CD4F272.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/etwhkb2i/vdab-logo_donkerblauw_cmyk.70h-h-42BABD5E.jpg",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/fuqngvsj/logo-forem-noir.70h-h-DC14D793.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/vixdgels/179_resized_300_300_90_57d7d187af4bd_o-logo3.70h-h-0FFA9FC4.jpg",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/4o2bahap/minilogo_eures40442.70h-h-E6A62A09.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/nawigvyh/1200px-be_brussels_logo.70h-h-05AE50BC.jpg",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/1rjfavvx/synerjob.70h-h-6652CEB8.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/2oopkp03/e-procurment.70h-h-9DEAB3E4.jpg",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/rxzi5xoo/aviato.70h-h-8E94C3D9.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/zckhi3bt/pes.70h-h-0DB6631A.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://www.actiris.brussels/media/qvcgpqom/fr-cofinanc%C3%A9-par-l-union-europ%C3%A9enne_pos.70h-h-CC385B86.jpg",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "script",
+    "url": "https://www.actiris.brussels/scripts/actiris.bundle-h-911BC880.js",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "script",
+    "url": "https://www.actiris.brussels/scripts/vendors-actiris.bundle-h-4BE28568.js",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "font",
+    "url": "https://www.actiris.brussels/fonts/actiris.ttf?x3dws6",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/styles/style.min-h-6699234A.css"
+  },
+  {
+    "method": "GET",
+    "resource_type": "image",
+    "url": "https://cdn.actiris.brussels/Repository/Tiers/0239843188/fr.png",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/"
+  },
+  {
+    "method": "GET",
+    "resource_type": "document",
+    "url": "https://api.actiris.brussels/security/html/authentication.html",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/"
+  },
+  {
+    "method": "GET",
+    "resource_type": "fetch",
+    "url": "https://www.actiris.brussels/fr/cookies/?t=637278918725530000",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://www.actiris.brussels/fr/citoyens/detail-offre-d-emploi/?reference=5905799&type=Select"
+  },
+  {
+    "method": "GET",
+    "resource_type": "script",
+    "url": "https://api.actiris.brussels/security/js/url.js?refresh=230630",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://api.actiris.brussels/security/html/authentication.html"
+  },
+  {
+    "method": "GET",
+    "resource_type": "script",
+    "url": "https://api.actiris.brussels/security/js/auth.js?refresh=230630",
+    "post_data": null,
+    "content_type": null,
+    "referer": "https://api.actiris.brussels/security/html/authentication.html"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "keyword": "formulation",
+  "count": 2,
+  "results": [
+    {
+      "numerooffreforem": "2006266",
+      "titreoffre": "Assistant(e) à domicile FR/NL | En vue d'engagement (H/F/X)",
+      "lieuxtravaillocalite": [
+        "FERNELMONT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Namur",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "5380"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE35",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.974674,
+          "lat": 50.548118
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Français",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités pour la santé humaine"
+      ],
+      "secteurscodenace": [
+        "86"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "196-52153-LEFOREM-BE-050800",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2006266",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Intervention technique en formulation et analyse sensorielle",
+      "metiercodedimeco": "H1505"
+    },
+    {
+      "numerooffreforem": "2003540",
+      "titreoffre": "Verzorgende Voorziening Personen met een Beperking (Deeltijds) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GENT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.722795,
+          "lat": 51.053822
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "AIB",
+      "regimetravail": "Temps partiel",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités pour la santé humaine"
+      ],
+      "secteurscodenace": [
+        "86"
+      ],
+      "source": "AIB NV",
+      "referenceexterne": "PO-DA9JR4M5-LEFOREM-BE-030809",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2003540",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Intervention technique en formulation et analyse sensorielle",
+      "metiercodedimeco": "H1505"
+    }
+  ]
+}

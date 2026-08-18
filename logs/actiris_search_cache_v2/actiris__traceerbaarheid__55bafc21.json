@@ -1,0 +1,33 @@
+{
+  "keyword": "traceerbaarheid",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5919774",
+      "codeDomaineImt": "F'3",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "COMMUNE D'IXELLES",
+        "nomNl": "GEMEENTE ELSENE",
+        "numeroEntreprise": "0207401341"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "TECHNICIEN EN VOIRIE / PAVEUR H/F/X",
+      "titreNl": "WEGENTECHNICUS / STRAATMAKER M/V/X",
+      "typeContrat": "CDD",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0207401341",
+      "typeContratLibelle": "Durée déterminée",
+      "dureeContrat": "CDD",
+      "dureeContratLibelle": "Contrat à durée déterminé",
+      "dateCreation": "2026-08-06T15:58:00+02:00",
+      "dateModification": "2026-08-06T15:58:00+02:00"
+    }
+  ]
+}

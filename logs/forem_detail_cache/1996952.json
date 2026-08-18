@@ -1,0 +1,85 @@
+{
+  "idOffreEmploi": 1996952,
+  "numero": "1996952",
+  "titreOffre": "Database Administrator MS SQL Server, Smals (H/F/X)",
+  "datePublication": "27/07/2026",
+  "dateFinDiffusion": "07/09/2026",
+  "dateDebutDiffusion": "27/07/2026",
+  "nomEmployeur": "Smals",
+  "nomPartenaire": "StepStone",
+  "secteurActiviteEmployeur": "Administration publique et défense; sécurité sociale obligatoire",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "SAINT-GILLES"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "B1 - Intermédiaire"
+    }
+  ],
+  "nombrePostes": 1,
+  "descriptionJob": "Smals réalise des projets ICT innovants dans l'e-gouvernement et l'e-santé pour les institutions de la sécurité sociale et des soins de santé. Pour Smals, \"ICT for society\" n'est pas qu'un slogan : tous nos projets profitent à la société. Smals contribue au portail de la sécurité sociale et à la plateforme eHealth. Les projets novateurs sont notre spécialité : Student@Work, Orgadon, digitalisation des prescriptions médicales, consultation de l'historique de la carrière, transmission plus rapide des résultats de test à son médecin...<br/>                 En tant que Database Administrator MS SQL Server, vous assurez la gestion opérationnelle quotidienne des bases de données. Vous vous occupez ainsi activement du monitoring de la performance, du suivi des procédures de sauvegarde et de restauration, de la sécurité, des installations, des configurations et des déploiements. Votre tâche consiste à faciliter l'accès et à optimiser le traitement et les demandes. En outre, vous collaborez à des projets (développement / infrastructure).<br /> <br /> Concrètement, vous êtes responsable :<br /> • de la création, de la maintenance et des modifications des bases de données (MS SQL Server 2016/2019, MS Azure SQL Database) ainsi que de la révision des scripts \"CREATE Table\" fournis par les autres équipes Scrum ;<br /> • de l'implémentation et du suivi des mécanismes de haute disponibilité et de sauvegarde ;<br /> • du suivi de la production (monitoring des deadlocks des bases de données SQL, de la disponibilité des bases de données, de la création et du contrôle des alertes SQL...) ;<br /> • de l'amélioration de la fiabilité, de la disponibilité et de l'accessibilité des données par la formulation de nouvelles propositions ;<br /> • de l'implémentation de scripts de purge et d'audit pour les bases de données.            ",
+  "metier": "Data manager",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "webAddress": "https://www.stepstone.be/offres-d-emploi----2233174-inline.html?cid=Partner_LeForem___1-FRNL",
+    "formattedName": "Stepstone"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Data manager",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Enseignement secondaire (deuxième cycle)"
+    },
+    {
+      "libelle": "Baccalauréat universitaire ou équivalent"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "27/07/2026",
+  "competencies": [],
+  "benefitsComments": "Titulaire d'un diplôme de bachelor ou de master en informatique, vous possédez au moins cinq ans d'expérience en tant que MS SQL Server DBA.<br /> Outre les environnements serveurs MS SQL, vous vous intéressez à un ou plusieurs autres RDBMS.<br /> Vous avez une expérience pratique approfondie de T-SQL.<br /> Une expérience en DevOps et MS Azure SQL constitue un plus. Votre soif d'apprendre est importante pour évoluer dans ce domaine.<br /> Vous détenez d'excellentes compétences interpersonnelles, vous permettant d'être assertif dans vos contacts avec vos collègues et de veiller au respect des idées et intérêts de chacun.<br /> Vous savez travailler efficacement dans des situations qui peuvent être source de stress et êtes flexible en cas de changement des priorités.<br /> Vous êtes orienté client et vous êtes capable de travailler efficacement en équipe.<br /> Enfin, vous possédez une connaissance active du néerlandais.",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Database Administrator MS SQL Server, Smals (H/F/X)",
+    "description": "Smals réalise des projets ICT innovants dans l'e-gouvernement et l'e-santé pour les institutions de la sécurité sociale et des soins de santé. Pour Smals, \"ICT for society\" n'est pas qu'un slogan : tous nos projets profitent à la société. Smals contribue au portail de la sécurité sociale et à la plateforme eHealth. Les projets novateurs sont notre spécialité : Student@Work, Orgadon, digitalisation des prescriptions médicales, consultation de l'historique de la carrière, transmission plus rapide des résultats de test à son médecin...<br/>                 En tant que Database Administrator MS SQL Server, vous assurez la gestion opérationnelle quotidienne des bases de données. Vous vous occupez ainsi activement du monitoring de la performance, du suivi des procédures de sauvegarde et de restauration, de la sécurité, des installations, des configurations et des déploiements. Votre tâche consiste à faciliter l'accès et à optimiser le traitement et les demandes. En outre, vous collaborez à des projets (développement / infrastructure).<br /> <br /> Concrètement, vous êtes responsable :<br /> • de la création, de la maintenance et des modifications des bases de données (MS SQL Server 2016/2019, MS Azure SQL Database) ainsi que de la révision des scripts \"CREATE Table\" fournis par les autres équipes Scrum ;<br /> • de l'implémentation et du suivi des mécanismes de haute disponibilité et de sauvegarde ;<br /> • du suivi de la production (monitoring des deadlocks des bases de données SQL, de la disponibilité des bases de données, de la création et du contrôle des alertes SQL...) ;<br /> • de l'amélioration de la fiabilité, de la disponibilité et de l'accessibilité des données par la formulation de nouvelles propositions ;<br /> • de l'implémentation de scripts de purge et d'audit pour les bases de données.            ",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "Smals",
+      "value": "1996952"
+    },
+    "datePosted": "27/07/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "Smals",
+      "sameAs": "Smals"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "2233174"
+}

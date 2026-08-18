@@ -1,0 +1,1392 @@
+{
+  "keyword": "production operator",
+  "count": 25,
+  "results": [
+    {
+      "numerooffreforem": "2019137",
+      "titreoffre": "Operator veevoeders (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ZONNEBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8980"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.98768,
+          "lat": 50.872768
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres industries manufacturières"
+      ],
+      "secteurscodenace": [
+        "32"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14582300_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2019137",
+      "datedebutdiffusion": "2026-08-15",
+      "datefindiffusion": "2026-09-12",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2018383",
+      "titreoffre": "Operator vaste nacht (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NINOVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.0209,
+          "lat": 50.837723
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "SD Worx Jobs Ninove",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "SD Worx Staffing Solutions",
+      "referenceexterne": "963971644",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2018383",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-25",
+      "metier": "Ouvrier / Ouvrière de production",
+      "metiercodedimeco": "H330201-2"
+    },
+    {
+      "numerooffreforem": "2016472",
+      "titreoffre": "Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TERNAT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1740"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.17589,
+          "lat": 50.871777
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "SD Worx Jobs Ninove",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "SD Worx Staffing Solutions",
+      "referenceexterne": "963657660",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2016472",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-24",
+      "metier": "Ouvrier / Ouvrière de production",
+      "metiercodedimeco": "H330201-2"
+    },
+    {
+      "numerooffreforem": "2015874",
+      "titreoffre": "Operator | Roeselare | Voedingssector (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ROESELARE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.124765,
+          "lat": 50.944494
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51129-LEFOREM-BE-120823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015874",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2015062",
+      "titreoffre": "Operator | 2 Ploegen of Nacht | Veurne (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VEURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8630"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.654885,
+          "lat": 51.071043
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "137-49824-LEFOREM-BE-120811",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015062",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2014464",
+      "titreoffre": "Operator Bottelarij – Nachtploeg (3 x 12 uur) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "IZEGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8870"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.230941,
+          "lat": 50.922276
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "LET'S WORK",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Let's Work",
+      "referenceexterne": "PO-MQAUKJCU-LEFOREM-BE-120800",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014464",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2013900",
+      "titreoffre": "Operator| 5 ploegen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WIELSBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8710"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.360403,
+          "lat": 50.911407
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Construction de bâtiments",
+        "promotion immobilière"
+      ],
+      "secteurscodenace": [
+        "41"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "337-46229-LEFOREM-BE-110815",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2013900",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-22",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2014453",
+      "titreoffre": "Operator | vaste late ploeg | Ieper (H/F/X)",
+      "lieuxtravaillocalite": [
+        "IEPER"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.891477,
+          "lat": 50.851808
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51126-LEFOREM-BE-110823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014453",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-22",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2012939",
+      "titreoffre": "Machine operator | voeding | Lendelede | West-Vlaanderen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LENDELEDE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.232013,
+          "lat": 50.885066
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "726-5481-LEFOREM-BE-100823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2012939",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2012944",
+      "titreoffre": "Operator | 2 ploegen | Vast contract Ninove (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NINOVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.024237,
+          "lat": 50.835361
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "374-36686-LEFOREM-BE-100823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2012944",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2010343",
+      "titreoffre": "Operator deegbereiding | regio Waregem (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8790"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.425738,
+          "lat": 50.8762
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "337-46216-LEFOREM-BE-070813",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010343",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2010344",
+      "titreoffre": "Technisch Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8790"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.425738,
+          "lat": 50.8762
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "337-46217-LEFOREM-BE-070813",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010344",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Réglage d'équipement de production industrielle",
+      "metiercodedimeco": "H2912"
+    },
+    {
+      "numerooffreforem": "2010291",
+      "titreoffre": "Operator | voeding | 2 ploegen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MEULEBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8760"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.28596,
+          "lat": 50.948478
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "337-46207-LEFOREM-BE-070812",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010291",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2009701",
+      "titreoffre": "Operator Bakkerij (H/F/X)",
+      "lieuxtravaillocalite": [
+        "IEPER"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.891477,
+          "lat": 50.851808
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail, à l'exception des véhicules automobiles et des motocycles"
+      ],
+      "secteurscodenace": [
+        "47"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51095-LEFOREM-BE-060823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009701",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2007382",
+      "titreoffre": "Productie Operator | Deinze | 2-ploegen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DEINZE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.527401,
+          "lat": 50.984052
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "167-48693-LEFOREM-BE-050815",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2007382",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2007467",
+      "titreoffre": "Operator | Deinze | Volcontinu (5 ploegen) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DEINZE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.527401,
+          "lat": 50.984052
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail, à l'exception des véhicules automobiles et des motocycles"
+      ],
+      "secteurscodenace": [
+        "47"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "167-48700-LEFOREM-BE-050815",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2007467",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2005381",
+      "titreoffre": "Operator kruidenkamer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HERENT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "3020"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.673841,
+          "lat": 50.907055
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "SD Worx Jobs Aarschot",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "SD Worx Staffing Solutions",
+      "referenceexterne": "961586654",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005381",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Opérateur / Opératrice de production en industrie alimentaire",
+      "metiercodedimeco": "H210201-1"
+    },
+    {
+      "numerooffreforem": "2004936",
+      "titreoffre": "Technisch Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "KAMPENHOUT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Flamand",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1910"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE24",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.571163,
+          "lat": 50.949244
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2023023_NL-LEFOREM-BE-040809",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004936",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Réglage d'équipement de production industrielle",
+      "metiercodedimeco": "H2912"
+    },
+    {
+      "numerooffreforem": "2001420",
+      "titreoffre": "Electronic Production Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.351697,
+          "lat": 50.846557
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2022580_FR-LEFOREM-BE-310710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001420",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-09-11",
+      "metier": "Conduite d'installation automatisée de production électrique, électronique et microélectronique",
+      "metiercodedimeco": "H2603"
+    },
+    {
+      "numerooffreforem": "2001018",
+      "titreoffre": "operator | pluimveesector (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LENDELEDE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.237854,
+          "lat": 50.886349
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14416218_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001018",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2001536",
+      "titreoffre": "Electronic Production Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Services administratifs de bureau et autres activités de soutien aux entreprises"
+      ],
+      "secteurscodenace": [
+        "82"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14421736_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001536",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Montage de produits électriques et électroniques",
+      "metiercodedimeco": "H2604"
+    },
+    {
+      "numerooffreforem": "2001352",
+      "titreoffre": "Operator Process | Volcontinu | Veurne (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VEURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8630"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.654885,
+          "lat": 51.071043
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "137-49749-LEFOREM-BE-310709",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001352",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-09-11",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "2000328",
+      "titreoffre": "Machine operator voeding (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WIELSBEKE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8710"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.369939,
+          "lat": 50.909409
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "SYNERGIE BELGIUM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14408491_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2000328",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "1992897",
+      "titreoffre": "Productie operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LENDELEDE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.232013,
+          "lat": 50.885066
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "726-5809-LEFOREM-BE-230722",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1992897",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-09-03",
+      "metier": "Conduite d'équipement de production alimentaire",
+      "metiercodedimeco": "H2102"
+    },
+    {
+      "numerooffreforem": "1946698",
+      "titreoffre": "Support Operator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "AMBLÈVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4770"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 6.169623,
+          "lat": 50.353638
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Operational Malmedy",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné"
+      ],
+      "secteurscodenace": [
+        "35"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "952063686",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1946698",
+      "datedebutdiffusion": "2026-06-16",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Opérateur / Opératrice de production bois",
+      "metiercodedimeco": "H220201-1"
+    }
+  ]
+}

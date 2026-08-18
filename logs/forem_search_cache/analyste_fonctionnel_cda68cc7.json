@@ -1,0 +1,101 @@
+{
+  "keyword": "analyste fonctionnel",
+  "count": 2,
+  "results": [
+    {
+      "numerooffreforem": "1981868",
+      "titreoffre": "Analyste Fonctionnel IT - Herstal (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HERSTAL"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4040"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.631262,
+          "lat": 50.665527
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Select HR",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Production pour des tiers de pièces matricées en métaux non ferreux"
+      ],
+      "secteurscodenace": [
+        "2550201"
+      ],
+      "source": "Select HR",
+      "referenceexterne": "957285131",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1981868",
+      "datedebutdiffusion": "2026-07-14",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Expert / Experte intégration TIC",
+      "metiercodedimeco": "M180201-1"
+    },
+    {
+      "numerooffreforem": "1972382",
+      "titreoffre": "Expert(e) fonctionnel(le) AFAH (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Luxembourg"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "LU00"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Lux-Advisory Sàrl",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": "Analyste TIC",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Conseil informatique"
+      ],
+      "secteurscodenace": [
+        "62020"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1972382",
+      "datedebutdiffusion": "2026-07-07",
+      "datefindiffusion": "2026-08-18",
+      "metier": "Analyste TIC",
+      "metiercodedimeco": "M180501-1"
+    }
+  ]
+}

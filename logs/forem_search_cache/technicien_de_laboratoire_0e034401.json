@@ -1,0 +1,552 @@
+{
+  "keyword": "technicien de laboratoire",
+  "count": 10,
+  "results": [
+    {
+      "numerooffreforem": "2019144",
+      "titreoffre": "Technicien de laboratoire QC (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MONT-SAINT-GUIBERT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1435"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.610851,
+          "lat": 50.634106
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie chimique"
+      ],
+      "secteurscodenace": [
+        "20"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14582360_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2019144",
+      "datedebutdiffusion": "2026-08-15",
+      "datefindiffusion": "2026-09-12",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "2015781",
+      "titreoffre": "Technicien | Hannut | Temps plein (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HANNUT"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4280"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.077991,
+          "lat": 50.672464
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "152-33061-LEFOREM-BE-120820",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015781",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "2013172",
+      "titreoffre": "Technicien d'infrastructure (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7500"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.387615,
+          "lat": 50.605415
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "VIVALDIS INTERIM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14524487_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2013172",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "2011899",
+      "titreoffre": "Technicien de Laboratoire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "HERSTAL"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4040"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.631262,
+          "lat": 50.665527
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Select HR",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des services annexes à la pêche en mer à l'exclusion des services de soutien à la pêche sportive ou récréative"
+      ],
+      "secteurscodenace": [
+        "0311003"
+      ],
+      "source": "Select HR",
+      "referenceexterne": "962872749",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011899",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Technologue de laboratoire médical",
+      "metiercodedimeco": "J130201-1"
+    },
+    {
+      "numerooffreforem": "1991467",
+      "titreoffre": "Technicien Chimiste Laboratoire /X) - Bruxelles (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14328481_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991467",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1990802",
+      "titreoffre": "technicien laboratoire HPLC (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DROGENBOS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Brabant Flamand",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1620"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE24",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.317354,
+          "lat": 50.786532
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "TALENTUS - Talentus",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": "Technologue de laboratoire médical",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1990802",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-09-02",
+      "metier": "Technologue de laboratoire médical",
+      "metiercodedimeco": "J130201-1"
+    },
+    {
+      "numerooffreforem": "1980485",
+      "titreoffre": "Technicien·ne Chimiste de Laboratoire – Contrôle Qualité (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DROGENBOS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Brabant Flamand",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1620"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE24",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.317354,
+          "lat": 50.786532
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs - Brabant Wallon Recruitment",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": "Contrôleur / Contrôleuse qualité en industrie",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1980485",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-23",
+      "metier": "Contrôleur / Contrôleuse qualité en industrie",
+      "metiercodedimeco": "H150401-1"
+    },
+    {
+      "numerooffreforem": "1932485",
+      "titreoffre": "Technicien(ne) en laboratoire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GRÂCE-HOLLOGNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4460"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.503152,
+          "lat": 50.644955
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Industry Liège",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Recherche-développement en sciences physiques et naturelles"
+      ],
+      "secteurscodenace": [
+        "721"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "951479325",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1932485",
+      "datedebutdiffusion": "2026-06-12",
+      "datefindiffusion": "2026-08-30",
+      "metier": "Biologiste médical / médicale",
+      "metiercodedimeco": "J120101-1"
+    },
+    {
+      "numerooffreforem": "1631342",
+      "titreoffre": "Technicien de laboratoire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MONS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.948737,
+          "lat": 50.453335
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie chimique"
+      ],
+      "secteurscodenace": [
+        "20"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "11624767_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1631342",
+      "datedebutdiffusion": "2025-11-17",
+      "datefindiffusion": "2025-12-15",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1631006",
+      "titreoffre": "Technicien d'analyse QC (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MARCHE-EN-FAMENNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Luxembourg",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE34",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.344315,
+          "lat": 50.22858
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres industries manufacturières"
+      ],
+      "secteurscodenace": [
+        "32"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "11624752_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1631006",
+      "datedebutdiffusion": "2025-11-17",
+      "datefindiffusion": "2025-12-15",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    }
+  ]
+}

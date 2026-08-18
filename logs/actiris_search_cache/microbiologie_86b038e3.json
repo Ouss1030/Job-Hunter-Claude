@@ -1,0 +1,132 @@
+{
+  "keyword": "microbiologie",
+  "total_reported": 5,
+  "count_saved": 5,
+  "results": [
+    {
+      "reference": "5924131",
+      "codeDomaineImt": "S'5",
+      "codeModeGestion": null,
+      "codePostal": "1070",
+      "employeur": {
+        "nomFr": "TALENTUS",
+        "nomNl": "TALENTUS",
+        "numeroEntreprise": "0462690790"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Collaborateur qualit&#233; et laboratoire H/F/X",
+      "titreNl": "Collaborateur qualit&#233; et laboratoire H/F/X",
+      "typeContrat": "INTERIM",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": "Anderlecht",
+      "communeNl": "Anderlecht",
+      "numeroEntreprise": "0462690790",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-12T10:23:35+02:00",
+      "dateModification": "2026-08-12T10:54:41+02:00"
+    },
+    {
+      "reference": "5922083",
+      "codeDomaineImt": "G'1",
+      "codeModeGestion": null,
+      "codePostal": "4460",
+      "employeur": {
+        "nomFr": "RANDSTAD BELGIUM",
+        "nomNl": "RANDSTAD BELGIUM",
+        "numeroEntreprise": "0402725291"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien(ne) en laboratoire H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Grâce-Hollogne",
+      "communeNl": "Grâce-Hollogne",
+      "numeroEntreprise": "0402725291",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-10T00:00:00+02:00",
+      "dateModification": "2026-08-10T00:00:00+02:00"
+    },
+    {
+      "reference": "5914209",
+      "codeDomaineImt": "S'5",
+      "codeModeGestion": null,
+      "codePostal": "1210",
+      "employeur": {
+        "nomFr": "OFFRE D'UNE AUTRE REGION",
+        "nomNl": "WERAANBIEDING UIT EEN ANDERE REGIO",
+        "numeroEntreprise": "1111111111"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Laboratorium Technoloog - Microbiologie/Biotechnologie M/V/X",
+      "typeContrat": "CDD",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Saint-Josse-ten-Noode",
+      "communeNl": "Sint-Joost-ten-Node",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée déterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-31T14:10:26.0405904+02:00",
+      "dateModification": "2026-07-31T14:10:26.0405904+02:00"
+    },
+    {
+      "reference": "5910497",
+      "codeDomaineImt": "W'5",
+      "codeModeGestion": null,
+      "codePostal": "1300",
+      "employeur": {
+        "nomFr": "BETUNED",
+        "nomNl": "BETUNED",
+        "numeroEntreprise": "0730641414"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "AQUA VITAL - Technicien embouteillage et contr&#244;le qualit&#233; microbiologique H/F/X",
+      "titreNl": "AQUA VITAL - Technicien embouteillage et contr&#244;le qualit&#233; microbiologique H/F/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": "Wavre",
+      "communeNl": "Wavre",
+      "numeroEntreprise": "0730641414",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-07-28T12:04:48+02:00",
+      "dateModification": "2026-07-28T13:27:01+02:00"
+    },
+    {
+      "reference": "5868844",
+      "codeDomaineImt": "G'1",
+      "codeModeGestion": null,
+      "codePostal": "4460",
+      "employeur": {
+        "nomFr": "RANDSTAD BELGIUM",
+        "nomNl": "RANDSTAD BELGIUM",
+        "numeroEntreprise": "0402725291"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien(ne) en laboratoire H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Grâce-Hollogne",
+      "communeNl": "Grâce-Hollogne",
+      "numeroEntreprise": "0402725291",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-06-11T00:00:00+02:00",
+      "dateModification": "2026-06-11T00:00:00+02:00"
+    }
+  ]
+}

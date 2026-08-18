@@ -1,0 +1,58 @@
+{
+  "keyword": "titrage",
+  "provenance_mode": "PARTNER",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5696664",
+      "codeDomaineImt": "N'1",
+      "codeModeGestion": null,
+      "codePostal": "8500",
+      "employeur": {
+        "nomFr": "AGO JOBS & HR",
+        "nomNl": "AGO JOBS & HR",
+        "numeroEntreprise": "0867323421"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien(-ne) de laboratoire Controle-Qualite  H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2025-12-24T00:00:00+01:00",
+      "dateModification": "2025-12-24T00:00:00+01:00"
+    },
+    {
+      "reference": "5654226",
+      "codeDomaineImt": "N'1",
+      "codeModeGestion": null,
+      "codePostal": "8500",
+      "employeur": {
+        "nomFr": "AGO JOBS & HR",
+        "nomNl": "AGO JOBS & HR",
+        "numeroEntreprise": "0867323421"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "technicien(ne) de laboratoire  H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2025-11-19T00:00:00+01:00",
+      "dateModification": "2025-11-19T00:00:00+01:00"
+    }
+  ]
+}

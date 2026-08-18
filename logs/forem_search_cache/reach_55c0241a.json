@@ -1,0 +1,561 @@
+{
+  "keyword": "REACH",
+  "count": 10,
+  "results": [
+    {
+      "numerooffreforem": "2016041",
+      "titreoffre": "Reach Truck Driver (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ROESELARE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.123418,
+          "lat": 50.944572
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "LET'S WORK",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Let's Work",
+      "referenceexterne": "PO-5SHAQ50Y-LEFOREM-BE-130803",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2016041",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-24",
+      "metier": "Magasinage et préparation de commandes",
+      "metiercodedimeco": "N1103"
+    },
+    {
+      "numerooffreforem": "2014054",
+      "titreoffre": "Reachtruckchauffeur (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NEDER-OVER-HEEMBEEK",
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1120",
+        "1120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.390488,
+          "lat": 50.897796
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "AIB",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14534091_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014054",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Conduite d'engins de déplacement des charges",
+      "metiercodedimeco": "N1101"
+    },
+    {
+      "numerooffreforem": "2014053",
+      "titreoffre": "Cariste Reachtruck (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NEDER-OVER-HEEMBEEK",
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1120",
+        "1120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.390488,
+          "lat": 50.897796
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "AIB",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14534091_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014053",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Conduite d'engins de déplacement des charges",
+      "metiercodedimeco": "N1101"
+    },
+    {
+      "numerooffreforem": "2010819",
+      "titreoffre": "Flexi reacher (H/F/X)",
+      "lieuxtravaillocalite": [
+        "KUURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8520"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.286503,
+          "lat": 50.850864
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "AGO JOBS & HR - Kortrijk Food",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Travail du bois et fabrication d'articles en bois et en liège, à l'exception des meubles",
+        "fabrication d'articles en vannerie et sparterie"
+      ],
+      "secteurscodenace": [
+        "16"
+      ],
+      "source": "References",
+      "referenceexterne": "10549239",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010819",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-20",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2009703",
+      "titreoffre": "Voerder Filling / Operator (Reachtruck/Heftruck) | Nachtploeg (H/F/X)",
+      "lieuxtravaillocalite": [
+        "IEPER"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.891477,
+          "lat": 50.851808
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail, à l'exception des véhicules automobiles et des motocycles"
+      ],
+      "secteurscodenace": [
+        "47"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "395-9603-LEFOREM-BE-060823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009703",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Conception et pilotage de la politique des pouvoirs publics",
+      "metiercodedimeco": "K1401"
+    },
+    {
+      "numerooffreforem": "2006899",
+      "titreoffre": "Magazijnier/ reacher | regio Kuurne | dagwerk (H/F/X)",
+      "lieuxtravaillocalite": [
+        "KUURNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8520"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.273632,
+          "lat": 50.860051
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Transports terrestres et transport par conduites"
+      ],
+      "secteurscodenace": [
+        "49"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "155-52245-LEFOREM-BE-050811",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2006899",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Magasinage et préparation de commandes",
+      "metiercodedimeco": "N1103"
+    },
+    {
+      "numerooffreforem": "1999961",
+      "titreoffre": "Reachtruckchauffeur /x (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BOOM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province d'Anvers",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2850"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE21",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.363516,
+          "lat": 51.085991
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Néerlandais",
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Entreposage et services auxiliaires des transports"
+      ],
+      "secteurscodenace": [
+        "52"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14404560_NL",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1999961",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Conduite d'engins de déplacement des charges",
+      "metiercodedimeco": "N1101"
+    },
+    {
+      "numerooffreforem": "1990549",
+      "titreoffre": "Grutier Maritime / Conducteur de Reach Stacker (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MONS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.948737,
+          "lat": 50.453335
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14319072_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1990549",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-08-19",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1989608",
+      "titreoffre": "Magazijnier - reachtruck | voeding | Moen (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MOEN",
+        "ZWEVEGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8552",
+        "8552"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.382526,
+          "lat": 50.775415
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "374-36760-LEFOREM-BE-210700",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1989608",
+      "datedebutdiffusion": "2026-07-21",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Magasinage et préparation de commandes",
+      "metiercodedimeco": "N1103"
+    },
+    {
+      "numerooffreforem": "1645194",
+      "titreoffre": "Cariste 5 (Reachtruck) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "Roeselare",
+        "ROESELARE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8800",
+        "8800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.124765,
+          "lat": 50.944494
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "LET'S WORK",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Let's Work",
+      "referenceexterne": "PO-ESKUWBUI-LEFOREM-BE-011206",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1645194",
+      "datedebutdiffusion": "2025-12-01",
+      "datefindiffusion": "2026-01-12",
+      "metier": "Magasinage et préparation de commandes",
+      "metiercodedimeco": "N1103"
+    }
+  ]
+}

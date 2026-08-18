@@ -1,0 +1,33 @@
+{
+  "keyword": "chimie physique",
+  "provenance_mode": "VDAB_FOREM",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5915017",
+      "codeDomaineImt": "S'7",
+      "codeModeGestion": null,
+      "codePostal": "1980",
+      "employeur": {
+        "nomFr": "SCHOONMAAKWERKEN VAN DE VEIRE JONATHAN",
+        "nomNl": "SCHOONMAAKWERKEN VAN DE VEIRE JONATHAN",
+        "numeroEntreprise": "0861083648"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "EMPLOYE DE NETTOYAGE - ZEMST - TRAVAIL PHYSIQUE M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Zemst",
+      "communeNl": "Zemst",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-02T10:10:06.8907027+02:00",
+      "dateModification": "2026-08-02T10:10:06.8907027+02:00"
+    }
+  ]
+}

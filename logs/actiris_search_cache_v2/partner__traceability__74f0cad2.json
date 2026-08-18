@@ -1,0 +1,108 @@
+{
+  "keyword": "traceability",
+  "provenance_mode": "PARTNER",
+  "total_reported": 4,
+  "count_saved": 4,
+  "results": [
+    {
+      "reference": "5924755",
+      "codeDomaineImt": "Y'2",
+      "codeModeGestion": null,
+      "codePostal": "1200",
+      "employeur": {
+        "nomFr": "MANPOWER (BELGIUM)",
+        "nomNl": "MANPOWER (BELGIUM)",
+        "numeroEntreprise": "0412695309"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Supply Chain and Traceability Coordinator M/V/X",
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Woluwe-Saint-Lambert",
+      "communeNl": "Sint-Lambrechts-Woluwe",
+      "numeroEntreprise": "0728656674",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-13T00:00:00+02:00",
+      "dateModification": "2026-08-13T00:00:00+02:00"
+    },
+    {
+      "reference": "5918042",
+      "codeDomaineImt": "V'1",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "STEPSTONE",
+        "nomNl": "STEPSTONE",
+        "numeroEntreprise": "0459971228"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Supervisor II, Onsite Lab Operations Support H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Bruxelles",
+      "communeNl": "Brussel",
+      "numeroEntreprise": "0459971228",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-05T00:00:00+02:00",
+      "dateModification": "2026-08-05T00:00:00+02:00"
+    },
+    {
+      "reference": "5914343",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "NTT DATA BELGIQUE",
+        "nomNl": "NTT DATA BELGIQUE",
+        "numeroEntreprise": "0712941486"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "NTT DATA - API / SOA Analyst H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-31T00:00:00+02:00",
+      "dateModification": "2026-07-31T00:00:00+02:00"
+    },
+    {
+      "reference": "5907044",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "NTT DATA BELGIQUE",
+        "nomNl": "NTT DATA BELGIQUE",
+        "numeroEntreprise": "0712941486"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "API / SOA Analyst H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Bruxelles",
+      "communeNl": "Brussel",
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-23T00:00:00+02:00",
+      "dateModification": "2026-07-23T00:00:00+02:00"
+    }
+  ]
+}

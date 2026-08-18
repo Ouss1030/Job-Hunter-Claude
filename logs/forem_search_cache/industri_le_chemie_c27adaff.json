@@ -1,0 +1,298 @@
+{
+  "keyword": "industriële chemie",
+  "count": 5,
+  "results": [
+    {
+      "numerooffreforem": "2010640",
+      "titreoffre": "Storingstechnieker 2 ploegen | Kluisbergen | chemie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "KLUISBERGEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9690"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.521249,
+          "lat": 50.778298
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "374-37063-LEFOREM-BE-070816",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010640",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Installation et maintenance d'équipements industriels et d'exploitation",
+      "metiercodedimeco": "I1304"
+    },
+    {
+      "numerooffreforem": "2004522",
+      "titreoffre": "Product Compliance officer chemie | Melsele | Vast contract (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BEVEREN-KRUIBEKE-ZWIJNDRECHT",
+        "BEVEREN-WAAS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9120",
+        "9120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.342747,
+          "lat": 50.871701
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de gros et de détail et réparation véhicules automobiles et de motocycles"
+      ],
+      "secteurscodenace": [
+        "45"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "478-10642-LEFOREM-BE-040800",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004522",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Management et ingénierie qualité industrielle",
+      "metiercodedimeco": "H1502"
+    },
+    {
+      "numerooffreforem": "1993761",
+      "titreoffre": "Analytical Chemistry Engineer - Mass Spectrometry (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE - QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": "Laborantin industriel / Laborantine industrielle",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993761",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    },
+    {
+      "numerooffreforem": "1973684",
+      "titreoffre": "Chemische procesoperatoren 3-ploegen, AGFA GROUP (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MORTSEL"
+      ],
+      "lieuxtravailregion": [
+        "Province d'Anvers",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2640"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE21",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.459333,
+          "lat": 51.174178
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "AGFA GROUP",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres industries manufacturières"
+      ],
+      "secteurscodenace": [
+        "32"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2229215",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1973684",
+      "datedebutdiffusion": "2026-07-07",
+      "datefindiffusion": "2026-08-18",
+      "metier": "Opérateur / Opératrice en industrie chimique",
+      "metiercodedimeco": "H230101-1"
+    },
+    {
+      "numerooffreforem": "1970546",
+      "titreoffre": "Laboratory Analyst - Physico-Chemistry (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 2,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": "Laborantin industriel / Laborantine industrielle",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1970546",
+      "datedebutdiffusion": "2026-07-06",
+      "datefindiffusion": "2026-08-17",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    }
+  ]
+}

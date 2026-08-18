@@ -1,0 +1,73 @@
+# ==========================================
+# Job Hunter Belgium - fichiers locaux / sensibles
+# ==========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables / credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+token.*
+api_key.*
+
+# Local database / caches
+database/*.db
+database/*.db-*
+*.sqlite
+*.sqlite3
+.cache/
+cache/
+tmp/
+temp/
+
+# Generated runtime outputs
+exports/logs/
+exports/applications/
+exports/**/*.json
+exports/**/*.csv
+exports/**/*.txt
+
+# Personal application documents
+*.docx
+*.pdf
+
+# Candidate personal profile
+config/profile.py
+config/profile_private.py
+
+# Optional local API / AI configuration if it contains credentials
+config/ai_generation.py
+
+# Playwright / browser local artifacts
+playwright-report/
+test-results/
+
+# Python packaging
+build/
+dist/
+*.egg-info/

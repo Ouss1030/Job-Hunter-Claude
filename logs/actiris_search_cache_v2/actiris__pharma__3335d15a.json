@@ -1,0 +1,54 @@
+{
+  "keyword": "pharma",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5917108",
+      "codeDomaineImt": "S'3",
+      "codeModeGestion": null,
+      "codePostal": "1040",
+      "employeur": null,
+      "regimeTravail": "NO",
+      "titreFr": "Assistant en pharmacie - FPIE (dipl&#244;me et agr&#233;ment obligatoire)  H/F/X",
+      "titreNl": "Assistant en pharmacie - FPIE (dipl&#244;me et agr&#233;ment obligatoire)  H/F/X",
+      "typeContrat": "FPI",
+      "typeOffre": "Select",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0239843188",
+      "typeContratLibelle": "FPIe/IBO",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-04T12:52:11+02:00",
+      "dateModification": "2026-08-10T14:24:36+02:00"
+    },
+    {
+      "reference": "5891750",
+      "codeDomaineImt": "L''1",
+      "codeModeGestion": null,
+      "codePostal": "9052",
+      "employeur": {
+        "nomFr": "BETUNED",
+        "nomNl": "BETUNED",
+        "numeroEntreprise": "0730641414"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "PHOENIX BELGIUM - Technisch Medewerker Onderhoud M/V/X",
+      "titreNl": "PHOENIX BELGIUM - Technisch Medewerker Onderhoud M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0730641414",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-07-06T14:02:08+02:00",
+      "dateModification": "2026-07-06T14:09:07+02:00"
+    }
+  ]
+}

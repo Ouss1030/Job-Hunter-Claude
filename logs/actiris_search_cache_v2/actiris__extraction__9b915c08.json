@@ -1,0 +1,58 @@
+{
+  "keyword": "extraction",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5925145",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "BPOST",
+        "nomNl": "BPOST",
+        "numeroEntreprise": "0214596464"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Expert reporting 3PL H/F/X",
+      "titreNl": "Expert reporting 3PL M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0214596464",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-13T11:17:07+02:00",
+      "dateModification": "2026-08-13T11:17:07+02:00"
+    },
+    {
+      "reference": "5903130",
+      "codeDomaineImt": "Y'4",
+      "codeModeGestion": null,
+      "codePostal": "1210",
+      "employeur": {
+        "nomFr": "I.M.",
+        "nomNl": "I.M.",
+        "numeroEntreprise": "0477688178"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Data Manager H/F/X",
+      "titreNl": "Data Manager  M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0477688178",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-07-17T13:23:12+02:00",
+      "dateModification": "2026-07-28T10:16:34+02:00"
+    }
+  ]
+}

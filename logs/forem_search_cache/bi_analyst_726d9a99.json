@@ -1,0 +1,120 @@
+{
+  "keyword": "BI analyst",
+  "count": 2,
+  "results": [
+    {
+      "numerooffreforem": "2004839",
+      "titreoffre": "BI Analyst-Developer, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2234645",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004839",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Business Analyst TIC",
+      "metiercodedimeco": "M180601-1"
+    },
+    {
+      "numerooffreforem": "2004838",
+      "titreoffre": "BI Analyst-Developer, Smals (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GILLES"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1060"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.345668,
+          "lat": 50.82674
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Smals",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités informatiques"
+      ],
+      "secteurscodenace": [
+        "6209"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2234646",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004838",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Business Analyst TIC",
+      "metiercodedimeco": "M180601-1"
+    }
+  ]
+}

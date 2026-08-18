@@ -1,0 +1,58 @@
+{
+  "keyword": "databeheer",
+  "provenance_mode": "VDAB_FOREM",
+  "total_reported": 2,
+  "count_saved": 2,
+  "results": [
+    {
+      "reference": "5899085",
+      "codeDomaineImt": "A'1",
+      "codeModeGestion": null,
+      "codePostal": "2610",
+      "employeur": {
+        "nomFr": "TALENTUS",
+        "nomNl": "TALENTUS",
+        "numeroEntreprise": "0462690790"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Medewerker databeheer  M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Wilrijk (Antwerpen)",
+      "communeNl": "Wilrijk (Antwerpen)",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-14T11:10:11.9334906+02:00",
+      "dateModification": "2026-07-14T11:10:11.9334906+02:00"
+    },
+    {
+      "reference": "5878465",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1740",
+      "employeur": {
+        "nomFr": "DE MARIE",
+        "nomNl": "DE MARIE",
+        "numeroEntreprise": "0416875514"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Medewerker Databeheer & Administratie M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Ternat",
+      "communeNl": "Ternat",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-06-22T08:10:06.2507802+02:00",
+      "dateModification": "2026-06-22T08:10:06.2507802+02:00"
+    }
+  ]
+}

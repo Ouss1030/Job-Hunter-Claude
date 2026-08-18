@@ -1,0 +1,133 @@
+{
+  "keyword": "purification",
+  "provenance_mode": "PARTNER",
+  "total_reported": 5,
+  "count_saved": 5,
+  "results": [
+    {
+      "reference": "5925612",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "8800",
+      "employeur": {
+        "nomFr": "FORUM JOBS",
+        "nomNl": "FORUM JOBS",
+        "numeroEntreprise": "0460046650"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "chef d' équipe H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-14T00:00:00+02:00",
+      "dateModification": "2026-08-14T00:00:00+02:00"
+    },
+    {
+      "reference": "5925523",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-13T00:00:00+02:00",
+      "dateModification": "2026-08-13T00:00:00+02:00"
+    },
+    {
+      "reference": "5904382",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "8800",
+      "employeur": {
+        "nomFr": "FORUM JOBS",
+        "nomNl": "FORUM JOBS",
+        "numeroEntreprise": "0460046650"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "chef d' équipe H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-20T00:00:00+02:00",
+      "dateModification": "2026-07-20T00:00:00+02:00"
+    },
+    {
+      "reference": "5901504",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-16T00:00:00+02:00",
+      "dateModification": "2026-07-16T00:00:00+02:00"
+    },
+    {
+      "reference": "5897958",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "VIVALDI'S INTERIM",
+        "nomNl": "VIVALDI'S INTERIM",
+        "numeroEntreprise": "0443052646"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Opérateur(trice) de synthèse H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-13T00:00:00+02:00",
+      "dateModification": "2026-07-13T00:00:00+02:00"
+    }
+  ]
+}

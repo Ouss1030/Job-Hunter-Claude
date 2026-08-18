@@ -1,0 +1,82 @@
+{
+  "idOffreEmploi": 2011040,
+  "numero": "2011040",
+  "titreOffre": "Data Engineer - Microsoft Fabric / Azure, Nationale Loterij (H/F/X)",
+  "datePublication": "Publié il y a moins d’une semaine",
+  "dateFinDiffusion": "18/09/2026",
+  "dateDebutDiffusion": "07/08/2026",
+  "nomEmployeur": "Nationale Loterij",
+  "nomPartenaire": "StepStone",
+  "secteurActiviteEmployeur": "Administration publique et défense; sécurité sociale obligatoire",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "BRUXELLES"
+  ],
+  "langues": [
+    {
+      "code": "NL",
+      "libelle": "Néerlandais",
+      "required": true,
+      "experience": "B1 - Intermédiaire"
+    }
+  ],
+  "nombrePostes": 1,
+  "descriptionJob": "<p>De<strong> Nationale Loterij </strong>gaat op zoek naar een Data Engineer - Microsoft Fabric / Azure.</p><br /><p>Al meer dan 90 jaar biedt de <strong>Nationale Loterij</strong> alle meerderjarige Belgen veilig en verantwoord spelplezier aan. De Nationale Loterij staat sterk door het volle vertrouwen dat zij bij haar spelers geniet: precies daarom was zij in staat om in 2025 een omzetcijfer te laten optekenen van 1,666 miljard euro. Dankzij het principe van kleine bedragen die bij haar spelen worden ingezet door een groot aantal spelers, kan de Nationale Loterij jaar in jaar uit niet minder dan 385 miljoen euro laten terugvloeien naar de Belgische samenleving. Op die manier kunnen tal van projecten en verenigingen die zinvol werk leveren ten gunste van de gemeenschap, de financiële steun genieten die zij nodig hebben om het verschil te kunnen maken.</p><p>Dat alles is echter enkel mogelijk op voorwaarde dat de Nationale Loterij de absolute referentie blijft in haar sector, enerzijds door haar reputatie van betrouwbaarheid en onberispelijkheid in stand te houden, en anderzijds door haar spelers de beste speelervaring aan te bieden met een gevarieerd gamma van producten en speelkanalen.</p><br/>                 <p>In het <strong>Data Platform Team</strong> van de Nationale Loterij ben jij de drijvende kracht van de automatisering, de betrouwbaarheid en het prestatievermogen van onze infrastructuur. Je bent veel meer dan een beheerder van pipelines: jij kneedt onze architectuur immers zodanig dat onze data vlot én veilig kunnen circuleren.</p><p>Wij zijn op zoek naar een senior profiel dat zelfstandig kan werken en heldere technische beslissingen kan nemen, en tegelijkertijd blijk geeft van teamgeest op basis van feedback, gedeelde verantwoordelijkheid en een transparante communicatie.</p><p><strong>Dit is je takenpakket als Data Engineer - Microsoft Fabric / Azure:</strong></p><ul><li>een modern concept: het Medallion Design. In nauwe samenwerking met de Data Architect en de Solution Designer werk je onze nieuwe data-architectuur uit (Bronze/Silver/Gold) en implementeer je ze in het Azure-ecosysteem.</li><li>Generieke Data Engineering: jij beheert het verzamelen, de integratie en de opslag van gegevens die afkomstig zijn van verschillende bronnen. In dat verband garandeer je een krachtige en opschaalbare transformatielogica.</li><li>Automatisering en DataOps: je ontwerpt en onderhoudt kritische Azure DevOps (CI/CD)-pipelines met de bedoeling om onze data-oplossingen op grote schaal te kunnen implementeren.</li><li>Ondersteuning van de Data Science: je verricht analyses en modelleringen van data. Vervolgens werk je samen met de Data Scientists om de modellen in kwestie te implementeren, op te schalen en in productie te zetten.</li><li>Optimalisering en prestatievermogen: jij zorgt voor de Performance Tuning van de Big Data-verwerkingen (Spark) en van de SQL-omgevingen, om op die manier een maximale efficiëntie van het platform te garanderen.</li><li>Het ecosysteem Azure Fabric: jij beheert en optimaliseert de Azure Stack (Synapse, Lakehouse, Fabric), met inbegrip van de semantische modellen en van de Power BI-integratie.</li></ul>            ",
+  "metier": "Data engineer ",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "webAddress": "https://www.stepstone.be/vacatures----2235510-inline.html?cid=Partner_LeForem___1-FRNL",
+    "formattedName": "Stepstone"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Data engineer ",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Enseignement secondaire (deuxième cycle)"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "10/08/2026",
+  "competencies": [],
+  "benefitsComments": "<p>Waarom uitgerekend jij het verschil kan maken!</p><p><strong>Ervaring</strong>: je hebt een <strong>erkend senior profiel</strong>. Je kan een <strong>ruime, onderbouwde ervaring</strong> voorleggen in een complexe <strong>Cloud Data-omgeving</strong> (deze functie staat dus niet open voor junior profielen).</p><p><strong>Technische deskundigheid waarover je absoluut moet beschikken:</strong></p><ul><li>Data Processing: je beheerst PySpark.</li><li>DevOps: je bent een expert op het vlak van CI/CD-pipelines in Azure.</li><li>Opslag en transformatie: je beschikt over een stevige ervaring met dbt, SQL en T-SQL.</li><li>Azure Cloud: je beheerst de Data Stack (Synapse Analytics, Lakehouse, et idealiter ook Microsoft Fabric).</li><li>Architectuur: je beheerst de semantische modellen en de dimensionele modellering (de Kimball Methodology), en hun implementatie in analytische Power BI-architecturen.</li></ul><p><strong>Soft Skills:</strong></p><ul><li>Zelfstandigheid: je kan initiatieven op een autonome manier opstarten en van a tot z beheren.</li><li>Betrouwbaarheid: je hebt een grote verantwoordelijkheidszin en je geeft blijk van een sterke betrokkenheid bij het werk dat je als owner aflevert. Daarenboven beschik je over de bekwaamheid om berichten of ideeën goed te keuren of af te keuren.</li><li>Teamgeest: je bent een prima communicator, je hebt een feedback-cultuur en je vindt samenwerken leuk.</li><li>Structuur: je kan structuur aanbrengen in je eigen werk en in dat van anderen.</li><li>Nieuwsgierigheid: in dat kader ben je grondig op de hoogte van de rol van gemanipuleerde gegevens en kan je dus de Business-afdelingen van de Nationale Loterij perfect bijstaan om werkelijke waarde te creëren.</li></ul>",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Data Engineer - Microsoft Fabric / Azure, Nationale Loterij (H/F/X)",
+    "description": "<p>De<strong> Nationale Loterij </strong>gaat op zoek naar een Data Engineer - Microsoft Fabric / Azure.</p><br /><p>Al meer dan 90 jaar biedt de <strong>Nationale Loterij</strong> alle meerderjarige Belgen veilig en verantwoord spelplezier aan. De Nationale Loterij staat sterk door het volle vertrouwen dat zij bij haar spelers geniet: precies daarom was zij in staat om in 2025 een omzetcijfer te laten optekenen van 1,666 miljard euro. Dankzij het principe van kleine bedragen die bij haar spelen worden ingezet door een groot aantal spelers, kan de Nationale Loterij jaar in jaar uit niet minder dan 385 miljoen euro laten terugvloeien naar de Belgische samenleving. Op die manier kunnen tal van projecten en verenigingen die zinvol werk leveren ten gunste van de gemeenschap, de financiële steun genieten die zij nodig hebben om het verschil te kunnen maken.</p><p>Dat alles is echter enkel mogelijk op voorwaarde dat de Nationale Loterij de absolute referentie blijft in haar sector, enerzijds door haar reputatie van betrouwbaarheid en onberispelijkheid in stand te houden, en anderzijds door haar spelers de beste speelervaring aan te bieden met een gevarieerd gamma van producten en speelkanalen.</p><br/>                 <p>In het <strong>Data Platform Team</strong> van de Nationale Loterij ben jij de drijvende kracht van de automatisering, de betrouwbaarheid en het prestatievermogen van onze infrastructuur. Je bent veel meer dan een beheerder van pipelines: jij kneedt onze architectuur immers zodanig dat onze data vlot én veilig kunnen circuleren.</p><p>Wij zijn op zoek naar een senior profiel dat zelfstandig kan werken en heldere technische beslissingen kan nemen, en tegelijkertijd blijk geeft van teamgeest op basis van feedback, gedeelde verantwoordelijkheid en een transparante communicatie.</p><p><strong>Dit is je takenpakket als Data Engineer - Microsoft Fabric / Azure:</strong></p><ul><li>een modern concept: het Medallion Design. In nauwe samenwerking met de Data Architect en de Solution Designer werk je onze nieuwe data-architectuur uit (Bronze/Silver/Gold) en implementeer je ze in het Azure-ecosysteem.</li><li>Generieke Data Engineering: jij beheert het verzamelen, de integratie en de opslag van gegevens die afkomstig zijn van verschillende bronnen. In dat verband garandeer je een krachtige en opschaalbare transformatielogica.</li><li>Automatisering en DataOps: je ontwerpt en onderhoudt kritische Azure DevOps (CI/CD)-pipelines met de bedoeling om onze data-oplossingen op grote schaal te kunnen implementeren.</li><li>Ondersteuning van de Data Science: je verricht analyses en modelleringen van data. Vervolgens werk je samen met de Data Scientists om de modellen in kwestie te implementeren, op te schalen en in productie te zetten.</li><li>Optimalisering en prestatievermogen: jij zorgt voor de Performance Tuning van de Big Data-verwerkingen (Spark) en van de SQL-omgevingen, om op die manier een maximale efficiëntie van het platform te garanderen.</li><li>Het ecosysteem Azure Fabric: jij beheert en optimaliseert de Azure Stack (Synapse, Lakehouse, Fabric), met inbegrip van de semantische modellen en van de Power BI-integratie.</li></ul>            ",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "Nationale Loterij",
+      "value": "2011040"
+    },
+    "datePosted": "Publié il y a moins d’une semaine",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "Nationale Loterij",
+      "sameAs": "Nationale Loterij"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "2235510"
+}

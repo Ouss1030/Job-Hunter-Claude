@@ -1,0 +1,278 @@
+Data-Engineer /X) H/F/X - Ref. 5924678 | Actiris
+Aller au contenu principal
+Citoyens
+Employeurs
+Partenaires
+Fr
+Nl
+En
+Fermer le menu
+Offres d'emploi
+Mon projet
+Mieux chercher et postuler
+Définir mon projet professionnel
+Mes outils pour postuler
+Chercher et postuler de manière autonome
+Bénéficier d'un coaching
+Valoriser mon expérience et diplôme
+Trouver un lieu d'accueil pour mon enfant
+Bénéficier d'un accompagnement après licenciement
+Me former
+Apprendre un métier
+Déterminer mon niveau en langues et informatique
+Apprendre une langue
+Formation en informatique
+Bénéficier d'une aide à l'embauche
+C’est quoi une aide à l’emploi ?
+Stage First
+Formation en alternance
+Formation professionnelle individuelle en entreprise
+Formation IBO (Individuele beroepsopleiding)
+Programme de transition professionnelle
+Convention d'immersion professionnelle
+Contrat Emploi d’Insertion
+Contrat agence locale pour l'emploi
+Contrat pour agents contractuels subventionnés
+Ecosoc
+Travailler en dehors de Bruxelles
+Travailler dans une autre région
+Travailler en Flandre
+Travailler en Wallonie
+Travailler à l'étranger
+Tout savoir sur la discrimination à l'embauche
+Les métiers qui recrutent
+Travailler avec un handicap
+Moins de 30 ans ?
+Fini les études ? Et après ?
+Comment mieux chercher et postuler ?
+Qui peut m'aider ?
+Pas encore assez d'expérience ?
+Trouver un job
+Agenda
+Travailler comme étudiant
+Actiris & moi
+Mon inscription
+Pourquoi m'inscrire ?
+Qui peut s'inscrire et quand ?
+Comment m’inscrire ou me réinscrire ?
+S'inscrire dans une autre région ?
+Fini les études ? Et après ?
+Mon profil personnel My Actiris
+Mes droits et devoirs
+Avantages et obligations
+Mon obligation de disponibilité
+Contrôle de disponibilité
+Dispense de disponibilité
+Introduire une plainte
+Actualités
+Agenda
+News
+Media
+Fin de droit au chômage ? Actiris peut vous aider
+Contact
+Marché de l'emploi
+A propos d'Actiris
+Rechercher
+Rechercher
+Rechercher
+Menu
+My Actiris
+Citoyens
+Employeurs
+Partenaires
+Fr
+Nl
+En
+Citoyens
+Employeurs
+Partenaires
+Marché de l'emploi
+A propos d'Actiris
+Fr
+Nl
+En
+Rechercher
+Rechercher
+My Actiris
+Offres d'emploi
+Mon projet
+Mieux chercher et postuler
+Définir mon projet professionnel
+Mes outils pour postuler
+Chercher et postuler de manière autonome
+Bénéficier d'un coaching
+Valoriser mon expérience et diplôme
+Trouver un lieu d'accueil pour mon enfant
+Bénéficier d'un accompagnement après licenciement
+Me former
+Apprendre un métier
+Déterminer mon niveau en langues et informatique
+Apprendre une langue
+Formation en informatique
+Bénéficier d'une aide à l'embauche
+C’est quoi une aide à l’emploi ?
+Stage First
+Formation en alternance
+Formation professionnelle individuelle en entreprise
+Formation IBO (Individuele beroepsopleiding)
+Programme de transition professionnelle
+Convention d'immersion professionnelle
+Contrat Emploi d’Insertion
+Contrat agence locale pour l'emploi
+Contrat pour agents contractuels subventionnés
+Ecosoc
+Travailler en dehors de Bruxelles
+Travailler dans une autre région
+Travailler en Flandre
+Travailler en Wallonie
+Travailler à l'étranger
+Tout savoir sur la discrimination à l'embauche
+Les métiers qui recrutent
+Travailler avec un handicap
+Moins de 30 ans ?
+Fini les études ? Et après ?
+Comment mieux chercher et postuler ?
+Qui peut m'aider ?
+Pas encore assez d'expérience ?
+Trouver un job
+Agenda
+Travailler comme étudiant
+Accès rapides
+Comment m'inscrire ?
+Me former
+Aides à l'embauche
+Droits et devoirs
+Mon niveau en langues et informatique
+Actiris & moi
+Mon inscription
+Pourquoi m'inscrire ?
+Qui peut s'inscrire et quand ?
+Comment m’inscrire ou me réinscrire ?
+S'inscrire dans une autre région ?
+Fini les études ? Et après ?
+Mon profil personnel My Actiris
+Mes droits et devoirs
+Avantages et obligations
+Mon obligation de disponibilité
+Contrôle de disponibilité
+Dispense de disponibilité
+Introduire une plainte
+Accès rapides
+Comment m'inscrire ?
+Me former
+Aides à l'embauche
+Droits et devoirs
+Mon niveau en langues et informatique
+Actualités
+Agenda
+News
+Media
+Fin de droit au chômage ? Actiris peut vous aider
+Accès rapides
+Comment m'inscrire ?
+Me former
+Aides à l'embauche
+Droits et devoirs
+Mon niveau en langues et informatique
+Contact
+Offres d'emploi
+Data-Engineer /X) H/F/X
+Référence 5924678
+|
+Créé le 13 août 2026
+Retour à la liste
+Temps de travail :
+Temps plein
+Type de contrat :
+Durée indéterminée
+Famille de métiers :
+Informatique / Services informatiques
+Description de l'entreprise
+L'
+Association Pharmaceutique Belge (APB)
+représente les pharmaciens d'officine. L'APB soutient ses membres dans leur pratique quotidienne, développe et promeut le libre exercice de la profession de pharmacien indépendant.
+Nous nous efforçons de fournir des solutions axées sur les données qui améliorent les performances de notre organisation et aident nos clients à performer. En tant que membre de notre équipe en pleine expansion, vous aurez l'occasion de travailler avec les technologies les plus récentes et de contribuer de manière significative à notre avenir.
+Data-Engineer (H/F/X)
+En tant que Data-Engineer, vous jouerez un rôle crucial dans la
+construction, la gestion et l'optimisation de notre infrastructure de données
+. Vous serez responsable de la conception et du développement des data pipelines, de la transformation de données brutes en formats exploitables, et du soutien de nos Data-Analysts et Data-Scientists dans la réalisation de leurs analyses.
+Description de la fonction
+Concevoir, développer et entretenir des data pipelines fiables et des processus ETL.
+Intégrer divers flux de données internes et externes dans notre plateforme de données.
+Optimiser les performances des bases de données et garantir la qualité et l'intégrité des données.
+Collaborer avec des Data-Analysts et des Data-Scientists pour modéliser et analyser des ensembles de données complexes.
+Soutenir l'implémentation des modèles de machine learning en environnement de production.
+Documenter les solutions techniques et les processus.
+Profil
+Diplôme de bachelor ou de master en informatique, Data-Engineer ou domaine similaire.
+Minimum 2 à 3 ans d'expérience dans un rôle similaire.
+Expérience avec des technologies Big Data telles que Hadoop, Spark.
+Compétences en langages de programmation comme Python, Java.
+Solides connaissances de SQL et expérience avec des bases de données relationnelles telles que PostgreSQL ou SQL Server.
+Expérience dans la conception de data warehouses et de data lakes.
+Expérience avec DBT (Data Build Tool) pour modéliser et transformer des ensembles de données.
+Compétences dans la mise en place et la maintenance de modèles de données Snowflake.
+Expérience dans l'intégration des données dans des outils BI tels que QLIK Sense et QLIK NPrinting.
+Familiarité avec la gestion et l'orchestration des data pipelines via Airflow.
+Solides compétences analytiques et en résolution de problèmes.
+Vous pouvez travailler de manière autonome tout en étant capable de collaborer en équipe.
+Excellentes compétences en communication, en néerlandais et en anglais, le français est un atout.
+Attitude proactive et orientée vers la résolution de problèmes.
+Compétences linguistiques
+Néérlandais (atout)
+Comprendre : Expérimenté - (C1)
+Écrire : Expérimenté - (C1)
+Lire : Expérimenté - (C1)
+Parler : Expérimenté - (C1)
+Anglais (atout)
+Comprendre : Expérimenté - (C1)
+Écrire : Expérimenté - (C1)
+Lire : Expérimenté - (C1)
+Parler : Expérimenté - (C1)
+Français (atout)
+Comprendre : Expérimenté - (C1)
+Écrire : Expérimenté - (C1)
+Lire : Expérimenté - (C1)
+Parler : Expérimenté - (C1)
+Envie d'en apprendre davantage sur ce métier ou sur un métier proche de celui-ci ? Parcourez toutes les informations utiles sur Panorama des métiers.
+Panorama des métiers
+Cette offre a été rédigée par l'employeur, Actiris n'est donc pas responsable de son contenu et des éventuelles infractions à la législation en vigueur.
+Attention, un employeur ne peut pas vous demander de lui communiquer des données sensibles.
+En savoir plus
+.
+Si vous avez une remarque sur cette offre, n'hésitez pas à nous la communiquer via ce
+formulaire de contact
+.
+Comment postuler ?
+Nom de l'employeur
+THE PROFILE GROUP
+Personne de contact
+Verantwoordelijke Human Resources
+Mode de présentation
+postuler via le site Web
+Website
+Site de l’employeur
+Enregistrer mes actions
+Liens utiles
+Offres d'emploi
+Actiris & moi
+News
+Media
+Agenda
+FAQ
+Nos antennes
+Charte graphique
+Travailler chez Actiris
+Panorama des métiers
+Contact
+My Actiris
+Presse
+Plan du site
+Marché de l'emploi
+Newsletter
+Restons en contact
+Social media
+Mentions légales
+Déclaration d'accessibilité
+Politique de confidentialité
+Transparence

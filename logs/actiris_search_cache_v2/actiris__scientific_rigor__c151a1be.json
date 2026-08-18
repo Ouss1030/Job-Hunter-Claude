@@ -1,0 +1,79 @@
+{
+  "keyword": "scientific rigor",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 3,
+  "count_saved": 3,
+  "results": [
+    {
+      "reference": "5923246",
+      "codeDomaineImt": "V'2",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "ECOLE ROYALE MILITAIRE",
+        "nomNl": "KONINKLIJKE MILITAIRE SCHOOL",
+        "numeroEntreprise": "0209460513"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Researcher in Weapon Systems and Ballistics (RAPTOR) M/W/X",
+      "titreNl": "Researcher in Weapon Systems and Ballistics (RAPTOR) M/W/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0209460513",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-11T13:22:15+02:00",
+      "dateModification": "2026-08-11T13:46:55+02:00"
+    },
+    {
+      "reference": "5915498",
+      "codeDomaineImt": "V'2",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "ECOLE ROYALE MILITAIRE",
+        "nomNl": "KONINKLIJKE MILITAIRE SCHOOL",
+        "numeroEntreprise": "0209460513"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Junior Researcher on Interoperability and Architecture Design for Autonomous Ground Systems (iMUGS2) M/W/X",
+      "titreNl": "Junior Researcher on Interoperability and Architecture Design for Autonomous Ground Systems (iMUGS2) M/W/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0209460513",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-03T10:54:07+02:00",
+      "dateModification": "2026-08-03T11:51:16+02:00"
+    },
+    {
+      "reference": "5894406",
+      "codeDomaineImt": "H'2",
+      "codeModeGestion": null,
+      "codePostal": "1853",
+      "employeur": null,
+      "regimeTravail": "NO",
+      "titreFr": "Electric Mopeds Mechanic M/W/X",
+      "titreNl": "Electric Mopeds Mechanic M/W/X",
+      "typeContrat": "CDD",
+      "typeOffre": "Select",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0239843188",
+      "typeContratLibelle": "Durée déterminée",
+      "dureeContrat": "CDD",
+      "dureeContratLibelle": "Contrat à durée déterminé",
+      "dateCreation": "2026-07-08T16:39:31+02:00",
+      "dateModification": "2026-07-09T10:13:48+02:00"
+    }
+  ]
+}

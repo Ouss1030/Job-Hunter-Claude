@@ -1,0 +1,267 @@
+{
+  "keyword": "chimie industrielle",
+  "count": 5,
+  "results": [
+    {
+      "numerooffreforem": "2014004",
+      "titreoffre": "mélangeur opérateur – secteur chimique- 2èquipes (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8793"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.404617,
+          "lat": 50.905735
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14533576_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014004",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Préparation de matières et produits industriels (broyage, mélange, ...)",
+      "metiercodedimeco": "H3303"
+    },
+    {
+      "numerooffreforem": "2010640",
+      "titreoffre": "Storingstechnieker 2 ploegen | Kluisbergen | chemie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "KLUISBERGEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9690"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.521249,
+          "lat": 50.778298
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "374-37063-LEFOREM-BE-070816",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010640",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Installation et maintenance d'équipements industriels et d'exploitation",
+      "metiercodedimeco": "I1304"
+    },
+    {
+      "numerooffreforem": "2004522",
+      "titreoffre": "Product Compliance officer chemie | Melsele | Vast contract (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BEVEREN-KRUIBEKE-ZWIJNDRECHT",
+        "BEVEREN-WAAS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9120",
+        "9120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.342747,
+          "lat": 50.871701
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de gros et de détail et réparation véhicules automobiles et de motocycles"
+      ],
+      "secteurscodenace": [
+        "45"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "478-10642-LEFOREM-BE-040800",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004522",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Management et ingénierie qualité industrielle",
+      "metiercodedimeco": "H1502"
+    },
+    {
+      "numerooffreforem": "1991467",
+      "titreoffre": "Technicien Chimiste Laboratoire /X) - Bruxelles (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14328481_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991467",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1626043",
+      "titreoffre": "Laborantin.e chimiste (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7500"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.387615,
+          "lat": 50.605415
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "11619225_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1626043",
+      "datedebutdiffusion": "2025-11-17",
+      "datefindiffusion": "2025-12-15",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    }
+  ]
+}

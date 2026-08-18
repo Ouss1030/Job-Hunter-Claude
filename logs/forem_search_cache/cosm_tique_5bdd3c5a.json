@@ -1,0 +1,124 @@
+{
+  "keyword": "cosmétique",
+  "count": 2,
+  "results": [
+    {
+      "numerooffreforem": "2013354",
+      "titreoffre": "Conseiller(ère)de vente-Parfumerie&Cosmétiques Haut de Gamme Aéroport Charleroi (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.449164,
+          "lat": 50.41571
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "CITY ONE BELGIUM - CITY ONE BELGIUM",
+      "regimetravail": "Temps partiel",
+      "nombrepostes": 5,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 3eme degré (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2013354",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Responsable des ventes",
+      "metiercodedimeco": "D140601-1"
+    },
+    {
+      "numerooffreforem": "1975413",
+      "titreoffre": "Conseiller(ère)de vente-Parfumerie&Cosmétiques Haut de Gamme Aéroport Zaventem (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ZAVENTEM"
+      ],
+      "lieuxtravailregion": [
+        "Province du Brabant Flamand",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1930"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE24",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.474551,
+          "lat": 50.880435
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "CITY ONE BELGIUM - CITY ONE BELGIUM",
+      "regimetravail": "Temps partiel",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement primaire"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1975413",
+      "datedebutdiffusion": "2026-07-09",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Vendeur / Vendeuse en magasin",
+      "metiercodedimeco": "D121401-1"
+    }
+  ]
+}

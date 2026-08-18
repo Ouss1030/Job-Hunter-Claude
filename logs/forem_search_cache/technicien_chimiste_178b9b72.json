@@ -1,0 +1,159 @@
+{
+  "keyword": "technicien chimiste",
+  "count": 3,
+  "results": [
+    {
+      "numerooffreforem": "1992214",
+      "titreoffre": "technicien chimiste sav /x) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7503"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.354089,
+          "lat": 50.620968
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14333698_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1992214",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Recherche en sciences de l'univers, de la matière et du vivant",
+      "metiercodedimeco": "K2402"
+    },
+    {
+      "numerooffreforem": "1991467",
+      "titreoffre": "Technicien Chimiste Laboratoire /X) - Bruxelles (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.355707,
+          "lat": 50.845535
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14328481_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991467",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-08-20",
+      "metier": "Intervention technique en laboratoire d'analyse industrielle",
+      "metiercodedimeco": "H1503"
+    },
+    {
+      "numerooffreforem": "1980485",
+      "titreoffre": "Technicien·ne Chimiste de Laboratoire – Contrôle Qualité (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DROGENBOS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Brabant Flamand",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1620"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE24",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.317354,
+          "lat": 50.786532
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs - Brabant Wallon Recruitment",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": "Contrôleur / Contrôleuse qualité en industrie",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1980485",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-23",
+      "metier": "Contrôleur / Contrôleuse qualité en industrie",
+      "metiercodedimeco": "H150401-1"
+    }
+  ]
+}

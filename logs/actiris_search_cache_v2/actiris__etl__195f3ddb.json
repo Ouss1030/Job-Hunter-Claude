@@ -1,0 +1,33 @@
+{
+  "keyword": "ETL",
+  "provenance_mode": "ACTIRIS",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5915439",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "FEDASIL",
+        "nomNl": "FEDASIL",
+        "numeroEntreprise": "0860737913"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Data Engineer - Num&#233;ro de r&#233;f&#233;rence: 20251113-99999-274 H/F/X",
+      "titreNl": "Data Engineer - Referentienummer: 20251113-99999-274 M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "DirectOnline",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0860737913",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": "CDI",
+      "dureeContratLibelle": "Contrat à durée indéterminé",
+      "dateCreation": "2026-08-03T10:34:14+02:00",
+      "dateModification": "2026-08-03T10:35:38+02:00"
+    }
+  ]
+}

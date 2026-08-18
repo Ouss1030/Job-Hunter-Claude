@@ -1,0 +1,102 @@
+{
+  "idOffreEmploi": 2017794,
+  "numero": "2017794",
+  "titreOffre": "Opérateur / opératrice de production (H/F/X)",
+  "datePublication": "Publié il y a moins d’une semaine",
+  "dateFinDiffusion": "25/09/2026",
+  "dateDebutDiffusion": "14/08/2026",
+  "nomEmployeur": "AIB",
+  "nomPartenaire": "AIB NV",
+  "secteurActiviteEmployeur": "Industrie pharmaceutique",
+  "typeContrat": "Durée déterminée",
+  "regimeTravail": "Temps plein",
+  "regimeTravailPrecision": "Travail posté 3 pauses",
+  "lieuxTravail": [
+    "TOURNAI"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "C2 - Expert"
+    }
+  ],
+  "nombrePostes": 1,
+  "logoEmployeur": "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",
+  "logoMimeType": "image/png",
+  "descriptionEmployeur": "\n\t\t\t\t<p>L'agence AGO Tournai Logistics&amp;Industry recherche un(e) op&eacute;rateur/op&eacute;ratrice de production pour une soci&eacute;t&eacute; situ&eacute;e dans la r&eacute;gion de Tournai.</p>\n\n\t\t\t",
+  "descriptionJob": "\n\t\t\t\t<ul><li><p>Alimenter les machines en mati&egrave;res premi&egrave;res</p></li><li><p>Surveiller le bon fonctionnement des machines et des &eacute;quipements.</p></li><li><p>Effectuer les r&eacute;glages de machines</p></li><li><p>Contr&ocirc;ler la qualit&eacute; des produits</p></li></ul>\n<p><b>Votre profil</b></p><p>Vous avez une premi&egrave;re exp&eacute;rience dans le milieu industriel, en tant qu'op&eacute;rateur/op&eacute;ratrice</p><p>Vous &ecirc;tes flexible au niveau des horaires</p><p>Vous &ecirc;tes polyvalent(e) au niveau des t&acirc;ches</p><p>Vous savez effectuer des r&eacute;glages de machines</p>\n\n\t\t\t",
+  "metier": "Opérations manuelles d'assemblage, tri ou emballage",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "prefferedGivenName": "",
+    "familyName": "Tournai Industry",
+    "telephone": "3269775741",
+    "postalAddress": {
+      "organisation": "\n\t\t\t\t\t\t\t\tAGO JOBS & HR\n\t\t\t\t\t\t\t",
+      "adresse": [],
+      "recipient": "Maite Labalette",
+      "municipalite": "Blandain",
+      "codePostal": "7522",
+      "numero": "9",
+      "street": "Rue Des Sablières",
+      "countryCode": "BE",
+      "pays": "Belgique"
+    },
+    "comments": "Pour postuler, cliquez sur le lien.",
+    "webAddress": "https://apply.recruitmenttechnologies.com?seid=203909030&t=101&cid=AGOJ-BE&vid=PO-W5M9XPNV",
+    "formattedName": "Maite Labalette"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Opérations manuelles d'assemblage, tri ou emballage",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Enseignement secondaire (premier cycle)"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "14/08/2026",
+  "competencies": [],
+  "benefitsComments": "\n\t\t\t\t<p>Trois pauses tournantes (matin, apr&egrave;s-midi, nuit)</p><p>Salaire au bar&egrave;me</p><p>Participation aux frais de route</p>\n\n\t\t\t",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Opérateur / opératrice de production (H/F/X)",
+    "description": "\n\t\t\t\t<ul><li><p>Alimenter les machines en mati&egrave;res premi&egrave;res</p></li><li><p>Surveiller le bon fonctionnement des machines et des &eacute;quipements.</p></li><li><p>Effectuer les r&eacute;glages de machines</p></li><li><p>Contr&ocirc;ler la qualit&eacute; des produits</p></li></ul>\n<p><b>Votre profil</b></p><p>Vous avez une premi&egrave;re exp&eacute;rience dans le milieu industriel, en tant qu'op&eacute;rateur/op&eacute;ratrice</p><p>Vous &ecirc;tes flexible au niveau des horaires</p><p>Vous &ecirc;tes polyvalent(e) au niveau des t&acirc;ches</p><p>Vous savez effectuer des r&eacute;glages de machines</p>\n\n\t\t\t",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "AIB",
+      "value": "2017794"
+    },
+    "datePosted": "Publié il y a moins d’une semaine",
+    "employementType": "PART_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "AIB",
+      "sameAs": "AIB"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress",
+        "addressCountry": "BE"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "PO-W5M9XPNV-LEFOREM-BE-140809"
+}

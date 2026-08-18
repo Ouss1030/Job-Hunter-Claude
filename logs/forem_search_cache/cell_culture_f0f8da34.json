@@ -1,0 +1,65 @@
+{
+  "keyword": "cell culture",
+  "count": 1,
+  "results": [
+    {
+      "numerooffreforem": "1993407",
+      "titreoffre": "Laboratory Technician - Cell Culture (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THUIN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6530"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.287047,
+          "lat": 50.339744
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "QUALITY ASSISTANCE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "EN",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autres activités de contrôle et analyses techniques"
+      ],
+      "secteurscodenace": [
+        "71209"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993407",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Laborantin industriel / Laborantine industrielle",
+      "metiercodedimeco": "H150301-1"
+    }
+  ]
+}

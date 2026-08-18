@@ -1,0 +1,179 @@
+{
+  "idOffreEmploi": 2013580,
+  "numero": "2013580",
+  "titreOffre": "Coordinateur / coordinatrice qualité (H/F/X)",
+  "datePublication": "Publié il y a moins d’une semaine",
+  "dateFinDiffusion": "22/09/2026",
+  "dateDebutDiffusion": "11/08/2026",
+  "nomEmployeur": "IBOO - IBOO",
+  "secteurActiviteEmployeur": "Activités des agences de placement de main-d'oeuvre",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "Arrondissement de Neufchâteau"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "experience": "C2 - Expert",
+      "comment": ""
+    }
+  ],
+  "nombrePostes": 3,
+  "logoEmployeur": "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",
+  "logoMimeType": "image/png",
+  "descriptionEmployeur": "<p></p>\n<ul>\n<li>\n<p>iboo vous aidera &agrave; retrouver le sourire!</p>\n</li>\n<li>\n<p>Nous travaillons en toute discr&eacute;tion!</p>\n</li>\n<li>\n<p>Nous vous proposons plusieurs opportunit&eacute;s afin que vous puissiez trouver le job de vos r&ecirc;ves!</p>\n</li>\n</ul>\n<p></p>",
+  "descriptionJob": "<p></p>\n<ul>\n<li>Vous coordonnez le suivi des plans d&rsquo;actions issus des audits, inspections et &eacute;valuations, en veillant &agrave; leur avancement et &agrave; leur efficacit&eacute;</li>\n<li>Vous pr&eacute;parez, accompagnez et suivez les audits de certification, audits clients et inspections officielles, en collaboration avec les &eacute;quipes concern&eacute;es</li>\n<li>Vous animez les d&eacute;marches d&rsquo;analyse des risques et assurez la mise &agrave; jour des &eacute;tudes li&eacute;es &agrave; la s&eacute;curit&eacute; des aliments</li>\n<li>Vous construisez et pilotez le programme d&rsquo;audits internes, accompagnez les auditeurs et assurez le suivi des actions correctives</li>\n<li>Vous veillez &agrave; l&rsquo;application des exigences qualit&eacute; sur le terrain, identifiez les opportunit&eacute;s d&rsquo;am&eacute;lioration et participez &agrave; l&rsquo;animation de la culture qualit&eacute; au sein de l&rsquo;entreprise</li>\n</ul>\n<p></p>",
+  "metier": "Responsable contrôle qualité en industrie",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "personNameAffix": "2",
+    "prefferedGivenName": "Lina",
+    "familyName": "Lamoline",
+    "email": "libramont@iboojobs.be",
+    "formattedName": "Lina Lamoline"
+  },
+  "softSkills": [
+    {
+      "code": "10",
+      "libelle": "Attention",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "13",
+      "libelle": "Autonomie",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "16",
+      "libelle": "Capacité de décision",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "19",
+      "libelle": "Communication",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "25",
+      "libelle": "Efficacité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "05",
+      "libelle": "Esprit d’équipe",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "02",
+      "libelle": "Esprit d’analyse",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "11",
+      "libelle": "Fiabilité",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "23",
+      "libelle": "Maîtrise de soi",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "26",
+      "libelle": "Motivation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "03",
+      "libelle": "Ordre",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "06",
+      "libelle": "Persévérance",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "18",
+      "libelle": "Sens de l'organisation",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "21",
+      "libelle": "Sens des responsabilités",
+      "required": true,
+      "experience": "0"
+    },
+    {
+      "code": "24",
+      "libelle": "Soin",
+      "required": true,
+      "experience": "0"
+    }
+  ],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "H150201-1",
+      "libelle": "Responsable contrôle qualité en industrie",
+      "experience": "Sans importance"
+    }
+  ],
+  "recentExperience": [],
+  "permisConduire": [
+    {
+      "code": "5101005",
+      "libelle": "Permis de conduire validé pour une catégorie B",
+      "experience": "0",
+      "valeur": "B"
+    }
+  ],
+  "permisConduireSimplified": "Permis de conduire validé pour une catégorie B",
+  "certifications": [],
+  "etudes": [],
+  "dateModification": "11/08/2026",
+  "competencies": [],
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Coordinateur / coordinatrice qualité (H/F/X)",
+    "description": "<p></p>\n<ul>\n<li>Vous coordonnez le suivi des plans d&rsquo;actions issus des audits, inspections et &eacute;valuations, en veillant &agrave; leur avancement et &agrave; leur efficacit&eacute;</li>\n<li>Vous pr&eacute;parez, accompagnez et suivez les audits de certification, audits clients et inspections officielles, en collaboration avec les &eacute;quipes concern&eacute;es</li>\n<li>Vous animez les d&eacute;marches d&rsquo;analyse des risques et assurez la mise &agrave; jour des &eacute;tudes li&eacute;es &agrave; la s&eacute;curit&eacute; des aliments</li>\n<li>Vous construisez et pilotez le programme d&rsquo;audits internes, accompagnez les auditeurs et assurez le suivi des actions correctives</li>\n<li>Vous veillez &agrave; l&rsquo;application des exigences qualit&eacute; sur le terrain, identifiez les opportunit&eacute;s d&rsquo;am&eacute;lioration et participez &agrave; l&rsquo;animation de la culture qualit&eacute; au sein de l&rsquo;entreprise</li>\n</ul>\n<p></p>",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "IBOO - IBOO",
+      "value": "2013580"
+    },
+    "datePosted": "Publié il y a moins d’une semaine",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "IBOO - IBOO",
+      "sameAs": "IBOO - IBOO"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  }
+}

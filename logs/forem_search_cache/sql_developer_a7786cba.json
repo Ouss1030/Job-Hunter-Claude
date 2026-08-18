@@ -1,0 +1,65 @@
+{
+  "keyword": "SQL developer",
+  "count": 1,
+  "results": [
+    {
+      "numerooffreforem": "2012623",
+      "titreoffre": "Développeur Logiciel (C++ / C#/SQL) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NIVELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.331909,
+          "lat": 50.589162
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Transports terrestres et transport par conduites"
+      ],
+      "secteurscodenace": [
+        "49"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "166-32851-LEFOREM-BE-100817",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2012623",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-21",
+      "metier": "Études et développement informatique",
+      "metiercodedimeco": "M1805"
+    }
+  ]
+}

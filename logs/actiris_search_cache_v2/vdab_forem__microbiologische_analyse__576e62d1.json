@@ -1,0 +1,33 @@
+{
+  "keyword": "microbiologische analyse",
+  "provenance_mode": "VDAB_FOREM",
+  "total_reported": 1,
+  "count_saved": 1,
+  "results": [
+    {
+      "reference": "5924953",
+      "codeDomaineImt": "A'3",
+      "codeModeGestion": null,
+      "codePostal": "1000",
+      "employeur": {
+        "nomFr": "AUSTIN BRIGHT",
+        "nomNl": "AUSTIN BRIGHT",
+        "numeroEntreprise": "0600938952"
+      },
+      "regimeTravail": "NO",
+      "titreFr": null,
+      "titreNl": "Comptable Senior | Trésorerie, Analyse & Clôtures  M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Bruxelles",
+      "communeNl": "Brussel",
+      "numeroEntreprise": "0887010362",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-13T07:10:03.4889934+02:00",
+      "dateModification": "2026-08-13T07:10:03.4889934+02:00"
+    }
+  ]
+}

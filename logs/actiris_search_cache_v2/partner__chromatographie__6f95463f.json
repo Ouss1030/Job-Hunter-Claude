@@ -1,0 +1,83 @@
+{
+  "keyword": "chromatographie",
+  "provenance_mode": "PARTNER",
+  "total_reported": 3,
+  "count_saved": 3,
+  "results": [
+    {
+      "reference": "5926946",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "2000",
+      "employeur": {
+        "nomFr": "UNIQUE",
+        "nomNl": "UNIQUE",
+        "numeroEntreprise": "0402724895"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien de laboratoire QC H/F/X",
+      "titreNl": null,
+      "typeContrat": "INTERIM",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Anvers",
+      "communeNl": "Antwerpen 1",
+      "numeroEntreprise": "0728656674",
+      "typeContratLibelle": "Interim",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-15T00:00:00+02:00",
+      "dateModification": "2026-08-15T00:00:00+02:00"
+    },
+    {
+      "reference": "5906475",
+      "codeDomaineImt": "V'2",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+        "nomNl": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+        "numeroEntreprise": "0477750635"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Technicien Chimiste Laboratoire /X) - Bruxelles H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": "Ixelles",
+      "communeNl": "Elsene",
+      "numeroEntreprise": "0728656674",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-23T00:00:00+02:00",
+      "dateModification": "2026-07-23T00:00:00+02:00"
+    },
+    {
+      "reference": "5654226",
+      "codeDomaineImt": "N'1",
+      "codeModeGestion": null,
+      "codePostal": "8500",
+      "employeur": {
+        "nomFr": "AGO JOBS & HR",
+        "nomNl": "AGO JOBS & HR",
+        "numeroEntreprise": "0867323421"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "technicien(ne) de laboratoire  H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2025-11-19T00:00:00+01:00",
+      "dateModification": "2025-11-19T00:00:00+01:00"
+    }
+  ]
+}

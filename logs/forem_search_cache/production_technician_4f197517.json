@@ -1,0 +1,177 @@
+{
+  "keyword": "production technician",
+  "count": 3,
+  "results": [
+    {
+      "numerooffreforem": "2010477",
+      "titreoffre": "Service Technician | Fire Protection (H/F/X)",
+      "lieuxtravaillocalite": [
+        "AARTSELAAR"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province d'Anvers",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2630"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE21",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.387802,
+          "lat": 51.134197
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Equans",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 2,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Français",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Installation de systèmes d'éclairage et de signalisation pour chaussées, voies ferrées, aéroports et installations portuaires (y compris l'installation de panneaux de signalisation)"
+      ],
+      "secteurscodenace": [
+        "4321201"
+      ],
+      "source": "Equans Belux",
+      "referenceexterne": "962452545",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010477",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "1988838",
+      "titreoffre": "Senior technician USP - travail de week-end (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SENEFFE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7180"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.26646,
+          "lat": 50.525055
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "193-37387-LEFOREM-BE-200710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1988838",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2011059",
+      "titreoffre": "Lead Technician I, Pfizer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "PUURS-SINT-AMANDS",
+        "PUURS"
+      ],
+      "lieuxtravailregion": [
+        "Province d'Anvers",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2870",
+        "2870"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE21",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.286192,
+          "lat": 51.071998
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Pfizer",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des médecins généralistes"
+      ],
+      "secteurscodenace": [
+        "8621"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2223848",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011059",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Technicien / Technicienne de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-3"
+    }
+  ]
+}

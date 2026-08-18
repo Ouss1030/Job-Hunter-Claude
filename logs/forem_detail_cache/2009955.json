@@ -1,0 +1,85 @@
+{
+  "idOffreEmploi": 2009955,
+  "numero": "2009955",
+  "titreOffre": "Data Engineer Health Sector, Smals (H/F/X)",
+  "datePublication": "06/08/2026",
+  "dateFinDiffusion": "17/09/2026",
+  "dateDebutDiffusion": "06/08/2026",
+  "nomEmployeur": "Smals",
+  "nomPartenaire": "StepStone",
+  "secteurActiviteEmployeur": "Autres activités informatiques",
+  "typeContrat": "Durée indéterminée",
+  "regimeTravail": "Temps plein",
+  "lieuxTravail": [
+    "SAINT-GILLES"
+  ],
+  "langues": [
+    {
+      "code": "NL",
+      "libelle": "Néerlandais",
+      "required": true,
+      "experience": "B1 - Intermédiaire"
+    }
+  ],
+  "nombrePostes": 1,
+  "descriptionJob": "Smals realiseert innovatieve ICT-projecten in e-government en e-health voor instellingen uit de sociale zekerheid en de gezondheidszorg. 'ICT for society' is voor Smals meer dan een slogan: alle projecten hebben een positieve maatschappelijke impact. Zo bouwt Smals mee aan het portaal van de sociale zekerheid en het eHealth-platform. Grensverleggende projecten zijn ons werkterrein: Student@Work, Orgadon, digitalisering van medische voorschriften, raadpleging van de historiek van je loopbaan, snellere doorstroming van testresultaten naar je huisarts...<br/>                 Als Data Engineer Health Sector maak je deel uit van het Data Office, waar multidisciplinaire Agile-teams werken (Data Engineer, Projectleiders, Data Architects, specialisten in Data Governance en Data Quality, AI-experts, enz.).<br /> <br /> Je ontwikkelt analytische oplossingen (datawarehouses en datamarts) volgens de Kimball-methodologie, met behulp van de Microsoft-stack (SSIS / SSAS) en Azure Databricks.<br /> <br /> Rol en verantwoordelijkheden:<br /> <br /> - BI-oplossingen ontwerpen, bouwen, implementeren en onderhouden volgens de standaarden, functionele en niet-functionele vereisten (prestaties, gegevensvolume), in samenwerking met de Data Architecten.<br /> - De analytische oplossing testen, de troubleshooting uitvoeren, zorgen voor het onderhoud en adequate technische documentatie leveren.<br /> - De gevraagde visuals en rapporten in Power BI of SSRS maken.<br /> - De prototypes reviewen, demo's geven en de gebruikers opleiden in het gebruik van datamodellen.<br /> - Samenwerken met de projectleider gedurende het project om ervoor te zorgen dat de oplossing op een Agile en pragmatische manier opgeleverd wordt.            ",
+  "metier": "Data manager",
+  "positionDateInfo": {},
+  "benefits": {
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "webAddress": "https://www.stepstone.be/vacatures----2235112-inline.html?cid=Partner_LeForem___1-FRNL",
+    "formattedName": "Stepstone"
+  },
+  "softSkills": [],
+  "officeSkills": [],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Data manager",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Enseignement secondaire (deuxième cycle)"
+    },
+    {
+      "libelle": "Baccalauréat universitaire ou équivalent"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "06/08/2026",
+  "competencies": [],
+  "benefitsComments": "Je behaalde een masterdiploma in de Informatica of hebt een gelijkwaardige ervaring en minstens 3 jaar ervaring als Data Engineer op de Microsoft BI-stack (Visual Studio, SSIS, SSAS, SSMS, SSRS, Power BI, SQL Server, ...).<br /> <br /> Ervaring met Azure Databricks en Python is een troef.<br /> <br /> Je hebt bovendien een ruime ervaring met het ontwerpen van datawarehouses (Kimball dimensionale modellering) en bij voorkeur ervaring met Agile-projecten.<br /> <br /> Je combineert een proactieve houding met een zeer goed verantwoordelijkheidsgevoel en autonomie.<br /> <br /> Je beschikt over sterke probleemoplossende vaardigheden, hebt een pragmatische aanpak en bent resultaatgericht.<br /> <br /> Je bent een goede teamspeler, volhardend, stressbestendig en flexibel.<br /> <br /> Je leert graag bij en geeft blijk van een open geest.<br /> <br /> Je beheerst bovendien beide landstalen.",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Data Engineer Health Sector, Smals (H/F/X)",
+    "description": "Smals realiseert innovatieve ICT-projecten in e-government en e-health voor instellingen uit de sociale zekerheid en de gezondheidszorg. 'ICT for society' is voor Smals meer dan een slogan: alle projecten hebben een positieve maatschappelijke impact. Zo bouwt Smals mee aan het portaal van de sociale zekerheid en het eHealth-platform. Grensverleggende projecten zijn ons werkterrein: Student@Work, Orgadon, digitalisering van medische voorschriften, raadpleging van de historiek van je loopbaan, snellere doorstroming van testresultaten naar je huisarts...<br/>                 Als Data Engineer Health Sector maak je deel uit van het Data Office, waar multidisciplinaire Agile-teams werken (Data Engineer, Projectleiders, Data Architects, specialisten in Data Governance en Data Quality, AI-experts, enz.).<br /> <br /> Je ontwikkelt analytische oplossingen (datawarehouses en datamarts) volgens de Kimball-methodologie, met behulp van de Microsoft-stack (SSIS / SSAS) en Azure Databricks.<br /> <br /> Rol en verantwoordelijkheden:<br /> <br /> - BI-oplossingen ontwerpen, bouwen, implementeren en onderhouden volgens de standaarden, functionele en niet-functionele vereisten (prestaties, gegevensvolume), in samenwerking met de Data Architecten.<br /> - De analytische oplossing testen, de troubleshooting uitvoeren, zorgen voor het onderhoud en adequate technische documentatie leveren.<br /> - De gevraagde visuals en rapporten in Power BI of SSRS maken.<br /> - De prototypes reviewen, demo's geven en de gebruikers opleiden in het gebruik van datamodellen.<br /> - Samenwerken met de projectleider gedurende het project om ervoor te zorgen dat de oplossing op een Agile en pragmatische manier opgeleverd wordt.            ",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "Smals",
+      "value": "2009955"
+    },
+    "datePosted": "06/08/2026",
+    "employementType": "FULL_TIME",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "Smals",
+      "sameAs": "Smals"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "2235112"
+}

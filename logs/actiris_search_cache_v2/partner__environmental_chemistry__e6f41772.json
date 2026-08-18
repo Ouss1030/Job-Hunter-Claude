@@ -1,0 +1,133 @@
+{
+  "keyword": "environmental chemistry",
+  "provenance_mode": "PARTNER",
+  "total_reported": 5,
+  "count_saved": 5,
+  "results": [
+    {
+      "reference": "2096013",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "CREAM CONSULTING",
+        "nomNl": "CREAM CONSULTING",
+        "numeroEntreprise": "0810665226"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Cream Consulting by Audensiel - Product Owner H/F/X",
+      "titreNl": "Cream Consulting - Product Owner M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-02-14T00:00:00+01:00",
+      "dateModification": "2026-07-22T20:25:40+02:00"
+    },
+    {
+      "reference": "1974023",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "CREAM CONSULTING",
+        "nomNl": "CREAM CONSULTING",
+        "numeroEntreprise": "0810665226"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Cream Consulting by Audensiel - Business Analyst H/F/X",
+      "titreNl": "Cream Consulting - Business Analyst M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-01-13T00:00:00+01:00",
+      "dateModification": "2026-07-17T20:25:22+02:00"
+    },
+    {
+      "reference": "4495393",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "CREAM CONSULTING",
+        "nomNl": "CREAM CONSULTING",
+        "numeroEntreprise": "0810665226"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Cream Consulting by Audensiel - Business Analyst Insurance H/F/X",
+      "titreNl": "Cream Consulting - Business Analyst M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2024-03-11T00:00:00+01:00",
+      "dateModification": "2026-07-17T20:25:52+02:00"
+    },
+    {
+      "reference": "2030518",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "1050",
+      "employeur": {
+        "nomFr": "CREAM CONSULTING",
+        "nomNl": "CREAM CONSULTING",
+        "numeroEntreprise": "0810665226"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Cream Consulting by Audensiel - Scrum Master H/F/X",
+      "titreNl": "Cream Consulting - Scrum Master M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0886495272",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-01-25T00:00:00+01:00",
+      "dateModification": "2026-06-25T20:25:31+02:00"
+    },
+    {
+      "reference": "2391922",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "2030",
+      "employeur": {
+        "nomFr": "SGS BELGIUM",
+        "nomNl": "SGS BELGIUM",
+        "numeroEntreprise": "0404882750"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Analyste - Chemistry Mono H/F/X",
+      "titreNl": "Analyste - Chemistry Mono M/V/X",
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0459971228",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2022-04-13T00:00:00+02:00",
+      "dateModification": "2025-08-18T20:27:15+02:00"
+    }
+  ]
+}

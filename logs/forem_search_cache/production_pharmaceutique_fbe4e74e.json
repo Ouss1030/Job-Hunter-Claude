@@ -1,0 +1,1676 @@
+{
+  "keyword": "production pharmaceutique",
+  "count": 31,
+  "results": [
+    {
+      "numerooffreforem": "2019276",
+      "titreoffre": "Opérateur(trice) d’unité pilote de pyrolyse catalytique (Recyclage chimique) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SENEFFE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7180"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.25674,
+          "lat": 50.528671
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14584386_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2019276",
+      "datedebutdiffusion": "2026-08-15",
+      "datefindiffusion": "2026-09-12",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2017836",
+      "titreoffre": "Technicien préparation et production – Biotechnologie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIÈGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.571627,
+          "lat": 50.643997
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "241303-LEFOREM-BE-140809",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017836",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-25",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2016484",
+      "titreoffre": "Opérateurs de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VERVIERS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4801"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.892826,
+          "lat": 50.592289
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "SYNERGIE BELGIUM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14559711_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2016484",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-10",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2016547",
+      "titreoffre": "opérateur de mélange | 2-équipes | région waregem (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREGEM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8793"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.404617,
+          "lat": 50.905735
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14560867_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2016547",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-10",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2015252",
+      "titreoffre": "Opérateur/trice expérimenté.e - NUIT FIXE (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7503"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.354089,
+          "lat": 50.620968
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14546371_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015252",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2015237",
+      "titreoffre": "Opérateur - opératrice de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830517,
+          "lat": 50.712128
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14546279_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015237",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2015568",
+      "titreoffre": "Technicien Filling – Zones Aseptiques 2 pauses (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830113,
+          "lat": 50.712303
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "03"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2025092_FR-LEFOREM-BE-120817",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015568",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2015248",
+      "titreoffre": "opérateur pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIÈGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4031"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.599669,
+          "lat": 50.611546
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Talent Center RS 20",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail d'accessoires, de pièces détachées et d'équipements divers pour véhicules automobiles, y compris la vente de détail de pièces détachées et d'équipements automobiles d'occasion"
+      ],
+      "secteurscodenace": [
+        "4532001"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "963404155",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015248",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2015726",
+      "titreoffre": "Technicien Filling – Zones Aseptiques 2 pauses (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830517,
+          "lat": 50.712128
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14550148_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015726",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2014453",
+      "titreoffre": "Operator | vaste late ploeg | Ieper (H/F/X)",
+      "lieuxtravaillocalite": [
+        "IEPER"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 2.891477,
+          "lat": 50.851808
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "138-51126-LEFOREM-BE-110823",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014453",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-22",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2011696",
+      "titreoffre": "Opérateur de production secteur chimie/agro-alimentaire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "OTTIGNIES-LOUVAIN-LA-NEUVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1348"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.611436,
+          "lat": 50.669514
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie chimique"
+      ],
+      "secteurscodenace": [
+        "20"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14511049_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011696",
+      "datedebutdiffusion": "2026-08-10",
+      "datefindiffusion": "2026-09-07",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2010039",
+      "titreoffre": "Opérateur filling et prélèvements en zones aseptiques  - pharmaceutique AM/PM (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BRUXELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "RÉGION DE BRUXELLES-CAPITALE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1120"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE1"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.385336,
+          "lat": 50.89362
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14496763_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2010039",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-04",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2009205",
+      "titreoffre": "Opérateur technique de production (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province du Brabant Wallon",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE31",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "HAYS - Hays NV",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009205",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2007467",
+      "titreoffre": "Operator | Deinze | Volcontinu (5 ploegen) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "DEINZE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Orientale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "9800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE23",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.527401,
+          "lat": 50.984052
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail, à l'exception des véhicules automobiles et des motocycles"
+      ],
+      "secteurscodenace": [
+        "47"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "167-48700-LEFOREM-BE-050815",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2007467",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-16",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2004674",
+      "titreoffre": "Ouvrier de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MARCHE-EN-FAMENNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Luxembourg",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6900"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE34",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.344315,
+          "lat": 50.22858
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14447946_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004674",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2005675",
+      "titreoffre": "Opérateur de production en salle blanche (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIÈGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.571627,
+          "lat": 50.643997
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres industries manufacturières"
+      ],
+      "secteurscodenace": [
+        "32"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14455757_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005675",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2004623",
+      "titreoffre": "Technicien Procédés Pharmaceutiques (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VERVIERS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.861066,
+          "lat": 50.592461
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Services administratifs de bureau et autres activités de soutien aux entreprises"
+      ],
+      "secteurscodenace": [
+        "82"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14447477_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004623",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2003401",
+      "titreoffre": "Opérateur(trice) de synthèse (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830517,
+          "lat": 50.712128
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "VIVALDIS INTERIM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14437332_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2003401",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2001735",
+      "titreoffre": "Opérateur/Opératrice de production salle blanche (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "123CDI - UDIL.GE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 2,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Autre mise à disposition de ressources humaines"
+      ],
+      "secteurscodenace": [
+        "78300"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2001735",
+      "datedebutdiffusion": "2026-07-31",
+      "datefindiffusion": "2026-09-11",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "2000285",
+      "titreoffre": "Opérateur expérimenté en stérilisation pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VERVIERS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.861066,
+          "lat": 50.592461
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres industries manufacturières"
+      ],
+      "secteurscodenace": [
+        "32"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14407873_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2000285",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2000279",
+      "titreoffre": "Opérateur expérimenté en stérilisation pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VERVIERS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.863854,
+          "lat": 50.593227
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "03"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2022346_FR-LEFOREM-BE-300712",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2000279",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-09-10",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1996596",
+      "titreoffre": "Chauffeur C ADR polyvalent (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ATH"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7822"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.876851,
+          "lat": 50.656612
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "KONVERT",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B",
+        "C+E"
+      ],
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14370103_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1996596",
+      "datedebutdiffusion": "2026-07-27",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1994411",
+      "titreoffre": "opérateur de production | 5-équipes | tournai (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CELLES (LEZ-TOURNAI)",
+        "CELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7760",
+        "7760"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.457166,
+          "lat": 50.712543
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14353655_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1994411",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-08-21",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1993026",
+      "titreoffre": "opérateur machine (secteur chimie) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TOURNAI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7503"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.354089,
+          "lat": 50.620968
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14342025_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993026",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-08-21",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1991747",
+      "titreoffre": "Opérateur(trice) de chargement solides & liquide (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GHISLAIN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7330"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.820251,
+          "lat": 50.447853
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'autres produits minéraux non métalliques"
+      ],
+      "secteurscodenace": [
+        "23"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "238173-LEFOREM-BE-230708",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991747",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-09-03",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1990799",
+      "titreoffre": "Opérateur de salle de contrôle en production (/X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ANDENNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Namur",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "5300"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE35",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.097113,
+          "lat": 50.489513
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "238104-LEFOREM-BE-220714",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1990799",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-09-02",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1991106",
+      "titreoffre": "opérateur pharmaceutique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MANAGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7170"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.233998,
+          "lat": 50.503708
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Operational La Louvière",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Commerce de détail de viandes et produits à base de viande exploité par les bouchers/charcutiers"
+      ],
+      "secteurscodenace": [
+        "4722101"
+      ],
+      "source": "Randstad",
+      "referenceexterne": "958845963",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1991106",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    },
+    {
+      "numerooffreforem": "1988838",
+      "titreoffre": "Senior technician USP - travail de week-end (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SENEFFE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7180"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.26646,
+          "lat": 50.525055
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "193-37387-LEFOREM-BE-200710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1988838",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1988855",
+      "titreoffre": "Opérateur de production secteur chimie (/X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ATH"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.775117,
+          "lat": 50.629135
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Fabrication d'autres produits minéraux non métalliques"
+      ],
+      "secteurscodenace": [
+        "23"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "237811-LEFOREM-BE-200710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1988855",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2011059",
+      "titreoffre": "Lead Technician I, Pfizer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "PUURS-SINT-AMANDS",
+        "PUURS"
+      ],
+      "lieuxtravailregion": [
+        "Province d'Anvers",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2870",
+        "2870"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE21",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.286192,
+          "lat": 51.071998
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Pfizer",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des médecins généralistes"
+      ],
+      "secteurscodenace": [
+        "8621"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2223848",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011059",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Technicien / Technicienne de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-3"
+    },
+    {
+      "numerooffreforem": "1979869",
+      "titreoffre": "Opérateur.trice de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GHISLENGHIEN"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7822"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.875818,
+          "lat": 50.656686
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MATERNI - Materni",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'autres articles en matières plastiques"
+      ],
+      "secteurscodenace": [
+        "22290"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1979869",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-24",
+      "metier": "Opérateur/ Opératrice de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-2"
+    }
+  ]
+}

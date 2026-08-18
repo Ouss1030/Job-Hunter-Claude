@@ -1,0 +1,20 @@
+200 | document | text/html; charset=UTF-8 | https://www.leforem.be/recherche-offres/offre-detail/2015338
+200 | stylesheet | text/css; charset=utf-8 | https://www.leforem.be/recherche-offres/assets/forem-common-style/css/forem-common-style.css
+200 | font | application/x-font-ttf | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/Poppins-Regular.ttf
+200 | script | text/javascript; charset=utf-8 | https://www.leforem.be/recherche-offres/app.js?x=148f4bfb2d7a3ff89b91
+200 | fetch | text/html; charset=UTF-8 | https://www.leforem.be/PGE_NEW/header-v2.html
+200 | fetch | text/html; charset=UTF-8 | https://www.leforem.be/PGE_NEW/footer-v2.html
+200 | fetch | application/json | https://www.leforem.be/recherche-offres/config/config.json
+200 | font | application/x-font-ttf | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/Poppins-Medium.ttf
+200 | image | image/png | https://www.leforem.be/etc.clientlibs/leforem/clientlibs/clientlib-site/resources/images/footer/Synerjob.png
+200 | fetch | application/json; charset=utf-8 | https://www.leforem.be/recherche-offres/api/telemetry/getTelemetryConfig
+200 | image | image/svg+xml | https://www.leforem.be/etc.clientlibs/leforem/clientlibs/clientlib-site/resources/images/header/search-light.svg
+200 | fetch | application/json; charset=utf-8 | https://www.leforem.be/recherche-offres/api/Data/getConfig
+200 | font | application/x-font-ttf | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/Poppins-SemiBold.ttf
+200 | stylesheet | text/css; charset=utf-8 | https://www.leforem.be/recherche-offres/assets/tinymce/skins/ui/oxide/skin.min.css
+200 | stylesheet | text/css; charset=utf-8 | https://www.leforem.be/recherche-offres/assets/tinymce/skins/ui/oxide/content.min.css
+200 | image | image/jpeg | https://www.leforem.be/recherche-offres/0a2585f3c6dfcc593a42.jpg
+200 | fetch | application/json; charset=utf-8 | https://www.leforem.be/recherche-offres/api/Diffusion/DetailOffre/2015338
+200 | font | application/x-font-ttf | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/Poppins-Light.ttf
+200 | font | font/woff2 | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/fontawesome/fa-regular-400.woff2
+200 | font | font/woff2 | https://www.leforem.be/recherche-offres/assets/forem-common-style/fonts/fontawesome/fa-light-300.woff2

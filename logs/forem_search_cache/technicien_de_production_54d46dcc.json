@@ -1,0 +1,2413 @@
+{
+  "keyword": "technicien de production",
+  "count": 44,
+  "results": [
+    {
+      "numerooffreforem": "2017923",
+      "titreoffre": "Ouvrier / Ouvrière de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LA LOUVIÈRE"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7100"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.185268,
+          "lat": 50.479487
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "L.I.P. Belgique - L.I.P. Belgique",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire professionnel 7ème année (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017923",
+      "datedebutdiffusion": "2026-08-15",
+      "datefindiffusion": "2026-08-22",
+      "metier": "Technicien /Technicienne de production",
+      "metiercodedimeco": "H140101-2"
+    },
+    {
+      "numerooffreforem": "2017771",
+      "titreoffre": "Mécanicienne industrielle / Mécanicien industriel  (H/F/X)",
+      "lieuxtravaillocalite": [
+        "STEMBERT"
+      ],
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4801"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.89528,
+          "lat": 50.593109
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTA INTERIM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 2eme degré",
+        "Formation supérieure complémentaire ou de spécialisation"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": "Régleur-ajusteur / Régleuse-ajusteuse de machines de production",
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017771",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-25",
+      "metier": "Régleur-ajusteur / Régleuse-ajusteuse de machines de production",
+      "metiercodedimeco": "H291201-1"
+    },
+    {
+      "numerooffreforem": "2018575",
+      "titreoffre": "Contremaitre de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "JEMEPPE (SUR-SAMBRE)"
+      ],
+      "lieuxtravailregion": [
+        "Province de Namur",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "5190"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE35",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.654598,
+          "lat": 50.462995
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "INOVYN Manufacturing Belgium - INOVYN Manufacturing Belgium",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)",
+        "Formation supérieure initiale de type long (Master)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Fabrication de matières plastiques de base"
+      ],
+      "secteurscodenace": [
+        "20160"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2018575",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-18",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "2017836",
+      "titreoffre": "Technicien préparation et production – Biotechnologie (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIÈGE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.571627,
+          "lat": 50.643997
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "241303-LEFOREM-BE-140809",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017836",
+      "datedebutdiffusion": "2026-08-14",
+      "datefindiffusion": "2026-09-25",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2016653",
+      "titreoffre": "Technicien(ne) de maintenance journée – Production alimentaire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MOUSCRON"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7700"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.21403,
+          "lat": 50.74361
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "LET'S WORK",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Let's Work",
+      "referenceexterne": "PO-T7YEZFFX-LEFOREM-BE-130814",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2016653",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-24",
+      "metier": "Maintenance mécanique industrielle",
+      "metiercodedimeco": "I1310"
+    },
+    {
+      "numerooffreforem": "2018754",
+      "titreoffre": "Technicienne de maintenance journée – Production alimentaire (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MOUSCRON"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7700"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.21403,
+          "lat": 50.74361
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Let&#39;s Work Doornik",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Travail du bois et fabrication d'articles en bois et en liège, à l'exception des meubles",
+        "fabrication d'articles en vannerie et sparterie"
+      ],
+      "secteurscodenace": [
+        "16"
+      ],
+      "source": "References",
+      "referenceexterne": "10553807",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2018754",
+      "datedebutdiffusion": "2026-08-13",
+      "datefindiffusion": "2026-09-27",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2015825",
+      "titreoffre": "Ingénieur Responsable (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GHISLAIN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7334"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.790888,
+          "lat": 50.486439
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Accent",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrications de produits céramiques n.d.a."
+      ],
+      "secteurscodenace": [
+        "2349001"
+      ],
+      "source": "Accent Job",
+      "referenceexterne": "963487427",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015825",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "2017269",
+      "titreoffre": "Technicien/ne de production en électronique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NIVELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.323421,
+          "lat": 50.597
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Actief Interim Wavre",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres services personnels"
+      ],
+      "secteurscodenace": [
+        "96"
+      ],
+      "source": "References",
+      "referenceexterne": "10553283",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2017269",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-26",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2014883",
+      "titreoffre": "Opérateur et maintenance sur une installation de production d'énergie verte (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GESVES"
+      ],
+      "lieuxtravailregion": [
+        "Province de Namur",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "5340"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE35",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.077617,
+          "lat": 50.402853
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "AGRISPACE - AGRISPACE SPRL",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Fabrication de structures métalliques et de parties de structures"
+      ],
+      "secteurscodenace": [
+        "25110"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014883",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "2015568",
+      "titreoffre": "Technicien Filling – Zones Aseptiques 2 pauses (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830113,
+          "lat": 50.712303
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)",
+        "Enseignement secondaire (premier cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04",
+        "03"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Start People",
+      "referenceexterne": "2025092_FR-LEFOREM-BE-120817",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015568",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-23",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2014886",
+      "titreoffre": "Technicien/ne de production en électronique (H/F/X)",
+      "lieuxtravaillocalite": [
+        "OTTIGNIES-LOUVAIN-LA-NEUVE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1348"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.611436,
+          "lat": 50.669514
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14543197_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014886",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2015726",
+      "titreoffre": "Technicien Filling – Zones Aseptiques 2 pauses (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830517,
+          "lat": 50.712128
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14550148_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2015726",
+      "datedebutdiffusion": "2026-08-12",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2014145",
+      "titreoffre": "Brigadier(e) mécanicien(ne) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6042"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.44872,
+          "lat": 50.431019
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14535310_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2014145",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-08",
+      "metier": "Pilotage d'unité élémentaire de production mécanique ou de travail des métaux",
+      "metiercodedimeco": "H2503"
+    },
+    {
+      "numerooffreforem": "2013806",
+      "titreoffre": "Ingénieur-e Méthode Production - Secteur Industriel (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.444103,
+          "lat": 50.411434
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Aeronautica",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Travaux de construction spécialisés"
+      ],
+      "secteurscodenace": [
+        "43"
+      ],
+      "source": "Aeronautica SRL",
+      "referenceexterne": "963142064",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2013806",
+      "datedebutdiffusion": "2026-08-11",
+      "datefindiffusion": "2026-09-22",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "2006673",
+      "titreoffre": "JDINDUSTRIE26 Opérateur / Opératrice de production - Boucle Froide (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MARCHIN"
+      ],
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4570"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.226337,
+          "lat": 50.480205
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "SAFRAN BLADES - SAFRAN BLADES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 3eme degré (CESS)",
+        "Enseignement secondaire professionnel 7ème année (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Forge"
+      ],
+      "secteurscodenace": [
+        "25501"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2006673",
+      "datedebutdiffusion": "2026-08-07",
+      "datefindiffusion": "2026-09-09",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "2008251",
+      "titreoffre": "Technicien de production /X (H/F/X)",
+      "lieuxtravaillocalite": [
+        "NIVELLES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Brabant Wallon",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "1400"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE31",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.331909,
+          "lat": 50.589162
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "193-37129-LEFOREM-BE-060800",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2008251",
+      "datedebutdiffusion": "2026-08-06",
+      "datefindiffusion": "2026-09-17",
+      "metier": "Management et ingénierie gestion industrielle et logistique",
+      "metiercodedimeco": "H1401"
+    },
+    {
+      "numerooffreforem": "2006496",
+      "titreoffre": "Technicien de maintenance - Site de production (Waremme) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WAREMME"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4300"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.255023,
+          "lat": 50.697884
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "MICHAEL PAGE INTERNATIONAL (BELGIUM)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14463116_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2006496",
+      "datedebutdiffusion": "2026-08-05",
+      "datefindiffusion": "2026-09-02",
+      "metier": "Installation et maintenance d'équipements industriels et d'exploitation",
+      "metiercodedimeco": "I1304"
+    },
+    {
+      "numerooffreforem": "2005666",
+      "titreoffre": "Référent Technique Usinage (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GOSSELIES",
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6041",
+        "6041"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.430175,
+          "lat": 50.465384
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "IMPACT",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Réparation et maintenance d'autres équipements de transport"
+      ],
+      "secteurscodenace": [
+        "33170"
+      ],
+      "source": "IMPACT",
+      "referenceexterne": "961624903",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005666",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "2005272",
+      "titreoffre": "Technicien Qualité & Production Béton (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BAUDOUR",
+        "SAINT-GHISLAIN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7331",
+        "7331"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.832757,
+          "lat": 50.481435
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "SD Worx Jobs Mons",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "SD Worx Staffing Solutions",
+      "referenceexterne": "961577673",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2005272",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Opérateur/ Opératrice de production de béton prêt à l'emploi, ciment, asphalte et granulats",
+      "metiercodedimeco": "H280401-1"
+    },
+    {
+      "numerooffreforem": "2004623",
+      "titreoffre": "Technicien Procédés Pharmaceutiques (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VERVIERS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.861066,
+          "lat": 50.592461
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Start People",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Services administratifs de bureau et autres activités de soutien aux entreprises"
+      ],
+      "secteurscodenace": [
+        "82"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14447477_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004623",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-01",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "2006226",
+      "titreoffre": "Spécialiste Méthodes Métal - Secteur Machines (H/F/X)",
+      "lieuxtravaillocalite": [
+        "CHARLEROI"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.444103,
+          "lat": 50.411434
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Aeronautica",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Baccalauréat universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "07"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Travaux de construction spécialisés"
+      ],
+      "secteurscodenace": [
+        "43"
+      ],
+      "source": "Aeronautica SRL",
+      "referenceexterne": "961711756",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2006226",
+      "datedebutdiffusion": "2026-08-04",
+      "datefindiffusion": "2026-09-15",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "2004187",
+      "titreoffre": "Technicien en production électronique (/X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "GRÂCE-HOLLOGNE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4460"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.451307,
+          "lat": 50.655132
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication de machines et d'équipements n.c.a."
+      ],
+      "secteurscodenace": [
+        "28"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "239712-LEFOREM-BE-030816",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2004187",
+      "datedebutdiffusion": "2026-08-03",
+      "datefindiffusion": "2026-09-14",
+      "metier": "Conduite d'installation automatisée de production électrique, électronique et microélectronique",
+      "metiercodedimeco": "H2603"
+    },
+    {
+      "numerooffreforem": "2000839",
+      "titreoffre": "Technicien / Technicienne Qualité & Production Béton (H/F/X)",
+      "lieuxtravaillocalite": [
+        "BAUDOUR"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7331"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.832757,
+          "lat": 50.481435
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "THIO TRACK BELGIUM - THIO TRACK BELGIUM",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'éléments en béton pour la construction"
+      ],
+      "secteurscodenace": [
+        "23610"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2000839",
+      "datedebutdiffusion": "2026-07-30",
+      "datefindiffusion": "2026-08-22",
+      "metier": "Responsable contrôle qualité en industrie",
+      "metiercodedimeco": "H150201-1"
+    },
+    {
+      "numerooffreforem": "1999571",
+      "titreoffre": "Technicien Qualité & Production Béton (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MONS"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.948737,
+          "lat": 50.453335
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Actief Interim Mons",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Installation de machines et d'équipements industriels"
+      ],
+      "secteurscodenace": [
+        "332"
+      ],
+      "source": "References",
+      "referenceexterne": "10545857",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1999571",
+      "datedebutdiffusion": "2026-07-28",
+      "datefindiffusion": "2026-09-11",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1997098",
+      "titreoffre": "Technicien Qualité & Production Béton (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GHISLAIN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7331"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.834864,
+          "lat": 50.484409
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ACTIEF",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14378108_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1997098",
+      "datedebutdiffusion": "2026-07-28",
+      "datefindiffusion": "2026-08-25",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "1995744",
+      "titreoffre": "Technicien / Technicienne RD (H/F/X)",
+      "lieuxtravaillocalite": [
+        "MONS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7000"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.951958,
+          "lat": 50.454956
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "D- TEK - D-TEK",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'autres produits chimiques n.c.a."
+      ],
+      "secteurscodenace": [
+        "20590"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1995744",
+      "datedebutdiffusion": "2026-07-27",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "1995786",
+      "titreoffre": "Technicien Qualité & Production Béton (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SAINT-GHISLAIN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7331"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.834864,
+          "lat": 50.484409
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Autres activités spécialisées, scientifiques et techniques"
+      ],
+      "secteurscodenace": [
+        "74"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "192-29925-LEFOREM-BE-270710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1995786",
+      "datedebutdiffusion": "2026-07-27",
+      "datefindiffusion": "2026-09-07",
+      "metier": "Pilotage de centrale à béton prêt à l'emploi, ciment, enrobés et granulats",
+      "metiercodedimeco": "H2804"
+    },
+    {
+      "numerooffreforem": "1996338",
+      "titreoffre": "Technicien silos (H/F/X)",
+      "lieuxtravaillocalite": [
+        "VIELSALM"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Luxembourg",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6690"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE34",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.915278,
+          "lat": 50.286282
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "Accent",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Intermédiaires du commerce en bois et matériaux de construction"
+      ],
+      "secteurscodenace": [
+        "4613001"
+      ],
+      "source": "Accent Job",
+      "referenceexterne": "959627990",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1996338",
+      "datedebutdiffusion": "2026-07-27",
+      "datefindiffusion": "2026-09-07",
+      "metier": "Opérateur / Opératrice de production bois",
+      "metiercodedimeco": "H220201-1"
+    },
+    {
+      "numerooffreforem": "1993027",
+      "titreoffre": "technicien de production 2 équipes (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830517,
+          "lat": 50.712128
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "FORUM JOBS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités liées à l'emploi"
+      ],
+      "secteurscodenace": [
+        "78"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14342028_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1993027",
+      "datedebutdiffusion": "2026-07-24",
+      "datefindiffusion": "2026-08-21",
+      "metier": "Management et ingénierie gestion industrielle et logistique",
+      "metiercodedimeco": "H1401"
+    },
+    {
+      "numerooffreforem": "1992442",
+      "titreoffre": "Ouvrier Opérateur de machine de découpe laser  (H/F/X)",
+      "lieuxtravaillocalite": [
+        "JUMET"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6040"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.436023,
+          "lat": 50.44466
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "FIXINOX",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 3eme degré (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Fabrication d'autres articles métalliques n.c.a."
+      ],
+      "secteurscodenace": [
+        "25999"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1992442",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-09-03",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "1992524",
+      "titreoffre": "Ouvrier Opérateur Soudeur (H/F/X)",
+      "lieuxtravaillocalite": [
+        "JUMET"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6040"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.436023,
+          "lat": 50.44466
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "FIXINOX",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire technique - 3eme degré (CESS)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Fabrication d'autres articles métalliques n.c.a."
+      ],
+      "secteurscodenace": [
+        "25999"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1992524",
+      "datedebutdiffusion": "2026-07-23",
+      "datefindiffusion": "2026-09-03",
+      "metier": "Technicien / Technicienne en procédés et méthodes de production",
+      "metiercodedimeco": "H121001-1"
+    },
+    {
+      "numerooffreforem": "1990893",
+      "titreoffre": "Calculateur en métal (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "TALENTUS - Talentus",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Anglais",
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "EN",
+        "NL"
+      ],
+      "experiencerequise": "Technicien /Technicienne de production",
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1990893",
+      "datedebutdiffusion": "2026-07-22",
+      "datefindiffusion": "2026-09-02",
+      "metier": "Technicien /Technicienne de production",
+      "metiercodedimeco": "H140101-2"
+    },
+    {
+      "numerooffreforem": "1989829",
+      "titreoffre": "Technicien en emballage et production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "STADEN"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Flandre Occidentale",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "8840"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE25",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.014735,
+          "lat": 50.974625
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "UNIQUE",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Néerlandais",
+        "Français"
+      ],
+      "languescodeiso2": [
+        "NL",
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industries alimentaires"
+      ],
+      "secteurscodenace": [
+        "10"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "14310588_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1989829",
+      "datedebutdiffusion": "2026-07-21",
+      "datefindiffusion": "2026-08-18",
+      "metier": "Installation et maintenance d'équipements industriels et d'exploitation",
+      "metiercodedimeco": "I1304"
+    },
+    {
+      "numerooffreforem": "1988838",
+      "titreoffre": "Senior technician USP - travail de week-end (H/F/X)",
+      "lieuxtravaillocalite": [
+        "SENEFFE"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7180"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.26646,
+          "lat": 50.525055
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "ADECCO PERSONNEL SERVICES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement secondaire (deuxième cycle)"
+      ],
+      "niveauxetudesisced2011": [
+        "04"
+      ],
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Industrie pharmaceutique"
+      ],
+      "secteurscodenace": [
+        "21"
+      ],
+      "source": "Adecco",
+      "referenceexterne": "193-37387-LEFOREM-BE-200710",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1988838",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Conduite d'équipement de production chimique ou pharmaceutique",
+      "metiercodedimeco": "H2301"
+    },
+    {
+      "numerooffreforem": "1989173",
+      "titreoffre": "Technicien de production (/X) (H/F/X)",
+      "lieuxtravaillocalite": [
+        "THEUX"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province de Liège",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "4910"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE33",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.790603,
+          "lat": 50.489326
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "DaJobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Primaire"
+      ],
+      "niveauxetudesisced2011": [
+        "02"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication d'équipements électriques"
+      ],
+      "secteurscodenace": [
+        "27"
+      ],
+      "source": "DaJobs",
+      "referenceexterne": "237908-LEFOREM-BE-200715",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1989173",
+      "datedebutdiffusion": "2026-07-20",
+      "datefindiffusion": "2026-08-31",
+      "metier": "Management et ingénierie gestion industrielle et logistique",
+      "metiercodedimeco": "H1401"
+    },
+    {
+      "numerooffreforem": "1989435",
+      "titreoffre": "technicien de production 2 équipes (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LESSINES",
+        "LESSINES"
+      ],
+      "lieuxtravailregion": [
+        "Belgique",
+        "Province du Hainaut",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7860",
+        "7866"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE",
+        "BE32",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.830113,
+          "lat": 50.712303
+        }
+      ],
+      "typecontrat": "Intérimaire",
+      "nomemployeur": "Forum Jobs",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Installation de machines et d'équipements industriels"
+      ],
+      "secteurscodenace": [
+        "332"
+      ],
+      "source": "References",
+      "referenceexterne": "10542689",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1989435",
+      "datedebutdiffusion": "2026-07-19",
+      "datefindiffusion": "2026-08-30",
+      "metier": null,
+      "metiercodedimeco": null
+    },
+    {
+      "numerooffreforem": "2011059",
+      "titreoffre": "Lead Technician I, Pfizer (H/F/X)",
+      "lieuxtravaillocalite": [
+        "PUURS-SINT-AMANDS",
+        "PUURS"
+      ],
+      "lieuxtravailregion": [
+        "Province d'Anvers",
+        "Belgique",
+        "RÉGION FLAMANDE"
+      ],
+      "lieuxtravailcodepostal": [
+        "2870",
+        "2870"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE21",
+        "BE",
+        "BE2"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.286192,
+          "lat": 51.071998
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "Pfizer",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Maîtrise universitaire ou équivalent"
+      ],
+      "niveauxetudesisced2011": [
+        "08"
+      ],
+      "langues": [
+        "Néerlandais"
+      ],
+      "languescodeiso2": [
+        "NL"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des médecins généralistes"
+      ],
+      "secteurscodenace": [
+        "8621"
+      ],
+      "source": "StepStone",
+      "referenceexterne": "2223848",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2011059",
+      "datedebutdiffusion": "2026-07-17",
+      "datefindiffusion": "2026-08-28",
+      "metier": "Technicien / Technicienne de production en industrie (bio)pharmaceutique",
+      "metiercodedimeco": "H230101-3"
+    },
+    {
+      "numerooffreforem": "1984034",
+      "titreoffre": "Technicien / Technicienne de Maintenance Électromécanique – Production PVC (H/F/X)",
+      "lieuxtravaillocalite": [
+        "TRANSINNE"
+      ],
+      "lieuxtravailregion": [
+        "Province du Luxembourg",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6890"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE34",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.202663,
+          "lat": 50.000446
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "VIVALDIS INTERIM - Vivaldis Interim Marche-en-Famenne",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1984034",
+      "datedebutdiffusion": "2026-07-15",
+      "datefindiffusion": "2026-08-26",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "1981334",
+      "titreoffre": "Technicien·ne en système d'usinage - Formation avec emploi à la clé (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ESTAIMPUIS"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7730"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.264018,
+          "lat": 50.705979
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "METHODES ET TECHNIQUES D'USINAGE - METHODES ET TECHNIQUES",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Usinage"
+      ],
+      "secteurscodenace": [
+        "25620"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1981334",
+      "datedebutdiffusion": "2026-07-14",
+      "datefindiffusion": "2026-08-25",
+      "metier": "Régleur-ajusteur / Régleuse - ajusteuse de machines de production",
+      "metiercodedimeco": "H291201-1"
+    },
+    {
+      "numerooffreforem": "1979847",
+      "titreoffre": "CRR - Statutory Fees Calculator (H/F/X)",
+      "lieuxtravaillocalite": [
+        "WOLUWE-SAINT-LAMBERT"
+      ],
+      "lieuxtravailregion": [
+        "RÉGION DE BRUXELLES-CAPITALE",
+        "Belgique"
+      ],
+      "lieuxtravailcodepostal": [
+        "1200"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE1",
+        "BE"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.428484,
+          "lat": 50.846692
+        }
+      ],
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "BETUNED - BETUNED",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français",
+        "Néerlandais",
+        "Anglais"
+      ],
+      "languescodeiso2": [
+        "FR",
+        "NL",
+        "EN"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B"
+      ],
+      "secteurs": [
+        "Activités des agences de placement de main-d'oeuvre"
+      ],
+      "secteurscodenace": [
+        "78100"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1979847",
+      "datedebutdiffusion": "2026-07-13",
+      "datefindiffusion": "2026-08-17",
+      "metier": "Technicien /Technicienne de production",
+      "metiercodedimeco": "H140101-2"
+    },
+    {
+      "numerooffreforem": "1975481",
+      "titreoffre": "TECHNICIEN(NE) EN PRODUCTION ENTOMOLOGIQUE (H/F/X)",
+      "lieuxtravaillocalite": [
+        "ATH"
+      ],
+      "lieuxtravailregion": [
+        "Province du Hainaut",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "7800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE32",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 3.792679,
+          "lat": 50.639504
+        }
+      ],
+      "typecontrat": "Durée déterminée",
+      "nomemployeur": "Province du Hainaut - HCT - Département Tourisme / Hainaut Enseignement Numérique / CAPP Hainaut / HEPHC (bureau de la Directrice-Présidente)",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": null,
+      "languescodeiso2": null,
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Services d'information touristique"
+      ],
+      "secteurscodenace": [
+        "79901"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1975481",
+      "datedebutdiffusion": "2026-07-09",
+      "datefindiffusion": "2026-08-16",
+      "metier": "Technicien /Technicienne de production",
+      "metiercodedimeco": "H140101-2"
+    },
+    {
+      "numerooffreforem": "1973325",
+      "titreoffre": "Technicien (ne) / Dépanneur (euse) génie civil - LIBRAMONT (H/F/X)",
+      "lieuxtravaillocalite": [
+        "LIBRAMONT"
+      ],
+      "lieuxtravailregion": [
+        "Province du Luxembourg",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "6800"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE34",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 5.382353,
+          "lat": 49.919715
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "VIVALDIS INTERIM - Vivaldis Interim Namur",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": null,
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": [
+        "B",
+        "B+E",
+        "C",
+        "C+E"
+      ],
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1973325",
+      "datedebutdiffusion": "2026-07-07",
+      "datefindiffusion": "2026-08-17",
+      "metier": "Technicien /Technicienne de production",
+      "metiercodedimeco": "H140101-2"
+    },
+    {
+      "numerooffreforem": "1971571",
+      "titreoffre": "Contremaître de production (H/F/X)",
+      "lieuxtravaillocalite": [
+        "JEMEPPE-SUR-SAMBRE"
+      ],
+      "lieuxtravailregion": [
+        "Province de Namur",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": [
+        "5190"
+      ],
+      "lieuxtravailregionnuts": [
+        "BE35",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": [
+        {
+          "lon": 4.654598,
+          "lat": 50.462995
+        }
+      ],
+      "typecontrat": "Intérimaire avec option sur durée indéterminée",
+      "nomemployeur": "VIVALDIS INTERIM - Vivaldis Interim Namur",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Formation supérieure initiale de type long (Master)",
+        "Formation supérieure initiale de type long (Master)",
+        "Formation supérieure initiale de type court (Baccalauréat)",
+        "Formation supérieure initiale de type court (Baccalauréat)"
+      ],
+      "niveauxetudesisced2011": null,
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Activités des agences de travail temporaire"
+      ],
+      "secteurscodenace": [
+        "78200"
+      ],
+      "source": "Via site Forem",
+      "referenceexterne": null,
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/1971571",
+      "datedebutdiffusion": "2026-07-06",
+      "datefindiffusion": "2026-08-16",
+      "metier": "Technicien / Technicienne de maintenance industrielle",
+      "metiercodedimeco": "I130401-1"
+    },
+    {
+      "numerooffreforem": "2009737",
+      "titreoffre": "Technicien Méthodes et Production Usinage (H/F/X)",
+      "lieuxtravaillocalite": null,
+      "lieuxtravailregion": [
+        "Province de Liège",
+        "Belgique",
+        "RÉGION WALLONNE"
+      ],
+      "lieuxtravailcodepostal": null,
+      "lieuxtravailregionnuts": [
+        "BE33",
+        "BE",
+        "BE3"
+      ],
+      "lieuxtravailgeo": null,
+      "typecontrat": "Durée indéterminée",
+      "nomemployeur": "SAFRAN AERO BOOSTERS",
+      "regimetravail": "Temps plein",
+      "nombrepostes": 1,
+      "niveauxetudes": [
+        "Enseignement supérieur de cycle court"
+      ],
+      "niveauxetudesisced2011": [
+        "06"
+      ],
+      "langues": [
+        "Français"
+      ],
+      "languescodeiso2": [
+        "FR"
+      ],
+      "experiencerequise": null,
+      "permisdeconduire": null,
+      "secteurs": [
+        "Fabrication de machines et d'équipements n.c.a."
+      ],
+      "secteurscodenace": [
+        "28"
+      ],
+      "source": "Jobat",
+      "referenceexterne": "13836947_FR",
+      "url": "https://www.leforem.be/recherche-offres/offre-detail/2009737",
+      "datedebutdiffusion": "2026-06-08",
+      "datefindiffusion": "2026-08-27",
+      "metier": "Intervention technique en études, recherche et développement",
+      "metiercodedimeco": "H1210"
+    }
+  ]
+}

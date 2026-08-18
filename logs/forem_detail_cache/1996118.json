@@ -1,0 +1,110 @@
+{
+  "idOffreEmploi": 1996118,
+  "numero": "1996118",
+  "titreOffre": "Business analyst - INAMI (H/F/X)",
+  "datePublication": "27/07/2026",
+  "dateFinDiffusion": "14/08/2026",
+  "dateDebutDiffusion": "27/07/2026",
+  "nomEmployeur": "Föderaler Öffentlichter Dienst Politik und Unterstützung",
+  "nomPartenaire": "SPF Stratégie et Appui",
+  "secteurActiviteEmployeur": "Sécurité sociale obligatoire, à l'exclusion des mutuelles",
+  "typeContrat": "Salarié statutaire",
+  "regimeTravail": "Temps plein",
+  "regimeTravailPrecision": "Travail de jour",
+  "lieuxTravail": [
+    "BRUXELLES"
+  ],
+  "langues": [
+    {
+      "code": "FR",
+      "libelle": "Français",
+      "required": true,
+      "experience": "C2 - Expert"
+    },
+    {
+      "code": "NL",
+      "libelle": "Néerlandais",
+      "experience": "B1 - Intermédiaire"
+    }
+  ],
+  "nombrePostes": 1,
+  "descriptionJob": "<p>Rejoignez l'INAMI et contribuez à des projets à fort impact sociétal ! Nous recherchons un Business analyst pour notre service à Bruxelles qui va accompagner notre transformation digitale et optimiser nos processus métier complexes au service des citoyens.</p>\n<h2>Votre rôle</h2>\n<p>Vous analysez et optimisez des processus métier complexes dans un contexte de transformation digitale, data et intelligence artificielle. Vos missions principales :</p>\n<ul><li>Analyser et modéliser des processus métier complexes (AS-IS / TO-BE) selon les principes LEAN et BPM</li><li>Réaliser des analyses business approfondies et traduire les besoins métiers en exigences fonctionnelles</li><li>Identifier des cas d'usage d'optimisation, d'automatisation et d'intelligence artificielle</li><li>Contribuer à l'analyse coûts-bénéfices et à l'estimation du ROI des solutions proposées</li><li>Animer des ateliers multi-acteurs et assurer l'interface entre les services métiers, l'ICT et les experts</li><li>Assurer la traçabilité des besoins et la qualité des livrables</li></ul>\n\n<h2>Votre profil</h2>\n<p>Vous possédez un diplôme de Master et 3 ans d'expérience en Business Analysis dans au moins 3 des domaines suivants :</p>\n<ul><li>Analyse métier appliquée à des contextes transversaux et complexes</li><li>Conception et analyse des processus business via BPMN</li><li>Identification d'opportunités d'optimisation de processus, IA et data</li><li>Évaluation des impacts mesurables</li><li>Élaboration de Business cases</li></ul>\n<p> Une connaissance du néerlandais est un atout dans notre environnement bilingue.</p>\n<h2>Procédure de sélection</h2>\n<p>La sélection comprend : </p>\n<ol><li>Vérification du diplôme et de l'expérience</li><li>Tests informatisés au SPF BOSA (si assez de candidats)</li><li>Entretien avec étude de cas à l'INAMI</li></ol>\n<h2>Postulez maintenant</h2>\n<p>Candidatez jusqu'au 14 août 2026 via votre compte en ligne sur travaillerpour.be. Complétez votre CV en français et téléchargez votre diplôme. </p>\n<p>Pour toute question concernant la procédure et/ou la fonction, consultez la rubrique <b>Prendre contact&nbsp;</b>de l'offre complète sur travaillerpour.be.</p>",
+  "metier": "Analyste TIC",
+  "positionDateInfo": {
+    "startDate": "27/07/2026",
+    "expectedEndDate": "14/08/2026"
+  },
+  "benefits": {
+    "insurance": "Hospitalisation",
+    "otherBenefits": []
+  },
+  "travel": {},
+  "howToApply": {
+    "postalAddress": {
+      "adresse": [],
+      "municipalite": "Bruxelles",
+      "codePostal": "1000",
+      "countryCode": "BE",
+      "pays": "Belgique"
+    },
+    "webAddress": "https://redirect.jobmatix.com/01kyhrrssfy4xej0jp91w89w27?jm_created_at=2026-07-27+14%3A28%3A35",
+    "formattedName": "Jobselect"
+  },
+  "softSkills": [],
+  "officeSkills": [
+    {
+      "code": "20",
+      "libelle": "Communication",
+      "experience": "3"
+    },
+    {
+      "code": "50",
+      "libelle": "Résolution de problèmes",
+      "experience": "3"
+    }
+  ],
+  "experience": [
+    {
+      "code": "3",
+      "libelle": "Analyste TIC",
+      "experience": "Entre 2 et 5 ans"
+    }
+  ],
+  "permisConduire": [],
+  "permisConduireSimplified": "",
+  "certifications": [],
+  "niveauxEtudes": [
+    {
+      "libelle": "Maîtrise universitaire ou équivalent"
+    }
+  ],
+  "domainesEtudes": [],
+  "dateModification": "13/08/2026",
+  "competencies": [],
+  "benefitsComments": "<ul><li>Une fonction statutaire au niveau A2</li><li>Salaire de départ minimum : 56 022,43 € brut annuel (index actuel)</li><li>Horaire flexible (38h/semaine) et télétravail possible (max 3 jours/semaine)</li><li>26 jours de congé + fermeture entre Noël et Nouvel An</li><li>Chèques-repas, assurance hospitalisation avantageuse</li><li>Transports en commun gratuits, prime vélo possible</li><li>Formations continues et opportunités de carrière</li></ul>",
+  "googleForJobMetadata": {
+    "context": "https://schema.org/",
+    "type": "JobPosting",
+    "title": "Business analyst - INAMI (H/F/X)",
+    "description": "<p>Rejoignez l'INAMI et contribuez à des projets à fort impact sociétal ! Nous recherchons un Business analyst pour notre service à Bruxelles qui va accompagner notre transformation digitale et optimiser nos processus métier complexes au service des citoyens.</p>\n<h2>Votre rôle</h2>\n<p>Vous analysez et optimisez des processus métier complexes dans un contexte de transformation digitale, data et intelligence artificielle. Vos missions principales :</p>\n<ul><li>Analyser et modéliser des processus métier complexes (AS-IS / TO-BE) selon les principes LEAN et BPM</li><li>Réaliser des analyses business approfondies et traduire les besoins métiers en exigences fonctionnelles</li><li>Identifier des cas d'usage d'optimisation, d'automatisation et d'intelligence artificielle</li><li>Contribuer à l'analyse coûts-bénéfices et à l'estimation du ROI des solutions proposées</li><li>Animer des ateliers multi-acteurs et assurer l'interface entre les services métiers, l'ICT et les experts</li><li>Assurer la traçabilité des besoins et la qualité des livrables</li></ul>\n\n<h2>Votre profil</h2>\n<p>Vous possédez un diplôme de Master et 3 ans d'expérience en Business Analysis dans au moins 3 des domaines suivants :</p>\n<ul><li>Analyse métier appliquée à des contextes transversaux et complexes</li><li>Conception et analyse des processus business via BPMN</li><li>Identification d'opportunités d'optimisation de processus, IA et data</li><li>Évaluation des impacts mesurables</li><li>Élaboration de Business cases</li></ul>\n<p> Une connaissance du néerlandais est un atout dans notre environnement bilingue.</p>\n<h2>Procédure de sélection</h2>\n<p>La sélection comprend : </p>\n<ol><li>Vérification du diplôme et de l'expérience</li><li>Tests informatisés au SPF BOSA (si assez de candidats)</li><li>Entretien avec étude de cas à l'INAMI</li></ol>\n<h2>Postulez maintenant</h2>\n<p>Candidatez jusqu'au 14 août 2026 via votre compte en ligne sur travaillerpour.be. Complétez votre CV en français et téléchargez votre diplôme. </p>\n<p>Pour toute question concernant la procédure et/ou la fonction, consultez la rubrique <b>Prendre contact&nbsp;</b>de l'offre complète sur travaillerpour.be.</p>",
+    "indentifier": {
+      "type": "PropertyValue",
+      "name": "Föderaler Öffentlichter Dienst Politik und Unterstützung",
+      "value": "1996118"
+    },
+    "datePosted": "27/07/2026",
+    "hiringOrganisation": {
+      "type": "Organization",
+      "name": "Föderaler Öffentlichter Dienst Politik und Unterstützung",
+      "sameAs": "Föderaler Öffentlichter Dienst Politik und Unterstützung"
+    },
+    "jobLocation": {
+      "type": "Place",
+      "address": {
+        "type": "PostalAddress",
+        "addressCountry": "BE"
+      }
+    }
+  },
+  "referenceOffrePartenaire": "01kyhrrssfy4xej0jp91w89w27"
+}

@@ -1,0 +1,83 @@
+{
+  "keyword": "mass spectrometry",
+  "provenance_mode": "PARTNER",
+  "total_reported": 3,
+  "count_saved": 3,
+  "results": [
+    {
+      "reference": "5921886",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "6041",
+      "employeur": {
+        "nomFr": "DE COCK - ICONTECH",
+        "nomNl": null,
+        "numeroEntreprise": "1029194645"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Responsable Méthodes & Qualité H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-08-10T00:00:00+02:00",
+      "dateModification": "2026-08-10T00:00:00+02:00"
+    },
+    {
+      "reference": "5902669",
+      "codeDomaineImt": "Q'3",
+      "codeModeGestion": null,
+      "codePostal": "4800",
+      "employeur": {
+        "nomFr": "SOCIETE WALLONNE DES  EAUX",
+        "nomNl": "SOCIETE WALLONNE DES  EAUX",
+        "numeroEntreprise": "0230132005"
+      },
+      "regimeTravail": "NO",
+      "titreFr": "Expert SIG ArcGIS/Géomaticien H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2026-07-17T00:00:00+02:00",
+      "dateModification": "2026-07-17T00:00:00+02:00"
+    },
+    {
+      "reference": "5620286",
+      "codeDomaineImt": "I'3",
+      "codeModeGestion": null,
+      "codePostal": "8500",
+      "employeur": {
+        "nomFr": "AGO JOBS & HR",
+        "nomNl": "AGO JOBS & HR",
+        "numeroEntreprise": "0867323421"
+      },
+      "regimeTravail": "PT",
+      "titreFr": "préparateur de commandes H/F/X",
+      "titreNl": null,
+      "typeContrat": "CDI",
+      "typeOffre": "Hrxml",
+      "codePays": "BE",
+      "communeFr": null,
+      "communeNl": null,
+      "numeroEntreprise": "0839044852",
+      "typeContratLibelle": "Durée indéterminée",
+      "dureeContrat": null,
+      "dureeContratLibelle": null,
+      "dateCreation": "2025-10-22T00:00:00+02:00",
+      "dateModification": "2025-10-22T00:00:00+02:00"
+    }
+  ]
+}
