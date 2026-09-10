@@ -182,6 +182,75 @@ DETECTOR_TESTS = [
         None,
         3,
     ),
+
+    # ------------------------------------------------------------------
+    # Un age minimum n'est pas une experience
+    # ------------------------------------------------------------------
+    # Mesure du 10 septembre 2026 sur la file reelle : douze offres
+    # portaient une exigence d'experience invraisemblable, et le gate les
+    # ecartait ou les envoyait en verification. Aucune n'exigeait ce que le
+    # gate y lisait.
+    #
+    # Les motifs « minimum N ans » et « minstens N jaar » n'exigent pas le
+    # mot experience : l'age d'acces d'un job etudiant passait pour dix-huit
+    # annees de metier.
+    (
+        "AGE ETUDIANT FR",
+        "Etudiant Caisse. Vous devez avoir minimum 18 ans pour ce poste.",
+        None,
+        None,
+    ),
+    (
+        "AGE ETUDIANT NL",
+        "Jobstudent logistics. Minstens 18 jaar oud.",
+        None,
+        None,
+    ),
+    (
+        "AGE 18+ DANS LE TITRE",
+        "Jobstudent Exterioo logistics 18+. Minimum 18 ans requis.",
+        None,
+        None,
+    ),
+    # Le plafond etait a 40, ce qui laissait passer exactement 40. Ce cas
+    # ecartait un Laboratory Technician - Cell Culture note 93.
+    (
+        "40 ANS = REMPLISSAGE",
+        "Notre laboratoire dispose de 40 ans d'experience en culture "
+        "cellulaire.",
+        None,
+        None,
+    ),
+    (
+        "20 ANS = REMPLISSAGE",
+        "Une equipe forte de 20 ans d'experience vous accueille.",
+        None,
+        None,
+    ),
+
+    # ------------------------------------------------------------------
+    # Ce qui doit continuer de passer
+    # ------------------------------------------------------------------
+    # Un garde-fou qui avale les vraies exigences serait pire que le defaut
+    # qu'il corrige : ces cas verifient qu'il ne mord pas trop large.
+    (
+        "AGE + EXPERIENCE REELLE",
+        "Vous devez avoir minimum 4 ans d'experience en QC.",
+        4,
+        None,
+    ),
+    (
+        "EXIGENCE SANS LE MOT EXPERIENCE",
+        "Minimum 3 ans dans un poste similaire en laboratoire.",
+        3,
+        None,
+    ),
+    (
+        "15 ANS RESTE PLAUSIBLE",
+        "Ingenieur : minimum 15 ans d'experience exigee.",
+        15,
+        None,
+    ),
     (
         "15 ANS SENIOR RÉELS",
         "Minimum 15 years of experience in IT programme management.",

@@ -252,6 +252,12 @@ _COMPANY_HISTORY_PATTERNS_V132 = [
     r"\b(?:notre|cette)\s+(?:agence|entreprise|societe|société|groupe)\b",
     r"\bour\s+(?:agency|company|business|group)\b",
     r"\b(?:agence|entreprise|societe|société|groupe)\s+(?:active|actif|active depuis)\b",
+    # « Notre laboratoire dispose de 40 ans d'experience » : l'employeur
+    # parle de lui, mais le mot « agence » n'y figure pas. La liste ne
+    # couvrait que les intermediaires ; elle rate les employeurs directs.
+    r"\b(?:notre|nos|cette|ce)\s+(?:laboratoire|equipe|équipe|site|"
+    r"departement|département|service|usine|division|maison)\b",
+    r"\b(?:fort[e]?s?\s+de|riche\s+de|avec\s+ses)\s+\d{1,3}\b",
     r"\b(?:company|agency)\s+(?:founded|established)\b",
     r"\b(?:depuis|since|sinds)\s+\d{1,3}\b",
     r"\d{1,3}\s+ans\s+d[' ]?experience\s+(?:dans|en)\s+(?:le\s+)?(?:recrutement|interim|intérim)\b",
@@ -262,7 +268,16 @@ _COMPANY_HISTORY_PATTERNS_V132 = [
 # Une valeur au-delà de 40 ans comme exigence individuelle est considérée
 # comme une extraction invalide. Cela évite qu'une ancienneté d'entreprise
 # devienne un hard reject candidat.
-_MAX_PLAUSIBLE_INDIVIDUAL_YEARS_V132 = 40
+# Au-dela, ce n'est plus une exigence adressee au candidat.
+#
+# Le plafond etait a 40, ce qui laissait passer exactement les valeurs qui
+# n'en sont jamais : mesure du 10 septembre 2026, « 40 ans d'experience »
+# (remplissage d'annonce) ecartait un Laboratory Technician - Cell Culture
+# note 93, et « 20 ans » trois postes de kwaliteitscontrole.
+#
+# Aucune offre reelle ne demande plus de quinze ans. Meme valeur que
+# matching/verdict.py, qui a corrige le meme defaut sur « 70 ans ».
+_MAX_PLAUSIBLE_INDIVIDUAL_YEARS_V132 = 15
 
 
 def _experience_chunks_v132(text):
@@ -274,6 +289,38 @@ def _experience_chunks_v132(text):
 def _experience_optional_v132(chunk):
     n = _norm(chunk)
     return any(_norm(marker) in n for marker in _EXPERIENCE_OPTIONAL_MARKERS_V132)
+
+
+# Un age minimum n'est pas une experience.
+#
+# Deux des six motifs — « minimum N ans », « minstens N jaar » — n'exigent
+# pas le mot experience. Un job etudiant qui demande d'avoir dix-huit ans
+# etait donc lu comme exigeant dix-huit annees de metier.
+#
+# Mesure du 10 septembre 2026 : « Etudiant Caisse », « Jobs etudiants
+# bpost », « Sauveteur », « Jobstudent Exterioo 18+ » — six offres classees
+# VERIFY_FIRST ou EXCLUDED pour un age d'acces.
+_AGE_MARKERS_V132 = (
+    "avoir", "age de", "agee de", "ages de", "age minimum",
+    "ans et plus", "ans ou plus", "majeur", "18+", "16+", "15+",
+    "jaar oud", "years old", "minimumleeftijd", "leeftijd", "oud zijn",
+    "etudiant", "etudiante", "student", "jobstudent", "eleve", "scolarite",
+)
+
+# Si l'un de ces mots figure dans le meme fragment, la duree parle bien de
+# metier : le garde-fou ne s'applique pas.
+_EXPERIENCE_WORDS_V132 = (
+    "experience", "ervaring", "expertise", "anciennete",
+    "pratique professionnelle",
+)
+
+
+def _age_not_experience_v132(chunk):
+    """Vrai quand la duree designe un age d'acces, pas une experience."""
+    n = _norm(chunk)
+    if any(mot in n for mot in _EXPERIENCE_WORDS_V132):
+        return False
+    return any(marqueur in n for marqueur in _AGE_MARKERS_V132)
 
 
 def _company_history_experience_v132(chunk):
@@ -302,6 +349,9 @@ def detect_required_experience_years_v132(text):
                     continue
 
                 if _company_history_experience_v132(chunk):
+                    continue
+
+                if _age_not_experience_v132(chunk):
                     continue
 
                 if _experience_optional_v132(chunk):
