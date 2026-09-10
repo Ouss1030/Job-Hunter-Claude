@@ -1,0 +1,163 @@
+{% extends "_base.html" %}
+{% block titre %}Statistiques{% endblock %}
+
+{% macro tableau(lignes, entete) -%}
+  {% if lignes %}
+  <table class="table-simple compacte">
+    <thead><tr><th>{{ entete }}</th><th class="droite">Offres</th><th class="droite">Part</th></tr></thead>
+    <tbody>
+      {% for x in lignes %}
+      <tr><td>{{ x.nom }}</td>
+          <td class="droite nombre">{{ x.offres }}</td>
+          <td class="droite nombre faible">{{ "%.1f"|format(x.part) }} %</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="rien">Rien de significatif (seuil : 3 offres).</p>
+  {% endif %}
+{%- endmacro %}
+
+{% block contenu %}
+<header class="entete">
+  <div>
+    <h1>Statistiques</h1>
+    <p class="sous-titre">Ce que disent vos offres, où le tri perd du monde,
+      et ce que deviennent vos candidatures.</p>
+  </div>
+  <div class="commandes-run">
+    {% if complet %}
+      <a class="bouton-secondaire" href="/statistiques">Revenir à l'aperçu</a>
+    {% else %}
+      <a class="bouton-secondaire" href="/statistiques?complet=1">Analyser toute la base</a>
+    {% endif %}
+  </div>
+</header>
+
+<h2 class="titre-section">Le marché accessible</h2>
+
+{% if marche.erreur %}
+  <p class="rien">{{ marche.erreur }}</p>
+{% else %}
+<div class="stats-entete large">
+  <div class="carte-stat"><div class="valeur">{{ marche.offres_actives }}</div>
+    <div class="legende">analysées</div></div>
+  <div class="carte-stat vert"><div class="valeur">{{ marche.offres_ouvertes }}</div>
+    <div class="legende">sans barrière</div></div>
+  <div class="carte-stat rouge"><div class="valeur">{{ marche.verdicts.get("FERMEE", 0) }}</div>
+    <div class="legende">fermées</div></div>
+  <div class="carte-stat"><div class="valeur">{{ marche.verdicts.get("INCONNU", 0) }}</div>
+    <div class="legende">texte insuffisant</div></div>
+</div>
+
+{# Cette precaution n'est pas decorative : ce projet a deja pris un comptage
+   de mentions pour une mesure d'exigences, et annonce 407 offres demandant
+   la « culture cellulaire » alors qu'il comptait des « culture
+   d'entreprise ». #}
+<p class="avertissement">
+  Ces comptages mesurent des <strong>mentions</strong> dans le texte des
+  annonces, pas des exigences formelles. Le classement relatif tient ; les
+  valeurs absolues surestiment.
+  {% if not complet %}<br>Aperçu sur 1 500 offres — l'analyse complète prend une trentaine de secondes.{% endif %}
+</p>
+
+<div class="deux-colonnes">
+  <section><h3 class="titre-bloc">À acquérir</h3>
+    <p class="aide">Ce qui revient le plus souvent et que vous ne pouvez pas encore revendiquer.</p>
+    {{ tableau(marche.a_acquerir, "Compétence") }}</section>
+  <section><h3 class="titre-bloc">À mettre en avant</h3>
+    <p class="aide">Ce qui vous sert déjà le plus souvent.</p>
+    {{ tableau(marche.a_valoriser, "Compétence") }}</section>
+</div>
+
+<div class="deux-colonnes">
+  <section><h3 class="titre-bloc">Qui recrute</h3>{{ tableau(marche.employeurs, "Employeur") }}</section>
+  <section><h3 class="titre-bloc">Où</h3>{{ tableau(marche.lieux, "Ville") }}</section>
+</div>
+{% endif %}
+
+<h2 class="titre-section">L'entonnoir, run après run</h2>
+{% if entonnoir %}
+<table class="table-simple">
+  <thead><tr>
+    <th>Quand</th><th class="droite">File</th><th class="droite">Prêtes</th>
+    <th class="droite">À tension</th><th class="droite">À vérifier</th>
+    <th class="droite">Écartées</th><th class="droite">Pool</th>
+  </tr></thead>
+  <tbody>
+    {% for x in entonnoir %}
+    <tr>
+      <td class="nombre faible">{{ x.quand }}</td>
+      <td class="droite nombre">{{ x.file }}</td>
+      <td class="droite nombre fort">{{ x.pretes }}</td>
+      <td class="droite nombre">{{ x.a_tension }}</td>
+      <td class="droite nombre">{{ x.a_verifier }}</td>
+      <td class="droite nombre faible">{{ x.ecartees }}</td>
+      <td class="droite nombre">{{ x.pool if x.pool is not none else "—" }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if evolution %}
+<div class="stats-entete large">
+  {% for champ, v in evolution.ecarts.items() %}
+  <div class="carte-stat">
+    <div class="valeur">{{ v.apres }}</div>
+    <div class="legende">{{ champ | replace("_", " ") }}</div>
+    <div class="delta {{ 'positif' if v.delta >= 0 else 'negatif' }}">
+      {{ "+" if v.delta >= 0 }}{{ v.delta }}</div>
+  </div>
+  {% endfor %}
+</div>
+<p class="aide">Sur {{ evolution.runs }} runs, du {{ evolution.depuis }} au {{ evolution.jusqu_a }}.</p>
+{% endif %}
+{% else %}
+<p class="rien">Aucun artefact de file disponible.</p>
+{% endif %}
+
+<h2 class="titre-section">Rendement réel des sources</h2>
+<p class="aide">Combien d'offres <strong>prêtes</strong> une source produit — et non
+  combien de lignes elle dépose en base. Une source volumineuse peut ne rien produire.</p>
+{% if rendement %}
+<table class="table-simple">
+  <thead><tr><th>Source</th><th class="droite">Offres</th>
+    <th class="droite">Prêtes</th><th class="droite">Rendement</th></tr></thead>
+  <tbody>
+    {% for x in rendement %}
+    <tr>
+      <td>{{ x.source }}</td>
+      <td class="droite nombre">{{ x.offres }}</td>
+      <td class="droite nombre fort">{{ x.pretes }}</td>
+      <td class="droite nombre {{ 'fort' if x.rendement >= 20 else ('faible' if x.rendement < 5) }}">
+        {{ "%.1f"|format(x.rendement) }} %</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="rien">Aucune donnée de file.</p>
+{% endif %}
+
+<h2 class="titre-section">Les candidatures</h2>
+{% if candidatures.etat == "AUCUNE_CANDIDATURE_ENVOYEE" %}
+  <div class="encadre">
+    <p>{{ candidatures.message }}</p>
+    <p class="aide">Dossiers suivis : {{ candidatures.dossiers_suivis }}.
+      Les compteurs de délai et de taux de réponse commenceront au premier envoi.</p>
+  </div>
+{% elif candidatures.erreur %}
+  <p class="rien">{{ candidatures.erreur }}</p>
+{% else %}
+  <div class="stats-entete large">
+    <div class="carte-stat"><div class="valeur">{{ candidatures.envoyees }}</div>
+      <div class="legende">envoyées</div></div>
+    <div class="carte-stat"><div class="valeur">{{ candidatures.avec_retour }}</div>
+      <div class="legende">avec retour</div></div>
+    <div class="carte-stat vert"><div class="valeur">{{ candidatures.taux_de_reponse }} %</div>
+      <div class="legende">taux de réponse</div></div>
+    <div class="carte-stat"><div class="valeur">{{ candidatures.delai_median_jours or "—" }}</div>
+      <div class="legende">délai médian (j)</div></div>
+  </div>
+{% endif %}
+{% endblock %}

@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-INTERFACE WEB - VERSION 0.2
+INTERFACE WEB - VERSION 0.3
 
     python -m webui.serveur
     -> http://127.0.0.1:8600
@@ -20,6 +20,17 @@ Aucune dependance nouvelle
 Starlette, Jinja2 et uvicorn sont deja presents dans l'environnement — ils
 arrivent avec Streamlit. Aucun `pip install`, aucun Node, aucune etape de
 compilation.
+
+V0.3 — l'ecran du jour, le run, les statistiques
+-------------------------------------------------
+L'ecran du jour remplace leur « Command Center ». Eux affichent sept
+compteurs cote a cote ; un tableau de bord qui montre tout n'oriente vers
+rien. Trois questions suffisent : quelles relances sont dues, quelles offres
+attendent une decision, qu'est-ce qui est nouveau.
+
+Le lancement de run reprend leur boite de processus, avec une difference :
+la leur affiche « PID 1432 en cours » et le journal brut. Ici les etapes
+nommees defilent, parce que progress_monitor sait deja les lire.
 
 V0.2 — le triage et le suivi
 ----------------------------
@@ -53,32 +64,14 @@ from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
 from starlette.templating import Jinja2Templates
 
-from interface.data_access import decorate_scored_jobs, load_latest_final_pool
-from interface.lifecycle_service import (
-    USER_STATUSES,
-    get_suivi,
-    relances_dues,
-    save_suivi,
-    set_status,
-)
-from statistiques.marche import _ville
+from interface.lifecycle_service import USER_STATUSES, save_suivi, set_status
+from webui import donnees
 
 
-WEBUI_VERSION = "0.2"
+WEBUI_VERSION = "0.3"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))
-
-# Champs reellement affiches. En envoyer davantage alourdirait la page sans
-# rien apporter : la description complete fait plusieurs milliers de
-# caracteres et n'est utile qu'au panneau de detail.
-_CHAMPS = (
-    "stable_item_key", "pool_rank_v12", "title", "company", "location",
-    "source", "url", "verdict", "verdict_obstacle", "verdict_formation",
-    "recommended_action_v12", "priority_v12", "final_score_v12", "track",
-    "cv_track", "guard_level", "application_status", "applied",
-    "preferred_location", "reasons", "description",
-)
 
 # Statuts proposes au triage rapide, dans l'ordre du parcours.
 #
@@ -92,68 +85,96 @@ TRIAGE = (
 )
 
 
-def _offres() -> tuple[list[dict], str]:
-    """Pool courant, allege et pret a etre serialise."""
-    pool, _meta, chemin = load_latest_final_pool()
-    decorees = decorate_scored_jobs(pool, final=True)
-
-    lignes = []
-    for offre in decorees:
-        ligne = {champ: offre.get(champ) for champ in _CHAMPS}
-        # Les sources ecrivent l'adresse complete : « Avenue Jules Bordet 168
-        # 1140 Bruxelles Telework No telework ». Illisible dans un tableau.
-        ligne["ville"] = _ville(offre.get("location") or "")
-        ligne["extrait"] = str(offre.get("description") or "")[:1200]
-        ligne.pop("description", None)
-        try:
-            ligne["suivi"] = get_suivi(offre)
-        except Exception:
-            # Le suivi est un confort : son echec ne doit jamais empecher
-            # d'afficher la liste des offres.
-            ligne["suivi"] = {}
-        lignes.append(ligne)
-
-    return lignes, (chemin.name if chemin else "aucun artefact")
-
-
-def _offre_par_cle(cle: str) -> dict | None:
-    pool, _meta, _chemin = load_latest_final_pool()
-    for offre in pool:
-        if offre.get("stable_item_key") == cle:
-            return offre
-    return None
-
-
 # ------------------------------------------------------------------ pages
 
-async def page_offres(request):
-    lignes, artefact = _offres()
+def _commun(actif: str, total: int, dues: int) -> dict:
+    return {"version": WEBUI_VERSION, "actif": actif,
+            "total": total, "dues": dues}
+
+
+async def page_jour(request):
+    lignes, artefact = donnees.offres()
+    jour = donnees.journee(lignes)
     return GABARITS.TemplateResponse(
-        request,
-        "offres.html",
-        {
-            "version": WEBUI_VERSION,
-            "artefact": artefact,
-            "offres_json": json.dumps(lignes, ensure_ascii=False),
-            "triage_json": json.dumps(TRIAGE, ensure_ascii=False),
-            "total": len(lignes),
-            "dues": len(relances_dues()),
-        },
-    )
+        request, "jour.html",
+        {**_commun("jour", len(lignes), len(jour["relances_dues"])),
+         "artefact": artefact, "jour": jour,
+         "run": donnees.etat_du_run()})
+
+
+async def page_offres(request):
+    lignes, artefact = donnees.offres()
+    jour = donnees.journee(lignes)
+    return GABARITS.TemplateResponse(
+        request, "offres.html",
+        {**_commun("offres", len(lignes), len(jour["relances_dues"])),
+         "artefact": artefact,
+         "offres_json": json.dumps(lignes, ensure_ascii=False),
+         "triage_json": json.dumps(TRIAGE, ensure_ascii=False)})
+
+
+async def page_statistiques(request):
+    from statistiques.candidatures import analyser_candidatures
+    from statistiques.marche import analyser_marche
+    from statistiques.pipeline import (
+        entonnoir_par_run, evolution, rendement_des_sources)
+
+    lignes, _artefact = donnees.offres()
+    jour = donnees.journee(lignes)
+
+    # Apercu par defaut : le calcul complet evalue plusieurs milliers
+    # d'annonces et prendrait une demi-minute a chaque ouverture de page.
+    complet = request.query_params.get("complet") == "1"
+    marche = analyser_marche(limite=None if complet else 1500)
+    entonnoir = entonnoir_par_run()
+
+    return GABARITS.TemplateResponse(
+        request, "statistiques.html",
+        {**_commun("statistiques", len(lignes), len(jour["relances_dues"])),
+         "complet": complet, "marche": marche,
+         "entonnoir": entonnoir, "evolution": evolution(entonnoir),
+         "rendement": [x for x in rendement_des_sources() if x["offres"] >= 2],
+         "candidatures": analyser_candidatures()})
 
 
 async def page_a_venir(request):
     titre = request.path_params.get("nom", "").replace("-", " ").capitalize()
+    lignes, _artefact = donnees.offres()
     return GABARITS.TemplateResponse(
         request, "a_venir.html",
-        {"version": WEBUI_VERSION, "titre": titre or "Cet écran"})
+        {**_commun("", len(lignes), 0), "titre": titre or "Cet écran"})
 
 
 # -------------------------------------------------------------------- api
 
 async def api_offres(request):
-    lignes, artefact = _offres()
+    lignes, artefact = donnees.offres()
     return JSONResponse({"artefact": artefact, "offres": lignes})
+
+
+async def api_run_etat(request):
+    return JSONResponse({**donnees.etat_du_run(),
+                         "journal": donnees.journal_du_run(40)})
+
+
+async def api_run_lancer(request):
+    """
+    Lance le pipeline complet.
+
+    Le refus quand un run tourne deja n'est pas une precaution de confort :
+    deux pipelines simultanes ecriraient dans la meme base et produiraient
+    des artefacts entremeles. Le verrou existe cote runner ; on le respecte
+    ici plutot que de decouvrir le conflit apres coup.
+    """
+    from interface import pipeline_runner as runner
+
+    if runner.is_running():
+        return JSONResponse({"erreur": "Un run est déjà en cours."}, 409)
+    try:
+        journal = runner.launch_daily_run()
+        return JSONResponse({"lance": True, "journal": str(journal)})
+    except Exception as erreur:
+        return JSONResponse({"erreur": str(erreur)}, 500)
 
 
 async def api_statut(request):
@@ -175,7 +196,7 @@ async def api_statut(request):
     if statut not in USER_STATUSES:
         return JSONResponse({"erreur": f"Statut inconnu : {statut}"}, 400)
 
-    offre = _offre_par_cle(cle)
+    offre = donnees.offre_par_cle(cle)
     if not offre:
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
@@ -193,7 +214,7 @@ async def api_postule(request):
         return JSONResponse(
             {"erreur": "Confirmation manquante : APPLIED refusé."}, 400)
 
-    offre = _offre_par_cle(str(corps.get("cle") or ""))
+    offre = donnees.offre_par_cle(str(corps.get("cle") or ""))
     if not offre:
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
@@ -207,7 +228,7 @@ async def api_postule(request):
 
 async def api_suivi(request):
     corps = await request.json()
-    offre = _offre_par_cle(str(corps.get("cle") or ""))
+    offre = donnees.offre_par_cle(str(corps.get("cle") or ""))
     if not offre:
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
@@ -227,14 +248,19 @@ async def api_suivi(request):
 
 
 async def api_relances(request):
+    from interface.lifecycle_service import relances_dues
     return JSONResponse({"dues": relances_dues()})
 
 
 application = Starlette(
     routes=[
-        Route("/", page_offres),
+        Route("/", page_jour),
+        Route("/offres", page_offres),
+        Route("/statistiques", page_statistiques),
         Route("/bientot/{nom}", page_a_venir),
         Route("/api/offres", api_offres),
+        Route("/api/run", api_run_etat),
+        Route("/api/run/lancer", api_run_lancer, methods=["POST"]),
         Route("/api/statut", api_statut, methods=["POST"]),
         Route("/api/postule", api_postule, methods=["POST"]),
         Route("/api/suivi", api_suivi, methods=["POST"]),

@@ -646,3 +646,258 @@ tbody tr.curseur td { background: rgba(91,157,255,.06); }
 }
 .carte-raccourcis dd { margin: 0; color: var(--texte-doux); }
 .carte-raccourcis p { margin: 0; font-size: 12px; color: var(--texte-faible); }
+
+/* =================================================================
+   V0.3 — ECRAN DU JOUR, ANALYSE D'ECART, STATISTIQUES
+   ================================================================= */
+
+.pastille.alerte { background: rgba(251,191,36,.2); color: var(--ambre); }
+
+.commandes-run { display: flex; gap: 9px; align-items: center; }
+
+.bouton-run {
+  background: var(--accent);
+  border: none;
+  color: #06121f;
+  border-radius: 7px;
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.bouton-run:disabled { background: var(--bord-clair); color: var(--texte-faible); cursor: not-allowed; }
+.bouton-run:not(:disabled):hover { filter: brightness(1.08); }
+
+.bouton-secondaire {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord-clair);
+  color: var(--texte-doux);
+  border-radius: 7px;
+  padding: 9px 15px;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: inherit;
+}
+.bouton-secondaire:hover { border-color: var(--accent); color: var(--texte); }
+
+/* ------------------------------------------------------ grille du jour */
+
+.grille-jour {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.carte-jour {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 18px 20px;
+}
+.carte-jour.urgente {
+  border-color: rgba(251,191,36,.35);
+  background: linear-gradient(var(--ambre-fond), var(--fond-eleve) 60%);
+}
+.carte-jour h2 {
+  margin: 0 0 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  color: var(--texte-faible);
+  font-weight: 600;
+}
+.grand-nombre {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.carte-jour.urgente .grand-nombre { color: var(--ambre); }
+.explication { margin: 4px 0 12px; font-size: 13px; color: var(--texte-doux); }
+.explication small { color: var(--texte-faible); }
+
+.liste-relances { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.liste-relances li { display: flex; gap: 9px; padding: 5px 0; border-top: 1px solid var(--bord); }
+.liste-relances .date { color: var(--ambre); font-variant-numeric: tabular-nums; }
+.liste-relances .titre { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.liste-relances .contact { color: var(--texte-faible); }
+
+.lien-action { color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 600; }
+.lien-action:hover { text-decoration: underline; }
+
+.bandeau-relances a { color: var(--ambre); margin-left: 8px; }
+
+/* ------------------------------------------------------- blocs larges */
+
+.bloc-large { margin-bottom: 30px; }
+.titre-section {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  color: var(--texte-faible);
+  font-weight: 600;
+  margin: 32px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--bord);
+}
+.titre-bloc { font-size: 14px; margin: 0 0 3px; font-weight: 600; }
+.aide { font-size: 12.5px; color: var(--texte-faible); margin: 0 0 10px; }
+.rien { color: var(--texte-faible); font-size: 13px; padding: 14px 0; }
+
+.table-simple {
+  width: 100%;
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+.table-simple th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  color: var(--texte-faible);
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--bord);
+}
+.table-simple td {
+  padding: 9px 14px;
+  font-size: 13.5px;
+  border-bottom: 1px solid rgba(35,43,56,.55);
+}
+.table-simple tr:last-child td { border-bottom: none; }
+.table-simple.compacte td, .table-simple.compacte th { padding: 7px 12px; font-size: 13px; }
+.table-simple tbody tr[onclick] { cursor: pointer; }
+.table-simple tbody tr[onclick]:hover { background: var(--fond-surligne); }
+.droite { text-align: right; }
+.nombre { font-variant-numeric: tabular-nums; }
+.nombre.fort { color: var(--vert); font-weight: 600; }
+.nombre.faible { color: var(--texte-faible); }
+.score-cell { font-variant-numeric: tabular-nums; font-weight: 600; width: 62px; }
+.titre-cell .sous { display: block; font-size: 11.5px; color: var(--texte-faible); }
+
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 22px;
+  margin-bottom: 8px;
+}
+.stats-entete.large { margin: 14px 0 16px; }
+.carte-stat .delta { font-size: 11.5px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.carte-stat .delta.positif { color: var(--vert); }
+.carte-stat .delta.negatif { color: var(--rouge); }
+
+.avertissement {
+  background: var(--fond-eleve);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 11px 15px;
+  font-size: 12.5px;
+  color: var(--texte-doux);
+  margin: 0 0 18px;
+}
+.encadre {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 16px 20px;
+}
+.encadre p { margin: 0 0 6px; font-size: 13.5px; }
+
+/* -------------------------------------------------------- suivi du run */
+
+.run-resume {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 15px 18px;
+}
+.run-entete { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.run-statut {
+  padding: 3px 11px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: var(--gris-fond);
+  color: var(--texte-doux);
+}
+.run-statut.completed { background: var(--vert-fond); color: var(--vert); }
+.run-statut.running   { background: var(--accent-doux); color: #cfe2ff; }
+.run-statut.failed    { background: var(--rouge-fond); color: var(--rouge); }
+.run-meta { font-size: 12px; color: var(--texte-faible); font-variant-numeric: tabular-nums; }
+
+.etapes { display: flex; flex-direction: column; gap: 3px; }
+.etape { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 4px 0; }
+.etape.active { color: var(--accent); }
+.etape .puce { width: 18px; text-align: center; }
+.etape .nom { flex: 1; color: var(--texte-doux); }
+.etape.active .nom { color: var(--texte); font-weight: 500; }
+.etape .etat { font-size: 12px; color: var(--texte-faible); }
+.activite-fine {
+  font-size: 12px;
+  color: var(--accent);
+  padding-top: 8px;
+  border-top: 1px solid var(--bord);
+  margin-top: 6px;
+}
+
+.journal {
+  background: #0a0d12;
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 13px 15px;
+  margin-top: 12px;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--texte-doux);
+  max-height: 260px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* ---------------------------------------------------- analyse d'ecart */
+
+.constat {
+  border-left: 3px solid var(--bord-clair);
+  border-radius: 0 6px 6px 0;
+  padding: 9px 13px;
+  margin-bottom: 8px;
+  background: var(--fond);
+}
+.constat.barriere { border-left-color: var(--rouge); background: var(--rouge-fond); }
+.constat.alerte   { border-left-color: var(--ambre); background: var(--ambre-fond); }
+.constat-message { font-size: 13px; font-weight: 500; }
+.constat.barriere .constat-message { color: #ffd9d9; }
+.constat.alerte .constat-message { color: #ffe6a8; }
+.constat-preuve {
+  margin-top: 5px;
+  font-size: 11.5px;
+  color: var(--texte-faible);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.etiquettes { margin-top: 11px; }
+.titre-etiquettes {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--texte-faible);
+  margin-bottom: 6px;
+}
+.etiquette {
+  display: inline-block;
+  padding: 2.5px 9px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  margin: 0 5px 5px 0;
+}
+.etiquette.atout  { background: var(--vert-fond); color: var(--vert); }
+.etiquette.manque { background: var(--gris-fond); color: var(--texte-doux); }

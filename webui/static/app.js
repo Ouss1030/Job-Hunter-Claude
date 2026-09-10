@@ -242,6 +242,56 @@ function offreCourante() {
 
 /* ------------------------------------------------------------ panneau */
 
+/*
+   L'analyse d'ecart.
+
+   L'original rend « exigences / correspondances / ecarts » par offre, sans
+   montrer sur quoi il se fonde. Le notre cite la PHRASE de l'annonce qui
+   porte chaque obstacle : un obstacle qu'on peut relire est un obstacle
+   qu'on peut contester — et le moteur s'est deja trompe cinq fois en une
+   seule journee, ce qui rend la preuve indispensable.
+*/
+function blocEcart(o) {
+  const e = o.ecart || {};
+  const barrieres = e.barrieres || [];
+  const alertes = e.alertes || [];
+  const atouts = e.atouts || [];
+  const manques = e.manques || [];
+
+  if (!barrieres.length && !alertes.length && !atouts.length
+      && !manques.length && !e.formation) return "";
+
+  const constat = (c, genre) => `
+    <div class="constat ${genre}">
+      <div class="constat-message">${echapper(c.message)}</div>
+      ${c.preuve ? `<div class="constat-preuve">\u00ab ${echapper(c.preuve)} \u00bb</div>` : ""}
+    </div>`;
+
+  return `
+    <div class="bloc">
+      <h3>Ce que dit l'annonce</h3>
+
+      ${e.formation ? `<div class="formation">L'employeur propose une formation —
+         les exigences de diplôme et d'expérience tombent.</div>` : ""}
+
+      ${barrieres.map((c) => constat(c, "barriere")).join("")}
+      ${alertes.map((c) => constat(c, "alerte")).join("")}
+
+      ${atouts.length ? `
+        <div class="etiquettes">
+          <span class="titre-etiquettes">Ce qui vous sert</span>
+          ${atouts.map((a) => `<span class="etiquette atout">${echapper(a)}</span>`).join("")}
+        </div>` : ""}
+
+      ${manques.length ? `
+        <div class="etiquettes">
+          <span class="titre-etiquettes">Ce qui vous manque</span>
+          ${manques.map((m) => `<span class="etiquette manque">${echapper(m)}</span>`).join("")}
+        </div>` : ""}
+    </div>`;
+}
+
+
 function blocSuivi(o) {
   const s = o.suivi || {};
   const dejaPostule = o.application_status === "APPLIED";
@@ -310,12 +360,7 @@ function ouvrirPanneau(cle) {
       <span class="badge inconnu">${echapper(o.cv_track || o.track || "—")}</span>
     </div>
 
-    ${o.verdict_obstacle ? `<div class="bloc"><h3>Obstacle identifié</h3>
-        <div class="obstacle">${echapper(o.verdict_obstacle)}</div></div>` : ""}
-
-    ${o.verdict_formation ? `<div class="bloc">
-        <div class="formation">L'employeur propose une formation — les exigences
-        de diplôme et d'expérience tombent.</div></div>` : ""}
+    ${blocEcart(o)}
 
     ${blocSuivi(o)}
 

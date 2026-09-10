@@ -398,6 +398,57 @@ def main():
             manques_de("Developpement PL/SQL sous Oracle."))))
 
     print()
+    print("O. TROIS FAUX POSITIFS REVELES PAR L'AFFICHAGE DES PREUVES")
+    print("-" * 92)
+    # Ces trois-la n'ont pas ete trouves en relisant du code, mais en lisant
+    # a l'ecran la phrase que le moteur citait pour justifier sa barriere.
+    # Aucun n'aurait ete visible avec un verdict sans preuve.
+
+    # 1. « Master Program Madrid », dans un bloc « autres offres ».
+    tests.append(check(
+        "« Master Program » est un intitule, pas un diplome",
+        verdict_de("QC Analyst Life Sciences. EMC Engineer Aerospace M/F "
+                   "OPERATIONS Master Program Madrid 14/06/2026 Privacy "
+                   "policy.") != FERMEE))
+
+    # 2. « baccalaureat » : le mot qu'emploient beaucoup d'annonces belges
+    #    pour le bachelier. Il manquait a la liste des diplomes acceptes.
+    tests.append(check(
+        "« au minimum baccalaureat ou Master » accepte votre niveau",
+        verdict_de("Qualifications requises : Diplome au minimum baccalaureat "
+                   "ou Master avec orientation scientifique.") != FERMEE))
+    tests.append(check(
+        "« baccalaureaat of master » aussi",
+        verdict_de("Je hebt een baccalaureaat of master in een "
+                   "wetenschappelijke richting.") != FERMEE))
+
+    # 3. « Bilingue francais - allemand » n'est pas du bilinguisme FR/NL.
+    #    Le verdict pouvait rester juste par accident ; le motif affiche
+    #    etait faux, et c'est le motif que l'utilisateur lit.
+    motifs_allemand = [
+        c.message for c in evaluer(
+            "Bilingue francais - allemand pour les echanges avec les clients."
+            + BOURRAGE).barrieres]
+    tests.append(check(
+        "Aucun motif « FR/NL » sur une offre francais-allemand",
+        not any("FR/NL" in m for m in motifs_allemand),
+        str(motifs_allemand)))
+    tests.append(check(
+        "Ni sur francais-anglais",
+        not any("FR/NL" in c.message for c in evaluer(
+            "Bilingue francais-anglais souhaite." + BOURRAGE).barrieres)))
+
+    # Mais le vrai bilinguisme FR/NL reste une barriere.
+    for etiquette, texte in (
+        ("bilingue francais/neerlandais",
+         "Vous etes bilingue francais/neerlandais pour ce poste de contact."),
+        ("tweetalig NL/FR", "Tweetalig NL/FR is een must voor deze functie."),
+    ):
+        tests.append(check(
+            f"Vrai bilinguisme FR/NL toujours bloquant : {etiquette}",
+            verdict_de(texte) == FERMEE))
+
+    print()
     print("J. STABILITE")
     print("-" * 92)
     tests.append(check("Texte vide : INCONNU, pas d'exception",
@@ -408,8 +459,8 @@ def main():
                        "—" in evaluer(
                            "Vous etes titulaire d'un Master." + BOURRAGE
                        ).resume()))
-    tests.append(check("Version au moins 1.1",
-                       at_least(VERDICT_VERSION, "1.1"), VERDICT_VERSION))
+    tests.append(check("Version au moins 1.2",
+                       at_least(VERDICT_VERSION, "1.2"), VERDICT_VERSION))
 
     passed = sum(1 for x in tests if x)
     total = len(tests)

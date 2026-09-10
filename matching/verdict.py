@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-VERDICT LISIBLE PAR CRITERES EXPLICITES - VERSION 1.1
+VERDICT LISIBLE PAR CRITERES EXPLICITES - VERSION 1.2
 
 Pourquoi ce module
 ------------------
@@ -50,7 +50,7 @@ from dataclasses import dataclass, field
 from config.candidate_truth import CANDIDATE_TRUTH
 
 
-VERDICT_VERSION = "1.1"
+VERDICT_VERSION = "1.2"
 
 ACCESSIBLE = "ACCESSIBLE"
 A_VERIFIER = "A_VERIFIER"
@@ -170,12 +170,21 @@ _DIPLOME_SUPERIEUR = re.compile(_borne(
 # offre demandant « un bachelier ou un master EN INFORMATIQUE ». Le champ
 # disciplinaire compte autant que le niveau, et l'oublier ouvrirait des
 # offres qui sont en realite fermees.
+# Racines, et non mots entiers : la comparaison se fait par sous-chaine,
+# et les annonces emploient autant l'adjectif que le nom.
+#
+# « sciences » ne couvrait pas « scientifique », ni « wetenschappen » son
+# adjectif « wetenschappelijke ». Cas mesure le 10 septembre 2026 : « een
+# baccalaureaat of master in een wetenschappelijke richting » etait ferme
+# pour domaine incompatible, alors que la discipline est exactement la
+# votre — et que la phrase accepte deja le bachelier.
 _DOMAINES_COMPATIBLES = (
-    "chimie", "chemie", "scheikunde", "chemistry", "biochimie", "biochemie",
-    "biologie", "biology", "sciences", "wetenschappen", "laboratoire",
-    "laboratorium", "pharmaceutique", "farmaceutisch", "pharma",
-    "chimique", "chemical", "industriel", "industrieel", "qualite",
-    "data", "donnees", "business data", "analyse", "statistiek", "statistique",
+    "chimi", "chemi", "scheikunde", "chemical",
+    "biochim", "biochem", "biolog",
+    "scien", "wetenschapp", "natuurwetenschap",
+    "labo", "pharma", "farmac", "apothe",
+    "industriel", "industrieel", "qualit", "kwaliteit", "quality",
+    "data", "donnee", "gegeven", "analy", "statisti",
 )
 
 # Domaine cite JUSTE APRES le diplome : "master EN informatique".
@@ -205,7 +214,11 @@ _FIN_DE_CHAMP = re.compile(
 _MASTER_NON_DIPLOME = ("data", "plan", "class", "file", "batch", "record",
                        "agreement", "thesis", "chef", "bedroom",
                        "dossier", "document", "template", "list", "copy",
-                       "schedule", "spec", "key", "sample", "label")
+                       "schedule", "spec", "key", "sample", "label",
+                       # « Master Program Madrid », lu dans le bloc
+                       # « autres offres » d'une page Akkodis : un nom de
+                       # programme, jamais une exigence adressee au candidat.
+                       "program", "programme", "degree program", "track")
 
 
 def _champ_du_diplome(phrase: str, diplome: str) -> str:
@@ -238,8 +251,16 @@ _FORMATION_PROPOSEE = re.compile(
     r"formation\s+en\s+entreprise|contrat\s+de\s+formation", re.I)
 
 # Le bachelier explicitement accepte a cote du master.
+# Le bachelier explicitement accepte a cote du master.
+#
+# « baccalaureat » manquait, et c'est le mot qu'emploient beaucoup d'annonces
+# belges. Cas mesure le 10 septembre 2026 : « Diplome au minimum
+# baccalaureat ou Master avec orientation scientifique » etait lu comme une
+# exigence de master, alors que la phrase accepte explicitement le niveau du
+# candidat. L'offre partait en relecture au lieu d'etre proposee.
 _BACHELIER_ACCEPTE = re.compile(
-    r"bachel(?:ier|or)|graduat|bacheloropleiding", re.I)
+    r"bachel(?:ier|or)|graduat|bacheloropleiding|baccalaureat|"
+    r"baccalaureaat|professionele bachelor", re.I)
 
 # Equivalence explicitement offerte : ce n'est plus une barriere.
 _EQUIVALENT = re.compile(
@@ -479,8 +500,35 @@ _NIVEAU_EXIGE = {"moyenne": _LEVEL_RANK["B2"], "forte": _LEVEL_RANK["C1"]}
 # crans — A2 face à B2 — l'obstacle est réel.
 _ECART_BLOQUANT = 2
 
+# Bilinguisme francais / neerlandais — et rien d'autre.
+#
+# L'ancienne version acceptait « bilingue » suivi de n'importe quoi et
+# concluait toujours « FR/NL exige — vous etes A2 en neerlandais ». Sur une
+# offre disant « Bilingue francais - allemand », le message etait donc faux
+# de bout en bout. Le verdict pouvait rester juste par accident ; le motif
+# affiche, lui, etait indefendable — et c'est ce motif que l'utilisateur lit.
+#
+# Une autre paire de langues laisse desormais passer : la boucle par langue,
+# plus bas, la jugera sur les bons criteres.
+# La paire s'ecrit « FR/NL », « francais - neerlandais », mais aussi
+# « neerlandais ET francais » : restreindre aux seuls / et - faisait
+# disparaitre une exigence bien reelle.
+_LANGUE_PAIRE = r"(?:fr|nl|francais|nederlands|neerlandais)"
 _BILINGUE = re.compile(
-    r"(tweetalig|bilingue)\s*(?:\(?\s*(?:fr|nl)\s*[/-]\s*(?:nl|fr))?", re.I)
+    r"(?:tweetalig|bilingue)\s*\(?\s*"
+    + _LANGUE_PAIRE
+    + r"\s*(?:[/-]|\s+(?:et|en|and|of|ou)\s+)\s*"
+    + _LANGUE_PAIRE + r"\s*\)?", re.I)
+
+# « Bilingue » sans paire nommee : on ne devine pas laquelle.
+_BILINGUE_SANS_PAIRE = re.compile(
+    r"(?:tweetalig|bilingue)(?!\s*(?:\(|:)?\s*[a-z])", re.I)
+
+# Langues qui, accolees a « bilingue », excluent la lecture FR/NL.
+_AUTRE_LANGUE = re.compile(
+    r"(?:tweetalig|bilingue)[^.\n]{0,24}?"
+    r"(?<![a-z])(?:allemand|duits|german|anglais|engels|english|espagnol|"
+    r"spaans|spanish|italien|chinois)(?![a-z])", re.I)
 
 # L'employeur propose lui-même de combler l'écart : ce n'est plus une porte
 # fermée, seulement un point à confirmer.
@@ -507,7 +555,10 @@ def evaluer_langues(texte: str) -> Constat:
                        "français ou néerlandais accepté",
                        _phrase(texte, _ALTERNATIVE.search(texte).start()))
 
-    m = _BILINGUE.search(texte)
+    # Une paire nommee autre que FR/NL n'est pas du bilinguisme FR/NL.
+    m = None
+    if not _AUTRE_LANGUE.search(texte):
+        m = _BILINGUE.search(texte) or _BILINGUE_SANS_PAIRE.search(texte)
     if m and _niveau_candidat("Néerlandais") < _LEVEL_RANK["B2"]:
         phrase = _phrase(texte, m.start())
         if _SOUHAITE.search(phrase):

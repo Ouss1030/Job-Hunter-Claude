@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobHunter — {% block titre %}{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<aside class="rail">
+  <div class="marque">
+    <span class="marque-cible">◎</span>
+    <div><strong>JobHunter</strong><small>Belgique</small></div>
+  </div>
+
+  <nav>
+    <a href="/" class="{{ 'actif' if actif == 'jour' }}">
+      <span class="ico">◈</span> Aujourd'hui
+      {% if dues %}<span class="pastille alerte">{{ dues }}</span>{% endif %}
+    </a>
+    <a href="/offres" class="{{ 'actif' if actif == 'offres' }}">
+      <span class="ico">▤</span> Offres
+      <span class="pastille">{{ total }}</span>
+    </a>
+    <a href="/statistiques" class="{{ 'actif' if actif == 'statistiques' }}">
+      <span class="ico">◔</span> Statistiques
+    </a>
+    <a href="/bientot/nouveautes"><span class="ico">✦</span> Nouveautés</a>
+    <a href="/bientot/candidatures"><span class="ico">✉</span> Candidatures</a>
+    <a href="/bientot/sources"><span class="ico">⌁</span> Sources</a>
+  </nav>
+
+  <div class="rail-bas">
+    <div class="etiquette">Interface v{{ version }}</div>
+    {% if artefact %}<div class="artefact" title="{{ artefact }}">{{ artefact }}</div>{% endif %}
+  </div>
+</aside>
+
+<main>{% block contenu %}{% endblock %}</main>
+
+{% block apres %}{% endblock %}
+</body>
+</html>
