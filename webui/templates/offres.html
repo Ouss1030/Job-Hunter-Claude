@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobHunter — Offres</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<aside class="rail">
+  <div class="marque">
+    <span class="marque-cible">◎</span>
+    <div>
+      <strong>JobHunter</strong>
+      <small>Belgique</small>
+    </div>
+  </div>
+
+  <nav>
+    <a class="actif" href="/">
+      <span class="ico">▤</span> Offres
+      <span class="pastille">{{ total }}</span>
+    </a>
+    <a href="/bientot/tableau-de-bord"><span class="ico">◧</span> Tableau de bord</a>
+    <a href="/bientot/statistiques"><span class="ico">◔</span> Statistiques</a>
+    <a href="/bientot/nouveautes"><span class="ico">✦</span> Nouveautés</a>
+    <a href="/bientot/candidatures"><span class="ico">✉</span> Candidatures</a>
+    <a href="/bientot/sources"><span class="ico">⌁</span> Sources</a>
+    <a href="/bientot/historique"><span class="ico">◷</span> Historique</a>
+  </nav>
+
+  <div class="rail-bas">
+    <div class="etiquette">Maquette v{{ version }}</div>
+    <div class="artefact" title="{{ artefact }}">{{ artefact }}</div>
+  </div>
+</aside>
+
+<main>
+  <header class="entete">
+    <div>
+      <h1>Offres retenues</h1>
+      <p class="sous-titre">
+        Pool final — <span id="compte-affiche">{{ total }}</span> sur {{ total }} offres
+      </p>
+    </div>
+    <div class="stats-entete" id="stats-entete"></div>
+  </header>
+
+  <section class="filtres">
+    <div class="champ-recherche">
+      <span class="loupe">⌕</span>
+      <input id="recherche" type="search" placeholder="Rechercher un intitulé, une entreprise, une ville…" autocomplete="off">
+    </div>
+    <div class="groupes-filtres" id="groupes-filtres"></div>
+    <button class="raz" id="raz" hidden>Réinitialiser</button>
+  </section>
+
+  <section class="zone-table">
+    <table id="table">
+      <thead>
+        <tr>
+          <th class="col-rang" data-tri="pool_rank_v12">#</th>
+          <th data-tri="title">Intitulé</th>
+          <th data-tri="company">Entreprise</th>
+          <th data-tri="ville">Lieu</th>
+          <th data-tri="verdict">Verdict</th>
+          <th data-tri="recommended_action_v12">Action</th>
+          <th class="col-score" data-tri="final_score_v12">Score</th>
+        </tr>
+      </thead>
+      <tbody id="corps"></tbody>
+    </table>
+    <p class="vide" id="vide" hidden>Aucune offre ne correspond à ces filtres.</p>
+  </section>
+</main>
+
+<div class="voile" id="voile" hidden></div>
+<aside class="panneau" id="panneau" hidden aria-label="Détail de l'offre"></aside>
+
+<script>window.OFFRES = {{ offres_json | safe }};</script>
+<script src="/static/app.js"></script>
+</body>
+</html>

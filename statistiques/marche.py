@@ -35,6 +35,7 @@ import sqlite3
 from collections import Counter
 from pathlib import Path
 
+from sources.location_belgium import belgian_postal_code
 from matching.verdict import evaluer
 
 
@@ -123,19 +124,42 @@ def analyser_marche(chemin_base: Path | None = None,
     }
 
 
+# Bruit accole aux adresses par certaines sources.
+_BRUIT_LIEU = frozenset({
+    "telework", "teletravail", "no", "yes", "oui", "non", "home", "office",
+    "hybrid", "hybride", "remote", "belgium", "belgique", "belgie",
+})
+
+
 def _ville(localisation: str) -> str:
     """
-    Ville seule, sans le code postal ni l'adresse.
+    Ville seule, sans le code postal, l'adresse ni les mentions de teletravail.
 
     Les sources ecrivent « Avenue Jules Bordet 168 1140 Bruxelles Telework
-    No telework ». Compter ces chaines entieres donnerait une liste ou
-    chaque offre est unique, donc sans aucune information.
+    No telework ». Compter ces chaines entieres donnerait une liste ou chaque
+    offre est unique, donc sans aucune information.
+
+    Le code postal est la piste la plus sure, et le projet sait deja le lire :
+    sources.location_belgium.belgian_postal_code rend ('1140', 'Bruxelles').
+    Reecrire cette table ici l'aurait fait diverger de celle qui decide de
+    l'eligibilite geographique — deux verites pour une meme question.
     """
     brut = str(localisation or "").strip()
+    if not brut:
+        return "inconnu"
+
+    try:
+        trouve = belgian_postal_code(brut)
+        if trouve and trouve[1]:
+            return str(trouve[1])
+    except Exception:
+        pass
+
     for separateur in (",", "|", " - "):
         if separateur in brut:
             brut = brut.split(separateur)[0]
-    mots = [m for m in brut.split() if not m.isdigit() and len(m) > 2]
+    mots = [m for m in brut.split()
+            if not m.isdigit() and len(m) > 2 and m.lower() not in _BRUIT_LIEU]
     return " ".join(mots[-2:]) if mots else "inconnu"
 
 
