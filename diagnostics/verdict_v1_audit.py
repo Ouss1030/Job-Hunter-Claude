@@ -351,6 +351,53 @@ def main():
                    "scientifique.") != FERMEE))
 
     print()
+    print("N. COMPETENCES MANQUANTES — L'EXPRESSION, PAS SON PREMIER MOT")
+    print("-" * 92)
+    # L'ancienne version ne cherchait que le premier mot de chaque terme.
+    # « culture cellulaire » devenait « culture », et 407 offres ouvertes
+    # portaient un faux manque — 10 % d'entre elles. Un faux manque fait
+    # douter d'une offre accessible ; ces cas verrouillent les deux sens.
+    def manques_de(texte):
+        return sorted(evaluer_competences(dessaccentuer(texte))[1])
+
+    for etiquette, texte in (
+        ("culture d'entreprise", "Vous rejoignez une culture d'entreprise."),
+        ("culture qualite", "Nous cultivons une culture de la qualite."),
+        ("tableau de bord", "Vous produisez des tableaux de bord mensuels."),
+        ("societe agreee", "Notre societe agreee vous accueille."),
+        ("experience banale", "Une belle experience professionnelle vous attend."),
+        ("GC dans une reference", "Reference produit GC-4471 en stock."),
+    ):
+        tests.append(check(f"Aucun faux manque : {etiquette}",
+                           manques_de(texte) == [], str(manques_de(texte))))
+
+    for etiquette, texte, attendu in (
+        ("culture cellulaire", "Experience en culture cellulaire exigee.",
+         "culture cellulaire"),
+        ("HACCP", "Connaissance HACCP requise.", "HACCP"),
+        ("brevet cariste", "Brevet cariste obligatoire.", "brevet cariste"),
+        ("GC-MS qualifie", "Analyses par GC-MS au laboratoire.", "GC"),
+        ("Tableau qualifie", "Maitrise de Tableau Desktop et Power BI.",
+         "Tableau"),
+        ("visa technologue", "Visa de technologue de laboratoire medical exige.",
+         "technologue"),
+    ):
+        trouve = manques_de(texte)
+        tests.append(check(f"Manque reel detecte : {etiquette}",
+                           any(attendu.lower() in m.lower() for m in trouve),
+                           str(trouve)))
+
+    # PL/SQL n'est pas « PL » et « SQL » : SQL est une competence POSSEDEE,
+    # et ce seul faux decoupage produisait 123 faux manques.
+    tests.append(check(
+        "SQL seul n'est jamais un manque",
+        manques_de("Maitrise de SQL et Power BI exigee.") == []))
+    tests.append(check(
+        "Mais PL/SQL en est un",
+        any("PL/SQL" in m for m in
+            manques_de("Developpement PL/SQL sous Oracle."))))
+
+    print()
     print("J. STABILITE")
     print("-" * 92)
     tests.append(check("Texte vide : INCONNU, pas d'exception",

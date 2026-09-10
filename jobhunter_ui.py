@@ -1382,6 +1382,146 @@ def handoff_page():
             hc2.code(str(Path(item["folder"]).parent), language=None)
 
 
+@st.cache_data(ttl=900, show_spinner="Analyse du marché en cours…")
+def _marche_cache(limite: int | None):
+    """
+    Le calcul evalue plusieurs milliers d'annonces : une trentaine de
+    secondes. Sans cache, chaque interaction Streamlit le relancerait et la
+    page deviendrait inutilisable.
+    """
+    from statistiques.marche import analyser_marche
+    return analyser_marche(limite=limite)
+
+
+def _barres(lignes, titre, aide=""):
+    """Un tableau trie, pas un graphique : ces listes se lisent mieux ainsi."""
+    st.markdown(f"**{titre}**")
+    if aide:
+        st.caption(aide)
+    if not lignes:
+        st.caption("Rien de significatif (seuil : 3 offres).")
+        return
+    st.dataframe(
+        pd.DataFrame([{"": x["nom"], "Offres": x["offres"],
+                       "Part": f"{x['part']:.1f} %"} for x in lignes]),
+        width="stretch", hide_index=True)
+
+
+def statistiques_page():
+    from statistiques import STATISTIQUES_VERSION
+    from statistiques.candidatures import analyser_candidatures
+    from statistiques.pipeline import (
+        entonnoir_par_run, evolution, rendement_des_sources)
+
+    st.subheader("📊 Statistiques")
+    st.caption(f"Statistiques V{STATISTIQUES_VERSION} — ce que disent vos "
+               f"offres, où le tri perd du monde, et ce que deviennent vos "
+               f"candidatures.")
+
+    onglet_marche, onglet_pipeline, onglet_cand = st.tabs(
+        ["Marché", "Entonnoir", "Candidatures"])
+
+    # ------------------------------------------------------------ marche
+    with onglet_marche:
+        rapide = st.toggle(
+            "Aperçu rapide (1 500 offres)", value=True,
+            help="Décochez pour analyser toute la base — environ 30 secondes.")
+        marche = _marche_cache(1500 if rapide else None)
+
+        if "erreur" in marche:
+            st.error(marche["erreur"])
+        else:
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Offres analysées", marche["offres_actives"])
+            c2.metric("Sans barrière prouvée", marche["offres_ouvertes"])
+            ferme = marche["verdicts"].get("FERMEE", 0)
+            c3.metric("Fermées", ferme)
+
+            st.info(
+                "Ces comptages mesurent des **mentions** dans le texte des "
+                "annonces, pas des exigences formelles. Le classement relatif "
+                "tient ; les valeurs absolues surestiment.")
+
+            gauche, droite = st.columns(2)
+            with gauche:
+                _barres(marche["a_acquerir"], "À acquérir",
+                        "Ce qui revient le plus souvent et que vous ne pouvez "
+                        "pas encore revendiquer.")
+            with droite:
+                _barres(marche["a_valoriser"], "À mettre en avant",
+                        "Ce qui vous sert déjà le plus souvent.")
+
+            gauche, droite = st.columns(2)
+            with gauche:
+                _barres(marche["employeurs"], "Qui recrute")
+            with droite:
+                _barres(marche["lieux"], "Où")
+
+    # ---------------------------------------------------------- pipeline
+    with onglet_pipeline:
+        lignes = entonnoir_par_run()
+        if not lignes:
+            st.caption("Aucun artefact de file disponible.")
+        else:
+            st.markdown("**L'entonnoir, run après run**")
+            df = pd.DataFrame([
+                {"Quand": x["quand"], "File": x["file"], "Prêtes": x["pretes"],
+                 "À tension": x["a_tension"], "À vérifier": x["a_verifier"],
+                 "Écartées": x["ecartees"],
+                 "Pool": x["pool"] if x["pool"] is not None else "—"}
+                for x in lignes])
+            st.dataframe(df, width="stretch", hide_index=True)
+
+            suivi = df.set_index("Quand")[["Prêtes", "À tension", "À vérifier"]]
+            st.line_chart(suivi)
+
+            ecart = evolution(lignes)
+            if ecart:
+                st.caption(f"Évolution sur {ecart['runs']} runs "
+                           f"({ecart['depuis']} → {ecart['jusqu_a']})")
+                cols = st.columns(len(ecart["ecarts"]))
+                for col, (champ, v) in zip(cols, ecart["ecarts"].items()):
+                    col.metric(champ, v["apres"], delta=v["delta"])
+
+            st.divider()
+            st.markdown("**Rendement réel des sources**")
+            st.caption("Combien d'offres PRÊTES une source produit, et non "
+                       "combien de lignes elle dépose en base. Une source "
+                       "volumineuse peut ne rien produire.")
+            rendement = [x for x in rendement_des_sources() if x["offres"] >= 2]
+            if rendement:
+                st.dataframe(
+                    pd.DataFrame([{"Source": x["source"], "Offres": x["offres"],
+                                   "Prêtes": x["pretes"],
+                                   "Rendement": f"{x['rendement']:.1f} %"}
+                                  for x in rendement]),
+                    width="stretch", hide_index=True)
+
+    # ------------------------------------------------------- candidatures
+    with onglet_cand:
+        cand = analyser_candidatures()
+        if "erreur" in cand:
+            st.error(cand["erreur"])
+        elif cand.get("etat") == "AUCUNE_CANDIDATURE_ENVOYEE":
+            st.info(cand["message"])
+            c1, c2 = st.columns(2)
+            c1.metric("Dossiers suivis", cand["dossiers_suivis"])
+            c2.metric("Candidatures envoyées", 0)
+            st.caption(f"Événements enregistrés : {cand['evenements']}")
+        else:
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric("Envoyées", cand["envoyees"])
+            c2.metric("Avec retour", cand["avec_retour"])
+            c3.metric("Taux de réponse", f"{cand['taux_de_reponse']} %")
+            c4.metric("Délai médian", f"{cand['delai_median_jours']} j")
+            if cand.get("par_filiere"):
+                st.markdown("**Par filière de CV**")
+                st.dataframe(
+                    pd.DataFrame([{"Filière": k, "Envoyées": v}
+                                  for k, v in cand["par_filiere"].items()]),
+                    width="stretch", hide_index=True)
+
+
 def sources_page():
     st.caption("Les cases contrôlent quelles sources seront interrogées au prochain run. Désactiver une source ne supprime pas son historique.")
     registry = registered_sources()
@@ -1460,6 +1600,7 @@ with st.sidebar:
             "📝 Mes évaluations",
             "📨 Mes candidatures",
             "📦 Handoff ChatGPT",
+            "📊 Statistiques",
             "📡 Sources",
             "🕒 Historique",
         ],
@@ -1504,6 +1645,8 @@ elif page == "📦 Handoff ChatGPT":
 elif page == "📨 Mes candidatures":
     st.subheader("📨 Mes candidatures")
     applications_page()
+elif page == "📊 Statistiques":
+    statistiques_page()
 elif page == "📡 Sources":
     st.subheader("📡 Sources")
     sources_page()

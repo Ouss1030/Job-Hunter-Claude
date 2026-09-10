@@ -88,6 +88,7 @@ SUITE_ACTIVE = [
     "verdict_gate_v1_audit",
     "texte_parasite_v1_audit",
     "reprise_stock_v1_audit",
+    "statistiques_v1_audit",
     "job_titles_v2_audit",
     "piste_accessible_v1_audit",
 ]

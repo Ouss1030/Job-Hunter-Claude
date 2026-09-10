@@ -604,6 +604,100 @@ def _competences_interdites() -> list[str]:
             (CANDIDATE_TRUTH.get("unsupported_or_not_proven") or [])]
 
 
+# ------------------------------------------------------------------
+# Competences non prouvees : chercher l'expression, pas son premier mot
+# ------------------------------------------------------------------
+# La liste de config/candidate_truth.py est ecrite pour etre lue par un
+# humain : « GC comme competence pratiquee », « agrement/visa de technologue
+# de laboratoire medical ». Elle n'est pas un jeu de motifs.
+#
+# L'ancienne version n'en gardait que le PREMIER MOT. « culture cellulaire »
+# devenait donc « culture », et toute « culture d'entreprise bienveillante »
+# comptait comme une competence manquante. Mesure du 10 septembre 2026 :
+# 407 offres ouvertes portaient ce faux manque, soit 10 % d'entre elles, et
+# le defaut alimentait deja la colonne « manques » de l'interface.
+#
+# Un faux manque coute cher : il fait douter d'une offre parfaitement
+# accessible. Un manque rate ne coute presque rien. Toute la conception
+# penche donc du cote conservateur.
+
+# Fin de phrase descriptive : ce qui suit ne fait pas partie du nom.
+_HABILLAGE = re.compile(
+    r"\s+comme\s+(?:competence|experience|acquis|pratique)\b.*$", re.I)
+
+# Mots trop communs pour etre cherches seuls : les rencontrer ne prouve rien.
+_TROP_COMMUN = frozenset({
+    "tableau",     # tableau de bord, tableau Excel, tableau de suivi
+    "culture",     # culture d'entreprise, culture qualite, culture securite
+    "agrement",    # societe agreee, agrement ministeriel
+    "visa",        # visa de travail
+    "experience",  # present dans presque toutes les annonces
+    "master",      # deja traite, et bien mieux, par le critere diplome
+    "diplome",
+    "gc",          # deux lettres : apparait dans des references, des codes
+    "bi",
+})
+
+# Quelques noms ambigus mefritent mieux qu'un abandon : on les accepte a
+# condition qu'un mot du metier les accompagne dans la meme fenetre.
+_QUALIFIE = {
+    "tableau": r"(?:tableau\s+(?:software|desktop|server|prep)|"
+               r"tableau[^.\n]{0,40}(?:power\s*bi|qlik|looker|dataviz|"
+               r"visualisation|business\s+intelligence))",
+    "gc": r"(?:gc[\s-]?ms|chromatographie\s+(?:en\s+phase\s+)?gazeuse|"
+          r"gas\s+chromatograph\w*)",
+}
+
+
+def _alternatives(base: str) -> list[str]:
+    """
+    Decoupe une entree en competences distinctes.
+
+    « metrologie mecanique / GD&T / CMM » en nomme trois. « PL/SQL » n'en
+    nomme qu'une : la barre y fait partie du nom, et la separer donnait
+    « SQL » — une competence que le candidat POSSEDE. Mesure du 10 septembre
+    2026 : ce seul faux decoupage produisait 123 faux manques.
+
+    On ne separe donc que si la barre est entouree d'espaces, ou si l'un des
+    morceaux compte plusieurs mots : deux signes qu'il s'agit bien
+    d'alternatives et non d'un nom compose.
+    """
+    if re.search(r"\s/|/\s", base):
+        return [x for x in re.split(r"\s*/\s*", base) if x.strip()]
+    morceaux = base.split("/")
+    if len(morceaux) > 1 and any(" " in m.strip() for m in morceaux):
+        return morceaux
+    return [base]
+
+
+def _expressions_recherchees(terme: str) -> list[str]:
+    """
+    Motifs a chercher pour un terme de la liste « non prouve ».
+
+    Une entree peut en produire plusieurs : « metrologie mecanique / GD&T /
+    CMM » nomme trois competences distinctes.
+    """
+    base = _HABILLAGE.sub("", dessaccentuer(str(terme))).strip()
+    motifs = []
+    for partie in _alternatives(base):
+        partie = partie.strip(" .,;")
+        if len(partie) < 2:
+            continue
+        cle = partie.lower()
+        if cle in _QUALIFIE:
+            motifs.append(_QUALIFIE[cle])
+            continue
+        if " " not in partie and cle in _TROP_COMMUN:
+            # Seul, ce mot ne prouve rien : on prefere ne rien dire.
+            continue
+        if len(partie) < 3:
+            continue
+        # L'expression entiere, espaces souples, entre frontieres de mots.
+        motifs.append(_borne(r"\s+".join(
+            re.escape(mot) for mot in partie.split())))
+    return motifs
+
+
 def evaluer_competences(texte: str) -> tuple[list[str], list[str]]:
     """Renvoie (atouts trouves, competences demandees que vous n'avez pas)."""
     atouts = []
@@ -616,13 +710,10 @@ def evaluer_competences(texte: str) -> tuple[list[str], list[str]]:
 
     manques = []
     for terme in _competences_interdites():
-        # Ces entrees sont des phrases ("GC comme competence pratiquee") :
-        # on ne garde que le premier mot significatif pour la recherche.
-        mot = re.split(r"[ ,(]", str(terme).strip())[0]
-        if len(mot) < 3:
-            continue
-        if re.search(_borne(re.escape(mot)), texte, re.I):
-            manques.append(terme)
+        for motif in _expressions_recherchees(terme):
+            if re.search(motif, texte, re.I):
+                manques.append(terme)
+                break
 
     return atouts, manques
 
