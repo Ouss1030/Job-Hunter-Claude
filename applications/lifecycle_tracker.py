@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Any
 
 
-LIFECYCLE_VERSION = "1.0"
+LIFECYCLE_VERSION = "1.1"
 LIFECYCLE_SCHEMA_VERSION = "1.0"
 
 STATUSES = (
@@ -84,7 +84,10 @@ CREATE TABLE IF NOT EXISTS application_entities (
     track TEXT,
     created_at TEXT NOT NULL,
     updated_at TEXT NOT NULL,
-    metadata_json TEXT
+    metadata_json TEXT,
+    next_action_date TEXT,
+    contact_name TEXT,
+    contact_channel TEXT
 );
 
 CREATE INDEX IF NOT EXISTS idx_application_entities_group
@@ -266,10 +269,61 @@ def connect_database(
     return conn
 
 
+# Colonnes ajoutees apres coup : une base existante ne les a pas.
+#
+# CREATE TABLE IF NOT EXISTS ne modifie pas une table deja creee. Sans cette
+# migration, le suivi de candidature echouerait sur toute base anterieure —
+# c'est-a-dire sur la seule qui compte, celle qui porte l'historique.
+_COLONNES_AJOUTEES = {
+    "application_entities": {
+        # Date de relance prevue, au format ISO. C'est elle qui repond a la
+        # question « qu'est-ce qui demande mon attention aujourd'hui ».
+        "next_action_date": "TEXT",
+        "contact_name": "TEXT",
+        "contact_channel": "TEXT",
+    },
+}
+
+
+def _colonnes_existantes(conn: sqlite3.Connection, table: str) -> set[str]:
+    return {
+        ligne[1]
+        for ligne in conn.execute(f"PRAGMA table_info({table})")
+    }
+
+
+def migrer_colonnes(
+    conn: sqlite3.Connection,
+) -> list[str]:
+    """
+    Ajoute les colonnes manquantes. Idempotent : relancable sans effet.
+
+    Renvoie la liste de ce qui a ete ajoute, pour que l'appelant puisse le
+    journaliser — une migration silencieuse est une migration qu'on ne sait
+    pas diagnostiquer.
+    """
+    ajoutees = []
+    for table, colonnes in _COLONNES_AJOUTEES.items():
+        presentes = _colonnes_existantes(conn, table)
+        if not presentes:
+            continue
+        for nom, type_sql in colonnes.items():
+            if nom in presentes:
+                continue
+            conn.execute(
+                f"ALTER TABLE {table} ADD COLUMN {nom} {type_sql}"
+            )
+            ajoutees.append(f"{table}.{nom}")
+    if ajoutees:
+        conn.commit()
+    return ajoutees
+
+
 def ensure_schema(
     conn: sqlite3.Connection,
 ) -> None:
     conn.executescript(SCHEMA_SQL)
+    migrer_colonnes(conn)
 
 
 def lifecycle_tables_present(

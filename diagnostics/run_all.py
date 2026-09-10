@@ -89,6 +89,7 @@ SUITE_ACTIVE = [
     "texte_parasite_v1_audit",
     "reprise_stock_v1_audit",
     "statistiques_v1_audit",
+    "suivi_candidature_v1_audit",
     "job_titles_v2_audit",
     "piste_accessible_v1_audit",
 ]

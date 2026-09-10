@@ -47,6 +47,12 @@
     <div class="stats-entete" id="stats-entete"></div>
   </header>
 
+  {% if dues %}
+  <div class="bandeau-relances">
+    <strong>{{ dues }}</strong> relance{{ "s" if dues > 1 }} à faire aujourd'hui.
+  </div>
+  {% endif %}
+
   <section class="filtres">
     <div class="champ-recherche">
       <span class="loupe">⌕</span>
@@ -54,6 +60,7 @@
     </div>
     <div class="groupes-filtres" id="groupes-filtres"></div>
     <button class="raz" id="raz" hidden>Réinitialiser</button>
+    <button class="aide-clavier" id="aide-clavier" title="Raccourcis clavier">⌨</button>
   </section>
 
   <section class="zone-table">
@@ -66,6 +73,7 @@
           <th data-tri="ville">Lieu</th>
           <th data-tri="verdict">Verdict</th>
           <th data-tri="recommended_action_v12">Action</th>
+          <th class="col-suivi" data-tri="statut_suivi">Suivi</th>
           <th class="col-score" data-tri="final_score_v12">Score</th>
         </tr>
       </thead>
@@ -78,7 +86,12 @@
 <div class="voile" id="voile" hidden></div>
 <aside class="panneau" id="panneau" hidden aria-label="Détail de l'offre"></aside>
 
-<script>window.OFFRES = {{ offres_json | safe }};</script>
+<script>
+window.OFFRES = {{ offres_json | safe }};
+window.TRIAGE = {{ triage_json | safe }};
+</script>
+<div class="raccourcis" id="raccourcis" hidden></div>
+<div class="notification" id="notification" hidden></div>
 <script src="/static/app.js"></script>
 </body>
 </html>

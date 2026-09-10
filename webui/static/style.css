@@ -403,3 +403,246 @@ td.score { text-align: right; font-variant-numeric: tabular-nums; font-weight: 6
   :root { --panneau: 100vw; }
   .stats-entete { display: none; }
 }
+
+/* =================================================================
+   V0.2 — TRIAGE ET SUIVI
+   ================================================================= */
+
+.bandeau-relances {
+  background: var(--ambre-fond);
+  border: 1px solid rgba(251,191,36,.32);
+  border-left: 3px solid var(--ambre);
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  font-size: 13.5px;
+  color: #ffe6a8;
+}
+.bandeau-relances strong { color: var(--ambre); font-size: 15px; }
+
+.aide-clavier {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord-clair);
+  color: var(--texte-faible);
+  border-radius: 6px;
+  padding: 5px 11px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+.aide-clavier:hover { color: var(--texte); border-color: var(--texte-faible); }
+
+/* ------------------------------------------------- colonne de suivi */
+
+.col-suivi { width: 130px; }
+td.suivi { white-space: nowrap; }
+
+.statut {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: var(--gris-fond);
+  color: var(--texte-doux);
+}
+.statut.vide { background: none; color: var(--texte-faible); font-weight: 400; }
+.statut.shortlisted { background: var(--accent-doux); color: #cfe2ff; }
+.statut.applied     { background: var(--vert-fond);  color: var(--vert); }
+.statut.interview   { background: #2d2450; color: #c4b5fd; }
+.statut.offer       { background: var(--vert-fond); color: var(--vert); }
+.statut.withdrawn, .statut.rejected { background: #2a1e1e; color: #d99; }
+
+.relance {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  color: var(--texte-faible);
+  font-variant-numeric: tabular-nums;
+}
+.relance.due { color: var(--ambre); font-weight: 600; }
+
+/* -------------------------------------------------- curseur clavier */
+
+tbody tr.curseur { box-shadow: inset 3px 0 0 var(--accent); }
+tbody tr.curseur td { background: rgba(91,157,255,.06); }
+
+/* ------------------------------------------------- triage (panneau) */
+
+.triage { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 15px; }
+
+.bouton-triage {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--fond);
+  border: 1px solid var(--bord-clair);
+  color: var(--texte-doux);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color .12s, color .12s, background .12s;
+}
+.bouton-triage:hover { border-color: var(--accent); color: var(--texte); }
+.bouton-triage.actif { background: var(--accent-doux); border-color: var(--accent); color: #cfe2ff; }
+.bouton-triage kbd {
+  background: var(--bord);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 10.5px;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--texte-faible);
+}
+
+/* ------------------------------------------------ formulaire de suivi */
+
+.formulaire-suivi { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.formulaire-suivi label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--texte-faible);
+}
+.formulaire-suivi input {
+  background: var(--fond);
+  border: 1px solid var(--bord-clair);
+  border-radius: 6px;
+  padding: 8px 11px;
+  color: var(--texte);
+  font-size: 13.5px;
+  font-family: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.formulaire-suivi input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91,157,255,.13);
+}
+.formulaire-suivi input::-webkit-calendar-picker-indicator { filter: invert(.7); cursor: pointer; }
+
+.raccourcis-date { display: flex; gap: 6px; margin-top: -4px; }
+.raccourcis-date button {
+  background: none;
+  border: 1px solid var(--bord);
+  color: var(--texte-faible);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.raccourcis-date button:hover { border-color: var(--accent); color: var(--accent); }
+
+.enregistrer {
+  background: var(--fond-surligne);
+  border: 1px solid var(--bord-clair);
+  color: var(--texte);
+  border-radius: 6px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.enregistrer:hover { border-color: var(--accent); }
+
+/* ------------------------------------------------------- zone postulé */
+
+.zone-postule {
+  background: var(--fond);
+  border: 1px solid var(--bord);
+  border-radius: 7px;
+  padding: 13px 15px;
+}
+.zone-postule.faite { background: var(--vert-fond); border-color: rgba(74,222,128,.3); }
+.zone-postule .deja { color: var(--vert); font-size: 13px; font-weight: 600; }
+
+.confirmation {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--texte-doux);
+  cursor: pointer;
+  margin-bottom: 11px;
+}
+.confirmation input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+
+.postule {
+  background: var(--vert);
+  border: none;
+  color: #06210f;
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.postule:disabled { background: var(--bord-clair); color: var(--texte-faible); cursor: not-allowed; }
+.postule:not(:disabled):hover { filter: brightness(1.08); }
+
+/* ------------------------------------------------------ notifications */
+
+.notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord-clair);
+  border-left: 3px solid var(--vert);
+  border-radius: 7px;
+  padding: 11px 18px;
+  font-size: 13.5px;
+  z-index: 30;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  animation: monter .18s ease-out;
+}
+.notification.erreur { border-left-color: var(--rouge); color: #ffd9d9; }
+@keyframes monter { from { transform: translate(-50%, 10px); opacity: 0; } }
+
+/* ------------------------------------------------ carte des raccourcis */
+
+.raccourcis {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: grid;
+  place-items: center;
+  z-index: 40;
+}
+.carte-raccourcis {
+  background: var(--fond-eleve);
+  border: 1px solid var(--bord-clair);
+  border-radius: 11px;
+  padding: 24px 30px;
+  min-width: 320px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+.carte-raccourcis h3 { margin: 0 0 15px; font-size: 15px; }
+.carte-raccourcis dl {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 8px 16px;
+  margin: 0 0 14px;
+  font-size: 13px;
+}
+.carte-raccourcis dt {
+  font-family: ui-monospace, Consolas, monospace;
+  background: var(--fond);
+  border: 1px solid var(--bord);
+  border-radius: 4px;
+  padding: 1px 7px;
+  text-align: center;
+  color: var(--accent);
+  font-size: 12px;
+}
+.carte-raccourcis dd { margin: 0; color: var(--texte-doux); }
+.carte-raccourcis p { margin: 0; font-size: 12px; color: var(--texte-faible); }
