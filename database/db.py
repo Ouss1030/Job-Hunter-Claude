@@ -1957,18 +1957,42 @@ def _upsert_raw_job(
             is_active =
                 1,
 
+            -- Les indicateurs d'enrichissement suivent le meme sort que le
+            -- texte : ils ne sont ecrases que par une VRAIE tentative.
+            --
+            -- Sans COALESCE, une simple recollecte les remettait a NULL. Le
+            -- texte, lui, etait bien preserve juste en dessous — d'ou une
+            -- incoherence silencieuse : l'offre gardait sa description mais
+            -- redevenait « jamais tentee ». Consequence mesuree le
+            -- 9 septembre : 2 023 lignes enrichies signalees comme vides,
+            -- que l'outil de rattrapage aurait retelechargees pour rien, et
+            -- une couverture affichee a 69 % au lieu de la valeur reelle.
             detail_enrichment_attempted =
-                excluded.detail_enrichment_attempted,
+                COALESCE(
+                    excluded.detail_enrichment_attempted,
+                    raw_jobs.detail_enrichment_attempted
+                ),
 
             detail_enrichment_success =
-                excluded.detail_enrichment_success,
+                COALESCE(
+                    excluded.detail_enrichment_success,
+                    raw_jobs.detail_enrichment_success
+                ),
 
             detail_matching_text_length =
-                excluded.detail_matching_text_length,
+                COALESCE(
+                    excluded.detail_matching_text_length,
+                    raw_jobs.detail_matching_text_length
+                ),
 
             detail_from_cache =
-                excluded.detail_from_cache,
+                COALESCE(
+                    excluded.detail_from_cache,
+                    raw_jobs.detail_from_cache
+                ),
 
+            -- L'erreur, elle, est bien remplacee : une nouvelle collecte
+            -- reussie doit effacer le message d'echec precedent.
             detail_enrichment_error =
                 excluded.detail_enrichment_error,
 

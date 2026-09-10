@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-04T23:45:08",
+  "racine": "C:\\Users\\Aharr\\Desktop\\JobHunter - Copie",
+  "fichiers": [
+    {
+      "origine": "_wdd.py",
+      "taille": 1393
+    },
+    {
+      "origine": "lifecycle_step8a_inventory.py",
+      "taille": 13282
+    },
+    {
+      "origine": "lifecycle_step8b_audit.py",
+      "taille": 13645
+    },
+    {
+      "origine": "lifecycle_step8c_bootstrap.py",
+      "taille": 22046
+    },
+    {
+      "origine": "lifecycle_step8c_bootstrap_audit.py",
+      "taille": 14008
+    },
+    {
+      "origine": "lifecycle_step8d_manual_cli_audit.py",
+      "taille": 10431
+    },
+    {
+      "origine": "lifecycle_step8d_unicode_hotfix_audit.py",
+      "taille": 3894
+    },
+    {
+      "origine": "lifecycle_step8e_sync_audit.py",
+      "taille": 22720
+    },
+    {
+      "origine": "lifecycle_step8f_a_daily_run_inventory.py",
+      "taille": 11835
+    },
+    {
+      "origine": "lifecycle_step8f_b_daily_run_integration_audit.py",
+      "taille": 12686
+    },
+    {
+      "origine": "lifecycle_step8g_final_offline_validation.py",
+      "taille": 24244
+    },
+    {
+      "origine": "sources/actiris_provenance.py",
+      "taille": 17985
+    },
+    {
+      "origine": "sources/travaillerpour_detail_diagnostic.py",
+      "taille": 21712
+    },
+    {
+      "origine": "sources/travaillerpour_diagnostic.py",
+      "taille": 17314
+    },
+    {
+      "origine": "applications/delta_tracker_v11.py",
+      "taille": 32392
+    },
+    {
+      "origine": "database/activity.py",
+      "taille": 11812
+    },
+    {
+      "origine": "database/intrasource_audit.py",
+      "taille": 23351
+    }
+  ],
+  "dossiers_vides_supprimes": [
+    "JobHunter_UI_V1_patch",
+    "job_hunter_github_starter"
+  ],
+  "note": "Les 13 audits declares REPLACED ont ete restaures : run_all.py exige que chaque nom cite dans ses listes de classification existe sur disque."
+}

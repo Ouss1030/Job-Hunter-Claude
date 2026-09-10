@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "workers": 6,
+  "exclusive_sources": [
+    "JOBAT"
+  ],
+  "selected_by": "PERFORMANCE_CRITICAL_PATH_V1"
+}

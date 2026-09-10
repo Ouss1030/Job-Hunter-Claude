@@ -1,0 +1,31 @@
+{
+  "version": "9.0",
+  "strategy": "STRUCTURAL_DISCOVERY",
+  "production_source_added": "REMOTIVE",
+  "automatic_discovery": [
+    "pharma.be member companies",
+    "ATS fingerprint detection",
+    "career-page discovery",
+    "JSON-LD JobPosting hint detection"
+  ],
+  "ats_engines_installed": [
+    "GREENHOUSE",
+    "LEVER",
+    "RECRUITEE",
+    "ASHBY",
+    "SMARTRECRUITERS"
+  ],
+  "next_credentials": [
+    "ADZUNA",
+    "CAREERJET",
+    "JOOBLE",
+    "VDAB"
+  ],
+  "next_structural_targets": [
+    "BCE/KBO NACE-BEL employer dump",
+    "pharma.be members -> ATS configs",
+    "Forem employer gap analysis",
+    "Common Crawl .be JobPosting domains",
+    "SERP API if user chooses a provider"
+  ]
+}

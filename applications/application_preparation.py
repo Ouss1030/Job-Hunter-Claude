@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-APPLICATION PREPARATION - VERSION 1.0
+APPLICATION PREPARATION - VERSION 1.1
 
 Objectif
 ========
@@ -40,10 +40,14 @@ import unicodedata
 from datetime import datetime
 from pathlib import Path
 
-from matching.application_queue import QUEUE_VERSION, build_application_queue_from_gate_payload
+from matching.application_queue_v12 import (
+    QUEUE_VERSION,
+    build_application_queue_from_gate_payload,
+)
+from matching.application_gate_v13 import GATE_VERSION
 
 
-PREPARATION_VERSION = "1.0"
+PREPARATION_VERSION = "1.2"
 DEFAULT_BATCH_LIMIT = 20
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -263,16 +267,39 @@ def build_application_preparation(queue_items, limit=DEFAULT_BATCH_LIMIT):
 
     selected = []
     seen_groups = set()
+    ecartees_par_verdict = []
 
     for item in ready:
         group_id = clean_text(item.get("application_group_id")) or clean_text(item.get("stable_item_key"))
         if group_id in seen_groups:
             continue
+
+        # Un creneau de preparation coute un rafraichissement live. Le
+        # depenser sur une offre dont la barriere est prouvee, c'est le
+        # retirer a une offre ouverte qui attend juste en dessous.
+        #
+        # Mesure du 9 septembre 2026 : sur les 150 premieres offres par
+        # score, 32 etaient FERMEES — 21 % du budget. Sous la ligne de
+        # coupe attendaient 217 titres distincts sans aucune barriere.
+        #
+        # Le champ absent ne ferme rien : une file construite sans verdict
+        # se comporte exactement comme avant.
+        if clean_text(item.get("verdict")) == "FERMEE":
+            ecartees_par_verdict.append(item)
+            continue
+
         seen_groups.add(group_id)
 
         selected.append(_build_preparation_item(item, len(selected) + 1))
         if len(selected) >= max(1, int(limit)):
             break
+
+    if ecartees_par_verdict:
+        print(f"[PREPARATION] {len(ecartees_par_verdict)} offres FERMEES "
+              f"ecartees, autant de creneaux rendus aux offres ouvertes.")
+        for item in ecartees_par_verdict[:5]:
+            print(f"             - {clean_text(item.get('title'))[:48]:<48} "
+                  f"{clean_text(item.get('verdict_obstacle'))[:60]}")
 
     return selected
 
@@ -396,14 +423,70 @@ def export_application_preparation(items, project_root=PROJECT_ROOT):
 # CLI
 # ============================================================
 
+
+def _payload_gate_version(payload):
+    versions = {
+        clean_text((row.get("gate") or {}).get("gate_version"))
+        for row in (payload or [])
+        if isinstance(row, dict)
+    }
+    versions.discard("")
+    if not versions:
+        return "UNKNOWN"
+    if len(versions) == 1:
+        return next(iter(versions))
+    return "MIXED:" + ",".join(sorted(versions))
+
+
+def _payload_queue_version(payload):
+    versions = {
+        clean_text(row.get("queue_version"))
+        for row in (payload or [])
+        if isinstance(row, dict)
+    }
+    versions.discard("")
+    if not versions:
+        return "UNKNOWN"
+    if len(versions) == 1:
+        return next(iter(versions))
+    return "MIXED:" + ",".join(sorted(versions))
+
+
+def _assert_current_gate_version(payload, source_path):
+    detected = _payload_gate_version(payload)
+    if detected != GATE_VERSION:
+        raise RuntimeError(
+            "Gate export obsolète/incompatible. "
+            f"Installé={GATE_VERSION} ; export={detected} ; fichier={source_path}. "
+            "Exécuter d'abord : "
+            "python -m diagnostics.application_gate_v132_db_replay"
+        )
+    return detected
+
+
+def _assert_current_queue_version(payload, source_path):
+    detected = _payload_queue_version(payload)
+    if detected != QUEUE_VERSION:
+        raise RuntimeError(
+            "Queue export obsolète/incompatible. "
+            f"Installée={QUEUE_VERSION} ; export={detected} ; fichier={source_path}."
+        )
+    return detected
+
 def load_current_queue(project_root=PROJECT_ROOT):
     """
-    Reconstruit de préférence la Queue avec le code installé actuellement.
+    V1.1 - cohérence stricte Gate / Queue.
 
-    Pourquoi : après une évolution Queue V1.0 -> V1.1, un ancien JSON Queue
-    peut rester le fichier le plus récent sur disque. Le Gate JSON contient les
-    décisions nécessaires pour reconstruire proprement la Queue sans relancer
-    les 8 minutes de collecte.
+    Règles :
+    1. Si un Gate existe, il DOIT avoir la même version que le Gate installé.
+    2. La Queue est reconstruite avec matching.application_queue_v12.
+    3. Un ancien Gate 1.3.1 n'est plus silencieusement accepté quand 1.3.2
+       est installé.
+    4. Le fallback Queue n'est accepté que si queue_version correspond à
+       la Queue installée ET si le Gate embarqué correspond au Gate installé.
+
+    Cette logique empêche notamment de réintroduire le bug Evere/Beveren
+    depuis un export historique.
     """
     root = Path(project_root)
     log_dir = root / "exports" / "logs"
@@ -411,29 +494,59 @@ def load_current_queue(project_root=PROJECT_ROOT):
     gate_path = latest_file(log_dir, "application_gate_v1_*.json")
     if gate_path is not None:
         gate_payload = load_json(gate_path)
+        detected_gate = _assert_current_gate_version(gate_payload, gate_path)
+
         queue_items = build_application_queue_from_gate_payload(gate_payload)
+        detected_queue = _payload_queue_version(queue_items)
+
+        if detected_queue != QUEUE_VERSION:
+            raise RuntimeError(
+                "La Queue reconstruite n'utilise pas la version attendue. "
+                f"Attendu={QUEUE_VERSION} ; obtenu={detected_queue}."
+            )
+
         return {
-            "source_type": "GATE_REBUILT_WITH_CURRENT_QUEUE",
+            "source_type": "GATE_REBUILT_WITH_CURRENT_GATE_AND_QUEUE",
             "source_path": gate_path,
-            "queue_version": QUEUE_VERSION,
+            "gate_version": detected_gate,
+            "queue_version": detected_queue,
             "items": queue_items,
         }
 
-    queue_path = latest_file(log_dir, "application_queue_v1_*.json")
-    if queue_path is not None:
+    # Fallback uniquement si aucun Gate n'existe.
+    queue_candidates = []
+    for pattern in (
+        "application_queue_v12_replay_*.json",
+        "application_queue_v1_*.json",
+    ):
+        queue_candidates.extend(log_dir.glob(pattern))
+
+    if queue_candidates:
+        queue_path = max(queue_candidates, key=lambda p: p.stat().st_mtime)
         queue_items = load_json(queue_path)
-        detected = clean_text(queue_items[0].get("queue_version")) if queue_items else "UNKNOWN"
+
+        detected_queue = _assert_current_queue_version(queue_items, queue_path)
+        detected_gate = _payload_gate_version(queue_items)
+
+        if detected_gate != GATE_VERSION:
+            raise RuntimeError(
+                "Queue correcte mais Gate embarqué obsolète/incompatible. "
+                f"Gate installé={GATE_VERSION} ; Gate queue={detected_gate}. "
+                "Exécuter d'abord : "
+                "python -m diagnostics.application_gate_v132_db_replay"
+            )
+
         return {
-            "source_type": "QUEUE_JSON_FALLBACK",
+            "source_type": "QUEUE_JSON_CURRENT_FALLBACK",
             "source_path": queue_path,
-            "queue_version": detected or "UNKNOWN",
+            "gate_version": detected_gate,
+            "queue_version": detected_queue,
             "items": queue_items,
         }
 
     raise FileNotFoundError(
-        "Aucun application_gate_v1_*.json ni application_queue_v1_*.json trouvé dans exports/logs/."
+        "Aucun export Gate/Queue compatible trouvé dans exports/logs/."
     )
-
 
 def run_from_latest_queue(limit=DEFAULT_BATCH_LIMIT, project_root=PROJECT_ROOT):
     root = Path(project_root)
@@ -451,10 +564,11 @@ def main():
     current, prepared, export = run_from_latest_queue(limit=args.limit)
     summary = export["summary"]
 
-    print("APPLICATION PREPARATION V1")
+    print("APPLICATION PREPARATION V1.1")
     print("=" * 76)
     print("Source              :", current["source_type"])
     print("Fichier source      :", current["source_path"])
+    print("Gate utilisé        :", current.get("gate_version"))
     print("Queue utilisée      :", current["queue_version"])
     print("Candidatures lot    :", summary["total"])
     print("Zone prioritaire    :", summary["preferred_location"])

@@ -1,0 +1,3200 @@
+{
+  "version": 2,
+  "purpose": "MASTER400 V2 - yield optimized 2026-09-04",
+  "term_count": 400,
+  "profile_scope": {
+    "data": "junior / first professional Data role",
+    "lab_qc": "~3 years pharma/QC experience",
+    "languages": "FR C2, EN B1, NL A2 non-professional"
+  },
+  "track_counts": {
+    "DATA_BI": 141,
+    "LAB_QC": 144,
+    "QUALITY": 58,
+    "HYBRID": 34,
+    "PRODUCTION_SCIENCE": 23
+  },
+  "kind_counts": {
+    "title": 391,
+    "skill": 9
+  },
+  "terms": [
+    {
+      "term": "Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste de données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste de données junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste data",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Analyst Junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste business data",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste données métier",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste Business Intelligence",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Intelligence Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste décisionnel",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste reporting",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "BI Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste reporting BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Power BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste Power BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Power BI Developer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Développeur Power BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Business Intelligence Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Reporting Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Coordinator",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Analyst Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Management Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Quality Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste qualité des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Quality Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Quality Specialist",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Steward",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Data Steward",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Governance Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste gouvernance des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Governance Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Management Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Master Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Master Data Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Master Data Specialist",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Integrity Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste intégrité des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Operations Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Process Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste processus",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Business Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste métier junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste fonctionnel",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Functional Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Functional Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data & Reporting Specialist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Performance Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Reporting Specialist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Visualization Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Operational Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Management Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Performance Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Dashboard Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Power BI Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Intelligence Developer Junior",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "BI Developer Junior",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Commercial Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Supply Chain Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Logistics Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "HR Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Finance Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Customer Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Product Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Marketing Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Sales Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior data analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Reporting & Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business data-analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "BI analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business intelligence analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Reporting analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Rapportage analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Power BI analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data quality analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data kwaliteitsanalist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data governance analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Databeheerder",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Master data beheerder",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Business analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior business analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Functioneel analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin en chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborantin pharmaceutique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien de laboratoire QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien laboratoire QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien contrôle qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien chimiste",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien analytique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien analyses",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien analyses chimiques",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien analyses physico-chimiques",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien physico-chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien qualité QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste chimique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste physico-chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste pharmaceutique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analyste qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chimiste laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chimiste QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chimiste contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Aide laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Aide technique de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Control Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Control Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chemical Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chemistry Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chemical Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analytical Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analytical Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Microbiology Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Microbiology Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Microbiology Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Chemistry Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharmaceutical QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharma QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Control Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Control Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Operator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Operator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Sample Preparation Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Sample Management Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Sample Coordinator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Sample Coordinator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Sampling Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Sampling Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Environmental Monitoring Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laborant kwaliteitscontrole",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chemisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratoriumtechnicus",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratorium technician",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Kwaliteitscontroleur labo",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Kwaliteitscontroleur laboratorium",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analist laboratorium",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratoriumanalist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Kwaliteitsanalist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Chemisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analytisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Analytisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Microbiologisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Microbiologisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratorium medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant assurance qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien assurance qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Contrôleur qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Contrôleur qualité laboratoire",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Coordinateur qualité junior",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Coordinator Junior",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Support qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Support QA",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Support QC",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien qualification",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien qualification validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien cleaning validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Assistant qualification",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Assurance Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QA Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Assurance Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Control Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior Quality Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Systems Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Systems Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Documentation Specialist Junior",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Documentation Officer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "GMP Compliance Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "GMP Compliance Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Validation Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "LIMS Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Junior LIMS Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "LIMS Specialist Junior",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "LIMS Support Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Informatics Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Laboratory Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Lab Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "QC Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Scientific Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Manufacturing Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "GMP Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharma Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Life Sciences Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Quality Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Integrity Analyst GxP",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "GxP Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "ELN Business Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "ELN Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur production pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur production salle blanche",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Opérateur salle blanche",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien production pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien de production pharma",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien production chimique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Technicien fabrication pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharmaceutical Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharma Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Cleanroom Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Aseptic Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Pharmaceutical Production Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Manufacturing Technician Pharma",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "GMP Production Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "CV_MASTER_280"
+    },
+    {
+      "term": "Data Reporting Officer",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Junior Data Reporting Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Reporting & Analytics Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Reporting and Analytics Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Reporting Analytics Specialist",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "BI Reporting Specialist",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Business Intelligence Reporting Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Visualization Specialist",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Dashboard Reporting Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "KPI Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "KPI Reporting Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Business Performance Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Performance Data Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Controls Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Validation Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Cleansing Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Support Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Support Officer",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Administration Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Administrator",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Operations Officer",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Governance Support",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Quality Coordinator",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Master Data Coordinator",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Master Data Administrator",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Junior Master Data Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Excellence Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Information Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Junior Information Analyst",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Management Coordinator",
+      "track": "DATA_BI",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "SQL",
+      "track": "DATA_BI",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Power BI",
+      "track": "DATA_BI",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Chemist",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Laboratory Technician HPLC",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "HPLC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "HPLC Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "UPLC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Analytical Chemistry Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Physicochemical Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Chemical Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Chemical Laboratory Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Lab Quality Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Laboratory Quality Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Control Chemist",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Control Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GMP Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GMP QC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Pharmaceutical Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Pharma Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Microbiology Laboratory Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Microbiology Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Environmental Monitoring Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Sample Management Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Raw Materials QC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Incoming Quality Control Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Incoming Inspection QC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Stability Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Stability Technician",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "IPC Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "In-Process Control Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Release Testing Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Release Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Raw Materials Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Finished Product Analyst",
+      "track": "LAB_QC",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "HPLC analysis",
+      "track": "LAB_QC",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "UPLC",
+      "track": "LAB_QC",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "endotoxin testing",
+      "track": "LAB_QC",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GMP laboratory",
+      "track": "LAB_QC",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GMP Quality Technician",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QA Documentation Officer",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Document Control Assistant",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Document Control Officer",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Documentation Coordinator",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Systems Technician",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Compliance Technician",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Compliance Assistant",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QA Operations Assistant",
+      "track": "QUALITY",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "TrackWise",
+      "track": "QUALITY",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "SAP QM",
+      "track": "QUALITY",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "CAPA",
+      "track": "QUALITY",
+      "kind": "skill",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Laboratory Information Systems Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "LIMS Data Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Systems Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Quality Systems Data Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GxP Data Integrity Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Laboratory Digitalization Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Lab Digitalization Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "QC Digitalization Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Manufacturing Systems Data Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Pharma Reporting Analyst",
+      "track": "HYBRID",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Cleanroom Production Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "GMP Manufacturing Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Manufacturing Operator Pharma",
+      "track": "PRODUCTION_SCIENCE",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Production Technician GMP",
+      "track": "PRODUCTION_SCIENCE",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Production Laboratory Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "kind": "title",
+      "language": "en",
+      "origin": "CV_MARKET_EXPANSION_2026_09"
+    },
+    {
+      "term": "Data Reviewer",
+      "track": "HYBRID",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Data Reviewer Chimie",
+      "track": "HYBRID",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Assistant Equipment QA",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Scientific Documentation Specialist",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "AI Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "AI Analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Qualification Engineer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Quality and Compliance Engineer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Quality en Compliance Engineer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "nl",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "MES Engineer",
+      "track": "HYBRID",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Chimiste de formulation",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Technicien salle blanche",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QA Compliance Specialist",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Clinical Supply Optimization Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QA for QC",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Quality Project Associate",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Analytical Scientist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QC Specialist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "GMP Compliance",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Pharma Process Engineer",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Quality Assurance Specialist",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QA CSV",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Development Analyst",
+      "track": "HYBRID",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Bioanalytical Scientist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Raw Material Scientist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Quality Controller",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QA Officer Validation",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Validation Engineer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "QA Officer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Technicien de labo",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Analyste Chemistry",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    },
+    {
+      "term": "Opérateur filling pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr",
+      "kind": "title",
+      "origin": "TERM_YIELD_DELTA_SWEEP_V1"
+    }
+  ],
+  "change_log": {
+    "removed_terms": [
+      "pandas",
+      "scikit-learn",
+      "SSIS",
+      "voltammetry",
+      "Endosafe",
+      "bioburden",
+      "ALCOA+",
+      "DAX",
+      "deviation management",
+      "ETL",
+      "Power Query",
+      "pH testing",
+      "SQL Server",
+      "aseptic sampling",
+      "laboratory sampling",
+      "Python data analysis",
+      "conductivity testing",
+      "microbiological control",
+      "GxP data integrity",
+      "Aseptic Manufacturing Operator",
+      "Sampling Operator",
+      "Aseptic Filling Operator",
+      "Procesanalist",
+      "Pharmaceutical Manufacturing Technician",
+      "Dashboard Developer",
+      "Technicien validation nettoyage",
+      "Qualification Technician",
+      "Junior databeheerder",
+      "Data- en procesanalist",
+      "QC Operator",
+      "Compliance Technician",
+      "Filling Operator Pharma"
+    ],
+    "added_terms": [
+      "Data Reviewer",
+      "Data Reviewer Chimie",
+      "Assistant Equipment QA",
+      "Scientific Documentation Specialist",
+      "AI Analyst",
+      "AI Analist",
+      "Qualification Engineer",
+      "Quality and Compliance Engineer",
+      "Quality en Compliance Engineer",
+      "MES Engineer",
+      "Chimiste de formulation",
+      "Technicien salle blanche",
+      "QA Compliance Specialist",
+      "Clinical Supply Optimization Analyst",
+      "QA for QC",
+      "Quality Project Associate",
+      "Analytical Scientist",
+      "QC Specialist",
+      "GMP Compliance",
+      "Pharma Process Engineer",
+      "Quality Assurance Specialist",
+      "QA CSV",
+      "Development Analyst",
+      "Bioanalytical Scientist",
+      "Raw Material Scientist",
+      "Quality Controller",
+      "QA Officer Validation",
+      "Validation Engineer",
+      "QA Officer",
+      "Technicien de labo",
+      "Analyste Chemistry",
+      "Opérateur filling pharmaceutique"
+    ],
+    "baseline_coverage_before_pct": 91.15,
+    "baseline_coverage_after_pct": 96.1,
+    "method": "32-for-32 swap"
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "version": "23.0",
+  "sources": {
+    "VDAB": {
+      "status": "COMPLETE_NEEDS_CREDENTIALS",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "EURES": {
+      "status": "COMPLETE_POLICY_SKIP",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "VIVAQUA": {
+      "status": "COMPLETE_COVERED_BY_PARENT",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "ADECCO_STUDENT": {
+      "status": "COMPLETE_COVERED_BY_PARENT",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "SYNERGIE_STUDENT": {
+      "status": "COMPLETE_COVERED_BY_PARENT",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "ACTIRIS_STUDENT": {
+      "status": "COMPLETE_COVERED_BY_PARENT",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "JOBAT_STUDENT": {
+      "status": "COMPLETE_COVERED_BY_PARENT",
+      "reason": "Inherited safe classification; no repeated probing."
+    },
+    "ADG_OSTBELGIEN": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "ADG_OSTBELGIEN",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://adg.be/",
+          "https://www.adg.be/",
+          "https://adg.be/desktopdefault.aspx/tabid-6166/",
+          "https://adg.be/desktopdefault.aspx/tabid-7039/",
+          "https://adg.be/desktopdefault.aspx/tabid-6166/desktopdefault.aspx/tabid-7039/",
+          "https://adg.be/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/",
+          "https://adg.be/desktopdefault.aspx/tabid-6166/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/",
+          "https://adg.be/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/"
+        ],
+        "errors": [
+          "https://adg.be/desktopdefault.aspx/tabid-6166/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/ | HTTPError: 403 Client Error: Forbidden for url: https://adg.be/desktopdefault.aspx/tabid-6166/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/",
+          "https://adg.be/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/ | HTTPError: 403 Client Error: Forbidden for url: https://adg.be/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/desktopdefault.aspx/tabid-7039/"
+        ],
+        "validated_url": "https://adg.be/",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:02+02:00"
+    },
+    "SGS": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "SGS",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [
+          "smartrecruiters"
+        ],
+        "visited": [
+          "https://www.sgs.com/en-be/our-company/careers-at-sgs/job-opportunities",
+          "https://careers.smartrecruiters.com/SGS?search=wavre",
+          "https://careers.smartrecruiters.com/SGS?location=Antwerpen&page=0&search=",
+          "https://careers.smartrecruiters.com/SGS/",
+          "https://www.sgs.com/en-be/our-company/careers-at-sgs"
+        ],
+        "errors": [],
+        "validated_url": "https://www.sgs.com/en-be/our-company/careers-at-sgs/job-opportunities",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:09+02:00"
+    },
+    "BUREAU_VERITAS": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "BUREAU_VERITAS",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://group.bureauveritas.com/careers/leave-your-mark",
+          "https://group.bureauveritas.com/careers",
+          "https://jobs.bureauveritas.com/search/?q=&locationsearch=Belgium",
+          "https://jobs.bureauveritas.com/",
+          "https://group.bureauveritas.com/careers/attract-new-talents/recruitment-and-onboarding",
+          "https://group.bureauveritas.com/careers/grow-our-people/career-and-leadership-development",
+          "https://jobs.bureauveritas.com/gb/en/cookiesettings"
+        ],
+        "errors": [],
+        "validated_url": "https://group.bureauveritas.com/careers/leave-your-mark",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:16+02:00"
+    },
+    "CERTECH": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "CERTECH",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.certech.be/jobs/"
+        ],
+        "errors": [
+          "https://www.certech.be/jobs/ | HTTPError: 404 Client Error: Not Found for url: https://www.certech.be/jobs/"
+        ],
+        "validated_url": "https://www.certech.be/jobs/",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:20+02:00"
+    },
+    "SIRRIS": {
+      "status": "ACTIVATED_RECOVERED_V22",
+      "result": {
+        "key": "SIRRIS",
+        "ok": true,
+        "detail_links": 8,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://recruitment.sirris.be/",
+        "errors": [],
+        "samples": []
+      },
+      "live_seed": {
+        "source": "SIRRIS",
+        "jobs": 0,
+        "tracks": {},
+        "bad": [],
+        "samples": []
+      },
+      "reason": "Recovered from V22; no web re-probe needed.",
+      "live_done": true
+    },
+    "ABINBEV": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "ABINBEV",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [
+          "workday"
+        ],
+        "visited": [
+          "https://www.ab-inbev.com/careers/",
+          "https://europecareers.ab-inbev.com/fr",
+          "https://europecareers.ab-inbev.com/",
+          "https://europecareers.ab-inbev.com/programmes",
+          "https://europecareers.ab-inbev.com/fr/job-indexes",
+          "https://europecareers.ab-inbev.com/job-indexes"
+        ],
+        "errors": [
+          "https://www.ab-inbev.com/careers/ | HTTPError: 404 Client Error: Not Found for url: https://www.ab-inbev.com/careers"
+        ],
+        "validated_url": "https://www.ab-inbev.com/careers/",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:30+02:00"
+    },
+    "COLRUYT": {
+      "status": "ACTIVATED_V23",
+      "result": {
+        "key": "COLRUYT",
+        "ok": true,
+        "detail_links": 256,
+        "target_titles": 0,
+        "ats": [
+          "recruitee"
+        ],
+        "visited": [
+          "https://jobs.colruytgroup.com/fr",
+          "https://jobs.colruytgroup.com/",
+          "https://colruytgroup.recruitee.com/",
+          "https://jobs.colruytgroup.com/fr/mes-offres-emploi",
+          "https://jobs.colruytgroup.com/fr/offres-emploi",
+          "https://jobs.colruytgroup.com/fr/job-etudiant",
+          "https://jobs.colruytgroup.com/fr/postuler-chez-colruyt-group",
+          "https://jobs.colruytgroup.com/fr/a-propos/nouveautes/jobs-detudiant-chez-colruyt-group",
+          "https://jobs.colruytgroup.com/fr/postuler-chez-colruyt-group/avantages-emploi-colruyt-group",
+          "https://jobs.colruytgroup.com/fr/postuler-chez-colruyt-group/opportunites-de-carriere",
+          "https://jobs.colruytgroup.com/fr/vakgebieden/student-starter",
+          "https://jobs.colruytgroup.com/fr/offres-emploi?filter-radius=500&sort=validfrom-desc&page=1"
+        ],
+        "errors": [],
+        "validated_url": "https://jobs.colruytgroup.com/fr",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:42+02:00",
+      "live_done": true
+    },
+    "DELHAIZE": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "DELHAIZE",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://jobs.delhaize.be/be/nl",
+          "https://jobs.delhaize.be/be/fr/search-results",
+          "https://jobs.delhaize.be/be/fr",
+          "https://jobs.delhaize.be/be/nl/over-delhaize",
+          "https://jobs.delhaize.be/be/nl/jointalentcommunity",
+          "https://jobs.delhaize.be/be/fr/cookiesettings",
+          "https://jobs.delhaize.be/be/fr/over-delhaize",
+          "https://jobs.delhaize.be/be/fr/stages-et-jobs-etudiants",
+          "https://jobs.delhaize.be/be/fr/jointalentcommunity",
+          "https://jobs.delhaize.be/be/nl/search-results",
+          "https://jobs.delhaize.be/be/nl/stage-en-jobstudent",
+          "https://jobs.delhaize.be/be/fr/stages-et-jobs-etudiants#job-etudiants"
+        ],
+        "errors": [],
+        "validated_url": "https://jobs.delhaize.be/be/nl",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:50+02:00"
+    },
+    "VANDEMOORTELE": {
+      "status": "ACTIVATED_RECOVERED_V22",
+      "result": {
+        "key": "VANDEMOORTELE",
+        "ok": true,
+        "detail_links": 25,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://careers.vandemoortele.com/search/?q=&locationsearch=Belgium",
+        "errors": [],
+        "samples": []
+      },
+      "live_seed": {
+        "source": "VANDEMOORTELE",
+        "jobs": 0,
+        "tracks": {},
+        "bad": [],
+        "samples": []
+      },
+      "reason": "Recovered from V22; no web re-probe needed.",
+      "live_done": true
+    },
+    "IRIS_HOPITAUX": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "IRIS_HOPITAUX",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.iris-hopitaux.be/fr/jobs",
+          "https://www.his-izz.be/fr",
+          "https://www.his-izz.be/"
+        ],
+        "errors": [
+          "https://www.iris-hopitaux.be/fr/jobs | HTTPError: 404 Client Error: Not Found for url: https://irishopitaux.be/fr/jobs"
+        ],
+        "validated_url": "https://www.iris-hopitaux.be/fr/jobs",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:00:58+02:00"
+    },
+    "UZ_BRUSSEL": {
+      "status": "ACTIVATED_RECOVERED_V22",
+      "result": {
+        "key": "UZ_BRUSSEL",
+        "ok": true,
+        "detail_links": 81,
+        "target_titles": 2,
+        "tracks": {
+          "STUDENT_ANY": 1,
+          "QC_PHARMA_LAB": 1
+        },
+        "validated_url": "https://www.uzbrusselwerkt.be/alle-vacatures",
+        "errors": [],
+        "samples": [
+          {
+            "title": "Jobstudent verpleeg- en vroedkunde",
+            "url": "https://www.uzbrusselwerkt.be/vacatures/viewjob/350706",
+            "track": "STUDENT_ANY"
+          },
+          {
+            "title": "Medisch Laboratoriumtechnoloog - Anatomo-Pathologie",
+            "url": "https://www.uzbrusselwerkt.be/vacatures/viewjob/379137",
+            "track": "QC_PHARMA_LAB"
+          }
+        ]
+      },
+      "live_seed": {
+        "source": "UZ_BRUSSEL",
+        "jobs": 2,
+        "tracks": {
+          "STUDENT_ANY": 1,
+          "QC_PHARMA_LAB": 1
+        },
+        "bad": [],
+        "samples": [
+          "Jobstudent verpleeg- en vroedkunde",
+          "Medisch Laboratoriumtechnoloog - Anatomo-Pathologie"
+        ]
+      },
+      "reason": "Recovered from V22; no web re-probe needed.",
+      "live_done": true
+    },
+    "CHIREC": {
+      "status": "ACTIVATED_RECOVERED_V22",
+      "result": {
+        "key": "CHIREC",
+        "ok": true,
+        "detail_links": 8,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.chirec.be/fr/home.aspx",
+        "errors": [],
+        "samples": []
+      },
+      "live_seed": {
+        "source": "CHIREC",
+        "jobs": 0,
+        "tracks": {},
+        "bad": [],
+        "samples": []
+      },
+      "reason": "Recovered from V22; no web re-probe needed.",
+      "live_done": true
+    },
+    "BRUSSELS_AIRPORT": {
+      "status": "ACTIVATED_RECOVERED_V22",
+      "result": {
+        "key": "BRUSSELS_AIRPORT",
+        "ok": true,
+        "detail_links": 20,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.brusselsairport.be/search/?q=&locationsearch=",
+        "errors": [],
+        "samples": []
+      },
+      "live_seed": {
+        "source": "BRUSSELS_AIRPORT",
+        "jobs": 0,
+        "tracks": {},
+        "bad": [],
+        "samples": []
+      },
+      "reason": "Recovered from V22; no web re-probe needed.",
+      "live_done": true
+    },
+    "SWISSPORT_BE": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "SWISSPORT_BE",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.swissport.com/en/careers",
+          "https://careers.swissport.com/jobs",
+          "https://www.swissport.com/en/careers/search-jobs",
+          "https://www.swissport.com/en/search?tag=Jobs",
+          "https://www.swissport.com/en/sustainability/people/training-career-development",
+          "https://careers.swissport.com/our-locations",
+          "https://www.swissport.com/en/sustainability/people/training-and-career-development",
+          "https://careers.swissport.com/"
+        ],
+        "errors": [],
+        "validated_url": "https://www.swissport.com/en/careers",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:01:07+02:00"
+    },
+    "BRUXELLES_PROPRETE": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "BRUXELLES_PROPRETE",
+        "ok": false,
+        "covered": true,
+        "reason": "covered_by_parent"
+      },
+      "updated_at": "2026-09-08T01:01:07+02:00"
+    },
+    "DAOUST": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "DAOUST",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.daoust.be/fr/jobs",
+          "https://daoust.be/fr/",
+          "https://daoust.be/",
+          "https://dajobs.be/recruitment/",
+          "https://app.dajobs.be/job-offers/search?contract_type_id%5B0%5D=8",
+          "https://app.dajobs.be/",
+          "https://dajobs.be/valeurs/fiers-de-travailler/",
+          "https://dajobs.be/news/tentatives-de-phishing/",
+          "https://dajobs.be/valeurs/quality-awards/",
+          "https://app.dajobs.be/job-offers/search?contract_type_id[0]=8",
+          "https://dajobs.be/?post_type=valeurs&p=403"
+        ],
+        "errors": [
+          "https://www.daoust.be/fr/jobs | HTTPError: 404 Client Error: Not Found for url: https://dajobs.be/fr/jobs",
+          "https://dajobs.be/?post_type=valeurs&p=403 | HTTPError: 404 Client Error: Not Found for url: https://dajobs.be/?post_type=valeurs&p=403"
+        ],
+        "validated_url": "https://www.daoust.be/fr/jobs",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:01:21+02:00"
+    },
+    "WALTERS_PEOPLE": {
+      "status": "ACTIVATED_V23",
+      "result": {
+        "key": "WALTERS_PEOPLE",
+        "ok": true,
+        "detail_links": 26,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.robertwalters.be/",
+          "https://www.walterspeople.be/",
+          "https://www.robertwalters.be/nl/jobs.html",
+          "https://www.robertwalters.be/fr/jobs.html",
+          "https://www.robertwalters.be/account/login-register.html",
+          "https://www.robertwalters.be/insights.html#featuredTopic=career-advice",
+          "https://www.robertwalters.be/candidates/submit-your-cv.html",
+          "https://www.robertwalters.be/about-us/robert-walters-careers/internal-jobs.html",
+          "https://www.robertwalters.be/expertise/graduate.html",
+          "https://www.robertwalters.be/insights/career-advice/blog/10-tips-for-starting-an-international-career.html",
+          "https://www.robertwalters.be/insights/career-advice/e-guide/the-complete-interview-guide.html",
+          "https://www.robertwalters.be/insights/career-advice/blog/what-is-job-hugging.html"
+        ],
+        "errors": [
+          "https://www.robertwalters.be/fr/jobs.html | HTTPError: 404 Client Error: Not Found for url: https://www.robertwalters.be/fr/jobs.html"
+        ],
+        "validated_url": "https://www.robertwalters.be/",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:01:36+02:00",
+      "live_done": true
+    },
+    "SDWORX_STAFFING": {
+      "status": "ACTIVATED_V23",
+      "result": {
+        "key": "SDWORX_STAFFING",
+        "ok": true,
+        "detail_links": 56,
+        "target_titles": 2,
+        "ats": [],
+        "visited": [
+          "https://www.sdworx.jobs/fr-be",
+          "https://www.sdworxstaffing.be/fr",
+          "https://www.sdworx.jobs/fr-be/offres-d-emploi?redirected=true",
+          "https://www.sdworx.jobs/en-be/jobs",
+          "https://www.sdworx.jobs/fr-be/votre-carriere/droits-et-obligations/flexi-jobs",
+          "https://www.sdworx.jobs/fr-be/propos-de-sd-worx-jobs",
+          "https://www.sdworx.jobs/fr-be/votre-carriere",
+          "https://www.sdworx.jobs/en-be/top-jobs",
+          "https://www.sdworx.jobs/en-be/about-sd-worx-jobs",
+          "https://www.sdworx.jobs/fr-be/votre-carriere/demarrer/travailler-dans-une-pme-6-avantages"
+        ],
+        "errors": [],
+        "validated_url": "https://www.sdworx.jobs/fr-be",
+        "samples": [
+          {
+            "title": "Student productie technieker 7/9/2026 Rijkevorsel Multiple work schedules possible Fulltime Junior (0-2 years experience) Salary negotiable Volg jij een technische richting? Ben jij een technische student die graag de handen uit de mouwen steekt? Wil je tijdens de week, vakanties of vrije periodes waardevolle praktijkervaring opdoen binnen een productie voedingsomgeving? Dan hebben wij de studentenjob voor jou!",
+            "url": "https://www.sdworx.jobs/en-be/jobs/444938-student-productie-technieker",
+            "track": "STUDENT_ANY"
+          },
+          {
+            "title": "Quality controller 7/9/2026 Hasselt Day job Parttime Medior (2-5 years experience) € 2750/per maand - € 3500/per maand Voor een voedingsbedrijf in Hasselt, gespecialiseerd in de productie van ijs, zijn we op zoek naar een tijdelijke QC quality controller. Periode: 05/10/2026 t.e.m. 29/01/2027 Ter vervanging van een vaste collega tijdens haar zwangerschapsverlof is de firma op zoek naar een enthousiaste QC Quality Controller. In deze tijdelijke functie speel je een belangrijke rol in het bewaken van de productkwaliteit en voedselveiligheid binnen de productieomgeving.",
+            "url": "https://www.sdworx.jobs/en-be/jobs/444793-quality-controller",
+            "track": "QC_PHARMA_LAB"
+          }
+        ]
+      },
+      "updated_at": "2026-09-08T01:01:48+02:00",
+      "live_done": true
+    },
+    "DAOUST_STUDENT": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "DAOUST_STUDENT",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "ats": [],
+        "visited": [
+          "https://www.daoust.be/fr/jobs-etudiants",
+          "https://daoust.be/fr/",
+          "https://daoust.be/",
+          "https://dajobs.be/recruitment/",
+          "https://app.dajobs.be/job-offers/search?contract_type_id%5B0%5D=8",
+          "https://app.dajobs.be/",
+          "https://dajobs.be/valeurs/fiers-de-travailler/",
+          "https://dajobs.be/news/tentatives-de-phishing/",
+          "https://dajobs.be/valeurs/quality-awards/",
+          "https://app.dajobs.be/job-offers/search?contract_type_id[0]=8",
+          "https://dajobs.be/?post_type=valeurs&p=403"
+        ],
+        "errors": [
+          "https://www.daoust.be/fr/jobs-etudiants | HTTPError: 404 Client Error: Not Found for url: https://dajobs.be/fr/jobs-etudiants",
+          "https://dajobs.be/?post_type=valeurs&p=403 | HTTPError: 404 Client Error: Not Found for url: https://dajobs.be/?post_type=valeurs&p=403"
+        ],
+        "validated_url": "https://www.daoust.be/fr/jobs-etudiants",
+        "samples": []
+      },
+      "updated_at": "2026-09-08T01:01:58+02:00"
+    },
+    "UNIQUE_STUDENT": {
+      "status": "MANUAL_COMPLETE_NO_SAFE_COLLECTOR",
+      "result": {
+        "key": "UNIQUE_STUDENT",
+        "ok": false,
+        "covered": true,
+        "reason": "covered_by_parent"
+      },
+      "updated_at": "2026-09-08T01:01:59+02:00"
+    }
+  },
+  "created_at": "2026-09-08T00:59:42+02:00",
+  "updated_at": "2026-09-08T00:59:42+02:00"
+}

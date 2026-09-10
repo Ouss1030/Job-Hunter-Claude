@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "backup_dir": "C:\\Users\\Aharr\\Desktop\\JobHunter\\backups\\performance_big_gains_v1_pre_20260904_162436",
+  "existed": {
+    "sources/registry.py": true,
+    "sources/mega65_staffing.py": true,
+    "sources/forem_adaptive.py": false,
+    "config/actiris_scheduler.json": true,
+    "config/source_scheduler.json": true,
+    "config/forem_scheduler.json": false,
+    "logs/actiris_scheduler_state.json": true,
+    "logs/forem_scheduler_state.json": false
+  },
+  "created_at": 1788531876.0793211
+}

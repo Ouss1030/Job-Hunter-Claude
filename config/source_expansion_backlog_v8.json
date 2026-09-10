@@ -1,0 +1,81 @@
+{
+  "version": "8.0",
+  "purpose": "Prioritized future source expansion backlog",
+  "tracks": [
+    "QC_PHARMA_LAB",
+    "DATA_JUNIOR_BI",
+    "QC_DATA_HYBRID"
+  ],
+  "priority_1_next": [
+    {
+      "source": "VDAB Vacature API 4.2.0",
+      "mode": "API",
+      "state": "CREDENTIAL_SCHEMA_VALIDATION"
+    },
+    {
+      "source": "Alterjob.be",
+      "mode": "SITEMAP_JSONLD_OR_HTML",
+      "track": "broad"
+    },
+    {
+      "source": "Co-valent",
+      "mode": "SECTOR_BOARD_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "PharmiWeb.jobs",
+      "mode": "BOARD_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "EuroScienceJobs",
+      "mode": "BOARD_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "Guide Social",
+      "mode": "SITEMAP_JSONLD_OR_HTML",
+      "track": "secondary"
+    },
+    {
+      "source": "flanders.bio",
+      "mode": "SECTOR_BOARD_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "pharma.be",
+      "mode": "MEMBER_EMPLOYER_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "essenscia",
+      "mode": "EMPLOYER_EVENT_DISCOVERY",
+      "track": "QC_PHARMA_LAB"
+    },
+    {
+      "source": "Cefora",
+      "mode": "SECTOR_BOARD_DISCOVERY",
+      "track": "DATA_JUNIOR_BI"
+    }
+  ],
+  "priority_2_ats_engines": [
+    "Jobtoolz",
+    "Recruitee",
+    "Greenhouse",
+    "Lever",
+    "Ashby",
+    "Personio",
+    "Teamtailor",
+    "Workday",
+    "SmartRecruiters",
+    "SAP SuccessFactors",
+    "Cegid Talentsoft"
+  ],
+  "structural_discovery": [
+    "BCE/KBO employer discovery by NACE-BEL",
+    "ATS fingerprint discovery",
+    "Common Crawl JobPosting discovery",
+    "SERP API / Google Jobs provider",
+    "Forem employer gap analysis"
+  ]
+}

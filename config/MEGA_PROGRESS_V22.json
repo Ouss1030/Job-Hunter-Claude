@@ -1,0 +1,154 @@
+{
+  "version": "22.0",
+  "sources": {
+    "SIRRIS": {
+      "status": "VALIDATED",
+      "result": {
+        "key": "SIRRIS",
+        "ok": true,
+        "detail_links": 8,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://recruitment.sirris.be/",
+        "errors": [],
+        "samples": []
+      },
+      "activation_done": true
+    },
+    "UZ_BRUSSEL": {
+      "status": "VALIDATED",
+      "result": {
+        "key": "UZ_BRUSSEL",
+        "ok": true,
+        "detail_links": 81,
+        "target_titles": 2,
+        "tracks": {
+          "STUDENT_ANY": 1,
+          "QC_PHARMA_LAB": 1
+        },
+        "validated_url": "https://www.uzbrusselwerkt.be/alle-vacatures",
+        "errors": [],
+        "samples": [
+          {
+            "title": "Jobstudent verpleeg- en vroedkunde",
+            "url": "https://www.uzbrusselwerkt.be/vacatures/viewjob/350706",
+            "track": "STUDENT_ANY"
+          },
+          {
+            "title": "Medisch Laboratoriumtechnoloog - Anatomo-Pathologie",
+            "url": "https://www.uzbrusselwerkt.be/vacatures/viewjob/379137",
+            "track": "QC_PHARMA_LAB"
+          }
+        ]
+      },
+      "activation_done": true
+    },
+    "SDWORX_STAFFING": {
+      "status": "DONE_NO_EVIDENCE",
+      "result": {
+        "key": "SDWORX_STAFFING",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://www.sdworx.jobs/en-be/jobs",
+        "errors": [],
+        "samples": []
+      }
+    },
+    "VANDEMOORTELE": {
+      "status": "VALIDATED",
+      "result": {
+        "key": "VANDEMOORTELE",
+        "ok": true,
+        "detail_links": 25,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://careers.vandemoortele.com/search/?q=&locationsearch=Belgium",
+        "errors": [],
+        "samples": []
+      },
+      "activation_done": true
+    },
+    "CHIREC": {
+      "status": "VALIDATED",
+      "result": {
+        "key": "CHIREC",
+        "ok": true,
+        "detail_links": 8,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.chirec.be/fr/home.aspx",
+        "errors": [],
+        "samples": []
+      },
+      "activation_done": true
+    },
+    "BRUSSELS_AIRPORT": {
+      "status": "VALIDATED",
+      "result": {
+        "key": "BRUSSELS_AIRPORT",
+        "ok": true,
+        "detail_links": 20,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.brusselsairport.be/search/?q=&locationsearch=",
+        "errors": [],
+        "samples": []
+      },
+      "activation_done": true
+    },
+    "COLRUYT": {
+      "status": "DONE_NO_EVIDENCE",
+      "result": {
+        "key": "COLRUYT",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.colruytgroup.com/nl/vacatures",
+        "errors": [],
+        "samples": []
+      }
+    },
+    "DELHAIZE": {
+      "status": "DONE_NO_EVIDENCE",
+      "result": {
+        "key": "DELHAIZE",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.delhaize.be/be/fr/search-results",
+        "errors": [],
+        "samples": []
+      }
+    },
+    "BUREAU_VERITAS": {
+      "status": "DONE_NO_EVIDENCE",
+      "result": {
+        "key": "BUREAU_VERITAS",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://jobs.bureauveritas.com/gb/en",
+        "errors": [],
+        "samples": []
+      }
+    },
+    "SGS": {
+      "status": "DONE_NO_EVIDENCE",
+      "result": {
+        "key": "SGS",
+        "ok": false,
+        "detail_links": 0,
+        "target_titles": 0,
+        "tracks": {},
+        "validated_url": "https://www.sgs.com/en-be/our-company/careers-at-sgs/job-opportunities",
+        "errors": [],
+        "samples": []
+      }
+    }
+  }
+}

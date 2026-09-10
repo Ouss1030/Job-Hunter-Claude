@@ -1,0 +1,826 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import math
+from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+from interface.data_access import (
+    ROOT,
+    collection_history,
+    dashboard_metrics,
+    decorate_scored_jobs,
+    entity_history,
+    lifecycle_rows,
+    load_latest_final_pool,
+    load_latest_queue,
+    query_all_jobs,
+    source_metrics,
+)
+from interface.lifecycle_service import USER_STATUSES, add_note, set_status
+from interface.handoff_service import (
+    create_manual_handoff,
+    handoff_history,
+    latest_handoff,
+    load_candidates as load_handoff_candidates,
+    open_folder,
+)
+from interface.pipeline_runner import get_run_state, is_running, latest_ui_log, launch_daily_run
+from interface.progress_monitor import (
+    STEP_ORDER,
+    active_step_activity,
+    completed_steps,
+    format_duration,
+    latest_daily_manifest,
+    run_elapsed_seconds,
+    step_rows,
+)
+
+
+st.set_page_config(
+    page_title="JobHunter",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+STATUS_FR = {
+    "NON_SUIVIE": "Non suivie",
+    "DISCOVERED": "Découverte",
+    "SHORTLISTED": "Présélectionnée",
+    "READY": "Prête",
+    "DOCUMENTS_READY": "Documents prêts",
+    "APPLIED": "✅ Candidature envoyée",
+    "INTERVIEW": "🗣️ Entretien",
+    "OFFER": "🎉 Offre reçue",
+    "REJECTED": "❌ Refus",
+    "WITHDRAWN": "Retirée",
+    "CLOSED": "Fermée / expirée",
+}
+
+STATUS_EMOJI = {
+    "NON_SUIVIE": "⚪",
+    "DISCOVERED": "🔵",
+    "SHORTLISTED": "🟣",
+    "READY": "🟢",
+    "DOCUMENTS_READY": "📄",
+    "APPLIED": "✅",
+    "INTERVIEW": "🗣️",
+    "OFFER": "🎉",
+    "REJECTED": "❌",
+    "WITHDRAWN": "↩️",
+    "CLOSED": "⚫",
+}
+
+
+def label_status(value: str | None) -> str:
+    value = value or "NON_SUIVIE"
+    return f"{STATUS_EMOJI.get(value, '•')} {STATUS_FR.get(value, value)}"
+
+
+def to_df(items: list[dict], mode: str) -> pd.DataFrame:
+    rows = []
+    for x in items:
+        if mode == "final":
+            score = x.get("final_score_v12", x.get("final_score"))
+            rank = x.get("pool_rank_v12", x.get("pool_rank"))
+            action = x.get("recommended_action_v12", x.get("recommended_action"))
+            priority = x.get("priority_v12", x.get("priority"))
+        elif mode == "queue":
+            score = x.get("queue_score")
+            rank = x.get("queue_rank")
+            action = x.get("queue_status")
+            priority = x.get("gate_status")
+        else:
+            score = x.get("final_score") or x.get("queue_score") or x.get("match_score")
+            rank = x.get("pool_rank") or x.get("queue_rank")
+            action = x.get("recommended_action")
+            priority = x.get("priority")
+
+        rows.append({
+            "ID": x.get("canonical_job_id"),
+            "Rang": rank,
+            "Score": score,
+            "Postulé": x.get("applied", "Non"),
+            "Statut": label_status(x.get("application_status")),
+            "Poste": x.get("title"),
+            "Entreprise": x.get("company"),
+            "Lieu": x.get("location"),
+            "Source": x.get("source"),
+            "Track": x.get("cv_track") or x.get("best_family"),
+            "Priorité": priority,
+            "Action": action,
+            "Date": x.get("date_published"),
+            "Lien": x.get("url"),
+        })
+    return pd.DataFrame(rows)
+
+
+def table_config():
+    return {
+        "ID": None,
+        "Rang": st.column_config.NumberColumn("#", format="%d", width="small"),
+        "Score": st.column_config.NumberColumn("Score", format="%.1f", width="small"),
+        "Postulé": st.column_config.TextColumn("Postulé", width="small"),
+        "Statut": st.column_config.TextColumn("Statut", width="medium"),
+        "Poste": st.column_config.TextColumn("Poste", width="large"),
+        "Entreprise": st.column_config.TextColumn("Entreprise", width="medium"),
+        "Lieu": st.column_config.TextColumn("Lieu", width="medium"),
+        "Source": st.column_config.TextColumn("Source", width="small"),
+        "Track": st.column_config.TextColumn("Profil CV", width="small"),
+        "Priorité": st.column_config.TextColumn("Priorité", width="small"),
+        "Action": st.column_config.TextColumn("Action", width="medium"),
+        "Date": st.column_config.TextColumn("Publication", width="small"),
+        "Lien": st.column_config.LinkColumn("Ouvrir l'offre", display_text="🔗 Ouvrir", width="small"),
+    }
+
+
+def filtered(items: list[dict], search: str, sources: list[str], statuses: list[str], min_score: float | None = None):
+    search_l = search.strip().lower()
+    out = []
+    for x in items:
+        if search_l:
+            hay = " ".join(str(x.get(k) or "") for k in ("title", "company", "location")).lower()
+            if search_l not in hay:
+                continue
+        if sources and (x.get("source") or "") not in sources:
+            continue
+        if statuses and (x.get("application_status") or "NON_SUIVIE") not in statuses:
+            continue
+        score = x.get("display_score")
+        if min_score is not None and score is not None and float(score) < min_score:
+            continue
+        out.append(x)
+    return out
+
+
+def detail_panel(job: dict, key_prefix: str):
+    st.divider()
+    st.subheader(job.get("title") or "Offre")
+    c1, c2, c3, c4 = st.columns([2, 2, 1, 1])
+    c1.write(f"**Entreprise :** {job.get('company') or '—'}")
+    c2.write(f"**Lieu :** {job.get('location') or '—'}")
+    c3.write(f"**Source :** {job.get('source') or '—'}")
+    c4.write(f"**Statut :** {label_status(job.get('application_status'))}")
+
+    score_cols = st.columns(4)
+    score_cols[0].metric("Match", job.get("match_score") if job.get("match_score") is not None else "—")
+    score_cols[1].metric("Queue", job.get("queue_score") if job.get("queue_score") is not None else "—")
+    score_cols[2].metric("Final", job.get("final_score_v12", job.get("final_score")) if (job.get("final_score_v12") is not None or job.get("final_score") is not None) else "—")
+    score_cols[3].metric("Priorité", job.get("priority_v12", job.get("priority")) or "—")
+
+    if job.get("url"):
+        st.link_button("🔗 Ouvrir l'annonce originale", job["url"], type="primary")
+
+    current = job.get("application_status") or "NON_SUIVIE"
+    already_applied = str(job.get("applied") or "").lower() == "oui" or current in {
+        "APPLIED", "INTERVIEW", "OFFER", "REJECTED"
+    }
+
+    st.markdown("#### Actions rapides")
+    qa1, qa2, qa3, qa4 = st.columns([1.4, 1.2, 1.0, 3.4])
+    if already_applied:
+        qa1.button("✅ Déjà postulé", disabled=True, key=f"{key_prefix}_already_applied")
+    elif qa1.button("✅ J'ai postulé", type="primary", key=f"{key_prefix}_quick_applied"):
+        try:
+            set_status(job, "APPLIED", "Candidature marquée comme envoyée depuis JobHunter UI.")
+            st.success("Candidature marquée comme envoyée.")
+            st.rerun()
+        except Exception as exc:
+            st.error(f"Impossible d'enregistrer la candidature : {exc}")
+
+    if qa2.button("🗣️ Entretien", disabled=not already_applied, key=f"{key_prefix}_quick_interview"):
+        try:
+            set_status(job, "INTERVIEW", "Entretien enregistré depuis JobHunter UI.")
+            st.rerun()
+        except Exception as exc:
+            st.error(f"Impossible d'enregistrer l'entretien : {exc}")
+
+    if qa3.button("❌ Refus", disabled=not already_applied, key=f"{key_prefix}_quick_rejected"):
+        try:
+            set_status(job, "REJECTED", "Refus enregistré depuis JobHunter UI.")
+            st.rerun()
+        except Exception as exc:
+            st.error(f"Impossible d'enregistrer le refus : {exc}")
+
+    qa4.caption("Ces boutons écrivent dans le Lifecycle existant de JobHunter. Rien n'est marqué APPLIED automatiquement.")
+
+    with st.expander("Description de l'offre", expanded=False):
+        st.write(job.get("description") or "Description non disponible dans cet artefact.")
+
+    st.markdown("#### Suivi de candidature")
+    options = USER_STATUSES
+    default_index = options.index(current) if current in options else 0
+    col_status, col_note, col_action = st.columns([2, 4, 1])
+    selected_status = col_status.selectbox(
+        "Nouveau statut",
+        options,
+        index=default_index,
+        format_func=lambda s: label_status(s),
+        key=f"{key_prefix}_status",
+    )
+    note = col_note.text_input(
+        "Note facultative",
+        placeholder="Ex. candidature envoyée via le site de l'entreprise",
+        key=f"{key_prefix}_status_note",
+    )
+    if col_action.button("Enregistrer", type="primary", key=f"{key_prefix}_save_status"):
+        try:
+            set_status(job, selected_status, note)
+            st.success(f"Statut enregistré : {label_status(selected_status)}")
+            st.rerun()
+        except Exception as exc:
+            st.error(f"Impossible d'enregistrer le statut : {exc}")
+
+    note_only = st.text_input(
+        "Ajouter une note sans changer le statut",
+        key=f"{key_prefix}_note_only",
+    )
+    if st.button("Ajouter la note", key=f"{key_prefix}_add_note"):
+        try:
+            add_note(job, note_only)
+            st.success("Note ajoutée.")
+        except Exception as exc:
+            st.error(f"Impossible d'ajouter la note : {exc}")
+
+
+def scored_tab(items: list[dict], mode: str, key_prefix: str):
+    if not items:
+        st.info("Aucune donnée disponible pour cette vue.")
+        return
+
+    source_values = sorted({x.get("source") for x in items if x.get("source")})
+    status_values = ["NON_SUIVIE"] + USER_STATUSES
+    f1, f2, f3, f4 = st.columns([3, 2, 2, 2])
+    search = f1.text_input("Recherche", placeholder="poste, entreprise, lieu…", key=f"{key_prefix}_search")
+    sources = f2.multiselect("Sources", source_values, key=f"{key_prefix}_sources")
+    statuses = f3.multiselect(
+        "Statuts",
+        status_values,
+        format_func=lambda s: STATUS_FR.get(s, s),
+        key=f"{key_prefix}_statuses",
+    )
+
+    scores = [float(x["display_score"]) for x in items if x.get("display_score") is not None]
+    min_score = None
+    if scores:
+        floor = int(min(scores))
+        ceil = int(max(scores))
+        min_score = f4.slider("Score minimum", floor, ceil, floor, key=f"{key_prefix}_minscore")
+
+    shown = filtered(items, search, sources, statuses, min_score)
+    st.caption(f"{len(shown)} offre(s) affichée(s) sur {len(items)}")
+    df = to_df(shown, mode)
+    if df.empty:
+        st.warning("Aucune offre ne correspond aux filtres.")
+        return
+
+    event = st.dataframe(
+        df,
+        width="stretch",
+        height=520,
+        hide_index=True,
+        column_config=table_config(),
+        on_select="rerun",
+        selection_mode="single-row",
+        key=f"{key_prefix}_table",
+    )
+
+    if event.selection.rows:
+        idx = event.selection.rows[0]
+        detail_panel(shown[idx], f"{key_prefix}_{idx}")
+    else:
+        st.caption("Clique sur une ligne pour ouvrir sa fiche et modifier son statut.")
+
+
+@st.fragment(run_every="2s")
+def pipeline_live_panel():
+    running = is_running()
+    state = get_run_state()
+    manifest_path, manifest = latest_daily_manifest()
+
+    run_cols = st.columns([1, 3])
+    if running:
+        run_cols[0].button("⏳ Pipeline en cours", disabled=True, width="stretch")
+        run_cols[1].info(
+            "Le Daily Run travaille en arrière-plan. Cette zone se met à jour automatiquement toutes les 2 secondes."
+        )
+    else:
+        if run_cols[0].button("▶ Lancer maintenant", type="primary", width="stretch"):
+            try:
+                log_path = launch_daily_run()
+                st.success(f"Daily Run lancé. Journal : {log_path.name}")
+                st.rerun(scope="fragment")
+            except Exception as exc:
+                st.error(f"Impossible de lancer le pipeline : {exc}")
+        run_cols[1].write(
+            "Le préflight est vérifié automatiquement, puis daily_run.py est exécuté en UTF-8."
+        )
+
+    if state:
+        status = state.get("status", "—")
+        rc = state.get("returncode")
+        started = state.get("started_at") or "—"
+        finished = state.get("finished_at") or "—"
+
+        if status == "FAILED":
+            st.error(f"Dernier lancement UI : FAILED — code {rc}. {state.get('error') or ''}")
+        elif status == "COMPLETED":
+            st.success(f"Dernier lancement UI : COMPLETED — code {rc}.")
+        elif status in {"STARTING", "RUNNING"}:
+            st.info(f"État du lancement UI : {status} — démarré à {started}.")
+
+        with st.expander("Diagnostic du lancement"):
+            st.write({
+                "statut": status,
+                "début": started,
+                "fin": finished,
+                "PID worker": state.get("worker_pid"),
+                "code de sortie": rc,
+                "erreur": state.get("error"),
+            })
+
+    if manifest:
+        done = completed_steps(manifest)
+        total = len(STEP_ORDER)
+        elapsed = format_duration(run_elapsed_seconds(manifest, state))
+        current = active_step_activity(manifest)
+
+        m1, m2, m3 = st.columns(3)
+        m1.metric("Étapes terminées", f"{done}/{total}")
+        m2.metric("Temps écoulé", elapsed)
+        m3.metric("Run", manifest.get("status") or "—")
+
+        if current:
+            st.markdown(f"#### 🔄 {current.get('step_label') or current.get('step')}")
+
+            if current.get("source"):
+                st.write(f"**Source active :** {current['source']}")
+
+            kcur = current.get("keyword_current")
+            ktot = current.get("keyword_total")
+            if kcur is not None and ktot:
+                ratio = max(0.0, min(1.0, kcur / ktot))
+                st.progress(ratio, text=f"{current['source'] or 'Recherche'} : {kcur}/{ktot} mots-clés ({ratio*100:.0f} %) — {current.get('keyword') or ''}")
+
+            age = current.get("log_age_seconds")
+            if age is not None:
+                if age < 15:
+                    st.caption(f"🟢 Activité détectée — journal mis à jour il y a {age} s")
+                elif age < 180:
+                    st.caption(f"🟡 Dernière sortie il y a {age} s — une requête réseau peut être en cours")
+                else:
+                    st.warning(
+                        f"Aucune nouvelle ligne dans le journal depuis {age // 60} min. "
+                        "Le processus peut être sur une requête lente ; le PID et le manifest restent les sources de vérité."
+                    )
+
+            tail = current.get("tail_lines") or []
+            if tail:
+                with st.expander("Activité en direct", expanded=True):
+                    st.code("\n".join(tail), language=None)
+
+        st.dataframe(
+            pd.DataFrame(step_rows(manifest)),
+            width="stretch",
+            hide_index=True,
+            height=315,
+        )
+
+        if manifest_path:
+            st.caption(f"Manifest suivi : {manifest_path.name}")
+    elif running:
+        st.info("Initialisation du manifest Daily Run…")
+
+    log = latest_ui_log()
+    if log and log.exists():
+        with st.expander("Journal UI complet"):
+            text = log.read_text(encoding="utf-8", errors="replace")
+            st.code(text[-12000:], language=None)
+
+
+def dashboard_page():
+    metrics = dashboard_metrics()
+    latest = metrics["latest_collection"] or {}
+
+    cols = st.columns(5)
+    cols[0].metric("Offres actuelles", metrics["canonical_count"])
+    cols[1].metric("Qualifiées", metrics["queue_count"])
+    cols[2].metric("Prioritaires", metrics["pool_count"])
+    cols[3].metric("Candidatures envoyées", metrics["status_counts"].get("APPLIED", 0))
+    cols[4].metric("Entretiens", metrics["status_counts"].get("INTERVIEW", 0))
+
+    st.markdown("### Lancer JobHunter")
+
+    pipeline_live_panel()
+
+    st.caption("Le Daily Run ne crée plus aucun handoff automatiquement. Les chunks se créent uniquement depuis 📦 Handoff ChatGPT.")
+    last_handoff = latest_handoff()
+    if last_handoff:
+        h1, h2, h3 = st.columns([2, 1, 2])
+        h1.write(f"**Dernier handoff :** {str(last_handoff.get('generated_at') or '—').replace('T', ' ')}")
+        h2.write(f"**Chunks :** {len(last_handoff.get('chunk_zips') or [])}")
+        if h3.button("📂 Ouvrir les handoffs", key="dashboard_open_handoffs"):
+            try:
+                open_folder(Path(last_handoff["folder"]).parent)
+                st.toast("Explorateur Windows ouvert.")
+            except Exception as exc:
+                st.error(f"Impossible d'ouvrir le dossier : {exc}")
+
+    st.markdown("### Dernière collecte")
+    if latest:
+        c1, c2, c3, c4, c5 = st.columns(5)
+        c1.write(f"**Début**\n\n{latest.get('started_at','—')}")
+        c2.write(f"**Statut**\n\n{latest.get('status','—')}")
+        c3.write(f"**Collectées**\n\n{latest.get('total_collected',0)}")
+        c4.write(f"**Nouvelles**\n\n{latest.get('inserted_count',0)}")
+        c5.write(f"**Erreurs**\n\n{latest.get('error_count',0)}")
+
+
+def all_jobs_page():
+    st.caption("Vue du dernier build canonique. La requête est paginée côté SQLite pour rester légère sur 8 Go de RAM.")
+    sources_available = [x["source"] for x in source_metrics()]
+    f1, f2, f3, f4 = st.columns([3, 2, 1, 1])
+    search = f1.text_input("Recherche globale", placeholder="HPLC, data analyst, GSK…", key="all_search")
+    sources = f2.multiselect("Sources", sources_available, key="all_sources")
+    active_only = f3.toggle("Actives uniquement", value=True, key="all_active")
+    page_size = f4.selectbox("Par page", [50, 100, 200], index=1, key="all_pagesize")
+
+    # On calcule d'abord le total avec la page demandée, puis on corrige si nécessaire.
+    page = int(st.session_state.get("all_page", 1))
+    items, total, build_id = query_all_jobs(
+        text=search,
+        sources=sources,
+        active_only=active_only,
+        page=page,
+        page_size=page_size,
+    )
+    pages = max(1, math.ceil(total / page_size))
+    if page > pages:
+        page = pages
+        st.session_state["all_page"] = page
+        items, total, build_id = query_all_jobs(
+            text=search, sources=sources, active_only=active_only, page=page, page_size=page_size
+        )
+
+    p1, p2, p3 = st.columns([1, 2, 1])
+    if p1.button("← Précédent", disabled=page <= 1, key="all_prev"):
+        st.session_state["all_page"] = page - 1
+        st.rerun()
+    p2.markdown(f"<div style='text-align:center'>Page <b>{page}</b> / {pages} — {total} offre(s)</div>", unsafe_allow_html=True)
+    if p3.button("Suivant →", disabled=page >= pages, key="all_next"):
+        st.session_state["all_page"] = page + 1
+        st.rerun()
+
+    st.caption(f"Build : {build_id or '—'}")
+    df = to_df(items, "all")
+    if df.empty:
+        st.warning("Aucune offre dans cette vue.")
+        return
+
+    event = st.dataframe(
+        df,
+        width="stretch",
+        height=560,
+        hide_index=True,
+        column_config=table_config(),
+        on_select="rerun",
+        selection_mode="single-row",
+        key="all_jobs_table",
+    )
+    if event.selection.rows:
+        idx = event.selection.rows[0]
+        detail_panel(items[idx], f"all_{items[idx].get('canonical_job_id', idx)}")
+
+
+def applications_page():
+    f1, f2 = st.columns([2, 4])
+    status = f1.selectbox(
+        "Filtrer par statut",
+        ["TOUS"] + USER_STATUSES,
+        format_func=lambda s: "Tous" if s == "TOUS" else label_status(s),
+    )
+    rows = lifecycle_rows(status)
+    f2.caption(f"{len(rows)} candidature(s) suivie(s) dans le Lifecycle")
+    if not rows:
+        st.info("Aucune candidature dans ce statut.")
+        return
+
+    df = pd.DataFrame([
+        {
+            "entity_id": x["entity_id"],
+            "Statut": label_status(x.get("current_status")),
+            "Postulé": "Oui" if x.get("has_applied") else "Non",
+            "Poste": x.get("title"),
+            "Entreprise": x.get("company"),
+            "Lieu": x.get("location"),
+            "Track": x.get("track"),
+            "Dernière mise à jour": x.get("status_at"),
+            "Lien": x.get("url"),
+        }
+        for x in rows
+    ])
+    event = st.dataframe(
+        df,
+        width="stretch",
+        height=520,
+        hide_index=True,
+        column_config={
+            "entity_id": None,
+            "Lien": st.column_config.LinkColumn("Offre", display_text="🔗 Ouvrir"),
+        },
+        on_select="rerun",
+        selection_mode="single-row",
+        key="applications_table",
+    )
+    if event.selection.rows:
+        row = rows[event.selection.rows[0]]
+        st.divider()
+        st.subheader(row.get("title") or "Candidature")
+        st.write(f"**{row.get('company') or '—'}** — {row.get('location') or '—'}")
+        if row.get("url"):
+            st.link_button("🔗 Ouvrir l'annonce", row["url"])
+        st.markdown("#### Historique")
+        history = entity_history(int(row["entity_id"]))
+        st.dataframe(pd.DataFrame(history), width="stretch", hide_index=True)
+
+
+def _handoff_filter_signature(search: str, sources: list[str], actions: list[str], only_not_applied: bool) -> str:
+    payload = json.dumps(
+        [search, sorted(sources), sorted(actions), bool(only_not_applied)],
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    return hashlib.md5(payload.encode("utf-8")).hexdigest()[:10]
+
+
+def handoff_page():
+    st.caption(
+        "Aucune API OpenAI n'est utilisée. Tu choisis toi-même les offres, puis JobHunter crée uniquement les ZIP à envoyer manuellement dans ChatGPT."
+    )
+
+    candidates, pool_path = load_handoff_candidates()
+    if not candidates:
+        st.info("Aucun Final Application Pool disponible. Lance d'abord JobHunter.")
+        return
+
+    if pool_path:
+        st.caption(f"Final Pool utilisé : {pool_path.name}")
+
+    valid_keys = {str(x.get("stable_item_key")) for x in candidates if x.get("stable_item_key")}
+    selected = set(st.session_state.get("handoff_selected_keys", [])) & valid_keys
+    st.session_state["handoff_selected_keys"] = list(selected)
+    revision = int(st.session_state.get("handoff_editor_revision", 0))
+
+    source_values = sorted({str(x.get("source")) for x in candidates if x.get("source")})
+    action_values = sorted({
+        str(x.get("recommended_action_v12") or x.get("recommended_action"))
+        for x in candidates
+        if x.get("recommended_action_v12") or x.get("recommended_action")
+    })
+
+    f1, f2, f3, f4 = st.columns([3, 2, 2, 1.5])
+    search = f1.text_input("Recherche", placeholder="poste, entreprise, lieu…", key="handoff_search")
+    sources = f2.multiselect("Sources", source_values, key="handoff_sources")
+    actions = f3.multiselect("Actions", action_values, default=action_values, key="handoff_actions")
+    only_not_applied = f4.toggle("Non postulées", value=True, key="handoff_not_applied")
+
+    search_l = search.strip().lower()
+    shown = []
+    for job in candidates:
+        if search_l:
+            hay = " ".join(str(job.get(k) or "") for k in ("title", "company", "location")).lower()
+            if search_l not in hay:
+                continue
+        if sources and str(job.get("source") or "") not in sources:
+            continue
+        action = str(job.get("recommended_action_v12") or job.get("recommended_action") or "")
+        if actions and action not in actions:
+            continue
+        if only_not_applied and str(job.get("applied") or "").lower() == "oui":
+            continue
+        shown.append(job)
+
+    b1, b2, b3, b4 = st.columns([1.6, 1.4, 1.2, 3.8])
+    if b1.button("☑ Tout sélectionner affiché", disabled=not shown, key="handoff_select_visible"):
+        selected.update(str(x.get("stable_item_key")) for x in shown if x.get("stable_item_key"))
+        st.session_state["handoff_selected_keys"] = list(selected)
+        st.session_state["handoff_editor_revision"] = revision + 1
+        st.rerun()
+    if b2.button("☐ Désélectionner affiché", disabled=not shown, key="handoff_unselect_visible"):
+        selected.difference_update(str(x.get("stable_item_key")) for x in shown if x.get("stable_item_key"))
+        st.session_state["handoff_selected_keys"] = list(selected)
+        st.session_state["handoff_editor_revision"] = revision + 1
+        st.rerun()
+    if b3.button("🧹 Tout effacer", disabled=not selected, key="handoff_clear_all"):
+        st.session_state["handoff_selected_keys"] = []
+        st.session_state["handoff_editor_revision"] = revision + 1
+        st.rerun()
+    b4.info(f"**{len(selected)} offre(s) sélectionnée(s)** — {len(shown)} actuellement affichée(s)")
+
+    rows = []
+    for job in shown:
+        stable = str(job.get("stable_item_key") or "")
+        rows.append({
+            "Sélection": stable in selected,
+            "stable_item_key": stable,
+            "Rang": job.get("pool_rank_v12", job.get("pool_rank")),
+            "Score": job.get("final_score_v12", job.get("final_score")),
+            "Action": job.get("recommended_action_v12", job.get("recommended_action")),
+            "Postulé": job.get("applied", "Non"),
+            "Statut": label_status(job.get("application_status")),
+            "Poste": job.get("title"),
+            "Entreprise": job.get("company"),
+            "Lieu": job.get("location"),
+            "Source": job.get("source"),
+            "Track": job.get("cv_track") or job.get("track"),
+            "Lien": job.get("url"),
+        })
+
+    if rows:
+        df = pd.DataFrame(rows)
+        signature = _handoff_filter_signature(search, sources, actions, only_not_applied)
+        editor_key = f"handoff_editor_{revision}_{signature}"
+        edited = st.data_editor(
+            df,
+            width="stretch",
+            height=520,
+            hide_index=True,
+            num_rows="fixed",
+            disabled=[
+                "stable_item_key", "Rang", "Score", "Action", "Postulé", "Statut",
+                "Poste", "Entreprise", "Lieu", "Source", "Track", "Lien",
+            ],
+            column_config={
+                "Sélection": st.column_config.CheckboxColumn("Choisir", width="small"),
+                "stable_item_key": None,
+                "Rang": st.column_config.NumberColumn("#", format="%d", width="small"),
+                "Score": st.column_config.NumberColumn("Score", format="%.1f", width="small"),
+                "Poste": st.column_config.TextColumn("Poste", width="large"),
+                "Entreprise": st.column_config.TextColumn("Entreprise", width="medium"),
+                "Lieu": st.column_config.TextColumn("Lieu", width="medium"),
+                "Lien": st.column_config.LinkColumn("Offre", display_text="🔗 Ouvrir", width="small"),
+            },
+            key=editor_key,
+        )
+
+        visible_keys = {str(value) for value in df["stable_item_key"].tolist() if str(value)}
+        selected_visible = {
+            str(value)
+            for value in edited.loc[edited["Sélection"] == True, "stable_item_key"].tolist()  # noqa: E712
+            if str(value)
+        }
+        new_selected = (selected - visible_keys) | selected_visible
+        if new_selected != selected:
+            selected = new_selected
+            st.session_state["handoff_selected_keys"] = list(selected)
+            st.rerun()
+
+    st.divider()
+    st.markdown("### Créer les chunks")
+    c1, c2, c3 = st.columns([1.4, 2.0, 4.6])
+    chunk_size = int(c1.number_input("Offres par chunk", min_value=1, max_value=50, value=10, step=1, key="handoff_chunk_size"))
+    c2.metric("Sélection actuelle", len(selected))
+    c3.caption(
+        "Exemple : 23 offres avec une taille de 10 → 3 ZIP (10 + 10 + 3). Aucun chunk n'est créé tant que tu ne cliques pas sur le bouton."
+    )
+
+    if st.button(
+        "📦 Créer les chunks ChatGPT sélectionnés",
+        type="primary",
+        disabled=not selected,
+        key="handoff_create",
+    ):
+        try:
+            ordered_keys = [
+                str(job.get("stable_item_key"))
+                for job in candidates
+                if str(job.get("stable_item_key") or "") in selected
+            ]
+            with st.spinner("Création des chunks sélectionnés…"):
+                result = create_manual_handoff(ordered_keys, chunk_size=chunk_size)
+            st.session_state["handoff_last_created_dir"] = str(result["export_dir"])
+            st.session_state["handoff_last_created_zips"] = [str(path) for path in result["chunk_zips"]]
+            st.success(
+                f"Handoff créé : {len(ordered_keys)} offre(s), {len(result['chunk_zips'])} chunk(s)."
+            )
+        except Exception as exc:
+            st.error(f"Impossible de créer les chunks : {exc}")
+
+    created_dir = st.session_state.get("handoff_last_created_dir")
+    created_zips = st.session_state.get("handoff_last_created_zips") or []
+    if created_dir:
+        st.markdown("#### Dernier handoff créé pendant cette session")
+        st.code("\n".join(Path(path).name for path in created_zips) or "Aucun ZIP", language=None)
+        oc1, oc2 = st.columns([1.6, 5.4])
+        if oc1.button("📂 Ouvrir le dossier des chunks", type="primary", key="handoff_open_created"):
+            try:
+                open_folder(Path(created_dir).parent)
+                st.toast("Explorateur Windows ouvert.")
+            except Exception as exc:
+                st.error(f"Impossible d'ouvrir le dossier : {exc}")
+        oc2.code(str(Path(created_dir).parent), language=None)
+
+    st.divider()
+    st.markdown("### Historique des handoffs")
+    history = handoff_history(limit=15)
+    if not history:
+        st.info("Aucun handoff créé pour le moment.")
+        return
+
+    for idx, item in enumerate(history):
+        stamp = str(item.get("generated_at") or "—").replace("T", " ")
+        chunks = item.get("chunk_zips") or []
+        with st.expander(
+            f"{stamp} — {item.get('selected_count', 0)} offre(s) — {len(chunks)} chunk(s)",
+            expanded=idx == 0,
+        ):
+            if chunks:
+                st.code("\n".join(path.name for path in chunks), language=None)
+            else:
+                st.caption("Aucun ZIP chunk détecté pour ce handoff historique.")
+            hc1, hc2 = st.columns([1.7, 5.3])
+            if hc1.button("📂 Ouvrir le dossier", key=f"handoff_history_open_{idx}"):
+                try:
+                    open_folder(Path(item["folder"]).parent)
+                    st.toast("Explorateur Windows ouvert.")
+                except Exception as exc:
+                    st.error(f"Impossible d'ouvrir le dossier : {exc}")
+            hc2.code(str(Path(item["folder"]).parent), language=None)
+
+
+def sources_page():
+    rows = source_metrics()
+    st.write("Les sources ci-dessous sont celles réellement présentes dans `raw_jobs`.")
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+    st.info(
+        "V1 : consultation des sources. L'ajout/activation dynamique d'un scraper depuis l'interface sera la prochaine évolution, "
+        "car `main.py` appelle encore les cinq collecteurs explicitement."
+    )
+
+
+def history_page():
+    rows = collection_history(50)
+    if not rows:
+        st.info("Aucun historique de collecte.")
+        return
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+
+
+st.title("🎯 JobHunter")
+st.caption("Cockpit local — collecte, scoring, priorisation et suivi de tes candidatures")
+
+with st.sidebar:
+    st.markdown("### Navigation")
+    page = st.radio(
+        "Navigation principale",
+        [
+            "🏠 Dashboard",
+            "⭐ Prioritaires",
+            "🎯 Qualifiées",
+            "💼 Toutes les offres",
+            "📦 Handoff ChatGPT",
+            "📨 Mes candidatures",
+            "📡 Sources",
+            "🕒 Historique",
+        ],
+        label_visibility="collapsed",
+    )
+    st.divider()
+    st.caption(f"Projet : {ROOT}")
+    st.caption("JobHunter UI V2.0 — handoff manuel")
+
+if page == "🏠 Dashboard":
+    dashboard_page()
+elif page == "⭐ Prioritaires":
+    pool, _, pool_path = load_latest_final_pool()
+    decorated = decorate_scored_jobs(pool, final=True)
+    st.subheader("⭐ Offres prioritaires")
+    if pool_path:
+        st.caption(f"Artefact : {pool_path.name}")
+    scored_tab(decorated, "final", "pool")
+elif page == "🎯 Qualifiées":
+    queue, queue_path = load_latest_queue()
+    decorated = decorate_scored_jobs(queue, final=False)
+    st.subheader("🎯 Offres qualifiées")
+    if queue_path:
+        st.caption(f"Artefact : {queue_path.name}")
+    scored_tab(decorated, "queue", "queue")
+elif page == "💼 Toutes les offres":
+    st.subheader("💼 Toutes les offres")
+    all_jobs_page()
+elif page == "📦 Handoff ChatGPT":
+    st.subheader("📦 Handoff ChatGPT")
+    handoff_page()
+elif page == "📨 Mes candidatures":
+    st.subheader("📨 Mes candidatures")
+    applications_page()
+elif page == "📡 Sources":
+    st.subheader("📡 Sources")
+    sources_page()
+elif page == "🕒 Historique":
+    st.subheader("🕒 Historique des collectes")
+    history_page()

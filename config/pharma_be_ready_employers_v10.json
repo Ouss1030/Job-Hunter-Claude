@@ -1,0 +1,336 @@
+[
+  {
+    "company": "Air Liquide Medical NV/SA",
+    "website": "http://www.airliquide.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 0,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://www.airliquide.com/join-us/careers-air-liquide",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.airliquide.com/join-us/careers-air-liquide"
+    ],
+    "discovery_priority_score": 105
+  },
+  {
+    "company": "Bristol-Myers Squibb Belgium NV/SA",
+    "website": "https://www.bms.com/be",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://careers.bms.com/be/?lang=en-US",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://careers.bms.com/be?lang=en-US"
+    ],
+    "discovery_priority_score": 105
+  },
+  {
+    "company": "Galderma Benelux BV (Belgian Branch)",
+    "website": "http://www.galderma.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://www.galderma.com/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.galderma.com/careers"
+    ],
+    "discovery_priority_score": 105
+  },
+  {
+    "company": "Amgen NV/SA",
+    "website": "http://www.amgen.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://careers.amgen.com/en",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "http://careers.amgen.com/"
+    ],
+    "discovery_priority_score": 75
+  },
+  {
+    "company": "BeiGene Belgium",
+    "website": "https://www.beigene.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 4,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://beonemedicines.com/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://beonemedicines.com/"
+    ],
+    "discovery_priority_score": 75
+  },
+  {
+    "company": "Elanco Belgium BV",
+    "website": "https://www.elanco.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [
+      "WORKDAY"
+    ],
+    "career_url": "https://www.elanco.com/us/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.elanco.com/us/careers"
+    ],
+    "discovery_priority_score": 75
+  },
+  {
+    "company": "Alexion Pharma Belgium",
+    "website": "https://alexion.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 0,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://careers.alexion.com/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://careers.alexion.com/"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Astellas BV",
+    "website": "http://www.astellas.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.astellas.com/en/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.astellas.com/en/careers"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Bepharbel Manufacturing NV/SA",
+    "website": "http://www.bepharbel.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 1,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.bepharbel.com/offres-emploi/#offres",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.bepharbel.com/offres-emploi/#offres"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Ceres Pharmaceuticals SA",
+    "website": "https://ceres-pharma.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 1,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://ceres-pharma.com/en/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://ceres-pharma.com/en/careers"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Curium Belgium BV",
+    "website": "http://www.curiumpharma.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.curiumpharma.com/careers/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.curiumpharma.com/careers/"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Daiichi Sankyo Belgium NV/SA",
+    "website": "http://www.daiichi-sankyo.be/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.daiichi-sankyo.be/career/discover-daiichi-sankyo-europe/#c38007",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.daiichi-sankyo.be/career/discover-daiichi-sankyo-europe/#c38007"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Dechra Veterinary Products NV/SA",
+    "website": "http://www.dechra.eu/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 1,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://careers.dechra.com/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://careers.dechra.com/"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "EFFIK BENELUX (ITALFARMACO Group)",
+    "website": "https://www.delbertpharma.com",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://delbertpharma.com/career/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://delbertpharma.com/career/"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "GE Healthcare BVBA/SPRL",
+    "website": "http://www.gehealthcare.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://careers.gehealthcare.com/global/en",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://careers.gehealthcare.com/global/en"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Grünenthal NV/SA",
+    "website": "http://www.grunenthal.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 0,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.grunenthal.com/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.grunenthal.com/careers"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Guerbet NV/SA",
+    "website": "https://www.guerbet.com/en-be",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.guerbet.com/careers-0",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.guerbet.com/careers-0"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "IJsfabriek Strombeek NV/SA",
+    "website": "http://www.ysfab.be/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.ijsfabriekstrombeek.be/nl/vacatures/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.ijsfabriekstrombeek.be/nl/vacatures/"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Kela Veterinaria NV/SA",
+    "website": "https://www.kela.health",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 4,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.kela.health/working-at-kela/",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.kela.health/jobs",
+      "https://www.kela.health/careers",
+      "https://www.kela.health/career",
+      "https://www.kela.health/emploi",
+      "https://www.kela.health/vacatures",
+      "https://www.kela.health/jobs-and-careers",
+      "https://www.kela.health/join-us",
+      "https://www.kela.health/werken-bij"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Lundbeck NV/SA",
+    "website": "http://www.lundbeck.com/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 3,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.lundbeck.com/global/careers",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.lundbeck.com/global/careers"
+    ],
+    "discovery_priority_score": 50
+  },
+  {
+    "company": "Menarini Benelux NV/SA",
+    "website": "http://www.menarini.be/",
+    "country_class": "BELGIUM",
+    "source": "pharma.be",
+    "page": 2,
+    "status": "CAREER_OK",
+    "ats": [],
+    "career_url": "https://www.menarini.be/nl/vacatures.html",
+    "jsonld_jobposting": false,
+    "tested_paths": [
+      "https://www.menarini.be/nl/vacatures.html"
+    ],
+    "discovery_priority_score": 50
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "enabled": {
+    "FOREM": true,
+    "ACTIRIS": true,
+    "TALENT_BRUSSELS": true,
+    "TRAVAILLERPOUR": true,
+    "SMARTRECRUITERS": true,
+    "JOBAT": true,
+    "RECRUITEE": true,
+    "GREENHOUSE": true,
+    "WORKDAY": true,
+    "SUCCESSFACTORS": true,
+    "PHENOM": true
+  }
+}

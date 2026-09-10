@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "enabled": {
+    "FOREM": false,
+    "ACTIRIS": false,
+    "TALENT_BRUSSELS": false,
+    "TRAVAILLERPOUR": false,
+    "SMARTRECRUITERS": false,
+    "JOBAT": true
+  }
+}

@@ -1048,6 +1048,16 @@ def convert_forem_job(
 # TEST
 # ============================================================
 
+
+
+# JOBHUNTER_MASTER400_V2_CORE_ROTATION
+from sources.unified_discovery import get_source_query_terms
+FOREM_TARGET_SEARCH_TERMS = get_source_query_terms(
+    "FOREM",
+    legacy_core_terms=[],
+    rotation_buckets=4,
+)
+
 if __name__ == "__main__":
 
     raw_jobs = (

@@ -71,3 +71,27 @@ test-results/
 build/
 dist/
 *.egg-info/
+
+# ==========================================
+# Ajouts du 10/09/2026
+# ==========================================
+
+# Sauvegardes SQLite locales.
+# database/*.db etait deja couvert, mais pas backups/ : une sauvegarde de
+# 204 Mo y attendait, au-dessus de la limite stricte de 100 Mo par fichier
+# de GitHub — le push aurait ete refuse.
+backups/*.db
+backups/*.db-*
+backups/*.sqlite
+backups/*.sqlite3
+
+# Caches HTTP des connecteurs.
+# Ce sont des pages d'offres aspirees chez des tiers, regenerables a la
+# demande. Les versionner alourdit chaque clone sans rien apporter, et
+# publie du contenu qui ne nous appartient pas.
+logs/*cache*/
+
+# Traces de mise au point ponctuelles.
+logs/*_scheduler_state.json
+logs/forem_[0-9]*_*
+logs/scienceatwork_listing.html

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "backup_dir": "C:\\Users\\Aharr\\Desktop\\JobHunter\\backups\\performance_critical_path_v1_pre_20260904_164912",
+  "existed": {
+    "sources/actiris.py": true,
+    "sources/jobat.py": true,
+    "config/actiris_performance.json": false,
+    "config/source_scheduler.json": true,
+    "logs/actiris_scheduler_state.json": true,
+    "logs/forem_scheduler_state.json": true
+  },
+  "created_at": 1788533352.743782
+}

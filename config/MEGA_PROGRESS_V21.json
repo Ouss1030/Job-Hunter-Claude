@@ -1,0 +1,3174 @@
+{
+  "version": "21.3",
+  "created_at": "2026-09-08T00:11:42+02:00",
+  "updated_at": "2026-09-08T00:28:18+02:00",
+  "sources": {
+    "VDAB": {
+      "attempted_urls": [],
+      "status": "PAUSED",
+      "reason": "Official API requires credentials/schema; not guessed automatically.",
+      "backlog_status": "NEEDS_CREDENTIALS"
+    },
+    "EURES": {
+      "attempted_urls": [],
+      "status": "PAUSED",
+      "reason": "UNOFFICIAL_ENDPOINT_NOT_AUTO_ACTIVATED",
+      "backlog_status": "SKIPPED_POLICY"
+    },
+    "ADG_OSTBELGIEN": {
+      "attempted_urls": [
+        "https://adg.be/",
+        "https://adg.be/desktopdefault.aspx/tabid-6166/",
+        "https://www.adg.be/jobs/",
+        "https://www.adg.be/careers",
+        "https://www.adg.be/careers/",
+        "https://www.adg.be/vacatures",
+        "https://www.adg.be/vacatures/",
+        "https://www.adg.be/fr/jobs",
+        "https://www.adg.be/",
+        "https://www.adg.be/jobs",
+        "https://www.adg.be/fr/jobs/"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "SKIPPED_BLOCKED",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://adg.be/",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://adg.be/desktopdefault.aspx/tabid-6166/",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "BLOCKED",
+          "reason": "HTTP 403",
+          "url": "https://adg.be/fr/jobs/"
+        }
+      ],
+      "finished_at": "2026-09-08T00:11:50+02:00"
+    },
+    "EUROFINS": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "SGS": {
+      "attempted_urls": [
+        "https://www.sgs.com/en-be/our-company/careers-at-sgs/job-opportunities",
+        "https://www.sgs.com/en/careers",
+        "https://www.sgs.com/jobs",
+        "https://www.sgs.com/jobs/",
+        "https://www.sgs.com/en/our-company/careers-at-sgs",
+        "https://www.sgs.com/vacatures",
+        "https://www.sgs.com/vacatures/",
+        "https://www.sgs.com/fr/jobs",
+        "https://www.sgs.com/fr/jobs/",
+        "https://www.sgs.com/fr/emploi",
+        "https://www.sgs.com/fr/emploi/",
+        "https://www.sgs.com/careers",
+        "https://www.sgs.com/careers/",
+        "https://www.sgs.com/fr/carrieres",
+        "https://www.sgs.com/fr/carrieres/",
+        "https://www.sgs.com/werken-bij",
+        "https://www.sgs.com/werken-bij/",
+        "https://www.sgs.com/job-opportunities",
+        "https://www.sgs.com/viewalljobs/",
+        "https://www.sgs.com/search-results",
+        "https://www.sgs.com/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sgs.com/en/our-company/careers-at-sgs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sgs.com/en/our-company/careers-at-sgs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/fr/carrieres"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/fr/carrieres"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sgs.com/en/search-results",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.sgs.com/en/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:12:01+02:00"
+    },
+    "NORMEC": {
+      "attempted_urls": [
+        "https://normecgroup.com/careers/",
+        "https://normecgroup.com/jobs/",
+        "https://normecgroup.com/vacatures/",
+        "https://normecgroup.com/fr/jobs/",
+        "https://normecgroup.com/fr/emploi/",
+        "https://normecgroup.com/fr/carrieres/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "BUREAU_VERITAS": {
+      "attempted_urls": [
+        "https://group.bureauveritas.com/careers/leave-your-mark",
+        "https://group.bureauveritas.com/jobs",
+        "https://group.bureauveritas.com/jobs/",
+        "https://group.bureauveritas.com/vacatures",
+        "https://group.bureauveritas.com/vacatures/",
+        "https://group.bureauveritas.com/fr/jobs",
+        "https://group.bureauveritas.com/fr/jobs/",
+        "https://group.bureauveritas.com/fr/emploi",
+        "https://group.bureauveritas.com/fr/emploi/",
+        "https://group.bureauveritas.com/fr/carrieres",
+        "https://group.bureauveritas.com/careers",
+        "https://group.bureauveritas.com/careers/",
+        "https://group.bureauveritas.com/fr/carrieres/"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "SKIPPED_BLOCKED",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://group.bureauveritas.com/careers/leave-your-mark",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://group.bureauveritas.com/careers/leave-your-mark",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "BLOCKED",
+          "reason": "HTTP 403",
+          "url": "https://group.bureauveritas.com/fr/carrieres/"
+        }
+      ],
+      "finished_at": "2026-09-08T00:12:04+02:00"
+    },
+    "ALS_GLOBAL": {
+      "attempted_urls": [
+        "https://www.alsglobal.com/en/careers"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "CERTECH": {
+      "attempted_urls": [
+        "https://www.certech.be/jobs/",
+        "https://www.certech.be/jobs",
+        "https://www.certech.be/careers",
+        "https://www.certech.be/careers/",
+        "https://www.certech.be/vacatures",
+        "https://www.certech.be/vacatures/",
+        "https://www.certech.be/fr/jobs",
+        "https://www.certech.be/fr/jobs/",
+        "https://www.certech.be/fr/emploi",
+        "https://www.certech.be/fr/emploi/",
+        "https://www.certech.be/fr/carrieres",
+        "https://www.certech.be/fr/carrieres/",
+        "https://www.certech.be/werken-bij",
+        "https://www.certech.be/werken-bij/",
+        "https://www.certech.be/job-opportunities",
+        "https://www.certech.be/viewalljobs/",
+        "https://www.certech.be/search-results",
+        "https://www.certech.be/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.certech.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:12:27+02:00"
+    },
+    "CELABOR": {
+      "attempted_urls": [
+        "https://www.celabor.be/emploi/",
+        "https://celabor.be/a-propos/jobs/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "SIRRIS": {
+      "attempted_urls": [
+        "https://www.sirris.be/en/jobs",
+        "https://www.sirris.be/jobs",
+        "https://www.sirris.be/jobs/",
+        "https://www.sirris.be/careers",
+        "https://www.sirris.be/careers/",
+        "https://www.sirris.be/vacatures",
+        "https://www.sirris.be/vacatures/",
+        "https://www.sirris.be/fr/jobs",
+        "https://www.sirris.be/fr/jobs/",
+        "https://www.sirris.be/fr/emploi",
+        "https://www.sirris.be/fr/emploi/",
+        "https://www.sirris.be/fr/carrieres",
+        "https://recruitment.sirris.be/",
+        "https://recruitment.sirris.be/jobs",
+        "https://recruitment.sirris.be/jobs/",
+        "https://recruitment.sirris.be/careers",
+        "https://recruitment.sirris.be/careers/",
+        "https://recruitment.sirris.be/vacatures",
+        "https://recruitment.sirris.be/vacatures/",
+        "https://recruitment.sirris.be/fr/jobs",
+        "https://recruitment.sirris.be/fr/jobs/",
+        "https://recruitment.sirris.be/fr/emploi",
+        "https://recruitment.sirris.be/fr/emploi/",
+        "https://recruitment.sirris.be/fr/carrieres",
+        "https://recruitment.sirris.be/fr/carrieres/",
+        "https://recruitment.sirris.be/werken-bij",
+        "https://recruitment.sirris.be/werken-bij/",
+        "https://recruitment.sirris.be/job-opportunities",
+        "https://recruitment.sirris.be/viewalljobs/",
+        "https://recruitment.sirris.be/search-results"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://recruitment.sirris.be/",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/jobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/jobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/careers"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/careers/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/vacatures"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/vacatures/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/jobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/jobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/emploi"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/emploi/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/carrieres"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://recruitment.sirris.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://recruitment.sirris.be/search-results"
+        }
+      ],
+      "finished_at": "2026-09-08T00:12:47+02:00"
+    },
+    "CRM_GROUP": {
+      "attempted_urls": [
+        "https://www.crmgroup.be/en/careers",
+        "https://crmgroup.be/en/jobs/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ABINBEV": {
+      "attempted_urls": [
+        "https://www.ab-inbev.com/careers/",
+        "https://www.ab-inbev.com/jobs",
+        "https://www.ab-inbev.com/jobs/",
+        "https://www.ab-inbev.com/careers",
+        "https://www.ab-inbev.com/vacatures",
+        "https://www.ab-inbev.com/vacatures/",
+        "https://www.ab-inbev.com/fr/jobs",
+        "https://www.ab-inbev.com/fr/jobs/",
+        "https://www.ab-inbev.com/fr/emploi",
+        "https://www.ab-inbev.com/fr/emploi/",
+        "https://www.ab-inbev.com/fr/carrieres",
+        "https://www.ab-inbev.com/fr/carrieres/",
+        "https://www.ab-inbev.com/werken-bij",
+        "https://www.ab-inbev.com/werken-bij/",
+        "https://www.ab-inbev.com/job-opportunities",
+        "https://www.ab-inbev.com/viewalljobs/",
+        "https://www.ab-inbev.com/search-results",
+        "https://www.ab-inbev.com/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.ab-inbev.com/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:12:56+02:00"
+    },
+    "PURATOS": {
+      "attempted_urls": [
+        "https://www.puratos.com/careers",
+        "https://www.puratos.com/careers/puratos-magic",
+        "https://www.puratos.com/vacatures",
+        "https://www.puratos.com/vacatures/",
+        "https://www.puratos.com/fr/jobs",
+        "https://www.puratos.com/fr/jobs/",
+        "https://www.puratos.com/fr/emploi",
+        "https://www.puratos.com/fr/emploi/",
+        "https://www.puratos.com/fr/carrieres",
+        "https://www.puratos.com/fr/carrieres/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "BARRY_CALLEBAUT": {
+      "attempted_urls": [
+        "https://www.barrycallebaut.com/en/group/careers",
+        "https://www.barrycallebaut.com/jobs",
+        "https://www.barrycallebaut.com/jobs/",
+        "https://www.barrycallebaut.com/careers",
+        "https://www.barrycallebaut.com/careers/",
+        "https://www.barrycallebaut.com/vacatures",
+        "https://www.barrycallebaut.com/vacatures/",
+        "https://www.barrycallebaut.com/fr/jobs",
+        "https://www.barrycallebaut.com/fr/jobs/",
+        "https://www.barrycallebaut.com/fr/emploi",
+        "https://www.barrycallebaut.com/fr/emploi/",
+        "https://www.barrycallebaut.com/fr/carrieres",
+        "https://jobs.barry-callebaut.com/"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://jobs.barry-callebaut.com/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "SUCCESSFACTORS",
+          "reason": "jsonld=0, links=1, ats=SUCCESSFACTORS"
+        }
+      ],
+      "validated_url": "https://jobs.barry-callebaut.com/",
+      "ats": "SUCCESSFACTORS",
+      "finished_at": "2026-09-08T00:13:01+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "COLRUYT": {
+      "attempted_urls": [
+        "https://jobs.colruytgroup.com/fr",
+        "https://jobs.colruytgroup.com/jobs",
+        "https://jobs.colruytgroup.com/jobs/",
+        "https://jobs.colruytgroup.com/careers",
+        "https://jobs.colruytgroup.com/careers/",
+        "https://jobs.colruytgroup.com/vacatures",
+        "https://jobs.colruytgroup.com/vacatures/",
+        "https://jobs.colruytgroup.com/fr/jobs",
+        "https://jobs.colruytgroup.com/fr/jobs/",
+        "https://jobs.colruytgroup.com/fr/emploi",
+        "https://jobs.colruytgroup.com/fr/emploi/",
+        "https://jobs.colruytgroup.com/fr/carrieres",
+        "https://jobs.colruytgroup.com/",
+        "https://jobs.colruytgroup.com/fr/carrieres/",
+        "https://jobs.colruytgroup.com/werken-bij",
+        "https://jobs.colruytgroup.com/werken-bij/",
+        "https://jobs.colruytgroup.com/job-opportunities",
+        "https://jobs.colruytgroup.com/viewalljobs/",
+        "https://jobs.colruytgroup.com/search-results",
+        "https://jobs.colruytgroup.com/offres-d-emploi"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.colruytgroup.com/fr",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/fr/carrieres"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobs.colruytgroup.com/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:13:07+02:00"
+    },
+    "DELHAIZE": {
+      "attempted_urls": [
+        "https://jobs.delhaize.be/be/nl",
+        "https://jobs.delhaize.be/vacatures",
+        "https://jobs.delhaize.be/be/fr/search-results",
+        "https://jobs.delhaize.be/jobs",
+        "https://jobs.delhaize.be/jobs/",
+        "https://jobs.delhaize.be/careers",
+        "https://jobs.delhaize.be/careers/",
+        "https://jobs.delhaize.be/vacatures/",
+        "https://jobs.delhaize.be/fr/jobs",
+        "https://jobs.delhaize.be/fr/jobs/",
+        "https://jobs.delhaize.be/fr/emploi",
+        "https://jobs.delhaize.be/fr/emploi/",
+        "https://jobs.delhaize.be/fr/carrieres",
+        "https://jobs.delhaize.be/fr/carrieres/",
+        "https://jobs.delhaize.be/werken-bij",
+        "https://jobs.delhaize.be/werken-bij/",
+        "https://jobs.delhaize.be/job-opportunities",
+        "https://jobs.delhaize.be/viewalljobs/",
+        "https://jobs.delhaize.be/search-results",
+        "https://jobs.delhaize.be/offres-d-emploi",
+        "https://jobs.delhaize.be/be/nl/c/hr-jobs",
+        "https://jobs.delhaize.be/be/nl/jobdomeinoverzichtspagina",
+        "https://jobs.delhaize.be/be/nl/c/legal-jobs",
+        "https://jobs.delhaize.be/be/nl/c/marketing-communication-jobs",
+        "https://jobs.delhaize.be/be/nl/stages-en-jobstudent",
+        "https://jobs.delhaize.be/be/nl/onweerstaanbare-jobs-bij-delhaize"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/fr/search-results",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/c/hr-jobs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/jobdomeinoverzichtspagina",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/c/legal-jobs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/c/marketing-communication-jobs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/stages-en-jobstudent",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobs.delhaize.be/be/nl/onweerstaanbare-jobs-bij-delhaize",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        }
+      ],
+      "finished_at": "2026-09-08T00:13:33+02:00"
+    },
+    "PROCTER_GAMBLE": {
+      "attempted_urls": [
+        "https://www.pgcareers.com/eu/en",
+        "https://www.pgcareers.com/global/en",
+        "https://www.pgcareers.com/",
+        "https://www.pgcareers.com/jobs",
+        "https://www.pgcareers.com/jobs/",
+        "https://www.pgcareers.com/careers",
+        "https://www.pgcareers.com/careers/",
+        "https://www.pgcareers.com/vacatures",
+        "https://www.pgcareers.com/vacatures/",
+        "https://www.pgcareers.com/fr/jobs",
+        "https://www.pgcareers.com/fr/jobs/",
+        "https://www.pgcareers.com/fr/emploi",
+        "https://www.pgcareers.com/fr/emploi/",
+        "https://www.pgcareers.com/fr/carrieres",
+        "https://www.pgcareers.com/fr/carrieres/",
+        "https://www.pgcareers.com/werken-bij",
+        "https://www.pgcareers.com/werken-bij/",
+        "https://www.pgcareers.com/job-opportunities",
+        "https://www.pgcareers.com/viewalljobs/",
+        "https://www.pgcareers.com/search-results",
+        "https://www.pgcareers.com/ca/fr/c/production-et-assurance-qualité-jobs"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/eu/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.pgcareers.com/global/en",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.pgcareers.com/ca/fr/c/production-et-assurance-qualit%C3%A9-jobs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "WORKDAY",
+          "reason": "jsonld=0, links=0, ats=WORKDAY"
+        }
+      ],
+      "validated_url": "https://www.pgcareers.com/ca/fr/c/production-et-assurance-qualit%C3%A9-jobs",
+      "ats": "WORKDAY",
+      "finished_at": "2026-09-08T00:14:01+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "DANONE_BE": {
+      "attempted_urls": [
+        "https://careers.danone.com/en-global/home.html",
+        "https://careers.danone.com/jobs",
+        "https://careers.danone.com/jobs/",
+        "https://careers.danone.com/careers",
+        "https://careers.danone.com/careers/",
+        "https://careers.danone.com/vacatures",
+        "https://careers.danone.com/vacatures/",
+        "https://careers.danone.com/fr/jobs",
+        "https://careers.danone.com/fr/jobs/",
+        "https://careers.danone.com/fr/emploi",
+        "https://careers.danone.com/fr/emploi/",
+        "https://careers.danone.com/fr/carrieres"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "VANDEMOORTELE": {
+      "attempted_urls": [
+        "https://www.vandemoortele.com/en/careers"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "SKIPPED_BLOCKED",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "BLOCKED",
+          "reason": "HTTP 403",
+          "url": "https://www.vandemoortele.com/en/careers"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:03+02:00"
+    },
+    "CARGILL_BE": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "IRIS_HOPITAUX": {
+      "attempted_urls": [
+        "https://www.iris-hopitaux.be/fr/jobs",
+        "https://www.iris-hopitaux.be/jobs",
+        "https://www.iris-hopitaux.be/jobs/",
+        "https://www.iris-hopitaux.be/careers",
+        "https://www.iris-hopitaux.be/careers/",
+        "https://www.iris-hopitaux.be/vacatures",
+        "https://www.iris-hopitaux.be/vacatures/",
+        "https://www.iris-hopitaux.be/fr/jobs/",
+        "https://www.iris-hopitaux.be/fr/emploi",
+        "https://www.iris-hopitaux.be/fr/emploi/",
+        "https://www.iris-hopitaux.be/fr/carrieres",
+        "https://www.iris-hopitaux.be/fr/carrieres/",
+        "https://www.iris-hopitaux.be/werken-bij",
+        "https://www.iris-hopitaux.be/werken-bij/",
+        "https://www.iris-hopitaux.be/job-opportunities",
+        "https://www.iris-hopitaux.be/viewalljobs/",
+        "https://www.iris-hopitaux.be/search-results",
+        "https://www.iris-hopitaux.be/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://irishopitaux.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:14+02:00"
+    },
+    "SAINT_LUC": {
+      "attempted_urls": [
+        "https://www.saintluc.be/fr/jobs",
+        "https://www.saintluc.be/jobs",
+        "https://www.saintluc.be/jobs/",
+        "https://www.saintluc.be/careers",
+        "https://www.saintluc.be/careers/",
+        "https://www.saintluc.be/vacatures",
+        "https://www.saintluc.be/vacatures/",
+        "https://www.saintluc.be/fr/jobs/",
+        "https://www.saintluc.be/fr/emploi",
+        "https://www.saintluc.be/fr/emploi/",
+        "https://www.saintluc.be/fr/carrieres",
+        "https://www.saintluc.be/fr/carrieres/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "UZ_BRUSSEL": {
+      "attempted_urls": [
+        "https://www.uzbrussel.be/jobs",
+        "https://www.uzbrussel.be/jobs/",
+        "https://www.uzbrussel.be/careers",
+        "https://www.uzbrussel.be/careers/",
+        "https://www.uzbrussel.be/vacatures",
+        "https://www.uzbrussel.be/vacatures/",
+        "https://www.uzbrussel.be/fr/jobs",
+        "https://www.uzbrussel.be/fr/jobs/",
+        "https://www.uzbrussel.be/fr/emploi",
+        "https://www.uzbrussel.be/fr/emploi/",
+        "https://www.uzbrussel.be/fr/carrieres",
+        "https://www.uzbrussel.be/fr/carrieres/",
+        "https://www.uzbrussel.be/werken-bij",
+        "https://www.uzbrussel.be/werken-bij/",
+        "https://www.uzbrussel.be/job-opportunities",
+        "https://www.uzbrussel.be/viewalljobs/",
+        "https://www.uzbrussel.be/search-results",
+        "https://www.uzbrussel.be/offres-d-emploi"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.uzbrussel.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:24+02:00"
+    },
+    "CHIREC": {
+      "attempted_urls": [
+        "https://www.chirec.be/fr/jobs",
+        "https://www.chirec.be/jobs",
+        "https://www.chirec.be/jobs/",
+        "https://www.chirec.be/careers",
+        "https://www.chirec.be/careers/",
+        "https://www.chirec.be/vacatures",
+        "https://www.chirec.be/vacatures/",
+        "https://www.chirec.be/fr/jobs/",
+        "https://www.chirec.be/fr/emploi",
+        "https://www.chirec.be/fr/emploi/",
+        "https://www.chirec.be/fr/carrieres",
+        "https://www.chirec.be/fr/carrieres/",
+        "https://www.chirec.be/werken-bij",
+        "https://www.chirec.be/werken-bij/",
+        "https://www.chirec.be/job-opportunities",
+        "https://www.chirec.be/viewalljobs/",
+        "https://www.chirec.be/search-results",
+        "https://www.chirec.be/offres-d-emploi",
+        "https://www.chirec.be/fr/actualites/job-day-chirec-save-date"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 500",
+          "url": "https://www.chirec.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.chirec.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.chirec.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.chirec.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.chirec.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.chirec.be/offres-d-emploi"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.chirec.be/fr/actualites/job-day-chirec-inscrivez-vous-des-maintenant",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:35+02:00"
+    },
+    "SCIENSANO_RESEARCH": {
+      "attempted_urls": [
+        "https://www.sciensano.be/fr/travailler-faire-un-stage-chez-sciensano/mes-opportunites-demploi",
+        "https://www.sciensano.be/fr/jobs",
+        "https://jobs.sciensano.be/front/en/",
+        "https://www.sciensano.be/careers",
+        "https://www.sciensano.be/careers/",
+        "https://www.sciensano.be/vacatures",
+        "https://www.sciensano.be/vacatures/",
+        "https://www.sciensano.be/fr/jobs/",
+        "https://www.sciensano.be/fr/emploi",
+        "https://www.sciensano.be/fr/emploi/",
+        "https://www.sciensano.be/fr/carrieres"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ULB_JOBS": {
+      "attempted_urls": [
+        "https://www.ulb.be/fr/emploi",
+        "https://www.ulb.be/jobs",
+        "https://www.ulb.be/jobs/",
+        "https://www.ulb.be/careers",
+        "https://www.ulb.be/careers/",
+        "https://www.ulb.be/vacatures",
+        "https://www.ulb.be/vacatures/",
+        "https://www.ulb.be/fr/jobs",
+        "https://www.ulb.be/fr/jobs/",
+        "https://www.ulb.be/fr/carrieres",
+        "https://www.ulb.be/fr/carrieres/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "VUB_JOBS": {
+      "attempted_urls": [
+        "https://jobs.vub.be/go/EN_ALL-JOBS/3775601/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "UCLOUVAIN_JOBS": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "EURAXESS_BE": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "STIB_MIVB": {
+      "attempted_urls": [
+        "https://jobs.stib-mivb.be/viewalljobs/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "BRUSSELS_AIRPORT": {
+      "attempted_urls": [
+        "https://careers.brusselsairport.be/",
+        "https://careers.brusselsairport.be/jobs",
+        "https://careers.brusselsairport.be/jobs/",
+        "https://careers.brusselsairport.be/careers",
+        "https://careers.brusselsairport.be/careers/",
+        "https://careers.brusselsairport.be/vacatures",
+        "https://careers.brusselsairport.be/vacatures/",
+        "https://careers.brusselsairport.be/fr/jobs",
+        "https://careers.brusselsairport.be/fr/jobs/",
+        "https://careers.brusselsairport.be/fr/emploi",
+        "https://careers.brusselsairport.be/fr/emploi/",
+        "https://careers.brusselsairport.be/fr/carrieres",
+        "https://careers.brusselsairport.be/fr/carrieres/",
+        "https://careers.brusselsairport.be/werken-bij",
+        "https://careers.brusselsairport.be/werken-bij/",
+        "https://careers.brusselsairport.be/job-opportunities",
+        "https://careers.brusselsairport.be/viewalljobs/",
+        "https://careers.brusselsairport.be/search-results",
+        "https://careers.brusselsairport.be/offres-d-emploi"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /fr/carrieres/ (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /werken-bij (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /werken-bij/ (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /job-opportunities (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /viewalljobs/ (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /search-results (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "FETCH_ERROR",
+          "reason": "ConnectionError: HTTPSConnectionPool(host='careers.brusselsairport.be', port=443): Max retries exceeded with url: /offres-d-emploi (Caused by NameResolutionError(\"HTTPSConnection(host='careers.brusselsairport.be', port=443): Failed to resolve 'careers.brusselsairport.be' ([Errno 11001] getaddrinfo failed)\"))",
+          "url": "https://careers.brusselsairport.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:37+02:00"
+    },
+    "SWISSPORT_BE": {
+      "attempted_urls": [
+        "https://www.swissport.com/en/careers",
+        "https://www.swissport.com/jobs",
+        "https://www.swissport.com/jobs/",
+        "https://careers.swissport.com/",
+        "https://www.swissport.com/vacatures",
+        "https://www.swissport.com/vacatures/",
+        "https://www.swissport.com/fr/jobs",
+        "https://www.swissport.com/fr/jobs/",
+        "https://www.swissport.com/fr/emploi",
+        "https://www.swissport.com/fr/emploi/",
+        "https://www.swissport.com/fr/carrieres",
+        "https://www.swissport.com/careers",
+        "https://www.swissport.com/careers/",
+        "https://www.swissport.com/fr/carrieres/",
+        "https://www.swissport.com/werken-bij",
+        "https://www.swissport.com/werken-bij/",
+        "https://www.swissport.com/job-opportunities",
+        "https://www.swissport.com/viewalljobs/",
+        "https://www.swissport.com/search-results",
+        "https://www.swissport.com/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://careers.swissport.com/",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://careers.swissport.com/",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.swissport.com/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:47+02:00"
+    },
+    "AVIAPARTNER": {
+      "attempted_urls": [
+        "https://www.aviapartner.aero/en/careers/",
+        "https://jobs.aviapartner.aero/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "BPOST": {
+      "attempted_urls": [
+        "https://jobs.bpost.be/",
+        "https://jobs.bpost.be/jobs",
+        "https://jobs.bpost.be/jobs/",
+        "https://jobs.bpost.be/careers",
+        "https://jobs.bpost.be/careers/",
+        "https://jobs.bpost.be/vacatures",
+        "https://jobs.bpost.be/vacatures/",
+        "https://jobs.bpost.be/fr/jobs",
+        "https://jobs.bpost.be/fr/jobs/",
+        "https://jobs.bpost.be/fr/emploi",
+        "https://jobs.bpost.be/fr/emploi/",
+        "https://jobs.bpost.be/fr/carrieres"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "SNCB_NMBS": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "INFRABEL": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "VIVAQUA": {
+      "attempted_urls": [
+        "https://www.vivaqua.be/fr/"
+      ],
+      "status": "PAUSED",
+      "reason": "V16: student/general coverage already provided by production source TALENT_BRUSSELS.",
+      "backlog_status": "COVERED_BY_PARENT"
+    },
+    "DE_WATERGROEP": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "BRUXELLES_PROPRETE": {
+      "attempted_urls": [
+        "https://www.arp-gan.be/fr/jobs"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "SKIPPED_BLOCKED",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "BLOCKED",
+          "reason": "HTTP 403",
+          "url": "https://www.arp-gan.be/fr/jobs"
+        }
+      ],
+      "finished_at": "2026-09-08T00:14:49+02:00"
+    },
+    "DAOUST": {
+      "attempted_urls": [
+        "https://www.daoust.be/fr/jobs",
+        "https://www.daoust.be/jobs",
+        "https://www.daoust.be/jobs/",
+        "https://www.daoust.be/careers",
+        "https://www.daoust.be/careers/",
+        "https://www.daoust.be/vacatures",
+        "https://www.daoust.be/vacatures/",
+        "https://www.daoust.be/fr/jobs/",
+        "https://www.daoust.be/fr/emploi",
+        "https://www.daoust.be/fr/emploi/",
+        "https://www.daoust.be/fr/carrieres",
+        "https://www.daoust.be/fr/carrieres/",
+        "https://www.daoust.be/werken-bij",
+        "https://www.daoust.be/werken-bij/",
+        "https://www.daoust.be/job-opportunities",
+        "https://www.daoust.be/viewalljobs/",
+        "https://www.daoust.be/search-results",
+        "https://www.daoust.be/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:15:04+02:00"
+    },
+    "KONVERT": {
+      "attempted_urls": [
+        "https://www.konvert.be/fr",
+        "https://www.konvert.be/jobs",
+        "https://www.konvert.be/jobs/",
+        "https://www.konvert.be/careers",
+        "https://www.konvert.be/careers/",
+        "https://www.konvert.be/vacatures",
+        "https://www.konvert.be/vacatures/",
+        "https://www.konvert.be/fr/jobs",
+        "https://www.konvert.be/fr/jobs/",
+        "https://www.konvert.be/fr/emploi",
+        "https://www.konvert.be/fr/emploi/",
+        "https://www.konvert.be/fr/carrieres",
+        "https://www.konvert.be/fr/carrieres/",
+        "https://www.konvert.be/werken-bij",
+        "https://www.konvert.be/werken-bij/",
+        "https://www.konvert.be/job-opportunities",
+        "https://www.konvert.be/viewalljobs/",
+        "https://www.konvert.be/search-results",
+        "https://www.konvert.be/offres-d-emploi",
+        "https://www.konvert.be/nl/flexi-jobs/werkgever"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/offres-d-emploi"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+          "jsonld": 0,
+          "job_links": 5,
+          "ats": "",
+          "reason": "jsonld=0, links=5, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:10+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "ACCENT_JOBS": {
+      "attempted_urls": [
+        "https://accentjobs.be/fr",
+        "https://www.accentjobs.be/jobs",
+        "https://www.accentjobs.be/jobs/",
+        "https://www.accentjobs.be/careers",
+        "https://www.accentjobs.be/careers/",
+        "https://accentjobs.be/nl/vacatures"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ACTIEF_INTERIM": {
+      "attempted_urls": [
+        "https://www.actief-interim.be/fr",
+        "https://www.actief-interim.be/jobs",
+        "https://www.actief-interim.be/jobs/",
+        "https://www.actief-interim.be/careers",
+        "https://www.actief-interim.be/careers/",
+        "https://www.actief-interim.be/vacatures",
+        "https://www.actief-interim.be/vacatures/",
+        "https://www.actief-interim.be/fr/jobs",
+        "https://www.actief-interim.be/fr/jobs/",
+        "https://www.actief-interim.be/fr/emploi",
+        "https://www.actief-interim.be/fr/emploi/",
+        "https://www.actief-interim.be/fr/carrieres",
+        "https://www.actief.be/nl/"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.actief.be/nl/",
+          "jsonld": 0,
+          "job_links": 4,
+          "ats": "",
+          "reason": "jsonld=0, links=4, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.actief.be/nl/",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:12+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "UNIQUE_BE": {
+      "attempted_urls": [
+        "https://www.unique.be/fr",
+        "https://www.unique.be/jobs",
+        "https://www.unique.be/jobs/",
+        "https://www.unique.be/careers",
+        "https://www.unique.be/careers/",
+        "https://www.unique.be/vacatures",
+        "https://www.unique.be/vacatures/",
+        "https://www.unique.be/fr/jobs",
+        "https://www.unique.be/fr/jobs/",
+        "https://www.unique.be/fr/emploi",
+        "https://www.unique.be/fr/emploi/",
+        "https://www.unique.be/fr/carrieres",
+        "https://www.unique.be/nl/"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.unique.be/nl/",
+          "jsonld": 0,
+          "job_links": 9,
+          "ats": "",
+          "reason": "jsonld=0, links=9, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.unique.be/nl/",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:14+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "BRIGHT_PLUS": {
+      "attempted_urls": [
+        "https://www.brightplus.be/fr",
+        "https://www.brightplus.be/jobs",
+        "https://www.brightplus.be/jobs/",
+        "https://www.brightplus.be/careers",
+        "https://www.brightplus.be/careers/",
+        "https://www.brightplus.be/vacatures",
+        "https://www.brightplus.be/vacatures/",
+        "https://www.brightplus.be/fr/jobs",
+        "https://www.brightplus.be/fr/jobs/",
+        "https://www.brightplus.be/fr/emploi",
+        "https://www.brightplus.be/fr/emploi/",
+        "https://www.brightplus.be/fr/carrieres",
+        "https://www.brightplus.be/en/"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.brightplus.be/en/",
+          "jsonld": 0,
+          "job_links": 2,
+          "ats": "",
+          "reason": "jsonld=0, links=2, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.brightplus.be/en/",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:16+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "SECRETARY_PLUS": {
+      "attempted_urls": [
+        "https://www.brightplus.be/fr",
+        "https://www.secretary-plus.be/jobs",
+        "https://www.secretary-plus.be/jobs/",
+        "https://www.secretary-plus.be/careers",
+        "https://www.secretary-plus.be/careers/",
+        "https://www.secretary-plus.be/vacatures",
+        "https://www.secretary-plus.be/vacatures/",
+        "https://www.brightplus.be/fr/jobs",
+        "https://www.brightplus.be/fr/jobs/",
+        "https://www.secretary-plus.be/fr/emploi",
+        "https://www.secretary-plus.be/fr/emploi/",
+        "https://www.secretary-plus.be/fr/carrieres",
+        "https://www.secretary-plus.be/fr",
+        "https://www.secretary-plus.be/fr/jobs",
+        "https://www.secretary-plus.be/fr/jobs/",
+        "https://www.secretary-plus.be/fr/carrieres/",
+        "https://www.secretary-plus.be/werken-bij",
+        "https://www.secretary-plus.be/werken-bij/",
+        "https://www.secretary-plus.be/job-opportunities",
+        "https://www.secretary-plus.be/viewalljobs/",
+        "https://www.secretary-plus.be/search-results",
+        "https://www.secretary-plus.be/offres-d-emploi",
+        "https://www.brightplus.be/fr/employeurs/jobs-fixes",
+        "https://www.brightplus.be/en/employers/permanent-jobs"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.brightplus.be/fr",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.brightplus.be/fr/jobs",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.brightplus.be/fr/jobs/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.brightplus.be/offres-d-emploi"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.brightplus.be/fr/employeurs/jobs-fixes",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.brightplus.be/en/employers/permanent-jobs",
+          "jsonld": 0,
+          "job_links": 2,
+          "ats": "",
+          "reason": "jsonld=0, links=2, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.brightplus.be/en/employers/permanent-jobs",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:29+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "HAYS_BE": {
+      "attempted_urls": [
+        "https://www.hays.be/",
+        "https://www.hays.be/jobs",
+        "https://www.hays.be/jobs/",
+        "https://www.hays.be/careers",
+        "https://www.hays.be/careers/",
+        "https://www.hays.be/vacatures",
+        "https://www.hays.be/vacatures/",
+        "https://www.hays.be/fr/jobs",
+        "https://www.hays.be/fr/jobs/",
+        "https://www.hays.be/fr/emploi",
+        "https://www.hays.be/fr/emploi/",
+        "https://www.hays.be/fr/carrieres",
+        "https://www.hays.be/en/boost-your-career",
+        "https://www.hays.be/fr/carrieres/",
+        "https://www.hays.be/werken-bij",
+        "https://www.hays.be/werken-bij/",
+        "https://www.hays.be/job-opportunities",
+        "https://www.hays.be/viewalljobs/",
+        "https://www.hays.be/search-results",
+        "https://www.hays.be/offres-d-emploi",
+        "https://www.hays.be/en/boost-your-career/accounting-and-finance"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.hays.be/en/boost-your-career",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/fr/carrieres"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/en/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/en/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/en/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/en/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.hays.be/recherche-emploi",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.hays.be/en/offres-d-emploi"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.hays.be/en/boost-your-career/accounting-and-finance",
+          "jsonld": 0,
+          "job_links": 5,
+          "ats": "",
+          "reason": "jsonld=0, links=5, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.hays.be/en/boost-your-career/accounting-and-finance",
+      "ats": "",
+      "finished_at": "2026-09-08T00:15:42+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "WALTERS_PEOPLE": {
+      "attempted_urls": [
+        "https://www.robertwalters.be/",
+        "https://www.walterspeople.be/jobs",
+        "https://www.walterspeople.be/jobs/",
+        "https://www.walterspeople.be/careers",
+        "https://www.walterspeople.be/careers/",
+        "https://www.walterspeople.be/vacatures",
+        "https://www.walterspeople.be/vacatures/",
+        "https://www.walterspeople.be/fr/jobs",
+        "https://www.walterspeople.be/fr/jobs/",
+        "https://www.walterspeople.be/fr/emploi",
+        "https://www.walterspeople.be/fr/emploi/",
+        "https://www.walterspeople.be/fr/carrieres",
+        "https://www.walterspeople.be/",
+        "https://www.walterspeople.be/fr/carrieres/",
+        "https://www.walterspeople.be/werken-bij",
+        "https://www.walterspeople.be/werken-bij/",
+        "https://www.walterspeople.be/job-opportunities",
+        "https://www.walterspeople.be/viewalljobs/",
+        "https://www.walterspeople.be/search-results",
+        "https://www.walterspeople.be/offres-d-emploi"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.robertwalters.be/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 503",
+          "url": "https://www.walterspeople.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:15:52+02:00"
+    },
+    "PAGE_PERSONNEL": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ASAP_BE": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "FORUM_JOBS": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ABSOLUTE_JOBS": {
+      "attempted_urls": [
+        "https://www.absolutejobs.be/",
+        "https://www.absolutejobs.be/jobs",
+        "https://www.absolutejobs.be/jobs/",
+        "https://www.absolutejobs.be/careers",
+        "https://www.absolutejobs.be/careers/",
+        "https://www.absolutejobs.be/vacatures",
+        "https://www.absolutejobs.be/vacatures/",
+        "https://www.absolutejobs.be/fr/jobs",
+        "https://www.absolutejobs.be/fr/jobs/",
+        "https://www.absolutejobs.be/fr/emploi",
+        "https://www.absolutejobs.be/fr/emploi/",
+        "https://www.absolutejobs.be/fr/carrieres",
+        "https://www.absolutejobs.be/EN/jobs",
+        "https://www.absolutejobs.be/fr/carrieres/",
+        "https://www.absolutejobs.be/werken-bij",
+        "https://www.absolutejobs.be/werken-bij/",
+        "https://www.absolutejobs.be/job-opportunities",
+        "https://www.absolutejobs.be/viewalljobs/",
+        "https://www.absolutejobs.be/search-results",
+        "https://www.absolutejobs.be/offres-d-emploi",
+        "https://www.absolutejobs.be/nl/werken-bij-absolutejobs/",
+        "https://www.absolutejobs.be/EN/working-at-absolute-jobs/",
+        "https://www.absolutejobs.be/nl/jobs/"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_CURATED_NO_DETAIL",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.absolutejobs.be/EN/jobs",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.absolutejobs.be/nl/404/"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.absolutejobs.be/nl/werken-bij-absolutejobs/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.absolutejobs.be/EN/working-at-absolute-jobs/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.absolutejobs.be/nl/jobs/",
+          "jsonld": 0,
+          "job_links": 3,
+          "ats": "",
+          "reason": "jsonld=0, links=3, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.absolutejobs.be/nl/jobs/",
+      "ats": "",
+      "finished_at": "2026-09-08T00:16:00+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "T_INTERIM": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "SDWORX_STAFFING": {
+      "attempted_urls": [
+        "https://www.sdworx.jobs/fr-be",
+        "https://www.sdworxstaffing.be/fr",
+        "https://www.sdworxstaffing.be/jobs",
+        "https://www.sdworxstaffing.be/jobs/",
+        "https://www.sdworxstaffing.be/careers",
+        "https://www.sdworxstaffing.be/careers/",
+        "https://www.sdworxstaffing.be/vacatures",
+        "https://www.sdworxstaffing.be/vacatures/",
+        "https://www.sdworxstaffing.be/fr/jobs",
+        "https://www.sdworxstaffing.be/fr/jobs/",
+        "https://www.sdworxstaffing.be/fr/emploi",
+        "https://www.sdworxstaffing.be/fr/emploi/",
+        "https://www.sdworxstaffing.be/fr/carrieres",
+        "https://www.sdworxstaffing.be/fr/carrieres/",
+        "https://www.sdworxstaffing.be/werken-bij",
+        "https://www.sdworxstaffing.be/werken-bij/",
+        "https://www.sdworxstaffing.be/job-opportunities",
+        "https://www.sdworxstaffing.be/viewalljobs/",
+        "https://www.sdworxstaffing.be/search-results"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Finalized by V23.1 from completed V23 evidence.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.sdworx.jobs/fr-be",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        }
+      ],
+      "finished_at": "2026-09-08T00:16:23+02:00"
+    },
+    "JOBSTUDENT_BE": {
+      "attempted_urls": [
+        "https://jobstudent.be/fr/home",
+        "https://www.jobstudent.be/jobs",
+        "https://www.jobstudent.be/jobs/",
+        "https://www.jobstudent.be/careers",
+        "https://www.jobstudent.be/careers/",
+        "https://www.jobstudent.be/vacatures",
+        "https://www.jobstudent.be/vacatures/",
+        "https://www.jobstudent.be/fr/jobs",
+        "https://www.jobstudent.be/fr/jobs/",
+        "https://www.jobstudent.be/fr/emploi",
+        "https://www.jobstudent.be/fr/emploi/",
+        "https://www.jobstudent.be/fr/carrieres",
+        "https://www.jobstudent.be/",
+        "https://www.jobstudent.be/fr/carrieres/",
+        "https://www.jobstudent.be/werken-bij",
+        "https://www.jobstudent.be/werken-bij/",
+        "https://www.jobstudent.be/job-opportunities",
+        "https://www.jobstudent.be/viewalljobs/",
+        "https://www.jobstudent.be/search-results",
+        "https://www.jobstudent.be/offres-d-emploi",
+        "https://www.jobstudent.be/nl/vacatures/",
+        "https://www.jobstudent.be/nl/vacatures/7-801-202633188--regio-maaseik-bree-jobstudent-crewmedewerker"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobstudent.be/fr/home",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/viewalljobs"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://jobstudent.be/fr/search-results"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobstudent.be/fr/offres-d-emploi",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://jobstudent.be/nl/vacatures/",
+          "jsonld": 0,
+          "job_links": 1,
+          "ats": "",
+          "reason": "jsonld=0, links=1, ats=NONE"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://jobstudent.be/nl/vacatures/7-801-202633188--regio-maaseik-bree-jobstudent-crewmedewerker",
+          "jsonld": 0,
+          "job_links": 2,
+          "ats": "",
+          "reason": "jsonld=0, links=2, ats=NONE"
+        }
+      ],
+      "validated_url": "https://jobstudent.be/nl/vacatures/7-801-202633188--regio-maaseik-bree-jobstudent-crewmedewerker",
+      "ats": "",
+      "finished_at": "2026-09-08T00:16:32+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "DAOUST_STUDENT": {
+      "attempted_urls": [
+        "https://www.daoust.be/fr/jobs-etudiants",
+        "https://www.daoust.be/jobs",
+        "https://www.daoust.be/jobs/",
+        "https://www.daoust.be/careers",
+        "https://www.daoust.be/careers/",
+        "https://www.daoust.be/vacatures",
+        "https://www.daoust.be/vacatures/",
+        "https://www.daoust.be/fr/jobs",
+        "https://www.daoust.be/fr/jobs/",
+        "https://www.daoust.be/fr/emploi",
+        "https://www.daoust.be/fr/emploi/",
+        "https://www.daoust.be/fr/carrieres",
+        "https://www.daoust.be/fr/carrieres/",
+        "https://www.daoust.be/werken-bij",
+        "https://www.daoust.be/werken-bij/",
+        "https://www.daoust.be/job-opportunities",
+        "https://www.daoust.be/viewalljobs/",
+        "https://www.daoust.be/search-results",
+        "https://www.daoust.be/offres-d-emploi"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://dajobs.be/offres-d-emploi"
+        }
+      ],
+      "finished_at": "2026-09-08T00:16:51+02:00"
+    },
+    "KONVERT_STUDENT": {
+      "attempted_urls": [
+        "https://www.konvert.be/fr/student",
+        "https://www.konvert.be/jobs",
+        "https://www.konvert.be/jobs/",
+        "https://www.konvert.be/careers",
+        "https://www.konvert.be/careers/",
+        "https://www.konvert.be/vacatures",
+        "https://www.konvert.be/vacatures/",
+        "https://www.konvert.be/fr/jobs",
+        "https://www.konvert.be/fr/jobs/",
+        "https://www.konvert.be/fr/emploi",
+        "https://www.konvert.be/fr/emploi/",
+        "https://www.konvert.be/fr/carrieres",
+        "https://www.konvert.be/fr/carrieres/",
+        "https://www.konvert.be/werken-bij",
+        "https://www.konvert.be/werken-bij/",
+        "https://www.konvert.be/job-opportunities",
+        "https://www.konvert.be/viewalljobs/",
+        "https://www.konvert.be/search-results",
+        "https://www.konvert.be/offres-d-emploi",
+        "https://www.konvert.be/nl/flexi-jobs/werkgever"
+      ],
+      "status": "DONE_ACTIVATED",
+      "reason": "Recovered after rollback; previous V21 validation reused.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.konvert.be/offres-d-emploi"
+        },
+        {
+          "ok": true,
+          "status": "VALID",
+          "url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+          "jsonld": 0,
+          "job_links": 5,
+          "ats": "",
+          "reason": "jsonld=0, links=5, ats=NONE"
+        }
+      ],
+      "validated_url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+      "ats": "",
+      "finished_at": "2026-09-08T00:16:57+02:00",
+      "activation_applied_at": "2026-09-08T00:28:18+02:00",
+      "recovered_from_rollback": true
+    },
+    "TEMPO_TEAM_STUDENT": {
+      "attempted_urls": [
+        "https://www.tempo-team.be/fr/jobs-etudiants",
+        "https://www.tempo-team.be/jobs",
+        "https://www.tempo-team.be/jobs/",
+        "https://www.tempo-team.be/careers",
+        "https://www.tempo-team.be/careers/",
+        "https://www.tempo-team.be/kandidaten/vacatures/"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ACCENT_STUDENT": {
+      "attempted_urls": [
+        "https://www.accentjobs.be/fr/student",
+        "https://www.accentjobs.be/jobs",
+        "https://www.accentjobs.be/jobs/",
+        "https://www.accentjobs.be/careers",
+        "https://www.accentjobs.be/careers/",
+        "https://accentjobs.be/nl/vacatures"
+      ],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "ADECCO_STUDENT": {
+      "attempted_urls": [
+        "https://www.adecco.com/fr-be",
+        "https://www.adecco.com/nl-be"
+      ],
+      "status": "PAUSED",
+      "reason": "V16: student/general coverage already provided by production source ADECCO.",
+      "backlog_status": "COVERED_BY_PARENT"
+    },
+    "SYNERGIE_STUDENT": {
+      "attempted_urls": [],
+      "status": "PAUSED",
+      "reason": "V16: student/general coverage already provided by production source SYNERGIE_STUDENT.",
+      "backlog_status": "COVERED_BY_PARENT"
+    },
+    "ASAP_STUDENT": {
+      "attempted_urls": [],
+      "status": "DONE_ACTIVE",
+      "reason": "Already active before V21; skipped.",
+      "backlog_status": "ACTIVATED"
+    },
+    "UNIQUE_STUDENT": {
+      "attempted_urls": [
+        "https://www.unique.be/fr/student",
+        "https://www.unique.be/jobs",
+        "https://www.unique.be/jobs/",
+        "https://www.unique.be/careers",
+        "https://www.unique.be/careers/",
+        "https://www.unique.be/vacatures",
+        "https://www.unique.be/vacatures/",
+        "https://www.unique.be/fr/jobs",
+        "https://www.unique.be/fr/jobs/",
+        "https://www.unique.be/fr/emploi",
+        "https://www.unique.be/fr/emploi/",
+        "https://www.unique.be/fr/carrieres",
+        "https://www.unique.be/fr/carrieres/",
+        "https://www.unique.be/werken-bij",
+        "https://www.unique.be/werken-bij/",
+        "https://www.unique.be/job-opportunities",
+        "https://www.unique.be/viewalljobs/",
+        "https://www.unique.be/search-results",
+        "https://www.unique.be/offres-d-emploi",
+        "https://www.unique.be/nl/unique-jobtest",
+        "https://www.unique.be/fr/unique-jobtest",
+        "https://www.unique.be/nl/actievoorwaarden-unique-jobtest",
+        "https://www.unique.be/fr/conditions-unique-jobtest",
+        "https://www.unique.be/nl/voorwaarden-unique-jobtest",
+        "https://www.unique.be/fr/conditions-action-unique-jobtest",
+        "https://www.unique.be/nl/jobdag-waaslandia",
+        "https://www.unique.be/nl/organiseer-een-jobdag",
+        "https://www.unique.be/nl/jobdag-adpo",
+        "https://www.unique.be/nl/jobdag-teledesk",
+        "https://www.unique.be/nl/een-nieuwe-job-bij-unique",
+        "https://www.unique.be/fr/un-nouveau-job-chez-unique",
+        "https://www.unique.be/nl/vacature-aanmelden",
+        "https://www.unique.be/fr/donnez-nous-votre-offre-emploi",
+        "https://www.unique.be/nl/vacature-aanmelden/bedankt",
+        "https://www.unique.be/fr/donnez-nous-votre-offre-emploi/merci",
+        "https://www.unique.be/nl/new-job-campaign"
+      ],
+      "status": "DONE_MANUAL_COMPLETE",
+      "reason": "V23.1: no safe reliable collector.",
+      "backlog_status": "PENDING_DEEP_NO_EVIDENCE",
+      "v21_attempts": [
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/fr/carrieres/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/werken-bij"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/werken-bij/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/job-opportunities"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/viewalljobs/"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/search-results"
+        },
+        {
+          "ok": false,
+          "status": "HTTP_ERROR",
+          "reason": "HTTP 404",
+          "url": "https://www.unique.be/offres-d-emploi"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/actievoorwaarden-unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/conditions-unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/voorwaarden-unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/conditions-action-unique-jobtest",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/jobdag-waaslandia",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/organiseer-een-jobdag",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/jobdag-adpo",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/jobdag-teledesk",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/een-nieuwe-job-bij-unique",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/un-nouveau-job-chez-unique",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/vacature-aanmelden",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/donnez-nous-votre-offre-emploi",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/vacature-aanmelden/bedankt",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/fr/donnez-nous-votre-offre-emploi/merci",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        },
+        {
+          "ok": false,
+          "status": "NO_EVIDENCE",
+          "url": "https://www.unique.be/nl/new-job-campaign",
+          "jsonld": 0,
+          "job_links": 0,
+          "ats": "",
+          "reason": "jsonld=0, links=0, ats=NONE"
+        }
+      ],
+      "finished_at": "2026-09-08T00:17:16+02:00"
+    },
+    "ACTIRIS_STUDENT": {
+      "attempted_urls": [
+        "https://www.actiris.brussels/fr/citoyens/job-etudiant/",
+        "https://www.actiris.brussels/fr/citoyens/",
+        "https://www.actiris.brussels/fr/jobs",
+        "https://www.actiris.brussels/fr/jobs/",
+        "https://www.actiris.brussels/fr/emploi",
+        "https://www.actiris.brussels/fr/emploi/",
+        "https://www.actiris.brussels/fr/carrieres"
+      ],
+      "status": "PAUSED",
+      "reason": "V16: student/general coverage already provided by production source ACTIRIS.",
+      "backlog_status": "COVERED_BY_PARENT"
+    },
+    "JOBAT_STUDENT": {
+      "attempted_urls": [],
+      "status": "PAUSED",
+      "reason": "V16: student/general coverage already provided by production source JOBAT.",
+      "backlog_status": "COVERED_BY_PARENT"
+    }
+  },
+  "actions": {
+    "PURATOS_RAWHTML_PATCH": {
+      "status": "DONE",
+      "details": "Patch physically present; restored after rollback if needed.",
+      "updated_at": "2026-09-08T00:28:17+02:00"
+    },
+    "PURATOS_LIVE_AFTER_RAWHTML": {
+      "status": "DONE",
+      "details": "{\"source\": \"PURATOS\", \"status\": \"GREEN\", \"jobs\": 0, \"tracks\": {}, \"bad\": [], \"samples\": []}",
+      "updated_at": "2026-09-08T00:18:13+02:00"
+    }
+  }
+}

@@ -15,7 +15,7 @@ FINAL_POOL_VERSION = "1.1"
 CANDIDATE_LANGUAGES = {
     "fr": "C2",
     "en": "B1",
-    "nl": "B1",
+    "nl": "A2",
 }
 
 KNOWN_CREDENTIALS = {

@@ -1,9 +1,17 @@
+import re
 """
 JOB HUNTER BELGIUM
-MAIN - VERSION 10.3
+MAIN - VERSION 10.9
 
-Ajouts V10.3
+Ajouts V10.4
 ============
+- SmartRecruiters intégré nativement comme 5e canal de collecte ;
+- SGS, Eurofins et Sopra Steria via Posting API ;
+- descriptions SmartRecruiters déjà détaillées, sans second fetch ;
+- Application Gate V1.3 production ;
+- autorité canonique adaptée aux employeurs directs.
+
+Historique V10.3
 - avancement global clair sur 7 étapes ;
 - barre de progression globale ;
 - temps écoulé depuis le début à chaque étape ;
@@ -16,9 +24,9 @@ Pipeline V10.3 :
 2. Sauvegarde RAW
 3. Pré-sélection métier
 4. Analyse complète Travaillerpour
-5. Enrichissement Forem / Actiris / Talent
+5. Enrichissement standard + SmartRecruiters
 6. Build canonique + classement dédupliqué
-7. Application Gate V1.2 + shortlist de candidature
+7. Application Gate V1.3.2 + shortlist de candidature
 8. Application Queue V1 + anti-double-candidature
 """
 
@@ -34,6 +42,10 @@ from database.db import (
     get_database_summary,
     save_raw_jobs,
     upsert_raw_job,
+)
+from database.enriched_batch import (
+    enriched_persistence_batch,
+    upsert_enriched_job,
 )
 from database.canonical import build_canonical
 
@@ -55,14 +67,41 @@ from sources.travaillerpour import (
 )
 from sources.travaillerpour_detail import get_travaillerpour_job_detail
 
+from sources.smartrecruiters import fetch_smartrecruiters_jobs
+from sources.jobat_detail import get_jobat_job_detail
+from sources.scienceatwork import get_scienceatwork_job_detail
+from sources.randstad import get_randstad_job_detail
+from sources.jeffersonwells import get_jeffersonwells_job_detail
+from sources.akkodis import get_akkodis_job_detail
+from sources.gsk import get_gsk_job_detail
+from sources.ucb import get_ucb_job_detail
+from sources.iba import get_iba_job_detail
+from sources.pfizer import get_pfizer_job_detail
+from sources.takeda import get_takeda_job_detail
+from sources.jnj import get_jnj_job_detail
+from sources.quality_assistance import get_quality_assistance_job_detail
+from sources.thermofisher import get_thermofisher_job_detail
+from sources.sciensano import get_sciensano_job_detail
+from sources.sanofi import get_sanofi_job_detail
+from sources.baxter import get_baxter_job_detail
+from sources.novartis import get_novartis_job_detail
+from sources.registry import collect_enabled_sources
+from sources.source_yield import print_source_yield_report
+
+from database.reprise_stock import (
+    REPRISE_STOCK_VERSION,
+    charger_stock_actif,
+    cles_de_collecte,
+)
+from matching.texte_parasite import raison_parasite
 from matching.basic_matcher import score_job, print_job_match
 from matching.application_gate import (
-    apply_application_gate,
     export_application_gate,
     gate_summary,
     partition_gate_results,
 )
-from matching.application_queue import (
+from matching.application_gate_v13 import apply_application_gate
+from matching.application_queue_v12 import (
     build_application_queue,
     export_application_queue,
     partition_application_queue,
@@ -231,7 +270,7 @@ class Tee:
 
 def start_main_logging():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = LOG_DIR / f"job_hunter_main_v10_3_{timestamp}.txt"
+    path = LOG_DIR / f"job_hunter_main_v10_4_1_{timestamp}.txt"
     file = path.open("w", encoding="utf-8")
 
     stdout = sys.stdout
@@ -428,25 +467,56 @@ def collect_travaillerpour_jobs():
 
 
 # ============================================================
+# COLLECT SMARTRECRUITERS
+# ============================================================
+
+def collect_smartrecruiters_jobs():
+    print()
+    print("=" * 76)
+    print("           SOURCE 5 - SMARTRECRUITERS DIRECT EMPLOYERS")
+    print("=" * 76)
+
+    jobs, metas = fetch_smartrecruiters_jobs()
+
+    total_failures = 0
+    fatal_errors = 0
+
+    for meta in metas:
+        label = clean_value(meta.get("label")) or clean_value(
+            meta.get("company_identifier")
+        )
+        belgium = int(meta.get("listings_belgium") or 0)
+        converted = int(meta.get("jobs_converted") or 0)
+        failures = len(meta.get("failures") or [])
+        fatal = clean_value(meta.get("fatal_error"))
+
+        total_failures += failures
+        fatal_errors += int(bool(fatal))
+
+        print(
+            f"  {label:<20} "
+            f"BE={belgium:<4} "
+            f"converties={converted:<4} "
+            f"échecs={failures}"
+        )
+        if fatal:
+            print("      ❌", fatal)
+
+    print()
+    print("SMARTRECRUITERS - offres converties :", len(jobs))
+    print("SMARTRECRUITERS - échecs détail      :", total_failures)
+    print("SMARTRECRUITERS - erreurs fatales    :", fatal_errors)
+
+    return jobs
+
+# ============================================================
 # COLLECT ALL
 # ============================================================
 
 def collect_all_jobs():
-    forem = collect_forem_jobs()
-    actiris = collect_actiris_jobs()
-    talent = collect_talent_jobs()
-    travaillerpour = collect_travaillerpour_jobs()
-
-    standard_jobs = forem + actiris + talent
-
-    return {
-        "forem": forem,
-        "actiris": actiris,
-        "talent": talent,
-        "travaillerpour": travaillerpour,
-        "standard_jobs": standard_jobs,
-        "jobs": standard_jobs + travaillerpour,
-    }
+    # V10.5 : la liste des sources n'est plus câblée ici.
+    # Le registre central sources/registry.py décide quelles sources sont actives.
+    return collect_enabled_sources()
 
 
 # ============================================================
@@ -464,7 +534,7 @@ def persist_initial_raw_collection(all_jobs):
     result = save_raw_jobs(
         all_jobs,
         notes=(
-            "MAIN V10.3 - RAW immédiatement après collecte "
+            "MAIN V10.5 - RAW immédiatement après collecte "
             "avant tout filtre métier"
         ),
     )
@@ -487,7 +557,7 @@ def persist_initial_raw_collection(all_jobs):
 
 def persist_enriched_job(job, run_id):
     try:
-        upsert_raw_job(job, run_id=run_id)
+        upsert_enriched_job(job, run_id=run_id)
         return True
     except Exception as error:
         print()
@@ -497,6 +567,84 @@ def persist_enriched_job(job, run_id):
         print("Titre  :", job.title)
         print("Erreur :", error)
         return False
+
+
+THIN_DESCRIPTION_SECOND_GATE_LIMIT = 300
+
+THIN_DESCRIPTION_TITLE_PATTERNS = [
+    r"\bjunior\s+data\s+analyst\b",
+    r"\bdata\s+analyst\b",
+    r"\banalyste\s+(?:de\s+)?donn[eé]es\b",
+    r"\bbi\s+analyst\b",
+    r"\banalyste\s+bi\b",
+    r"\bpower\s*bi\b",
+    r"\bdata\s+quality\b",
+    r"\bdata\s+steward\b",
+    r"\bmaster\s+data\b",
+    r"\bdata\s+integrity\b",
+    r"\blab(?:oratory)?\s+assistant\b",
+    r"\blab(?:oratory)?\s+(?:technician|analyst)\b",
+    r"\btechnicien(?:ne)?\s+(?:de\s+)?laboratoire\b",
+    r"\blaborantin(?:e)?\b",
+    r"\banalyste\s+(?:de\s+)?laboratoire\b",
+    r"\bqc\s+(?:analyst|technician|specialist|officer)\b",
+    r"\banalyst(?:e)?\s+qc\b",
+    r"\bquality\s+control\b",
+    r"\bcontr[oô]le\s+qualit[eé]\b",
+    r"\bquality\s+assurance\b",
+    r"\bassurance\s+qualit[eé]\b",
+    r"\bqa\s+(?:officer|specialist|associate|technician|analyst)\b",
+    r"\bdata\s+coordinator\b",
+    r"\bjunior\s+data\s+scientist\b",
+    r"\b(?:production|manufacturing|bioprocess|process)\s+technician\b",
+    r"\btechnicien(?:ne)?\s+chimiste\b",
+]
+
+THIN_DESCRIPTION_TITLE_EXCLUSIONS = [
+    r"\bsenior\b",
+    r"\bsr\.?\b",
+    r"\bprincipal\b",
+    r"\bstaff\b",
+    r"\bdirector\b",
+    r"\bdirecteur\b",
+    r"\bhead\b",
+    r"\bvp\b",
+    r"\bmanager\b",
+    r"\bteam\s+lead(?:er)?\b",
+    r"\bsupervisor\b",
+    r"\bsuperviseur\b",
+    r"\bintern(?:ship)?\b",
+    r"\bstage\b",
+    r"\bstagiaire\b",
+    r"\bstudent\b",
+    r"\btrainee\b",
+    r"\bapprentice\b",
+    r"\bph\.?d\.?\b",
+    r"\bdoctorat\b",
+    r"\bqualified\s+person\b",
+]
+
+
+def should_second_gate_thin_description(job):
+    title = str(getattr(job, "title", "") or "").strip()
+    description = str(getattr(job, "description", "") or "").strip()
+
+    if len(description) >= THIN_DESCRIPTION_SECOND_GATE_LIMIT:
+        return False
+
+    if not title:
+        return False
+
+    if any(
+        re.search(pattern, title, re.I)
+        for pattern in THIN_DESCRIPTION_TITLE_EXCLUSIONS
+    ):
+        return False
+
+    return any(
+        re.search(pattern, title, re.I)
+        for pattern in THIN_DESCRIPTION_TITLE_PATTERNS
+    )
 
 
 # ============================================================
@@ -526,11 +674,26 @@ def pre_score_jobs(jobs):
 
 
 def select_candidate_jobs(pre_scored_jobs):
-    return [
-        (job, result)
-        for job, result in pre_scored_jobs
-        if result["core_relevance"]
-    ]
+    selected = []
+    second_gate_count = 0
+
+    for job, result in pre_scored_jobs:
+        if result["core_relevance"]:
+            selected.append((job, result))
+            continue
+
+        if should_second_gate_thin_description(job):
+            selected.append((job, result))
+            second_gate_count += 1
+
+    if second_gate_count:
+        print(
+            "Second gate descriptions courtes :",
+            second_gate_count,
+            "offre(s) ajoutée(s) avant enrichissement",
+        )
+
+    return selected
 
 
 # ============================================================
@@ -555,6 +718,419 @@ def get_job_detail(job):
             url=job.url,
             external_id=job.external_id,
             use_cache=True,
+        )
+
+    if source == "SMARTRECRUITERS":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {},
+                "from_cache": True,
+                "error": None,
+            }
+        return {
+            "success": False,
+            "matching_text": "",
+            "matching_text_length": 0,
+            "structured": {},
+            "from_cache": True,
+            "error": "SmartRecruiters : description détaillée vide.",
+        }
+
+    if source == "JOBAT":
+        return get_jobat_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "SCIENCEATWORK":
+        # La collecte Science@Work récupère déjà la fiche complète.
+        # On réutilise ce texte ici pour éviter un second appel réseau inutile.
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": clean_value(getattr(job, "company", "")),
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_scienceatwork_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "RANDSTAD":
+        # La collecte Randstad récupère déjà la fiche complète.
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": clean_value(getattr(job, "company", "")),
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "randstad_reference": clean_value(getattr(job, "randstad_reference", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_randstad_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "JEFFERSON_WELLS":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": clean_value(getattr(job, "company", "")),
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "bullhorn_job_id": clean_value(getattr(job, "bullhorn_job_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_jeffersonwells_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "AKKODIS":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": clean_value(getattr(job, "company", "")),
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "akkodis_reference": clean_value(getattr(job, "akkodis_reference", "")),
+                    "industry": clean_value(getattr(job, "industry", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_akkodis_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "GSK":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "GSK",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "external_path": clean_value(getattr(job, "workday_external_path", "")),
+                    "job_requisition_id": clean_value(getattr(job, "gsk_requisition_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_gsk_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "UCB":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "UCB",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "phenom_job_seq_no": clean_value(getattr(job, "phenom_job_seq_no", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_ucb_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "THERMO_FISHER":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Thermo Fisher Scientific",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "phenom_job_seq_no": clean_value(getattr(job, "phenom_job_seq_no", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_thermofisher_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "IBA":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "IBA",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "successfactors_job_id": clean_value(getattr(job, "successfactors_job_id", "")),
+                    "category": clean_value(getattr(job, "job_category", "")),
+                    "seniority": clean_value(getattr(job, "seniority_level", "")),
+                    "work_regime": clean_value(getattr(job, "work_regime", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_iba_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "PFIZER":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Pfizer",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "external_path": clean_value(getattr(job, "workday_external_path", "")),
+                    "job_requisition_id": clean_value(getattr(job, "pfizer_requisition_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_pfizer_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "TAKEDA":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Takeda",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "external_path": clean_value(getattr(job, "workday_external_path", "")),
+                    "job_requisition_id": clean_value(getattr(job, "takeda_requisition_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_takeda_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "JNJ":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Johnson & Johnson / Janssen",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "external_path": clean_value(getattr(job, "workday_external_path", "")),
+                    "job_requisition_id": clean_value(getattr(job, "jnj_requisition_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_jnj_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "QUALITY_ASSISTANCE":
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Quality Assistance",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "quality_assistance_job_id": clean_value(getattr(job, "quality_assistance_job_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_quality_assistance_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+        )
+
+    if source == "SCIENSANO":
+        text = clean_value(getattr(job, "description", ""))
+        known_detail_success = getattr(job, "detail_enrichment_success", None)
+        # A search-index snippet is intentionally stored in description so the
+        # matcher has some evidence, but it must never be upgraded to a full
+        # detail merely because it is non-empty.
+        if text and known_detail_success is not False:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": "Sciensano",
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "sciensano_job_id": clean_value(getattr(job, "sciensano_job_id", "")),
+                    "application_deadline": clean_value(getattr(job, "application_deadline", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        return get_sciensano_job_detail(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+            fallback={
+                "title": clean_value(getattr(job, "title", "")),
+                "location": clean_value(getattr(job, "location", "")),
+                "contract_type": clean_value(getattr(job, "contract_type", "")),
+                "listing_language": clean_value(getattr(job, "language", "")),
+                "search_snippet": clean_value(getattr(job, "sciensano_search_snippet", "")) or text,
+                "matching_text": text,
+                "discovery_only": bool(getattr(job, "sciensano_discovery_only", False)),
+                "application_deadline": clean_value(getattr(job, "application_deadline", "")),
+            },
+        )
+
+    if source in {"SANOFI", "BAXTER", "NOVARTIS"}:
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            company_map = {"SANOFI": "Sanofi", "BAXTER": "Baxter", "NOVARTIS": "Novartis"}
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {
+                    "title": clean_value(getattr(job, "title", "")),
+                    "company": company_map[source],
+                    "location": clean_value(getattr(job, "location", "")),
+                    "contract_type": clean_value(getattr(job, "contract_type", "")),
+                    "language": clean_value(getattr(job, "language", "")),
+                    "date_published": clean_value(getattr(job, "date_published", "")),
+                    "external_id": clean_value(getattr(job, "external_id", "")),
+                },
+                "from_cache": True,
+                "error": None,
+            }
+        detail_func = {
+            "SANOFI": get_sanofi_job_detail,
+            "BAXTER": get_baxter_job_detail,
+            "NOVARTIS": get_novartis_job_detail,
+        }[source]
+        return detail_func(
+            url=job.url,
+            external_id=job.external_id,
+            use_cache=True,
+            fallback={
+                "title": clean_value(getattr(job, "title", "")),
+                "location": clean_value(getattr(job, "location", "")),
+                "date_published": clean_value(getattr(job, "date_published", "")),
+            },
         )
 
     if source == "TRAVAILLERPOUR":
@@ -653,6 +1229,23 @@ def apply_travaillerpour_structured_data(job, detail):
     job.positions_count = structured.get("positions_count")
 
 
+def apply_jobat_structured_data(job, detail):
+    structured = detail.get("structured", {}) or {}
+
+    if structured.get("title"):
+        job.title = structured["title"]
+    if structured.get("company"):
+        job.company = structured["company"]
+    if structured.get("location"):
+        job.location = structured["location"]
+    if structured.get("contract_type"):
+        job.contract_type = structured["contract_type"]
+    if structured.get("language"):
+        job.language = structured["language"]
+    if structured.get("date_published"):
+        job.date_published = structured["date_published"]
+
+
 def apply_structured_data(job, detail):
     source = get_job_source(job)
 
@@ -660,6 +1253,229 @@ def apply_structured_data(job, detail):
         apply_actiris_structured_data(job, detail)
     elif source == "TALENT_BRUSSELS":
         apply_talent_structured_data(job, detail)
+    elif source == "JOBAT":
+        apply_jobat_structured_data(job, detail)
+    elif source == "SCIENCEATWORK":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        if structured.get("company"):
+            job.company = structured["company"]
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.degree_requirement = structured.get("degree")
+        job.job_category = structured.get("category")
+    elif source == "RANDSTAD":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        if structured.get("company"):
+            job.company = structured["company"]
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.randstad_reference = structured.get("randstad_reference")
+    elif source == "JEFFERSON_WELLS":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        if structured.get("company"):
+            job.company = structured["company"]
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.bullhorn_job_id = structured.get("bullhorn_job_id")
+        job.valid_through = structured.get("valid_through")
+    elif source == "AKKODIS":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        if structured.get("company"):
+            job.company = structured["company"]
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.akkodis_reference = structured.get("akkodis_reference")
+        job.industry = structured.get("industry")
+        job.job_category = structured.get("category")
+        job.experience_requirement = structured.get("experience")
+    elif source == "GSK":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "GSK"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.workday_external_path = structured.get("external_path")
+        job.gsk_requisition_id = structured.get("job_requisition_id") or structured.get("external_id")
+    elif source == "UCB":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "UCB"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.phenom_job_seq_no = structured.get("phenom_job_seq_no") or structured.get("external_id")
+    elif source == "THERMO_FISHER":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Thermo Fisher Scientific"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.phenom_job_seq_no = structured.get("phenom_job_seq_no") or structured.get("external_id")
+        job.thermofisher_job_id = job.phenom_job_seq_no
+    elif source == "IBA":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "IBA"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.successfactors_job_id = structured.get("successfactors_job_id") or structured.get("external_id")
+        job.job_category = structured.get("category")
+        job.seniority_level = structured.get("seniority")
+        job.work_regime = structured.get("work_regime")
+    elif source == "PFIZER":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Pfizer"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.workday_external_path = structured.get("external_path")
+        job.pfizer_requisition_id = structured.get("job_requisition_id") or structured.get("external_id")
+    elif source == "TAKEDA":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Takeda"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.workday_external_path = structured.get("external_path")
+        job.takeda_requisition_id = structured.get("job_requisition_id") or structured.get("external_id")
+    elif source == "JNJ":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Johnson & Johnson / Janssen"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.workday_external_path = structured.get("external_path")
+        job.jnj_requisition_id = structured.get("job_requisition_id") or structured.get("external_id")
+    elif source == "QUALITY_ASSISTANCE":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Quality Assistance"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.quality_assistance_job_id = structured.get("quality_assistance_job_id") or structured.get("external_id")
+    elif source == "SCIENSANO":
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = "Sciensano"
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        job.sciensano_job_id = structured.get("sciensano_job_id") or structured.get("external_id")
+        job.application_deadline = structured.get("application_deadline")
+    elif source in {"SANOFI", "BAXTER", "NOVARTIS"}:
+        structured = detail.get("structured", {}) or {}
+        if structured.get("title"):
+            job.title = structured["title"]
+        job.company = {"SANOFI": "Sanofi", "BAXTER": "Baxter", "NOVARTIS": "Novartis"}[source]
+        if structured.get("location"):
+            job.location = structured["location"]
+        if structured.get("contract_type"):
+            job.contract_type = structured["contract_type"]
+        if structured.get("language"):
+            job.language = structured["language"]
+        if structured.get("date_published"):
+            job.date_published = structured["date_published"]
+        if source == "SANOFI":
+            job.sanofi_job_id = structured.get("sanofi_job_id") or structured.get("external_id")
+        elif source == "BAXTER":
+            job.baxter_job_id = structured.get("baxter_job_id") or structured.get("external_id")
+        else:
+            job.novartis_job_id = structured.get("novartis_job_id") or structured.get("external_id")
+        job.radancy_requisition_id = structured.get("requisition_id")
+
     elif source == "TRAVAILLERPOUR":
         apply_travaillerpour_structured_data(job, detail)
 
@@ -667,6 +1483,21 @@ def apply_structured_data(job, detail):
 def apply_detail_description(job, detail):
     detailed = detail.get("matching_text", "") or ""
     if not detailed:
+        return
+
+    # Un bloc « offres similaires » n'est pas une description.
+    #
+    # Point de passage unique de tout texte enrichi : c'est ici, et nulle
+    # part ailleurs, qu'une extraction ratee contaminait a la fois
+    # detail_matching_text ET description. Le refus est donc pose ici.
+    #
+    # On n'ecrit rien : la description d'origine, si elle existe, vaut
+    # toujours mieux qu'une liste d'autres postes. L'echec est nomme, pour
+    # qu'il se voie a la relecture au lieu de passer pour un succes.
+    raison = raison_parasite(detailed)
+    if raison:
+        job.detail_enrichment_success = False
+        job.detail_enrichment_error = raison
         return
 
     original = job.description or ""
@@ -772,6 +1603,7 @@ def evaluate_travaillerpour_eligibility(job, detail):
 # FULL TRAVAILLERPOUR
 # ============================================================
 
+@enriched_persistence_batch
 def prepare_all_travaillerpour_jobs(jobs, database_run_id):
     print()
     print("=" * 76)
@@ -906,10 +1738,11 @@ def prepare_all_travaillerpour_jobs(jobs, database_run_id):
 # STANDARD ENRICHMENT
 # ============================================================
 
+@enriched_persistence_batch
 def enrich_standard_candidates(candidate_jobs, database_run_id):
     print()
     print("=" * 76)
-    print("       ENRICHISSEMENT FOREM / ACTIRIS / TALENT")
+    print("       ENRICHISSEMENT STANDARD + SMARTRECRUITERS")
     print("=" * 76)
     print()
 
@@ -920,11 +1753,14 @@ def enrich_standard_candidates(candidate_jobs, database_run_id):
     database_update_success = 0
     database_update_errors = 0
     total = len(candidate_jobs)
+    # JOBHUNTER_OBSERVABILITY_V1_ENRICHMENT
+    enrichment_runtime = defaultdict(lambda: {"jobs": 0, "seconds": 0.0, "success": 0, "cache": 0, "failures": 0})
 
     for index, (job, old_result) in enumerate(candidate_jobs, start=1):
         source = get_job_source(job)
         origin = get_job_origin(job)
         job.detail_enrichment_attempted = True
+        detail_started = time.perf_counter()
 
         try:
             detail = get_job_detail(job)
@@ -937,6 +1773,8 @@ def enrich_standard_candidates(candidate_jobs, database_run_id):
                 "from_cache": False,
                 "error": str(error),
             }
+
+        detail_elapsed = time.perf_counter() - detail_started
 
         if detail.get("success"):
             success_count += 1
@@ -959,6 +1797,15 @@ def enrich_standard_candidates(candidate_jobs, database_run_id):
             job.detail_from_cache = False
             job.detail_enrichment_error = detail.get("error")
 
+        runtime = enrichment_runtime[source]
+        runtime["jobs"] += 1
+        runtime["seconds"] += detail_elapsed
+        if detail.get("success"):
+            runtime["success"] += 1
+            if detail.get("from_cache", False): runtime["cache"] += 1
+        else:
+            runtime["failures"] += 1
+
         job.source_eligibility_status = "ELIGIBLE"
         job.source_eligibility_reason = None
 
@@ -970,14 +1817,27 @@ def enrich_standard_candidates(candidate_jobs, database_run_id):
         new_result = score_job(job)
         results.append((job, new_result))
 
+        confidence_source = (
+            (new_result.get("confidence") or {}).get("source")
+        )
+
         if new_result["provisional"]:
             confidence = "⚠️ PROV."
+        elif confidence_source == "JOBAT_SEARCH_CARD":
+            confidence = "🟡 CARD"
         elif new_result["confidence_level"] == "HIGH":
             confidence = "✅ HIGH"
         elif new_result["confidence_level"] == "MEDIUM":
             confidence = "🟡 MED."
         else:
             confidence = "⚪ LOW"
+
+        title_bonus = float(new_result.get("jobat_title_bonus") or 0)
+        bonus_suffix = (
+            f" | 🎯 TITRE +{title_bonus:.0f}"
+            if source == "JOBAT" and title_bonus > 0
+            else ""
+        )
 
         print(
             f"[{index:>4}/{total}] "
@@ -986,10 +1846,20 @@ def enrich_standard_candidates(candidate_jobs, database_run_id):
             f"{new_result['score']:>5.1f}/100 | "
             f"{confidence:<8} | "
             f"{job.title[:44]}"
+            f"{bonus_suffix}"
         )
 
         if detail.get("success") and not detail.get("from_cache", False):
             time.sleep(API_DELAY_SECONDS)
+
+    print()
+    print("ENRICHMENT_RUNTIME_SUMMARY")
+    for runtime_source, runtime in sorted(enrichment_runtime.items(), key=lambda item: item[1]["seconds"], reverse=True):
+        avg = runtime["seconds"] / max(1, runtime["jobs"])
+        print(
+            f"ENRICH_RUNTIME | source={runtime_source} | jobs={runtime['jobs']} | seconds={runtime['seconds']:.3f} | "
+            f"avg={avg:.3f} | success={runtime['success']} | cache={runtime['cache']} | failures={runtime['failures']}"
+        )
 
     return {
         "jobs": results,
@@ -1076,6 +1946,9 @@ def representative_quality(item):
 
     if source in {"FOREM", "TRAVAILLERPOUR", "TALENT_BRUSSELS"}:
         authority = 100
+    elif source == "SMARTRECRUITERS":
+        # Posting API de l'employeur direct.
+        authority = 99
     elif source == "ACTIRIS" and origin == "ACTIRIS":
         authority = 98
     elif source == "ACTIRIS" and origin == "VDAB_FOREM":
@@ -1134,6 +2007,61 @@ def canonical_group_eligibility(items):
 # ============================================================
 # COLLAPSE SCORED RAW -> CANONICAL
 # ============================================================
+
+# ============================================================
+# REPRISE DU STOCK ACTIF
+# ============================================================
+
+# Interrupteur volontaire : la reprise change le volume traite par le gate
+# et la file. Pouvoir la couper sans toucher a la logique evite d'avoir a
+# defaire quoi que ce soit si un run doit rester strictement comparable aux
+# precedents.
+REPRISE_STOCK_ACTIVE = True
+
+
+def reprendre_le_stock_actif(deja_notees):
+    """
+    Note les offres actives de la base absentes de la recolte du jour.
+
+    Sans cela, le pipeline ne juge que ce que les connecteurs viennent de
+    rapporter. Une offre collectee il y a trois jours, toujours ouverte, ne
+    repasse jamais devant le matcheur — meme si son texte a ete enrichi
+    depuis, meme si le matcheur a ete corrige depuis.
+
+    Aucun reseau : ces offres sont deja en base, avec leur texte. Le filtre
+    applique est exactement celui de la recolte fraiche — la pertinence
+    metier — de sorte qu'une offre reprise entre dans la file aux memes
+    conditions qu'une offre du jour, ni plus ni moins.
+    """
+    if not REPRISE_STOCK_ACTIVE:
+        return []
+
+    reprises = charger_stock_actif(cles_de_collecte(
+        job for job, _result in deja_notees))
+    if not reprises:
+        return []
+
+    retenues = []
+    for job in reprises:
+        try:
+            result = score_job(job)
+        except Exception:
+            # Une offre du stock qui fait echouer le scoring ne doit pas
+            # interrompre le run : elle est simplement laissee de cote.
+            continue
+        if result.get("core_relevance"):
+            retenues.append((job, result))
+
+    print()
+    print("=" * 100)
+    print("REPRISE DU STOCK ACTIF V" + REPRISE_STOCK_VERSION)
+    print("=" * 100)
+    print(f"Offres actives non revues par la recolte : {len(reprises)}")
+    print(f"Retenues comme pertinentes               : {len(retenues)}")
+    print("Ces offres n'auraient pas ete jugees par ce run sans la reprise.")
+
+    return retenues
+
 
 def collapse_scored_by_canonical(scored_jobs, build_id):
     mapping, members_by_canonical = load_canonical_mapping(build_id)
@@ -1625,10 +2553,10 @@ def main():
     print()
     print("=" * 76)
     print("                  JOB HUNTER BELGIUM")
-    print(" FOREM + ACTIRIS + TALENT.BRUSSELS + TRAVAILLERPOUR")
+    print(" FOREM + ACTIRIS + TALENT.BRUSSELS + TRAVAILLERPOUR + SMARTRECRUITERS")
     print("                    MATCHER V5.1")
-    print("                    MAIN V10.3")
-    print("     DATABASE V2.1 + CANONICAL V3 + GATE V1.2 + QUEUE V1")
+    print("                    MAIN V10.4.1")
+    print("     DATABASE V2.1 + CANONICAL V3 + GATE V1.3 + QUEUE V1")
     print("=" * 76)
     print()
     print("Démarrage :", datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
@@ -1648,11 +2576,15 @@ def main():
     print("=" * 76)
     print("                  COLLECTE TERMINÉE")
     print("=" * 76)
-    print("FOREM           :", len(collection["forem"]))
-    print("ACTIRIS         :", len(collection["actiris"]))
-    print("TALENT.BRUSSELS :", len(collection["talent"]))
-    print("TRAVAILLERPOUR  :", len(travaillerpour_jobs))
-    print("TOTAL           :", len(all_jobs))
+    for source_summary in collection.get("source_summaries", []):
+        if not source_summary.get("enabled"):
+            continue
+        label = str(source_summary.get("label") or source_summary.get("key") or "SOURCE")
+        count = int(source_summary.get("count") or 0)
+        error = source_summary.get("error")
+        suffix = "  ⚠️ ERREUR" if error else ""
+        print(f"{label[:20]:<20}: {count}{suffix}")
+    print("TOTAL               :", len(all_jobs))
 
     tracker.finish_step()
 
@@ -1664,12 +2596,14 @@ def main():
     database_run = persist_initial_raw_collection(all_jobs)
     database_run_id = database_run["run_id"]
 
+    print_source_yield_report(collection, database_run_id)
+
     tracker.finish_step()
 
     # ========================================================
     # STEP 3
     # ========================================================
-    tracker.start_step(3, "Pré-sélection métier Forem / Actiris / Talent")
+    tracker.start_step(3, "Pré-sélection métier + SmartRecruiters")
 
     standard_pre_scored = pre_score_jobs(standard_jobs)
     standard_candidates = select_candidate_jobs(standard_pre_scored)
@@ -1699,7 +2633,7 @@ def main():
     # ========================================================
     # STEP 5
     # ========================================================
-    tracker.start_step(5, "Enrichissement Forem / Actiris / Talent")
+    tracker.start_step(5, "Enrichissement standard + SmartRecruiters")
 
     standard_enrichment = enrich_standard_candidates(
         standard_candidates,
@@ -1707,6 +2641,12 @@ def main():
     )
 
     raw_scored = standard_enrichment["jobs"] + tp_relevant
+
+    # Le stock actif rejoint la recolte AVANT la deduplication canonique :
+    # quand une offre est presente des deux cotes, c'est la version fraiche
+    # qui est retenue comme representante.
+    raw_scored = raw_scored + reprendre_le_stock_actif(raw_scored)
+
     raw_scored.sort(key=result_sort_key, reverse=True)
 
     tracker.finish_step()
@@ -1730,9 +2670,9 @@ def main():
     tracker.finish_step()
 
     # ========================================================
-    # STEP 7 - APPLICATION GATE V1.2
+    # STEP 7 - APPLICATION GATE V1.3
     # ========================================================
-    tracker.start_step(7, "Application Gate V1.2 + shortlist")
+    tracker.start_step(7, "Application Gate V1.3.2 + shortlist")
 
     gated_jobs = apply_application_gate(canonical_scored)
     gate_partitions = partition_gate_results(gated_jobs)
@@ -1767,7 +2707,7 @@ def main():
     # ========================================================
     print()
     print("=" * 76)
-    print("                 RÉSULTATS V10.3")
+    print("                 RÉSULTATS V10.4.1")
     print("=" * 76)
     print()
     print("Offres collectées RAW        :", len(all_jobs))
@@ -1788,7 +2728,7 @@ def main():
     print("🔴 Faible <35                 :", len(categories["weak"]))
     print("⚠️ Provisoires               :", len(categories["provisional"]))
     print()
-    print("Application Gate V1.2 :")
+    print("Application Gate V1.3.2 :")
     print("  🟢 APPLY                   :", gate_counts["APPLY"])
     print("  🟡 STRETCH                 :", gate_counts["STRETCH"])
     print("  🟠 VERIFY                  :", gate_counts["VERIFY"])
@@ -1898,7 +2838,7 @@ def run():
 
         print()
         print("=" * 76)
-        print("RUN V10.3 TERMINÉ")
+        print("RUN V10.4.1 TERMINÉ")
         print("=" * 76)
         print()
         print("Durée totale :", format_duration(get_run_elapsed_seconds()))
@@ -1924,6 +2864,24 @@ def run():
         print(path)
         print("Temps total écoulé :", elapsed)
 
+
+
+
+# JOBHUNTER_UNIFIED_DISCOVERY_DETAIL_V1
+from sources.unified_discovery import matches_master_title
+_ud_original_should_second_gate_thin_description = should_second_gate_thin_description
+
+def should_second_gate_thin_description(job):
+    if _ud_original_should_second_gate_thin_description(job):
+        return True
+
+    title = str(getattr(job, "title", "") or "").strip()
+    description = str(getattr(job, "description", "") or "").strip()
+
+    if len(description) >= THIN_DESCRIPTION_SECOND_GATE_LIMIT:
+        return False
+
+    return matches_master_title(title)
 
 if __name__ == "__main__":
     run()

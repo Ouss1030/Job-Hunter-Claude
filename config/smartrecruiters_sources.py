@@ -22,6 +22,18 @@ SMARTRECRUITERS_COMPANIES = [
         "enabled": True,
     },
     {
+        "identifier": "devoteam",
+        "label": "Devoteam",
+        "tracks": ["DATA", "BI"],
+        "enabled": True,
+    },
+    {
+        "identifier": "arhs",
+        "label": "Arhs Group",
+        "tracks": ["DATA", "BI"],
+        "enabled": True,
+    },
+    {
         "identifier": "SopraSteria1",
         "label": "Sopra Steria",
         "tracks": ["DATA", "BI"],

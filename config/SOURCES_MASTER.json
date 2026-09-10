@@ -1,0 +1,4557 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Fichier maître partageable de toutes les sources JobHunter",
+  "created_at": "2026-09-07T19:44:02+02:00",
+  "updated_at": "2026-09-08T01:14:47+02:00",
+  "update_reason": "V23.1_finalize_completed_manual_phase",
+  "total_sources": 168,
+  "active_sources": 168,
+  "health_summary": {
+    "HEALTHY": 163,
+    "NEEDS_CREDENTIALS": 3,
+    "CACHE_ONLY": 1,
+    "DEGRADED": 1
+  },
+  "tracks_summary": {
+    "QC_PHARMA_LAB": 135,
+    "DATA_JUNIOR_BI": 134,
+    "QC_DATA_HYBRID": 142,
+    "STUDENT_ANY": 64
+  },
+  "contains_private_credentials": false,
+  "sources": [
+    {
+      "key": "FOREM",
+      "name": "Forem",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.forem_adaptive",
+      "collector_name": "get_forem_scheduler_plan",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 10,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Source publique wallonne. Recherche large du pipeline historique."
+    },
+    {
+      "key": "ADZUNA",
+      "name": "Adzuna Belgium API",
+      "url": "",
+      "source_type": "API",
+      "collector_module": "sources.adzuna_api",
+      "collector_name": "collect_adzuna_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "NEEDS_CREDENTIALS",
+      "collection_mode": "API",
+      "health_reason": "Missing private API credentials: ADZUNA_APP_ID, ADZUNA_APP_KEY",
+      "pipeline_group": "standard",
+      "priority": 12,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official API. Equal targeting QC/Pharma/Lab + Junior Data/BI + QC/Data hybrid. Credentials required."
+    },
+    {
+      "key": "CAREERJET",
+      "name": "Careerjet Belgium API",
+      "url": "",
+      "source_type": "API",
+      "collector_module": "sources.careerjet_api",
+      "collector_name": "collect_careerjet_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "NEEDS_CREDENTIALS",
+      "collection_mode": "API",
+      "health_reason": "Missing private API credentials: CAREERJET_API_KEY, CAREERJET_USER_IP",
+      "pipeline_group": "standard",
+      "priority": 13,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Publisher API v4. QC/Pharma/Lab + Junior Data/BI. Requires API key + user IP."
+    },
+    {
+      "key": "JOOBLE",
+      "name": "Jooble Belgium API",
+      "url": "",
+      "source_type": "API",
+      "collector_module": "sources.jooble_api",
+      "collector_name": "collect_jooble_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "NEEDS_CREDENTIALS",
+      "collection_mode": "API",
+      "health_reason": "Missing private API credentials: JOOBLE_API_KEY",
+      "pipeline_group": "standard",
+      "priority": 14,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Belgium REST API. Quota-aware rotating queries for QC/Pharma/Lab + Junior Data/BI."
+    },
+    {
+      "key": "AIR_LIQUIDE",
+      "name": "Air Liquide Belgium Workday",
+      "url": "https://airliquidehr.wd3.myworkdayjobs.com/en-US/AirLiquideExternalCareer",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.workday_pharma_v1",
+      "collector_name": "collect_air_liquide_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 15,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "BMS",
+      "name": "Bristol Myers Squibb Belgium Workday",
+      "url": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.workday_pharma_v1",
+      "collector_name": "collect_bms_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 15,
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "PROTHYA",
+      "name": "Prothya Biosolutions Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.prothya",
+      "collector_name": "collect_prothya_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 15,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Direct Brussels pharma employer. QC + Business Automation/IT departments, target-title filtered."
+    },
+    {
+      "key": "AMGEN_WORKDAY",
+      "name": "Amgen Belgium Workday",
+      "url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.amgen",
+      "collector_name": "collect_amgen_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 16,
+      "languages": [
+        "en",
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "EUROPHARMAJOBS",
+      "name": "EuroPharmaJobs Belgium",
+      "url": "https://www.europharmajobs.com/jobs/belgium",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega8_high_value",
+      "collector_name": "collect_europharmajobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 16,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Belgium-filtered European pharma/science board. QC/Lab + junior Data/BI + hybrid roles."
+    },
+    {
+      "key": "GALDERMA",
+      "name": "Galderma Belgium Workday",
+      "url": "https://galderma.wd3.myworkdayjobs.com/en-US/External",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.workday_pharma_v1",
+      "collector_name": "collect_galderma_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 16,
+      "languages": [
+        "en",
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "REMOTIVE",
+      "name": "Remotive Remote Jobs API",
+      "url": "https://remotive.com/api/remote-jobs",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.remotive",
+      "collector_name": "collect_remotive_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 16,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official public remote-jobs API. Belgium/Europe/Worldwide filter; Junior Data/BI + QC/Data hybrid targeting."
+    },
+    {
+      "key": "ASAP_STUDENT",
+      "name": "ASAP Student",
+      "url": "https://www.asap.be/fr",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_asap_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 17,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=NONE"
+    },
+    {
+      "key": "BEIGENE",
+      "name": "BeiGene / BeOne Belgium Workday",
+      "url": "https://beigene.wd5.myworkdayjobs.com/en-US/BeiGene",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.workday_pharma_v1",
+      "collector_name": "collect_beigene_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 17,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "ELANCO",
+      "name": "Elanco Belgium Workday",
+      "url": "https://elanco.wd5.myworkdayjobs.com/en-US/External_Career",
+      "source_type": "WORKDAY",
+      "collector_module": "sources.workday_pharma_v1",
+      "collector_name": "collect_elanco_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 17,
+      "languages": [
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
+    },
+    {
+      "key": "ICTJOB",
+      "name": "ICTjob Belgium",
+      "url": "https://www.ictjob.be/en/search-it-jobs/data-analyst-belgium",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega8_high_value",
+      "collector_name": "collect_ictjob_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 17,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Belgian IT/Data board. Junior Data Analyst/BI targeting; senior titles blocked."
+    },
+    {
+      "key": "REFERENCES",
+      "name": "Références.be",
+      "url": "https://www.references.be/Jobs",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega8_high_value",
+      "collector_name": "collect_references_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 18,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Belgian francophone job board. Target-filtered QC/Lab and Junior Data/BI."
+    },
+    {
+      "key": "START_PEOPLE_STUDENT",
+      "name": "Start People — Jobs étudiants",
+      "url": "https://www.startpeople.be/fr/joblist/offres-d-emploi-etudiant",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.agency_student_network_v1",
+      "collector_name": "collect_start_people_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 18,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Dedicated Start People student-job listing. Strict real job detail URLs; STUDENT_ANY."
+    },
+    {
+      "key": "SYNERGIE_STUDENT",
+      "name": "Synergie — Jobs étudiants",
+      "url": "https://www.synergiejobs.be/fr/student",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.agency_student_network_v1",
+      "collector_name": "collect_synergie_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 18,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Dedicated Synergie student-contract listing. Strict detail URLs; STUDENT_ANY."
+    },
+    {
+      "key": "ARBEITNOW",
+      "name": "Arbeitnow Europe API",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega8_high_value",
+      "collector_name": "collect_arbeitnow_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 19,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Free public European jobs API; Belgium-filtered QC/Lab and Junior Data/BI."
+    },
+    {
+      "key": "SWDE",
+      "name": "SWDE",
+      "url": "https://www.swde.be/fr/jobs/offres-emploi",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega8_high_value",
+      "collector_name": "collect_swde_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 19,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Walloon water employer. Laboratory/quality/data roles."
+    },
+    {
+      "key": "VDAB_STUDENT_WEB",
+      "name": "VDAB — Student jobs public web",
+      "url": "https://www.vdab.be/vindeenjob/jobs/studentenjob",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.agency_student_network_v1",
+      "collector_name": "collect_vdab_student_web_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 19,
+      "languages": [
+        "nl",
+        "en",
+        "fr"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Public VDAB student-job web search; bounded read-only collection, no API credentials required. STUDENT_ANY."
+    },
+    {
+      "key": "ACCENT_STUDENT",
+      "name": "Accent Student",
+      "url": "https://accentjobs.be/nl/vacatures",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_accent_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 20,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=41, ats=NONE, listing_marker=False"
+    },
+    {
+      "key": "ACTIRIS",
+      "name": "Actiris",
+      "url": "https://www.actiris.brussels/Umbraco/api/OffersApi/GetAllOffers",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.actiris",
+      "collector_name": "search_targeted_actiris_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 20,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Source publique bruxelloise + partenaires."
+    },
+    {
+      "key": "STUDENT_BE",
+      "name": "Student.be — Jobs étudiants Belgique",
+      "url": "https://www.student.be/en/be/student-jobs/",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.student_sources_v1",
+      "collector_name": "collect_student_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 20,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Dedicated Belgian student jobs. Any genuine student-job domain accepted; Gate=VERIFY for student eligibility."
+    },
+    {
+      "key": "STUDENTJOB_BE",
+      "name": "StudentJob.be — Jobs étudiants",
+      "url": "https://fr.studentjob.be/job-etudiant/bruxelles",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.student_sources_v1",
+      "collector_name": "collect_studentjob_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 21,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Dedicated student-job source. Any genuine job domain; low-value survey/game offers excluded."
+    },
+    {
+      "key": "TEMPO_TEAM_STUDENT",
+      "name": "Tempo-Team — Jobs etudiants",
+      "url": "https://www.tempo-team.be/kandidaten/vacatures/",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_tempo_team_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 21,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=220, ats=WORKDAY, listing_marker=False"
+    },
+    {
+      "key": "KONVERT_STUDENT",
+      "name": "Konvert Student",
+      "url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_konvert_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 22,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "RANDSTAD_STUDENT",
+      "name": "Randstad Belgium — Jobs étudiants",
+      "url": "https://www.randstad.be/fr/candidats/jobs/jt-etudiant/",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.student_sources_v1",
+      "collector_name": "collect_randstad_student_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 22,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Randstad dedicated student-contract feed, separate from generic Randstad source."
+    },
+    {
+      "key": "JOBSTUDENT_BE",
+      "name": "Jobstudent.be",
+      "url": "https://jobstudent.be/nl/vacatures/7-801-202633188--regio-maaseik-bree-jobstudent-crewmedewerker",
+      "source_type": "STUDENT_BOARD",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_jobstudent_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 24,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "ALEXION",
+      "name": "Alexion Pharma Belgium",
+      "url": "https://careers.alexion.com/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "ASTELLAS",
+      "name": "Astellas BV",
+      "url": "https://www.astellas.com/en/careers",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "BEPHARBEL",
+      "name": "Bepharbel Manufacturing NV/SA",
+      "url": "https://www.bepharbel.com/offres-emploi/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "CERES_PHARMA",
+      "name": "Ceres Pharmaceuticals SA",
+      "url": "https://ceres-pharma.com/en/careers",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "CURIUM",
+      "name": "Curium Belgium BV",
+      "url": "https://www.curiumpharma.com/careers/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "DAIICHI_SANKYO",
+      "name": "Daiichi Sankyo Belgium NV/SA",
+      "url": "https://www.daiichi-sankyo.be/career/discover-daiichi-sankyo-europe/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "DECHRA",
+      "name": "Dechra Veterinary Products NV/SA",
+      "url": "https://careers.dechra.com/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "EFFIK_BENELUX",
+      "name": "EFFIK BENELUX (ITALFARMACO Group)",
+      "url": "https://delbertpharma.com/career/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "GE_HEALTHCARE",
+      "name": "GE Healthcare BVBA/SPRL",
+      "url": "https://careers.gehealthcare.com/global/en",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "GRUNENTHAL",
+      "name": "Grünenthal NV/SA",
+      "url": "https://www.grunenthal.com/careers",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "GUERBET",
+      "name": "Guerbet NV/SA",
+      "url": "https://www.guerbet.com/careers-0",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "IJSFABRIEK_STROMBEEK",
+      "name": "IJsfabriek Strombeek NV/SA",
+      "url": "https://www.ijsfabriekstrombeek.be/nl/vacatures/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "KELA_VETERINARIA",
+      "name": "Kela Veterinaria NV/SA",
+      "url": "https://www.kela.health/working-at-kela/",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "LUNDBECK",
+      "name": "Lundbeck NV/SA",
+      "url": "https://www.lundbeck.com/global/careers",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "MENARINI",
+      "name": "Menarini Benelux NV/SA",
+      "url": "https://www.menarini.be/nl/vacatures.html",
+      "source_type": "DIRECT_CAREER",
+      "collector_module": "sources.direct_career_v1",
+      "collector_name": "collect_direct_career_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
+    },
+    {
+      "key": "TALENT_BRUSSELS",
+      "name": "talent.brussels",
+      "url": "https://www.talent.brussels",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.talent_brussels",
+      "collector_name": "search_targeted_talent_brussels_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 30,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Emplois de la Région de Bruxelles-Capitale."
+    },
+    {
+      "key": "TRAVAILLERPOUR",
+      "name": "Travaillerpour.be",
+      "url": "https://travaillerpour.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.travaillerpour",
+      "collector_name": "search_targeted_travaillerpour_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "special",
+      "priority": 40,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Fonction publique fédérale. Traitement d'éligibilité spécifique."
+    },
+    {
+      "key": "SMARTRECRUITERS",
+      "name": "SmartRecruiters",
+      "url": "",
+      "source_type": "PUBLIC_ATS_API",
+      "collector_module": "sources.smartrecruiters",
+      "collector_name": "fetch_smartrecruiters_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 50,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeurs directs configurés via SmartRecruiters."
+    },
+    {
+      "key": "JOBAT",
+      "name": "Jobat",
+      "url": "https://www.jobat.be",
+      "source_type": "CACHE_ONLY",
+      "collector_module": "sources.jobat",
+      "collector_name": "search_targeted_jobat_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "CACHE_ONLY",
+      "collection_mode": "CACHE_ONLY",
+      "health_reason": "Live Jobat is temporarily unreliable because anti-bot pages/403 were observed. Keep connector and bounded cache, but do not use Jobat as a fresh LIVE source in production.",
+      "pipeline_group": "standard",
+      "priority": 60,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Source V2.1. Recherche ciblée FR/EN, bruit NL filtré au maximum."
+    },
+    {
+      "key": "SCIENCEATWORK",
+      "name": "Science@Work",
+      "url": "https://www.scienceatwork.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.scienceatwork",
+      "collector_name": "collect_scienceatwork_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 70,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Life sciences/labo/QA. Fiches détaillées publiques ; annonces NL filtrées à la source."
+    },
+    {
+      "key": "AGFA",
+      "name": "Agfa",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.agfa",
+      "collector_name": "collect_agfa_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 72,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
+    },
+    {
+      "key": "UMICORE",
+      "name": "Umicore",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.umicore",
+      "collector_name": "collect_umicore_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 73,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 2.3 shadow validated; listing Belgium filter untrusted; detail geography mandatory."
+    },
+    {
+      "key": "SYENSQO",
+      "name": "Syensqo",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.syensqo",
+      "collector_name": "collect_syensqo_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 74,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
+    },
+    {
+      "key": "SOLVAY",
+      "name": "Solvay",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.solvay",
+      "collector_name": "collect_solvay_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 75,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
+    },
+    {
+      "key": "ASTRAZENECA",
+      "name": "AstraZeneca",
+      "url": "https://careers.astrazeneca.com/location/belgium-jobs/7684/2802361/2",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.astrazeneca",
+      "collector_name": "collect_astrazeneca_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 76,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Belgium location page; detail geo validation."
+    },
+    {
+      "key": "AMGEN",
+      "name": "Amgen",
+      "url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.amgen",
+      "collector_name": "collect_amgen_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 77,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Belgium GeoNames country filter; detail geo validation."
+    },
+    {
+      "key": "LONZA",
+      "name": "Lonza",
+      "url": "https://www.lonza.com/careers/job-search.aspx",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.lonza",
+      "collector_name": "collect_lonza_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 78,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Official Bornem/Verviers POST facets; strict Belgium listing truth."
+    },
+    {
+      "key": "ROCHE",
+      "name": "Roche",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.roche",
+      "collector_name": "collect_roche_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 79,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Existing generic Phenom engine + Roche public Workday CXS details."
+    },
+    {
+      "key": "BIOWIN",
+      "name": "BioWin Job Board",
+      "url": "https://www.biowin.org/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.biowin",
+      "collector_name": "collect_biowin_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 80,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "RANDSTAD",
+      "name": "Randstad",
+      "url": "https://www.randstad.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.randstad",
+      "collector_name": "collect_randstad_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 80,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Collecte ciblée Data/BI + Lab/QC/R&D. Fiches complètes publiques ; NL et néerlandais professionnel filtrés."
+    },
+    {
+      "key": "BIOPARK",
+      "name": "BioPark.jobs",
+      "url": "https://biopark.jobs/fr/emplois-recents",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.biopark",
+      "collector_name": "collect_biopark_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 81,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "EUROGENTEC",
+      "name": "Kaneka Eurogentec",
+      "url": "https://www.eurogentec.com/en/job-list",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.eurogentec",
+      "collector_name": "collect_eurogentec_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 82,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "TRASIS",
+      "name": "Trasis",
+      "url": "https://www.trasis.com/fr/careers/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.trasis",
+      "collector_name": "collect_trasis_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 83,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "QUANTOOM",
+      "name": "Quantoom Biosciences",
+      "url": "https://quantoom.com/job-application/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.quantoom",
+      "collector_name": "collect_quantoom_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 84,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "HYLORIS",
+      "name": "Hyloris Pharmaceuticals",
+      "url": "https://hyloris.com/careers/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.hyloris",
+      "collector_name": "collect_hyloris_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 85,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "EYED_PHARMA",
+      "name": "EyeD Pharma",
+      "url": "https://www.eyedpharma.com/careers/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.eyed_pharma",
+      "collector_name": "collect_eyed_pharma_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 86,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "NSIDE",
+      "name": "N-SIDE",
+      "url": "https://n-side.csod.com/ux/ats/careersite/1/home",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.nside",
+      "collector_name": "collect_nside_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 87,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Cornerstone CSOD public API; Belgium strict geo gate."
+    },
+    {
+      "key": "IRE",
+      "name": "IRE / IRE ELiT",
+      "url": "https://ire.talentfinder.be/fr/index.aspx",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.ire",
+      "collector_name": "collect_ire_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 88,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 Wallonia/Brussels direct career source."
+    },
+    {
+      "key": "NOVADIP",
+      "name": "Novadip Biosciences",
+      "url": "https://novadip.com/careers/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.novadip",
+      "collector_name": "collect_novadip_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 89,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 Wallonia/Brussels direct career source."
+    },
+    {
+      "key": "CER_GROUPE",
+      "name": "CER Groupe",
+      "url": "https://cergroupe.be/fr/emplois",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.cer_groupe",
+      "collector_name": "collect_cer_groupe_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 90,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 Wallonia/Brussels direct career source."
+    },
+    {
+      "key": "JEFFERSON_WELLS",
+      "name": "Jefferson Wells",
+      "url": "https://jeffersonwells.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.jeffersonwells",
+      "collector_name": "collect_jeffersonwells_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 90,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Consultance Engineering/Life Sciences. Préfiltre Data/BI + Lab/QC/Pharma ; fiches publiques FR/EN, NL filtré."
+    },
+    {
+      "key": "KIOMED",
+      "name": "KiOmed Pharma",
+      "url": "https://www.kiomedpharma.com/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.kiomed",
+      "collector_name": "collect_kiomed_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 91,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 Wallonia/Brussels direct career source."
+    },
+    {
+      "key": "CERBA",
+      "name": "Cerba HealthCare Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.cerba",
+      "collector_name": "collect_cerba_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 92,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 independent conditional integration."
+    },
+    {
+      "key": "MSD",
+      "name": "MSD Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.msd",
+      "collector_name": "collect_msd_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 95,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Batch 4 independent conditional integration."
+    },
+    {
+      "key": "PAUWELS",
+      "name": "Pauwels Consulting",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_pauwels_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 96,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "ICON",
+      "name": "ICON Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_icon_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 97,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "TMC",
+      "name": "The Member Company / TMC",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_tmc_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 99,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "AKKODIS",
+      "name": "Akkodis",
+      "url": "https://akka-cand.talent-soft.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.akkodis",
+      "collector_name": "collect_akkodis_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 100,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Consultance IT/Engineering/Life Sciences. Portail TalentSoft officiel Belgique ; préfiltre Data/BI + Lab/QC/Pharma, NL filtré."
+    },
+    {
+      "key": "QBD_GROUP",
+      "name": "QbD Group",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_qbd_group_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 100,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "SOPRA_STERIA",
+      "name": "Sopra Steria Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_sopra_steria_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 103,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "LILLY",
+      "name": "Eli Lilly Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_lilly_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 104,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "EURAXESS_BE",
+      "name": "EURAXESS Belgium",
+      "url": "https://euraxess.ec.europa.eu/jobs/search",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_euraxess_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 105,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=11, ats=NONE"
+    },
+    {
+      "key": "THALES",
+      "name": "Thales Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_sources",
+      "collector_name": "collect_thales_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 105,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5 independent hardened source."
+    },
+    {
+      "key": "ODOO",
+      "name": "Odoo",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega5_hold_sources",
+      "collector_name": "collect_odoo_hold_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 106,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.4 independently resolved HOLD source."
+    },
+    {
+      "key": "CRM_GROUP",
+      "name": "CRM Group (Liege)",
+      "url": "https://crmgroup.be/en/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_crm_group_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 110,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=15, ats=NONE, listing_marker=False"
+    },
+    {
+      "key": "GSK",
+      "name": "GSK",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.gsk",
+      "collector_name": "collect_gsk_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 110,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma/vaccins. Workday public Belgique ; préfiltre QC/Lab + Data/BI, stages et rôles seniors exclus."
+    },
+    {
+      "key": "SIRRIS",
+      "name": "Sirris",
+      "url": "https://recruitment.sirris.be/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_sirris_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 112,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "KEYRUS",
+      "name": "Keyrus Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega56_sources",
+      "collector_name": "collect_keyrus_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 113,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.6 strict true-source integration."
+    },
+    {
+      "key": "UCLOUVAIN_JOBS",
+      "name": "UCLouvain — emploi",
+      "url": "https://jobs.uclouvain.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_uclouvain_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 114,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=1, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "CELABOR",
+      "name": "Celabor (Herve)",
+      "url": "https://celabor.be/a-propos/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_celabor_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 115,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=2, ats=NONE, listing_marker=True"
+    },
+    {
+      "key": "VUB_JOBS",
+      "name": "VUB — vacatures",
+      "url": "https://jobs.vub.be/go/EN_ALL-JOBS/3775601/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_vub_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 116,
+      "languages": [
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=12, ats=SUCCESSFACTORS, listing_marker=True"
+    },
+    {
+      "key": "ULB_JOBS",
+      "name": "ULB — offres d'emploi",
+      "url": "https://www.ulb.be/fr/travailler-et-collaborer/offres-d-emploi",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_ulb_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 118,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=7, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
+    },
+    {
+      "key": "UCB",
+      "name": "UCB",
+      "url": "https://careers.ucb.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.ucb",
+      "collector_name": "collect_ucb_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 120,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct biopharma. Portail Phenom public Belgique/Braine/Bruxelles ; préfiltre QC/Lab/Analytical + Data/BI, rôles seniors et stages exclus."
+    },
+    {
+      "key": "MEDPACE",
+      "name": "Medpace Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega58_sources",
+      "collector_name": "collect_medpace_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 122,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.8 recovered source using native engine."
+    },
+    {
+      "key": "SDWORX_STAFFING",
+      "name": "SD Worx Staffing",
+      "url": "https://www.sdworx.jobs/fr-be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_sdworx_staffing_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 123,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "T_INTERIM",
+      "name": "T-Interim (T-Groep)",
+      "url": "https://www.proman.be/nl/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_t_interim_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 125,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=60, ats=NONE"
+    },
+    {
+      "key": "UNIVERCELLS_TECH",
+      "name": "Univercells Technologies",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega59_sources",
+      "collector_name": "collect_univercells_tech_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 125,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.9 recovered/healthy source."
+    },
+    {
+      "key": "CARGILL_BE",
+      "name": "Cargill Belgium",
+      "url": "https://careers.cargill.com/en",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_cargill_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 126,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=1, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "LHOIST",
+      "name": "Lhoist",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega59_sources",
+      "collector_name": "collect_lhoist_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 126,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.9 recovered/healthy source."
+    },
+    {
+      "key": "ABSOLUTE_JOBS",
+      "name": "Absolute Jobs",
+      "url": "https://www.absolutejobs.be/nl/jobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_absolute_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 127,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "VANDEMOORTELE",
+      "name": "Vandemoortele",
+      "url": "https://careers.vandemoortele.com/search/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_vandemoortele_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 128,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "FORUM_JOBS",
+      "name": "Forum Jobs",
+      "url": "https://www.forumjobs.be/fr",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_forum_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 129,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=4, ats=WORKDAY"
+    },
+    {
+      "key": "DANONE_BE",
+      "name": "Danone Belux",
+      "url": "https://careers.danone.com/benelux/en/jobs.html",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_danone_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 130,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=12, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
+    },
+    {
+      "key": "IBA",
+      "name": "IBA",
+      "url": "https://careers.iba-worldwide.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.iba",
+      "collector_name": "collect_iba_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 130,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct à Louvain-la-Neuve. SAP SuccessFactors public ; préfiltre QC/Lab/Analytical + Data/BI, rôles seniors et stages exclus."
+    },
+    {
+      "key": "ASAP_BE",
+      "name": "ASAP.be",
+      "url": "https://www.asap.be/fr",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_asap_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 131,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=NONE"
+    },
+    {
+      "key": "PAREXEL",
+      "name": "Parexel Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega510_sources",
+      "collector_name": "collect_parexel_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 131,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.10 specific recovered source."
+    },
+    {
+      "key": "POLYPEPTIDE",
+      "name": "PolyPeptide Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega510_sources",
+      "collector_name": "collect_polypeptide_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 132,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.10 specific recovered source."
+    },
+    {
+      "key": "JOHN_COCKERILL",
+      "name": "John Cockerill",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega510_sources",
+      "collector_name": "collect_john_cockerill_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 133,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.10 specific recovered source."
+    },
+    {
+      "key": "SECRETARY_PLUS",
+      "name": "Secretary Plus",
+      "url": "https://www.brightplus.be/en/employers/permanent-jobs",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_secretary_plus_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 133,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "AMARIS",
+      "name": "Amaris Consulting",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega512_sources",
+      "collector_name": "collect_amaris_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 134,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.12 verified real job feed."
+    },
+    {
+      "key": "PROCTER_GAMBLE",
+      "name": "Procter & Gamble Belgium",
+      "url": "https://www.pgcareers.com/ca/fr/c/production-et-assurance-qualit%C3%A9-jobs",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_procter_gamble_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 134,
+      "languages": [
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "BRIGHT_PLUS",
+      "name": "Bright Plus",
+      "url": "https://www.brightplus.be/en/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_bright_plus_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 135,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "NRB",
+      "name": "KEYES (ex-NRB)",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega512_sources",
+      "collector_name": "collect_nrb_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 135,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.12 verified real job feed."
+    },
+    {
+      "key": "IQVIA",
+      "name": "IQVIA Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega512_sources",
+      "collector_name": "collect_iqvia_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 136,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.12 verified real job feed."
+    },
+    {
+      "key": "CAPGEMINI_ENG",
+      "name": "Capgemini Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega512_sources",
+      "collector_name": "collect_capgemini_eng_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 137,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.12 verified real job feed."
+    },
+    {
+      "key": "UNIQUE_BE",
+      "name": "Unique (USG)",
+      "url": "https://www.unique.be/nl/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_unique_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 137,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "ABBVIE",
+      "name": "AbbVie Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega513_sources",
+      "collector_name": "collect_abbvie_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 138,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.13 verified official feed."
+    },
+    {
+      "key": "COLRUYT",
+      "name": "Colruyt Group (Halle)",
+      "url": "https://jobs.colruytgroup.com/fr",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_colruyt_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 138,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "ACTIEF_INTERIM",
+      "name": "Actief Interim",
+      "url": "https://www.actief.be/nl/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_actief_interim_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 139,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "CSL",
+      "name": "CSL Behring Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega513_sources",
+      "collector_name": "collect_csl_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 139,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.13 verified official feed."
+    },
+    {
+      "key": "BARRY_CALLEBAUT",
+      "name": "Barry Callebaut (Halle / Wieze)",
+      "url": "https://jobs.barry-callebaut.com/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_barry_callebaut_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 140,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "BOEHRINGER",
+      "name": "Boehringer Ingelheim Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega513_sources",
+      "collector_name": "collect_boehringer_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 140,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 5.13 verified official feed."
+    },
+    {
+      "key": "PFIZER",
+      "name": "Pfizer",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.pfizer",
+      "collector_name": "collect_pfizer_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 140,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma. Workday public Belgique/Puurs ; préfiltre QC/Lab + Data/BI, stages et rôles seniors exclus."
+    },
+    {
+      "key": "EXPERIS",
+      "name": "Experis Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega64_staffing",
+      "collector_name": "collect_experis_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 141,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.4 strict staffing connector."
+    },
+    {
+      "key": "ACCENT_JOBS",
+      "name": "Accent Jobs",
+      "url": "https://accentjobs.be/nl/vacatures",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_accent_jobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 142,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=41, ats=NONE, listing_marker=False"
+    },
+    {
+      "key": "PURATOS",
+      "name": "Puratos (Groot-Bijgaarden)",
+      "url": "https://jobs.puratos.com/go/Belgium-%26-HQ_FR/9458001/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_puratos_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 142,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=1, detail=DETAIL_APPLY_SIGNAL, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "SYNERGIE",
+      "name": "Synergie Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega64_staffing",
+      "collector_name": "collect_synergie_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 142,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.4 strict staffing connector."
+    },
+    {
+      "key": "ADECCO",
+      "name": "Adecco Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.adecco_api",
+      "collector_name": "collect_adecco_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 143,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "KONVERT",
+      "name": "Konvert Interim",
+      "url": "https://www.konvert.be/nl/flexi-jobs/werkgever",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_konvert_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 143,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "CHIREC",
+      "name": "CHIREC",
+      "url": "https://jobs.chirec.be/fr/home.aspx",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_chirec_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 144,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "MANPOWER",
+      "name": "Manpower Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_manpower_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 144,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "VIVALDIS",
+      "name": "Vivaldis",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_vivaldis_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 145,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "PAGE_PERSONNEL",
+      "name": "Page Personnel Belgium",
+      "url": "https://www.michaelpage.be/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_page_personnel_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 146,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=68, ats=NONE"
+    },
+    {
+      "key": "UZ_BRUSSEL",
+      "name": "UZ Brussel (Jette)",
+      "url": "https://www.uzbrusselwerkt.be/alle-vacatures",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_uz_brussel_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 146,
+      "languages": [
+        "nl",
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "SELECT_HR",
+      "name": "Select HR",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_select_hr_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 147,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "WALTERS_PEOPLE",
+      "name": "Walters People",
+      "url": "https://www.robertwalters.be/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_walters_people_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 147,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "AGILITAS",
+      "name": "Proman / ex-Agilitas",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_agilitas_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 148,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "HAYS_BE",
+      "name": "Hays Belgium",
+      "url": "https://www.hays.be/en/boost-your-career/accounting-and-finance",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_hays_be_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 148,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
+    },
+    {
+      "key": "SAINT_LUC",
+      "name": "Cliniques universitaires Saint-Luc (UCLouvain)",
+      "url": "https://jobs.saintluc.be/offre-de-emploi/liste-toutes-offres.aspx",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_saint_luc_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 148,
+      "languages": [
+        "fr"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=22, detail=JSONLD_JOBPOSTING, ats=TALENTSOFT"
+    },
+    {
+      "key": "AGO",
+      "name": "AGO Jobs & HR",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_ago_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 149,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "DE_WATERGROEP",
+      "name": "De Watergroep",
+      "url": "https://jobs.dewatergroep.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_de_watergroep_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 150,
+      "languages": [
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "LETS_WORK",
+      "name": "Let's Work",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_lets_work_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 150,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "TAKEDA",
+      "name": "Takeda",
+      "url": "https://jobs.takeda.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.takeda",
+      "collector_name": "collect_takeda_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 150,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct biopharma à Lessines. Site carrière officiel jobs.takeda.com ; cible Technicien Chimiste/Purification + QC/Lab + Data/BI, stages et rôles seniors exclus."
+    },
+    {
+      "key": "OXFORD_GLOBAL",
+      "name": "Oxford Global Resources",
+      "url": "https://jobs.oxfordcorp.com/fr/emplois/europe-belgium",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.oxford_belgium",
+      "collector_name": "collect_oxford_global_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 152,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "SCIENSANO_RESEARCH",
+      "name": "Sciensano — labos de recherche",
+      "url": "https://www.sciensano.be/fr/travailler-faire-un-stage-chez-sciensano/mes-opportunites-demploi",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_sciensano_research_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 152,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=4, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
+    },
+    {
+      "key": "BRUNEL",
+      "name": "Brunel Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_brunel_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 153,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "INFRABEL",
+      "name": "Infrabel",
+      "url": "https://jobs.infrabel.be/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_infrabel_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 153,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=0, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "AUSTIN_BRIGHT",
+      "name": "Austin Bright",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_austin_bright_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 154,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "PROGRESSIVE",
+      "name": "Progressive Recruitment",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega65_staffing",
+      "collector_name": "collect_progressive_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 155,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.5 strict healthy staffing feed."
+    },
+    {
+      "key": "SNCB_NMBS",
+      "name": "SNCB / NMBS",
+      "url": "https://jobs.belgiantrain.be/fr/search",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_sncb_nmbs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 155,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=80, detail=DETAIL_APPLY_SIGNAL, ats=SUCCESSFACTORS"
+    },
+    {
+      "key": "AVIAPARTNER",
+      "name": "Aviapartner",
+      "url": "https://jobs.aviapartner.aero/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_aviapartner_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 156,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=RECRUITEE, listing_marker=False"
+    },
+    {
+      "key": "START_PEOPLE",
+      "name": "Start People Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega67_high_value",
+      "collector_name": "collect_start_people_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 156,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.7 high-value staffing source."
+    },
+    {
+      "key": "TEMPO_TEAM",
+      "name": "Tempo-Team Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega67_high_value",
+      "collector_name": "collect_tempo_team_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 157,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.7 high-value staffing source."
+    },
+    {
+      "key": "ROBERT_HALF",
+      "name": "Robert Half Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega67_high_value",
+      "collector_name": "collect_robert_half_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 158,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.8 Robert Half corrected URL feed."
+    },
+    {
+      "key": "QJOBS",
+      "name": "Q Jobs Belgium",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega67_high_value",
+      "collector_name": "collect_qjobs_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 159,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.7 high-value staffing source."
+    },
+    {
+      "key": "BPOST",
+      "name": "bpost",
+      "url": "https://career.bpost.be/en",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_bpost_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 160,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=9, detail=JSONLD_JOBPOSTING, ats=NONE"
+    },
+    {
+      "key": "JNJ",
+      "name": "Johnson & Johnson / Janssen",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.jnj",
+      "collector_name": "collect_jnj_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 160,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma/MedTech. Workday public Belgique ; préfiltre QC/QA/Lab/Chimie + Data/BI, stages et rôles seniors exclus."
+    },
+    {
+      "key": "MICHAEL_PAGE",
+      "name": "Michael Page BeLux",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.mega67_high_value",
+      "collector_name": "collect_michael_page_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 160,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID",
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Mega Batch 6.7 high-value staffing source."
+    },
+    {
+      "key": "BRUSSELS_AIRPORT",
+      "name": "Brussels Airport Company",
+      "url": "https://jobs.brusselsairport.be/search/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_brussels_airport_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 162,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "STUDENT_ANY"
+      ],
+      "date_added": "2026-09-08",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
+    },
+    {
+      "key": "STIB_MIVB",
+      "name": "STIB-MIVB",
+      "url": "https://jobs.stib-mivb.be/viewalljobs/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_stib_mivb_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 165,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=SUCCESSFACTORS, listing_marker=True"
+    },
+    {
+      "key": "QUALITY_ASSISTANCE",
+      "name": "Quality Assistance",
+      "url": "https://www.quality-assistance.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.quality_assistance",
+      "collector_name": "collect_quality_assistance_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 170,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "CRO analytique directe à Thuin. Site carrière public ; cible laboratoire/HPLC/chromatographie/QC + Data/BI, rôles leaders/commerciaux/stages exclus."
+    },
+    {
+      "key": "ALS_GLOBAL",
+      "name": "ALS Life Sciences Belgium",
+      "url": "https://www.alsglobal.com/en/careers",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_als_global_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 174,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=WORKDAY, listing_marker=True"
+    },
+    {
+      "key": "NORMEC",
+      "name": "Normec Group Belgium",
+      "url": "https://careers.normecgroup.com/vacancies",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_normec_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 180,
+      "languages": [
+        "fr",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=2, detail=JSONLD_JOBPOSTING, ats=NONE"
+    },
+    {
+      "key": "THERMO_FISHER",
+      "name": "Thermo Fisher Scientific",
+      "url": "https://jobs.thermofisher.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.thermofisher",
+      "collector_name": "collect_thermofisher_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 180,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct science/CRO. Portail Phenom public Belgique ; cible Lab/QC/QA/Analytical/Sample Management + Data/BI, rôles seniors/commerciaux/stages exclus."
+    },
+    {
+      "key": "EUROFINS",
+      "name": "Eurofins Belgium",
+      "url": "https://careers.eurofins.com/",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.backlog_validator_v14",
+      "collector_name": "collect_eurofins_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 185,
+      "languages": [
+        "fr",
+        "nl",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "QC_DATA_HYBRID",
+        "DATA_JUNIOR_BI"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=4, ats=SMARTRECRUITERS"
+    },
+    {
+      "key": "SCIENSANO",
+      "name": "Sciensano",
+      "url": "https://www.sciensano.be",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.sciensano",
+      "collector_name": "collect_sciensano_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "DEGRADED",
+      "collection_mode": "LIVE",
+      "health_reason": "Official portal has historically shown instability/timeouts.",
+      "pipeline_group": "standard",
+      "priority": 190,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Source secondaire désactivée par défaut : portail jobs.sciensano.be instable/timeouts ; fallback index provisoire uniquement."
+    },
+    {
+      "key": "SANOFI",
+      "name": "Sanofi",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.sanofi",
+      "collector_name": "collect_sanofi_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 200,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma. Radancy public Belgique/Geel ; cible QC/Lab/Analytical + Data/BI, NL obligatoire et rôles seniors/stages exclus."
+    },
+    {
+      "key": "BAXTER",
+      "name": "Baxter",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.baxter",
+      "collector_name": "collect_baxter_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 210,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma/medtech. Radancy public Belgique/Lessines/Braine-l'Alleud ; cible Lab/QC/QA/R&D + Data, rôles seniors/leads exclus."
+    },
+    {
+      "key": "NOVARTIS",
+      "name": "Novartis",
+      "url": "https://www.novartis.com",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.novartis",
+      "collector_name": "collect_novartis_jobs",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 220,
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-07",
+      "last_validation": "2026-09-08T01:14:47+02:00",
+      "notes": "Employeur direct pharma. Career Search public Belgique/Puurs/Vilvoorde ; cible Business/Data Analyst + QC/Lab/QA, rôles seniors/managers exclus."
+    }
+  ]
+}

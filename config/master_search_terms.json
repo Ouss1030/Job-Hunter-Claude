@@ -1,0 +1,1998 @@
+{
+  "version": 2,
+  "authority": "MASTER_SEARCH_TERMS",
+  "generated_from": "CV + candidate_truth + Belgian job-market title research",
+  "candidate_scope": {
+    "pharma_qc_experience_years": 3,
+    "data_professional_experience_years": 0,
+    "data_level": "junior",
+    "lab_qc_level": "experienced_technician",
+    "dutch": "A2_non_professional"
+  },
+  "term_count": 280,
+  "terms": [
+    "Data Analyst",
+    "Junior Data Analyst",
+    "Analyste de données",
+    "Analyste de données junior",
+    "Analyste data",
+    "Data Analyst Junior",
+    "Business Data Analyst",
+    "Analyste business data",
+    "Analyste données métier",
+    "Analyste BI",
+    "BI Analyst",
+    "Analyste Business Intelligence",
+    "Business Intelligence Analyst",
+    "Analyste décisionnel",
+    "Analyste reporting",
+    "Reporting Analyst",
+    "BI Reporting Analyst",
+    "Data Reporting Analyst",
+    "Analyste reporting BI",
+    "Power BI Analyst",
+    "Analyste Power BI",
+    "Power BI Developer",
+    "Développeur Power BI",
+    "Junior BI Analyst",
+    "Junior Business Intelligence Analyst",
+    "Junior Reporting Analyst",
+    "Reporting Officer",
+    "Data Officer",
+    "Data Coordinator",
+    "Data Analyst Officer",
+    "Data Management Officer",
+    "Data Quality Analyst",
+    "Analyste qualité des données",
+    "Data Quality Officer",
+    "Data Quality Specialist",
+    "Data Steward",
+    "Junior Data Steward",
+    "Data Governance Analyst",
+    "Analyste gouvernance des données",
+    "Data Governance Officer",
+    "Data Management Analyst",
+    "Master Data Analyst",
+    "Master Data Officer",
+    "Master Data Specialist",
+    "Data Integrity Analyst",
+    "Analyste intégrité des données",
+    "Data Operations Analyst",
+    "Operations Data Analyst",
+    "Process Data Analyst",
+    "Data Process Analyst",
+    "Process Analyst",
+    "Analyste processus",
+    "Junior Process Analyst",
+    "Business Analyst",
+    "Junior Business Analyst",
+    "Analyste métier junior",
+    "Analyste fonctionnel",
+    "Junior Functional Analyst",
+    "Functional Analyst",
+    "Business Process Analyst",
+    "Data & Reporting Specialist",
+    "Data Performance Analyst",
+    "Reporting Specialist",
+    "Data Visualization Analyst",
+    "Business Reporting Analyst",
+    "Operational Reporting Analyst",
+    "Management Reporting Analyst",
+    "Performance Reporting Analyst",
+    "Dashboard Analyst",
+    "Dashboard Developer",
+    "Power BI Reporting Analyst",
+    "Business Intelligence Developer Junior",
+    "BI Developer Junior",
+    "Analytics Analyst",
+    "Junior Analytics Analyst",
+    "Business Analytics Analyst",
+    "Data Insights Analyst",
+    "Insights Analyst",
+    "Junior Insights Analyst",
+    "Commercial Data Analyst",
+    "Operations Analyst",
+    "Junior Operations Analyst",
+    "Supply Chain Data Analyst",
+    "Logistics Data Analyst",
+    "HR Data Analyst",
+    "Finance Data Analyst",
+    "Customer Data Analyst",
+    "Product Data Analyst",
+    "Marketing Data Analyst",
+    "Sales Data Analyst",
+    "Data analist",
+    "Junior data analist",
+    "Reporting & Insights Analyst",
+    "Business data-analist",
+    "BI analist",
+    "Business intelligence analist",
+    "Reporting analist",
+    "Rapportage analist",
+    "Power BI analist",
+    "Data quality analist",
+    "Data kwaliteitsanalist",
+    "Data governance analist",
+    "Databeheerder",
+    "Junior databeheerder",
+    "Master data beheerder",
+    "Procesanalist",
+    "Data- en procesanalist",
+    "Business analist",
+    "Junior business analist",
+    "Functioneel analist",
+    "Laborantin",
+    "Laborantin QC",
+    "Laborantin contrôle qualité",
+    "Laborantin chimie",
+    "Laborantin en chimie",
+    "Laborantin microbiologie",
+    "Laborantin pharmaceutique",
+    "Technicien de laboratoire",
+    "Technicien laboratoire",
+    "Technicien de laboratoire QC",
+    "Technicien laboratoire QC",
+    "Technicien contrôle qualité",
+    "Technicien contrôle qualité laboratoire",
+    "Technicien chimiste",
+    "Technicien chimie",
+    "Technicien analytique",
+    "Technicien analyses",
+    "Technicien analyses chimiques",
+    "Technicien analyses physico-chimiques",
+    "Technicien physico-chimie",
+    "Technicien microbiologie",
+    "Technicien QC",
+    "Technicien qualité QC",
+    "Technicien qualité laboratoire",
+    "Analyste laboratoire",
+    "Analyste de laboratoire",
+    "Analyste QC",
+    "Analyste contrôle qualité",
+    "Analyste chimie",
+    "Analyste chimique",
+    "Analyste physico-chimie",
+    "Analyste microbiologie",
+    "Analyste pharmaceutique",
+    "Analyste qualité laboratoire",
+    "Chimiste laboratoire",
+    "Chimiste QC",
+    "Chimiste contrôle qualité",
+    "Assistant laboratoire",
+    "Assistant de laboratoire",
+    "Assistant QC",
+    "Assistant contrôle qualité",
+    "Aide laboratoire",
+    "Aide technique de laboratoire",
+    "Opérateur laboratoire",
+    "Opérateur de laboratoire",
+    "Laboratory Technician",
+    "Lab Technician",
+    "QC Technician",
+    "Quality Control Technician",
+    "Laboratory Analyst",
+    "Lab Analyst",
+    "QC Analyst",
+    "Quality Control Analyst",
+    "Chemical Laboratory Technician",
+    "Chemistry Technician",
+    "Chemical Technician",
+    "Analytical Technician",
+    "Analytical Laboratory Technician",
+    "Microbiology Technician",
+    "Microbiology Analyst",
+    "QC Microbiology Analyst",
+    "QC Chemistry Analyst",
+    "QC Laboratory Analyst",
+    "Pharmaceutical QC Analyst",
+    "Pharma QC Analyst",
+    "Quality Control Laboratory Analyst",
+    "Laboratory Assistant",
+    "Lab Assistant",
+    "QC Assistant",
+    "Quality Control Assistant",
+    "Laboratory Operator",
+    "Lab Operator",
+    "QC Operator",
+    "Sample Preparation Technician",
+    "Sample Management Technician",
+    "Sample Coordinator",
+    "Laboratory Sample Coordinator",
+    "Sampling Technician",
+    "QC Sampling Technician",
+    "Environmental Monitoring Technician",
+    "Laborant",
+    "QC laborant",
+    "Laborant kwaliteitscontrole",
+    "Chemisch laborant",
+    "Laboratoriumtechnicus",
+    "Laboratorium technician",
+    "Kwaliteitscontroleur labo",
+    "Kwaliteitscontroleur laboratorium",
+    "Analist laboratorium",
+    "Laboratoriumanalist",
+    "QC analist",
+    "Kwaliteitsanalist",
+    "Chemisch analist",
+    "Analytisch laborant",
+    "Analytisch analist",
+    "Microbiologisch analist",
+    "Microbiologisch laborant",
+    "Laboratorium medewerker",
+    "Lab medewerker",
+    "QC medewerker",
+    "Assistant qualité",
+    "Assistant assurance qualité",
+    "Technicien qualité",
+    "Technicien assurance qualité",
+    "Contrôleur qualité",
+    "Contrôleur qualité laboratoire",
+    "Coordinateur qualité junior",
+    "Quality Coordinator Junior",
+    "Support qualité",
+    "Support QA",
+    "Support QC",
+    "Technicien validation",
+    "Technicien qualification",
+    "Technicien qualification validation",
+    "Technicien validation nettoyage",
+    "Technicien cleaning validation",
+    "Assistant validation",
+    "Assistant qualification",
+    "Quality Assistant",
+    "Quality Assurance Assistant",
+    "QA Assistant",
+    "Quality Technician",
+    "Quality Assurance Technician",
+    "Quality Control Coordinator",
+    "Quality Coordinator",
+    "Junior Quality Coordinator",
+    "Quality Systems Assistant",
+    "Quality Systems Coordinator",
+    "Quality Documentation Specialist Junior",
+    "Quality Documentation Officer",
+    "GMP Compliance Assistant",
+    "GMP Compliance Technician",
+    "Compliance Technician",
+    "Validation Technician",
+    "Qualification Technician",
+    "LIMS Analyst",
+    "Junior LIMS Analyst",
+    "LIMS Specialist Junior",
+    "LIMS Support Analyst",
+    "Laboratory Informatics Analyst",
+    "Lab Systems Analyst",
+    "Laboratory Systems Analyst",
+    "Laboratory Data Analyst",
+    "Lab Data Analyst",
+    "QC Data Analyst",
+    "Scientific Data Analyst",
+    "Manufacturing Data Analyst",
+    "GMP Data Analyst",
+    "Pharma Data Analyst",
+    "Life Sciences Data Analyst",
+    "Quality Systems Analyst",
+    "Data Integrity Analyst GxP",
+    "GxP Data Analyst",
+    "ELN Business Analyst",
+    "ELN Analyst",
+    "Opérateur production pharmaceutique",
+    "Opérateur pharmaceutique",
+    "Opérateur production salle blanche",
+    "Opérateur salle blanche",
+    "Technicien production pharmaceutique",
+    "Technicien de production pharma",
+    "Technicien production chimique",
+    "Technicien fabrication pharmaceutique",
+    "Pharmaceutical Production Operator",
+    "Pharma Production Operator",
+    "Cleanroom Operator",
+    "Aseptic Production Operator",
+    "Pharmaceutical Production Technician",
+    "Manufacturing Technician Pharma",
+    "GMP Production Technician"
+  ],
+  "term_metadata": [
+    {
+      "term": "Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste de données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste de données junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste data",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Analyst Junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Business Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste business data",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste données métier",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste Business Intelligence",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Business Intelligence Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste décisionnel",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste reporting",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "BI Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste reporting BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Power BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste Power BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Power BI Developer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Développeur Power BI",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior BI Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Business Intelligence Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Reporting Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Coordinator",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Analyst Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Management Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Quality Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste qualité des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Quality Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Quality Specialist",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Steward",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Data Steward",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Governance Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste gouvernance des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Governance Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Management Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Master Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Master Data Officer",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Master Data Specialist",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Integrity Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste intégrité des données",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Operations Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Process Data Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste processus",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Business Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Business Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste métier junior",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste fonctionnel",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Junior Functional Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Functional Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Business Process Analyst",
+      "track": "DATA_BI",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Data & Reporting Specialist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Data Performance Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Reporting Specialist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Data Visualization Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Business Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Operational Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Management Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Performance Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Dashboard Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Dashboard Developer",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Power BI Reporting Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Business Intelligence Developer Junior",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "BI Developer Junior",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Junior Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Business Analytics Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Data Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Junior Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Commercial Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Junior Operations Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Supply Chain Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Logistics Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "HR Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Finance Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Customer Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Product Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Marketing Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Sales Data Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Data analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Junior data analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Reporting & Insights Analyst",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Business data-analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "BI analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Business intelligence analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Reporting analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Rapportage analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Power BI analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Data quality analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Data kwaliteitsanalist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Data governance analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Databeheerder",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Junior databeheerder",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Master data beheerder",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Procesanalist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Data- en procesanalist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Business analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Junior business analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Functioneel analist",
+      "track": "DATA_BI",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laborantin",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin en chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laborantin pharmaceutique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien de laboratoire QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien laboratoire QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien contrôle qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien chimiste",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien analytique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien analyses",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien analyses chimiques",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien analyses physico-chimiques",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien physico-chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien qualité QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste chimique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste physico-chimie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste microbiologie",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste pharmaceutique",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Analyste qualité laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Chimiste laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Chimiste QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Chimiste contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant QC",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant contrôle qualité",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Aide laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Aide technique de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Opérateur laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Opérateur de laboratoire",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Quality Control Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Quality Control Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Chemical Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Chemistry Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Chemical Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Analytical Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Analytical Laboratory Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Microbiology Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Microbiology Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Microbiology Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Chemistry Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Pharmaceutical QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Pharma QC Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Quality Control Laboratory Analyst",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Quality Control Assistant",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Operator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Operator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Operator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Sample Preparation Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Sample Management Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Sample Coordinator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Sample Coordinator",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Sampling Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Sampling Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Environmental Monitoring Technician",
+      "track": "LAB_QC",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "QC laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laborant kwaliteitscontrole",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Chemisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laboratoriumtechnicus",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laboratorium technician",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Kwaliteitscontroleur labo",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Kwaliteitscontroleur laboratorium",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Analist laboratorium",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laboratoriumanalist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "QC analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Kwaliteitsanalist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Chemisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Analytisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Analytisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Microbiologisch analist",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Microbiologisch laborant",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Laboratorium medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Lab medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "QC medewerker",
+      "track": "LAB_QC",
+      "tier": "B",
+      "language": "nl"
+    },
+    {
+      "term": "Assistant qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant assurance qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien assurance qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Contrôleur qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Contrôleur qualité laboratoire",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Coordinateur qualité junior",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Quality Coordinator Junior",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Support qualité",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Support QA",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Support QC",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien qualification",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien qualification validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien validation nettoyage",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien cleaning validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant validation",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Assistant qualification",
+      "track": "QUALITY",
+      "tier": "A",
+      "language": "fr"
+    },
+    {
+      "term": "Quality Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Assurance Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "QA Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Assurance Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Control Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Junior Quality Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Systems Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Systems Coordinator",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Documentation Specialist Junior",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Quality Documentation Officer",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "GMP Compliance Assistant",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "GMP Compliance Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Compliance Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Validation Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Qualification Technician",
+      "track": "QUALITY",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "LIMS Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Junior LIMS Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "LIMS Specialist Junior",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "LIMS Support Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Informatics Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Laboratory Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Lab Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "QC Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Scientific Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Manufacturing Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "GMP Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Pharma Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Life Sciences Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Quality Systems Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Data Integrity Analyst GxP",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "GxP Data Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "ELN Business Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "ELN Analyst",
+      "track": "HYBRID",
+      "tier": "A",
+      "language": "en"
+    },
+    {
+      "term": "Opérateur production pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Opérateur pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Opérateur production salle blanche",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Opérateur salle blanche",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien production pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien de production pharma",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien production chimique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Technicien fabrication pharmaceutique",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "fr"
+    },
+    {
+      "term": "Pharmaceutical Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Pharma Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Cleanroom Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Aseptic Production Operator",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Pharmaceutical Production Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "Manufacturing Technician Pharma",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    },
+    {
+      "term": "GMP Production Technician",
+      "track": "PRODUCTION_SCIENCE",
+      "tier": "B",
+      "language": "en"
+    }
+  ],
+  "track_counts": {
+    "DATA_BI": 110,
+    "LAB_QC": 100,
+    "QUALITY": 35,
+    "HYBRID": 20,
+    "PRODUCTION_SCIENCE": 15
+  },
+  "language_counts": {
+    "fr": 131,
+    "en": 109,
+    "nl": 40
+  },
+  "policy": {
+    "all_sources_share_this_pool": true,
+    "keyword_sources": "legacy high-yield core + rotating CV master secondary terms",
+    "catalog_sources": "catalog/listing scan + same CV master title matcher",
+    "full_sweep_override": "JOBHUNTER_MASTER_TERMS_FULL=1",
+    "detail_policy": "master-relevant thin descriptions enter detail enrichment before scoring",
+    "senior_lead_manager_excluded": true,
+    "unsupported_specialist_skills_not_used_as_primary_terms": true
+  }
+}

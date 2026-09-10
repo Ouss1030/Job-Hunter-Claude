@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "backup_dir": "C:\\Users\\Aharr\\Desktop\\JobHunter\\backups\\raw_catalog_production_v1_pre_20260904_212440",
+  "files": {
+    "sources/unified_discovery.py": "C:\\Users\\Aharr\\Desktop\\JobHunter\\backups\\raw_catalog_production_v1_pre_20260904_212440\\sources\\unified_discovery.py",
+    "sources/mega64_staffing.py": "C:\\Users\\Aharr\\Desktop\\JobHunter\\backups\\raw_catalog_production_v1_pre_20260904_212440\\sources\\mega64_staffing.py",
+    "config/master_search_terms_full_400.json": null
+  }
+}

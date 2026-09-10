@@ -73,7 +73,7 @@ CANDIDATE = {
     "languages": {
         "fr": LANGUAGES.get("french", {}).get("level", "C2"),
         "en": LANGUAGES.get("english", {}).get("level", "B1"),
-        "nl": LANGUAGES.get("dutch", {}).get("level", "B1"),
+        "nl": LANGUAGES.get("dutch", {}).get("level", "A2"),
     },
     # Information explicitement donnée par l'utilisateur.
     "has_medical_lab_technologist_accreditation": False,
@@ -553,7 +553,7 @@ def detect_obvious_domain_mismatch(title, family):
 LANGUAGE_ALIASES = {
     "fr": ["francais", "français", "french"],
     "en": ["anglais", "english", "engels"],
-    "nl": ["neerlandais", "néerlandais", "dutch", "nederlands"],
+    "nl": ["neerlandais", "néerlandais", "dutch", "nederlands", "nl"],
 }
 
 LEVEL_RANK = {
@@ -564,6 +564,58 @@ LEVEL_RANK = {
     "C1": 5,
     "C2": 6,
 }
+
+
+def _dutch_is_fr_or_nl_alternative(segment):
+    """Détecte une vraie alternative : français OU néerlandais, pas une double exigence."""
+    s = normalize(segment)
+    patterns = [
+        r"\bfrench\s+(?:or|ou)\s+dutch\b",
+        r"\bdutch\s+(?:or|ou)\s+french\b",
+        r"\bfrancais\s+ou\s+neerlandais\b",
+        r"\bneerlandais\s+ou\s+francais\b",
+        r"\bfrans\s+of\s+nederlands\b",
+        r"\bnederlands\s+of\s+frans\b",
+    ]
+    return any(re.search(pattern, s, re.I) for pattern in patterns)
+
+
+def _dutch_professional_requirement_without_cefr(segment):
+    """
+    Exigences professionnelles courantes sans CECR explicite.
+    On les mappe prudemment sur B2 afin qu'un candidat A2 soit signalé.
+    """
+    s = normalize(segment)
+
+    strong_phrases = [
+        "good knowledge of dutch",
+        "good command of dutch",
+        "professional dutch",
+        "working proficiency in dutch",
+        "bonne connaissance du neerlandais",
+        "bonne connaissance en neerlandais",
+        "maitrise du neerlandais",
+        "maitrise neerlandais",
+        "excellente connaissance du neerlandais",
+        "tres bonne connaissance du neerlandais",
+        "goede kennis van het nederlands",
+        "goede kennis van nederlands",
+        "goede kennis nederlands",
+        "goede beheersing van het nederlands",
+        "goede beheersing van nederlands",
+        "vlot in het nederlands",
+        "vlot nederlands",
+        "zeer vlot nederlands",
+        "vloeiend nederlands",
+        "vlotte communicatievaardigheden in het nederlands",
+        "tweetalig nl/fr",
+        "tweetalig fr/nl",
+        "bilingue fr/nl",
+        "bilingue nl/fr",
+        "bilingue francais/neerlandais",
+        "bilingue neerlandais/francais",
+    ]
+    return any(normalize(phrase) in s for phrase in strong_phrases)
 
 
 def detect_language_gaps(text):
@@ -623,6 +675,9 @@ def detect_language_gaps(text):
         if is_optional_context(segment):
             continue
 
+        if code == "nl" and _dutch_is_fr_or_nl_alternative(segment):
+            continue
+
         required_level = None
         explicit_levels = [
             value.upper()
@@ -636,11 +691,20 @@ def detect_language_gaps(text):
             "fluent", "courant", "couramment",
         ]):
             required_level = "C1"
+        elif code == "nl" and _dutch_professional_requirement_without_cefr(segment):
+            required_level = "B2"
 
         if not required_level or LEVEL_RANK[required_level] <= candidate_rank:
             continue
 
-        mandatory = is_mandatory_context(segment)
+        implicit_dutch_requirement = bool(
+            code == "nl"
+            and _dutch_professional_requirement_without_cefr(segment)
+        )
+        mandatory = bool(
+            is_mandatory_context(segment)
+            or implicit_dutch_requirement
+        )
         level_gap = LEVEL_RANK[required_level] - candidate_rank
 
         gaps.append({

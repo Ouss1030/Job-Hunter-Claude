@@ -1,0 +1,44 @@
+# JobHunter UI V2.0 — handoff ChatGPT manuel
+
+Cette V2 est cumulative : elle conserve les corrections Windows et la progression temps réel de la V1.2.1.
+
+## Ce qui change
+
+- **Aucun appel à l'API OpenAI.** L'interface n'utilise pas `ai_document_generator.py`.
+- **Aucun handoff automatique pendant le Daily Run.** Le worker lance maintenant `daily_run.py --no-handoff`.
+- Nouvelle page **📦 Handoff ChatGPT** :
+  - affiche le dernier Final Application Pool ;
+  - permet de filtrer les offres ;
+  - permet de cocher exactement les offres à exporter ;
+  - conserve la sélection même si un filtre masque temporairement certaines offres ;
+  - permet de choisir le nombre d'offres par chunk (10 par défaut) ;
+  - crée uniquement les ZIP chunks demandés ;
+  - propose un bouton pour ouvrir `exports\chatgpt_handoff` dans l'Explorateur Windows ;
+  - affiche l'historique des handoffs déjà présents.
+- Les fiches d'offres ont maintenant un bouton visible **✅ J'ai postulé** et des actions rapides Entretien / Refus.
+
+## Installation
+
+1. Fermer JobHunter / Streamlit.
+2. Extraire le contenu du ZIP **directement dans le dossier JobHunter** :
+   `C:\Users\Aharr\Desktop\JobHunter`
+3. Accepter le remplacement des fichiers.
+4. Il n'est normalement pas nécessaire de relancer `INSTALL_UI.bat` si la V1.2.1 fonctionne déjà.
+5. Double-cliquer sur `START_JOBHUNTER.bat`.
+
+## Utilisation des chunks
+
+1. Lancer JobHunter depuis le Dashboard.
+2. Attendre la fin du Daily Run. Aucun chunk n'est généré automatiquement.
+3. Aller dans **📦 Handoff ChatGPT**.
+4. Cocher les offres voulues.
+5. Choisir la taille des chunks.
+6. Cliquer sur **📦 Créer les chunks ChatGPT sélectionnés**.
+7. Cliquer sur **📂 Ouvrir le dossier des chunks**.
+8. Envoyer le ou les ZIP souhaités dans ChatGPT.
+
+Les ZIP contiennent `candidate_truth.json`, `application_instructions.json`, `manifest.json`, `README.txt` et les dossiers `jobs/...` nécessaires à la préparation manuelle des candidatures.
+
+## Compatibilité
+
+Le comportement historique de `applications/chatgpt_handoff.py` reste disponible en ligne de commande. La V2 ajoute simplement un mode de sélection exacte par `stable_item_key` et un mode `--chunks-only`.

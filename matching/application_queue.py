@@ -33,6 +33,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from matching.verdict import evaluer as evaluer_verdict
 from config.profile import PREFERRED_LOCATIONS
 
 
@@ -507,6 +508,14 @@ def _prepare_record(record, source_rank):
         "duplicate_of_item_key": None,
         "duplicate_confidence": None,
         "possible_duplicate_item_keys": [],
+        # Verdict lisible, calcule en amont ou il y a encore du texte.
+        #
+        # L'element de file ne transporte pas la description : il ne peut
+        # donc pas juger lui-meme. Quand l'appelant n'a rien fourni — cas
+        # d'un rejeu depuis un JSON de gate — le champ reste vide, et un
+        # champ vide ne ferme jamais rien.
+        "verdict": clean_text(record.get("verdict")),
+        "verdict_obstacle": clean_text(record.get("verdict_obstacle")),
     }
     item["queue_score"] = queue_score(item)
     return item
@@ -578,7 +587,53 @@ def apply_application_duplicate_guard(items):
                     prefix="GROUP",
                 )
 
+    _rendre_les_cles_uniques(items)
+
     return items
+
+
+def _rendre_les_cles_uniques(items):
+    """
+    Garantit l'unicité de stable_item_key sans faire disparaître personne.
+
+    La clé dérive de l'URL. Or deux connecteurs différents peuvent renvoyer
+    la MÊME URL : le site carrière de NRB est un board Recruitee, donc le
+    connecteur employeur et le connecteur ATS pointent au même endroit. Les
+    deux offres reçoivent alors la même clé — ce qui est juste, c'est bien
+    la même offre — mais Application Preparation refuse une file contenant
+    deux fois la même clé et interrompt tout le Daily Run.
+
+    Le doublon est déjà repéré et marqué HOLD_DUPLICATE juste au-dessus. Le
+    principe du module est de ne rien fusionner : « le secondaire reste
+    visible ». On lui donne donc une clé propre, dérivée de sa source, et
+    duplicate_of_item_key continue de désigner le représentant.
+
+    L'ordre de la file compte : elle est triée avant, donc le premier
+    rencontré est le représentant et garde sa clé d'origine.
+    """
+    vues = {}
+    for item in items:
+        cle = item.get("stable_item_key")
+        if not cle:
+            continue
+        if cle not in vues:
+            vues[cle] = item
+            continue
+
+        # Doublon : on le rattache explicitement au représentant, puis on
+        # lui forge une clé distincte à partir de sa propre source.
+        if not item.get("duplicate_of_item_key"):
+            item["duplicate_of_item_key"] = cle
+        source = clean_text(item.get("source")) or "INCONNUE"
+        nouvelle = stable_hash(f"{cle}|{source}|{item.get('url') or ''}",
+                               prefix="ITEM")
+        rang = 2
+        while nouvelle in vues:
+            nouvelle = stable_hash(f"{cle}|{source}|{rang}", prefix="ITEM")
+            rang += 1
+        item["stable_item_key"] = nouvelle
+        item["stable_item_key_origine"] = cle
+        vues[nouvelle] = item
 
 
 def build_application_queue_from_gate_payload(payload):
@@ -607,6 +662,33 @@ def _safe_attr(job, name, default=None):
     return str(value)
 
 
+def _verdict_du_job(job) -> dict:
+    """
+    Verdict lisible de l'offre, calcule ici et nulle part ailleurs.
+
+    C'est le dernier endroit de la chaine ou l'objet job existe encore avec
+    son texte : au-dela, la file ne transporte que des metadonnees. Le
+    calculer plus tard obligerait a rouvrir la base.
+
+    Une exception ne doit jamais casser la construction de la file : sans
+    verdict, la file fonctionne exactement comme avant.
+    """
+    try:
+        texte = "\n".join(str(x) for x in (
+            getattr(job, "title", "") or "",
+            getattr(job, "detail_matching_text", None)
+            or getattr(job, "description", "") or "",
+        ))
+        resultat = evaluer_verdict(texte)
+        return {
+            "verdict": resultat.verdict,
+            "verdict_obstacle": (resultat.barrieres[0].message
+                                 if resultat.barrieres else ""),
+        }
+    except Exception:
+        return {"verdict": "", "verdict_obstacle": ""}
+
+
 def build_application_queue(gated_jobs):
     payload = []
     for position, (job, match_result, gate) in enumerate(gated_jobs, start=1):
@@ -622,6 +704,7 @@ def build_application_queue(gated_jobs):
             "match_score": match_result.get("score"),
             "best_family": match_result.get("best_family"),
             "gate": gate,
+            **_verdict_du_job(job),
         })
     return build_application_queue_from_gate_payload(payload)
 

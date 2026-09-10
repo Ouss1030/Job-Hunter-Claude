@@ -1,12 +1,28 @@
 """
 JOB HUNTER BELGIUM
-JOB REFRESH - VERSION 1.0
+JOB REFRESH - VERSION 1.2
 
 Objectif
 ========
 Prendre le dernier application_preparation_v1_*.json, relire LIVE les offres
-FOREM / ACTIRIS avec les enrichisseurs déjà validés du projet, puis produire
-un payload prêt pour la génération de documents.
+FOREM / ACTIRIS / SMARTRECRUITERS / TRAVAILLERPOUR avec les connecteurs déjà validés du projet,
+puis produire un payload prêt pour la génération de documents.
+
+Ajouts
+======
+V1.1 :
+- support natif SmartRecruiters ;
+- récupération via Posting API avec use_cache=False ;
+- extraction robuste companyIdentifier + postingId depuis metadata / URL ;
+- conversion au même contrat live_detail que Forem / Actiris ;
+- un HTTP 404 reste un échec source explicite afin que Application Recheck
+  puisse le classer CLOSED_OR_REMOVED.
+
+V1.2 :
+- support natif TravaillerPour ;
+- extraction du code d'offre (ex. CFG26046) depuis l'URL ;
+- lecture live via sources.travaillerpour_detail avec use_cache=False ;
+- aucun changement de logique pour Forem / Actiris / SmartRecruiters.
 
 Cette couche :
 - ne modifie ni Matcher, ni Gate, ni Queue, ni Canonical, ni RAW ;
@@ -32,12 +48,31 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, unquote
 
 from sources.forem_detail import get_forem_job_detail
 from sources.actiris_detail import get_actiris_job_detail
+from sources.jobat_detail import get_jobat_job_detail
+from sources.smartrecruiters import get_posting_detail, posting_to_job
+from sources.travaillerpour_detail import get_travaillerpour_job_detail
+from sources.scienceatwork import get_scienceatwork_job_detail
+from sources.randstad import get_randstad_job_detail
+from sources.jeffersonwells import get_jeffersonwells_job_detail
+from sources.akkodis import get_akkodis_job_detail
+from sources.gsk import get_gsk_job_detail
+from sources.ucb import get_ucb_job_detail
+from sources.iba import get_iba_job_detail
+from sources.pfizer import get_pfizer_job_detail
+from sources.takeda import get_takeda_job_detail
+from sources.jnj import get_jnj_job_detail
+from sources.quality_assistance import get_quality_assistance_job_detail
+from sources.thermofisher import get_thermofisher_job_detail
+from sources.sciensano import get_sciensano_job_detail
+from sources.sanofi import get_sanofi_job_detail
+from sources.baxter import get_baxter_job_detail
+from sources.novartis import get_novartis_job_detail
 
-REFRESH_VERSION = "1.0"
+REFRESH_VERSION = "1.3"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LOG_DIR = PROJECT_ROOT / "exports" / "logs"
@@ -76,9 +111,278 @@ def parse_actiris_reference_and_type(url):
     return reference, offer_type
 
 
+
+
+
+def parse_travaillerpour_external_id(url):
+    """
+    Extrait le code d'une offre TravaillerPour depuis l'URL.
+
+    Exemples :
+    - CFG26046
+    - AFG26147
+    - XFC26104
+    - CNG26031
+    """
+    text = clean_text(url)
+    if not text:
+        return None
+
+    try:
+        parsed = urlparse(text)
+        path = unquote(parsed.path or "")
+    except Exception:
+        path = text
+
+    match = re.search(r"(?:^|/)([A-Za-z]{3}\d{5})(?:-|/|$)", path)
+    if match:
+        return match.group(1).upper()
+
+    match = re.search(r"\b([A-Za-z]{3}\d{5})\b", text)
+    if match:
+        return match.group(1).upper()
+
+    return None
+
+def parse_smartrecruiters_identity(item):
+    """
+    Retourne (company_identifier, posting_id).
+
+    Priorité :
+    1. métadonnées explicites si présentes ;
+    2. external_id au format "CompanyIdentifier:PostingId" ;
+    3. URL jobs.smartrecruiters.com ;
+    4. URL API api.smartrecruiters.com/v1/companies/.../postings/...
+
+    La fonction ne dépend pas du titre de l'offre.
+    """
+    item = item or {}
+
+    source = clean_text(item.get("source")).upper()
+    if source != "SMARTRECRUITERS":
+        return None, None
+
+    company_identifier = clean_text(
+        item.get("source_company_identifier")
+        or item.get("smartrecruiters_company_identifier")
+    )
+    posting_id = clean_text(
+        item.get("smartrecruiters_posting_id")
+        or item.get("posting_id")
+    )
+
+    external_id = clean_text(item.get("external_id"))
+    if external_id and ":" in external_id:
+        ext_company, ext_posting = external_id.split(":", 1)
+        if not company_identifier:
+            company_identifier = clean_text(ext_company)
+        if not posting_id:
+            posting_id = clean_text(ext_posting)
+
+    origin = clean_text(item.get("origin_source"))
+    if (
+        not company_identifier
+        and origin
+        and origin.upper() != "SMARTRECRUITERS"
+    ):
+        company_identifier = origin
+
+    url = clean_text(item.get("url"))
+    if url:
+        try:
+            parsed = urlparse(url)
+            host = (parsed.hostname or "").lower()
+            parts = [
+                unquote(part)
+                for part in parsed.path.split("/")
+                if clean_text(part)
+            ]
+
+            if host == "jobs.smartrecruiters.com" and len(parts) >= 2:
+                if not company_identifier:
+                    company_identifier = clean_text(parts[0])
+
+                slug = clean_text(parts[1])
+                if not posting_id:
+                    numeric = re.match(r"^(\d+)", slug)
+                    uuid = re.match(
+                        r"^([0-9a-fA-F]{8}-"
+                        r"[0-9a-fA-F]{4}-"
+                        r"[0-9a-fA-F]{4}-"
+                        r"[0-9a-fA-F]{4}-"
+                        r"[0-9a-fA-F]{12})",
+                        slug,
+                    )
+                    if numeric:
+                        posting_id = numeric.group(1)
+                    elif uuid:
+                        posting_id = uuid.group(1)
+                    elif "-" not in slug:
+                        posting_id = slug
+
+            elif host == "api.smartrecruiters.com":
+                # /v1/companies/{company}/postings/{posting}
+                lowered = [p.lower() for p in parts]
+                if "companies" in lowered and "postings" in lowered:
+                    cidx = lowered.index("companies")
+                    pidx = lowered.index("postings")
+                    if cidx + 1 < len(parts) and not company_identifier:
+                        company_identifier = clean_text(parts[cidx + 1])
+                    if pidx + 1 < len(parts) and not posting_id:
+                        posting_id = clean_text(parts[pidx + 1])
+        except Exception:
+            pass
+
+    return company_identifier or None, posting_id or None
+
+
+def smartrecruiters_detail_to_refresh_payload(
+    company_identifier,
+    posting_id,
+    detail,
+):
+    """
+    Convertit le Posting API SmartRecruiters vers le contrat déjà utilisé
+    par Job Refresh / Application Recheck.
+
+    Important :
+    posting_to_job() V1.1 exclut déjà companyDescription du matching_text.
+    """
+    job = posting_to_job(company_identifier, detail)
+
+    matching_text = clean_text(getattr(job, "description", ""))
+    sections = getattr(job, "job_sections", {}) or {}
+
+    structured = {
+        "company_identifier": company_identifier,
+        "posting_id": str(posting_id),
+        "title": clean_text(getattr(job, "title", "")),
+        "company": clean_text(getattr(job, "company", "")),
+        "location": clean_text(getattr(job, "location", "")),
+        "contract_type": clean_text(getattr(job, "contract_type", "")),
+        "language": clean_text(getattr(job, "language", "")),
+        "department": clean_text(getattr(job, "department", "")),
+        "job_function": clean_text(getattr(job, "job_function", "")),
+        "experience_level": clean_text(
+            getattr(job, "experience_level", "")
+        ),
+        "apply_url": clean_text(getattr(job, "apply_url", "")),
+        "job_description": clean_text(
+            sections.get("jobDescription")
+        ),
+        "profile": clean_text(
+            sections.get("qualifications")
+        ),
+        "additional_information": clean_text(
+            sections.get("additionalInformation")
+        ),
+        "company_description": clean_text(
+            getattr(job, "company_description", "")
+        ),
+        "sections": sections,
+    }
+
+    return {
+        "success": bool(matching_text),
+        "from_cache": False,
+        "matching_text": matching_text,
+        "matching_text_length": len(matching_text),
+        "structured": structured,
+        "error": None if matching_text else (
+            "SmartRecruiters : détail récupéré mais description exploitable vide."
+        ),
+    }
+
+
+def _http_status_from_exception(exc):
+    response = getattr(exc, "response", None)
+    status = getattr(response, "status_code", None)
+    try:
+        return int(status) if status is not None else None
+    except Exception:
+        return None
+
+
+def fetch_smartrecruiters_live_detail(item):
+    company_identifier, posting_id = parse_smartrecruiters_identity(item)
+
+    if not company_identifier or not posting_id:
+        return {
+            "success": False,
+            "from_cache": False,
+            "matching_text": "",
+            "matching_text_length": 0,
+            "structured": {},
+            "error": (
+                "Impossible d'extraire companyIdentifier/postingId "
+                "de l'offre SMARTRECRUITERS."
+            ),
+        }
+
+    try:
+        detail = get_posting_detail(
+            company_identifier,
+            posting_id,
+            use_cache=False,
+        )
+    except Exception as exc:
+        status = _http_status_from_exception(exc)
+
+        if status == 404:
+            error = (
+                "SmartRecruiters HTTP 404 : offre probablement retirée/fermée "
+                f"({company_identifier}:{posting_id})."
+            )
+        elif status:
+            error = (
+                f"SmartRecruiters HTTP {status} : "
+                f"{type(exc).__name__}: {exc}"
+            )
+        else:
+            error = (
+                f"SmartRecruiters : {type(exc).__name__}: {exc}"
+            )
+
+        return {
+            "success": False,
+            "from_cache": False,
+            "matching_text": "",
+            "matching_text_length": 0,
+            "structured": {
+                "company_identifier": company_identifier,
+                "posting_id": str(posting_id),
+            },
+            "error": error,
+        }
+
+    return smartrecruiters_detail_to_refresh_payload(
+        company_identifier,
+        posting_id,
+        detail,
+    )
+
+
 def fetch_live_detail(item):
     source = clean_text(item.get("source")).upper()
     url = clean_text(item.get("url"))
+
+    if source == "JOBAT":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_jobat_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Jobat : {type(exc).__name__}: {exc}",
+            }
 
     if source == "FOREM":
         external_id = parse_forem_external_id(url)
@@ -110,13 +414,309 @@ def fetch_live_detail(item):
             use_cache=False,
         )
 
+    if source == "TRAVAILLERPOUR":
+        external_id = parse_travaillerpour_external_id(url)
+        if not external_id:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {},
+                "error": (
+                    "Impossible d'extraire le code TRAVAILLERPOUR de l'URL."
+                ),
+            }
+
+        try:
+            return get_travaillerpour_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {
+                    "external_id": external_id,
+                },
+                "error": (
+                    f"TravaillerPour : {type(exc).__name__}: {exc}"
+                ),
+            }
+
+    if source == "SMARTRECRUITERS":
+        return fetch_smartrecruiters_live_detail(item)
+
+    if source == "SCIENCEATWORK":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_scienceatwork_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Science@Work : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "RANDSTAD":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_randstad_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Randstad : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "JEFFERSON_WELLS":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_jeffersonwells_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Jefferson Wells : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "AKKODIS":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_akkodis_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Akkodis : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "GSK":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_gsk_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"GSK : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "UCB":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_ucb_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"UCB : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "THERMO_FISHER":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_thermofisher_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Thermo Fisher : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "IBA":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_iba_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"IBA : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "PFIZER":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_pfizer_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Pfizer : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "TAKEDA":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_takeda_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Takeda : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "JNJ":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_jnj_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"J&J : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "QUALITY_ASSISTANCE":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_quality_assistance_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Quality Assistance : {type(exc).__name__}: {exc}",
+            }
+
+    if source == "SCIENSANO":
+        external_id = clean_text(item.get("external_id")) or None
+        try:
+            return get_sciensano_job_detail(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+                fallback=item,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"Sciensano : {type(exc).__name__}: {exc}",
+            }
+
+    if source in {"SANOFI", "BAXTER", "NOVARTIS"}:
+        external_id = clean_text(item.get("external_id")) or None
+        detail_func = {
+            "SANOFI": get_sanofi_job_detail,
+            "BAXTER": get_baxter_job_detail,
+            "NOVARTIS": get_novartis_job_detail,
+        }[source]
+        try:
+            return detail_func(
+                url=url,
+                external_id=external_id,
+                use_cache=False,
+                fallback=item,
+            )
+        except Exception as exc:
+            return {
+                "success": False,
+                "from_cache": False,
+                "matching_text": "",
+                "matching_text_length": 0,
+                "structured": {"external_id": external_id},
+                "error": f"{source} : {type(exc).__name__}: {exc}",
+            }
+
     return {
         "success": False,
         "from_cache": False,
         "matching_text": "",
         "matching_text_length": 0,
         "structured": {},
-        "error": f"Source non prise en charge par Job Refresh V1 : {source}",
+        "error": f"Source non prise en charge par Job Refresh V1.2 : {source}",
     }
 
 
@@ -176,7 +776,7 @@ def snapshot_text(item, detail, assessment):
     description = detail.get("matching_text") or ""
 
     lines = [
-        "JOB REFRESH V1 - SNAPSHOT OFFRE",
+        "JOB REFRESH V1.3 - SNAPSHOT OFFRE",
         "=" * 78,
         f"Date refresh      : {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}",
         f"Stable item key   : {item.get('stable_item_key')}",
@@ -246,7 +846,7 @@ def refresh_batch(items):
     total = len(items)
 
     print("\n" + "=" * 78)
-    print("JOB REFRESH V1 - LECTURE LIVE")
+    print("JOB REFRESH V1.2 - LECTURE LIVE")
     print("=" * 78)
 
     for index, item in enumerate(items, start=1):
@@ -321,7 +921,7 @@ def export_results(items):
 
     s = summary(items)
     lines = [
-        "JOB REFRESH V1",
+        "JOB REFRESH V1.2",
         "=" * 78,
         f"Total                 : {s['total']}",
         f"LIVE_CONFIRMED        : {s['live_confirmed']}",
@@ -378,7 +978,7 @@ def main():
 
     s = summary(refreshed)
     print("\n" + "=" * 78)
-    print("BILAN JOB REFRESH V1")
+    print("BILAN JOB REFRESH V1.2")
     print("=" * 78)
     print(f"READY_FOR_DOCUMENTS : {s['ready_for_documents']}/{s['total']}")
     print(f"À vérifier          : {s['waiting_source_review']}")

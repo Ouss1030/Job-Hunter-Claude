@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "internal_workers": 3,
+  "max_internal_workers": 3,
+  "selected_by": "PERFORMANCE_CRITICAL_PATH_V1",
+  "selected_seconds": 112.98566069995286
+}

@@ -1,0 +1,8 @@
+# Interface graphique JobHunter (jobhunter_ui.py).
+#
+# pandas est importé au niveau module par jobhunter_ui.py (ligne 8) mais
+# n'était déclaré dans aucun fichier de dépendances : INSTALL_UI.bat
+# n'installait donc pas de quoi démarrer l'interface.
+# Version non épinglée faute d'avoir pu vérifier laquelle est validée.
+streamlit==1.61.0
+pandas>=2.0

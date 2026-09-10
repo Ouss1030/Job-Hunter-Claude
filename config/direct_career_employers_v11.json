@@ -1,0 +1,665 @@
+{
+  "version": "11.0",
+  "static_ready": [
+    {
+      "key": "ALEXION",
+      "label": "Alexion Pharma Belgium",
+      "company": "Alexion Pharma Belgium",
+      "website": "https://alexion.com",
+      "career_url": "https://careers.alexion.com/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "ASTELLAS",
+      "label": "Astellas BV",
+      "company": "Astellas BV",
+      "website": "http://www.astellas.com/",
+      "career_url": "https://www.astellas.com/en/careers",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "BEPHARBEL",
+      "label": "Bepharbel Manufacturing NV/SA",
+      "company": "Bepharbel Manufacturing NV/SA",
+      "website": "http://www.bepharbel.com/",
+      "career_url": "https://www.bepharbel.com/offres-emploi/#offres",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "CERES_PHARMA",
+      "label": "Ceres Pharmaceuticals SA",
+      "company": "Ceres Pharmaceuticals SA",
+      "website": "https://ceres-pharma.com",
+      "career_url": "https://ceres-pharma.com/en/careers",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "CURIUM",
+      "label": "Curium Belgium BV",
+      "company": "Curium Belgium BV",
+      "website": "http://www.curiumpharma.com",
+      "career_url": "https://www.curiumpharma.com/careers/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "DAIICHI_SANKYO",
+      "label": "Daiichi Sankyo Belgium NV/SA",
+      "company": "Daiichi Sankyo Belgium NV/SA",
+      "website": "http://www.daiichi-sankyo.be/",
+      "career_url": "https://www.daiichi-sankyo.be/career/discover-daiichi-sankyo-europe/#c38007",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "DECHRA",
+      "label": "Dechra Veterinary Products NV/SA",
+      "company": "Dechra Veterinary Products NV/SA",
+      "website": "http://www.dechra.eu/",
+      "career_url": "https://careers.dechra.com/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "EFFIK_BENELUX",
+      "label": "EFFIK BENELUX (ITALFARMACO Group)",
+      "company": "EFFIK BENELUX (ITALFARMACO Group)",
+      "website": "https://www.delbertpharma.com",
+      "career_url": "https://delbertpharma.com/career/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "GE_HEALTHCARE",
+      "label": "GE Healthcare BVBA/SPRL",
+      "company": "GE Healthcare BVBA/SPRL",
+      "website": "http://www.gehealthcare.com/",
+      "career_url": "https://careers.gehealthcare.com/global/en",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "GRUNENTHAL",
+      "label": "Grünenthal NV/SA",
+      "company": "Grünenthal NV/SA",
+      "website": "http://www.grunenthal.com/",
+      "career_url": "https://www.grunenthal.com/careers",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "GUERBET",
+      "label": "Guerbet NV/SA",
+      "company": "Guerbet NV/SA",
+      "website": "https://www.guerbet.com/en-be",
+      "career_url": "https://www.guerbet.com/careers-0",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "IJSFABRIEK_STROMBEEK",
+      "label": "IJsfabriek Strombeek NV/SA",
+      "company": "IJsfabriek Strombeek NV/SA",
+      "website": "http://www.ysfab.be/",
+      "career_url": "https://www.ijsfabriekstrombeek.be/nl/vacatures/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "KELA_VETERINARIA",
+      "label": "Kela Veterinaria NV/SA",
+      "company": "Kela Veterinaria NV/SA",
+      "website": "https://www.kela.health",
+      "career_url": "https://www.kela.health/working-at-kela/",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "LUNDBECK",
+      "label": "Lundbeck NV/SA",
+      "company": "Lundbeck NV/SA",
+      "website": "http://www.lundbeck.com/",
+      "career_url": "https://www.lundbeck.com/global/careers",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    },
+    {
+      "key": "MENARINI",
+      "label": "Menarini Benelux NV/SA",
+      "company": "Menarini Benelux NV/SA",
+      "website": "http://www.menarini.be/",
+      "career_url": "https://www.menarini.be/nl/vacatures.html",
+      "enabled": true,
+      "mode": "READY_CAREER",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 30
+    }
+  ],
+  "auto_candidates": [
+    {
+      "key": "BIOGEN",
+      "label": "Biogen Belgium NV/SA",
+      "company": "Biogen Belgium NV/SA",
+      "website": "http://www.biogen.be/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.biogen.be/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.biogen.be:443/jobs",
+          "https://www.biogen.be:443/careers",
+          "https://www.biogen.be:443/career",
+          "https://www.biogen.be:443/emploi",
+          "https://www.biogen.be:443/vacatures",
+          "https://www.biogen.be:443/jobs-and-careers",
+          "https://www.biogen.be:443/join-us",
+          "https://www.biogen.be:443/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "ALFASIGMA",
+      "label": "Alfasigma Belgium SRL",
+      "company": "Alfasigma Belgium SRL",
+      "website": "https://www.alfasigma.be",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "https://www.alfasigma.be",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://be.alfasigma.com/jobs",
+          "https://be.alfasigma.com/careers",
+          "https://be.alfasigma.com/career",
+          "https://be.alfasigma.com/emploi",
+          "https://be.alfasigma.com/vacatures",
+          "https://be.alfasigma.com/jobs-and-careers",
+          "https://be.alfasigma.com/join-us",
+          "https://be.alfasigma.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "ALMIRALL",
+      "label": "Almirall NV/SA",
+      "company": "Almirall NV/SA",
+      "website": "http://www.almirall.com/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.almirall.com/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.almirall.com/jobs",
+          "https://www.almirall.com/careers",
+          "https://www.almirall.com/career",
+          "https://www.almirall.com/emploi",
+          "https://www.almirall.com/vacatures",
+          "https://www.almirall.com/jobs-and-careers",
+          "https://www.almirall.com/join-us",
+          "https://www.almirall.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "BAUSCH_LOMB",
+      "label": "Bausch & Lomb Pharma NV/SA",
+      "company": "Bausch & Lomb Pharma NV/SA",
+      "website": "http://www.bausch-lomb.be/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.bausch-lomb.be/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.bausch-lomb.be/jobs",
+          "https://www.bausch-lomb.be/careers",
+          "https://www.bausch-lomb.be/career",
+          "https://www.bausch-lomb.be/emploi",
+          "https://www.bausch-lomb.be/vacatures",
+          "https://www.bausch-lomb.be/jobs-and-careers",
+          "https://www.bausch-lomb.be/join-us",
+          "https://www.bausch-lomb.be/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "BESINS_HEALTHCARE",
+      "label": "Besins Healthcare NV/SA",
+      "company": "Besins Healthcare NV/SA",
+      "website": "http://www.besins-healthcare.be",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.besins-healthcare.be",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.besins-healthcare.be/jobs",
+          "https://www.besins-healthcare.be/careers",
+          "https://www.besins-healthcare.be/career",
+          "https://www.besins-healthcare.be/emploi",
+          "https://www.besins-healthcare.be/vacatures",
+          "https://www.besins-healthcare.be/jobs-and-careers",
+          "https://www.besins-healthcare.be/join-us",
+          "https://www.besins-healthcare.be/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "CSL_BEHRING_DIRECT",
+      "label": "CSL Behring NV/SA",
+      "company": "CSL Behring NV/SA",
+      "website": "http://www.cslbehring.be/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.cslbehring.be/",
+        "status": "ERROR",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [],
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.cslbehring.be/"
+      }
+    },
+    {
+      "key": "ECUPHAR",
+      "label": "Ecuphar NV/SA",
+      "company": "Ecuphar NV/SA",
+      "website": "https://www.animalcaregroup.com/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "https://www.animalcaregroup.com/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.animalcaregroup.com/jobs",
+          "https://www.animalcaregroup.com/careers",
+          "https://www.animalcaregroup.com/career",
+          "https://www.animalcaregroup.com/emploi",
+          "https://www.animalcaregroup.com/vacatures",
+          "https://www.animalcaregroup.com/jobs-and-careers",
+          "https://www.animalcaregroup.com/join-us",
+          "https://www.animalcaregroup.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "EISAI",
+      "label": "Eisai NV/SA",
+      "company": "Eisai NV/SA",
+      "website": "http://www.eisai.com/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.eisai.com/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.eisai.com/jobs",
+          "https://www.eisai.com/careers",
+          "https://www.eisai.com/career",
+          "https://www.eisai.com/emploi",
+          "https://www.eisai.com/vacatures",
+          "https://www.eisai.com/jobs-and-careers",
+          "https://www.eisai.com/join-us",
+          "https://www.eisai.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "FERRING",
+      "label": "Ferring NV/SA",
+      "company": "Ferring NV/SA",
+      "website": "http://www.ferring.be/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.ferring.be/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://ferring.be/jobs",
+          "https://ferring.be/careers",
+          "https://ferring.be/career",
+          "https://ferring.be/emploi",
+          "https://ferring.be/vacatures",
+          "https://ferring.be/jobs-and-careers",
+          "https://ferring.be/join-us",
+          "https://ferring.be/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "GILEAD",
+      "label": "Gilead Sciences Belgium BVBA/SPRL",
+      "company": "Gilead Sciences Belgium BVBA/SPRL",
+      "website": "https://www.gilead.com/utility/global-operations/europe/belgium-luxembourg",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "https://www.gilead.com/utility/global-operations/europe/belgium-luxembourg",
+        "status": "ERROR",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [],
+        "error": "HTTPError: 404 Client Error: Not Found for url: https://www.gilead.com/utility/global-operations/europe/belgium-luxembourg"
+      }
+    },
+    {
+      "key": "HIPRA",
+      "label": "Hipra Benelux NV/SA",
+      "company": "Hipra Benelux NV/SA",
+      "website": "http://www.hipra.com/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.hipra.com/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.hipra.com/jobs",
+          "https://www.hipra.com/careers",
+          "https://www.hipra.com/career",
+          "https://www.hipra.com/emploi",
+          "https://www.hipra.com/vacatures",
+          "https://www.hipra.com/jobs-and-careers",
+          "https://www.hipra.com/join-us",
+          "https://www.hipra.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "HUVEPHARMA",
+      "label": "Huvepharma NV/SA",
+      "company": "Huvepharma NV/SA",
+      "website": "http://huvepharma.com/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://huvepharma.com/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.huvepharma.com/join-us/",
+          "https://www.huvepharma.com/jobs",
+          "https://www.huvepharma.com/careers",
+          "https://www.huvepharma.com/career",
+          "https://www.huvepharma.com/emploi",
+          "https://www.huvepharma.com/vacatures",
+          "https://www.huvepharma.com/jobs-and-careers",
+          "https://www.huvepharma.com/join-us",
+          "https://www.huvepharma.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "INHATARGET",
+      "label": "Inhatarget Therapeutics",
+      "company": "Inhatarget Therapeutics",
+      "website": "https://www.inhatarget.com",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "https://www.inhatarget.com",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "https://www.inhatarget.com/jobs",
+          "https://www.inhatarget.com/careers",
+          "https://www.inhatarget.com/career",
+          "https://www.inhatarget.com/emploi",
+          "https://www.inhatarget.com/vacatures",
+          "https://www.inhatarget.com/jobs-and-careers",
+          "https://www.inhatarget.com/join-us",
+          "https://www.inhatarget.com/werken-bij"
+        ]
+      }
+    },
+    {
+      "key": "LAB_SMB",
+      "label": "Laboratoires S.M.B.",
+      "company": "Laboratoires S.M.B.",
+      "website": "http://www.smb.be/",
+      "career_url": null,
+      "enabled": false,
+      "mode": "AUTO_DISCOVERY",
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "priority": 45,
+      "discovery": {
+        "website": "http://www.smb.be/",
+        "status": "HOME_OK",
+        "ats": [],
+        "career_url": null,
+        "jsonld_jobposting": false,
+        "tested_paths": [
+          "http://www.smb.be/jobs",
+          "http://www.smb.be/careers",
+          "http://www.smb.be/career",
+          "http://www.smb.be/emploi",
+          "http://www.smb.be/vacatures",
+          "http://www.smb.be/jobs-and-careers",
+          "http://www.smb.be/join-us",
+          "http://www.smb.be/werken-bij"
+        ]
+      }
+    }
+  ]
+}

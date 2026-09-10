@@ -1,0 +1,261 @@
+from __future__ import annotations
+
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+from interface.data_access import ROOT
+from interface.pipeline_runner import get_run_state
+
+
+DAILY_DIR = ROOT / "exports" / "logs" / "daily_runs"
+STEP_ORDER = [
+    "main",
+    "preparation",
+    "refresh",
+    "recheck",
+    "final_pool",
+    "delta",
+    "lifecycle",
+    "handoff",
+]
+
+STEP_LABELS = {
+    "main": "Collecte + scoring principal",
+    "preparation": "Préparation des candidatures",
+    "refresh": "Vérification des offres",
+    "recheck": "Réévaluation",
+    "final_pool": "Final Application Pool",
+    "delta": "Delta / nouveautés",
+    "lifecycle": "Lifecycle candidatures",
+    "handoff": "Handoff ChatGPT automatique",
+}
+
+STATUS_LABELS = {
+    "PENDING": "⏳ En attente",
+    "RUNNING": "🔄 En cours",
+    "COMMAND_OK": "🔎 Validation",
+    "DONE": "✅ Terminé",
+    "SKIPPED": "⏭️ Ignoré",
+    "FAILED": "❌ Échec",
+}
+
+SOURCE_PATTERNS = [
+    ("FOREM", re.compile(r"SOURCE\s+1\s*-\s*FOREM", re.I)),
+    ("ACTIRIS", re.compile(r"SOURCE\s+2\s*-\s*ACTIRIS", re.I)),
+    ("TALENT.BRUSSELS", re.compile(r"SOURCE\s+3\s*-\s*TALENT", re.I)),
+    ("TRAVAILLERPOUR", re.compile(r"SOURCE\s+4\s*-\s*TRAVAILLERPOUR", re.I)),
+    ("SMARTRECRUITERS", re.compile(r"SOURCE\s+5\s*-\s*SMARTRECRUITERS", re.I)),
+]
+
+KEYWORD_RE = re.compile(r"\[(\d+)\s*/\s*(\d+)\]\s*(.*)")
+
+
+def _parse_iso(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value)
+    except Exception:
+        return None
+
+
+def _read_json(path: Path) -> dict:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def latest_daily_manifest() -> tuple[Path | None, dict]:
+    if not DAILY_DIR.exists():
+        return None, {}
+
+    candidates = []
+    for path in DAILY_DIR.glob("daily_run_v1_*.json"):
+        try:
+            data = _read_json(path)
+            if data:
+                candidates.append((path, data))
+        except Exception:
+            continue
+
+    if not candidates:
+        return None, {}
+
+    # Si le run a été déclenché depuis l'UI, on évite d'afficher un ancien
+    # manifest qui serait sans rapport avec ce lancement.
+    ui_state = get_run_state()
+    ui_started = _parse_iso(ui_state.get("started_at"))
+
+    if ui_started:
+        relevant = []
+        for path, data in candidates:
+            started = _parse_iso(data.get("started_at"))
+            if started and started >= ui_started.replace(microsecond=0):
+                relevant.append((path, data))
+        if relevant:
+            candidates = relevant
+
+    path, data = max(
+        candidates,
+        key=lambda pair: (
+            _parse_iso(pair[1].get("started_at")) or datetime.min,
+            pair[0].stat().st_mtime,
+        ),
+    )
+    return path, data
+
+
+def current_step(manifest: dict) -> str | None:
+    steps = manifest.get("steps") or {}
+    for step in STEP_ORDER:
+        status = (steps.get(step) or {}).get("status")
+        if status in {"RUNNING", "COMMAND_OK"}:
+            return step
+    for step in STEP_ORDER:
+        status = (steps.get(step) or {}).get("status")
+        if status not in {"DONE", "SKIPPED"}:
+            return step
+    return None
+
+
+def completed_steps(manifest: dict) -> int:
+    steps = manifest.get("steps") or {}
+    return sum(
+        1
+        for step in STEP_ORDER
+        if (steps.get(step) or {}).get("status") in {"DONE", "SKIPPED"}
+    )
+
+
+def step_rows(manifest: dict) -> list[dict]:
+    steps = manifest.get("steps") or {}
+    rows = []
+    for idx, step in enumerate(STEP_ORDER, start=1):
+        row = steps.get(step) or {}
+        status = row.get("status") or "PENDING"
+        rows.append(
+            {
+                "#": idx,
+                "Étape": STEP_LABELS.get(step, step),
+                "État": STATUS_LABELS.get(status, status),
+                "Début": row.get("started_at") or "—",
+                "Fin": row.get("finished_at") or "—",
+            }
+        )
+    return rows
+
+
+def _tail_text(path: Path, max_bytes: int = 450_000) -> str:
+    if not path.exists():
+        return ""
+    try:
+        size = path.stat().st_size
+        with path.open("rb") as fh:
+            if size > max_bytes:
+                fh.seek(-max_bytes, 2)
+            raw = fh.read()
+        return raw.decode("utf-8", errors="replace")
+    except Exception:
+        return ""
+
+
+def _source_from_main_log(text: str) -> tuple[str | None, str]:
+    best_name = None
+    best_pos = -1
+    for name, pattern in SOURCE_PATTERNS:
+        matches = list(pattern.finditer(text))
+        if matches and matches[-1].start() > best_pos:
+            best_name = name
+            best_pos = matches[-1].start()
+    if best_pos >= 0:
+        return best_name, text[best_pos:]
+    return None, text
+
+
+def _last_nonempty_lines(text: str, count: int = 8) -> list[str]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    return lines[-count:]
+
+
+def active_step_activity(manifest: dict) -> dict:
+    step = current_step(manifest)
+    if not step:
+        return {}
+
+    row = ((manifest.get("steps") or {}).get(step) or {})
+    log_raw = row.get("log")
+    log_path = Path(log_raw) if log_raw else None
+    text = _tail_text(log_path) if log_path else ""
+
+    result = {
+        "step": step,
+        "step_label": STEP_LABELS.get(step, step),
+        "status": row.get("status") or "PENDING",
+        "log_path": str(log_path) if log_path else None,
+        "tail_lines": _last_nonempty_lines(text, 12),
+        "log_age_seconds": None,
+        "source": None,
+        "keyword_current": None,
+        "keyword_total": None,
+        "keyword": None,
+    }
+
+    if log_path and log_path.exists():
+        try:
+            result["log_age_seconds"] = max(
+                0,
+                int(datetime.now().timestamp() - log_path.stat().st_mtime),
+            )
+        except Exception:
+            pass
+
+    if step == "main" and text:
+        source, segment = _source_from_main_log(text)
+        if not source:
+            recent = text[-80_000:].upper()
+            if "TOTAL UNIQUE ACTIRIS" in recent or "RECHERCHE ACTIRIS" in recent:
+                source = "ACTIRIS"
+            elif "TOTAL UNIQUE FOREM" in recent or "RECHERCHE FOREM" in recent:
+                source = "FOREM"
+            elif "TALENT.BRUSSELS" in recent:
+                source = "TALENT.BRUSSELS"
+            elif "TRAVAILLERPOUR" in recent:
+                source = "TRAVAILLERPOUR"
+            elif "SMARTRECRUITERS" in recent:
+                source = "SMARTRECRUITERS"
+        result["source"] = source
+        keyword_matches = list(KEYWORD_RE.finditer(segment))
+        if keyword_matches:
+            m = keyword_matches[-1]
+            result["keyword_current"] = int(m.group(1))
+            result["keyword_total"] = int(m.group(2))
+            result["keyword"] = (m.group(3) or "").strip()
+
+    return result
+
+
+def run_elapsed_seconds(manifest: dict, ui_state: dict | None = None) -> int | None:
+    started = _parse_iso(manifest.get("started_at"))
+    if not started and ui_state:
+        started = _parse_iso(ui_state.get("started_at"))
+    if not started:
+        return None
+
+    finished = _parse_iso(manifest.get("finished_at"))
+    if not finished and ui_state:
+        finished = _parse_iso(ui_state.get("finished_at"))
+    end = finished or datetime.now()
+    return max(0, int((end - started).total_seconds()))
+
+
+def format_duration(seconds: int | None) -> str:
+    if seconds is None:
+        return "—"
+    minutes, sec = divmod(int(seconds), 60)
+    hours, minutes = divmod(minutes, 60)
+    if hours:
+        return f"{hours} h {minutes:02d} min {sec:02d} s"
+    return f"{minutes} min {sec:02d} s"
