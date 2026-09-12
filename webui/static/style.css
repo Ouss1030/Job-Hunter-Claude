@@ -40,6 +40,15 @@
 
 * { box-sizing: border-box; }
 
+/* L'attribut hidden doit toujours gagner.
+   Sans cette regle, toute classe qui pose un display (grid, flex...) annule
+   l'attribut : la feuille de style du navigateur n'a pas la priorite d'une
+   regle d'auteur. Defaut mesure le 12 septembre 2026 : la carte des
+   raccourcis clavier, marquee hidden mais en display:grid, recouvrait toute
+   la page en z-index 40 et avalait chaque clic — tous les boutons semblaient
+   morts, alors que rien dans le code des boutons n'etait en cause. */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   height: 100%;

@@ -68,7 +68,11 @@ from interface.lifecycle_service import USER_STATUSES, save_suivi, set_status
 from webui import donnees
 
 
-WEBUI_VERSION = "0.3"
+# La version figure dans l'URL des fichiers statiques (?v=...). La changer
+# force le navigateur a recharger CSS et JS : sans cela, une correction dans
+# la feuille de style reste invisible tant que le cache n'est pas vide — et
+# rien n'indique a l'utilisateur qu'il regarde une version perimee.
+WEBUI_VERSION = "0.3.1"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))

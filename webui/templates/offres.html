@@ -58,5 +58,5 @@
 window.OFFRES = {{ offres_json | safe }};
 window.TRIAGE = {{ triage_json | safe }};
 </script>
-<script src="/static/app.js"></script>
+<script src="/static/app.js?v={{ version }}"></script>
 {% endblock %}

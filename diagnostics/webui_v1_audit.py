@@ -167,10 +167,33 @@ def main():
                        "lignes_max" in inspect.getsource(donnees.journal_du_run)))
 
     print()
+    print("G. DEUX DEFAUTS QUI ONT RENDU TOUS LES BOUTONS MUETS")
+    print("-" * 92)
+    # Le 12 septembre 2026, aucun bouton ne repondait plus. Rien dans le code
+    # des boutons n'etait en cause : la carte des raccourcis clavier, marquee
+    # hidden mais en display:grid, recouvrait la page entiere en z-index 40
+    # et avalait chaque clic. L'attribut hidden n'a que la priorite de la
+    # feuille de style du navigateur ; une regle d'auteur le bat.
+    css = (GABARITS.parent / "static" / "style.css").read_text(encoding="utf-8")
+    tests.append(check(
+        "[hidden] est declare avec !important",
+        "[hidden]" in css and "!important" in css.split("[hidden]", 1)[1][:80]))
+
+    import re
+    # Le correctif CSS restait invisible : le navigateur servait l'ancien
+    # fichier depuis son cache. Les URL statiques portent donc la version.
+    for nom in ("_base.html", "offres.html", "jour.html"):
+        source = (GABARITS / nom).read_text(encoding="utf-8")
+        refs = re.findall(r'/static/[^"\s]+', source)
+        tests.append(check(
+            f"{nom} : toute URL statique est versionnée",
+            refs and all("?v=" in r for r in refs), str(refs)))
+
+    print()
     print("F. VERSIONS")
     print("-" * 92)
-    tests.append(check("Interface web au moins 0.3",
-                       at_least(serveur.WEBUI_VERSION, "0.3"),
+    tests.append(check("Interface web au moins 0.3.1",
+                       at_least(serveur.WEBUI_VERSION, "0.3.1"),
                        serveur.WEBUI_VERSION))
     tests.append(check("Préparation des données au moins 1.0",
                        at_least(donnees.DONNEES_VERSION, "1.0"),
