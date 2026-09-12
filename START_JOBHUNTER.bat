@@ -19,10 +19,18 @@ rem Si Streamlit est deja lance sur 8501, ne pas tenter un deuxieme serveur.
 powershell -NoProfile -ExecutionPolicy Bypass -Command "$c=Get-NetTCPConnection -LocalPort 8501 -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1; if($c){$p=Get-Process -Id $c.OwningProcess -ErrorAction SilentlyContinue; Write-Output ('PORT_8501_IN_USE PID=' + $c.OwningProcess + ' PROCESS=' + $p.ProcessName); exit 10}else{exit 0}" >> "%STARTLOG%" 2>&1
 if "%ERRORLEVEL%"=="10" goto :port_in_use
 
+rem Le .venv n'est retenu que s'il sait importer streamlit. Il peut exister
+rem sans avoir recu INSTALL_UI.bat — il ne contient alors que le pipeline,
+rem et le choisir aveuglement echoue sur ModuleNotFoundError.
+set "PY="
 if exist ".venv\Scripts\python.exe" (
-    set "PY=%CD%\.venv\Scripts\python.exe"
-) else (
+    ".venv\Scripts\python.exe" -c "import streamlit, pandas" >nul 2>&1
+    if not errorlevel 1 set "PY=%CD%\.venv\Scripts\python.exe"
+)
+if not defined PY (
     where python >nul 2>&1
+    if errorlevel 1 goto :no_python
+    python -c "import streamlit, pandas" >nul 2>&1
     if errorlevel 1 goto :no_python
     set "PY=python"
 )
@@ -87,8 +95,9 @@ pause
 exit /b 0
 
 :no_python
-echo ERREUR : Python est introuvable. >> "%STARTLOG%"
-echo ERREUR : Python est introuvable.
+echo ERREUR : aucun Python ne dispose de streamlit et pandas. >> "%STARTLOG%"
+echo ERREUR : aucun Python ne dispose de streamlit et pandas.
+echo          Lancez INSTALL_UI.bat une fois, puis relancez ce script.
 goto :fail
 
 :python_error

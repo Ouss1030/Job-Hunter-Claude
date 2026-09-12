@@ -6,3 +6,15 @@
 # Version non épinglée faute d'avoir pu vérifier laquelle est validée.
 streamlit==1.61.0
 pandas>=2.0
+
+# Interface web (webui/serveur.py).
+#
+# Ces trois paquets arrivent deja avec streamlit, ce qui a fait croire
+# qu'aucune dependance n'etait a declarer. C'etait vrai sur le Python global
+# et faux dans le .venv, qui ne contient que les dependances du pipeline :
+# le 12 septembre 2026, LANCER_INTERFACE_WEB.bat echouait sur
+# ModuleNotFoundError: uvicorn. Les declarer ici, c'est les faire installer
+# par INSTALL_UI.bat comme le reste.
+uvicorn>=0.20
+starlette>=0.27
+jinja2>=3.0
