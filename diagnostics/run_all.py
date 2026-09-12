@@ -91,6 +91,7 @@ SUITE_ACTIVE = [
     "statistiques_v1_audit",
     "suivi_candidature_v1_audit",
     "webui_v1_audit",
+    "conseils_v1_audit",
     "job_titles_v2_audit",
     "piste_accessible_v1_audit",
 ]
