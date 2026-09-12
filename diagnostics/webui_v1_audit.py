@@ -190,13 +190,47 @@ def main():
             refs and all("?v=" in r for r in refs), str(refs)))
 
     print()
+    print("H. LA MEMOIRE DES CALCULS")
+    print("-" * 92)
+    # Mesure du 13 septembre 2026, avant la memoire : page Offres 1 457 ms,
+    # page Statistiques 13 446 ms, tout recalcule a chaque clic. Apres :
+    # 10 ms et 3 ms. Le cache doit rendre vite ET ne jamais rendre du perime.
+    from webui.memo import Memoire
+    m = Memoire()
+    appels = []
+    calcul = lambda: appels.append(1) or len(appels)
+    a = m.obtenir("x", ("e1",), calcul)
+    b = m.obtenir("x", ("e1",), calcul)
+    tests.append(check("Meme empreinte : une seule execution du calcul",
+                       a == b == 1 and len(appels) == 1))
+    c = m.obtenir("x", ("e2",), calcul)
+    tests.append(check("Empreinte changee : recalcul",
+                       c == 2 and len(appels) == 2))
+    m.oublier("x")
+    d = m.obtenir("x", ("e2",), calcul)
+    tests.append(check("Oubli explicite : recalcul meme a empreinte egale",
+                       d == 3))
+
+    # La base est en WAL : la date de jobs.db ne bouge pas a chaque
+    # ecriture. L'invalidation doit donc etre explicite.
+    avant = donnees._empreinte_base()
+    donnees.invalider_suivi()
+    tests.append(check("invalider_suivi() change l'empreinte du suivi",
+                       donnees._empreinte_base() != avant))
+    tests.append(check("L'empreinte du pool se calcule sans lire de JSON",
+                       "json.loads" not in inspect.getsource(donnees._empreinte_pool)
+                       and "read_text" not in inspect.getsource(donnees._empreinte_pool)))
+    tests.append(check("Chaque ecriture du serveur invalide la memoire",
+                       inspect.getsource(serveur).count("invalider_suivi()") >= 3))
+
+    print()
     print("F. VERSIONS")
     print("-" * 92)
-    tests.append(check("Interface web au moins 0.3.1",
-                       at_least(serveur.WEBUI_VERSION, "0.3.1"),
+    tests.append(check("Interface web au moins 0.4",
+                       at_least(serveur.WEBUI_VERSION, "0.4"),
                        serveur.WEBUI_VERSION))
     tests.append(check("Préparation des données au moins 1.0",
-                       at_least(donnees.DONNEES_VERSION, "1.0"),
+                       at_least(donnees.DONNEES_VERSION, "1.1"),
                        donnees.DONNEES_VERSION))
 
     passed = sum(1 for x in tests if x)

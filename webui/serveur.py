@@ -72,7 +72,7 @@ from webui import donnees
 # force le navigateur a recharger CSS et JS : sans cela, une correction dans
 # la feuille de style reste invisible tant que le cache n'est pas vide — et
 # rien n'indique a l'utilisateur qu'il regarde une version perimee.
-WEBUI_VERSION = "0.3.1"
+WEBUI_VERSION = "0.4"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))
@@ -118,27 +118,20 @@ async def page_offres(request):
 
 
 async def page_statistiques(request):
-    from statistiques.candidatures import analyser_candidatures
-    from statistiques.marche import analyser_marche
-    from statistiques.pipeline import (
-        entonnoir_par_run, evolution, rendement_des_sources)
-
     lignes, _artefact = donnees.offres()
     jour = donnees.journee(lignes)
 
     # Apercu par defaut : le calcul complet evalue plusieurs milliers
-    # d'annonces et prendrait une demi-minute a chaque ouverture de page.
+    # d'annonces. Memorise : il n'est refait qu'apres une collecte.
     complet = request.query_params.get("complet") == "1"
-    marche = analyser_marche(limite=None if complet else 1500)
-    entonnoir = entonnoir_par_run()
+    pipeline = donnees.statistiques_pipeline()
 
     return GABARITS.TemplateResponse(
         request, "statistiques.html",
         {**_commun("statistiques", len(lignes), len(jour["relances_dues"])),
-         "complet": complet, "marche": marche,
-         "entonnoir": entonnoir, "evolution": evolution(entonnoir),
-         "rendement": [x for x in rendement_des_sources() if x["offres"] >= 2],
-         "candidatures": analyser_candidatures()})
+         "complet": complet, "marche": donnees.marche(complet=complet),
+         **pipeline,
+         "candidatures": donnees.statistiques_candidatures()})
 
 
 async def page_a_venir(request):
@@ -205,6 +198,7 @@ async def api_statut(request):
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
     try:
+        donnees.invalider_suivi()
         applique = set_status(offre, statut, note=corps.get("note"))
         return JSONResponse({"cle": cle, "statut": applique})
     except Exception as erreur:
@@ -223,6 +217,7 @@ async def api_postule(request):
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
     try:
+        donnees.invalider_suivi()
         set_status(offre, "APPLIED", note=corps.get("note"))
         return JSONResponse({"cle": offre["stable_item_key"],
                              "statut": "APPLIED"})
@@ -244,6 +239,7 @@ async def api_suivi(request):
             contact_channel=corps.get("contact_channel"),
             note=corps.get("note"),
         )
+        donnees.invalider_suivi()
         return JSONResponse({"cle": offre["stable_item_key"], "suivi": valeurs})
     except ValueError as erreur:
         return JSONResponse({"erreur": str(erreur)}, 400)
@@ -282,6 +278,9 @@ def main() -> None:
     print("  http://127.0.0.1:8600")
     print("  Ctrl+C pour arrêter.")
     print()
+    # Les calculs couteux partent tout de suite en arriere-plan : la premiere
+    # page ne doit pas payer treize secondes que les suivantes ne paieront plus.
+    donnees.prechauffer()
     uvicorn.run(application, host="127.0.0.1", port=8600, log_level="warning")
 
 

@@ -189,6 +189,37 @@ def get_suivi(job: dict[str, Any]) -> dict[str, Any]:
         conn.close()
 
 
+def suivis_par_cle() -> dict[str, dict[str, Any]]:
+    """
+    Tous les suivis en une requete, indexes par stable_item_key.
+
+    get_suivi() ouvre une connexion et reverifie le schema a chaque appel.
+    Appele pour chacune des offres d'un pool, cela faisait 117 connexions
+    par affichage — 335 ms mesurees le 13 septembre 2026, pour lire trois
+    colonnes. Ici, une seule requete rend tout.
+    """
+    conn = lt.connect_database(DB_PATH)
+    try:
+        lt.ensure_schema(conn)
+        lignes = conn.execute(
+            "SELECT a.identity_value, "
+            f"       {', '.join('e.' + c for c in _CHAMPS_SUIVI)} "
+            "FROM application_entities e "
+            "JOIN source_identity_aliases a ON a.entity_id = e.id "
+            "WHERE a.identity_type = 'STABLE_ITEM_KEY'"
+        ).fetchall()
+    except Exception:
+        return {}
+    finally:
+        conn.close()
+
+    return {
+        str(ligne[0]): dict(zip(_CHAMPS_SUIVI, ligne[1:]))
+        for ligne in lignes
+        if ligne[0]
+    }
+
+
 def save_suivi(job: dict[str, Any],
                next_action_date: str | None = None,
                contact_name: str | None = None,
