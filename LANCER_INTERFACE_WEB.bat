@@ -23,6 +23,13 @@ if not defined PY (
     set "PY=python"
 )
 
+rem Si un serveur ecoute deja sur 8600, on ouvre simplement le navigateur
+rem dessus. Lancer un second serveur echouerait sur « adresse deja utilisee »
+rem — c'est exactement l'erreur vue le 13 septembre 2026, quand une instance
+rem de test tournait encore en arriere-plan.
+powershell -NoProfile -ExecutionPolicy Bypass -Command "if (Get-NetTCPConnection -LocalPort 8600 -State Listen -ErrorAction SilentlyContinue) { exit 10 } else { exit 0 }" >nul 2>&1
+if "%ERRORLEVEL%"=="10" goto :deja_lance
+
 echo.
 echo   JobHunter - interface web
 echo   Interpreteur : %PY%
@@ -31,6 +38,14 @@ echo.
 start "" "http://127.0.0.1:8600"
 "%PY%" -m webui.serveur
 pause
+exit /b 0
+
+:deja_lance
+echo.
+echo   Un serveur JobHunter tourne deja sur le port 8600.
+echo   Ouverture du navigateur dessus.
+echo.
+start "" "http://127.0.0.1:8600"
 exit /b 0
 
 :manque

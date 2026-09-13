@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobHunter</title>
+<link rel="stylesheet" href="/static/style.css?v={{ version }}">
+</head>
+<body>
+
+<nav class="rail" aria-label="Navigation">
+  <a class="marque" href="/" data-lien>◎</a>
+  <div class="onglets">
+    <a href="/" data-lien data-ecran="jour" title="Aujourd'hui">
+      <span class="ico">◈</span><span class="lib">Aujourd'hui</span>
+      <span class="pastille" id="pastille-dues" hidden></span>
+    </a>
+    <a href="/offres" data-lien data-ecran="offres" title="Offres">
+      <span class="ico">▤</span><span class="lib">Offres</span>
+      <span class="pastille" id="pastille-offres" hidden></span>
+    </a>
+    <a href="/conseils" data-lien data-ecran="conseils" title="Conseils">
+      <span class="ico">✦</span><span class="lib">Conseils</span>
+    </a>
+    <a href="/statistiques" data-lien data-ecran="statistiques" title="Statistiques">
+      <span class="ico">◔</span><span class="lib">Statistiques</span>
+    </a>
+  </div>
+  <div class="rail-bas">
+    <span class="version">v{{ version }}</span>
+  </div>
+</nav>
+
+<main id="ecran" class="ecran"></main>
+
+<div class="voile" id="voile" hidden></div>
+<aside class="panneau" id="panneau" hidden aria-label="Détail"></aside>
+<div class="notification" id="notification" hidden></div>
+<div class="raccourcis" id="raccourcis" hidden></div>
+
+<script src="/static/graphiques.js?v={{ version }}"></script>
+<script src="/static/app.js?v={{ version }}"></script>
+</body>
+</html>

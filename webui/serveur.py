@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-INTERFACE WEB - VERSION 0.3
+INTERFACE WEB - VERSION 1.0
 
     python -m webui.serveur
     -> http://127.0.0.1:8600
@@ -12,49 +12,38 @@ apparence, de leur densite et de leur mise en page. C'est excellent pour
 sortir un outil interne en une soiree, et c'est une impasse des qu'on veut
 maitriser la forme.
 
-Cette interface-ci est servie en HTML : chaque pixel est ecrit ici ou dans
-la feuille de style. Rien n'est impose.
+Cette interface est servie en HTML : chaque pixel est ecrit ici ou dans la
+feuille de style. Rien n'est impose.
+
+V1.0 — une seule page
+---------------------
+Les versions 0.x rendaient une page par ecran, rechargee entierement a
+chaque navigation : l'aller-retour serveur etait visible, et l'utilisateur
+l'a nomme « pas fluide ». Il avait raison.
+
+Le serveur ne rend plus qu'une coquille HTML, une fois. Tout le reste est
+du JSON, et c'est le navigateur qui dessine les ecrans et anime les
+transitions. Passer d'un ecran a l'autre ne coute plus qu'un appel leger,
+souvent aucun — les donnees deja recues sont gardees.
 
 Aucune dependance nouvelle
 --------------------------
-Starlette, Jinja2 et uvicorn sont deja presents dans l'environnement — ils
-arrivent avec Streamlit. Aucun `pip install`, aucun Node, aucune etape de
-compilation.
+Starlette, Jinja2 et uvicorn sont deja presents. Aucun Node, aucune etape
+de compilation : les graphiques sont dessines en SVG par le navigateur, sans
+bibliotheque.
 
-V0.3 — l'ecran du jour, le run, les statistiques
--------------------------------------------------
-L'ecran du jour remplace leur « Command Center ». Eux affichent sept
-compteurs cote a cote ; un tableau de bord qui montre tout n'oriente vers
-rien. Trois questions suffisent : quelles relances sont dues, quelles offres
-attendent une decision, qu'est-ce qui est nouveau.
+Ce qui est conserve des versions precedentes
+--------------------------------------------
+Tout : le triage au clavier, la fiche de suivi, l'analyse d'ecart avec ses
+preuves, le lancement de run avec suivi, la memoire des calculs, la case a
+cocher obligatoire avant APPLIED. Seule la facon de les presenter change.
 
-Le lancement de run reprend leur boite de processus, avec une difference :
-la leur affiche « PID 1432 en cours » et le journal brut. Ici les etapes
-nommees defilent, parce que progress_monitor sait deja les lire.
-
-V0.2 — le triage et le suivi
-----------------------------
-La V0.1 affichait. Celle-ci permet de decider.
-
-Deux idees viennent du tableau de bord V7 de l'original, et elles sont
-bonnes : le triage directement dans la liste, et la case a cocher obligatoire
-avant de marquer une candidature envoyee. Cette seconde trouvaille merite
-d'etre soulignee — elle transforme une regle ecrite dans un document
-(« la machine ne marque jamais APPLIED ») en une contrainte que l'interface
-rend impossible a contourner par distraction.
-
-Ce qui change par rapport a eux : leur triage recharge toute la page a
-chaque clic, ce qui rend le tri de cent offres interminable. Ici, l'action
-part en arriere-plan et la ligne se met a jour seule ; le clavier permet
-d'enchainer sans jamais viser un bouton.
-
-Toute la logique metier vient de interface/, qui ne depend d'aucun framework
-d'affichage : cette page ne fait que presenter et transmettre.
+Toute la logique metier vient de interface/ et statistiques/, qui ne
+dependent d'aucun framework d'affichage.
 """
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import uvicorn
@@ -68,11 +57,7 @@ from interface.lifecycle_service import USER_STATUSES, save_suivi, set_status
 from webui import donnees
 
 
-# La version figure dans l'URL des fichiers statiques (?v=...). La changer
-# force le navigateur a recharger CSS et JS : sans cela, une correction dans
-# la feuille de style reste invisible tant que le cache n'est pas vide — et
-# rien n'indique a l'utilisateur qu'il regarde une version perimee.
-WEBUI_VERSION = "0.4"
+WEBUI_VERSION = "1.0"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))
@@ -89,64 +74,53 @@ TRIAGE = (
 )
 
 
-# ------------------------------------------------------------------ pages
+# --------------------------------------------------------------- coquille
 
-def _commun(actif: str, total: int, dues: int) -> dict:
-    return {"version": WEBUI_VERSION, "actif": actif,
-            "total": total, "dues": dues}
-
-
-async def page_jour(request):
-    lignes, artefact = donnees.offres()
-    jour = donnees.journee(lignes)
+async def coquille(request):
+    """
+    La seule page servie. Toutes les routes d'ecran y menent : le navigateur
+    lit l'adresse et dessine l'ecran voulu.
+    """
     return GABARITS.TemplateResponse(
-        request, "jour.html",
-        {**_commun("jour", len(lignes), len(jour["relances_dues"])),
-         "artefact": artefact, "jour": jour,
-         "run": donnees.etat_du_run()})
-
-
-async def page_offres(request):
-    lignes, artefact = donnees.offres()
-    jour = donnees.journee(lignes)
-    return GABARITS.TemplateResponse(
-        request, "offres.html",
-        {**_commun("offres", len(lignes), len(jour["relances_dues"])),
-         "artefact": artefact,
-         "offres_json": json.dumps(lignes, ensure_ascii=False),
-         "triage_json": json.dumps(TRIAGE, ensure_ascii=False)})
-
-
-async def page_statistiques(request):
-    lignes, _artefact = donnees.offres()
-    jour = donnees.journee(lignes)
-
-    # Apercu par defaut : le calcul complet evalue plusieurs milliers
-    # d'annonces. Memorise : il n'est refait qu'apres une collecte.
-    complet = request.query_params.get("complet") == "1"
-    pipeline = donnees.statistiques_pipeline()
-
-    return GABARITS.TemplateResponse(
-        request, "statistiques.html",
-        {**_commun("statistiques", len(lignes), len(jour["relances_dues"])),
-         "complet": complet, "marche": donnees.marche(complet=complet),
-         **pipeline,
-         "candidatures": donnees.statistiques_candidatures()})
-
-
-async def page_a_venir(request):
-    titre = request.path_params.get("nom", "").replace("-", " ").capitalize()
-    lignes, _artefact = donnees.offres()
-    return GABARITS.TemplateResponse(
-        request, "a_venir.html",
-        {**_commun("", len(lignes), 0), "titre": titre or "Cet écran"})
+        request, "app.html", {"version": WEBUI_VERSION})
 
 
 # -------------------------------------------------------------------- api
 
+async def api_jour(request):
+    lignes, artefact = donnees.offres()
+    return JSONResponse({
+        "artefact": artefact,
+        "total": len(lignes),
+        "jour": donnees.journee(lignes),
+        "run": donnees.etat_du_run(),
+    })
+
+
 async def api_offres(request):
     lignes, artefact = donnees.offres()
-    return JSONResponse({"artefact": artefact, "offres": lignes})
+    return JSONResponse({"artefact": artefact, "offres": lignes,
+                         "triage": list(TRIAGE)})
+
+
+async def api_conseils(request):
+    # Si l'artefact n'existe pas encore, la premiere demande le calcule et
+    # attend. La page affiche « calcul en cours » pendant ce temps plutot
+    # que de laisser un ecran vide sans explication.
+    if not donnees.conseils_prets():
+        if request.query_params.get("attendre") != "1":
+            return JSONResponse({"en_cours": True}, 202)
+    return JSONResponse(donnees.conseils())
+
+
+async def api_statistiques(request):
+    complet = request.query_params.get("complet") == "1"
+    return JSONResponse({
+        "marche": donnees.marche(complet=complet),
+        "complet": complet,
+        **donnees.statistiques_pipeline(),
+        "candidatures": donnees.statistiques_candidatures(),
+    })
 
 
 async def api_run_etat(request):
@@ -198,8 +172,8 @@ async def api_statut(request):
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
     try:
-        donnees.invalider_suivi()
         applique = set_status(offre, statut, note=corps.get("note"))
+        donnees.invalider_suivi()
         return JSONResponse({"cle": cle, "statut": applique})
     except Exception as erreur:
         return JSONResponse({"erreur": str(erreur)}, 500)
@@ -217,8 +191,8 @@ async def api_postule(request):
         return JSONResponse({"erreur": "Offre introuvable."}, 404)
 
     try:
-        donnees.invalider_suivi()
         set_status(offre, "APPLIED", note=corps.get("note"))
+        donnees.invalider_suivi()
         return JSONResponse({"cle": offre["stable_item_key"],
                              "statut": "APPLIED"})
     except Exception as erreur:
@@ -252,13 +226,15 @@ async def api_relances(request):
     return JSONResponse({"dues": relances_dues()})
 
 
+ECRANS = ("/", "/offres", "/conseils", "/statistiques")
+
 application = Starlette(
     routes=[
-        Route("/", page_jour),
-        Route("/offres", page_offres),
-        Route("/statistiques", page_statistiques),
-        Route("/bientot/{nom}", page_a_venir),
+        *[Route(chemin, coquille) for chemin in ECRANS],
+        Route("/api/jour", api_jour),
         Route("/api/offres", api_offres),
+        Route("/api/conseils", api_conseils),
+        Route("/api/statistiques", api_statistiques),
         Route("/api/run", api_run_etat),
         Route("/api/run/lancer", api_run_lancer, methods=["POST"]),
         Route("/api/statut", api_statut, methods=["POST"]),
@@ -279,7 +255,7 @@ def main() -> None:
     print("  Ctrl+C pour arrêter.")
     print()
     # Les calculs couteux partent tout de suite en arriere-plan : la premiere
-    # page ne doit pas payer treize secondes que les suivantes ne paieront plus.
+    # page ne doit pas payer ce que les suivantes ne paieront plus.
     donnees.prechauffer()
     uvicorn.run(application, host="127.0.0.1", port=8600, log_level="warning")
 

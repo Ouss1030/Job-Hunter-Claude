@@ -53,34 +53,35 @@ def main():
 
     tests = []
 
-    print("A. GABARITS")
+    print("A. LA COQUILLE")
     print("-" * 92)
+    # Une seule page servie ; le navigateur dessine les ecrans. Les anciens
+    # gabarits par ecran ont ete retires : en garder un qui traine serait
+    # une impasse pour qui y arriverait.
     from jinja2 import Environment, FileSystemLoader
     env = Environment(loader=FileSystemLoader(str(GABARITS)))
-    attendus = ("_base.html", "jour.html", "offres.html",
-                "statistiques.html", "a_venir.html")
-    for nom in attendus:
-        try:
-            env.get_template(nom)
-            ok = True
-        except Exception as erreur:
-            ok, nom = False, f"{nom} : {erreur}"
-        tests.append(check(f"Gabarit compile : {nom}", ok))
-
-    # Un ecran qui n'herite pas du gabarit commun perd la navigation, et
-    # devient une impasse pour qui y arrive.
-    for nom in ("jour.html", "offres.html", "statistiques.html", "a_venir.html"):
-        source = (GABARITS / nom).read_text(encoding="utf-8")
-        tests.append(check(f"{nom} hérite du gabarit commun",
-                           'extends "_base.html"' in source))
+    try:
+        env.get_template("app.html"); ok = True
+    except Exception:
+        ok = False
+    tests.append(check("La coquille app.html compile", ok))
+    restants = sorted(p.name for p in GABARITS.glob("*.html"))
+    tests.append(check("Aucun ancien gabarit par ecran ne subsiste",
+                       restants == ["app.html"], str(restants)))
+    coquille = (GABARITS / "app.html").read_text(encoding="utf-8")
+    for nom in ("ecran", "panneau", "voile", "notification", "raccourcis"):
+        tests.append(check(f"La coquille porte #{nom}", f'id="{nom}"' in coquille))
+    tests.append(check("Les scripts sont versionnes (cache)",
+                       coquille.count("?v={{ version }}") >= 3))
 
     print()
     print("B. ROUTES")
     print("-" * 92)
     chemins = {r.path for r in serveur.application.routes if hasattr(r, "path")}
-    for chemin in ("/", "/offres", "/statistiques", "/api/offres",
-                   "/api/run", "/api/run/lancer", "/api/statut",
-                   "/api/postule", "/api/suivi", "/api/relances"):
+    for chemin in ("/", "/offres", "/conseils", "/statistiques",
+                   "/api/jour", "/api/offres", "/api/conseils",
+                   "/api/statistiques", "/api/run", "/api/run/lancer",
+                   "/api/statut", "/api/postule", "/api/suivi", "/api/relances"):
         tests.append(check(f"Route déclarée : {chemin}", chemin in chemins))
 
     methodes = {r.path: getattr(r, "methods", set())
@@ -165,6 +166,10 @@ def main():
                        "is_running()" in source_lancer and "409" in source_lancer))
     tests.append(check("Le journal du run est borné",
                        "lignes_max" in inspect.getsource(donnees.journal_du_run)))
+    tests.append(check("Chaque ecran est servi par la meme coquille",
+                       all(r.endpoint is serveur.coquille
+                           for r in serveur.application.routes
+                           if getattr(r, "path", "") in serveur.ECRANS)))
 
     print()
     print("G. DEUX DEFAUTS QUI ONT RENDU TOUS LES BOUTONS MUETS")
@@ -175,19 +180,17 @@ def main():
     # et avalait chaque clic. L'attribut hidden n'a que la priorite de la
     # feuille de style du navigateur ; une regle d'auteur le bat.
     css = (GABARITS.parent / "static" / "style.css").read_text(encoding="utf-8")
+    import re as _re
     tests.append(check(
         "[hidden] est declare avec !important",
-        "[hidden]" in css and "!important" in css.split("[hidden]", 1)[1][:80]))
+        bool(_re.search(r"\[hidden\]\s*\{[^}]*display\s*:\s*none\s*!important", css))))
 
     import re
     # Le correctif CSS restait invisible : le navigateur servait l'ancien
     # fichier depuis son cache. Les URL statiques portent donc la version.
-    for nom in ("_base.html", "offres.html", "jour.html"):
-        source = (GABARITS / nom).read_text(encoding="utf-8")
-        refs = re.findall(r'/static/[^"\s]+', source)
-        tests.append(check(
-            f"{nom} : toute URL statique est versionnée",
-            refs and all("?v=" in r for r in refs), str(refs)))
+    refs = re.findall(r'/static/[^"\s]+', coquille)
+    tests.append(check("Toute URL statique de la coquille est versionnée",
+                       bool(refs) and all("?v=" in r for r in refs), str(refs)))
 
     print()
     print("H. LA MEMOIRE DES CALCULS")
@@ -223,14 +226,40 @@ def main():
     tests.append(check("Chaque ecriture du serveur invalide la memoire",
                        inspect.getsource(serveur).count("invalider_suivi()") >= 3))
 
+    # Deux appelants sur la meme cle : un seul calcul. Sans cela le
+    # prechauffage et une requete calculaient « marche » ensemble, 13 s
+    # chacun, ralentis l'un par l'autre.
+    import threading, time
+    m2 = Memoire(); compteur = []
+    def lent():
+        compteur.append(1); time.sleep(0.15); return "ok"
+    fils = [threading.Thread(target=lambda: m2.obtenir("k", ("e",), lent)) for _ in range(4)]
+    [f.start() for f in fils]; [f.join() for f in fils]
+    tests.append(check("Quatre appelants simultanes : un seul calcul",
+                       len(compteur) == 1, f"{len(compteur)} calcul(s)"))
+
+    # Persistance : un resultat adosse a un fichier est relu sans calcul.
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        fichier = Path(tmp) / "art.json"
+        m3 = Memoire(); n = []
+        m3.obtenir("p", ("run1", 2), lambda: n.append(1) or {"v": 42}, fichier=fichier)
+        m4 = Memoire()
+        v = m4.obtenir("p", ("run1", 2), lambda: n.append(1) or {"v": 0}, fichier=fichier)
+        tests.append(check("L'artefact est relu par une memoire neuve, sans recalcul",
+                           v == {"v": 42} and len(n) == 1))
+        v2 = m4.obtenir("p", ("run2", 2), lambda: n.append(1) or {"v": 7}, fichier=fichier)
+        tests.append(check("Une autre empreinte force le recalcul",
+                           v2 == {"v": 7} and len(n) == 2))
+
     print()
     print("F. VERSIONS")
     print("-" * 92)
-    tests.append(check("Interface web au moins 0.4",
-                       at_least(serveur.WEBUI_VERSION, "0.4"),
+    tests.append(check("Interface web au moins 1.0",
+                       at_least(serveur.WEBUI_VERSION, "1.0"),
                        serveur.WEBUI_VERSION))
     tests.append(check("Préparation des données au moins 1.0",
-                       at_least(donnees.DONNEES_VERSION, "1.1"),
+                       at_least(donnees.DONNEES_VERSION, "1.2"),
                        donnees.DONNEES_VERSION))
 
     passed = sum(1 for x in tests if x)

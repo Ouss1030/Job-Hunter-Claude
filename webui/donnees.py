@@ -26,7 +26,7 @@ from statistiques.marche import _ville
 from webui.memo import MEMOIRE
 
 
-DONNEES_VERSION = "1.1"
+DONNEES_VERSION = "1.2"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -368,10 +368,14 @@ def marche(complet: bool = False) -> dict:
     from statistiques.marche import analyser_marche
 
     limite = None if complet else 1500
+    empreinte = _empreinte_collecte()
+    nom = f"marche_{'complet' if complet else 'apercu'}"
+    run = str(empreinte[0] or "aucun").replace(":", "-")
     return MEMOIRE.obtenir(
-        f"marche_{'complet' if complet else 'apercu'}",
-        _empreinte_collecte(),
-        lambda: analyser_marche(limite=limite))
+        nom, empreinte,
+        lambda: analyser_marche(limite=limite),
+        # Treize secondes par collecte, jamais au demarrage.
+        fichier=LOG_DIR / f"{nom}_{run}.json")
 
 
 def prechauffer() -> None:
@@ -388,6 +392,9 @@ def prechauffer() -> None:
             offres()
             statistiques_pipeline()
             marche(complet=False)
+            # En dernier : c'est le plus long, et il n'est calcule que si
+            # aucun artefact n'existe pour cette collecte.
+            conseils()
         except Exception:
             # Un echec de prechauffage n'est pas une erreur : la page
             # calculera elle-meme, simplement moins vite.
@@ -429,3 +436,34 @@ def statistiques_candidatures() -> dict:
     from statistiques.candidatures import analyser_candidatures
     return MEMOIRE.obtenir("candidatures", _empreinte_base(),
                            analyser_candidatures)
+
+
+def conseils() -> dict:
+    """
+    Conseils de marche : un artefact par collecte, ecrit sur disque.
+
+    Le calcul passe les 11 905 offres au crible de tous les vocabulaires :
+    une cinquantaine de secondes de Python pur. Le faire en arriere-plan au
+    demarrage semblait une bonne idee ; en pratique le thread de calcul
+    monopolise l'interpreteur et chaque page ramait pendant cinquante
+    secondes — mesure : 13 s pour l'ecran du jour.
+
+    Le resultat ne change qu'a une collecte. Il est donc ecrit dans
+    exports/logs sous le nom du run, et relu instantanement tant que ce run
+    est le dernier. Le calcul n'est paye qu'une fois par collecte, jamais
+    au demarrage.
+    """
+    from statistiques.conseils import analyser
+
+    empreinte = _empreinte_collecte()
+    run = str(empreinte[0] or "aucun").replace(":", "-")
+    return MEMOIRE.obtenir(
+        "conseils", empreinte, analyser,
+        fichier=LOG_DIR / f"conseils_marche_{run}.json")
+
+
+def conseils_prets() -> bool:
+    """Vrai si les conseils sont disponibles sans calcul long."""
+    empreinte = _empreinte_collecte()
+    run = str(empreinte[0] or "aucun").replace(":", "-")
+    return (LOG_DIR / f"conseils_marche_{run}.json").exists()         or "conseils" in MEMOIRE.etat()
