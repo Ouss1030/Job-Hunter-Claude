@@ -78,16 +78,19 @@ def main():
     print("B. ROUTES")
     print("-" * 92)
     chemins = {r.path for r in serveur.application.routes if hasattr(r, "path")}
-    for chemin in ("/", "/offres", "/conseils", "/statistiques",
+    for chemin in ("/", "/offres", "/suivi", "/conseils", "/statistiques", "/handoff",
                    "/api/jour", "/api/offres", "/api/conseils",
                    "/api/statistiques", "/api/run", "/api/run/lancer",
-                   "/api/statut", "/api/postule", "/api/suivi", "/api/relances"):
+                   "/api/statut", "/api/postule", "/api/suivi", "/api/relances",
+                   "/api/suivi-tableau", "/api/feedback",
+                   "/api/handoff", "/api/handoff/creer", "/api/ouvrir"):
         tests.append(check(f"Route déclarée : {chemin}", chemin in chemins))
 
     methodes = {r.path: getattr(r, "methods", set())
                 for r in serveur.application.routes if hasattr(r, "path")}
     for chemin in ("/api/statut", "/api/postule", "/api/suivi",
-                   "/api/run/lancer"):
+                   "/api/run/lancer", "/api/feedback", "/api/handoff/creer",
+                   "/api/ouvrir"):
         tests.append(check(f"{chemin} n'accepte que POST",
                            "POST" in (methodes.get(chemin) or set())
                            and "GET" not in (methodes.get(chemin) or set()),
@@ -166,6 +169,24 @@ def main():
                        "is_running()" in source_lancer and "409" in source_lancer))
     tests.append(check("Le journal du run est borné",
                        "lignes_max" in inspect.getsource(donnees.journal_du_run)))
+    # L'ouverture de dossier est confinee a exports/ : une route qui
+    # ouvrirait n'importe quel chemin serait une porte, meme en local.
+    src_ouvrir = inspect.getsource(serveur.api_ouvrir_dossier)
+    tests.append(check("L'ouverture de dossier refuse tout chemin hors exports/",
+                       "is_relative_to" in src_ouvrir and "exports" in src_ouvrir))
+    # Un emoji imprime par un service faisait echouer la requete en cp1252.
+    tests.append(check("La console est reconfiguree en UTF-8 avec remplacement",
+                       "reconfigure(encoding=\"utf-8\", errors=\"replace\")"
+                       in inspect.getsource(serveur._console_utf8)))
+    # APPLIED reste hors de la suite du cycle : sa route dediee et sa
+    # confirmation explicite ne doivent pas etre contournables par la.
+    tests.append(check("APPLIED n'est pas dans la SUITE du cycle",
+                       all(x["statut"] != "APPLIED" for x in serveur.SUITE)))
+    tests.append(check("La suite couvre entretien, offre et refus",
+                       {x["statut"] for x in serveur.SUITE} == {"INTERVIEW", "OFFER", "REJECTED"}))
+    # Les etoiles se projettent sur le vocabulaire du service de feedback.
+    tests.append(check("Une note hors 1..5 est refusee (garde presente)",
+                       "1 <= etoiles <= 5" in inspect.getsource(donnees.enregistrer_feedback)))
     tests.append(check("Chaque ecran est servi par la meme coquille",
                        all(r.endpoint is serveur.coquille
                            for r in serveur.application.routes
@@ -255,11 +276,11 @@ def main():
     print()
     print("F. VERSIONS")
     print("-" * 92)
-    tests.append(check("Interface web au moins 1.0",
-                       at_least(serveur.WEBUI_VERSION, "1.0"),
+    tests.append(check("Interface web au moins 1.1",
+                       at_least(serveur.WEBUI_VERSION, "1.1"),
                        serveur.WEBUI_VERSION))
     tests.append(check("Préparation des données au moins 1.0",
-                       at_least(donnees.DONNEES_VERSION, "1.2"),
+                       at_least(donnees.DONNEES_VERSION, "1.3"),
                        donnees.DONNEES_VERSION))
 
     passed = sum(1 for x in tests if x)

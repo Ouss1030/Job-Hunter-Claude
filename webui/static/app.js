@@ -5,9 +5,13 @@
    partir de JSON, anime les transitions, et garde en memoire ce qu'il a
    deja recu : revenir sur un ecran ne coute rien.
 
-   Quatre ecrans : Aujourd'hui, Offres, Conseils, Statistiques.
+   Six ecrans : Aujourd'hui, Offres, Suivi, Conseils, Statistiques, Handoff.
    Tout ce que les versions 0.x savaient faire est conserve — triage au
-   clavier, fiche de suivi, analyse d'ecart avec preuves, run en direct.
+   clavier, fiche de suivi, analyse d'ecart avec preuves, run en direct —
+   et la V1.1 y ajoute ce que l'utilisateur ne trouvait plus : le tri par
+   score en un clic, la note et le commentaire, la suite du cycle
+   (entretien, offre, refus), le handoff ChatGPT sur une selection, et un
+   tableau de pilotage.
 */
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -56,7 +60,7 @@ const cls = (v) => String(v || "inconnu").toLowerCase();
 
 /* ------------------------------------------------------------- routeur */
 
-const ECRANS = { "/": "jour", "/offres": "offres", "/conseils": "conseils", "/statistiques": "statistiques" };
+const ECRANS = { "/": "jour", "/offres": "offres", "/suivi": "suivi", "/conseils": "conseils", "/statistiques": "statistiques", "/handoff": "handoff" };
 const RENDUS = {};
 
 async function naviguer(chemin, pousser = true) {
@@ -179,34 +183,72 @@ async function lancerRun() {
 
 /* ================================================================ OFFRES */
 
-const etatOffres = { recherche: "", filtres: { verdict: new Set(), recommended_action_v12: new Set() }, tri: { champ: "pool_rank_v12", sens: "asc" }, curseur: 0, visibles: [] };
-let OFFRES = [], TRIAGE = [];
+const etatOffres = {
+  recherche: "", filtres: { verdict: new Set(), recommended_action_v12: new Set() },
+  // Par defaut : les mieux notees en premier. C'est la question que pose
+  // une recherche d'emploi — pas « dans quel ordre le pipeline les a rangees ».
+  tri: { champ: "final_score_v12", sens: "desc" },
+  scoreMin: 0, curseur: 0, visibles: [],
+};
+let OFFRES = [], TRIAGE = [], SUITE = [];
+
+// La selection pour le handoff survit a la navigation : on coche dans
+// Offres, on genere dans Handoff.
+const SELECTION = new Set(JSON.parse(localStorage.getItem("jh_selection") || "[]"));
+function majSelection() {
+  localStorage.setItem("jh_selection", JSON.stringify([...SELECTION]));
+  const p = $("#pastille-selection"); if (p) { p.textContent = SELECTION.size; p.hidden = !SELECTION.size; }
+}
 
 RENDUS.offres = async () => {
   const d = await lire("/api/offres", { frais: true });
-  OFFRES = d.offres; TRIAGE = d.triage;
+  OFFRES = d.offres; TRIAGE = d.triage; SUITE = d.suite || [];
+  majSelection();
+  const TRIS = [["final_score_v12", "Score"], ["match_score", "Match"], ["pool_rank_v12", "Rang"], ["application_status", "Suivi"]];
   $("#ecran").innerHTML = `
     ${entete("Offres", `Pool final — <b id="compte">${OFFRES.length}</b> sur ${OFFRES.length}`, `<div class="chiffres" id="chiffres"></div>`)}
     <div class="filtres">
+      <div class="segments" id="tris">${TRIS.map(([c, l]) => `<button data-champ="${c}" class="${etatOffres.tri.champ === c ? "actif" : ""}">${l}</button>`).join("")}</div>
+      <label class="curseur-score">Score ≥ <b id="score-min">${etatOffres.scoreMin}</b>
+        <input type="range" id="score-range" min="0" max="160" step="5" value="${etatOffres.scoreMin}"></label>
       <div class="recherche"><input id="recherche" type="search" placeholder="Intitulé, entreprise, ville…" autocomplete="off"></div>
       <div id="groupes" style="display:flex;gap:14px;flex-wrap:wrap"></div>
       <button class="lien-discret" id="raz" hidden>Réinitialiser</button>
+      <button class="lien-discret" id="cocher-apply" title="Cocher toutes les offres recommandées non encore postulées">Cocher les recommandées</button>
       <button class="jeton" id="aide" title="Raccourcis">⌨</button>
     </div>
     <div class="tableau"><table><thead><tr>
-      <th data-tri="pool_rank_v12" data-sens="asc">#</th><th data-tri="title">Intitulé</th>
+      <th class="col-coche"></th>
+      <th data-tri="pool_rank_v12">#</th><th data-tri="title">Intitulé</th>
       <th data-tri="company">Entreprise</th><th data-tri="ville">Lieu</th><th data-tri="verdict">Verdict</th>
       <th data-tri="recommended_action_v12">Action</th><th data-tri="application_status">Suivi</th>
+      <th data-tri="feedback_etoiles" class="droite">Note</th>
+      <th data-tri="match_score" class="droite">Match</th>
       <th data-tri="final_score_v12" class="droite">Score</th></tr></thead><tbody id="corps"></tbody></table>
       <p class="vide" id="vide" hidden>Aucune offre ne correspond.</p></div>`;
 
   construireFiltres(); rendreOffres();
+  $$("#tris button").forEach((b) => b.addEventListener("click", () => {
+    const c = b.dataset.champ;
+    etatOffres.tri = { champ: c, sens: c === "pool_rank_v12" || c === "application_status" ? "asc" : "desc" };
+    $$("#tris button").forEach((x) => x.classList.toggle("actif", x === b));
+    $$("thead th").forEach((h) => h.removeAttribute("data-sens"));
+    $(`thead th[data-tri="${c}"]`)?.setAttribute("data-sens", etatOffres.tri.sens);
+    rendreOffres();
+  }));
+  $("#score-range").addEventListener("input", (e) => { etatOffres.scoreMin = +e.target.value; $("#score-min").textContent = etatOffres.scoreMin; rendreOffres(); });
   $("#recherche").addEventListener("input", (e) => { etatOffres.recherche = e.target.value; etatOffres.curseur = 0; rendreOffres(); });
-  $("#raz").addEventListener("click", () => { etatOffres.recherche = ""; $("#recherche").value = ""; Object.values(etatOffres.filtres).forEach((s) => s.clear()); $$(".jeton[data-champ]").forEach((b) => b.setAttribute("aria-pressed", "false")); rendreOffres(); });
+  $("#raz").addEventListener("click", () => { etatOffres.recherche = ""; etatOffres.scoreMin = 0; $("#score-range").value = 0; $("#score-min").textContent = 0; $("#recherche").value = ""; Object.values(etatOffres.filtres).forEach((x) => x.clear()); $$(".jeton[data-champ]").forEach((b) => b.setAttribute("aria-pressed", "false")); rendreOffres(); });
+  $("#cocher-apply").addEventListener("click", () => {
+    OFFRES.filter((o) => String(o.recommended_action_v12 || "").startsWith("APPLY") && o.application_status !== "APPLIED" && o.verdict !== "FERMEE")
+      .forEach((o) => SELECTION.add(o.stable_item_key));
+    majSelection(); rendreOffres(); notifier(`${SELECTION.size} offre(s) cochée(s) pour le handoff.`);
+  });
   $("#aide").addEventListener("click", afficherRaccourcis);
   $$("thead th[data-tri]").forEach((th) => th.addEventListener("click", () => {
-    const c = th.dataset.tri; etatOffres.tri = { champ: c, sens: etatOffres.tri.champ === c && etatOffres.tri.sens === "asc" ? "desc" : "asc" };
-    $$("thead th").forEach((h) => h.removeAttribute("data-sens")); th.setAttribute("data-sens", etatOffres.tri.sens); rendreOffres();
+    const c = th.dataset.tri; etatOffres.tri = { champ: c, sens: etatOffres.tri.champ === c && etatOffres.tri.sens === "desc" ? "asc" : "desc" };
+    $$("thead th").forEach((h) => h.removeAttribute("data-sens")); th.setAttribute("data-sens", etatOffres.tri.sens);
+    $$("#tris button").forEach((x) => x.classList.toggle("actif", x.dataset.champ === c)); rendreOffres();
   }));
 };
 
@@ -231,6 +273,7 @@ function construireFiltres() {
 function filtrerOffres() {
   const q = etatOffres.recherche.trim().toLowerCase();
   return OFFRES.filter((o) => {
+    if ((+o.final_score_v12 || 0) < etatOffres.scoreMin) return false;
     for (const [c, s] of Object.entries(etatOffres.filtres)) if (s.size && !s.has(o[c])) return false;
     return !q || [o.title, o.company, o.ville, o.source].some((v) => String(v || "").toLowerCase().includes(q));
   });
@@ -238,6 +281,7 @@ function filtrerOffres() {
 
 function rendreOffres() {
   const { champ, sens } = etatOffres.tri, signe = sens === "asc" ? 1 : -1;
+  OFFRES.forEach((o) => { o.feedback_etoiles = o.feedback?.etoiles || 0; });
   const lignes = filtrerOffres().sort((a, b) => {
     const x = a[champ], y = b[champ];
     return (typeof x === "number" && typeof y === "number") ? (x - y) * signe : String(x ?? "").localeCompare(String(y ?? ""), "fr") * signe;
@@ -248,7 +292,9 @@ function rendreOffres() {
   $("#corps").innerHTML = lignes.map((o, i) => {
     const relance = o.suivi?.next_action_date;
     const due = relance && relance <= new Date().toISOString().slice(0, 10);
-    return `<tr data-cle="${esc(o.stable_item_key)}" data-i="${i}">
+    const coche = SELECTION.has(o.stable_item_key);
+    return `<tr data-cle="${esc(o.stable_item_key)}" data-i="${i}" class="${coche ? "cochee" : ""}">
+      <td class="col-coche"><input type="checkbox" data-coche="${esc(o.stable_item_key)}" ${coche ? "checked" : ""} title="Sélectionner pour le handoff"></td>
       <td class="rang">${o.pool_rank_v12 ?? "—"}</td>
       <td class="intitule">${esc(o.title)}<small>${esc(o.source)}</small></td>
       <td class="doux">${esc(o.company)}</td><td class="doux">${esc(o.ville)}</td>
@@ -256,9 +302,18 @@ function rendreOffres() {
       <td><span class="action ${cls(o.recommended_action_v12)}">${esc(L.action[o.recommended_action_v12] || "—")}</span></td>
       <td>${o.application_status ? `<span class="statut ${cls(o.application_status)}">${esc(L.statut[o.application_status] || o.application_status)}</span>` : `<span class="statut vide">—</span>`}
           ${relance ? `<span class="relance ${due ? "due" : ""}">${esc(relance.slice(5))}</span>` : ""}</td>
+      <td class="droite etoiles-cell">${o.feedback?.etoiles ? "★".repeat(o.feedback.etoiles) : `<span style="color:var(--texte-3)">—</span>`}</td>
+      <td class="droite num doux">${o.match_score ?? "—"}</td>
       <td class="score">${o.final_score_v12 ?? "—"}</td></tr>`;
   }).join("");
-  $$("#corps tr").forEach((tr) => tr.addEventListener("click", () => { etatOffres.curseur = +tr.dataset.i; ouvrirPanneau(tr.dataset.cle); }));
+  $$("#corps tr").forEach((tr) => tr.addEventListener("click", (e) => {
+    if (e.target.closest("input[data-coche]")) return;
+    etatOffres.curseur = +tr.dataset.i; ouvrirPanneau(tr.dataset.cle);
+  }));
+  $$("input[data-coche]").forEach((c) => c.addEventListener("change", () => {
+    if (c.checked) SELECTION.add(c.dataset.coche); else SELECTION.delete(c.dataset.coche);
+    c.closest("tr").classList.toggle("cochee", c.checked); majSelection();
+  }));
 
   $("#compte").textContent = lignes.length; $("#vide").hidden = lignes.length > 0;
   const n = (v) => lignes.filter((o) => o.verdict === v).length;
@@ -299,17 +354,29 @@ function blocEcart(o) {
 
 function blocSuivi(o) {
   const s = o.suivi || {}, fait = o.application_status === "APPLIED";
-  return `<div class="bloc"><h3>Suivi</h3>
+  const apres = ["APPLIED", "INTERVIEW", "OFFER", "REJECTED"].includes(o.application_status);
+  const fb = o.feedback || {};
+  return `<div class="bloc"><h3>Votre avis</h3>
+    <div class="etoiles" id="f-etoiles">${[1, 2, 3, 4, 5].map((n) => `<button data-n="${n}" class="${(fb.etoiles || 0) >= n ? "pleine" : ""}" title="${n}/5">★</button>`).join("")}
+      <span class="etoiles-lib">${fb.etoiles ? ["", "pas pour moi", "peu probable", "à voir", "bonne piste", "excellente"][fb.etoiles] : "notez cette offre"}</span></div>
+    <textarea id="f-note" class="note" placeholder="Une remarque, un doute, un contact…">${esc(fb.note || "")}</textarea>
+    <button class="bouton second" id="f-note-ok" style="align-self:flex-start;margin-top:6px">Enregistrer l'avis</button></div>
+
+    <div class="bloc"><h3>Décision</h3>
     <div class="triage">${TRIAGE.map((t) => `<button class="bouton-triage ${o.application_status === t.statut ? "actif" : ""}" data-statut="${t.statut}">${esc(t.libelle)}<kbd>${esc(t.touche)}</kbd></button>`).join("")}</div>
+    <div class="zone-postule ${fait ? "faite" : ""}">${fait ? "✓ Candidature envoyée" :
+      `<label class="confirmation"><input type="checkbox" id="f-confirme"> Je confirme avoir envoyé cette candidature</label>
+       <button class="bouton vert" id="f-postule" disabled>Marquer comme postulée</button>`}</div>
+    ${apres ? `<div class="triage" style="margin-top:10px">${SUITE.map((t) => `<button class="bouton-triage suite ${o.application_status === t.statut ? "actif" : ""}" data-statut="${t.statut}">${esc(t.libelle)}</button>`).join("")}</div>
+      <p class="aide" style="margin:6px 0 0">Ce qui s'est passé après l'envoi.</p>` : ""}</div>
+
+    <div class="bloc"><h3>Relance et contact</h3>
     <div class="formulaire">
       <label>Relance prévue<input type="date" id="f-relance" value="${esc(s.next_action_date || "")}"></label>
       <div class="dates"><button data-j="3">+3 j</button><button data-j="7">+1 sem.</button><button data-j="30">+1 mois</button><button data-j="0">effacer</button></div>
       <label>Contact<input type="text" id="f-contact" placeholder="Nom du recruteur" value="${esc(s.contact_name || "")}"></label>
       <label>Canal<input type="text" id="f-canal" placeholder="Courriel, téléphone, LinkedIn…" value="${esc(s.contact_channel || "")}"></label>
-      <button class="bouton second" id="f-enregistrer" style="align-self:flex-start">Enregistrer</button></div>
-    <div class="zone-postule ${fait ? "faite" : ""}">${fait ? "✓ Candidature envoyée" :
-      `<label class="confirmation"><input type="checkbox" id="f-confirme"> Je confirme avoir envoyé cette candidature</label>
-       <button class="bouton vert" id="f-postule" disabled>Marquer comme postulée</button>`}</div></div>`;
+      <button class="bouton second" id="f-enregistrer" style="align-self:flex-start">Enregistrer</button></div></div>`;
 }
 
 function ouvrirPanneau(cle) {
@@ -334,9 +401,20 @@ function ouvrirPanneau(cle) {
 
   $(".fermer", p).addEventListener("click", fermerPanneau);
   $$(".bouton-triage", p).forEach((b) => b.addEventListener("click", async () => {
-    const t = TRIAGE.find((x) => x.statut === b.dataset.statut);
+    const t = [...TRIAGE, ...SUITE].find((x) => x.statut === b.dataset.statut);
     await trierOffre(o, b.dataset.statut, t?.libelle || b.dataset.statut); ouvrirPanneau(cle);
   }));
+  let etoilesChoisies = (o.feedback || {}).etoiles || 0;
+  $$("#f-etoiles button", p).forEach((b) => b.addEventListener("click", () => {
+    etoilesChoisies = +b.dataset.n;
+    $$("#f-etoiles button", p).forEach((x) => x.classList.toggle("pleine", +x.dataset.n <= etoilesChoisies));
+    $(".etoiles-lib", p).textContent = ["", "pas pour moi", "peu probable", "à voir", "bonne piste", "excellente"][etoilesChoisies];
+  }));
+  $("#f-note-ok", p).addEventListener("click", async () => {
+    try { const d = await envoyer("/api/feedback", { cle, etoiles: etoilesChoisies || null, note: $("#f-note", p).value });
+      o.feedback = { etoiles: d.etoiles, note: d.note }; notifier("Avis enregistré."); rendreOffres(); }
+    catch (e) { notifier(e.message, "erreur"); }
+  });
   $$(".dates button", p).forEach((b) => b.addEventListener("click", () => {
     const j = +b.dataset.j; if (!j) { $("#f-relance").value = ""; return; }
     const d = new Date(); d.setDate(d.getDate() + j); $("#f-relance").value = d.toISOString().slice(0, 10);
@@ -361,6 +439,7 @@ function afficherRaccourcis() {
   $("#raccourcis").innerHTML = `<div class="carte-raccourcis"><h3>Raccourcis</h3><dl>
     <dt>j / k</dt><dd>descendre / monter</dd><dt>↵</dt><dd>ouvrir le détail</dd>
     ${TRIAGE.map((t) => `<dt>${esc(t.touche)}</dt><dd>${esc(t.libelle)}</dd>`).join("")}
+    <dt>espace</dt><dd>cocher pour le handoff</dd>
     <dt>/</dt><dd>rechercher</dd><dt>Échap</dt><dd>fermer</dd></dl>
     <p>Le triage s'applique à la ligne active, sans ouvrir le détail.</p></div>`;
   $("#raccourcis").hidden = false;
@@ -472,6 +551,120 @@ RENDUS.statistiques = async () => {
   $("#complet")?.addEventListener("click", async (e) => { e.preventDefault(); cache.delete("/api/statistiques"); cache.set("/api/statistiques", await lire("/api/statistiques?complet=1", { frais: true })); RENDUS.statistiques(); });
 };
 
+/* ================================================================= SUIVI */
+
+RENDUS.suivi = async () => {
+  const d = await lire("/api/suivi-tableau", { frais: true });
+  const delta = d.delta || {}, cycle = d.cycle || {}, runs = d.runs || [];
+  const r = delta.resume || {}, ps = delta.par_statut || {};
+  const LIB = { NEW: "Nouvelles", REACTIVATED: "Réactivées", REPOSTED: "Republiées", UPDATED: "Mises à jour", UNCHANGED: "Inchangées", DISAPPEARED: "Disparues" };
+  const bloc = (st) => {
+    const e = ps[st]; if (!e || !e.total) return "";
+    const fam = Object.entries(e.par_famille).sort((a, b) => b[1] - a[1]);
+    const src = Object.entries(e.par_source).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    return `<h2 class="section">${LIB[st] || st} — ${e.total}</h2>
+      <div class="grille deux">
+        <section><h3 class="titre-bloc">Par famille</h3>${G.barres(fam.map(([k, v]) => ({ nom: delta.libelles_familles?.[k] || k, valeur: v })))}</section>
+        <section><h3 class="titre-bloc">Par source</h3>${G.barres(src.map(([k, v]) => ({ nom: k, valeur: v })))}</section>
+      </div>
+      ${e.offres.length ? `<div class="tableau" style="margin-top:12px"><table><tbody>${e.offres.map((o) => `<tr>
+        <td class="intitule">${esc(o.titre)}<small>${esc(o.entreprise || "")} — ${esc(o.source)}</small></td>
+        <td><span class="badge neutre">${esc(delta.libelles_familles?.[o.famille] || o.famille)}</span></td>
+        <td><span class="action ${cls(o.action)}">${esc(L.action[o.action] || o.action || "—")}</span></td>
+        <td class="doux">${esc(o.priorite || "")}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
+  };
+
+  $("#ecran").innerHTML = `
+    ${entete("Suivi", `Ce qui a bougé au dernier run, et où en sont vos candidatures.`)}
+    <div class="chiffres" style="margin-bottom:8px">
+      <div class="chiffre"><b>${r.current_total ?? "—"}</b><span>dans le pool</span></div>
+      <div class="chiffre vert"><b>${(r.NEW || 0) + (r.REACTIVATED || 0)}</b><span>nouvelles</span></div>
+      <div class="chiffre"><b>${r.REPOSTED || 0}</b><span>republiées</span></div>
+      <div class="chiffre"><b>${r.UPDATED || 0}</b><span>mises à jour</span></div>
+      <div class="chiffre rouge"><b>${r.DISAPPEARED || 0}</b><span>disparues</span></div>
+    </div>
+    <p class="aide">Delta : ${esc(delta.artefact || "aucun")}${delta.genere ? ` · ${esc(String(delta.genere).slice(0, 16))}` : ""}. « Disparue » = absente du pool actuel, pas nécessairement retirée par l'employeur.</p>
+
+    <h2 class="section">Vos candidatures</h2>
+    <div class="grille deux">
+      <section><h3 class="titre-bloc">L'entonnoir</h3>${G.barres((cycle.entonnoir || []).map((x) => ({ nom: x.etape, valeur: x.n })))}
+        <p class="aide" style="margin-top:6px">${cycle.refus || 0} refus reçu(s).</p></section>
+      <section><h3 class="titre-bloc">Par statut</h3>${G.barres(Object.entries(cycle.par_statut || {}).sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ nom: L.statut[k] || k, valeur: v })))}</section>
+    </div>
+    ${(cycle.recents || []).length ? `<h3 class="titre-bloc" style="margin-top:18px">Derniers mouvements</h3>
+      <div class="tableau"><table><tbody>${cycle.recents.map((x) => `<tr data-ouvrir="${esc(x.cle || "")}">
+        <td class="doux num" style="width:90px">${esc(x.quand)}</td>
+        <td class="intitule">${esc(x.titre)}<small>${esc(x.entreprise || "")}</small></td>
+        <td><span class="statut ${cls(x.statut)}">${esc(L.statut[x.statut] || x.statut)}</span></td></tr>`).join("")}</tbody></table></div>` : ""}
+
+    ${["NEW", "REACTIVATED", "REPOSTED", "UPDATED", "DISAPPEARED"].map(bloc).join("")}
+
+    <h2 class="section">Les derniers runs</h2>
+    <div class="tableau"><table><thead><tr><th>Run</th><th>Début</th><th>Statut</th><th class="droite">Collectées</th><th class="droite">Nouvelles</th><th class="droite">Erreurs</th></tr></thead>
+      <tbody>${runs.map((x) => `<tr><td class="doux num">${esc(String(x.run || "").slice(0, 26))}</td><td class="doux num">${esc(x.debut)}</td>
+        <td><span class="run-statut ${cls(x.statut)}">${esc(x.statut || "")}</span></td>
+        <td class="droite num">${x.collectees ?? "—"}</td><td class="droite num">${x.nouvelles ?? "—"}</td><td class="droite num ${+x.erreurs ? "" : "faible"}">${x.erreurs ?? "—"}</td></tr>`).join("")}</tbody></table></div>`;
+
+  $$("tr[data-ouvrir]").forEach((tr) => tr.addEventListener("click", async () => { if (!tr.dataset.ouvrir) return; await naviguer("/offres"); ouvrirPanneau(tr.dataset.ouvrir); }));
+};
+
+/* =============================================================== HANDOFF */
+
+RENDUS.handoff = async () => {
+  const [h, off] = await Promise.all([lire("/api/handoff", { frais: true }), lire("/api/offres")]);
+  OFFRES = off.offres; majSelection();
+  const choisies = OFFRES.filter((o) => SELECTION.has(o.stable_item_key));
+
+  $("#ecran").innerHTML = `
+    ${entete("Handoff ChatGPT", "Des paquets prêts à coller dans ChatGPT : l'offre, votre profil, un prompt par poste. Il en ressort CV et lettre adaptés.")}
+    <div class="grille deux">
+      <section>
+        <h2 class="section">Sélection — ${choisies.length} offre(s)</h2>
+        ${choisies.length ? `<div class="tableau"><table><tbody>${choisies.map((o) => `<tr>
+            <td class="intitule">${esc(o.title)}<small>${esc(o.company)} — ${esc(o.ville)}</small></td>
+            <td><span class="badge ${cls(o.verdict)}">${esc(L.verdict[o.verdict] || "")}</span></td>
+            <td class="score">${o.final_score_v12 ?? ""}</td>
+            <td><button class="lien-discret" data-retirer="${esc(o.stable_item_key)}">retirer</button></td></tr>`).join("")}</tbody></table></div>`
+          : `<p class="rien">Aucune offre cochée. Cochez-les dans <a href="/offres" data-lien style="color:var(--accent)">Offres</a> — case à gauche de chaque ligne, ou touche espace.</p>`}
+        <div style="display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap">
+          <label class="aide" style="margin:0">Offres par paquet <input type="number" id="h-taille" min="1" max="30" value="10" style="width:56px;margin-left:6px;background:var(--surface);border:1px solid var(--bord-fort);color:var(--texte);border-radius:6px;padding:4px 8px"></label>
+          <button class="bouton" id="h-creer" ${choisies.length ? "" : "disabled"}>Générer les paquets</button>
+          ${choisies.length ? `<button class="lien-discret" id="h-vider">Vider la sélection</button>` : ""}
+        </div>
+        <div id="h-resultat" style="margin-top:16px"></div>
+      </section>
+      <section>
+        <h2 class="section">Paquets précédents</h2>
+        ${(h.historique || []).length ? h.historique.map((x) => `<div class="carte" style="margin-bottom:10px">
+            <h3>${esc(x.quand || "")}</h3><div class="sous" style="font-family:ui-monospace,Consolas,monospace;font-size:12px">${esc(x.nom)}</div>
+            ${x.zips.length ? `<div class="sous">${x.zips.length} paquet(s)</div>` : ""}
+            <button class="lien-discret" data-ouvrir-dossier="${esc(x.dossier)}">Ouvrir le dossier</button></div>`).join("")
+          : `<p class="rien">Aucun paquet généré pour l'instant.</p>`}
+      </section>
+    </div>`;
+
+  $$("[data-retirer]").forEach((b) => b.addEventListener("click", () => { SELECTION.delete(b.dataset.retirer); majSelection(); RENDUS.handoff(); }));
+  $("#h-vider")?.addEventListener("click", () => { SELECTION.clear(); majSelection(); RENDUS.handoff(); });
+  $("#h-creer")?.addEventListener("click", async () => {
+    const b = $("#h-creer"); b.disabled = true; b.textContent = "Génération…";
+    try {
+      const r = await envoyer("/api/handoff/creer", { cles: [...SELECTION], taille: +$("#h-taille").value || 10 });
+      $("#h-resultat").innerHTML = `<div class="carte"><h3>Paquets prêts</h3>
+        <div class="sous" style="font-family:ui-monospace,Consolas,monospace;font-size:12px">${esc(r.dossier)}</div>
+        ${r.zips.map((z) => `<div class="sous">⇪ ${esc(z.split(/[\\/]/).pop())}</div>`).join("")}
+        <button class="bouton second" data-ouvrir-dossier="${esc(r.dossier)}" style="margin-top:10px">Ouvrir le dossier</button></div>`;
+      brancherOuvrir(); notifier(`${r.zips.length} paquet(s) généré(s).`); invalider("/api/handoff");
+    } catch (e) { notifier(e.message, "erreur"); }
+    b.disabled = false; b.textContent = "Générer les paquets";
+  });
+  brancherOuvrir();
+};
+function brancherOuvrir() {
+  $$("[data-ouvrir-dossier]").forEach((b) => b.addEventListener("click", async () => {
+    try { await envoyer("/api/ouvrir", { chemin: b.dataset.ouvrirDossier }); } catch (e) { notifier(e.message, "erreur"); }
+  }));
+}
+
 /* ------------------------------------------------------------- clavier */
 
 document.addEventListener("keydown", (e) => {
@@ -485,6 +678,9 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "j" || e.key === "ArrowDown") { e.preventDefault(); deplacerCurseur(1); return; }
   if (e.key === "k" || e.key === "ArrowUp") { e.preventDefault(); deplacerCurseur(-1); return; }
   if (e.key === "Enter") { const o = offreCourante(); if (o) ouvrirPanneau(o.stable_item_key); return; }
+  if (e.key === " ") { const o = offreCourante(); if (!o) return; e.preventDefault();
+    if (SELECTION.has(o.stable_item_key)) SELECTION.delete(o.stable_item_key); else SELECTION.add(o.stable_item_key);
+    majSelection(); rendreOffres(); return; }
   const t = TRIAGE.find((x) => x.touche === e.key);
   if (t) { const o = offreCourante(); if (!o) return; e.preventDefault(); trierOffre(o, t.statut, t.libelle).then(() => deplacerCurseur(1)); }
 });

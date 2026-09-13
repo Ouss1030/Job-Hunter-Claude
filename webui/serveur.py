@@ -57,7 +57,7 @@ from interface.lifecycle_service import USER_STATUSES, save_suivi, set_status
 from webui import donnees
 
 
-WEBUI_VERSION = "1.0"
+WEBUI_VERSION = "1.1"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))
@@ -71,6 +71,15 @@ TRIAGE = (
     {"statut": "SHORTLISTED", "libelle": "Intéressé", "touche": "i"},
     {"statut": "DISCOVERED", "libelle": "À revoir", "touche": "a"},
     {"statut": "WITHDRAWN", "libelle": "Écarter", "touche": "x"},
+)
+
+# Ce qui se passe APRES l'envoi : ce sont des faits que seul le candidat
+# connait, il les declare lui-meme. APPLIED n'est pas dans cette liste —
+# il garde sa route dediee et sa confirmation explicite.
+SUITE = (
+    {"statut": "INTERVIEW", "libelle": "Entretien"},
+    {"statut": "OFFER", "libelle": "Offre reçue"},
+    {"statut": "REJECTED", "libelle": "Refus"},
 )
 
 
@@ -99,8 +108,71 @@ async def api_jour(request):
 
 async def api_offres(request):
     lignes, artefact = donnees.offres()
+    feedbacks = donnees.feedbacks_par_cle()
+    for ligne in lignes:
+        fb = feedbacks.get(ligne.get("stable_item_key"))
+        ligne["feedback"] = ({"etoiles": round(float(fb.get("user_score") or 0) / 20) or None,
+                              "note": fb.get("note") or ""} if fb else None)
     return JSONResponse({"artefact": artefact, "offres": lignes,
-                         "triage": list(TRIAGE)})
+                         "triage": list(TRIAGE), "suite": list(SUITE)})
+
+
+async def api_suivi_tableau(request):
+    return JSONResponse(donnees.suivi())
+
+
+async def api_feedback(request):
+    corps = await request.json()
+    offre = donnees.offre_par_cle(str(corps.get("cle") or ""))
+    if not offre:
+        return JSONResponse({"erreur": "Offre introuvable."}, 404)
+    try:
+        return JSONResponse(donnees.enregistrer_feedback(
+            offre, corps.get("etoiles"), str(corps.get("note") or "")))
+    except ValueError as erreur:
+        return JSONResponse({"erreur": str(erreur)}, 400)
+    except Exception as erreur:
+        return JSONResponse({"erreur": str(erreur)}, 500)
+
+
+async def api_handoff(request):
+    return JSONResponse(donnees.handoff_etat())
+
+
+async def api_handoff_creer(request):
+    """
+    Cree les paquets a coller dans ChatGPT, a partir des offres choisies.
+
+    L'ancienne interface filtrait par action (APPLY_NOW) et generait tout.
+    Ici le candidat coche ce qu'il veut : dix offres bien choisies valent
+    mieux que soixante-quatorze dont il n'a pas encore decide.
+    """
+    corps = await request.json()
+    cles = [str(c) for c in (corps.get("cles") or []) if c]
+    if not cles:
+        return JSONResponse({"erreur": "Aucune offre sélectionnée."}, 400)
+    try:
+        return JSONResponse(donnees.handoff_creer(
+            cles, int(corps.get("taille") or 10)))
+    except Exception as erreur:
+        return JSONResponse({"erreur": str(erreur)}, 500)
+
+
+async def api_ouvrir_dossier(request):
+    """Ouvre un dossier d'export dans l'explorateur — local, jamais distant."""
+    from interface.handoff_service import open_folder
+    corps = await request.json()
+    chemin = Path(str(corps.get("chemin") or ""))
+    # On n'ouvre que sous exports/ : une route qui ouvrirait n'importe quel
+    # chemin serait une porte, meme sur une machine locale.
+    racine = RACINE.parent / "exports"
+    try:
+        if not chemin.resolve().is_relative_to(racine.resolve()):
+            return JSONResponse({"erreur": "Chemin hors de exports/."}, 400)
+        open_folder(chemin)
+        return JSONResponse({"ouvert": str(chemin)})
+    except Exception as erreur:
+        return JSONResponse({"erreur": str(erreur)}, 500)
 
 
 async def api_conseils(request):
@@ -226,7 +298,7 @@ async def api_relances(request):
     return JSONResponse({"dues": relances_dues()})
 
 
-ECRANS = ("/", "/offres", "/conseils", "/statistiques")
+ECRANS = ("/", "/offres", "/suivi", "/conseils", "/statistiques", "/handoff")
 
 application = Starlette(
     routes=[
@@ -241,13 +313,35 @@ application = Starlette(
         Route("/api/postule", api_postule, methods=["POST"]),
         Route("/api/suivi", api_suivi, methods=["POST"]),
         Route("/api/relances", api_relances),
+        Route("/api/suivi-tableau", api_suivi_tableau),
+        Route("/api/feedback", api_feedback, methods=["POST"]),
+        Route("/api/handoff", api_handoff),
+        Route("/api/handoff/creer", api_handoff_creer, methods=["POST"]),
+        Route("/api/ouvrir", api_ouvrir_dossier, methods=["POST"]),
         Mount("/static", StaticFiles(directory=str(RACINE / "static")),
               name="static"),
     ]
 )
 
 
+def _console_utf8() -> None:
+    """
+    La console Windows est en cp1252. Un service qui imprime un emoji —
+    handoff_service ecrit « ✅ » — faisait echouer la requete entiere sur
+    UnicodeEncodeError, mesure le 13 septembre 2026. Le lanceur pose
+    PYTHONUTF8, mais le serveur ne doit pas dependre de la facon dont on le
+    lance : un caractere non encodable devient « ? », jamais une erreur.
+    """
+    import sys
+    for flux in (sys.stdout, sys.stderr):
+        try:
+            flux.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
+
 def main() -> None:
+    _console_utf8()
     print("=" * 70)
     print(f"JOBHUNTER — INTERFACE WEB V{WEBUI_VERSION}")
     print("=" * 70)

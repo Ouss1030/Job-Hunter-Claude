@@ -26,7 +26,7 @@ from statistiques.marche import _ville
 from webui.memo import MEMOIRE
 
 
-DONNEES_VERSION = "1.2"
+DONNEES_VERSION = "1.3"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -467,3 +467,159 @@ def conseils_prets() -> bool:
     empreinte = _empreinte_collecte()
     run = str(empreinte[0] or "aucun").replace(":", "-")
     return (LOG_DIR / f"conseils_marche_{run}.json").exists()         or "conseils" in MEMOIRE.etat()
+
+
+# ------------------------------------------------------------------
+# Suivi : delta, cycle de vie, runs
+# ------------------------------------------------------------------
+
+_STATUTS_ORDRE = ("SHORTLISTED", "APPLIED", "INTERVIEW", "OFFER",
+                  "REJECTED", "WITHDRAWN", "CLOSED")
+
+
+def suivi() -> dict:
+    """
+    Le tableau de pilotage : ce qui a bouge, ou en sont les candidatures.
+
+    Le delta vient de l'artefact du dernier run ; le cycle de vie de la base.
+    Les deux sont memorises a leur rythme propre.
+    """
+    from interface.data_access import collection_history, lifecycle_rows
+    from statistiques.categories import LIBELLES, categoriser, famille
+
+    def _delta():
+        delta, chemin = load_latest_delta()
+        records = (delta or {}).get("records") or []
+        resume = (delta or {}).get("summary") or {}
+        par_statut = {}
+        for r in records:
+            st = r.get("delta_status") or "?"
+            entree = par_statut.setdefault(st, {"total": 0, "par_source": {},
+                                                "par_famille": {}, "offres": []})
+            entree["total"] += 1
+            src = r.get("source") or "?"
+            entree["par_source"][src] = entree["par_source"].get(src, 0) + 1
+            fam = famille(categoriser(r.get("title") or "", ""))
+            entree["par_famille"][fam] = entree["par_famille"].get(fam, 0) + 1
+            if st != "UNCHANGED" and len(entree["offres"]) < 40:
+                entree["offres"].append({
+                    "cle": r.get("identity_key"), "titre": r.get("title"),
+                    "entreprise": r.get("company"), "source": src,
+                    "action": r.get("recommended_action"),
+                    "priorite": r.get("priority"), "famille": fam,
+                })
+        return {"artefact": chemin.name if chemin else None,
+                "genere": (delta or {}).get("generated_at"),
+                "resume": resume, "par_statut": par_statut,
+                "libelles_familles": {k: LIBELLES.get(k, k)
+                                      for k in ("LAB", "DATA", "PHARMA", "AUTRE")}}
+
+    def _cycle():
+        lignes = lifecycle_rows(limit=2000)
+        par_statut = {}
+        for l in lignes:
+            st = l.get("current_status") or "DISCOVERED"
+            par_statut[st] = par_statut.get(st, 0) + 1
+        # Un entonnoir de candidature : chaque etape est atteinte par ceux
+        # qui y sont ET ceux qui sont alles plus loin.
+        atteint = lambda *sts: sum(par_statut.get(x, 0) for x in sts)
+        return {
+            "par_statut": par_statut,
+            "entonnoir": [
+                {"etape": "Intéressé", "n": atteint("SHORTLISTED", "APPLIED", "INTERVIEW", "OFFER", "REJECTED")},
+                {"etape": "Postulé", "n": atteint("APPLIED", "INTERVIEW", "OFFER", "REJECTED")},
+                {"etape": "Entretien", "n": atteint("INTERVIEW", "OFFER")},
+                {"etape": "Offre", "n": atteint("OFFER")},
+            ],
+            "refus": par_statut.get("REJECTED", 0),
+            "recents": [
+                {"titre": l.get("title"), "entreprise": l.get("company"),
+                 "statut": l.get("current_status"), "quand": str(l.get("status_at") or "")[:10],
+                 "cle": l.get("stable_item_key")}
+                for l in sorted(lignes, key=lambda x: str(x.get("status_at") or ""), reverse=True)
+                if l.get("current_status") in _STATUTS_ORDRE
+            ][:15],
+        }
+
+    def _runs():
+        return [
+            {"run": h.get("run_id"), "debut": str(h.get("started_at") or "")[:16],
+             "statut": h.get("status"), "collectees": h.get("total_collected"),
+             "nouvelles": h.get("inserted_count"), "erreurs": h.get("error_count")}
+            for h in collection_history(12)
+        ]
+
+    return {
+        "delta": MEMOIRE.obtenir("suivi_delta", _empreinte_artefacts(), _delta),
+        "cycle": MEMOIRE.obtenir("suivi_cycle", _empreinte_base(), _cycle),
+        "runs": MEMOIRE.obtenir("suivi_runs", _empreinte_collecte(), _runs),
+    }
+
+
+# ------------------------------------------------------------------
+# Feedback : note et commentaire du candidat
+# ------------------------------------------------------------------
+
+def feedbacks_par_cle() -> dict[str, dict]:
+    """Toutes les evaluations, indexees par stable_item_key."""
+    from interface.feedback_service import feedback_rows
+    try:
+        return {str(r.get("stable_item_key")): r for r in feedback_rows()
+                if r.get("stable_item_key")}
+    except Exception:
+        return {}
+
+
+def enregistrer_feedback(offre: dict, etoiles: int | None, note: str) -> dict:
+    """
+    Note de 1 a 5 et commentaire libre.
+
+    feedback_service raisonne en verdict MATCH / REVIEW / NO_MATCH et en
+    score sur 100. Les etoiles s'y projettent sans ambiguite : quatre et
+    plus, ca matche ; trois, a revoir ; deux et moins, non.
+    """
+    from interface.feedback_service import save_feedback
+    etoiles = int(etoiles) if etoiles else None
+    if etoiles is not None and not 1 <= etoiles <= 5:
+        raise ValueError("La note va de 1 à 5.")
+    verdict = ("MATCH" if (etoiles or 0) >= 4 else
+               "REVIEW" if etoiles == 3 else
+               "NO_MATCH" if etoiles else "REVIEW")
+    score = (etoiles * 20.0) if etoiles else None
+    save_feedback(offre, verdict, user_score=score, note=note or "")
+    invalider_suivi()
+    return {"etoiles": etoiles, "verdict": verdict, "note": note or ""}
+
+
+# ------------------------------------------------------------------
+# Handoff ChatGPT
+# ------------------------------------------------------------------
+
+def handoff_etat() -> dict:
+    from interface.handoff_service import handoff_history
+    try:
+        historique = handoff_history(10)
+    except Exception:
+        historique = []
+    return {
+        "historique": [
+            {"dossier": str(h.get("folder") or ""),
+             "nom": Path(str(h.get("folder") or "")).name,
+             "quand": str(h.get("created_at") or h.get("generated_at") or "")[:16],
+             "offres": h.get("job_count") or h.get("total") or None,
+             "zips": [str(z) for z in (h.get("chunk_zips") or [])][:12]}
+            for h in historique
+        ],
+    }
+
+
+def handoff_creer(cles: list[str], taille: int = 10) -> dict:
+    from interface.handoff_service import create_manual_handoff
+    resultat = create_manual_handoff([str(c) for c in cles if c], chunk_size=int(taille))
+    manifest = resultat.get("manifest") or {}
+    return {
+        "dossier": str(resultat.get("export_dir") or ""),
+        "zips": [str(z) for z in (resultat.get("chunk_zips") or [])],
+        "manifest": {k: (v if isinstance(v, (int, str, float, bool)) else str(v)[:80])
+                     for k, v in manifest.items()},
+    }

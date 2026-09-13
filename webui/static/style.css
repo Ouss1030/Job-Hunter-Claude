@@ -364,3 +364,25 @@ td.score { text-align: right; font-variant-numeric: tabular-nums; font-weight: 6
 
 @media (max-width: 1000px) { :root { --panneau: 100vw; } .chiffres { display: none; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0s !important; transition-duration: 0s !important; } }
+
+/* ===== V1.1 — tri rapide, selection, avis, suivi, handoff ===== */
+
+.curseur-score { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--texte-2); }
+.curseur-score b { color: var(--texte); font-variant-numeric: tabular-nums; min-width: 26px; }
+.curseur-score input[type="range"] { width: 120px; accent-color: var(--accent); }
+
+.col-coche { width: 34px; padding-right: 0 !important; }
+.col-coche input { width: 15px; height: 15px; accent-color: var(--accent); cursor: pointer; }
+tbody tr.cochee { background: var(--accent-fond); }
+.etoiles-cell { color: var(--ambre); letter-spacing: -1px; font-size: 12px; }
+
+.etoiles { display: flex; align-items: center; gap: 2px; margin-bottom: 8px; }
+.etoiles button { background: none; border: none; font-size: 22px; line-height: 1; color: var(--bord-fort); cursor: pointer; padding: 0 2px; transition: color var(--vite), transform var(--vite); }
+.etoiles button:hover { transform: scale(1.15); }
+.etoiles button.pleine { color: var(--ambre); }
+.etoiles-lib { margin-left: 10px; font-size: 12.5px; color: var(--texte-2); }
+.note { width: 100%; min-height: 64px; resize: vertical; background: var(--fond); border: 1px solid var(--bord-fort); border-radius: 7px; padding: 9px 11px; color: var(--texte); font-size: 13px; font-family: inherit; line-height: 1.5; }
+.note:focus { outline: none; border-color: var(--accent); }
+.bouton-triage.suite { border-style: dashed; }
+.bouton-triage.suite.actif { border-style: solid; }
+.titre-bloc { font-size: 13px; margin: 0 0 8px; font-weight: 600; }
