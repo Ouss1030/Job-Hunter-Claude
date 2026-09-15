@@ -54,7 +54,7 @@ from database.models import JobOffer
 from sources.location_belgium import detect_belgium
 
 
-SUCCESSFACTORS_CONNECTOR_VERSION = "1.0"
+SUCCESSFACTORS_CONNECTOR_VERSION = "1.1"
 
 REQUEST_TIMEOUT = 20
 MAX_RETRIES = 2
@@ -108,10 +108,28 @@ def fetch_sitemap_urls(host: str):
     if response.status_code != 200:
         return [], f"sitemap HTTP {response.status_code}"
 
-    urls = [
-        u for u in re.findall(r"<loc>([^<]+)</loc>", response.text)
-        if "/job/" in u
-    ]
+    texte = response.text
+    entete = texte[:600].lower()
+
+    # V1.1 (15/09/2026) — trois formes constatees sur les sites SuccessFactors :
+    #   urlset  (Umicore, Puratos, VUB, Bekaert)  : <loc> des pages /job/
+    #   rss     (Barry-Callebaut)                  : un flux Google Jobs, <item><link>
+    #   index   (Colruyt)                          : <sitemapindex> vers des sous-sitemaps
+    if "<rss" in entete:
+        urls = [u.strip() for u in re.findall(r"<link>([^<]+)</link>", texte) if "/job/" in u]
+    elif "<sitemapindex" in entete:
+        urls = []
+        for enfant in re.findall(r"<loc>([^<]+)</loc>", texte)[:12]:
+            try:
+                sous = SESSION.get(enfant.strip(), timeout=REQUEST_TIMEOUT)
+            except Exception:
+                continue
+            if sous.status_code == 200:
+                urls.extend(u for u in re.findall(r"<loc>([^<]+)</loc>", sous.text) if "/job/" in u)
+    else:
+        urls = [u for u in re.findall(r"<loc>([^<]+)</loc>", texte) if "/job/" in u]
+    import html as _html
+    urls = list(dict.fromkeys(_html.unescape(u) for u in urls))
     if not urls:
         return [], "sitemap sans URL d'offre"
     return urls, None

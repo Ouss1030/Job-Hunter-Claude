@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Domaines d'employeurs belges a passer au moteur de decouverte (sources/source_discovery_v1.py). Une graine = un domaine ; le moteur trouve la page carriere, l'ATS et la voie publique. Ajouter une ligne suffit.",
+  "groups": {
+    "interim_recrutement": [
+      "adecco.be", "randstad.be", "tempo-team.be", "startpeople.be", "manpower.be",
+      "synergiejobs.be", "daoust.be", "accentjobs.be", "konvert.be", "ago.jobs",
+      "actief.be", "forumjobs.be", "vivaldisinterim.be", "itzu.eu", "agilitas.be",
+      "asap.be", "unique.be", "jeffersonwells.be", "roberthalf.be", "hays.be",
+      "michaelpage.be", "robertwalters.be", "brightplus.be", "selecthr.be",
+      "letswork.be", "brunel.net", "austinbright.com", "hudsonsolutions.com",
+      "talentus.be", "usgprofessionals.be", "trixxo.be", "t-groep.be",
+      "randstaddigital.be", "experis.be", "sdworx.com", "acerta.be", "securex.be"
+    ],
+    "secteur_public": [
+      "werkenvoor.be", "talent.brussels", "werkenvoorvlaanderen.be", "wallonie.be",
+      "brussels.be", "antwerpen.be", "gent.be", "leuven.be", "brugge.be", "liege.be",
+      "charleroi.be", "namur.be", "mons.be", "mechelen.be", "kortrijk.be", "hasselt.be",
+      "jobpol.be", "belgiantrain.be", "infrabel.be", "stib-mivb.be", "letec.be",
+      "delijn.be", "bpost.be", "fedasil.be", "onem.be", "smals.be", "nbb.be",
+      "fluxys.com", "elia.be", "ores.be", "fluvius.be", "aquafin.be", "dewatergroep.be",
+      "vivaqua.be", "brusselsairport.be", "skeyes.be", "provincieantwerpen.be",
+      "vlaamsbrabant.be", "limburg.be", "oost-vlaanderen.be", "west-vlaanderen.be",
+      "provincedeliege.be", "hainaut.be", "brabantwallon.be", "mil.be", "vrt.be", "rtbf.be"
+    ],
+    "academique_recherche": [
+      "uclouvain.be", "ulb.be", "vub.be", "kuleuven.be", "ugent.be", "uantwerpen.be",
+      "uhasselt.be", "uliege.be", "umons.ac.be", "unamur.be", "ucll.be", "hogent.be",
+      "howest.be", "thomasmore.be", "ap.be", "arteveldehogeschool.be", "odisee.be",
+      "vives.be", "pxl.be", "ehb.be", "hepl.be", "helha.be", "henallux.be", "vinci.be",
+      "ichec.be", "frs-fnrs.be", "fwo.be", "vib.be", "imec.be", "sciensano.be", "vito.be",
+      "sirris.be", "ilvo.vlaanderen.be", "sckcen.be", "meteo.be", "naturalsciences.be",
+      "cenaero.be", "multitel.be", "cetic.be", "vliz.be"
+    ],
+    "sante": [
+      "uzleuven.be", "uzgent.be", "uza.be", "uzbrussel.be", "saintluc.be", "chuliege.be",
+      "chu-charleroi.be", "hubruxelles.be", "chirec.be", "zna.be", "gza.be",
+      "azgroeninge.be", "azsintjan.be", "azdelta.be", "azturnhout.be", "jessazh.be",
+      "zol.be", "azmonica.be", "imelda.be", "azsintlucas.be", "chwapi.be",
+      "chrcitadelle.be", "vivalia.be", "epicura.be", "chrsm.be", "ghdc.be",
+      "cliniquesdeleurope.be", "mc.be", "solidaris.be", "partenamut.be", "helan.be",
+      "multipharma.be", "lloydspharma.be", "medi-market.be", "armonea.be", "korian.be",
+      "wgk.be", "zorgbedrijf.antwerpen.be"
+    ],
+    "pharma_biotech_medtech": [
+      "ucb.com", "gsk.com", "pfizer.com", "janssen.com", "takeda.com", "novartis.com",
+      "sanofi.com", "baxter.com", "astrazeneca.com", "msd.com", "roche.com", "argenx.com",
+      "galapagos.com", "biocartis.com", "mithra.com", "univercells.com",
+      "iba-worldwide.com", "eurogentec.com", "quality-assistance.com", "zoetis.com",
+      "elanco.com", "catalent.com", "lonza.com", "thermofisher.com", "abbvie.com",
+      "bms.com", "amgen.com", "novonordisk.com", "boehringer-ingelheim.com", "bayer.com",
+      "teva.be", "fresenius-kabi.com", "terumo-europe.com", "medtronic.com", "stryker.com",
+      "abbott.com", "agfa.com", "barco.com", "materialise.com", "cochlear.com", "ontex.com",
+      "celyad.com", "diagenode.com", "oncodna.com", "imcyse.com", "promethera.com",
+      "novadip.com", "hyloris.com", "kiomedpharma.com", "aseptic-technologies.com",
+      "cerba-healthcare.be", "eurofins.be", "sgs.com", "als-global.com", "normecgroup.com"
+    ],
+    "chimie_industrie_agro": [
+      "solvay.com", "syensqo.com", "umicore.com", "basf.com", "ineos.com",
+      "borealisgroup.com", "totalenergies.com", "exxonmobil.com", "evonik.com", "dow.com",
+      "lanxess.com", "arcelormittal.com", "aperam.com", "bekaert.com", "deme-group.com",
+      "jandenul.com", "besix.com", "agc-glass.eu", "etexgroup.com", "lhoist.com",
+      "carmeuse.com", "prayon.com", "tessenderlo.com", "yara.com", "indaver.com",
+      "renewi.com", "suez.be", "veolia.be", "recticel.com", "oleon.com", "picanol.be",
+      "atlascopco.com", "volvogroup.com", "audibrussels.com", "vanhool.com",
+      "toyota-europe.com", "vandemoortele.com", "puratos.com", "lotusbakeries.com",
+      "barry-callebaut.com", "ab-inbev.com", "duvel.com", "cocacolaep.com", "greenyard.group",
+      "agristo.com", "colruytgroup.com", "delhaize.be", "aldi.be", "lidl.be", "decathlon.be",
+      "jbc.be", "torfs.be", "spadel.com", "milcobel.com", "cargill.com", "danone.com",
+      "nestle.be", "unilever.com", "mondelezinternational.com", "pepsico.com", "engie.be",
+      "luminus.be", "total.be", "johncockerill.com", "cmi.be", "safran.com", "sonaca.com",
+      "sabca.be", "thalesgroup.com", "fn-herstal.com"
+    ],
+    "tech_data_finance_conseil": [
+      "cegeka.com", "delaware.pro", "nrb.be", "tobania.be", "inetum.com", "atos.net",
+      "capgemini.com", "accenture.com", "deloitte.com", "pwc.be", "ey.com", "kpmg.be",
+      "bdo.be", "cronos.be", "ordina.be", "soprasteria.com", "devoteam.com", "alten.be",
+      "collibra.com", "showpad.com", "teamleader.eu", "odoo.com", "deliverect.com",
+      "silverfin.com", "intigriti.com", "aikido.dev", "unifiedpost.com", "isabel.eu",
+      "kbc.com", "belfius.be", "ing.be", "bnpparibasfortis.com", "argenta.be", "crelan.be",
+      "axa.be", "ageas.com", "aginsurance.be", "ethias.be", "baloise.be", "allianz.be",
+      "euroclear.com", "swift.com", "worldline.com", "telenet.be", "orange.be", "voo.be",
+      "proximus.com", "dpgmediagroup.com", "mediahuis.be", "roularta.be", "dataroots.io",
+      "ml6.eu", "keyrus.com", "partena.be", "liantis.be", "attentia.be", "itsme-id.com",
+      "in-the-pocket.com", "datacamp.com", "lunatech.com", "xplore-group.com", "esko.com",
+      "nsi-sa.be", "approach.be", "computerland.be", "econocom.com", "proximus-ada.be",
+      "sentiance.com", "robovision.ai", "scaled-robotics.com", "lightspeed.com",
+      "cashforce.com", "yields.io", "chift.eu", "bizzdesign.com", "vandenbroele.be"
+    ],
+    "ue_ong_international": [
+      "eurobrussels.com", "euractiv.com", "epso.europa.eu", "nato.int", "businesseurope.eu",
+      "oxfam.be", "msf-azg.be", "unicef.be", "amnesty.be", "wwf.be", "rodekruis.be",
+      "croix-rouge.be", "11.be", "handicapinternational.be", "caritasinternational.be",
+      "greenpeace.org", "cncd.be", "plan-international.be", "sos-villages-enfants.be",
+      "vluchtelingenwerk.be", "ciré.be", "ecre.org", "eurocities.eu", "cepi.org",
+      "eurochambres.eu", "efpia.eu", "cefic.org", "medtecheurope.org"
+    ],
+    "jobs_etudiants": [
+      "student.be", "studentjob.be", "nowjobs.be", "jobstudent.be", "youngcapital.be",
+      "randstad.be", "tempo-team.be", "startpeople.be"
+    ]
+  }
+}

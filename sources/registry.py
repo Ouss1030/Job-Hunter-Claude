@@ -2294,3 +2294,29 @@ SOURCE_SPECS = SOURCE_SPECS + (
               "avec l'API officielle (ibm-api-key + X-IBM-Client-Id).",
     ),
 )
+
+
+# ============================================================
+# EXTENSION LOCALE — ABSORPTION COMPLETE FOREM / ACTIRIS
+# ============================================================
+#
+# Les catalogues entiers remplacent la recherche par termes. Le detail
+# reste borne par run (config/absorption_settings.json). Voir
+# sources/registry_absorption_v1.py ; ce bloc est le seul point d'entree.
+
+from sources.registry_absorption_v1 import appliquer_absorption  # noqa: E402
+
+SOURCE_SPECS = appliquer_absorption(SOURCE_SPECS)
+
+
+# ============================================================
+# EXTENSION LOCALE — EXPANSION DES SOURCES (ATS 2e generation + JSON-LD)
+# ============================================================
+#
+# Lever, Ashby, Workable, Personio et l'extracteur universel sitemap +
+# JSON-LD. Leurs employeurs viennent de config/ats_employers_v2.json,
+# rempli par sources/source_discovery_v1.py. Voir registry_expansion_v1.py.
+
+from sources.registry_expansion_v1 import specs_expansion  # noqa: E402
+
+SOURCE_SPECS = SOURCE_SPECS + specs_expansion(SourceSpec)

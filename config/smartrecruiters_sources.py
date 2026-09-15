@@ -51,3 +51,13 @@ SMARTRECRUITERS_LIVE_DETAIL_LIMIT = None
 
 # Nombre d'offres pertinentes affichées dans le TXT.
 SMARTRECRUITERS_TOP_N = 80
+
+
+def enabled_companies():
+    configures = [c for c in SMARTRECRUITERS_COMPANIES if c.get("enabled", True)]
+    # Employeurs decouverts automatiquement (config/ats_employers_v2.json).
+    try:
+        from sources.ats_employers_v2 import fusionner
+        return fusionner("SMARTRECRUITERS", configures)
+    except Exception:
+        return configures

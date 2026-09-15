@@ -90,6 +90,8 @@ backups/*.sqlite3
 # demande. Les versionner alourdit chaque clone sans rien apporter, et
 # publie du contenu qui ne nous appartient pas.
 logs/*cache*/
+# Instantanes des catalogues Actiris/Forem (absorption complete) : gros et regeneres a chaque run
+logs/absorption/
 
 # Traces de mise au point ponctuelles.
 logs/*_scheduler_state.json

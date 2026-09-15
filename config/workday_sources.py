@@ -196,4 +196,11 @@ WORKDAY_COMPANIES = [
 
 
 def enabled_companies():
-    return [c for c in WORKDAY_COMPANIES if c.get("enabled")]
+    configures = [c for c in WORKDAY_COMPANIES if c.get("enabled")]
+    # Employeurs decouverts automatiquement (config/ats_employers_v2.json) :
+    # ajoutes a la suite, sans jamais remplacer une entree de cette liste.
+    try:
+        from sources.ats_employers_v2 import fusionner
+        return fusionner("WORKDAY_ATS", configures)
+    except Exception:
+        return configures

@@ -1,0 +1,203 @@
+﻿SOURCE;FAMILLE;EXISTE;FONCTIONNE;METHODE_ACTUELLE;COUVERTURE;PROBLEMES;VALEUR_AJOUTEE_POTENTIELLE;METHODE_RECOMMANDEE;PRIORITE;ACTION
+FOREM;service public;OUI;OUI;absorption complete du catalogue (V1.0) + detail par budget;"345 actives / 953 vues ; 566 avec description -> open data complet : 26 198";;;;;
+ADZUNA;agregateur API;OUI;INCONNU (jamais collectee);registry;-;cles API absentes;;;;
+CAREERJET;agregateur API;OUI;INCONNU (jamais collectee);registry;-;cles API absentes;;;;
+JOOBLE;agregateur API;OUI;INCONNU (jamais collectee);registry;-;cles API absentes;;;;
+PROTHYA;employeur direct;OUI;OUI;registry;"1 actives / 1 vues ; 1 avec description";;;;;
+START_PEOPLE_STUDENT;etudiant;OUI;OUI;registry;"18 actives / 18 vues ; 18 avec description";;;;;
+SYNERGIE_STUDENT;etudiant;OUI;OUI;registry;"19 actives / 19 vues ; 19 avec description";;;;;
+VDAB_STUDENT_WEB;etudiant;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+STUDENT_BE;etudiant;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+STUDENTJOB_BE;etudiant;OUI;OUI;registry;"1 actives / 1 vues ; 1 avec description";;;;;
+RANDSTAD_STUDENT;etudiant;OUI;OUI;registry;"19 actives / 19 vues ; 19 avec description";;;;;
+AIR_LIQUIDE;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+BMS;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+GALDERMA;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+AMGEN_WORKDAY;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+BEIGENE;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+ELANCO;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+REMOTIVE;agregateur;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+EUROPHARMAJOBS;job board;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+ICTJOB;job board;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+REFERENCES;job board;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+SWDE;public / parapublic;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+ARBEITNOW;agregateur;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+ACTIRIS;service public;OUI;OUI;absorption complete du catalogue (V1.0) + detail par budget;"4418 actives / 8448 vues ; 5832 avec description -> catalogue complet : 33 208";;;;;
+TALENT_BRUSSELS;public;OUI;OUI;registry;"7 actives / 8 vues ; 8 avec description";;;;;
+TRAVAILLERPOUR;public;OUI;OUI;registry;"101 actives / 125 vues ; 125 avec description";;;;;
+SMARTRECRUITERS;ATS;OUI;OUI;registry;"258 actives / 274 vues ; 274 avec description";;;;;
+JOBAT;job board;OUI;NON (rien au dernier run);registry;"901 actives / 1262 vues ; 51 avec description";HTTP 403 : cache seulement;;;;
+SCIENCEATWORK;employeur direct;OUI;NON (rien au dernier run);registry;"2 actives / 2 vues ; 2 avec description";aucune offre au dernier run;;;;
+RANDSTAD;interim / recrutement;OUI;OUI;registry;"11 actives / 15 vues ; 15 avec description";;;;;
+JEFFERSON_WELLS;interim / recrutement;OUI;OUI;registry;"34 actives / 34 vues ; 34 avec description";;;;;
+AKKODIS;interim / recrutement;OUI;OUI;registry;"24 actives / 24 vues ; 24 avec description";;;;;
+GSK;employeur direct;OUI;NON (rien au dernier run);registry;"2 actives / 2 vues ; 2 avec description";aucune offre au dernier run;;;;
+UCB;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+IBA;employeur direct;OUI;OUI;registry;"1 actives / 1 vues ; 1 avec description";;;;;
+PFIZER;employeur direct;OUI;NON (rien au dernier run);registry;"1 actives / 1 vues ; 1 avec description";aucune offre au dernier run;;;;
+TAKEDA;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+JNJ;employeur direct;OUI;NON (rien au dernier run);registry;"1 actives / 2 vues ; 2 avec description";aucune offre au dernier run;;;;
+QUALITY_ASSISTANCE;employeur direct;OUI;OUI;registry;"5 actives / 5 vues ; 5 avec description";;;;;
+THERMO_FISHER;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+SCIENSANO;academique / recherche;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+SANOFI;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+BAXTER;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+NOVARTIS;employeur direct;OUI;OUI;registry;"1 actives / 1 vues ; 1 avec description";;;;;
+AGFA;employeur direct;OUI;OUI;agfa;"1 actives / 1 vues ; 1 avec description";;;;;
+UMICORE;employeur direct;OUI;OUI;umicore;"2 actives / 2 vues ; 2 avec description";;;;;
+SYENSQO;employeur direct;OUI;INCONNU (jamais collectee);syensqo;-;declaree mais jamais une offre en base;;;;
+SOLVAY;employeur direct;OUI;INCONNU (jamais collectee);solvay;-;declaree mais jamais une offre en base;;;;
+ASTRAZENECA;employeur direct;OUI;INCONNU (jamais collectee);astrazeneca;-;declaree mais jamais une offre en base;;;;
+AMGEN;employeur direct;OUI;INCONNU (jamais collectee);amgen;-;declaree mais jamais une offre en base;;;;
+LONZA;employeur direct;OUI;INCONNU (jamais collectee);lonza;-;declaree mais jamais une offre en base;;;;
+ROCHE;employeur direct;OUI;INCONNU (jamais collectee);roche;-;declaree mais jamais une offre en base;;;;
+BIOWIN;employeur direct;OUI;OUI;biowin;"3 actives / 3 vues ; 3 avec description";;;;;
+BIOPARK;employeur direct;OUI;NON (rien au dernier run);biopark;"1 actives / 1 vues ; 1 avec description";aucune offre au dernier run;;;;
+EUROGENTEC;employeur direct;OUI;OUI;eurogentec;"3 actives / 4 vues ; 4 avec description";;;;;
+TRASIS;employeur direct;OUI;OUI;trasis;"1 actives / 1 vues ; 0 avec description";;;;;
+QUANTOOM;employeur direct;OUI;INCONNU (jamais collectee);quantoom;-;declaree mais jamais une offre en base;;;;
+HYLORIS;employeur direct;OUI;OUI;hyloris;"1 actives / 1 vues ; 1 avec description";;;;;
+EYED_PHARMA;employeur direct;OUI;INCONNU (jamais collectee);eyed_pharma;-;declaree mais jamais une offre en base;;;;
+NSIDE;employeur direct;OUI;OUI;nside;"1 actives / 1 vues ; 1 avec description";;;;;
+IRE;employeur direct;OUI;OUI;ire;"2 actives / 2 vues ; 2 avec description";;;;;
+NOVADIP;employeur direct;OUI;INCONNU (jamais collectee);novadip;-;declaree mais jamais une offre en base;;;;
+CER_GROUPE;employeur direct;OUI;INCONNU (jamais collectee);cer_groupe;-;declaree mais jamais une offre en base;;;;
+KIOMED;employeur direct;OUI;INCONNU (jamais collectee);kiomed;-;declaree mais jamais une offre en base;;;;
+CERBA;employeur direct;OUI;OUI;cerba;"1 actives / 1 vues ; 1 avec description";;;;;
+MSD;employeur direct;OUI;INCONNU (jamais collectee);msd;-;declaree mais jamais une offre en base;;;;
+PAUWELS;employeur direct;OUI;OUI;mega5_sources;"2 actives / 6 vues ; 6 avec description";;;;;
+ICON;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+TMC;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+QBD_GROUP;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+SOPRA_STERIA;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+LILLY;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+THALES;employeur direct;OUI;INCONNU (jamais collectee);mega5_sources;-;declaree mais jamais une offre en base;;;;
+ODOO;employeur direct;OUI;OUI;mega5_hold_sources;"1 actives / 1 vues ; 1 avec description";;;;;
+KEYRUS;employeur direct;OUI;OUI;mega56_sources;"2 actives / 2 vues ; 2 avec description";;;;;
+MEDPACE;employeur direct;OUI;OUI;mega58_sources;"2 actives / 2 vues ; 2 avec description";;;;;
+UNIVERCELLS_TECH;employeur direct;OUI;INCONNU (jamais collectee);mega59_sources;-;declaree mais jamais une offre en base;;;;
+LHOIST;employeur direct;OUI;INCONNU (jamais collectee);mega59_sources;-;declaree mais jamais une offre en base;;;;
+PAREXEL;employeur direct;OUI;INCONNU (jamais collectee);mega510_sources;-;declaree mais jamais une offre en base;;;;
+POLYPEPTIDE;employeur direct;OUI;INCONNU (jamais collectee);mega510_sources;-;declaree mais jamais une offre en base;;;;
+JOHN_COCKERILL;employeur direct;OUI;NON (rien au dernier run);mega510_sources;"1 actives / 1 vues ; 1 avec description";aucune offre au dernier run;;;;
+AMARIS;employeur direct;OUI;NON (rien au dernier run);mega512_sources;"2 actives / 2 vues ; 2 avec description";aucune offre au dernier run;;;;
+NRB;employeur direct;OUI;OUI;mega512_sources;"4 actives / 4 vues ; 4 avec description";;;;;
+IQVIA;employeur direct;OUI;INCONNU (jamais collectee);mega512_sources;-;declaree mais jamais une offre en base;;;;
+CAPGEMINI_ENG;employeur direct;OUI;OUI;mega512_sources;"1 actives / 1 vues ; 1 avec description";;;;;
+ABBVIE;employeur direct;OUI;INCONNU (jamais collectee);mega513_sources;-;declaree mais jamais une offre en base;;;;
+CSL;employeur direct;OUI;INCONNU (jamais collectee);mega513_sources;-;declaree mais jamais une offre en base;;;;
+BOEHRINGER;employeur direct;OUI;INCONNU (jamais collectee);mega513_sources;-;declaree mais jamais une offre en base;;;;
+EXPERIS;interim / recrutement;OUI;INCONNU (jamais collectee);mega64_staffing;-;declaree mais jamais une offre en base;;;;
+SYNERGIE;interim / recrutement;OUI;OUI;mega64_staffing;"1 actives / 1 vues ; 1 avec description";;;;;
+ADECCO;interim / recrutement;OUI;OUI;adecco_api;"29 actives / 37 vues ; 37 avec description";;;;;
+MANPOWER;interim / recrutement;OUI;OUI;mega65_staffing;"14 actives / 15 vues ; 15 avec description";;;;;
+VIVALDIS;interim / recrutement;OUI;INCONNU (jamais collectee);mega65_staffing;-;declaree mais jamais une offre en base;;;;
+SELECT_HR;interim / recrutement;OUI;INCONNU (jamais collectee);mega65_staffing;-;declaree mais jamais une offre en base;;;;
+AGILITAS;interim / recrutement;OUI;OUI;mega65_staffing;"10 actives / 10 vues ; 5 avec description";;;;;
+AGO;interim / recrutement;OUI;OUI;mega65_staffing;"1 actives / 1 vues ; 1 avec description";;;;;
+LETS_WORK;interim / recrutement;OUI;OUI;mega65_staffing;"1 actives / 1 vues ; 0 avec description";;;;;
+OXFORD_GLOBAL;interim / recrutement;OUI;OUI;oxford_belgium;"4 actives / 7 vues ; 7 avec description";;;;;
+BRUNEL;interim / recrutement;OUI;INCONNU (jamais collectee);mega65_staffing;-;declaree mais jamais une offre en base;;;;
+AUSTIN_BRIGHT;interim / recrutement;OUI;INCONNU (jamais collectee);mega65_staffing;-;declaree mais jamais une offre en base;;;;
+PROGRESSIVE;interim / recrutement;OUI;INCONNU (jamais collectee);mega65_staffing;-;declaree mais jamais une offre en base;;;;
+START_PEOPLE;interim / recrutement;OUI;OUI;mega67_high_value;"9 actives / 11 vues ; 11 avec description";;;;;
+TEMPO_TEAM;interim / recrutement;OUI;OUI;mega67_high_value;"1 actives / 1 vues ; 1 avec description";;;;;
+QJOBS;interim / recrutement;OUI;OUI;mega67_high_value;"1 actives / 2 vues ; 2 avec description";;;;;
+MICHAEL_PAGE;interim / recrutement;OUI;OUI;mega67_high_value;"3 actives / 4 vues ; 4 avec description";;;;;
+ROBERT_HALF;interim / recrutement;OUI;INCONNU (jamais collectee);mega67_high_value;-;declaree mais jamais une offre en base;;;;
+ALEXION;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+ASTELLAS;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+BEPHARBEL;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+CERES_PHARMA;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+CURIUM;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+DAIICHI_SANKYO;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+DECHRA;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+EFFIK_BENELUX;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+GE_HEALTHCARE;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+GRUNENTHAL;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+GUERBET;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+IJSFABRIEK_STROMBEEK;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+KELA_VETERINARIA;employeur direct;OUI;OUI;registry;"1 actives / 1 vues ; 1 avec description";;;;;
+LUNDBECK;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+MENARINI;employeur direct;OUI;INCONNU (jamais collectee);registry;-;declaree mais jamais une offre en base;;;;
+EUROFINS;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+NORMEC;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+ALS_GLOBAL;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+CELABOR;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+SIRRIS;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+CRM_GROUP;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+PURATOS;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+BARRY_CALLEBAUT;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+COLRUYT;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+PROCTER_GAMBLE;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+DANONE_BE;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+VANDEMOORTELE;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+CARGILL_BE;employeur direct;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+SAINT_LUC;sante;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+UZ_BRUSSEL;sante;OUI;OUI;backlog_validator_v14;"2 actives / 2 vues ; 0 avec description";;;;;
+CHIREC;sante;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+SCIENSANO_RESEARCH;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+ULB_JOBS;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+VUB_JOBS;academique / recherche;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+UCLOUVAIN_JOBS;academique / recherche;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+EURAXESS_BE;academique;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+STIB_MIVB;public / parapublic;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+BRUSSELS_AIRPORT;public / parapublic;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+AVIAPARTNER;public / parapublic;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+BPOST;public / parapublic;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+SNCB_NMBS;public / parapublic;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+INFRABEL;public / parapublic;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+DE_WATERGROEP;public / parapublic;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+KONVERT;interim / recrutement;OUI;OUI;backlog_validator_v14;"5 actives / 5 vues ; 5 avec description";;;;;
+ACCENT_JOBS;interim / recrutement;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+ACTIEF_INTERIM;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+UNIQUE_BE;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+BRIGHT_PLUS;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+SECRETARY_PLUS;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+HAYS_BE;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+WALTERS_PEOPLE;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+PAGE_PERSONNEL;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+ASAP_BE;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+FORUM_JOBS;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+ABSOLUTE_JOBS;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+T_INTERIM;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+SDWORX_STAFFING;interim / recrutement;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+JOBSTUDENT_BE;etudiant;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+KONVERT_STUDENT;etudiant;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+TEMPO_TEAM_STUDENT;etudiant;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+ACCENT_STUDENT;etudiant;OUI;OUI;backlog_validator_v14;"1 actives / 1 vues ; 1 avec description";;;;;
+ASAP_STUDENT;etudiant;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
+RECRUITEE;ATS;OUI;OUI;registry_ats_v1;"105 actives / 106 vues ; 98 avec description";;;;;
+GREENHOUSE;ATS;OUI;OUI;registry_ats_v1;"44 actives / 44 vues ; 44 avec description";;;;;
+WORKDAY_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;377 offres BE validees;declaree mais jamais une offre en base;;;;
+SUCCESSFACTORS_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
+PHENOM_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
+VDAB;service public;OUI;DESACTIVEE (INCONNU (jamais collectee));registry_ats_v1;-;"pages JS ; API interdite par robots ; desactive";;;;
+LEVER;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;3 offres BE validees;;;;;
+ASHBY;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;1 offres BE validees;;;;;
+WORKABLE;ATS;OUI;"NOUVEAU ; aucun employeur encore";registry_expansion_v1;-;;;;;
+PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 4 employeurs";registry_expansion_v1;7 offres BE validees;;;;;
+JSONLD_SITES;universel;OUI;"VALIDE (decouverte) ; 18 employeurs";registry_expansion_v1;58 offres BE validees;;;;;
+VDAB (direct);service public;PARTIEL;NON;"sitemap public (pages vides, JS ; /api interdit par robots.txt)";"0 direct ; 8 874 via Actiris (republication)";API officielle sur cles (ibm-api-key);tres elevee : ~40 % des offres belges;"API officielle VDAB (demande de cles partenaire) ; en attendant republication Actiris";1;"Demander un acces API VDAB ; conserver la voie Actiris VDAB_FOREM"
+EURES;international;NON;-;-;0;"portail JS ; API interne non documentee";moyenne : beaucoup de doublons Forem/VDAB/Actiris;EURES Job Vacancy API (acces institutionnel) ou decouverte via Actiris/Forem;3;"Suivre ; pas de voie publique propre aujourd'hui"
+LinkedIn Jobs;job board;NON;-;-;0;"conditions d'utilisation interdisent la collecte automatisee ; anti-bot";elevee en decouverte (URL employeur), faible en canonique;"decouverte seulement : URL de candidature externe -> ATSDetector ; jamais de scraping";2;"Ne pas scraper ; utiliser LinkedIn comme signal de decouverte manuel (coller une URL)"
+Indeed Belgique;job board;NON;-;-;0;anti-bot (Cloudflare), pas d'API publique;elevee en volume, faible en unique (republication);"URL de candidature externe -> ATSDetector ; fournisseur externe en dernier recours";3;"Pas de scraper artisanal ; Apify/Zyte seulement si mesure cost_per_unique_job le justifie"
+StepStone Belgique;job board;NON;-;-;"0 direct ; present via Forem/Actiris partenaires";"anti-bot ; republie ses offres vers Forem/Actiris";moyenne;"republication Forem/Actiris (deja absorbee) ; JSON-LD sur pages si accessibles";3;Rien a faire : couvert indirectement par l'absorption complete
+Jobat (direct);job board;OUI;NON;cache uniquement (HTTP 403 verifie);"901 en cache ; 158/400 offres Forem partenaires viennent de Jobat";403 anti-bot;moyenne;"republication Forem/Actiris (absorbee) ; ne pas contourner";3;"Garder CACHE_ONLY ; couvert par Forem/Actiris"
+Jooble / Adzuna / Careerjet;agregateur API;OUI;NON;API officielles, cles absentes;0;NEEDS_CREDENTIALS;"moyenne : agregateurs, beaucoup de doublons ; Adzuna/Careerjet donnent des descriptions";cles gratuites (formulaire en ligne);2;L'utilisateur cree les cles (gratuites) et les met dans sources/api_credentials.py
+Talent.com / Monster / Glassdoor / Jobrapido / Jobsora / GrabJobs;agregateur;NON;-;-;0;"pas d'API publique ; agregateurs de republication";faible en unique;"aucune ; ils republient ce que l'on absorbe deja";4;Ignorer
+Federgon (annuaire);decouverte;NON;-;-;-;-;elevee : petites agences regionales;annuaire -> domaines -> source_discovery_v1;2;Etape suivante : extraire l'annuaire en graines de decouverte
+BCE/KBO;decouverte;NON;-;-;-;pas de site web dans l'open data BCE;tres elevee a terme;open data BCE -> noms -> domaines (recherche) -> source_discovery_v1;3;Apres Federgon, quand la decouverte est stable
+Student.be / StudentJob / NOWJOBS;etudiant;PARTIEL;OUI;HTML (student_sources_v1);faible;pages HTML;moyenne;JSON-LD si present (JSONLD_SITES);3;Passer les hotes au moteur de decouverte
+ATS CVWAREHOUSE;ATS sans connecteur;DETECTE;NON;-;7 employeurs detectes : Provincieantwerpen, Vlaamsbrabant, Hogent, Thomasmore, Azturnhout, Vivalia;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS ORACLE_CLOUD;ATS sans connecteur;DETECTE;NON;-;5 employeurs detectes : Mil, Aperam, Carmeuse, Euroclear, Telenet;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS BULLHORN;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : Manpower, Jeffersonwells, Selecthr, Experis;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS ICIMS;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : Jandenul, Pepsico, Bdo, Axa;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS RADANCY;ATS sans connecteur;DETECTE;NON;-;3 employeurs detectes : Sanofi, Cargill, Ing;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS CARERIX;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Talentus, Caritasinternational;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS CORNERSTONE;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Werkenvoorvlaanderen, Proximus;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS AVATURE;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Takeda, Totalenergies;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS EIGHTFOLD;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Astrazeneca, Amgen;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS TALEO;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Uzleuven;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS BRASSRING;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Thermofisher;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS TALENTSOFT;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Kpmg;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json

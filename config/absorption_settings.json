@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "detail_budget_per_source": 2500,
+  "sources": [
+    "FOREM",
+    "ACTIRIS"
+  ]
+}

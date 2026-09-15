@@ -494,6 +494,9 @@ def fetch_smartrecruiters_jobs(
     companies: list[dict] | None = None,
     detail_limit_per_company: int | None = None,
 ) -> tuple[list[JobOffer], list[dict]]:
+    if companies is None:
+        from config.smartrecruiters_sources import enabled_companies
+        companies = enabled_companies()
     configured = companies or SMARTRECRUITERS_COMPANIES
     session = _session()
 
