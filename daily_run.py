@@ -398,7 +398,9 @@ def print_preflight(result):
 
     for spec, expected in result["expected_versions"].items():
         actual = result["installed_versions"].get(spec)
-        icon = "✅" if actual == expected else "❌"
+        # Meme regle que la validation (ligne ~350) : un minimum, pas une
+        # egalite. Sinon lifecycle 1.1 s'affichait en rouge alors qu'il passe.
+        icon = "✅" if actual and at_least(actual, expected) else "❌"
         print(f"{icon} {spec:<62} {actual}")
 
     print()
