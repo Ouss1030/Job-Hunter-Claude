@@ -12,6 +12,7 @@ qui ne dependent d'aucun framework d'affichage.
 
 from __future__ import annotations
 
+import sqlite3
 from datetime import date
 from pathlib import Path
 
@@ -26,7 +27,7 @@ from statistiques.marche import _ville
 from webui.memo import MEMOIRE
 
 
-DONNEES_VERSION = "1.3"
+DONNEES_VERSION = "1.4"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -622,4 +623,99 @@ def handoff_creer(cles: list[str], taille: int = 10) -> dict:
         "zips": [str(z) for z in (resultat.get("chunk_zips") or [])],
         "manifest": {k: (v if isinstance(v, (int, str, float, bool)) else str(v)[:80])
                      for k, v in manifest.items()},
+    }
+
+
+# ------------------------------------------------------------------
+# Historique : les offres retirees, conservees avec leur texte (16/09/2026)
+# ------------------------------------------------------------------
+
+def _retirees_categorisees() -> list[dict]:
+    """
+    Toutes les offres retirees (is_active = 0), avec leur famille.
+
+    Categoriser 4 000 titres prend une demi-seconde : memorise sous
+    l'empreinte de la base, recalcule seulement quand elle change.
+    """
+    from statistiques.categories import categoriser, famille
+
+    def _calcul():
+        c = sqlite3.connect(f"{DB_PATH.resolve().as_uri()}?mode=ro", uri=True)
+        try:
+            lignes = c.execute(
+                "SELECT id, title, company, location, source, first_seen, last_seen, "
+                "       date_published, url, LENGTH(COALESCE(detail_matching_text, description, '')) "
+                "FROM raw_jobs WHERE is_active = 0 ORDER BY last_seen DESC").fetchall()
+        finally:
+            c.close()
+        sortie = []
+        for (rid, titre, societe, lieu, source, debut, fin, pub, url, longueur) in lignes:
+            cat = categoriser(titre or "", "")
+            duree = None
+            try:
+                d0 = str(debut or "")[:10]; d1 = str(fin or "")[:10]
+                if d0 and d1:
+                    duree = (date.fromisoformat(d1) - date.fromisoformat(d0)).days
+            except Exception:
+                duree = None
+            sortie.append({
+                "id": rid, "titre": titre or "", "entreprise": societe or "", "lieu": lieu or "",
+                "source": source or "", "famille": famille(cat), "categorie": cat,
+                "premiere_vue": str(debut or "")[:10], "retiree_le": str(fin or "")[:10],
+                "publiee": str(pub or "")[:10], "duree_jours": duree, "texte_chars": longueur or 0,
+                "url": url or "",
+            })
+        return sortie
+
+    return MEMOIRE.obtenir("historique_retirees", _empreinte_base(), _calcul)
+
+
+def historique_offres(q: str = "", famille: str = "", limite: int = 200) -> dict:
+    """La liste cherchable des offres retirees."""
+    q = (q or "").strip().lower()
+    famille = (famille or "").strip().upper()
+    toutes = _retirees_categorisees()
+    lignes = [
+        o for o in toutes
+        if (not famille or o["famille"] == famille)
+        and (not q or q in o["titre"].lower() or q in o["entreprise"].lower() or q in o["lieu"].lower())
+    ]
+    from collections import Counter
+    return {
+        "total_retirees": len(toutes),
+        "par_famille": dict(Counter(o["famille"] for o in toutes)),
+        "correspondantes": len(lignes),
+        "offres": lignes[:max(1, int(limite))],
+    }
+
+
+def historique_offre(raw_id: int) -> dict | None:
+    """Une offre retiree avec son texte complet : c'est ce qu'on veut etudier."""
+    c = sqlite3.connect(f"{DB_PATH.resolve().as_uri()}?mode=ro", uri=True)
+    try:
+        r = c.execute(
+            "SELECT id, title, company, location, source, first_seen, last_seen, date_published, "
+            "       url, contract_type, is_active, COALESCE(detail_matching_text, description, '') "
+            "FROM raw_jobs WHERE id = ?", (int(raw_id),)).fetchone()
+    finally:
+        c.close()
+    if not r:
+        return None
+    return {"id": r[0], "titre": r[1], "entreprise": r[2], "lieu": r[3], "source": r[4],
+            "premiere_vue": str(r[5] or "")[:10], "retiree_le": str(r[6] or "")[:10],
+            "publiee": str(r[7] or "")[:10], "url": r[8], "contrat": r[9],
+            "active": bool(r[10]), "texte": r[11] or ""}
+
+
+def historique() -> dict:
+    """L'evolution mensuelle (depuis l'artefact conseils) et les comptes."""
+    c = conseils()
+    ens = (c.get("ensemble") or {}).get("historique") or {}
+    return {
+        "offres_scrapees": c.get("offres_scrapees"),
+        "offres_cibles": c.get("offres_cibles"),
+        "ensemble": ens,
+        "familles": {f: {"libelle": v.get("libelle"), **(v.get("historique") or {})}
+                     for f, v in (c.get("familles") or {}).items()},
+        "retirees_total": len(_retirees_categorisees()),
     }

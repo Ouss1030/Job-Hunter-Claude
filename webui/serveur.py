@@ -57,7 +57,7 @@ from interface.lifecycle_service import USER_STATUSES, save_suivi, set_status
 from webui import donnees
 
 
-WEBUI_VERSION = "1.1"
+WEBUI_VERSION = "1.2"
 
 RACINE = Path(__file__).resolve().parent
 GABARITS = Jinja2Templates(directory=str(RACINE / "templates"))
@@ -133,6 +133,32 @@ async def api_feedback(request):
         return JSONResponse({"erreur": str(erreur)}, 400)
     except Exception as erreur:
         return JSONResponse({"erreur": str(erreur)}, 500)
+
+
+async def api_historique(request):
+    if not donnees.conseils_prets():
+        if request.query_params.get("attendre") != "1":
+            return JSONResponse({"en_cours": True}, 202)
+    return JSONResponse(donnees.historique())
+
+
+async def api_historique_offres(request):
+    q = request.query_params
+    try:
+        limite = int(q.get("limite") or 200)
+    except ValueError:
+        limite = 200
+    return JSONResponse(donnees.historique_offres(q.get("q") or "", q.get("famille") or "", limite))
+
+
+async def api_historique_offre(request):
+    try:
+        o = donnees.historique_offre(int(request.query_params.get("id") or 0))
+    except ValueError:
+        o = None
+    if not o:
+        return JSONResponse({"erreur": "Offre introuvable."}, 404)
+    return JSONResponse(o)
 
 
 async def api_handoff(request):
@@ -298,7 +324,7 @@ async def api_relances(request):
     return JSONResponse({"dues": relances_dues()})
 
 
-ECRANS = ("/", "/offres", "/suivi", "/conseils", "/statistiques", "/handoff")
+ECRANS = ("/", "/offres", "/suivi", "/conseils", "/statistiques", "/historique", "/handoff")
 
 application = Starlette(
     routes=[
@@ -315,6 +341,9 @@ application = Starlette(
         Route("/api/relances", api_relances),
         Route("/api/suivi-tableau", api_suivi_tableau),
         Route("/api/feedback", api_feedback, methods=["POST"]),
+        Route("/api/historique", api_historique),
+        Route("/api/historique/offres", api_historique_offres),
+        Route("/api/historique/offre", api_historique_offre),
         Route("/api/handoff", api_handoff),
         Route("/api/handoff/creer", api_handoff_creer, methods=["POST"]),
         Route("/api/ouvrir", api_ouvrir_dossier, methods=["POST"]),

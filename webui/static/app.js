@@ -60,7 +60,7 @@ const cls = (v) => String(v || "inconnu").toLowerCase();
 
 /* ------------------------------------------------------------- routeur */
 
-const ECRANS = { "/": "jour", "/offres": "offres", "/suivi": "suivi", "/conseils": "conseils", "/statistiques": "statistiques", "/handoff": "handoff" };
+const ECRANS = { "/": "jour", "/offres": "offres", "/suivi": "suivi", "/conseils": "conseils", "/statistiques": "statistiques", "/historique": "historique", "/handoff": "handoff" };
 const RENDUS = {};
 
 async function naviguer(chemin, pousser = true) {
@@ -607,6 +607,78 @@ RENDUS.suivi = async () => {
 
   $$("tr[data-ouvrir]").forEach((tr) => tr.addEventListener("click", async () => { if (!tr.dataset.ouvrir) return; await naviguer("/offres"); ouvrirPanneau(tr.dataset.ouvrir); }));
 };
+
+/* ============================================================ HISTORIQUE */
+// Les offres retirees restent en base avec leur texte (decision du
+// 16/09/2026) : on peut voir ce qui a disparu, quand, et etudier la demande
+// dans le temps. L'evolution vient de l'artefact conseils ; la liste est
+// une requete legere.
+
+const etatHistorique = { q: "", famille: "", famEvo: "ensemble" };
+
+RENDUS.historique = async () => {
+  let d = await lire("/api/historique");
+  if (d.en_cours) {
+    $("#ecran").innerHTML = `<div class="chargement">Première analyse de toutes les offres scrapées<br><small style="color:var(--texte-3)">deux minutes, une seule fois par collecte</small></div>`;
+    cache.delete("/api/historique");
+    d = await lire("/api/historique?attendre=1", { frais: true });
+    cache.set("/api/historique", d);
+  }
+  const { q, famille, famEvo } = etatHistorique;
+  const liste = await lire(`/api/historique/offres?q=${encodeURIComponent(q)}&famille=${encodeURIComponent(famille)}&limite=200`, { frais: true });
+  const evo = famEvo === "ensemble" ? d.ensemble : (d.familles[famEvo] || {});
+  const mois = (evo.par_mois || []).slice(-8);
+  const derniers = mois.slice(-3).reverse();
+  const FAM = { LAB: "Labo", DATA: "Data", PHARMA: "Pharma", AUTRE: "Autres" };
+
+  $("#ecran").innerHTML = `
+    ${entete("Historique", `<b>${G.fmt(d.retirees_total)}</b> offres retirées conservées avec leur texte, sur ${G.fmt(d.offres_scrapees)} scrapées. Rien n'est jamais supprimé : une offre retirée passe simplement « retirée ».`)}
+
+    <h2 class="section">Le marché visé, mois par mois</h2>
+    <div class="familles" style="margin-bottom:14px">${[["ensemble", "Ensemble"], ["LAB", d.familles.LAB?.libelle], ["DATA", d.familles.DATA?.libelle], ["PHARMA", d.familles.PHARMA?.libelle]].map(([k, l]) =>
+      `<button class="famille ${k === famEvo ? "actif" : ""}" data-famevo="${k}"><b>${esc(l || k)}</b><span>${(k === "ensemble" ? d.ensemble : d.familles[k] || {}).retirees ?? 0} retirées</span></button>`).join("")}</div>
+    <div class="grille deux">
+      <section><h3 class="titre-bloc">Arrivées par mois</h3>${mois.length ? G.colonnes(mois.map((m) => ({ x: m.mois.slice(2), y: m.nouvelles }))) : "<p class='rien'>Pas encore d'historique.</p>"}</section>
+      <section><h3 class="titre-bloc">Retirées par mois</h3>${mois.length ? G.colonnes(mois.map((m) => ({ x: m.mois.slice(2), y: m.retirees })), { doux: true }) : ""}</section>
+    </div>
+    ${derniers.length ? `<div class="grille ${derniers.length >= 3 ? "trois" : "deux"}" style="margin-top:14px">${derniers.map((m) =>
+      `<section><h3 class="titre-bloc">${esc(m.mois)} — ${m.nouvelles} offres</h3>${m.termes?.length ? G.barres(m.termes.map((t) => ({ nom: t.nom, valeur: t.part })), { unite: " %" }) : "<p class='rien'>—</p>"}</section>`).join("")}</div>` : ""}
+
+    <h2 class="section" style="margin-top:26px">Les offres retirées</h2>
+    <div class="barre-outils" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
+      <div class="recherche"><input id="h-q" type="search" placeholder="Titre, entreprise, lieu…" value="${esc(q)}"></div>
+      <div class="jetons">${[["", "Toutes"], ["LAB", "Labo"], ["DATA", "Data"], ["PHARMA", "Pharma"], ["AUTRE", "Autres"]].map(([k, l]) =>
+        `<button class="jeton ${k === famille ? "actif" : ""}" data-hfam="${k}">${l}${k ? ` <small>${liste.par_famille?.[k] || 0}</small>` : ""}</button>`).join("")}</div>
+      <span style="color:var(--texte-3);font-size:12.5px">${G.fmt(liste.correspondantes)} offre(s)${liste.correspondantes > liste.offres.length ? `, ${liste.offres.length} affichées` : ""}</span>
+    </div>
+    <div class="tableau"><table><thead><tr><th>Retirée le</th><th>Offre</th><th>Entreprise</th><th>Lieu</th><th>Famille</th><th>Source</th><th class="droite">Vie (j)</th><th class="droite">Texte</th></tr></thead>
+      <tbody id="h-corps">${liste.offres.map((o) => `<tr data-hid="${o.id}" style="cursor:pointer">
+        <td class="num">${esc(o.retiree_le)}</td><td>${esc(o.titre)}</td><td>${esc(o.entreprise)}</td><td>${esc(o.lieu.slice(0, 28))}</td>
+        <td>${esc(FAM[o.famille] || o.famille)}</td><td>${esc(o.source)}</td><td class="droite num">${o.duree_jours ?? "—"}</td>
+        <td class="droite num">${o.texte_chars >= 300 ? "✓" : "—"}</td></tr>`).join("") || `<tr><td colspan="8" class="rien">Aucune offre retirée ne correspond.</td></tr>`}</tbody></table></div>`;
+
+  $$("[data-famevo]").forEach((b) => b.addEventListener("click", () => { etatHistorique.famEvo = b.dataset.famevo; RENDUS.historique(); }));
+  $$("[data-hfam]").forEach((b) => b.addEventListener("click", () => { etatHistorique.famille = b.dataset.hfam; RENDUS.historique(); }));
+  let minuteur = null;
+  $("#h-q")?.addEventListener("input", (e) => { clearTimeout(minuteur); minuteur = setTimeout(() => { etatHistorique.q = e.target.value; RENDUS.historique().then(() => { const i = $("#h-q"); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }); }, 250); });
+  $$("#h-corps tr[data-hid]").forEach((tr) => tr.addEventListener("click", () => ouvrirRetiree(tr.dataset.hid)));
+};
+
+async function ouvrirRetiree(id) {
+  const o = await lire(`/api/historique/offre?id=${id}`, { frais: true });
+  if (!o || o.erreur) return;
+  const p = $("#panneau");
+  p.innerHTML = `
+    <button class="fermer" aria-label="Fermer">×</button>
+    <h2>${esc(o.titre)}</h2><div class="employeur">${esc(o.entreprise)} — ${esc(o.lieu)}</div>
+    <div class="badges"><span class="badge ${o.active ? "neutre" : "rouge"}">${o.active ? "Active" : "Retirée le " + esc(o.retiree_le)}</span>
+      <span class="badge neutre">Vue du ${esc(o.premiere_vue)}</span><span class="badge neutre">${esc(o.source)}</span>${o.contrat ? `<span class="badge neutre">${esc(o.contrat)}</span>` : ""}</div>
+    ${o.url ? `<p><a class="lien" href="${esc(o.url)}" target="_blank" rel="noopener">Page d'origine ↗</a></p>` : ""}
+    <h3 class="titre-bloc">Description conservée</h3>
+    <div style="white-space:pre-wrap;font-size:13px;line-height:1.55;color:var(--texte-2)">${esc(o.texte || "— aucun texte n'avait été récupéré pour cette offre —")}</div>`;
+  p.hidden = false; $("#voile").hidden = false;
+  p.querySelector(".fermer").addEventListener("click", fermerPanneau);
+}
 
 /* =============================================================== HANDOFF */
 

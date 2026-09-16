@@ -386,3 +386,8 @@ tbody tr.cochee { background: var(--accent-fond); }
 .bouton-triage.suite { border-style: dashed; }
 .bouton-triage.suite.actif { border-style: solid; }
 .titre-bloc { font-size: 13px; margin: 0 0 8px; font-weight: 600; }
+
+.grille.trois { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.badge.rouge { background: var(--rouge-fond); color: var(--rouge); }
+.jetons { display: flex; gap: 6px; flex-wrap: wrap; }
+.tableau td.num { white-space: nowrap; }

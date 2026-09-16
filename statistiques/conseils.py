@@ -66,7 +66,7 @@ from statistiques.categories import FAMILLES, LIBELLES, categoriser, famille
 from statistiques.marche import _ville
 
 
-CONSEILS_VERSION = "1.0"
+CONSEILS_VERSION = "1.1"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -303,12 +303,35 @@ class _Agregat:
         self.villes = Counter(); self.sources = Counter()
         self.annees = []; self.salaires = []; self.durees_de_vie = []
         self.semaines = Counter(); self.jours = Counter(); self.heures = Counter()
+        # V1.1 — l'historique : une offre retiree reste en base (is_active 0)
+        # avec son texte. On compte, par mois, ce qui est arrive et ce qui a
+        # ete retire, et quels termes etaient demandes — c'est ce qui permet
+        # de voir bouger la demande, pas seulement de la photographier.
+        self.actives = 0; self.retirees = 0
+        self.mois_nouvelles = Counter(); self.mois_retirees = Counter()
+        self.mois_termes: dict[str, Counter] = defaultdict(Counter)
 
     def ajouter(self, o: dict, texte: str) -> None:
         self.n += 1
-        for nom in _presents(texte, _OUTILS): self.outils[nom] += 1
-        for nom in _presents(texte, _NORMES): self.normes[nom] += 1
+        outils = _presents(texte, _OUTILS)
+        normes = _presents(texte, _NORMES)
+        for nom in outils: self.outils[nom] += 1
+        for nom in normes: self.normes[nom] += 1
         for nom in _presents(texte, _METHODES): self.methodes[nom] += 1
+
+        if o.get("is_active"):
+            self.actives += 1
+        else:
+            self.retirees += 1
+            fin = _date(o.get("last_seen"))
+            if fin:
+                self.mois_retirees[fin.strftime("%Y-%m")] += 1
+        debut = _date(o.get("first_seen"))
+        if debut:
+            mois = debut.strftime("%Y-%m")
+            self.mois_nouvelles[mois] += 1
+            for nom in outils | normes:
+                self.mois_termes[mois][nom] += 1
         for nom in _presents(texte, _QUALITES): self.qualites[nom] += 1
         for nom in _presents(texte, _DIPLOMES): self.diplomes[nom] += 1
 
@@ -359,6 +382,24 @@ class _Agregat:
             if debut and fin and fin >= debut:
                 self.durees_de_vie.append((fin - debut).days)
 
+    def historique(self) -> dict:
+        """Par mois : offres arrivees, offres retirees, termes les plus demandes."""
+        mois = sorted(set(self.mois_nouvelles) | set(self.mois_retirees))
+        return {
+            "actives": self.actives,
+            "retirees": self.retirees,
+            "par_mois": [
+                {
+                    "mois": m,
+                    "nouvelles": self.mois_nouvelles.get(m, 0),
+                    "retirees": self.mois_retirees.get(m, 0),
+                    "termes": _classer(self.mois_termes.get(m, Counter()),
+                                       self.mois_nouvelles.get(m, 0), 8),
+                }
+                for m in mois
+            ],
+        }
+
     def resultat(self, competences: set[str]) -> dict:
         n = self.n
         demandes = self.outils + self.normes + self.methodes
@@ -399,12 +440,13 @@ class _Agregat:
             "duree_de_vie": {
                 "offres_disparues": len(self.durees_de_vie),
                 "mediane_jours": median(self.durees_de_vie) if self.durees_de_vie else None,
-                # La purge du 10 septembre 2026 a supprime les offres
-                # disparues depuis plus de sept jours. Ce qui reste est donc
-                # biaise vers les vies courtes : c'est une estimation BASSE,
-                # et l'interface doit le dire.
-                "estimation": "basse — les offres disparues depuis plus de 7 jours sont purgées",
+                # Avant le 16 septembre 2026, la purge supprimait les offres
+                # disparues depuis plus de sept jours : l'historique ancien est
+                # biaise vers les vies courtes. Depuis, les offres retirees sont
+                # conservees ; l'estimation se corrige au fil des semaines.
+                "estimation": "basse pour l'historique d'avant le 16/09/2026 — depuis, les offres retirées sont conservées",
             },
+            "historique": self.historique(),
             "a_valoriser": a_valoriser,
             "a_acquerir": a_acquerir,
         }
