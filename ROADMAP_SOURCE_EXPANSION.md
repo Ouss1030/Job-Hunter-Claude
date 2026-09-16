@@ -51,6 +51,8 @@ Demander un accès à l'API `Vacatures` (ibm-api-key). En attendant, 8 874 offre
 
 **Outil prêt le 16/09/2026 :** `sources/bce_seeds_v1.py` lit le ZIP Open Data de la BCE (compte gratuit sur kbopub.economie.fgov.be, ~500 Mo), croise activité NACE × statut actif × site web déclaré, et produit les graines (`config/discovery_seeds_bce.json`), puis lance la découverte par tranches. Il manque le fichier : l'inscription est personnelle.
 
+**Première campagne le 16/09/2026** (fichier 0484) : 113 553 entreprises dans les NACE cibles, 2 390 actives avec site web, 1 215 passées au moteur (cabinets médicaux écartés) → 25 sources actives (24 nouvelles), 70 offres belges validées ; 1 166 sans voie publique (PME sans portail carrière). Rendement : 2 %, soit un employeur par 50 domaines — la BCE trouve ce que rien d'autre ne trouve (Allnex, Kronos, Stepan, Covestro, Stora Enso, Intertek, Laborelec, SAS, SDL), mais le gros de l'emploi PME reste sur le Forem. Prochaine tranche possible : NACE 62/63 (informatique, données) et unités d'établissement.
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-16T16:20:35+02:00",
+ "updated_at": "2026-09-16T17:03:29+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -61,6 +61,34 @@
   {
    "ats": "CVWAREHOUSE",
    "connector": "CVWAREHOUSE",
+   "identifier": "https://jobpage.cvwarehouse.com/?companyGuid=4c9ad59f-09b0-4d0f-8489-35ff0dd3ff60",
+   "label": "Biotalys",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:46:35+02:00",
+   "jobs_total": 2,
+   "jobs_be": null,
+   "discovered_by": "bce:72109",
+   "career_url": "https://www.biotalys.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-16T16:46:35+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://ict-emmaus.cvw.io/",
+   "label": "Emmaüs",
+   "enabled": true,
+   "verified_at": "2026-09-16T17:03:29+02:00",
+   "jobs_total": 2,
+   "jobs_be": null,
+   "discovered_by": "bce:86101",
+   "career_url": "https://www.emmaus.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-16T17:03:29+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
    "identifier": "https://jobpage.cvwarehouse.com/?companyGuid=f17015c2-fb27-4f27-a47a-7ad2e619c68a",
    "label": "FONDATION AUTISME LUXEMBOURG",
    "enabled": true,
@@ -85,6 +113,20 @@
    "career_url": "https://www.greenyard.group/careers",
    "notes": "",
    "first_seen": "2026-09-16T15:20:01+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://demick.cvw.io/",
+   "label": "Heropbeuring",
+   "enabled": true,
+   "verified_at": "2026-09-16T17:03:29+02:00",
+   "jobs_total": 3,
+   "jobs_be": null,
+   "discovered_by": "bce:86101",
+   "career_url": "https://demick.cvw.io/?lang=nl-BE",
+   "notes": "",
+   "first_seen": "2026-09-16T17:03:29+02:00"
   },
   {
    "ats": "CVWAREHOUSE",
@@ -285,6 +327,34 @@
   {
    "ats": "ICIMS",
    "connector": "ICIMS",
+   "identifier": "globalcareers-sas.icims.com",
+   "label": "Nv Sas Institute Sa",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:57:47+02:00",
+   "jobs_total": 39,
+   "jobs_be": null,
+   "discovered_by": "bce:72220",
+   "career_url": "https://www.sas.com/en_us/careers.html",
+   "notes": "",
+   "first_seen": "2026-09-16T16:57:47+02:00"
+  },
+  {
+   "ats": "ICIMS",
+   "connector": "ICIMS",
+   "identifier": "globalcareers-rws.icims.com",
+   "label": "Sdl Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:57:38+02:00",
+   "jobs_total": 40,
+   "jobs_be": null,
+   "discovered_by": "bce:72220",
+   "career_url": "https://www.rws.com/about/careers/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:57:38+02:00"
+  },
+  {
+   "ats": "ICIMS",
+   "connector": "ICIMS",
    "identifier": "careers-bevifr-vincotte.icims.com",
    "label": "Vinçotte International",
    "enabled": true,
@@ -393,6 +463,34 @@
    "career_url": "https://axintor.be/en/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:01:47+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.certinergie-jobs.be",
+   "label": "Certinergie",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:34:42+02:00",
+   "jobs_total": 13,
+   "jobs_be": 3,
+   "discovered_by": "bce:71209",
+   "career_url": "https://www.certinergie-jobs.be/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:34:42+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "corbit.be",
+   "label": "Corbit",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:54:27+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:72220",
+   "career_url": "https://corbit.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-16T16:54:27+02:00"
   },
   {
    "ats": "JSONLD",
@@ -775,6 +873,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "jobs.orangecyberdefense.com",
+   "label": "Orange Cyberdefense Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:56:56+02:00",
+   "jobs_total": 38,
+   "jobs_be": 1,
+   "discovered_by": "bce:72220",
+   "career_url": "https://jobs.orangecyberdefense.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:56:56+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "jobs.oxfam.be",
    "label": "Oxfam",
    "enabled": true,
@@ -943,6 +1055,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "celestetic.com",
+   "label": "Teonia",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:29:21+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:20420",
+   "career_url": "https://celestetic.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-16T16:29:21+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "www.torfs.be",
    "label": "Torfs",
    "enabled": true,
@@ -981,6 +1107,20 @@
    "career_url": "https://ufinity.be/jobs/",
    "notes": "",
    "first_seen": "2026-09-16T16:19:11+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.vaikon.com",
+   "label": "Vaikon",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:38:53+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:71209",
+   "career_url": "https://www.vaikon.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-16T16:38:53+02:00"
   },
   {
    "ats": "JSONLD",
@@ -1082,6 +1222,24 @@
    "ats": "ORACLE_CLOUD",
    "connector": "ORACLE_CLOUD",
    "identifier": {
+    "host": "hcog.fa.em2.oraclecloud.com",
+    "lang": "en",
+    "site": "CX_2001"
+   },
+   "label": "Intertek Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:36:48+02:00",
+   "jobs_total": 391,
+   "jobs_be": 0,
+   "discovered_by": "bce:71209",
+   "career_url": "https://www.intertek.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:36:48+02:00"
+  },
+  {
+   "ats": "ORACLE_CLOUD",
+   "connector": "ORACLE_CLOUD",
+   "identifier": {
     "host": "ebza.fa.em2.oraclecloud.com",
     "lang": "nl",
     "site": "CX_1001"
@@ -1127,6 +1285,20 @@
   {
    "ats": "PERSONIO",
    "connector": "PERSONIO",
+   "identifier": "ilias-solutions",
+   "label": "Ilias Solutions",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:55:29+02:00",
+   "jobs_total": 15,
+   "jobs_be": 10,
+   "discovered_by": "bce:72220",
+   "career_url": "https://www.ilias-solutions.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:55:29+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
    "identifier": "intigriti",
    "label": "Intigriti",
    "enabled": true,
@@ -1165,6 +1337,20 @@
    "career_url": "https://www.plan-international.be/careers",
    "notes": "",
    "first_seen": "2026-09-15T17:42:45+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
+   "identifier": "stp-one",
+   "label": "Septeo Corporate Lawyer Solutions Be",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:41:44+02:00",
+   "jobs_total": 9,
+   "jobs_be": 0,
+   "discovered_by": "bce:72100",
+   "career_url": "https://www.stp.one/en/careers",
+   "notes": "",
+   "first_seen": "2026-09-16T16:41:44+02:00"
   },
   {
    "ats": "PERSONIO",
@@ -1281,6 +1467,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "axi",
+   "label": "Avva Systems",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:53:19+02:00",
+   "jobs_total": 18,
+   "jobs_be": 18,
+   "discovered_by": "bce:72220",
+   "career_url": "https://itprovider.be/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:41:33+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "berenschot",
    "label": "Berenschot",
    "enabled": true,
@@ -1361,6 +1561,20 @@
    "career_url": "https://www.habeas.be/",
    "notes": "",
    "first_seen": "2026-09-16T16:02:43+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
+   "identifier": "superellipse",
+   "label": "Honderdvijftien",
+   "enabled": true,
+   "verified_at": "2026-09-16T17:03:16+02:00",
+   "jobs_total": 5,
+   "jobs_be": 5,
+   "discovered_by": "bce:72600",
+   "career_url": "https://www.superellipse.be/team",
+   "notes": "",
+   "first_seen": "2026-09-16T17:03:16+02:00"
   },
   {
    "ats": "RECRUITEE",
@@ -1547,6 +1761,20 @@
   {
    "ats": "SMARTRECRUITERS",
    "connector": "SMARTRECRUITERS",
+   "identifier": "ni",
+   "label": "Sopra Steria Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:43:02+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "bce:72100",
+   "career_url": "https://careers.soprasteria.be/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:43:02+02:00"
+  },
+  {
+   "ats": "SMARTRECRUITERS",
+   "connector": "SMARTRECRUITERS",
    "identifier": "SopraSteria1",
    "label": "Soprasteria",
    "enabled": true,
@@ -1576,15 +1804,29 @@
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
    "identifier": "careers.agfa.com",
-   "label": "Agfa",
+   "label": "Agfa-Gevaert",
    "enabled": true,
-   "verified_at": "2026-09-15T16:45:54+02:00",
-   "jobs_total": 77,
+   "verified_at": "2026-09-16T16:30:24+02:00",
+   "jobs_total": 78,
    "jobs_be": null,
-   "discovered_by": "seed:pharma_biotech_medtech",
+   "discovered_by": "bce:20590",
    "career_url": "https://careers.agfa.com",
    "notes": "",
    "first_seen": "2026-09-15T15:58:36+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.allnex.com",
+   "label": "Allnex Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:26:53+02:00",
+   "jobs_total": 46,
+   "jobs_be": null,
+   "discovered_by": "bce:20160",
+   "career_url": "https://careers.allnex.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:26:53+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -1725,6 +1967,20 @@
    "career_url": "https://jobs.belgiantrain.be/",
    "notes": "",
    "first_seen": "2026-09-15T15:53:42+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.engie.com",
+   "label": "Belgisch Laboratorium Van Elektriciteitsindustrie",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:35:26+02:00",
+   "jobs_total": 1702,
+   "jobs_be": null,
+   "discovered_by": "bce:71209",
+   "career_url": "https://jobs.engie.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:35:26+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -1925,6 +2181,20 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.kronosww.com",
+   "label": "Kronos Europe",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:26:32+02:00",
+   "jobs_total": 24,
+   "jobs_be": null,
+   "discovered_by": "bce:20120",
+   "career_url": "https://www.kronosww.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:26:32+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "jobs.letec.be",
    "label": "Letec",
    "enabled": true,
@@ -2037,6 +2307,20 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.sap.com",
+   "label": "Sap Belgium - Systems Applications And Products",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:57:42+02:00",
+   "jobs_total": 1007,
+   "jobs_be": null,
+   "discovered_by": "bce:72220",
+   "career_url": "https://jobs.sap.com/?locale=en_US",
+   "notes": "",
+   "first_seen": "2026-09-16T16:57:42+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "careers.solvay.com",
    "label": "Solvay",
    "enabled": true,
@@ -2061,6 +2345,20 @@
    "career_url": null,
    "notes": "",
    "first_seen": "2026-09-16T16:09:34+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.stepan.com",
+   "label": "Stepan Deutschland Gmbh",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:30:51+02:00",
+   "jobs_total": 27,
+   "jobs_be": null,
+   "discovered_by": "bce:20590",
+   "career_url": "https://jobs.stepan.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:30:51+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -2398,6 +2696,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "covestro",
+    "wd": "wd3",
+    "site": "cov_external"
+   },
+   "label": "Covestro",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:26:35+02:00",
+   "jobs_total": 2,
+   "jobs_be": 2,
+   "discovered_by": "bce:20140",
+   "career_url": "https://www.covestro.com/",
+   "notes": "",
+   "first_seen": "2026-09-16T16:26:35+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "demegroup",
     "wd": "wd3",
     "site": "careers_external"
@@ -2627,6 +2943,24 @@
    "career_url": "https://www.sonaca.com/careers-sonaca-north-america/",
    "notes": "",
    "first_seen": "2026-09-15T16:01:47+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "storaenso",
+    "wd": "wd502",
+    "site": "Stora_Enso_site_opportunities"
+   },
+   "label": "Stora Enso Langerbrugge",
+   "enabled": true,
+   "verified_at": "2026-09-16T16:31:19+02:00",
+   "jobs_total": 5,
+   "jobs_be": 4,
+   "discovered_by": "bce:21121",
+   "career_url": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
+   "notes": "",
+   "first_seen": "2026-09-16T16:31:19+02:00"
   },
   {
    "ats": "WORKDAY",
