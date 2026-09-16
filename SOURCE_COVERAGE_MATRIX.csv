@@ -169,20 +169,20 @@ ACCENT_STUDENT;etudiant;OUI;NON (rien au dernier run);backlog_validator_v14;"1 a
 ASAP_STUDENT;etudiant;OUI;INCONNU (jamais collectee);backlog_validator_v14;-;declaree mais jamais une offre en base;;;;
 RECRUITEE;ATS;OUI;NON (rien au dernier run);registry_ats_v1;"248 actives / 265 vues ; 256 avec description";aucune offre au dernier run;;;;
 GREENHOUSE;ATS;OUI;NON (rien au dernier run);registry_ats_v1;"48 actives / 51 vues ; 51 avec description";aucune offre au dernier run;;;;
-WORKDAY_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;388 offres BE validees;declaree mais jamais une offre en base;;;;
+WORKDAY_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;408 offres BE validees;declaree mais jamais une offre en base;;;;
 SUCCESSFACTORS_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
 PHENOM_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
 VDAB;service public;OUI;DESACTIVEE (INCONNU (jamais collectee));registry_ats_v1;-;"pages JS ; API interdite par robots ; desactive";;;;
 LEVER;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;"3 actives / 3 vues ; 3 avec description";aucune offre au dernier run;;;;
 ASHBY;ATS;OUI;"VALIDE (decouverte) ; 2 employeurs";registry_expansion_v1;"1 actives / 1 vues ; 1 avec description";aucune offre au dernier run;;;;
 WORKABLE;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;"3 actives / 3 vues ; 0 avec description";aucune offre au dernier run;;;;
-PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 9 employeurs";registry_expansion_v1;"17 actives / 17 vues ; 14 avec description";aucune offre au dernier run;;;;
+PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 13 employeurs";registry_expansion_v1;"17 actives / 17 vues ; 14 avec description";aucune offre au dernier run;;;;
 ORACLE_CLOUD;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"148 actives / 148 vues ; 147 avec description";aucune offre au dernier run;;;;
 CVWAREHOUSE;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"206 actives / 206 vues ; 198 avec description";aucune offre au dernier run;;;;
 ICIMS;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"243 actives / 243 vues ; 243 avec description";aucune offre au dernier run;;;;
 TEAMTAILOR;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;12 offres BE validees;declaree mais jamais une offre en base;;;;
-HTML_SITES;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;20 offres BE validees;declaree mais jamais une offre en base;;;;
-JSONLD_SITES;universel;OUI;"VALIDE (decouverte) ; 56 employeurs";registry_expansion_v1;"3205 actives / 3359 vues ; 3332 avec description";aucune offre au dernier run;;;;
+HTML_SITES;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;38 offres BE validees;declaree mais jamais une offre en base;;;;
+JSONLD_SITES;universel;OUI;"VALIDE (decouverte) ; 59 employeurs";registry_expansion_v1;"3205 actives / 3359 vues ; 3332 avec description";aucune offre au dernier run;;;;
 VDAB (direct);service public;PARTIEL;NON;"sitemap public (pages vides, JS ; /api interdit par robots.txt)";"0 direct ; 8 874 via Actiris (republication)";API officielle sur cles (ibm-api-key);tres elevee : ~40 % des offres belges;"API officielle VDAB (demande de cles partenaire) ; en attendant republication Actiris";1;"Demander un acces API VDAB ; conserver la voie Actiris VDAB_FOREM"
 EURES;international;NON;-;-;0;"portail JS ; API interne non documentee";moyenne : beaucoup de doublons Forem/VDAB/Actiris;EURES Job Vacancy API (acces institutionnel) ou decouverte via Actiris/Forem;3;"Suivre ; pas de voie publique propre aujourd'hui"
 LinkedIn Jobs;job board;NON;-;-;0;"conditions d'utilisation interdisent la collecte automatisee ; anti-bot";elevee en decouverte (URL employeur), faible en canonique;"decouverte seulement : URL de candidature externe -> ATSDetector ; jamais de scraping";2;"Ne pas scraper ; utiliser LinkedIn comme signal de decouverte manuel (coller une URL)"
@@ -197,7 +197,7 @@ Student.be / StudentJob / NOWJOBS;etudiant;PARTIEL;OUI;HTML (student_sources_v1)
 ATS BULLHORN;ATS sans connecteur;DETECTE;NON;-;27 employeurs detectes : Hydreau, Multidal, Communicatie, Informatica En Service Architecten, Euregio.Net, Produweb, Network - Technology - Facilities - Software.;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS CVWAREHOUSE;ATS sans connecteur;DETECTE;NON;-;7 employeurs detectes : Provincieantwerpen, Vlaamsbrabant, Hogent, Thomasmore, Azturnhout, Vivalia;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS TALENTSOFT;ATS sans connecteur;DETECTE;NON;-;6 employeurs detectes : Djm Digital, Akkodis, Euro Engineering, ABLS - Le Houppier, Center Parcs Ardennen - Center Parcs Ard, Kpmg;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
-ATS CARERIX;ATS sans connecteur;DETECTE;NON;-;5 employeurs detectes : Ascento, Oxida, Talentus, Talentus, Caritasinternational;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS CARERIX;ATS sans connecteur;DETECTE;NON;-;6 employeurs detectes : Ascento, Oxida, Talentus, Oxida, Talentus, Caritasinternational;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS ORACLE_CLOUD;ATS sans connecteur;DETECTE;NON;-;5 employeurs detectes : Mil, Aperam, Carmeuse, Euroclear, Telenet;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS RADANCY;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : Sdworx, Sanofi, Cargill, Ing;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS ICIMS;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : Jandenul, Pepsico, Bdo, Axa;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json

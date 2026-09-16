@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-16T19:20:49+02:00",
+ "updated_at": "2026-09-17T01:09:50+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -299,6 +299,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.ascento.be/nl/",
+   "label": "Ascento",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:10+02:00",
+   "jobs_total": 10,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.ascento.be/nl/",
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:10+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.bimona.be/vacature-overzicht/categorie/life-sciences",
+   "label": "Bimona",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:27+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.bimona.be/vacature-overzicht/categorie/life-sciences",
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:27+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.brabantwallon.be/le-brabant-wallon/administration/emploi/postuler/offres-demploi-en-cours",
    "label": "Brabantwallon",
    "enabled": true,
@@ -309,6 +337,34 @@
    "career_url": "https://www.brabantwallon.be/le-brabant-wallon/administration/emploi/postuler/offres-demploi-en-cours",
    "notes": "",
    "first_seen": "2026-09-16T19:19:56+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://careers.ing.com/en/search-jobs",
+   "label": "ING",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:15+02:00",
+   "jobs_total": 16,
+   "jobs_be": 1,
+   "discovered_by": "original:v417",
+   "career_url": "https://careers.ing.com/en/search-jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:15+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.cegeka.com/en/be/jobs/our-stories",
+   "label": "Cegeka",
+   "enabled": false,
+   "verified_at": "2026-09-17T01:08:29+02:00",
+   "jobs_total": 37,
+   "jobs_be": 0,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.cegeka.com/en/be/jobs/our-stories",
+   "notes": "cegeka.com/en/be/jobs : liste d'offres rendue par HubSpot/JavaScript, seules les pages 'about' et 'areas of expertise' sont lisibles. Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T01:08:29+02:00"
   },
   {
    "ats": "HTML",
@@ -370,6 +426,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://jobs.trevalco.com/en_GB/jobs",
+   "label": "Trevalco",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:37+02:00",
+   "jobs_total": 6,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://jobs.trevalco.com/en_GB/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:37+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.namur.be/fr",
    "label": "Namur",
    "enabled": false,
@@ -380,6 +450,20 @@
    "career_url": "https://www.namur.be/fr",
    "notes": "namur.be/fr : pages d'information (Cite des Metiers, Le Forem, Travailler a la Ville) ; les offres de la Ville sont ailleurs (a retrouver). Desactive le 17/09/2026.",
    "first_seen": "2026-09-16T19:19:45+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.portofantwerpbruges.com/jobs/fr",
+   "label": "Port of Antwerp-Bruges",
+   "enabled": false,
+   "verified_at": "2026-09-17T01:08:59+02:00",
+   "jobs_total": 10,
+   "jobs_be": 0,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.portofantwerpbruges.com/jobs/fr",
+   "notes": "portofantwerpbruges.com/jobs/fr/offres-demploi : liste en JavaScript, pages HTML = presentation. Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T01:08:59+02:00"
   },
   {
    "ats": "HTML",
@@ -398,6 +482,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.strand.be/en",
+   "label": "Strand",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:09+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.strand.be/en",
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:09+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.ugent.be/nl/jobs",
+   "label": "UGent",
+   "enabled": false,
+   "verified_at": "2026-09-17T01:09:19+02:00",
+   "jobs_total": 6,
+   "jobs_be": 0,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.ugent.be/nl/jobs",
+   "notes": "ugent.be/nl/jobs et jobs.ugent.be : liste en JavaScript. Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:19+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://jobs.unamur.be/liste_emplois",
    "label": "Unamur",
    "enabled": true,
@@ -408,6 +520,34 @@
    "career_url": "https://jobs.unamur.be/liste_emplois",
    "notes": "",
    "first_seen": "2026-09-16T19:19:59+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://jobs.uzleuven.be/",
+   "label": "UZ Leuven",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:25+02:00",
+   "jobs_total": 8,
+   "jobs_be": 2,
+   "discovered_by": "original:v417",
+   "career_url": "https://jobs.uzleuven.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:25+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.vivaldisinterim.be/fr/jobs",
+   "label": "Vivaldis Interim",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:32+02:00",
+   "jobs_total": 38,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://www.vivaldisinterim.be/fr/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:32+02:00"
   },
   {
    "ats": "ICIMS",
@@ -576,6 +716,20 @@
    "career_url": "https://axintor.be/en/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:01:47+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "careers.planet-pharma.com",
+   "label": "Planet Pharma",
+   "enabled": false,
+   "verified_at": "2026-09-17T01:08:23+02:00",
+   "jobs_total": 500,
+   "jobs_be": 0,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "careers.planet-pharma.com : recruteur pharma mondial, 500 URL pour 1 offre belge — rendement trop faible. Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T01:08:23+02:00"
   },
   {
    "ats": "JSONLD",
@@ -842,6 +996,20 @@
    "career_url": "https://jobjets.be/vacatures",
    "notes": "",
    "first_seen": "2026-09-16T16:09:25+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "jobsin.brussels",
+   "label": "Jobsin Brussels",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:42+02:00",
+   "jobs_total": 8665,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://jobsin.brussels/",
+   "notes": "Job board affaires europeennes / ONG a Bruxelles ; 8 665 URL dont archives depuis 2024, les plus recentes lues d'abord (JSON-LD V1.4).",
+   "first_seen": "2026-09-17T01:08:42+02:00"
   },
   {
    "ats": "JSONLD",
@@ -1196,6 +1364,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "travaillerchezaccent.be",
+   "label": "Accent Jobs (site)",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:50+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://travaillerchezaccent.be/offres-demploi/",
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:50+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "www.trifinance.com",
    "label": "Trifinance",
    "enabled": true,
@@ -1384,6 +1566,20 @@
   {
    "ats": "PERSONIO",
    "connector": "PERSONIO",
+   "identifier": "christundcompany",
+   "label": "Christ & Company",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:23+02:00",
+   "jobs_total": 7,
+   "jobs_be": 1,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:23+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
    "identifier": "greenpeace",
    "label": "Greenpeace",
    "enabled": true,
@@ -1440,6 +1636,34 @@
   {
    "ats": "PERSONIO",
    "connector": "PERSONIO",
+   "identifier": "monument-re-insurance",
+   "label": "Monument Re",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:44+02:00",
+   "jobs_total": 9,
+   "jobs_be": 5,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:44+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
+   "identifier": "nobilis",
+   "label": "Nobilis",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:44+02:00",
+   "jobs_total": 8,
+   "jobs_be": 1,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:44+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
    "identifier": "plan-international",
    "label": "Plan-International",
    "enabled": true,
@@ -1464,6 +1688,20 @@
    "career_url": "https://www.stp.one/en/careers",
    "notes": "",
    "first_seen": "2026-09-16T16:41:44+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
+   "identifier": "tablemedia",
+   "label": "Table Media",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:03+02:00",
+   "jobs_total": 14,
+   "jobs_be": 1,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:03+02:00"
   },
   {
    "ats": "PERSONIO",
@@ -2737,6 +2975,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "alcon",
+    "wd": "wd5",
+    "site": "careers_alcon"
+   },
+   "label": "Alcon",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:28+02:00",
+   "jobs_total": 4,
+   "jobs_be": 4,
+   "discovered_by": "original:v417",
+   "career_url": "https://alcon.wd5.myworkdayjobs.com/careers_alcon",
+   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:28+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "argenx",
     "wd": "wd3",
     "site": "External_Careers"
@@ -2863,6 +3119,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "gilead",
+    "wd": "wd1",
+    "site": "gileadcareers"
+   },
+   "label": "Gilead",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:28+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "original:v417",
+   "career_url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:28+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "jj",
     "wd": "wd5",
     "site": "JJ"
@@ -2881,6 +3155,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "jll",
+    "wd": "wd1",
+    "site": "jllcareers"
+   },
+   "label": "JLL",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:28+02:00",
+   "jobs_total": 9,
+   "jobs_be": 6,
+   "discovered_by": "original:v417",
+   "career_url": "https://jll.wd1.myworkdayjobs.com/jllcareers",
+   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:28+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "lhoist",
     "wd": "wd3",
     "site": "Careers"
@@ -2894,6 +3186,24 @@
    "career_url": "https://www.lhoist.com/en/about-us/careers",
    "notes": "",
    "first_seen": "2026-09-15T16:00:02+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "mastercard",
+    "wd": "wd1",
+    "site": "CorporateCareers"
+   },
+   "label": "Mastercard",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:28+02:00",
+   "jobs_total": 9,
+   "jobs_be": 9,
+   "discovered_by": "original:v417",
+   "career_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
+   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:28+02:00"
   },
   {
    "ats": "WORKDAY",

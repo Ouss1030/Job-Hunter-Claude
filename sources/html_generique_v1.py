@@ -91,6 +91,8 @@ _TITRES_LISTE = [
     r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"
     r"spontane sollicitatie|offres de stages?|stages? (?:au sein|pour)|nos valeurs|our values|onze waarden)\b",
     r"^\s*\d+\s*$",
+    r"^\s*(?:pourquoi|waarom|why|about|à propos|over ons|qui sommes[- ]nous|wie zijn wij|who we are|our stories|"
+    r"nos équipes|onze teams|our teams|témoignages|getuigenissen|testimonials|avantages|voordelen|benefits)\b",
 ]
 _RE_TITRES_LISTE = [re.compile(p, re.I) for p in _TITRES_LISTE]
 _BALISES_BRUIT = ("nav", "header", "footer", "aside", "script", "style", "form", "noscript", "iframe", "svg", "button")
@@ -180,7 +182,8 @@ def liens_offres(listing_url: str, html: str, lien_regex: str | None = None) -> 
         p = urlsplit(u)
         if p.scheme not in ("http", "https") or p.netloc.lower().removeprefix("www.") != hote:
             continue
-        if u.rstrip("/") == base.rstrip("/") or u in vus:
+        u = u.rstrip("/")  # /vacatures/x et /vacatures/x/ : la meme offre (Ascento)
+        if u == base.rstrip("/") or u in vus:
             continue
         ok = motif.search(u) if motif else ((_RE_URL_OFFRE.search(p.path) or _RE_URL_OFFRE_SEP.search(p.path))
                                             and not _RE_EXCLURE.search(p.path))
@@ -281,6 +284,10 @@ def collect_html_site(company: dict, session=None, include_unknown: bool = True,
     listing_url = _clean(company.get("identifier") or company.get("listing_url"))
     label = _clean(company.get("label")) or urlsplit(listing_url).netloc
     hote = urlsplit(listing_url).netloc.lower()
+    # Meme regle que le JSON-LD : sans preuve belge dans la page, une offre n'est gardee
+    # que sur un hote .be (careers.ing.com listait une offre polonaise sans lieu).
+    if company.get("include_unknown") is None and not hote.removeprefix("www.").endswith(".be"):
+        include_unknown = False
     meta = {"host": hote, "label": label, "liens": 0, "cache": 0, "visitees": 0, "be": 0,
             "hors_be": 0, "rejetees": 0, "echecs": 0, "error": None, "motifs": {}}
     try:

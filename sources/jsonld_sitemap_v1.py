@@ -44,7 +44,7 @@ from sources.location_belgium import detect_belgium_multi, BE_CONFIRMED, BE_LIKE
 from sources.phenom_ats_v1 import extract_job_posting, html_to_text, _location_text
 
 
-JSONLD_SITEMAP_VERSION = "1.3"
+JSONLD_SITEMAP_VERSION = "1.4"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "jsonld_sites_cache"
@@ -168,7 +168,28 @@ def urls_offres(host: str, session, max_urls: int = 2000,
             file = [f for f in file if not f.endswith(SITEMAPS_USUELS)]
     if not offres:
         return [], "aucune URL d'offre dans les sitemaps"
-    return list(offres.items()), None
+    return plus_recentes_d_abord(list(offres.items())), None
+
+
+_RE_DATE_URL = re.compile(r"(?<!\d)(20\d\d)[-_/.]?(0[1-9]|1[0-2])(?:[-_/.]?(0[1-9]|[12]\d|3[01]))?(?!\d)")
+
+
+def plus_recentes_d_abord(entrees: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """
+    Un sitemap sans lastmod mais dont les URL portent une date (jobsin.brussels :
+    /jobs/…-2026-09/, 8 665 URL dont des archives depuis 2024) : les plus recentes
+    passent devant, pour que le plafond de pages par site lise les offres vivantes
+    et non les archives. Sans date dans les URL, l'ordre du sitemap est conserve.
+    """
+    def cle(e):
+        url, lastmod = e
+        if lastmod:
+            return lastmod[:10]
+        m = _RE_DATE_URL.search(url)
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3) or '00'}" if m else ""
+    if not any(cle(e) for e in entrees):
+        return entrees
+    return sorted(entrees, key=cle, reverse=True)
 
 
 # ------------------------------------------------------------------
