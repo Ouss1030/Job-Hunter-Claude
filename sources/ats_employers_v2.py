@@ -93,6 +93,10 @@ def employeurs(connecteur: str, actifs_seulement: bool = True) -> list[dict]:
         ligne = {"label": e.get("label") or str(ident), "enabled": e.get("enabled", True),
                  "tracks": list(e.get("tracks") or []), "notes": e.get("notes", ""),
                  "_registre_v2": True}
+        # Reglages par employeur que les connecteurs savent lire.
+        for cle in ("max_jobs", "include_unknown"):
+            if e.get(cle) is not None:
+                ligne[cle] = e[cle]
         if connecteur == "WORKDAY_ATS" and isinstance(ident, dict):
             ligne.update(tenant=ident.get("tenant"), wd=ident.get("wd"), site=ident.get("site"))
         else:

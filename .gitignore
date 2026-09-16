@@ -97,3 +97,6 @@ logs/absorption/
 logs/*_scheduler_state.json
 logs/forem_[0-9]*_*
 logs/scienceatwork_listing.html
+# Paquets ChatGPT (donnees de candidature) et caches HTML des employeurs directs
+exports/chatgpt_handoff/
+logs/batch2_direct_employers/

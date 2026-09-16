@@ -89,7 +89,9 @@ LOCK_PATH = DAILY_DIR / ".daily_run.lock"
 # 9 septembre a produit 110 offres en READY_APPLY et n'en a prepare que 80.
 # Le pool n'etait donc pas borne par la qualite des offres mais par cette
 # valeur, ce qui ne se voyait nulle part dans les rapports.
-DEFAULT_PREPARATION_LIMIT = 150
+# 150 etait calibre pour 12 000 offres ; a 63 000, la file comptait 161
+# READY_APPLY et 374 STRETCH le 16/09/2026 : le plafond coupait.
+DEFAULT_PREPARATION_LIMIT = 300
 DEFAULT_HANDOFF_CHUNK_SIZE = 10
 
 STEP_ORDER = [
@@ -1237,12 +1239,18 @@ def step_enrichissement(manifest):
     """
     require_completed(manifest, "main")
 
+    # Borne par run (config/absorption_settings.json, backfill_max_per_run) :
+    # le 15/09/2026, sans borne, 51 708 pages ont pris 17 heures.
     try:
-        run_command(
-            "enrichissement",
-            [sys.executable, "-m", "diagnostics.detail_backfill", "--toutes"],
-            manifest,
-        )
+        from sources.registry_absorption_v1 import charger_reglages
+        borne = int(charger_reglages().get("backfill_max_per_run") or 0)
+    except Exception:
+        borne = 0
+    commande = [sys.executable, "-m", "diagnostics.detail_backfill", "--toutes"]
+    if borne > 0:
+        commande += ["--max", str(borne)]
+    try:
+        run_command("enrichissement", commande, manifest)
     except Exception as error:
         print()
         print("⚠️ ENRICHISSEMENT INCOMPLET —", error)
@@ -2168,6 +2176,26 @@ def main_cli():
             except Exception as retention_error:
                 print("WARNING: backup retention failed; Daily Run remains successful:", retention_error)
         # JOBHUNTER_BACKUP_RETENTION_V1_END
+
+        # RETENTION DE L'HISTORIQUE EN BASE (16/09/2026)
+        # Chaque run ecrit un instantane JSON de chaque offre (178 Mo pour
+        # 63 000 offres) et chaque build canonique ses paires a revoir. Sans
+        # retention, la base a atteint 1,7 Go en un apres-midi. On garde les
+        # 2 derniers runs et le dernier build, puis on compacte. Les offres
+        # elles-memes ne sont JAMAIS supprimees (purge_historique V1.1).
+        if result["status"] == "COMPLETED":
+            try:
+                purge = subprocess.run(
+                    [sys.executable, "-m", "diagnostics.purge_historique",
+                     "--appliquer", "--runs", "2", "--builds", "1", "--vacuum"],
+                    cwd=str(PROJECT_ROOT), capture_output=True, text=True, encoding="utf-8",
+                    errors="replace", timeout=1800)
+                dernieres = [l for l in (purge.stdout or "").splitlines() if l.strip()][-4:]
+                print("RETENTION HISTORIQUE :", " | ".join(dernieres) if dernieres else purge.returncode)
+                if purge.returncode != 0:
+                    print("WARNING: retention de l'historique en erreur ; Daily Run remains successful.")
+            except Exception as purge_error:
+                print("WARNING: retention de l'historique impossible ; Daily Run remains successful:", purge_error)
 
         if result["status"] in {"COMPLETED", "STOPPED_OK"}:
             return 0

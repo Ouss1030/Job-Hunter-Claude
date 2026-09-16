@@ -61,6 +61,7 @@ MAX_RETRIES = 2
 DELAY_BETWEEN_JOBS = 0.5
 DELAY_BETWEEN_COMPANIES = 1.0
 MAX_JOBS_PER_COMPANY = 90
+MAX_JOBS_PER_COMPANY_BE = 300
 
 # En dessous de ce seuil, l'extraction est considérée comme ratée plutôt
 # que comme une annonce courte : c'est le signal d'un changement de page.
@@ -289,8 +290,13 @@ def collect_successfactors_jobs(companies=None, verbose=True):
 
         candidates = [u for u in urls if looks_belgian_url(u)]
         retenues, hors_be, echecs = 0, 0, 0
+        # V1.1 — plafond par employeur : "max_jobs" dans la config, sinon
+        # 300 pour un hote .be (il ne publie que pour la Belgique : Infrabel,
+        # SNCB, Belfius, Multipharma butaient sur 90), sinon 90.
+        plafond = int(company.get("max_jobs") or
+                      (MAX_JOBS_PER_COMPANY_BE if host.lower().endswith(".be") else MAX_JOBS_PER_COMPANY))
 
-        for url in candidates[:MAX_JOBS_PER_COMPANY]:
+        for url in candidates[:plafond]:
             donnees, err = fetch_job(url)
             time.sleep(DELAY_BETWEEN_JOBS)
 
@@ -318,7 +324,7 @@ def collect_successfactors_jobs(companies=None, verbose=True):
 
         # Un taux d'échec élevé n'est pas du bruit : c'est le signal que la
         # mise en page a changé et que le connecteur doit être revu.
-        traitees = min(len(candidates), MAX_JOBS_PER_COMPANY)
+        traitees = min(len(candidates), plafond)
         taux_echec = (echecs / traitees) if traitees else 0.0
 
         ligne = {

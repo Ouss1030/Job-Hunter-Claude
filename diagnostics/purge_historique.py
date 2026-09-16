@@ -1,10 +1,10 @@
 """
 JOB HUNTER BELGIUM
-PURGE DE L'HISTORIQUE ET DES OFFRES DISPARUES - VERSION 1.0
+PURGE DE L'HISTORIQUE - VERSION 1.1
 
     python -m diagnostics.purge_historique               (constat seul)
     python -m diagnostics.purge_historique --appliquer
-    python -m diagnostics.purge_historique --appliquer --runs 5 --builds 3 --jours 60
+    python -m diagnostics.purge_historique --appliquer --runs 2 --builds 1 --vacuum
 
 Ce que la base contient vraiment
 --------------------------------
@@ -53,7 +53,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 
-PURGE_VERSION = "1.0"
+PURGE_VERSION = "1.1"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -63,7 +63,15 @@ LOG_DIR = PROJECT_ROOT / "exports" / "logs"
 # possible, assez serrees pour que la purge serve a quelque chose.
 RUNS_CONSERVES = 3
 BUILDS_CONSERVES = 2
-JOURS_AVANT_SUPPRESSION = 30
+
+# V1.1 (16/09/2026) — LES OFFRES NE SONT JAMAIS SUPPRIMEES PAR DEFAUT.
+# Decision de l'utilisateur : une offre retiree reste en base avec sa
+# description, marquee is_active = 0, pour les etudes sur le marche (termes
+# les plus demandes, evolution). La purge ne touche qu'a l'historique par
+# run et aux anciens builds canoniques, qui sont des copies. Supprimer des
+# offres inactives demande --supprimer-offres-inactives N (jours), en
+# connaissance de cause.
+JOURS_AVANT_SUPPRESSION = None
 
 
 def mo(connexion: sqlite3.Connection) -> float:
@@ -89,8 +97,10 @@ def recenser(connexion: sqlite3.Connection, runs: int, builds: int,
     marque_runs = ",".join("?" * len(runs_gardes)) or "''"
     marque_builds = ",".join("?" * len(builds_gardes)) or "''"
 
-    limite = (datetime.now() - timedelta(days=jours)).isoformat(
-        timespec="seconds")
+    # jours=None : aucune offre n'est eligible, la borne de date est dans le
+    # passe lointain — la requete rend 0 sans cas particulier plus loin.
+    limite = ((datetime.now() - timedelta(days=jours)).isoformat(timespec="seconds")
+              if jours is not None else "0000-00-00T00:00:00")
 
     return {
         "runs_gardes": runs_gardes,
@@ -173,7 +183,10 @@ def main() -> None:
     parseur.add_argument("--appliquer", action="store_true")
     parseur.add_argument("--runs", type=int, default=RUNS_CONSERVES)
     parseur.add_argument("--builds", type=int, default=BUILDS_CONSERVES)
-    parseur.add_argument("--jours", type=int, default=JOURS_AVANT_SUPPRESSION)
+    parseur.add_argument("--supprimer-offres-inactives", dest="jours", type=int,
+                         default=JOURS_AVANT_SUPPRESSION, metavar="JOURS",
+                         help="supprime aussi les offres inactives depuis plus de JOURS jours "
+                              "(jamais par defaut : elles restent en base pour les statistiques)")
     parseur.add_argument("--vacuum", action="store_true",
                          help="compacte le fichier apres la purge")
     args = parseur.parse_args()
@@ -198,8 +211,11 @@ def main() -> None:
         print(f"Runs conserves    : {len(plan['runs_gardes'])} "
               f"({', '.join(r[:22] for r in plan['runs_gardes'][:3])})")
         print(f"Builds conserves  : {len(plan['builds_gardes'])}")
-        print(f"Offres supprimees si inactives avant le "
-              f"{plan['limite_date'][:10]}")
+        if args.jours is None:
+            print("Offres             : JAMAIS supprimees (retirees = is_active 0, texte conserve)")
+        else:
+            print(f"Offres supprimees si inactives avant le "
+                  f"{plan['limite_date'][:10]}")
         print()
         print("A SUPPRIMER")
         print(f"  historique par run     {plan['items']:>9} / "

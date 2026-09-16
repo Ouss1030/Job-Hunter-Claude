@@ -52,6 +52,7 @@ SETTINGS_PATH = PROJECT_ROOT / "config" / "absorption_settings.json"
 DEFAULTS = {
     "complete": True,
     "detail_budget_per_source": 2500,
+    "backfill_max_per_run": 3000,
     "sources": ["FOREM", "ACTIRIS"],
 }
 

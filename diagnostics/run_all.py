@@ -209,6 +209,7 @@ TOOLS = [
     "purge_artefacts",
     "source_coverage_matrix",
     "expansion_diag_pack",
+    "hygiene_base_v1",
     "verdict_vs_score",
     "hardening_step5b_run_all_audit",
     "hardening_step6b_requirements_audit",

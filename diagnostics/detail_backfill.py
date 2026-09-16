@@ -53,7 +53,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-BACKFILL_VERSION = "1.0"
+BACKFILL_VERSION = "1.1"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
@@ -61,6 +61,10 @@ DB_PATH = PROJECT_ROOT / "database" / "jobs.db"
 # Delai entre deux requetes reelles. Le cache ne compte pas : une offre deja
 # en cache ne coute rien et n'attend pas.
 DELAI_ENTRE_REQUETES = 0.8
+# V1.1 — le Forem sert son detail par une API JSON legere : 0,3 s suffit.
+# Actiris est une page HTML : on garde 0,8 s. Mesure du 15/09/2026 :
+# 51 708 pages a 0,8 s = 17 heures ; la moitie etait du Forem.
+DELAIS_PAR_SOURCE = {"FOREM": 0.3}
 
 SOURCES_SUPPORTEES = ("ACTIRIS", "FOREM", "TALENT_BRUSSELS")
 SOURCE_CACHE_ONLY = "JOBAT"
@@ -139,6 +143,28 @@ def _reconstruire(ligne: sqlite3.Row):
     return job
 
 
+def _marquer_echec(raw_job_id, message: str) -> None:
+    """
+    V1.1 — un echec est enregistre, sinon l'offre est retentee a chaque run
+    (1 340 echecs x 0,8 s = 18 min perdues par run le 15/09/2026). Un 404
+    signifie que l'offre a ete retiree entre la liste et le detail : elle
+    passe inactive, texte conserve, comme toute offre disparue.
+    """
+    try:
+        con = sqlite3.connect(DB_PATH, timeout=30)
+        retiree = "404" in message
+        con.execute(
+            "UPDATE raw_jobs SET detail_enrichment_attempted = 1, "
+            "detail_enrichment_success = 0, detail_enrichment_error = ?"
+            + (", is_active = 0" if retiree else "")
+            + " WHERE id = ?",
+            (message[:200], raw_job_id))
+        con.commit()
+        con.close()
+    except Exception:
+        pass
+
+
 def enrichir(job, run_id: str) -> tuple[bool, int, str]:
     """Renvoie (succes, longueur du texte, message)."""
     import main as pipeline
@@ -180,6 +206,9 @@ def main(argv=None) -> int:
     parser.add_argument("--essai", type=int,
                         help="Traite N offres pour verifier la qualite")
     parser.add_argument("--toutes", action="store_true")
+    parser.add_argument("--max", type=int, default=None,
+                        help="au plus N offres par passage, les plus recentes d'abord "
+                             "(le reste attend le passage suivant)")
     parser.add_argument("--etat", action="store_true",
                         help="Affiche la couverture actuelle, ne fait rien")
     parser.add_argument("--delai", type=float, default=DELAI_ENTRE_REQUETES)
@@ -214,7 +243,7 @@ def main(argv=None) -> int:
         print("       Utiliser --autoriser-jobat seulement en connaissance de cause.")
         return 1
 
-    lignes = offres_a_enrichir(source, args.essai)
+    lignes = offres_a_enrichir(source, args.essai or args.max)
     if not source and not args.autoriser_jobat:
         avant = len(lignes)
         lignes = [l for l in lignes if l["source"] != SOURCE_CACHE_ONLY]
@@ -261,6 +290,7 @@ def main(argv=None) -> int:
     for i, ligne in enumerate(lignes, 1):
         job = _reconstruire(ligne)
         succes, longueur, message = enrichir(job, run_id)
+        delai = DELAIS_PAR_SOURCE.get(str(ligne["source"]).upper(), args.delai)
 
         if succes:
             ok += 1
@@ -268,12 +298,13 @@ def main(argv=None) -> int:
             if message == "cache":
                 depuis_cache += 1
             else:
-                time.sleep(args.delai)
+                time.sleep(delai)
         else:
             echecs += 1
             cle = message.split(":")[0][:40]
             erreurs[cle] = erreurs.get(cle, 0) + 1
-            time.sleep(args.delai)
+            _marquer_echec(ligne["id"], message)
+            time.sleep(delai)
 
         if i % 25 == 0 or i == len(lignes):
             ecoule = time.time() - t0
@@ -284,10 +315,13 @@ def main(argv=None) -> int:
                   f"reste ~{reste/60:.0f} min", flush=True)
 
     duree = time.time() - t0
+    # V1.1 — la signature complete ; l'appel nu echouait en silence et
+    # laissait le run en RUNNING pour toujours.
     try:
-        finish_collection_run(run_id)
-    except Exception:
-        pass
+        finish_collection_run(run_id, total_collected=len(lignes), inserted_count=0,
+                              updated_count=ok, error_count=echecs, status="COMPLETED")
+    except Exception as exc:
+        print(f"  ⚠️  run non cloture : {exc}")
 
     print()
     print("=" * 78)
