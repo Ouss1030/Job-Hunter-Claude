@@ -59,6 +59,12 @@ Demander un accès à l'API `Vacatures` (ibm-api-key). En attendant, 8 874 offre
 
 Recampagne sur les 46 graines francophones sans voie : 10 enregistrées (Letec → SuccessFactors, Province d'Anvers → CVWarehouse, 8 portails HTML). Après calibrage : **UNamur 8/8, GHdC 10/11, Prayon 14/14, Brabant wallon 5/16, HELHa 24/64 (bourse de stages étudiants), Eurobrussels 21/22 (job board affaires européennes, `lien_regex` = `/job_display/\d+`)** — 82 offres, descriptions de 2 500 à 10 000 caractères. Namur (namur.be : pages d'information) et CHU Liège (résultats rendus en JavaScript) désactivés avec motif. Restent hors de portée : Chirec (TalentFinder), CHU Charleroi, CHwapi, Citadelle, Cliniques de l'Europe, Solidaris, Mithra, Eurogentec, FN Herstal, Spadel, CMI — CMS sans URL d'offre lisible ou liste en JavaScript ; ceux-là passent par le Forem/Actiris quand ils y publient.
 
+## Étape 9 — ce que le projet principal connaissait en plus, et Jobtoolz
+
+**Fait le 17/09/2026.** Les 44 hôtes présents dans les configurations de l'original (V4.17) et absents de la copie sont passés au moteur : 17 enregistrés + 4 tenants Workday vérifiés sur l'API (Alcon 4, Gilead 1, JLL 6, Mastercard 9). Gardés après collecte réelle : Vivaldis Interim 25, Bimona 10, Ascento 10, Trevalco 6, UZ Leuven 4, Strand 3, ING 2, quatre sites Personio, Jobsin Brussels (board affaires européennes : 8 665 URL dont des archives depuis 2024 → JSON-LD V1.4 lit les plus récentes d'abord, 26 offres sur 25 pages). Désactivés avec motif : Cegeka, Port of Antwerp-Bruges, UGent (listes en JavaScript), Planet Pharma (500 URL pour 1 offre belge).
+
+**Jobtoolz** (`sources/jobtoolz_v1.py`) : ATS belge très répandu chez les PME, sans sitemap ni flux — la liste complète est embarquée dans la page carrière (`window.jobComponent([...])`), le texte complet dans chaque page d'offre. Six sites enregistrés (GIM, Etherna, Govi, Smet Group, Group F, Westvlees). Chaque nouvelle tranche BCE en trouvera d'autres : c'est l'ATS le plus fréquent parmi les échecs de validation des campagnes précédentes.
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.
