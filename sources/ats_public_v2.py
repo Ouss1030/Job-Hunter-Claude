@@ -34,7 +34,7 @@ from database.models import JobOffer
 from sources.location_belgium import detect_belgium_multi, BE_CONFIRMED, BE_LIKELY, BE_UNKNOWN
 
 
-ATS_PUBLIC_V2_VERSION = "1.0"
+ATS_PUBLIC_V2_VERSION = "1.1"
 
 TIMEOUT = 25
 PAUSE_ENTRE_EMPLOYEURS = 0.5
@@ -211,7 +211,10 @@ def collect_workable(identifiant: str, label: str, session, include_unknown=Fals
         description = ""
         if details < max_details and shortcode:
             try:
-                d = _get_json(f"{base}/{shortcode}", session)
+                # La liste est en v3, le detail en v2 (verifie le 16/09/2026 :
+                # v3/jobs/{shortcode} repond 404, v2 rend description,
+                # requirements, benefits).
+                d = _get_json(base.replace("/api/v3/", "/api/v2/") + f"/{shortcode}", session)
                 description = "\n".join(x for x in [
                     html_to_text(d.get("description")), html_to_text(d.get("requirements")),
                     html_to_text(d.get("benefits"))] if x)

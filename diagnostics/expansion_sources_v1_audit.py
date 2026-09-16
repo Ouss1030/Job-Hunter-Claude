@@ -263,7 +263,7 @@ def main():
     wk_list = {"results": [{"id": 1, "shortcode": "AB12", "title": "QA Officer", "published": "2026-09-05T00:00:00Z",
                             "type": "full", "location": {"city": "Leuven", "country": "Belgium", "countryCode": "BE"}}], "nextPage": None}
     wk_detail = {"description": "<p>Assurance qualité</p>", "requirements": "<ul><li>GMP</li></ul>", "benefits": ""}
-    s = _Session({"https://apply.workable.com/api/v3/accounts/acme/jobs/AB12": _Reponse(json.dumps(wk_detail), 200, ctype="application/json"),
+    s = _Session({"https://apply.workable.com/api/v2/accounts/acme/jobs/AB12": _Reponse(json.dumps(wk_detail), 200, ctype="application/json"),
                   "https://apply.workable.com/api/v3/accounts/acme/jobs": _Reponse(json.dumps(wk_list), 200, ctype="application/json")})
     jobs, meta = v2.collect_workable("acme", "Acme", s)
     tests.append(check("Workable : liste + detail, description et exigences reunies",

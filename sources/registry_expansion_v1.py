@@ -58,6 +58,9 @@ def _collect_jsonld_sites() -> list:
     if not companies:
         print("  JSONLD_SITES : aucun site enregistre (config/ats_employers_v2.json)")
         return []
+    # Localisation inconnue : gardee sur un hote .be, ecartee ailleurs
+    # (voir jsonld_sitemap_v1._inconnu_accepte ; 80 offres AbbVie hors
+    # Belgique etaient passees le 15/09/2026).
     resultat = collect_sites(companies, verbose=True)
     erreurs = sum(1 for r in resultat["report"] if r.get("error"))
     print(f"JSONLD_SITES - sites={len(resultat['report'])} offres BE={len(resultat['jobs'])} "

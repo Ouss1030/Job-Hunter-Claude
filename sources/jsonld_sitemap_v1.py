@@ -44,7 +44,7 @@ from sources.location_belgium import detect_belgium_multi, BE_CONFIRMED, BE_LIKE
 from sources.phenom_ats_v1 import extract_job_posting, html_to_text, _location_text
 
 
-JSONLD_SITEMAP_VERSION = "1.0"
+JSONLD_SITEMAP_VERSION = "1.1"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "jsonld_sites_cache"
@@ -350,7 +350,25 @@ def collect_site(host: str, label: str, session=None, include_unknown: bool = Tr
     return jobs, meta
 
 
-def collect_sites(companies: list[dict], verbose: bool = True, include_unknown: bool = True) -> dict:
+def _inconnu_accepte(host: str, company: dict, defaut: bool | None) -> bool:
+    """
+    Faut-il garder une offre dont la localisation n'est pas reconnue ?
+
+    Un hote en .be publie pour la Belgique : "Merelbeke, Merelbeke" chez
+    Actief est belge meme si la commune n'est pas dans la liste. Un site
+    carriere mondial (.com) sans pays dans son JSON-LD ne l'est pas par
+    defaut : 80 offres AbbVie (Sligo, Shanghai...) etaient passees ainsi
+    le 15/09/2026. La config peut trancher avec "include_unknown".
+    """
+    if company.get("include_unknown") is not None:
+        return bool(company["include_unknown"])
+    if defaut is not None:
+        return defaut
+    return host.lower().rstrip("/").endswith(".be")
+
+
+def collect_sites(companies: list[dict], verbose: bool = True,
+                  include_unknown: bool | None = None) -> dict:
     session = requests.Session()
     jobs, report = [], []
     for c in companies:
@@ -359,7 +377,8 @@ def collect_sites(companies: list[dict], verbose: bool = True, include_unknown: 
         host = _clean(c.get("identifier"))
         label = _clean(c.get("label")) or host
         try:
-            trouves, meta = collect_site(host, label, session, include_unknown=include_unknown,
+            trouves, meta = collect_site(host, label, session,
+                                         include_unknown=_inconnu_accepte(host, c, include_unknown),
                                          verbose=verbose)
             jobs.extend(trouves)
         except Exception as erreur:
