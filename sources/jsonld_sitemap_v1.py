@@ -44,7 +44,7 @@ from sources.location_belgium import detect_belgium_multi, BE_CONFIRMED, BE_LIKE
 from sources.phenom_ats_v1 import extract_job_posting, html_to_text, _location_text
 
 
-JSONLD_SITEMAP_VERSION = "1.1"
+JSONLD_SITEMAP_VERSION = "1.2"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "jsonld_sites_cache"
@@ -290,13 +290,27 @@ def collect_site(host: str, label: str, session=None, include_unknown: bool = Tr
                  verbose: bool = False, max_sitemaps: int = MAX_SOUS_SITEMAPS) -> tuple[list[JobOffer], dict]:
     session = session or requests.Session()
     host = host.lower().removeprefix("https://").removeprefix("http://").strip("/")
-    meta = {"host": host, "label": label, "sitemap_urls": 0, "cache": 0, "visitees": 0,
-            "sans_jsonld": 0, "be": 0, "hors_be": 0, "echecs": 0, "error": None}
     entrees, erreur = urls_offres(host, session, max_sitemaps=max_sitemaps)
     if erreur:
-        meta["error"] = erreur
-        return [], meta
-    meta["sitemap_urls"] = len(entrees)
+        return [], {"host": host, "label": label, "sitemap_urls": 0, "cache": 0, "visitees": 0,
+                    "sans_jsonld": 0, "be": 0, "hors_be": 0, "echecs": 0, "error": erreur}
+    return collect_pages(host, label, entrees, session, include_unknown=include_unknown,
+                         max_pages=max_pages, source=source, verbose=verbose)
+
+
+def collect_pages(host: str, label: str, entrees: list[tuple[str, str]], session=None,
+                  include_unknown: bool = True, max_pages: int = MAX_PAGES_PAR_SITE,
+                  source: str = "JSONLD_SITES", verbose: bool = False) -> tuple[list[JobOffer], dict]:
+    """
+    Le coeur de l'extracteur : des URL d'offres (avec lastmod ou "") vers des
+    JobOffer, avec cache par page. collect_site les tire du sitemap ; un
+    connecteur qui les obtient autrement (iCIMS : liste paginee) appelle
+    directement cette fonction.
+    """
+    session = session or requests.Session()
+    host = host.lower().removeprefix("https://").removeprefix("http://").strip("/")
+    meta = {"host": host, "label": label, "sitemap_urls": len(entrees), "cache": 0, "visitees": 0,
+            "sans_jsonld": 0, "be": 0, "hors_be": 0, "echecs": 0, "error": None}
     cache = _charger_cache(host)
     maintenant = datetime.now(timezone.utc)
     jobs = []

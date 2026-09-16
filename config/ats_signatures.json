@@ -216,10 +216,12 @@
       "url_patterns": [
         "icims\\.com"
       ],
-      "identifier": "https?://(?P<identifiant>[a-z0-9-]+)\\.icims\\.com",
-      "connector": null,
-      "config": null,
-      "strategy": "HTML"
+      "identifier_preferred": "https?://(?P<identifiant>(?:careers|career|jobs|job|externe|external)[a-z0-9-]*\\.icims\\.com)",
+      "identifier": "https?://(?P<identifiant>[a-z0-9-]+\\.icims\\.com)",
+      "connector": "ICIMS",
+      "config": "config/ats_employers_v2.json",
+      "strategy": "HTML_JSONLD",
+      "endpoint": "https://{identifiant}/jobs/search?ss=1&in_iframe=1"
     },
     "AVATURE": {
       "url_patterns": [

@@ -87,10 +87,18 @@ def _extraire_identifiant(spec: dict, texte: str):
     motif = spec.get("identifier")
     if not motif:
         return None
-    try:
-        m = re.search(motif, texte or "", re.I)
-    except re.error:
-        return None
+    m = None
+    # "identifier_preferred" : essaye d'abord (iCIMS : careers-x.icims.com
+    # plutot que cdn02.icims.com, qui apparait avant dans le HTML).
+    for expression in (spec.get("identifier_preferred"), motif):
+        if not expression:
+            continue
+        try:
+            m = re.search(expression, texte or "", re.I)
+        except re.error:
+            m = None
+        if m:
+            break
     if not m:
         return None
     groupes = {k: v for k, v in m.groupdict().items() if v}
@@ -119,7 +127,8 @@ def _extraire_identifiant(spec: dict, texte: str):
 
 
 # Sous-domaines techniques d'un ATS (scripts, CDN, analytics) : jamais un employeur.
-_FAUX_TENANTS = {"careers-analytics", "analytics", "api", "assets", "cdn", "static", "www",
+_FAUX_TENANTS = {"careers-analytics", "analytics", "api", "assets", "cdn", "cdn01", "cdn02", "cdn03",
+                 "cookie-policy-scripts", "static", "www",
                  "app", "docs", "help", "support", "status", "embed", "widget", "widgets",
                  "images", "img", "media", "files", "js", "css", "auth", "login", "admin",
                  "boards-api", "job-boards", "jobs", "careers", "apply", "hire"}

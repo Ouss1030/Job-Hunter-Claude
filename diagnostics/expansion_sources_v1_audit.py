@@ -69,6 +69,9 @@ class _Session:
         self.appels = []
 
     def get(self, url, **kw):
+        if kw.get("params"):
+            from urllib.parse import urlencode
+            url = url + ("&" if "?" in url else "?") + urlencode(kw["params"])
         self.appels.append(url)
         if url in self.table:
             rep = self.table[url]
@@ -306,6 +309,27 @@ def main():
                        and all("labo" in j.description.lower() or "power bi" in j.description.lower() for j in jobs)
                        and jobs[0].external_id.startswith("acme.cvw.io:"), str(meta)))
 
+    # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
+    from sources import icims_v1 as ic
+    from sources import jsonld_sitemap_v1 as jl
+    liste0 = '<a href="https://acme.icims.com/jobs/11/analyst/job">A</a><a href="https://acme.icims.com/jobs/12/tech/job">B</a>'
+    liste1 = '<a href="https://acme.icims.com/jobs/11/analyst/job">A</a>'
+    page11 = '<html><script type="application/ld+json">' + json.dumps({"@type": "JobPosting", "title": "Analyst", "description": "<p>" + "Analyse SQL. " * 15 + "</p>",
+             "hiringOrganization": {"name": "Acme"}, "jobLocation": {"address": {"addressLocality": "Antwerp", "addressCountry": "BE"}}, "datePosted": "2026-09-10"}) + '</script></html>'
+    page12 = '<html><script type="application/ld+json">' + json.dumps({"@type": "JobPosting", "title": "Tech", "description": "<p>" + "Maintenance. " * 15 + "</p>",
+             "hiringOrganization": {"name": "Acme"}, "jobLocation": {"address": {"addressLocality": "Lyon", "addressCountry": "FR"}}}) + '</script></html>'
+    s = _Session({"https://acme.icims.com/jobs/search?ss=1&in_iframe=1&pr=0": _Reponse(liste0, 200),
+                  "https://acme.icims.com/jobs/search?ss=1&in_iframe=1&pr=1": _Reponse(liste1, 200),
+                  "https://acme.icims.com/jobs/11/job?in_iframe=1": _Reponse(page11, 200, "https://acme.icims.com/jobs/11/job?in_iframe=1"),
+                  "https://acme.icims.com/jobs/12/job?in_iframe=1": _Reponse(page12, 200, "https://acme.icims.com/jobs/12/job?in_iframe=1")})
+    with mock.patch.object(jl, "CACHE_DIR", tmp / "icims"), mock.patch.object(jl, "PAUSE_ENTRE_PAGES", 0), mock.patch.object(ic, "PAUSE_LISTE", 0):
+        jobs, meta = ic.collect_icims({"identifier": "acme.icims.com", "label": "Acme"}, s)
+    tests.append(check("iCIMS : pagination arretee sur page sans nouveaute, JSON-LD lu, offre FR ecartee",
+                       meta["sitemap_urls"] == 2 and len(jobs) == 1 and jobs[0].title == "Analyst" and jobs[0].source == "ICIMS"
+                       and meta["hors_be"] == 1, str({k: meta.get(k) for k in ("sitemap_urls", "be", "hors_be", "error")})))
+    tests.append(check("Detection iCIMS : l'hote 'careers-…' est prefere a cdn02/cookie-policy-scripts",
+                       det.detecter_url('<a href="https://cdn02.icims.com/x.js"></a><a href="https://cookie-policy-scripts.icims.com/y"></a><a href="https://careers-bdobelgium.icims.com/jobs/search">')["identifiant"] == "careers-bdobelgium.icims.com"))
+
     # ------------------------------------------------------------------
     # 4. Extracteur universel
     # ------------------------------------------------------------------
@@ -387,7 +411,7 @@ def main():
     tests.append(check("SOURCE_SPECS : aucune cle ni result_key en double",
                        len(cles) == len(set(cles)) and len(rks) == len(set(rks)), f"{len(cles)} specs"))
     tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES, ORACLE_CLOUD, CVWAREHOUSE",
-                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE"} <= set(cles)))
+                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS"} <= set(cles)))
     tests.append(check("Detection : Oracle Cloud (host/lang/site) et CVWarehouse (URL, casse des parametres conservee)",
                        det.detecter_url("https://ebza.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/nl/sites/CX_1001/job/1")["identifiant"]
                        == {"host": "ebza.fa.em2.oraclecloud.com", "lang": "nl", "site": "CX_1001"}

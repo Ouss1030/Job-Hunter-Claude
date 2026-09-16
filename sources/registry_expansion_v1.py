@@ -92,6 +92,18 @@ def _collect_cvwarehouse() -> list:
     return resultat["jobs"]
 
 
+def _collect_icims() -> list:
+    from sources.icims_v1 import collect_icims_jobs
+    companies = registre.employeurs("ICIMS")
+    if not companies:
+        print("  ICIMS : aucun employeur enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_icims_jobs(companies, verbose=True)
+    print(f"ICIMS - employeurs={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
 def specs_expansion(SourceSpec) -> tuple:
     """Les SourceSpec a ajouter ; SourceSpec est passe pour eviter l'import circulaire."""
     return (
@@ -114,6 +126,10 @@ def specs_expansion(SourceSpec) -> tuple:
                    collector=_collect_cvwarehouse, languages=("nl", "fr", "en"), priority=81,
                    notes="Pages servies par le serveur ; une page de detail par section porte toutes les offres. "
                          "Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="ICIMS", result_key="icims", label="iCIMS (liste + JSON-LD)",
+                   collector=_collect_icims, languages=("fr", "en", "nl"), priority=82,
+                   notes="Liste HTML paginee (in_iframe=1), JSON-LD JobPosting par offre via l'extracteur "
+                         "universel. Employeurs : config/ats_employers_v2.json."),
         SourceSpec(key="JSONLD_SITES", result_key="jsonld_sites",
                    label="Sites carrière (sitemap + JSON-LD)",
                    collector=_collect_jsonld_sites, languages=("fr", "en", "nl", "de"), priority=79,

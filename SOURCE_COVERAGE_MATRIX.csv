@@ -179,6 +179,7 @@ WORKABLE;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;"3 a
 PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 7 employeurs";registry_expansion_v1;"7 actives / 7 vues ; 4 avec description";;;;;
 ORACLE_CLOUD;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;90 offres BE validees;declaree mais jamais une offre en base;;;;
 CVWAREHOUSE;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
+ICIMS;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;0 offres BE validees;declaree mais jamais une offre en base;;;;
 JSONLD_SITES;universel;OUI;"VALIDE (decouverte) ; 21 employeurs";registry_expansion_v1;"1061 actives / 1062 vues ; 1055 avec description";;;;;
 VDAB (direct);service public;PARTIEL;NON;"sitemap public (pages vides, JS ; /api interdit par robots.txt)";"0 direct ; 8 874 via Actiris (republication)";API officielle sur cles (ibm-api-key);tres elevee : ~40 % des offres belges;"API officielle VDAB (demande de cles partenaire) ; en attendant republication Actiris";1;"Demander un acces API VDAB ; conserver la voie Actiris VDAB_FOREM"
 EURES;international;NON;-;-;0;"portail JS ; API interne non documentee";moyenne : beaucoup de doublons Forem/VDAB/Actiris;EURES Job Vacancy API (acces institutionnel) ou decouverte via Actiris/Forem;3;"Suivre ; pas de voie publique propre aujourd'hui"

@@ -2,21 +2,21 @@
   "schema_version": "1.0",
   "purpose": "Fichier maître partageable de toutes les sources JobHunter",
   "created_at": "2026-09-07T19:44:02+02:00",
-  "updated_at": "2026-09-16T15:22:55+02:00",
-  "update_reason": "point5: ORACLE_CLOUD, CVWAREHOUSE",
-  "total_sources": 181,
-  "active_sources": 180,
+  "updated_at": "2026-09-16T15:38:33+02:00",
+  "update_reason": "point5: ICIMS",
+  "total_sources": 182,
+  "active_sources": 181,
   "health_summary": {
-    "HEALTHY": 175,
+    "HEALTHY": 176,
     "DISABLED": 1,
     "NEEDS_CREDENTIALS": 3,
     "CACHE_ONLY": 1,
     "DEGRADED": 1
   },
   "tracks_summary": {
-    "QC_PHARMA_LAB": 148,
-    "DATA_JUNIOR_BI": 147,
-    "QC_DATA_HYBRID": 155,
+    "QC_PHARMA_LAB": 149,
+    "DATA_JUNIOR_BI": 148,
+    "QC_DATA_HYBRID": 156,
     "STUDENT_ANY": 64
   },
   "contains_private_credentials": false,
@@ -47,7 +47,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "ABSORPTION COMPLETE V1.0 : catalogue entier, sans termes de recherche. Source publique wallonne. Recherche large du pipeline historique."
     },
     {
@@ -74,7 +74,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "DESACTIVE : verifie le 8 septembre 2026, les pages d'offres sont construites en JavaScript et alimentees par /api/vindeenjob/, interdit par robots.txt. Le sitemap fonctionne mais ne mene a aucun contenu lisible. A reactiver avec l'API officielle (ibm-api-key + X-IBM-Client-Id)."
     },
     {
@@ -103,7 +103,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official API. Equal targeting QC/Pharma/Lab + Junior Data/BI + QC/Data hybrid. Credentials required."
     },
     {
@@ -132,7 +132,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Publisher API v4. QC/Pharma/Lab + Junior Data/BI. Requires API key + user IP."
     },
     {
@@ -161,7 +161,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Belgium REST API. Quota-aware rotating queries for QC/Pharma/Lab + Junior Data/BI."
     },
     {
@@ -189,7 +189,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -216,7 +216,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -243,7 +243,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Direct Brussels pharma employer. QC + Business Automation/IT departments, target-title filtered."
     },
     {
@@ -271,7 +271,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -297,7 +297,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Belgium-filtered European pharma/science board. QC/Lab + junior Data/BI + hybrid roles."
     },
     {
@@ -325,7 +325,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -352,7 +352,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official public remote-jobs API. Belgium/Europe/Worldwide filter; Junior Data/BI + QC/Data hybrid targeting."
     },
     {
@@ -377,7 +377,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=NONE"
     },
     {
@@ -403,7 +403,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -430,7 +430,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public Workday endpoint. Belgium-only QC/Lab + Junior Data/BI + QC/Data hybrid."
     },
     {
@@ -458,7 +458,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Belgian IT/Data board. Junior Data Analyst/BI targeting; senior titles blocked."
     },
     {
@@ -485,7 +485,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Belgian francophone job board. Target-filtered QC/Lab and Junior Data/BI."
     },
     {
@@ -510,7 +510,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Dedicated Start People student-job listing. Strict real job detail URLs; STUDENT_ANY."
     },
     {
@@ -535,7 +535,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Dedicated Synergie student-contract listing. Strict detail URLs; STUDENT_ANY."
     },
     {
@@ -562,7 +562,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Free public European jobs API; Belgium-filtered QC/Lab and Junior Data/BI."
     },
     {
@@ -588,7 +588,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Walloon water employer. Laboratory/quality/data roles."
     },
     {
@@ -614,7 +614,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Public VDAB student-job web search; bounded read-only collection, no API credentials required. STUDENT_ANY."
     },
     {
@@ -639,7 +639,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=41, ats=NONE, listing_marker=False"
     },
     {
@@ -668,7 +668,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "ABSORPTION COMPLETE V1.0 : catalogue entier, sans termes de recherche. Source publique bruxelloise + partenaires."
     },
     {
@@ -694,7 +694,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Dedicated Belgian student jobs. Any genuine student-job domain accepted; Gate=VERIFY for student eligibility."
     },
     {
@@ -720,7 +720,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Dedicated student-job source. Any genuine job domain; low-value survey/game offers excluded."
     },
     {
@@ -745,7 +745,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=220, ats=WORKDAY, listing_marker=False"
     },
     {
@@ -770,7 +770,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -795,7 +795,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Randstad dedicated student-contract feed, separate from generic Randstad source."
     },
     {
@@ -820,7 +820,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -848,7 +848,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -876,7 +876,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -904,7 +904,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -932,7 +932,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -960,7 +960,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -988,7 +988,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1016,7 +1016,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1044,7 +1044,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1072,7 +1072,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1100,7 +1100,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1128,7 +1128,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1156,7 +1156,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1184,7 +1184,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1212,7 +1212,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1240,7 +1240,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V11 declarative direct-career source. Generic JSON-LD/job-link engine; QC/Lab + Data junior + QC/Data hybrid."
     },
     {
@@ -1268,7 +1268,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Emplois de la Région de Bruxelles-Capitale."
     },
     {
@@ -1296,7 +1296,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Fonction publique fédérale. Traitement d'éligibilité spécifique."
     },
     {
@@ -1325,7 +1325,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeurs directs configurés via SmartRecruiters."
     },
     {
@@ -1353,7 +1353,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Source V2.1. Recherche ciblée FR/EN, bruit NL filtré au maximum."
     },
     {
@@ -1381,7 +1381,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "ATS public. Employeurs dans config/recruitee_sources.py. country_code structure."
     },
     {
@@ -1408,7 +1408,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Life sciences/labo/QA. Fiches détaillées publiques ; annonces NL filtrées à la source."
     },
     {
@@ -1436,7 +1436,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "ATS public. Localisation en texte libre : filtrage via sources/location_belgium.py."
     },
     {
@@ -1463,7 +1463,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
     },
     {
@@ -1491,7 +1491,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Connecteur ATS generique local, distinct du moteur sources/workday.py du projet principal."
     },
     {
@@ -1519,7 +1519,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Lecture sitemap public. Distinct du moteur sources/successfactors.py du projet principal."
     },
     {
@@ -1546,7 +1546,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 2.3 shadow validated; listing Belgium filter untrusted; detail geography mandatory."
     },
     {
@@ -1574,7 +1574,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Sitemap public + JSON-LD schema.org/JobPosting. Distinct du moteur sources/phenom.py du projet principal."
     },
     {
@@ -1601,7 +1601,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
     },
     {
@@ -1629,7 +1629,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "API publique postings. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -1656,7 +1656,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 2.3 shadow validated; SuccessFactors; detail geography required."
     },
     {
@@ -1684,7 +1684,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "API publique job-board. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -1711,7 +1711,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Belgium location page; detail geo validation."
     },
     {
@@ -1738,7 +1738,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Belgium GeoNames country filter; detail geo validation."
     },
     {
@@ -1766,7 +1766,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "API publique apply.workable.com. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -1793,7 +1793,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Official Bornem/Verviers POST facets; strict Belgium listing truth."
     },
     {
@@ -1822,7 +1822,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Flux XML public. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -1851,7 +1851,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-15",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Extracteur universel : tout site qui publie sitemap + schema.org/JobPosting (Teamtailor, Jobtoolz, Talentfinder, sites maison). Sites : config/ats_employers_v2.json."
     },
     {
@@ -1878,7 +1878,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Existing generic Phenom engine + Roche public Workday CXS details."
     },
     {
@@ -1905,7 +1905,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -1933,7 +1933,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-16",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "API REST publique des sites Candidate Experience. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -1961,7 +1961,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Collecte ciblée Data/BI + Lab/QC/R&D. Fiches complètes publiques ; NL et néerlandais professionnel filtrés."
     },
     {
@@ -1988,7 +1988,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -2016,7 +2016,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-16",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Pages servies par le serveur ; une page de detail par section porte toutes les offres. Employeurs : config/ats_employers_v2.json."
     },
     {
@@ -2043,8 +2043,36 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
+    },
+    {
+      "key": "ICIMS",
+      "name": "iCIMS (liste + JSON-LD)",
+      "url": "",
+      "source_type": "LIVE_COLLECTOR",
+      "collector_module": "sources.registry_expansion_v1",
+      "collector_name": "_collect_icims",
+      "active": true,
+      "status": "ACTIVE",
+      "health": "HEALTHY",
+      "collection_mode": "LIVE",
+      "health_reason": "No known structural health issue.",
+      "pipeline_group": "standard",
+      "priority": 82,
+      "languages": [
+        "fr",
+        "en",
+        "nl"
+      ],
+      "tracks": [
+        "QC_PHARMA_LAB",
+        "DATA_JUNIOR_BI",
+        "QC_DATA_HYBRID"
+      ],
+      "date_added": "2026-09-16",
+      "last_validation": "2026-09-16T15:38:33+02:00",
+      "notes": "Liste HTML paginee (in_iframe=1), JSON-LD JobPosting par offre via l'extracteur universel. Employeurs : config/ats_employers_v2.json."
     },
     {
       "key": "TRASIS",
@@ -2070,7 +2098,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -2097,7 +2125,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -2124,7 +2152,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -2151,7 +2179,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Wallonia/Brussels priority source; mandatory Dutch hard-gated."
     },
     {
@@ -2178,7 +2206,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Cornerstone CSOD public API; Belgium strict geo gate."
     },
     {
@@ -2205,7 +2233,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 Wallonia/Brussels direct career source."
     },
     {
@@ -2232,7 +2260,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 Wallonia/Brussels direct career source."
     },
     {
@@ -2259,7 +2287,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 Wallonia/Brussels direct career source."
     },
     {
@@ -2287,7 +2315,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Consultance Engineering/Life Sciences. Préfiltre Data/BI + Lab/QC/Pharma ; fiches publiques FR/EN, NL filtré."
     },
     {
@@ -2314,7 +2342,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 Wallonia/Brussels direct career source."
     },
     {
@@ -2341,7 +2369,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 independent conditional integration."
     },
     {
@@ -2368,7 +2396,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Batch 4 independent conditional integration."
     },
     {
@@ -2395,7 +2423,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2422,7 +2450,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2449,7 +2477,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2477,7 +2505,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Consultance IT/Engineering/Life Sciences. Portail TalentSoft officiel Belgique ; préfiltre Data/BI + Lab/QC/Pharma, NL filtré."
     },
     {
@@ -2504,7 +2532,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2531,7 +2559,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2558,7 +2586,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2584,7 +2612,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=11, ats=NONE"
     },
     {
@@ -2611,7 +2639,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5 independent hardened source."
     },
     {
@@ -2638,7 +2666,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.4 independently resolved HOLD source."
     },
     {
@@ -2663,7 +2691,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=15, ats=NONE, listing_marker=False"
     },
     {
@@ -2690,7 +2718,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma/vaccins. Workday public Belgique ; préfiltre QC/Lab + Data/BI, stages et rôles seniors exclus."
     },
     {
@@ -2718,7 +2746,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -2745,7 +2773,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.6 strict true-source integration."
     },
     {
@@ -2771,7 +2799,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=1, ats=SUCCESSFACTORS"
     },
     {
@@ -2796,7 +2824,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=2, ats=NONE, listing_marker=True"
     },
     {
@@ -2823,7 +2851,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=12, ats=SUCCESSFACTORS, listing_marker=True"
     },
     {
@@ -2849,7 +2877,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=7, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
     },
     {
@@ -2876,7 +2904,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct biopharma. Portail Phenom public Belgique/Braine/Bruxelles ; préfiltre QC/Lab/Analytical + Data/BI, rôles seniors et stages exclus."
     },
     {
@@ -2903,7 +2931,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.8 recovered source using native engine."
     },
     {
@@ -2928,7 +2956,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -2953,7 +2981,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=60, ats=NONE"
     },
     {
@@ -2980,7 +3008,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.9 recovered/healthy source."
     },
     {
@@ -3007,7 +3035,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=1, ats=SUCCESSFACTORS"
     },
     {
@@ -3034,7 +3062,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.9 recovered/healthy source."
     },
     {
@@ -3060,7 +3088,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3086,7 +3114,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -3111,7 +3139,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=4, ats=WORKDAY"
     },
     {
@@ -3138,7 +3166,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=12, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
     },
     {
@@ -3165,7 +3193,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct à Louvain-la-Neuve. SAP SuccessFactors public ; préfiltre QC/Lab/Analytical + Data/BI, rôles seniors et stages exclus."
     },
     {
@@ -3190,7 +3218,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=NONE"
     },
     {
@@ -3217,7 +3245,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.10 specific recovered source."
     },
     {
@@ -3244,7 +3272,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.10 specific recovered source."
     },
     {
@@ -3271,7 +3299,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.10 specific recovered source."
     },
     {
@@ -3298,7 +3326,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3325,7 +3353,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.12 verified real job feed."
     },
     {
@@ -3350,7 +3378,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3377,7 +3405,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3404,7 +3432,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.12 verified real job feed."
     },
     {
@@ -3431,7 +3459,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.12 verified real job feed."
     },
     {
@@ -3458,7 +3486,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.12 verified real job feed."
     },
     {
@@ -3483,7 +3511,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3510,7 +3538,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.13 verified official feed."
     },
     {
@@ -3535,7 +3563,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -3560,7 +3588,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3587,7 +3615,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.13 verified official feed."
     },
     {
@@ -3614,7 +3642,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3641,7 +3669,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 5.13 verified official feed."
     },
     {
@@ -3668,7 +3696,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma. Workday public Belgique/Puurs ; préfiltre QC/Lab + Data/BI, stages et rôles seniors exclus."
     },
     {
@@ -3696,7 +3724,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.4 strict staffing connector."
     },
     {
@@ -3721,7 +3749,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=41, ats=NONE, listing_marker=False"
     },
     {
@@ -3748,7 +3776,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=1, detail=DETAIL_APPLY_SIGNAL, ats=SUCCESSFACTORS"
     },
     {
@@ -3776,7 +3804,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.4 strict staffing connector."
     },
     {
@@ -3804,7 +3832,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -3829,7 +3857,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -3855,7 +3883,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -3883,7 +3911,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -3911,7 +3939,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -3937,7 +3965,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=68, ats=NONE"
     },
     {
@@ -3964,7 +3992,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -3992,7 +4020,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4018,7 +4046,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -4046,7 +4074,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4074,7 +4102,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered after rollback; previous V21 validation reused."
     },
     {
@@ -4100,7 +4128,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=22, detail=JSONLD_JOBPOSTING, ats=TALENTSOFT"
     },
     {
@@ -4128,7 +4156,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4153,7 +4181,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=3, ats=SUCCESSFACTORS"
     },
     {
@@ -4181,7 +4209,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4208,7 +4236,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct biopharma à Lessines. Site carrière officiel jobs.takeda.com ; cible Technicien Chimiste/Purification + QC/Lab + Data/BI, stages et rôles seniors exclus."
     },
     {
@@ -4236,7 +4264,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4263,7 +4291,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=4, detail=DETAIL_APPLY_SIGNAL, ats=NONE"
     },
     {
@@ -4291,7 +4319,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4318,7 +4346,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=0, ats=SUCCESSFACTORS"
     },
     {
@@ -4346,7 +4374,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4374,7 +4402,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.5 strict healthy staffing feed."
     },
     {
@@ -4401,7 +4429,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=80, detail=DETAIL_APPLY_SIGNAL, ats=SUCCESSFACTORS"
     },
     {
@@ -4427,7 +4455,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=RECRUITEE, listing_marker=False"
     },
     {
@@ -4455,7 +4483,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.7 high-value staffing source."
     },
     {
@@ -4483,7 +4511,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.7 high-value staffing source."
     },
     {
@@ -4511,7 +4539,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.8 Robert Half corrected URL feed."
     },
     {
@@ -4539,7 +4567,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.7 high-value staffing source."
     },
     {
@@ -4564,7 +4592,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=9, detail=JSONLD_JOBPOSTING, ats=NONE"
     },
     {
@@ -4591,7 +4619,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma/MedTech. Workday public Belgique ; préfiltre QC/QA/Lab/Chimie + Data/BI, stages et rôles seniors exclus."
     },
     {
@@ -4619,7 +4647,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Mega Batch 6.7 high-value staffing source."
     },
     {
@@ -4645,7 +4673,7 @@
         "STUDENT_ANY"
       ],
       "date_added": "2026-09-08",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Recovered V23 manual completion; no web/LIVE repeated."
     },
     {
@@ -4672,7 +4700,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=SUCCESSFACTORS, listing_marker=True"
     },
     {
@@ -4699,7 +4727,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "CRO analytique directe à Thuin. Site carrière public ; cible laboratoire/HPLC/chromatographie/QC + Data/BI, rôles leaders/commerciaux/stages exclus."
     },
     {
@@ -4726,7 +4754,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V15 deep validation: jsonld=0, job_links=1, ats=WORKDAY, listing_marker=True"
     },
     {
@@ -4753,7 +4781,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | V16 curated structural validation: embedded=0, detail_links=2, detail=JSONLD_JOBPOSTING, ats=NONE"
     },
     {
@@ -4780,7 +4808,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct science/CRO. Portail Phenom public Belgique ; cible Lab/QC/QA/Analytical/Sample Management + Data/BI, rôles seniors/commerciaux/stages exclus."
     },
     {
@@ -4808,7 +4836,7 @@
         "DATA_JUNIOR_BI"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "V14 auto-validated public source | Validated public page: jsonld=0, job_links=4, ats=SMARTRECRUITERS"
     },
     {
@@ -4835,7 +4863,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Source secondaire désactivée par défaut : portail jobs.sciensano.be instable/timeouts ; fallback index provisoire uniquement."
     },
     {
@@ -4862,7 +4890,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma. Radancy public Belgique/Geel ; cible QC/Lab/Analytical + Data/BI, NL obligatoire et rôles seniors/stages exclus."
     },
     {
@@ -4889,7 +4917,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma/medtech. Radancy public Belgique/Lessines/Braine-l'Alleud ; cible Lab/QC/QA/R&D + Data, rôles seniors/leads exclus."
     },
     {
@@ -4916,7 +4944,7 @@
         "QC_DATA_HYBRID"
       ],
       "date_added": "2026-09-07",
-      "last_validation": "2026-09-16T15:22:55+02:00",
+      "last_validation": "2026-09-16T15:38:33+02:00",
       "notes": "Employeur direct pharma. Career Search public Belgique/Puurs/Vilvoorde ; cible Business/Data Analyst + QC/Lab/QA, rôles seniors/managers exclus."
     }
   ]
