@@ -115,6 +115,17 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
             kw = {"max_details": 0} if connecteur == "WORKABLE" else {}
             jobs, meta = COLLECTEURS[connecteur](identifiant, label, session, include_unknown=False, **kw)
             r.update(ok=True, total=meta.get("total"), be=len(jobs))
+        elif connecteur == "ORACLE_CLOUD":
+            from sources.oracle_cloud_v1 import lister
+            from sources.ats_public_v2 import _statut_be, _retenir
+            lignes = lister(identifiant["host"], identifiant["site"], session)
+            be = sum(1 for r in lignes if _retenir(_statut_be(str(r.get("PrimaryLocation") or ""), str(r.get("PrimaryLocationCountry") or "")), False))
+            r.update(ok=True, total=len(lignes), be=be)
+        elif connecteur == "CVWAREHOUSE":
+            from sources.cvwarehouse_v1 import lister
+            lignes = lister(identifiant, "nl-BE", session)
+            r.update(ok=bool(lignes), total=len(lignes), be=None,
+                     erreur=None if lignes else "aucune offre listee")
         elif connecteur == "JSONLD_SITES":
             from sources.jsonld_sitemap_v1 import collect_site
             jobs, meta = collect_site(identifiant, label, session, max_pages=VALIDATION_PAGES_JSONLD,

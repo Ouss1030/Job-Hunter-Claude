@@ -9,7 +9,11 @@
   ],
   "ats": {
     "GREENHOUSE": {
-      "url_patterns": ["(?:boards|job-boards)\\.greenhouse\\.io", "greenhouse\\.io/embed", "boards-api\\.greenhouse\\.io"],
+      "url_patterns": [
+        "(?:boards|job-boards)\\.greenhouse\\.io",
+        "greenhouse\\.io/embed",
+        "boards-api\\.greenhouse\\.io"
+      ],
       "identifier": "(?:boards|job-boards)\\.greenhouse\\.io/(?:embed/job_board\\?for=)?(?P<identifiant>[a-z0-9_-]+)",
       "connector": "GREENHOUSE",
       "config": "config/greenhouse_sources.py",
@@ -17,7 +21,11 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/{identifiant}/jobs?content=true"
     },
     "LEVER": {
-      "url_patterns": ["jobs\\.lever\\.co", "api\\.lever\\.co", "jobs\\.eu\\.lever\\.co"],
+      "url_patterns": [
+        "jobs\\.lever\\.co",
+        "api\\.lever\\.co",
+        "jobs\\.eu\\.lever\\.co"
+      ],
       "identifier": "jobs\\.(?:eu\\.)?lever\\.co/(?P<identifiant>[a-z0-9-]+)",
       "connector": "LEVER",
       "config": "config/ats_employers_v2.json",
@@ -25,7 +33,10 @@
       "endpoint": "https://api.lever.co/v0/postings/{identifiant}?mode=json"
     },
     "ASHBY": {
-      "url_patterns": ["jobs\\.ashbyhq\\.com", "api\\.ashbyhq\\.com"],
+      "url_patterns": [
+        "jobs\\.ashbyhq\\.com",
+        "api\\.ashbyhq\\.com"
+      ],
       "identifier": "jobs\\.ashbyhq\\.com/(?P<identifiant>[A-Za-z0-9_.-]+)",
       "connector": "ASHBY",
       "config": "config/ats_employers_v2.json",
@@ -33,7 +44,11 @@
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/{identifiant}"
     },
     "WORKABLE": {
-      "url_patterns": ["apply\\.workable\\.com", "workable\\.com/j/", "workable\\.com/api/accounts"],
+      "url_patterns": [
+        "apply\\.workable\\.com",
+        "workable\\.com/j/",
+        "workable\\.com/api/accounts"
+      ],
       "identifier": "apply\\.workable\\.com/(?P<identifiant>[a-z0-9-]+)",
       "connector": "WORKABLE",
       "config": "config/ats_employers_v2.json",
@@ -41,7 +56,10 @@
       "endpoint": "https://apply.workable.com/api/v3/accounts/{identifiant}/jobs"
     },
     "PERSONIO": {
-      "url_patterns": ["\\.jobs\\.personio\\.(?:de|com)", "personio\\.(?:de|com)/job"],
+      "url_patterns": [
+        "\\.jobs\\.personio\\.(?:de|com)",
+        "personio\\.(?:de|com)/job"
+      ],
       "identifier": "(?P<identifiant>[a-z0-9-]+)\\.jobs\\.personio\\.(?:de|com)",
       "connector": "PERSONIO",
       "config": "config/ats_employers_v2.json",
@@ -49,7 +67,9 @@
       "endpoint": "https://{identifiant}.jobs.personio.de/xml"
     },
     "RECRUITEE": {
-      "url_patterns": ["\\.recruitee\\.com"],
+      "url_patterns": [
+        "\\.recruitee\\.com"
+      ],
       "identifier": "(?P<identifiant>[a-z0-9-]+)\\.recruitee\\.com",
       "connector": "RECRUITEE",
       "config": "config/recruitee_sources.py",
@@ -57,7 +77,9 @@
       "endpoint": "https://{identifiant}.recruitee.com/api/offers/"
     },
     "SMARTRECRUITERS": {
-      "url_patterns": ["smartrecruiters\\.com"],
+      "url_patterns": [
+        "smartrecruiters\\.com"
+      ],
       "identifier": "(?:careers|jobs)\\.smartrecruiters\\.com/(?P<identifiant>[A-Za-z0-9_-]+)",
       "connector": "SMARTRECRUITERS",
       "config": "config/smartrecruiters_sources.py",
@@ -65,7 +87,11 @@
       "endpoint": "https://api.smartrecruiters.com/v1/companies/{identifiant}/postings"
     },
     "WORKDAY": {
-      "url_patterns": ["myworkdayjobs\\.com", "myworkdaysite\\.com", "/wday/"],
+      "url_patterns": [
+        "myworkdayjobs\\.com",
+        "myworkdaysite\\.com",
+        "/wday/"
+      ],
       "identifier": "(?P<tenant>[a-z0-9_-]+)\\.(?P<wd>wd\\d+)\\.myworkdayjobs\\.com/(?:[a-z]{2}-[A-Za-z]{2}/)?(?:wday/cxs/[^/]+/)?(?P<site>[A-Za-z0-9_-]+)",
       "connector": "WORKDAY_ATS",
       "config": "config/workday_sources.py",
@@ -73,7 +99,13 @@
       "endpoint": "https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs"
     },
     "SUCCESSFACTORS": {
-      "url_patterns": ["successfactors\\.(?:com|eu)", "career\\d*\\.successfactors", "/sfcareer/", "/go/[A-Za-z0-9_%-]+/\\d{5,}/", "jobs\\.[a-z0-9.-]+/job/[A-Za-z%0-9-]+/\\d{5,}/?"],
+      "url_patterns": [
+        "successfactors\\.(?:com|eu)",
+        "career\\d*\\.successfactors",
+        "/sfcareer/",
+        "/go/[A-Za-z0-9_%-]+/\\d{5,}/",
+        "jobs\\.[a-z0-9.-]+/job/[A-Za-z%0-9-]+/\\d{5,}/?"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/(?:go|job|search)",
       "connector": "SUCCESSFACTORS_ATS",
       "config": "config/successfactors_sources.py",
@@ -81,7 +113,12 @@
       "endpoint": "https://{identifiant}/sitemap.xml"
     },
     "PHENOM": {
-      "url_patterns": ["phenompeople\\.com", "phenom\\.com", "/widgets\\?.*phenom", "ph-nav|phw-"],
+      "url_patterns": [
+        "phenompeople\\.com",
+        "phenom\\.com",
+        "/widgets\\?.*phenom",
+        "ph-nav|phw-"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/",
       "connector": "PHENOM_ATS",
       "config": "config/phenom_sources.py",
@@ -89,7 +126,11 @@
       "endpoint": "https://{identifiant}/sitemap.xml"
     },
     "TEAMTAILOR": {
-      "url_patterns": ["teamtailor\\.com", "teamtailor-cdn\\.com", "data-teamtailor"],
+      "url_patterns": [
+        "teamtailor\\.com",
+        "teamtailor-cdn\\.com",
+        "data-teamtailor"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.teamtailor\\.com)",
       "connector": "JSONLD_SITES",
       "config": "config/ats_employers_v2.json",
@@ -97,7 +138,9 @@
       "endpoint": "https://{identifiant}/sitemap.xml"
     },
     "JOBTOOLZ": {
-      "url_patterns": ["jobtoolz\\.com"],
+      "url_patterns": [
+        "jobtoolz\\.com"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.jobtoolz\\.com)",
       "connector": "JSONLD_SITES",
       "config": "config/ats_employers_v2.json",
@@ -105,7 +148,9 @@
       "endpoint": "https://{identifiant}/sitemap.xml"
     },
     "TALENTFINDER": {
-      "url_patterns": ["talentfinder\\.be"],
+      "url_patterns": [
+        "talentfinder\\.be"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.talentfinder\\.be)",
       "connector": "JSONLD_SITES",
       "config": "config/ats_employers_v2.json",
@@ -113,84 +158,121 @@
       "endpoint": "https://{identifiant}/sitemap.xml"
     },
     "CVWAREHOUSE": {
-      "url_patterns": ["cvwarehouse\\.com"],
-      "identifier": "cvwarehouse\\.com/(?:[a-z]{2}/)?(?:companies?|company)/(?P<identifiant>[a-z0-9-]+)",
-      "connector": null,
-      "config": null,
-      "strategy": "HTML"
+      "url_patterns": [
+        "cvwarehouse\\.com",
+        "\\.cvw\\.io"
+      ],
+      "identifier": "(?P<identifiant>https?://[a-z0-9.-]+\\.cvw\\.io/|https?://jobpage\\.cvwarehouse\\.com/\\?companyGuid=[0-9a-f-]{36})",
+      "connector": "CVWAREHOUSE",
+      "config": "config/ats_employers_v2.json",
+      "strategy": "HTML",
+      "endpoint": "{identifiant}"
     },
     "TALENTSOFT": {
-      "url_patterns": ["talent-soft\\.com", "talentsoft\\.com", "cegid"],
+      "url_patterns": [
+        "talent-soft\\.com",
+        "talentsoft\\.com",
+        "cegid"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.talent-soft\\.com)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "CORNERSTONE": {
-      "url_patterns": ["\\.csod\\.com"],
+      "url_patterns": [
+        "\\.csod\\.com"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9-]+)\\.csod\\.com",
       "connector": null,
       "config": null,
       "strategy": "INTERNAL_JSON"
     },
     "TALEO": {
-      "url_patterns": ["taleo\\.net", "tbe\\.taleo", "/careersection/"],
+      "url_patterns": [
+        "taleo\\.net",
+        "tbe\\.taleo",
+        "/careersection/"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9-]+)\\.taleo\\.net",
       "connector": null,
       "config": null,
       "strategy": "INTERNAL_JSON"
     },
     "ORACLE_CLOUD": {
-      "url_patterns": ["oraclecloud\\.com/hcmUI", "/hcmUI/CandidateExperience"],
-      "identifier": "https?://(?P<identifiant>[a-z0-9-]+)\\.[a-z0-9.-]*oraclecloud\\.com",
-      "connector": null,
-      "config": null,
-      "strategy": "INTERNAL_JSON"
+      "url_patterns": [
+        "oraclecloud\\.com/hcmUI",
+        "/hcmUI/CandidateExperience",
+        "/hcmRestApi/",
+        "/[a-z]{2}/sites/[A-Za-z0-9_-]+/(?:job|requisitions)"
+      ],
+      "identifier": "https?://(?P<host>[a-z0-9.-]+)/(?:hcmUI/CandidateExperience/)?(?P<lang>[a-z]{2}(?:-[a-z]{2})?)/sites/(?P<site>[A-Za-z0-9_-]+)",
+      "connector": "ORACLE_CLOUD",
+      "config": "config/ats_employers_v2.json",
+      "strategy": "API_JSON",
+      "endpoint": "https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?finder=findReqs;siteNumber={site}"
     },
     "ICIMS": {
-      "url_patterns": ["icims\\.com"],
+      "url_patterns": [
+        "icims\\.com"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9-]+)\\.icims\\.com",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "AVATURE": {
-      "url_patterns": ["avature\\.net"],
+      "url_patterns": [
+        "avature\\.net"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.avature\\.net)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "EIGHTFOLD": {
-      "url_patterns": ["eightfold\\.ai"],
+      "url_patterns": [
+        "eightfold\\.ai"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.eightfold\\.ai)",
       "connector": null,
       "config": null,
       "strategy": "INTERNAL_JSON"
     },
     "RADANCY": {
-      "url_patterns": ["radancy", "tmpwebeng", "\\.jobs/[a-z]{2}-[a-z]{2}/jobs"],
+      "url_patterns": [
+        "radancy",
+        "tmpwebeng",
+        "\\.jobs/[a-z]{2}-[a-z]{2}/jobs"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/",
       "connector": null,
       "config": "sources/radancy.py",
       "strategy": "SITEMAP_JSONLD"
     },
     "BULLHORN": {
-      "url_patterns": ["bullhorn", "bullhornstaffing\\.com"],
+      "url_patterns": [
+        "bullhorn",
+        "bullhornstaffing\\.com"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "JOBVITE": {
-      "url_patterns": ["jobvite\\.com"],
+      "url_patterns": [
+        "jobvite\\.com"
+      ],
       "identifier": "jobs\\.jobvite\\.com/(?P<identifiant>[a-z0-9-]+)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "BAMBOOHR": {
-      "url_patterns": ["\\.bamboohr\\.com/(?:jobs|careers)"],
+      "url_patterns": [
+        "\\.bamboohr\\.com/(?:jobs|careers)"
+      ],
       "identifier": "(?P<identifiant>[a-z0-9-]+)\\.bamboohr\\.com",
       "connector": null,
       "config": null,
@@ -198,7 +280,9 @@
       "endpoint": "https://{identifiant}.bamboohr.com/careers/list"
     },
     "BREEZY": {
-      "url_patterns": ["\\.breezy\\.hr"],
+      "url_patterns": [
+        "\\.breezy\\.hr"
+      ],
       "identifier": "(?P<identifiant>[a-z0-9-]+)\\.breezy\\.hr",
       "connector": null,
       "config": null,
@@ -206,42 +290,59 @@
       "endpoint": "https://{identifiant}.breezy.hr/json"
     },
     "HOMERUN": {
-      "url_patterns": ["\\.homerun\\.co"],
+      "url_patterns": [
+        "\\.homerun\\.co"
+      ],
       "identifier": "(?P<identifiant>[a-z0-9-]+)\\.homerun\\.co",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "WELCOME_TO_THE_JUNGLE": {
-      "url_patterns": ["welcometothejungle\\.com/[a-z]{2}/companies/"],
+      "url_patterns": [
+        "welcometothejungle\\.com/[a-z]{2}/companies/"
+      ],
       "identifier": "welcometothejungle\\.com/[a-z]{2}/companies/(?P<identifiant>[a-z0-9-]+)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "BRASSRING": {
-      "url_patterns": ["brassring\\.com", "krb-sjobs"],
+      "url_patterns": [
+        "brassring\\.com",
+        "krb-sjobs"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.brassring\\.com)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "CARERIX": {
-      "url_patterns": ["carerix\\.com", "cxs\\.carerix"],
+      "url_patterns": [
+        "carerix\\.com",
+        "cxs\\.carerix"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.carerix\\.com)",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "OTYS": {
-      "url_patterns": ["otys\\.nl", "otys\\.com", "otys-cdn"],
+      "url_patterns": [
+        "otys\\.nl",
+        "otys\\.com",
+        "otys-cdn"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/",
       "connector": null,
       "config": null,
       "strategy": "HTML"
     },
     "HIBOB": {
-      "url_patterns": ["\\.hibob\\.com/(?:jobs|careers)", "app\\.hibob\\.com"],
+      "url_patterns": [
+        "\\.hibob\\.com/(?:jobs|careers)",
+        "app\\.hibob\\.com"
+      ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.hibob\\.com)",
       "connector": null,
       "config": null,

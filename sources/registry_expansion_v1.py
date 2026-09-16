@@ -20,7 +20,7 @@ from __future__ import annotations
 from sources import ats_employers_v2 as registre
 
 
-REGISTRY_EXPANSION_VERSION = "1.0"
+REGISTRY_EXPANSION_VERSION = "1.1"
 
 
 def _collect_ats_v2(ats: str) -> list:
@@ -68,6 +68,30 @@ def _collect_jsonld_sites() -> list:
     return resultat["jobs"]
 
 
+def _collect_oracle_cloud() -> list:
+    from sources.oracle_cloud_v1 import collect_oracle_cloud_jobs
+    companies = registre.employeurs("ORACLE_CLOUD")
+    if not companies:
+        print("  ORACLE_CLOUD : aucun employeur enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_oracle_cloud_jobs(companies, verbose=True)
+    print(f"ORACLE_CLOUD - employeurs={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
+def _collect_cvwarehouse() -> list:
+    from sources.cvwarehouse_v1 import collect_cvwarehouse_jobs
+    companies = registre.employeurs("CVWAREHOUSE")
+    if not companies:
+        print("  CVWAREHOUSE : aucun employeur enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_cvwarehouse_jobs(companies, verbose=True)
+    print(f"CVWAREHOUSE - employeurs={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
 def specs_expansion(SourceSpec) -> tuple:
     """Les SourceSpec a ajouter ; SourceSpec est passe pour eviter l'import circulaire."""
     return (
@@ -83,6 +107,13 @@ def specs_expansion(SourceSpec) -> tuple:
         SourceSpec(key="PERSONIO", result_key="personio", label="Personio (flux XML)",
                    collector=_collect_personio, languages=("fr", "en", "nl", "de"), priority=78,
                    notes="Flux XML public. Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="ORACLE_CLOUD", result_key="oracle_cloud", label="Oracle Recruiting Cloud (API publique)",
+                   collector=_collect_oracle_cloud, languages=("fr", "en", "nl"), priority=80,
+                   notes="API REST publique des sites Candidate Experience. Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="CVWAREHOUSE", result_key="cvwarehouse", label="CVWarehouse (ATS belge)",
+                   collector=_collect_cvwarehouse, languages=("nl", "fr", "en"), priority=81,
+                   notes="Pages servies par le serveur ; une page de detail par section porte toutes les offres. "
+                         "Employeurs : config/ats_employers_v2.json."),
         SourceSpec(key="JSONLD_SITES", result_key="jsonld_sites",
                    label="Sites carrière (sitemap + JSON-LD)",
                    collector=_collect_jsonld_sites, languages=("fr", "en", "nl", "de"), priority=79,

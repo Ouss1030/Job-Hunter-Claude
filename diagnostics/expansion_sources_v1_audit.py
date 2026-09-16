@@ -269,6 +269,43 @@ def main():
     tests.append(check("Workable : liste + detail, description et exigences reunies",
                        len(jobs) == 1 and "GMP" in jobs[0].description and jobs[0].url.endswith("/j/AB12/")))
 
+    # Oracle Recruiting Cloud (16/09/2026)
+    from sources import oracle_cloud_v1 as oc
+    liste_oracle = {"items": [{"TotalJobsCount": 2, "requisitionList": [
+        {"Id": "5807", "Title": "Partner B2B Account Manager", "PrimaryLocation": "Mechelen, Belgium",
+         "PrimaryLocationCountry": "BE", "PostedDate": "2026-09-16", "WorkerType": "Employee", "Language": "nl",
+         "ShortDescriptionStr": "court", "secondaryLocations": []},
+        {"Id": "9999", "Title": "Analyst", "PrimaryLocation": "Poland", "PrimaryLocationCountry": "PL",
+         "PostedDate": "2026-09-16", "secondaryLocations": []}]}]}
+    detail_oracle = {"items": [{"ExternalDescriptionStr": "<p>Réseau <b>B2B</b></p>", "ExternalQualificationsStr": "<ul><li>NL/FR</li></ul>"}]}
+    s = _Session({"https://ebza.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails": _Reponse(json.dumps(detail_oracle), 200, ctype="application/json"),
+                  "https://ebza.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions": _Reponse(json.dumps(liste_oracle), 200, ctype="application/json")})
+    with mock.patch.object(oc, "PAUSE_DETAIL", 0):
+        jobs, meta = oc.collect_oracle_cloud({"host": "ebza.fa.em2.oraclecloud.com", "site": "CX_1001", "lang": "nl", "label": "Telenet"}, s)
+    tests.append(check("Oracle Cloud : liste + detail, offre belge gardee, polonaise ecartee, URL du site",
+                       len(jobs) == 1 and meta["hors_be"] == 1 and "B2B" in jobs[0].description and "NL/FR" in jobs[0].description
+                       and jobs[0].url.endswith("/sites/CX_1001/job/5807") and jobs[0].external_id == "ebza.fa.em2.oraclecloud.com:5807"))
+
+    # CVWarehouse (16/09/2026) : accueil + sections, une page de detail par section
+    from sources import cvwarehouse_v1 as cvw
+    # HTML reel : & s'ecrit &amp; (un & nu devant "section" serait lu comme l'entite &sect).
+    accueil = ('<a href="/?lang=nl-BE&amp;section=aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">Vacatures</a>'
+               '<a href="?lang=nl-BE&amp;job=1&amp;q=x"><span class="job-title">Laborant</span><span class="location">Gent, België</span></a>')
+    section = '<a href="?lang=nl-BE&amp;job=2&amp;q=y"><span class="job-title">Data analist</span><span class="location">Leuven, België</span></a>'
+    detail_1 = ('<div class="job-detail"><h2 class="job-title">Laborant</h2><span class="location">Gent, België</span>'
+                '<div>' + "Analyses en labo. " * 12 + '</div></div>')
+    detail_2 = ('<div class="job-detail"><h2 class="job-title">Data analist</h2><span class="location">Leuven, België</span>'
+                '<div>' + "Power BI et SQL. " * 12 + '</div></div>')
+    s = _Session({"https://acme.cvw.io/?lang=nl-BE&job=1": _Reponse(detail_1, 200),
+                  "https://acme.cvw.io/?lang=nl-BE&job=2&section=aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": _Reponse(detail_2, 200),
+                  "https://acme.cvw.io/?lang=nl-BE&section=aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": _Reponse(section, 200),
+                  "https://acme.cvw.io/?lang=nl-BE": _Reponse(accueil, 200)})
+    jobs, meta = cvw.collect_cvwarehouse({"identifier": "https://acme.cvw.io/", "label": "Acme"}, s)
+    tests.append(check("CVWarehouse : accueil + section listes, chaque offre reliee a son bloc de detail par le titre",
+                       meta["total"] == 2 and meta["sans_texte"] == 0 and {j.title for j in jobs} == {"Laborant", "Data analist"}
+                       and all("labo" in j.description.lower() or "power bi" in j.description.lower() for j in jobs)
+                       and jobs[0].external_id.startswith("acme.cvw.io:"), str(meta)))
+
     # ------------------------------------------------------------------
     # 4. Extracteur universel
     # ------------------------------------------------------------------
@@ -349,8 +386,13 @@ def main():
     rks = [s.result_key for s in registry.SOURCE_SPECS]
     tests.append(check("SOURCE_SPECS : aucune cle ni result_key en double",
                        len(cles) == len(set(cles)) and len(rks) == len(set(rks)), f"{len(cles)} specs"))
-    tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES",
-                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES"} <= set(cles)))
+    tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES, ORACLE_CLOUD, CVWAREHOUSE",
+                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE"} <= set(cles)))
+    tests.append(check("Detection : Oracle Cloud (host/lang/site) et CVWarehouse (URL, casse des parametres conservee)",
+                       det.detecter_url("https://ebza.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/nl/sites/CX_1001/job/1")["identifiant"]
+                       == {"host": "ebza.fa.em2.oraclecloud.com", "lang": "nl", "site": "CX_1001"}
+                       and det.detecter_url("https://JobPage.cvwarehouse.com/?companyGuid=588d29e6-7c84-4f07-a5bb-42d21e04445b")["identifiant"]
+                       == "https://jobpage.cvwarehouse.com/?companyGuid=588d29e6-7c84-4f07-a5bb-42d21e04445b"))
     tests.append(check("Versions au moins 1.0",
                        all(at_least(v, "1.0") for v in (ab.ABSORPTION_VERSION, det.ATS_DETECTOR_VERSION, v2.ATS_PUBLIC_V2_VERSION,
                                                         jl.JSONLD_SITEMAP_VERSION, reg.ATS_EMPLOYERS_VERSION, sd.SOURCE_DISCOVERY_VERSION))))

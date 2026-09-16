@@ -107,7 +107,12 @@ def _extraire_identifiant(spec: dict, texte: str):
             return None
         # Un hote est insensible a la casse ; un slug d'URL l'est chez ces
         # ATS. Ailleurs (SmartRecruiters, Ashby) on garde la casse vue.
-        if "." in ident or nom_ats_minuscules(spec):
+        if ident.lower().startswith("http"):
+            # Une URL complete : seul l'hote est insensible a la casse ; les
+            # parametres (companyGuid=...) doivent rester tels quels.
+            p = urlsplit(ident)
+            ident = p._replace(netloc=p.netloc.lower(), scheme=p.scheme.lower()).geturl()
+        elif "." in ident or nom_ats_minuscules(spec):
             ident = ident.lower()
         return ident
     return groupes
@@ -120,8 +125,7 @@ _FAUX_TENANTS = {"careers-analytics", "analytics", "api", "assets", "cdn", "stat
                  "boards-api", "job-boards", "jobs", "careers", "apply", "hire"}
 
 _ATS_SLUG_MINUSCULES = {"LEVER", "GREENHOUSE", "RECRUITEE", "WORKABLE", "PERSONIO",
-                        "BAMBOOHR", "BREEZY", "HOMERUN", "JOBVITE", "WELCOME_TO_THE_JUNGLE",
-                        "CVWAREHOUSE"}
+                        "BAMBOOHR", "BREEZY", "HOMERUN", "JOBVITE", "WELCOME_TO_THE_JUNGLE"}
 
 
 def nom_ats_minuscules(spec: dict) -> bool:
@@ -204,6 +208,10 @@ def _analyser_reponse(reponse) -> dict | None:
         if not r["identifiant"] and r["strategie"] in ("SITEMAP_JSONLD", "SITEMAP_HTML"):
             r["identifiant"] = urlsplit(reponse.url).netloc.lower()
             r["endpoint"] = f"https://{r['identifiant']}/sitemap.xml"
+        # CVWarehouse sur domaine propre (jobs.provincieantwerpen.be) : la
+        # page carriere elle-meme est le site a lire.
+        if not r["identifiant"] and r["ats"] == "CVWAREHOUSE":
+            r["identifiant"] = f"https://{urlsplit(reponse.url).netloc.lower()}/"
         return r
     return None
 

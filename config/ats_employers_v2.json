@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-15T17:48:59+02:00",
+ "updated_at": "2026-09-16T15:20:01+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -29,6 +29,90 @@
    "career_url": "https://vinci.talentsquare.com/",
    "notes": "",
    "first_seen": "2026-09-15T15:55:36+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://jobpage.cvwarehouse.com/?companyGuid=588d29e6-7c84-4f07-a5bb-42d21e04445a",
+   "label": "AZ Turnhout",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:54+02:00",
+   "jobs_total": 33,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://jobpage.cvwarehouse.com/?companyGuid=588d29e6-7c84-4f07-a5bb-42d21e04445a&lang=nl-BE",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:54+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://careers-greenyard.cvw.io/",
+   "label": "Greenyard",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:20:01+02:00",
+   "jobs_total": 66,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://www.greenyard.group/careers",
+   "notes": "",
+   "first_seen": "2026-09-16T15:20:01+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://hogent.cvw.io/",
+   "label": "HOGENT",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:46+02:00",
+   "jobs_total": 14,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://hogent.cvw.io/?lang=nl-BE#e5c5eee3-6b5d-49dd-9b9d-deb727ec2279",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:46+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://jobs.provincieantwerpen.be/",
+   "label": "Provincie Antwerpen",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:55+02:00",
+   "jobs_total": 13,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://jobs.provincieantwerpen.be/?lang=nl-BE",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:55+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://jobpage.cvwarehouse.com/?companyGuid=eab9ca13-ee10-4504-8a87-a785d0b037ef",
+   "label": "Thomas More",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:47+02:00",
+   "jobs_total": 14,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://thomasmore.be/nl/jobs",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:47+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://jobpage.cvwarehouse.com/?companyGuid=0fe20169-9158-40b0-9d90-3877eefbeeab",
+   "label": "Vivalia",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:20:00+02:00",
+   "jobs_total": 51,
+   "jobs_be": null,
+   "discovered_by": "point5",
+   "career_url": "https://jobpage.cvwarehouse.com/?companyGuid=0fe20169-9158-40b0-9d90-3877eefbeeab&lang=fr-FR",
+   "notes": "",
+   "first_seen": "2026-09-16T15:20:00+02:00"
   },
   {
    "ats": "GREENHOUSE",
@@ -407,6 +491,78 @@
    "career_url": "https://www.deliverect.com/en/careers",
    "notes": "",
    "first_seen": "2026-09-15T15:47:41+02:00"
+  },
+  {
+   "ats": "ORACLE_CLOUD",
+   "connector": "ORACLE_CLOUD",
+   "identifier": {
+    "host": "hdhy.fa.em3.oraclecloud.com",
+    "lang": "en",
+    "site": "AperamCareerSite"
+   },
+   "label": "Aperam",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:57+02:00",
+   "jobs_total": 52,
+   "jobs_be": 9,
+   "discovered_by": "point5",
+   "career_url": "https://www.aperam.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:57+02:00"
+  },
+  {
+   "ats": "ORACLE_CLOUD",
+   "connector": "ORACLE_CLOUD",
+   "identifier": {
+    "host": "ekiz.fa.em2.oraclecloud.com",
+    "lang": "en",
+    "site": "CX"
+   },
+   "label": "Carmeuse",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:19:58+02:00",
+   "jobs_total": 103,
+   "jobs_be": 3,
+   "discovered_by": "point5",
+   "career_url": "https://www.carmeuse.com/eu-en/rock-your-career",
+   "notes": "",
+   "first_seen": "2026-09-16T15:19:58+02:00"
+  },
+  {
+   "ats": "ORACLE_CLOUD",
+   "connector": "ORACLE_CLOUD",
+   "identifier": {
+    "host": "don.fa.em2.oraclecloud.com",
+    "lang": "en",
+    "site": "CX_1003"
+   },
+   "label": "Euroclear",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:20:01+02:00",
+   "jobs_total": 135,
+   "jobs_be": 16,
+   "discovered_by": "point5",
+   "career_url": "https://www.euroclear.com/careers/en.html",
+   "notes": "",
+   "first_seen": "2026-09-16T15:20:01+02:00"
+  },
+  {
+   "ats": "ORACLE_CLOUD",
+   "connector": "ORACLE_CLOUD",
+   "identifier": {
+    "host": "ebza.fa.em2.oraclecloud.com",
+    "lang": "nl",
+    "site": "CX_1001"
+   },
+   "label": "Telenet",
+   "enabled": true,
+   "verified_at": "2026-09-16T15:20:00+02:00",
+   "jobs_total": 62,
+   "jobs_be": 62,
+   "discovered_by": "point5",
+   "career_url": "https://www2.telenet.be/corporate/nl/careers.html",
+   "notes": "",
+   "first_seen": "2026-09-16T15:20:00+02:00"
   },
   {
    "ats": "PERSONIO",

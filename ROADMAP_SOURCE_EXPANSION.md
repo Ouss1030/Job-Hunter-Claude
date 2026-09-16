@@ -24,6 +24,9 @@ Critère d'acceptation : ACTIRIS ≥ 30 000 actives, FOREM ≥ 24 000, aucune so
 
 ## Étape 2 — connecteurs pour les ATS détectés sans connecteur
 
+**Fait le 16/09/2026 :** Oracle Recruiting Cloud (API REST publique : Telenet 62 offres belges, Euroclear 16, Aperam 9, Carmeuse 3 ; Défense sur domaine vanity non relayé → en attente) et CVWarehouse (pages servies par le serveur, une page de détail par section porte toutes les offres : HOGENT 14, Thomas More 14, AZ Turnhout 33, Provincie Antwerpen 13, Vivalia 51, Greenyard 26 belges sur 66). Registre : 132 employeurs, 14 ATS.
+
+
 La campagne a détecté des employeurs belges sur des ATS que le projet ne lit pas encore (liste dans `SOURCE_COVERAGE_MATRIX.csv`, lignes `ATS <nom>`). Ordre par nombre d'employeurs détectés : CVWarehouse 7 (provinces d'Anvers et du Brabant flamand, HOGENT, Thomas More, AZ Turnhout, Vivalia, Greenyard), Oracle Cloud 5 (Défense, Aperam, Carmeuse, Euroclear, Telenet), Bullhorn 4 (Manpower, Jefferson Wells, Select HR, Experis), iCIMS 4 (Jan De Nul, PepsiCo, BDO, AXA), Radancy 3 (Sanofi, Cargill, ING), Carerix 2, Cornerstone 2, Avature 2, Eightfold 2, Taleo 1 (UZ Leuven), BrassRing 1, Talentsoft 1. Chaque connecteur écrit sert d'emblée à tous les employeurs déjà détectés, et à ceux que la découverte trouvera ensuite. Ce sont pour la plupart des endpoints JSON internes documentés par l'usage (Taleo `careersection/rest/jobboard/searchjobs`, Cornerstone `services/x/career-site/v1/search`, Oracle Cloud `hcmRestApi/resources/latest/recruitingCEJobRequisitions`, Radancy sitemap + JSON-LD via `JSONLD_SITES`).
 
 ## Étape 3 — deuxième réservoir de graines : les employeurs vus dans les offres

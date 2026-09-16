@@ -42,6 +42,7 @@ _VERROU = threading.Lock()
 # Comment chaque connecteur nomme son identifiant.
 _CLE_IDENTIFIANT = {
     "WORKDAY_ATS": "tenant",
+    "ORACLE_CLOUD": "host",
     "SUCCESSFACTORS_ATS": "host",
     "PHENOM_ATS": "host",
 }
@@ -99,6 +100,8 @@ def employeurs(connecteur: str, actifs_seulement: bool = True) -> list[dict]:
                 ligne[cle] = e[cle]
         if connecteur == "WORKDAY_ATS" and isinstance(ident, dict):
             ligne.update(tenant=ident.get("tenant"), wd=ident.get("wd"), site=ident.get("site"))
+        elif connecteur == "ORACLE_CLOUD" and isinstance(ident, dict):
+            ligne.update(host=ident.get("host"), site=ident.get("site"), lang=ident.get("lang") or "en")
         else:
             ligne[_CLE_IDENTIFIANT.get(connecteur, "identifier")] = ident
             if _CLE_IDENTIFIANT.get(connecteur):
