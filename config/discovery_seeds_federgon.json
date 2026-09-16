@@ -1,0 +1,1918 @@
+{
+ "schema_version": "1.0",
+ "source": "https://federgon.be/fr/les-membres/",
+ "generated_at": "2026-09-16T16:00:01",
+ "purpose": "Membres Federgon (prestataires RH) a passer au moteur de decouverte.",
+ "groups": {
+  "federgon": [
+   {
+    "domaine": "123jobs.be",
+    "label": "123Jobs"
+   },
+   {
+    "domaine": "247drive.be",
+    "label": "247Drive"
+   },
+   {
+    "domaine": "jobs2work.be",
+    "label": "Jobs2Work"
+   },
+   {
+    "domaine": "3w.be",
+    "label": "3W"
+   },
+   {
+    "domaine": "a-interim.be",
+    "label": "A Interim"
+   },
+   {
+    "domaine": "afirst.be",
+    "label": "Afirst"
+   },
+   {
+    "domaine": "a-th.com",
+    "label": "A Th"
+   },
+   {
+    "domaine": "abalone-emploi.com",
+    "label": "Abalone Emploi"
+   },
+   {
+    "domaine": "abalone-emploi.be",
+    "label": "Abalone Emploi"
+   },
+   {
+    "domaine": "absolutejobs.be",
+    "label": "Absolutejobs"
+   },
+   {
+    "domaine": "absoluteyou.be",
+    "label": "Absoluteyou"
+   },
+   {
+    "domaine": "abylsen.com",
+    "label": "Abylsen"
+   },
+   {
+    "domaine": "accentjobs.be",
+    "label": "Accentjobs"
+   },
+   {
+    "domaine": "accentlang.com",
+    "label": "Accentlang"
+   },
+   {
+    "domaine": "ace.eu",
+    "label": "Ace"
+   },
+   {
+    "domaine": "acerta.be",
+    "label": "Acerta"
+   },
+   {
+    "domaine": "actainterim.be",
+    "label": "Actainterim"
+   },
+   {
+    "domaine": "addvalue.eu",
+    "label": "Addvalue"
+   },
+   {
+    "domaine": "adecco.be",
+    "label": "Adecco"
+   },
+   {
+    "domaine": "groupeadequat.be",
+    "label": "Groupeadequat"
+   },
+   {
+    "domaine": "adm-im.com",
+    "label": "Adm Im"
+   },
+   {
+    "domaine": "afinit.be",
+    "label": "Afinit"
+   },
+   {
+    "domaine": "ago.jobs",
+    "label": "Ago"
+   },
+   {
+    "domaine": "ago.be",
+    "label": "Ago"
+   },
+   {
+    "domaine": "agoraskills.be",
+    "label": "Agoraskills"
+   },
+   {
+    "domaine": "akkodis.com",
+    "label": "Akkodis"
+   },
+   {
+    "domaine": "aligno.be",
+    "label": "Aligno"
+   },
+   {
+    "domaine": "allo-solutions.be",
+    "label": "Allo Solutions"
+   },
+   {
+    "domaine": "altior.be",
+    "label": "Altior"
+   },
+   {
+    "domaine": "amelior.be",
+    "label": "Amelior"
+   },
+   {
+    "domaine": "amplo.be",
+    "label": "Amplo"
+   },
+   {
+    "domaine": "arbeo.be",
+    "label": "Arbeo"
+   },
+   {
+    "domaine": "arcadis.com",
+    "label": "Arcadis"
+   },
+   {
+    "domaine": "archetype-eu.com",
+    "label": "Archetype Eu"
+   },
+   {
+    "domaine": "ariadgroup.com",
+    "label": "Ariadgroup"
+   },
+   {
+    "domaine": "ascento.be",
+    "label": "Ascento"
+   },
+   {
+    "domaine": "atrecruitment.be",
+    "label": "Atrecruitment"
+   },
+   {
+    "domaine": "atmetis.be",
+    "label": "Atmetis"
+   },
+   {
+    "domaine": "attendoprofessional.be",
+    "label": "Attendoprofessional"
+   },
+   {
+    "domaine": "attentia.be",
+    "label": "Attentia"
+   },
+   {
+    "domaine": "auxilios.be",
+    "label": "Auxilios"
+   },
+   {
+    "domaine": "avance.jobs",
+    "label": "Avance"
+   },
+   {
+    "domaine": "axintor.be",
+    "label": "Axintor"
+   },
+   {
+    "domaine": "axis.eu",
+    "label": "Axis"
+   },
+   {
+    "domaine": "axxaz.eu",
+    "label": "Axxaz"
+   },
+   {
+    "domaine": "axxes-it.com",
+    "label": "Axxes It"
+   },
+   {
+    "domaine": "lerian.be",
+    "label": "Lerian"
+   },
+   {
+    "domaine": "b-morehr.be",
+    "label": "B Morehr"
+   },
+   {
+    "domaine": "bakker.be",
+    "label": "Bakker"
+   },
+   {
+    "domaine": "batenborch.com",
+    "label": "Batenborch"
+   },
+   {
+    "domaine": "bayanitalent.com",
+    "label": "Bayanitalent"
+   },
+   {
+    "domaine": "bdo.be",
+    "label": "Bdo"
+   },
+   {
+    "domaine": "besomeone.be",
+    "label": "Besomeone"
+   },
+   {
+    "domaine": "beeple.eu",
+    "label": "Beeple"
+   },
+   {
+    "domaine": "best-interim.be",
+    "label": "Best Interim"
+   },
+   {
+    "domaine": "benton.be",
+    "label": "Benton"
+   },
+   {
+    "domaine": "berenschot.be",
+    "label": "Berenschot"
+   },
+   {
+    "domaine": "beyondmars.be",
+    "label": "Beyondmars"
+   },
+   {
+    "domaine": "bias-team.be",
+    "label": "Bias Team"
+   },
+   {
+    "domaine": "bizztalent.be",
+    "label": "Bizztalent"
+   },
+   {
+    "domaine": "bloomstalent.com",
+    "label": "Bloomstalent"
+   },
+   {
+    "domaine": "bonache.be",
+    "label": "Bonache"
+   },
+   {
+    "domaine": "bonanzagroup.be",
+    "label": "Bonanzagroup"
+   },
+   {
+    "domaine": "borderlesstalent.be",
+    "label": "Borderlesstalent"
+   },
+   {
+    "domaine": "brightplus.be",
+    "label": "Brightplus"
+   },
+   {
+    "domaine": "brightstaffing.be",
+    "label": "Brightstaffing"
+   },
+   {
+    "domaine": "brunel.be",
+    "label": "Brunel"
+   },
+   {
+    "domaine": "burdock.com",
+    "label": "Burdock"
+   },
+   {
+    "domaine": "buronexus.be",
+    "label": "Buronexus"
+   },
+   {
+    "domaine": "blcc.be",
+    "label": "Blcc"
+   },
+   {
+    "domaine": "caretalents.be",
+    "label": "Caretalents"
+   },
+   {
+    "domaine": "careersquad.be",
+    "label": "Careersquad"
+   },
+   {
+    "domaine": "careforceone.be",
+    "label": "Careforceone"
+   },
+   {
+    "domaine": "cbp.be",
+    "label": "Cbp"
+   },
+   {
+    "domaine": "carriere.com",
+    "label": "Carriere"
+   },
+   {
+    "domaine": "catalay.be",
+    "label": "Catalay"
+   },
+   {
+    "domaine": "cebir.be",
+    "label": "Cebir"
+   },
+   {
+    "domaine": "cegis.be",
+    "label": "Cegis"
+   },
+   {
+    "domaine": "ceps-esm.be",
+    "label": "Ceps Esm"
+   },
+   {
+    "domaine": "chaintec.be",
+    "label": "Chaintec"
+   },
+   {
+    "domaine": "clearxperts.com",
+    "label": "Clearxperts"
+   },
+   {
+    "domaine": "clickcare.be",
+    "label": "Clickcare"
+   },
+   {
+    "domaine": "clovr.be",
+    "label": "Clovr"
+   },
+   {
+    "domaine": "connecting-expertise.com",
+    "label": "Connecting Expertise"
+   },
+   {
+    "domaine": "coretalents.eu",
+    "label": "Coretalents"
+   },
+   {
+    "domaine": "cresept.be",
+    "label": "Cresept"
+   },
+   {
+    "domaine": "crossint.eu",
+    "label": "Crossint"
+   },
+   {
+    "domaine": "crowespark.be",
+    "label": "Crowespark"
+   },
+   {
+    "domaine": "ctrl-f.be",
+    "label": "Ctrl F"
+   },
+   {
+    "domaine": "jobseninterim.daenens.be",
+    "label": "Jobseninterim"
+   },
+   {
+    "domaine": "dagelijksgeld.be",
+    "label": "Dagelijksgeld"
+   },
+   {
+    "domaine": "dajobs.be",
+    "label": "Dajobs"
+   },
+   {
+    "domaine": "damaicoaching.be",
+    "label": "Damaicoaching"
+   },
+   {
+    "domaine": "daoust.be",
+    "label": "Daoust"
+   },
+   {
+    "domaine": "dark-light.be",
+    "label": "Dark Light"
+   },
+   {
+    "domaine": "opleidingscoach.be",
+    "label": "Opleidingscoach"
+   },
+   {
+    "domaine": "depiloten.com",
+    "label": "Depiloten"
+   },
+   {
+    "domaine": "derouck.be",
+    "label": "Derouck"
+   },
+   {
+    "domaine": "dme.be",
+    "label": "Dme"
+   },
+   {
+    "domaine": "deltaworx.eu",
+    "label": "Deltaworx"
+   },
+   {
+    "domaine": "didiom.be",
+    "label": "Didiom"
+   },
+   {
+    "domaine": "digitaldevils.be",
+    "label": "Digitaldevils"
+   },
+   {
+    "domaine": "digitalpayrollservices.be",
+    "label": "Digitalpayrollservices"
+   },
+   {
+    "domaine": "dixon.be",
+    "label": "Dixon"
+   },
+   {
+    "domaine": "dixondrive.be",
+    "label": "Dixondrive"
+   },
+   {
+    "domaine": "dixonhr.be",
+    "label": "Dixonhr"
+   },
+   {
+    "domaine": "dminterim.be",
+    "label": "Dminterim"
+   },
+   {
+    "domaine": "dosign.be",
+    "label": "Dosign"
+   },
+   {
+    "domaine": "dynamic-jobs.be",
+    "label": "Dynamic Jobs"
+   },
+   {
+    "domaine": "easypay.be",
+    "label": "Easypay"
+   },
+   {
+    "domaine": "edco-jobs.eu",
+    "label": "Edco Jobs"
+   },
+   {
+    "domaine": "edenred.be",
+    "label": "Edenred"
+   },
+   {
+    "domaine": "edulogia.be",
+    "label": "Edulogia"
+   },
+   {
+    "domaine": "eghtcare.be",
+    "label": "Eghtcare"
+   },
+   {
+    "domaine": "reintegrationplus.be",
+    "label": "Reintegrationplus"
+   },
+   {
+    "domaine": "elsooms.be",
+    "label": "Elsooms"
+   },
+   {
+    "domaine": "houseoftalents.be",
+    "label": "Houseoftalents"
+   },
+   {
+    "domaine": "engibex.be",
+    "label": "Engibex"
+   },
+   {
+    "domaine": "enigmo.be",
+    "label": "Enigmo"
+   },
+   {
+    "domaine": "eniteq.be",
+    "label": "Eniteq"
+   },
+   {
+    "domaine": "equip-interim.be",
+    "label": "Equip Interim"
+   },
+   {
+    "domaine": "essensys.eu",
+    "label": "Essensys"
+   },
+   {
+    "domaine": "euro-engineering.be",
+    "label": "Euro Engineering"
+   },
+   {
+    "domaine": "staffing-esg.be",
+    "label": "Staffing Esg"
+   },
+   {
+    "domaine": "euvalys.com",
+    "label": "Euvalys"
+   },
+   {
+    "domaine": "evacare.be",
+    "label": "Evacare"
+   },
+   {
+    "domaine": "even-coaching.be",
+    "label": "Even Coaching"
+   },
+   {
+    "domaine": "evertys.be",
+    "label": "Evertys"
+   },
+   {
+    "domaine": "evokestaffing.com",
+    "label": "Evokestaffing"
+   },
+   {
+    "domaine": "exaris.be",
+    "label": "Exaris"
+   },
+   {
+    "domaine": "excel-interim.com",
+    "label": "Excel Interim"
+   },
+   {
+    "domaine": "executivetalents.be",
+    "label": "Executivetalents"
+   },
+   {
+    "domaine": "exmil2civ.be",
+    "label": "Exmil2Civ"
+   },
+   {
+    "domaine": "experis.be",
+    "label": "Experis"
+   },
+   {
+    "domaine": "experza.be",
+    "label": "Experza"
+   },
+   {
+    "domaine": "expressmedical.be",
+    "label": "Expressmedical"
+   },
+   {
+    "domaine": "exxtra.be",
+    "label": "Exxtra"
+   },
+   {
+    "domaine": "wearefaktor.com",
+    "label": "Wearefaktor"
+   },
+   {
+    "domaine": "fed-group.be",
+    "label": "Fed Group"
+   },
+   {
+    "domaine": "fenixconsulting.be",
+    "label": "Fenixconsulting"
+   },
+   {
+    "domaine": "fiftyfiveplus.be",
+    "label": "Fiftyfiveplus"
+   },
+   {
+    "domaine": "financialtalents.be",
+    "label": "Financialtalents"
+   },
+   {
+    "domaine": "find-a-job.be",
+    "label": "Find A Job"
+   },
+   {
+    "domaine": "flandersjobcreators.be",
+    "label": "Flandersjobcreators"
+   },
+   {
+    "domaine": "flandersatwork.be",
+    "label": "Flandersatwork"
+   },
+   {
+    "domaine": "flexer.be",
+    "label": "Flexer"
+   },
+   {
+    "domaine": "flyconsult.eu",
+    "label": "Flyconsult"
+   },
+   {
+    "domaine": "flyingservice.be",
+    "label": "Flyingservice"
+   },
+   {
+    "domaine": "foodtalents.be",
+    "label": "Foodtalents"
+   },
+   {
+    "domaine": "formabv.be",
+    "label": "Formabv"
+   },
+   {
+    "domaine": "forumjobs.be",
+    "label": "Forumjobs"
+   },
+   {
+    "domaine": "futurskill.be",
+    "label": "Futurskill"
+   },
+   {
+    "domaine": "invest4talent.be",
+    "label": "Invest4Talent"
+   },
+   {
+    "domaine": "generation4.be",
+    "label": "Generation4"
+   },
+   {
+    "domaine": "generationsrecruitment.com",
+    "label": "Generationsrecruitment"
+   },
+   {
+    "domaine": "gentis.be",
+    "label": "Gentis"
+   },
+   {
+    "domaine": "be.gigroup.com",
+    "label": "Be"
+   },
+   {
+    "domaine": "glowi.be",
+    "label": "Glowi"
+   },
+   {
+    "domaine": "go4jobsconstruct.be",
+    "label": "Go4Jobsconstruct"
+   },
+   {
+    "domaine": "go4jobs.be",
+    "label": "Go4Jobs"
+   },
+   {
+    "domaine": "godimentolegal.be",
+    "label": "Godimentolegal"
+   },
+   {
+    "domaine": "orientation-grainesdesoi.com",
+    "label": "Orientation Grainesdesoi"
+   },
+   {
+    "domaine": "greatatwork.be",
+    "label": "Greatatwork"
+   },
+   {
+    "domaine": "group-f.be",
+    "label": "Group F"
+   },
+   {
+    "domaine": "partnaire.fr",
+    "label": "Partnaire"
+   },
+   {
+    "domaine": "henl.be",
+    "label": "Henl"
+   },
+   {
+    "domaine": "habeas.be",
+    "label": "Habeas"
+   },
+   {
+    "domaine": "happyhumans.be",
+    "label": "Happyhumans"
+   },
+   {
+    "domaine": "harveynash.be",
+    "label": "Harveynash"
+   },
+   {
+    "domaine": "hays.be",
+    "label": "Hays"
+   },
+   {
+    "domaine": "hey-charlie.com",
+    "label": "Hey Charlie"
+   },
+   {
+    "domaine": "headsandhunters.be",
+    "label": "Headsandhunters"
+   },
+   {
+    "domaine": "herstart.be",
+    "label": "Herstart"
+   },
+   {
+    "domaine": "hettalentenhuis.be",
+    "label": "Hettalentenhuis"
+   },
+   {
+    "domaine": "hirering.eu",
+    "label": "Hirering"
+   },
+   {
+    "domaine": "homini.be",
+    "label": "Homini"
+   },
+   {
+    "domaine": "hookd-recruitment.com",
+    "label": "Hookd Recruitment"
+   },
+   {
+    "domaine": "houseofboards.eu",
+    "label": "Houseofboards"
+   },
+   {
+    "domaine": "hronegroup.com",
+    "label": "Hronegroup"
+   },
+   {
+    "domaine": "hr-planet.be",
+    "label": "Hr Planet"
+   },
+   {
+    "domaine": "hrtalents.be",
+    "label": "Hrtalents"
+   },
+   {
+    "domaine": "hrlinkit.be",
+    "label": "Hrlinkit"
+   },
+   {
+    "domaine": "hudsonsolutions.com",
+    "label": "Hudsonsolutions"
+   },
+   {
+    "domaine": "huisvoorveerkracht.be",
+    "label": "Huisvoorveerkracht"
+   },
+   {
+    "domaine": "humae.eu",
+    "label": "Humae"
+   },
+   {
+    "domaine": "humanpulse.be",
+    "label": "Humanpulse"
+   },
+   {
+    "domaine": "humansupportsmedical.be",
+    "label": "Humansupportsmedical"
+   },
+   {
+    "domaine": "humansupports.be",
+    "label": "Humansupports"
+   },
+   {
+    "domaine": "humanistix.be",
+    "label": "Humanistix"
+   },
+   {
+    "domaine": "hura.be",
+    "label": "Hura"
+   },
+   {
+    "domaine": "hyphen.be",
+    "label": "Hyphen"
+   },
+   {
+    "domaine": "ilovemyjob.be",
+    "label": "Ilovemyjob"
+   },
+   {
+    "domaine": "iboo.odoo.com",
+    "label": "Iboo"
+   },
+   {
+    "domaine": "iconicgroup.be",
+    "label": "Iconicgroup"
+   },
+   {
+    "domaine": "icredit.be",
+    "label": "Icredit"
+   },
+   {
+    "domaine": "ie-net.be",
+    "label": "Ie Net"
+   },
+   {
+    "domaine": "impact.be",
+    "label": "Impact"
+   },
+   {
+    "domaine": "inzo.be",
+    "label": "Inzo"
+   },
+   {
+    "domaine": "infinityjobs.be",
+    "label": "Infinityjobs"
+   },
+   {
+    "domaine": "intelect.be",
+    "label": "Intelect"
+   },
+   {
+    "domaine": "interimsolutions.be",
+    "label": "Interimsolutions"
+   },
+   {
+    "domaine": "introduce.be",
+    "label": "Introduce"
+   },
+   {
+    "domaine": "invensa.be",
+    "label": "Invensa"
+   },
+   {
+    "domaine": "iqvia.com",
+    "label": "Iqvia"
+   },
+   {
+    "domaine": "it-planet.be",
+    "label": "It Planet"
+   },
+   {
+    "domaine": "itinera-talentcoaching.be",
+    "label": "Itinera Talentcoaching"
+   },
+   {
+    "domaine": "itzujobs.eu",
+    "label": "Itzujobs"
+   },
+   {
+    "domaine": "itzu.eu",
+    "label": "Itzu"
+   },
+   {
+    "domaine": "itzuselect.eu",
+    "label": "Itzuselect"
+   },
+   {
+    "domaine": "itzu.be",
+    "label": "Itzu"
+   },
+   {
+    "domaine": "itzutraining.eu",
+    "label": "Itzutraining"
+   },
+   {
+    "domaine": "jeffersonwells.be",
+    "label": "Jeffersonwells"
+   },
+   {
+    "domaine": "jobtalent.be",
+    "label": "Jobtalent"
+   },
+   {
+    "domaine": "jobact.be",
+    "label": "Jobact"
+   },
+   {
+    "domaine": "jobalto.be",
+    "label": "Jobalto"
+   },
+   {
+    "domaine": "jobconnection.be",
+    "label": "Jobconnection"
+   },
+   {
+    "domaine": "jobemploi.be",
+    "label": "Jobemploi"
+   },
+   {
+    "domaine": "jobfixers.be",
+    "label": "Jobfixers"
+   },
+   {
+    "domaine": "jobfunders.com",
+    "label": "Jobfunders"
+   },
+   {
+    "domaine": "jobinson.be",
+    "label": "Jobinson"
+   },
+   {
+    "domaine": "jobjets.be",
+    "label": "Jobjets"
+   },
+   {
+    "domaine": "jobmatch.be",
+    "label": "Jobmatch"
+   },
+   {
+    "domaine": "jobsconstruct.be",
+    "label": "Jobsconstruct"
+   },
+   {
+    "domaine": "jobsinmind.be",
+    "label": "Jobsinmind"
+   },
+   {
+    "domaine": "jobup.be",
+    "label": "Jobup"
+   },
+   {
+    "domaine": "jubil.fr",
+    "label": "Jubil"
+   },
+   {
+    "domaine": "nurseplacement.be",
+    "label": "Nurseplacement"
+   },
+   {
+    "domaine": "kokorobusiness.com",
+    "label": "Kokorobusiness"
+   },
+   {
+    "domaine": "konvert.be",
+    "label": "Konvert"
+   },
+   {
+    "domaine": "ksconsulting.be",
+    "label": "Ksconsulting"
+   },
+   {
+    "domaine": "kwery.be",
+    "label": "Kwery"
+   },
+   {
+    "domaine": "lagom.jobs",
+    "label": "Lagom"
+   },
+   {
+    "domaine": "ld-consult.eu",
+    "label": "Ld Consult"
+   },
+   {
+    "domaine": "leclere-consultants.be",
+    "label": "Leclere Consultants"
+   },
+   {
+    "domaine": "lhh.be",
+    "label": "Lhh"
+   },
+   {
+    "domaine": "leengoossens.be",
+    "label": "Leengoossens"
+   },
+   {
+    "domaine": "lernerengineering.be",
+    "label": "Lernerengineering"
+   },
+   {
+    "domaine": "letswork.be",
+    "label": "Letswork"
+   },
+   {
+    "domaine": "liantis.be",
+    "label": "Liantis"
+   },
+   {
+    "domaine": "libertywork.be",
+    "label": "Libertywork"
+   },
+   {
+    "domaine": "likepeople.be",
+    "label": "Likepeople"
+   },
+   {
+    "domaine": "lincoln-group.be",
+    "label": "Lincoln Group"
+   },
+   {
+    "domaine": "link2europe.be",
+    "label": "Link2Europe"
+   },
+   {
+    "domaine": "link2events.be",
+    "label": "Link2Events"
+   },
+   {
+    "domaine": "link4jobs.be",
+    "label": "Link4Jobs"
+   },
+   {
+    "domaine": "lipbelgique.be",
+    "label": "Lipbelgique"
+   },
+   {
+    "domaine": "liren.be",
+    "label": "Liren"
+   },
+   {
+    "domaine": "logi-technic.be",
+    "label": "Logi Technic"
+   },
+   {
+    "domaine": "loopbaaningroei.be",
+    "label": "Loopbaaningroei"
+   },
+   {
+    "domaine": "m18.be",
+    "label": "M18"
+   },
+   {
+    "domaine": "maandag.be",
+    "label": "Maandag"
+   },
+   {
+    "domaine": "madebytalents.be",
+    "label": "Madebytalents"
+   },
+   {
+    "domaine": "manpower.be",
+    "label": "Manpower"
+   },
+   {
+    "domaine": "manpowergroupsolutions.be",
+    "label": "Manpowergroupsolutions"
+   },
+   {
+    "domaine": "mansource.nl",
+    "label": "Mansource"
+   },
+   {
+    "domaine": "marbl.be",
+    "label": "Marbl"
+   },
+   {
+    "domaine": "match-jobs.be",
+    "label": "Match Jobs"
+   },
+   {
+    "domaine": "md-hospitality.be",
+    "label": "Md Hospitality"
+   },
+   {
+    "domaine": "mediacomm.be",
+    "label": "Mediacomm"
+   },
+   {
+    "domaine": "medicalplacement.be",
+    "label": "Medicalplacement"
+   },
+   {
+    "domaine": "melimpus.com",
+    "label": "Melimpus"
+   },
+   {
+    "domaine": "mensura.be",
+    "label": "Mensura"
+   },
+   {
+    "domaine": "mentorprise.be",
+    "label": "Mentorprise"
+   },
+   {
+    "domaine": "merito.be",
+    "label": "Merito"
+   },
+   {
+    "domaine": "metiselect.be",
+    "label": "Metiselect"
+   },
+   {
+    "domaine": "michaelpage.be",
+    "label": "Michaelpage"
+   },
+   {
+    "domaine": "miseenplace.be",
+    "label": "Miseenplace"
+   },
+   {
+    "domaine": "monitor.be",
+    "label": "Monitor"
+   },
+   {
+    "domaine": "monizze.be",
+    "label": "Monizze"
+   },
+   {
+    "domaine": "be.morganphilips.com",
+    "label": "Be"
+   },
+   {
+    "domaine": "motmansenpartners.be",
+    "label": "Motmansenpartners"
+   },
+   {
+    "domaine": "move-interim.be",
+    "label": "Move Interim"
+   },
+   {
+    "domaine": "mundo-interim.be",
+    "label": "Mundo Interim"
+   },
+   {
+    "domaine": "myfutureworks.be",
+    "label": "Myfutureworks"
+   },
+   {
+    "domaine": "myikki.net",
+    "label": "Myikki"
+   },
+   {
+    "domaine": "myjobdrop.com",
+    "label": "Myjobdrop"
+   },
+   {
+    "domaine": "opleidingen.ncoi.be",
+    "label": "Opleidingen"
+   },
+   {
+    "domaine": "nestor.be",
+    "label": "Nestor"
+   },
+   {
+    "domaine": "netwerkbelgium.com",
+    "label": "Netwerkbelgium"
+   },
+   {
+    "domaine": "ict-talents.be",
+    "label": "Ict Talents"
+   },
+   {
+    "domaine": "nextstepcoaching.be",
+    "label": "Nextstepcoaching"
+   },
+   {
+    "domaine": "noelfranklin.com",
+    "label": "Noelfranklin"
+   },
+   {
+    "domaine": "nonzerosum.be",
+    "label": "Nonzerosum"
+   },
+   {
+    "domaine": "nova-engineering.be",
+    "label": "Nova Engineering"
+   },
+   {
+    "domaine": "novawork.be",
+    "label": "Novawork"
+   },
+   {
+    "domaine": "nowjobs.be",
+    "label": "Nowjobs"
+   },
+   {
+    "domaine": "hrimpactpartner.be",
+    "label": "Hrimpactpartner"
+   },
+   {
+    "domaine": "nxtpeople.com",
+    "label": "Nxtpeople"
+   },
+   {
+    "domaine": "okami-is.be",
+    "label": "Okami Is"
+   },
+   {
+    "domaine": "oliverjames.com",
+    "label": "Oliverjames"
+   },
+   {
+    "domaine": "onetowin.be",
+    "label": "Onetowin"
+   },
+   {
+    "domaine": "oradeo.com",
+    "label": "Oradeo"
+   },
+   {
+    "domaine": "orientaeuro.eu",
+    "label": "Orientaeuro"
+   },
+   {
+    "domaine": "orpsy.be",
+    "label": "Orpsy"
+   },
+   {
+    "domaine": "outsourcing-professionals.be",
+    "label": "Outsourcing Professionals"
+   },
+   {
+    "domaine": "oxfordcorp.com",
+    "label": "Oxfordcorp"
+   },
+   {
+    "domaine": "oxida.be",
+    "label": "Oxida"
+   },
+   {
+    "domaine": "pagepersonnel.be",
+    "label": "Pagepersonnel"
+   },
+   {
+    "domaine": "palto.be",
+    "label": "Palto"
+   },
+   {
+    "domaine": "wp.pangloss.be",
+    "label": "Wp"
+   },
+   {
+    "domaine": "parakar.eu",
+    "label": "Parakar"
+   },
+   {
+    "domaine": "pass.jobs",
+    "label": "Pass"
+   },
+   {
+    "domaine": "passionworks.be",
+    "label": "Passionworks"
+   },
+   {
+    "domaine": "pauwelsconsulting.com",
+    "label": "Pauwelsconsulting"
+   },
+   {
+    "domaine": "payroll-professionals.be",
+    "label": "Payroll Professionals"
+   },
+   {
+    "domaine": "payroller.com",
+    "label": "Payroller"
+   },
+   {
+    "domaine": "pensaert-partners.com",
+    "label": "Pensaert Partners"
+   },
+   {
+    "domaine": "people20.com",
+    "label": "People20"
+   },
+   {
+    "domaine": "pepsinterim.be",
+    "label": "Pepsinterim"
+   },
+   {
+    "domaine": "phillin.be",
+    "label": "Phillin"
+   },
+   {
+    "domaine": "planetgroupinterim.be",
+    "label": "Planetgroupinterim"
+   },
+   {
+    "domaine": "planet-group.be",
+    "label": "Planet Group"
+   },
+   {
+    "domaine": "pluxee.be",
+    "label": "Pluxee"
+   },
+   {
+    "domaine": "pratotalent.be",
+    "label": "Pratotalent"
+   },
+   {
+    "domaine": "pro-industry.be",
+    "label": "Pro Industry"
+   },
+   {
+    "domaine": "profilegroup.com",
+    "label": "Profilegroup"
+   },
+   {
+    "domaine": "profiler-consulting.com",
+    "label": "Profiler Consulting"
+   },
+   {
+    "domaine": "progressgroup.be",
+    "label": "Progressgroup"
+   },
+   {
+    "domaine": "projectsincare.be",
+    "label": "Projectsincare"
+   },
+   {
+    "domaine": "proman.be",
+    "label": "Proman"
+   },
+   {
+    "domaine": "proman-jobs.be",
+    "label": "Proman Jobs"
+   },
+   {
+    "domaine": "proptimum.be",
+    "label": "Proptimum"
+   },
+   {
+    "domaine": "prosource.be",
+    "label": "Prosource"
+   },
+   {
+    "domaine": "pro-unity.com",
+    "label": "Pro Unity"
+   },
+   {
+    "domaine": "pvo.be",
+    "label": "Pvo"
+   },
+   {
+    "domaine": "qjobs.be",
+    "label": "Qjobs"
+   },
+   {
+    "domaine": "q-academy.eu",
+    "label": "Q Academy"
+   },
+   {
+    "domaine": "qisjobs.be",
+    "label": "Qisjobs"
+   },
+   {
+    "domaine": "quality-jobs.be",
+    "label": "Quality Jobs"
+   },
+   {
+    "domaine": "quintessence.be",
+    "label": "Quintessence"
+   },
+   {
+    "domaine": "randstadrisesmart.be",
+    "label": "Randstadrisesmart"
+   },
+   {
+    "domaine": "randstadsourceright.com",
+    "label": "Randstadsourceright"
+   },
+   {
+    "domaine": "receptel.be",
+    "label": "Receptel"
+   },
+   {
+    "domaine": "recrewtment.be",
+    "label": "Recrewtment"
+   },
+   {
+    "domaine": "recurv.be",
+    "label": "Recurv"
+   },
+   {
+    "domaine": "reflexhealthcare.be",
+    "label": "Reflexhealthcare"
+   },
+   {
+    "domaine": "reignite.be",
+    "label": "Reignite"
+   },
+   {
+    "domaine": "restartwork.be",
+    "label": "Restartwork"
+   },
+   {
+    "domaine": "retailangels.com",
+    "label": "Retailangels"
+   },
+   {
+    "domaine": "right.com",
+    "label": "Right"
+   },
+   {
+    "domaine": "rlmservice.com",
+    "label": "Rlmservice"
+   },
+   {
+    "domaine": "roberthalf.be",
+    "label": "Roberthalf"
+   },
+   {
+    "domaine": "roberthalf.com",
+    "label": "Roberthalf"
+   },
+   {
+    "domaine": "robertwalters.com",
+    "label": "Robertwalters"
+   },
+   {
+    "domaine": "rollit.be",
+    "label": "Rollit"
+   },
+   {
+    "domaine": "roomwithoutaroof.be",
+    "label": "Roomwithoutaroof"
+   },
+   {
+    "domaine": "royaldoctors.com",
+    "label": "Royaldoctors"
+   },
+   {
+    "domaine": "sandyou.be",
+    "label": "Sandyou"
+   },
+   {
+    "domaine": "safetec.be",
+    "label": "Safetec"
+   },
+   {
+    "domaine": "salestalents.be",
+    "label": "Salestalents"
+   },
+   {
+    "domaine": "sam-interim.be",
+    "label": "Sam Interim"
+   },
+   {
+    "domaine": "skillbuilders.be",
+    "label": "Skillbuilders"
+   },
+   {
+    "domaine": "s-d-a.eu",
+    "label": "S D A"
+   },
+   {
+    "domaine": "scienceatwork.be",
+    "label": "Scienceatwork"
+   },
+   {
+    "domaine": "sdworx.be",
+    "label": "Sdworx"
+   },
+   {
+    "domaine": "sdworx.jobs",
+    "label": "Sdworx"
+   },
+   {
+    "domaine": "sdworxprofessionals.be",
+    "label": "Sdworxprofessionals"
+   },
+   {
+    "domaine": "seal.jobs",
+    "label": "Seal"
+   },
+   {
+    "domaine": "searchselection.com",
+    "label": "Searchselection"
+   },
+   {
+    "domaine": "securex.be",
+    "label": "Securex"
+   },
+   {
+    "domaine": "weareselectgroup.com",
+    "label": "Weareselectgroup"
+   },
+   {
+    "domaine": "selecthr.be",
+    "label": "Selecthr"
+   },
+   {
+    "domaine": "select-projects.be",
+    "label": "Select Projects"
+   },
+   {
+    "domaine": "sellent.be",
+    "label": "Sellent"
+   },
+   {
+    "domaine": "signumhrm.be",
+    "label": "Signumhrm"
+   },
+   {
+    "domaine": "silvertie.be",
+    "label": "Silvertie"
+   },
+   {
+    "domaine": "sixie.be",
+    "label": "Sixie"
+   },
+   {
+    "domaine": "skanna.be",
+    "label": "Skanna"
+   },
+   {
+    "domaine": "skillflex.be",
+    "label": "Skillflex"
+   },
+   {
+    "domaine": "skwd.be",
+    "label": "Skwd"
+   },
+   {
+    "domaine": "sofitex.be",
+    "label": "Sofitex"
+   },
+   {
+    "domaine": "solid-talent.be",
+    "label": "Solid Talent"
+   },
+   {
+    "domaine": "solvus.be",
+    "label": "Solvus"
+   },
+   {
+    "domaine": "spark-hr.be",
+    "label": "Spark Hr"
+   },
+   {
+    "domaine": "sparkjobs.be",
+    "label": "Sparkjobs"
+   },
+   {
+    "domaine": "spott.io",
+    "label": "Spott"
+   },
+   {
+    "domaine": "springbokcoaching.be",
+    "label": "Springbokcoaching"
+   },
+   {
+    "domaine": "squarecity.be",
+    "label": "Squarecity"
+   },
+   {
+    "domaine": "staffable.be",
+    "label": "Staffable"
+   },
+   {
+    "domaine": "staffing-esg.eu",
+    "label": "Staffing Esg"
+   },
+   {
+    "domaine": "star-specialists.com",
+    "label": "Star Specialists"
+   },
+   {
+    "domaine": "stark-recruitment.com",
+    "label": "Stark Recruitment"
+   },
+   {
+    "domaine": "startpeople.be",
+    "label": "Startpeople"
+   },
+   {
+    "domaine": "stegmann.be",
+    "label": "Stegmann"
+   },
+   {
+    "domaine": "step2work.be",
+    "label": "Step2Work"
+   },
+   {
+    "domaine": "stipt.com",
+    "label": "Stipt"
+   },
+   {
+    "domaine": "strandassociates.be",
+    "label": "Strandassociates"
+   },
+   {
+    "domaine": "sbbnv.be",
+    "label": "Sbbnv"
+   },
+   {
+    "domaine": "synergiejobs.be",
+    "label": "Synergiejobs"
+   },
+   {
+    "domaine": "synergie-belgium.be",
+    "label": "Synergie Belgium"
+   },
+   {
+    "domaine": "syngenia.com",
+    "label": "Syngenia"
+   },
+   {
+    "domaine": "talentlab.be",
+    "label": "Talentlab"
+   },
+   {
+    "domaine": "talentlink.be",
+    "label": "Talentlink"
+   },
+   {
+    "domaine": "talent-to-match.com",
+    "label": "Talent To Match"
+   },
+   {
+    "domaine": "talent-it.be",
+    "label": "Talent It"
+   },
+   {
+    "domaine": "talentfarm.be",
+    "label": "Talentfarm"
+   },
+   {
+    "domaine": "talentus.be",
+    "label": "Talentus"
+   },
+   {
+    "domaine": "talentxperts.be",
+    "label": "Talentxperts"
+   },
+   {
+    "domaine": "usetalio.com",
+    "label": "Usetalio"
+   },
+   {
+    "domaine": "taloo.eu",
+    "label": "Taloo"
+   },
+   {
+    "domaine": "teamone.be",
+    "label": "Teamone"
+   },
+   {
+    "domaine": "team-work.be",
+    "label": "Team Work"
+   },
+   {
+    "domaine": "tec.be",
+    "label": "Tec"
+   },
+   {
+    "domaine": "tecbridge.be",
+    "label": "Tecbridge"
+   },
+   {
+    "domaine": "tecjobz.be",
+    "label": "Tecjobz"
+   },
+   {
+    "domaine": "tentoo.be",
+    "label": "Tentoo"
+   },
+   {
+    "domaine": "terbium.be",
+    "label": "Terbium"
+   },
+   {
+    "domaine": "thebeeacademy.be",
+    "label": "Thebeeacademy"
+   },
+   {
+    "domaine": "thebozz.be",
+    "label": "Thebozz"
+   },
+   {
+    "domaine": "thecircleofwellbeing.be",
+    "label": "Thecircleofwellbeing"
+   },
+   {
+    "domaine": "thefuturealliance.com",
+    "label": "Thefuturealliance"
+   },
+   {
+    "domaine": "thejobstore.be",
+    "label": "Thejobstore"
+   },
+   {
+    "domaine": "moris.com",
+    "label": "Moris"
+   },
+   {
+    "domaine": "thetippingpoint.be",
+    "label": "Thetippingpoint"
+   },
+   {
+    "domaine": "todate.be",
+    "label": "Todate"
+   },
+   {
+    "domaine": "topskills.be",
+    "label": "Topskills"
+   },
+   {
+    "domaine": "topangels.be",
+    "label": "Topangels"
+   },
+   {
+    "domaine": "tormans.net",
+    "label": "Tormans"
+   },
+   {
+    "domaine": "tradiro.be",
+    "label": "Tradiro"
+   },
+   {
+    "domaine": "trainingnetwork.be",
+    "label": "Trainingnetwork"
+   },
+   {
+    "domaine": "trainingsolutions.be",
+    "label": "Trainingsolutions"
+   },
+   {
+    "domaine": "transelect.be",
+    "label": "Transelect"
+   },
+   {
+    "domaine": "transportacademy.be",
+    "label": "Transportacademy"
+   },
+   {
+    "domaine": "travak.jobs",
+    "label": "Travak"
+   },
+   {
+    "domaine": "travvant.be",
+    "label": "Travvant"
+   },
+   {
+    "domaine": "triangle-solutions-rh.be",
+    "label": "Triangle Solutions Rh"
+   },
+   {
+    "domaine": "trifinance.be",
+    "label": "Trifinance"
+   },
+   {
+    "domaine": "trixxo.be",
+    "label": "Trixxo"
+   },
+   {
+    "domaine": "tryangle.be",
+    "label": "Tryangle"
+   },
+   {
+    "domaine": "turbopayroll.be",
+    "label": "Turbopayroll"
+   },
+   {
+    "domaine": "tweg.be",
+    "label": "Tweg"
+   },
+   {
+    "domaine": "ufinity.be",
+    "label": "Ufinity"
+   },
+   {
+    "domaine": "umani-agency.be",
+    "label": "Umani Agency"
+   },
+   {
+    "domaine": "umanigroup.be",
+    "label": "Umanigroup"
+   },
+   {
+    "domaine": "uniquecareer.be",
+    "label": "Uniquecareer"
+   },
+   {
+    "domaine": "unitu.be",
+    "label": "Unitu"
+   },
+   {
+    "domaine": "update-pro.be",
+    "label": "Update Pro"
+   },
+   {
+    "domaine": "uqlearn.com",
+    "label": "Uqlearn"
+   },
+   {
+    "domaine": "usgprofessionals.be",
+    "label": "Usgprofessionals"
+   },
+   {
+    "domaine": "public-sourcing.be",
+    "label": "Public Sourcing"
+   },
+   {
+    "domaine": "uworx.com",
+    "label": "Uworx"
+   },
+   {
+    "domaine": "international.vanhavermaet.be",
+    "label": "International"
+   },
+   {
+    "domaine": "vanmossel.be",
+    "label": "Vanmossel"
+   },
+   {
+    "domaine": "vandelanotte.be",
+    "label": "Vandelanotte"
+   },
+   {
+    "domaine": "verdonckbv.be",
+    "label": "Verdonckbv"
+   },
+   {
+    "domaine": "verpoucke.com",
+    "label": "Verpoucke"
+   },
+   {
+    "domaine": "vialegis.be",
+    "label": "Vialegis"
+   },
+   {
+    "domaine": "vibegroup.com",
+    "label": "Vibegroup"
+   },
+   {
+    "domaine": "vidyas.be",
+    "label": "Vidyas"
+   },
+   {
+    "domaine": "vindeenjob.be",
+    "label": "Vindeenjob"
+   },
+   {
+    "domaine": "visionpoint.be",
+    "label": "Visionpoint"
+   },
+   {
+    "domaine": "vitaminsatwork.be",
+    "label": "Vitaminsatwork"
+   },
+   {
+    "domaine": "vivaldisconstruct.be",
+    "label": "Vivaldisconstruct"
+   },
+   {
+    "domaine": "vivaldisinterim.be",
+    "label": "Vivaldisinterim"
+   },
+   {
+    "domaine": "vokans.be",
+    "label": "Vokans"
+   },
+   {
+    "domaine": "volghe.com",
+    "label": "Volghe"
+   },
+   {
+    "domaine": "waldon.be",
+    "label": "Waldon"
+   },
+   {
+    "domaine": "walterspeople.be",
+    "label": "Walterspeople"
+   },
+   {
+    "domaine": "we-and-work.be",
+    "label": "We And Work"
+   },
+   {
+    "domaine": "weegree.com",
+    "label": "Weegree"
+   },
+   {
+    "domaine": "weevo.be",
+    "label": "Weevo"
+   },
+   {
+    "domaine": "werkers.be",
+    "label": "Werkers"
+   },
+   {
+    "domaine": "whiteandmoore.com",
+    "label": "Whiteandmoore"
+   },
+   {
+    "domaine": "wiltonbright.com",
+    "label": "Wiltonbright"
+   },
+   {
+    "domaine": "winsearch.be",
+    "label": "Winsearch"
+   },
+   {
+    "domaine": "hi-milly.eu",
+    "label": "Hi Milly"
+   },
+   {
+    "domaine": "workpartners.be",
+    "label": "Workpartners"
+   },
+   {
+    "domaine": "workit.jobs",
+    "label": "Workit"
+   },
+   {
+    "domaine": "workplaceoptions.be",
+    "label": "Workplaceoptions"
+   },
+   {
+    "domaine": "xtrahr-services.be",
+    "label": "Xtrahr Services"
+   },
+   {
+    "domaine": "yer.be",
+    "label": "Yer"
+   },
+   {
+    "domaine": "yes-talents.be",
+    "label": "Yes Talents"
+   },
+   {
+    "domaine": "youconnect.be",
+    "label": "Youconnect"
+   },
+   {
+    "domaine": "younit.be",
+    "label": "Younit"
+   },
+   {
+    "domaine": "youroxygen.be",
+    "label": "Youroxygen"
+   },
+   {
+    "domaine": "opusgroup.be",
+    "label": "Opusgroup"
+   },
+   {
+    "domaine": "hellozaia.com",
+    "label": "Hellozaia"
+   }
+  ]
+ }
+}

@@ -37,7 +37,7 @@ Actiris et Forem nomment l'employeur de chaque offre (33 000 + 26 000 offres →
 
 ## Étape 4 — Federgon → graines
 
-Annuaire des membres Federgon (intérim, recrutement, project sourcing) → domaines → moteur. Objectif : les petites agences régionales que personne ne liste.
+**Fait le 16/09/2026 :** `sources/federgon_seeds_v1.py` lit la page « Les membres » (478 domaines de prestataires RH) et les passe au moteur (`--decouvrir`). Campagne lancée le jour même.
 
 ## Étape 5 — clés API gratuites (action utilisateur)
 
@@ -49,7 +49,7 @@ Demander un accès à l'API `Vacatures` (ibm-api-key). En attendant, 8 874 offre
 
 ## Étape 7 — BCE/KBO
 
-Quand les étapes 2–4 sont stables : open data BCE → noms actifs par NACE → domaine → moteur. La BCE devient un multiplicateur, pas une table inerte.
+**Outil prêt le 16/09/2026 :** `sources/bce_seeds_v1.py` lit le ZIP Open Data de la BCE (compte gratuit sur kbopub.economie.fgov.be, ~500 Mo), croise activité NACE × statut actif × site web déclaré, et produit les graines (`config/discovery_seeds_bce.json`), puis lance la découverte par tranches. Il manque le fichier : l'inscription est personnelle.
 
 ## Hors périmètre, et pourquoi
 
