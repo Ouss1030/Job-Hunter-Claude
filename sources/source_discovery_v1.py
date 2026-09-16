@@ -136,6 +136,14 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
             lignes = lister(identifiant, "nl-BE", session)
             r.update(ok=bool(lignes), total=len(lignes), be=None,
                      erreur=None if lignes else "aucune offre listee")
+        elif connecteur == "HTML_SITES":
+            from sources.html_generique_v1 import sonder
+            meta = sonder(identifiant, session, pages=3)
+            # Un site HTML n'est retenu qu'avec au moins trois liens d'offre et
+            # une page exploitable portant une preuve belge (code postal, commune).
+            r.update(ok=meta.get("liens", 0) >= 3 and meta.get("exploitables", 0) >= 1,
+                     total=meta.get("liens"), be=meta.get("exploitables"),
+                     erreur=meta.get("error") or (None if meta.get("exploitables") else "pages non exploitables"))
         elif connecteur == "JSONLD_SITES":
             from sources.jsonld_sitemap_v1 import collect_site
             jobs, meta = collect_site(identifiant, label, session, max_pages=VALIDATION_PAGES_JSONLD,
@@ -236,6 +244,17 @@ def traiter_candidat(candidat: dict, session, deviner: bool = True) -> dict:
                          preuve=ligne["preuve"] or "SITEMAP", validation=v, enregistre=True, statut="ACTIVE")
             return ligne
         ligne.setdefault("essais_universel", v)
+
+    # Dernier repli public : le portail maison lu en HTML (preuve belge exigee).
+    if ligne["statut"] != "ACTIVE" and ligne.get("page_carriere") and str(ligne["page_carriere"]).startswith("http"):
+        v = _valider("HTML_SITES", ligne["page_carriere"], label, session)
+        if v["ok"]:
+            registre.enregistrer("HTML", "HTML_SITES", ligne["page_carriere"], label, jobs_total=v["total"], jobs_be=v["be"],
+                                 discovered_by=ligne["discovered_by"], career_url=ligne["page_carriere"])
+            ligne.update(ats=ligne["ats"] or "HTML", connecteur="HTML_SITES", identifiant=ligne["page_carriere"],
+                         preuve=ligne["preuve"] or "HTML", validation=v, enregistre=True, statut="ACTIVE")
+            return ligne
+        ligne.setdefault("essais_html", v)
 
     if deviner and ligne["statut"] != "ACTIVE":
         d = _deviner(label, session)

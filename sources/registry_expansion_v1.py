@@ -20,7 +20,7 @@ from __future__ import annotations
 from sources import ats_employers_v2 as registre
 
 
-REGISTRY_EXPANSION_VERSION = "1.2"
+REGISTRY_EXPANSION_VERSION = "1.3"
 
 
 def _collect_ats_v2(ats: str) -> list:
@@ -116,6 +116,18 @@ def _collect_teamtailor() -> list:
     return resultat["jobs"]
 
 
+def _collect_html_sites() -> list:
+    from sources.html_generique_v1 import collect_html_sites
+    companies = registre.employeurs("HTML_SITES")
+    if not companies:
+        print("  HTML_SITES : aucun site enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_html_sites(companies, verbose=True)
+    print(f"HTML_SITES - sites={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
 def specs_expansion(SourceSpec) -> tuple:
     """Les SourceSpec a ajouter ; SourceSpec est passe pour eviter l'import circulaire."""
     return (
@@ -146,6 +158,11 @@ def specs_expansion(SourceSpec) -> tuple:
                    collector=_collect_teamtailor, languages=("fr", "en", "nl"), priority=83,
                    notes="Flux RSS public /jobs.rss : une requete par site, descriptions completes, "
                          "ville et pays. Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="HTML_SITES", result_key="html_sites", label="Portails carrière maison (HTML)",
+                   collector=_collect_html_sites, languages=("fr", "nl", "en"), priority=84,
+                   notes="Dernier repli avant le navigateur : liste de liens + contenu principal de chaque page, "
+                         "preuve belge exigee. Portails Plone/Odoo/Drupal des hopitaux, hautes ecoles et "
+                         "administrations. Sites : config/ats_employers_v2.json."),
         SourceSpec(key="JSONLD_SITES", result_key="jsonld_sites",
                    label="Sites carrière (sitemap + JSON-LD)",
                    collector=_collect_jsonld_sites, languages=("fr", "en", "nl", "de"), priority=79,

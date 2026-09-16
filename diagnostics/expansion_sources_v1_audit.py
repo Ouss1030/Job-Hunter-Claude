@@ -309,6 +309,28 @@ def main():
                        and all("labo" in j.description.lower() or "power bi" in j.description.lower() for j in jobs)
                        and jobs[0].external_id.startswith("acme.cvw.io:"), str(meta)))
 
+    # HTML generique (16/09/2026) : liste + contenu principal + preuve belge ; pages de liste rejetees
+    from sources import html_generique_v1 as hg
+    liste = ('<html><body><nav><a href="/jobs/">Jobs</a></nav><main><a href="/emploi.2026-09-02.111">Laborant</a>'
+             '<a href="/emploi.2026-09-03.222">Data analyst</a><a href="/emploi.2026-09-04.333">Autre</a><a href="/contact">Contact</a></main></body></html>')
+    page_a = ('<html><head><title>Laborant | Labo</title></head><body><nav>menu menu</nav><main><h1>Laborant</h1><p>'
+              + "Analyses en laboratoire a Namur (5000). " * 12 + '</p></main><footer>pied</footer></body></html>')
+    page_b = ("<html><head><title>Offres d'emploi | Labo</title></head><body><main><h1>12 emplois pour vous</h1><p>"
+              + "Liste des offres. " * 30 + '</p></main></body></html>')
+    page_c = '<html><head><title>Autre</title></head><body><main><h1>Autre</h1><p>court</p></main></body></html>'
+    s = _Session({"https://labo.be/liste": _Reponse(liste, 200, "https://labo.be/liste"),
+                  "https://labo.be/emploi.2026-09-02.111": _Reponse(page_a, 200, "https://labo.be/emploi.2026-09-02.111"),
+                  "https://labo.be/emploi.2026-09-03.222": _Reponse(page_b, 200, "https://labo.be/emploi.2026-09-03.222"),
+                  "https://labo.be/emploi.2026-09-04.333": _Reponse(page_c, 200, "https://labo.be/emploi.2026-09-04.333")})
+    with mock.patch.object(hg, "CACHE_DIR", tmp / "html"), mock.patch.object(hg, "PAUSE", 0):
+        jobs, meta = hg.collect_html_site({"identifier": "https://labo.be/liste", "label": "Labo"}, s)
+    tests.append(check("HTML generique : 3 liens d'offre (Plone), 1 offre valide (Namur 5000, sans menu), liste et page courte rejetees",
+                       meta["liens"] == 3 and len(jobs) == 1 and jobs[0].title == "Laborant" and jobs[0].location == "Namur (5000)"
+                       and "menu menu" not in jobs[0].description and "pied" not in jobs[0].description and meta["rejetees"] == 2,
+                       str({k: meta[k] for k in ("liens", "be", "rejetees")}) + (f" loc={jobs[0].location}" if jobs else "")))
+    tests.append(check("HTML generique : une annee n'est pas un code postal",
+                       hg._lieu("Publie le 2026-09-02, © 2026. Poste a Charleroi.")[0] != "Anvers (2026)"))
+
     # Teamtailor (16/09/2026) : flux RSS, lieux imbriques tt:locations/tt:location
     from sources import teamtailor_v1 as tt
     rss = ('<?xml version="1.0"?><rss xmlns:tt="https://teamtailor.com/locations"><channel>'
@@ -426,7 +448,7 @@ def main():
     tests.append(check("SOURCE_SPECS : aucune cle ni result_key en double",
                        len(cles) == len(set(cles)) and len(rks) == len(set(rks)), f"{len(cles)} specs"))
     tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES, ORACLE_CLOUD, CVWAREHOUSE",
-                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS", "TEAMTAILOR"} <= set(cles)))
+                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS", "TEAMTAILOR", "HTML_SITES"} <= set(cles)))
     tests.append(check("Detection : Oracle Cloud (host/lang/site) et CVWarehouse (URL, casse des parametres conservee)",
                        det.detecter_url("https://ebza.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/nl/sites/CX_1001/job/1")["identifiant"]
                        == {"host": "ebza.fa.em2.oraclecloud.com", "lang": "nl", "site": "CX_1001"}
