@@ -12,20 +12,43 @@ from sources.source_metrics import publish_source_metrics
 SOURCE_KEY="JOOBLE"
 PROJECT_ROOT=Path(__file__).resolve().parent.parent
 STATE_PATH=PROJECT_ROOT/"cache"/"jooble_api_rotation.json"
-BASE_TEMPLATE="https://be.jooble.org/api/{key}"
+# Chaque domaine Jooble (pays) exige sa propre cle : une cle demandee sur
+# fr.jooble.org ne repond que sur fr.jooble.org (verifie le 16/09/2026).
+# JOOBLE_HOST dans config/private/api_keys.env permet de suivre la cle.
+BASE_TEMPLATE="https://{host}/api/{key}"
+HOTE_DEFAUT="be.jooble.org"
+# La cle gratuite est limitee a 500 requetes A VIE (documentation Jooble).
+# On garde une reserve : au-dela de QUOTA_VIE, le connecteur se tait.
+QUOTA_VIE=480
+
+
+def _etat() -> dict:
+    if STATE_PATH.exists():
+        try:
+            return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _compter_requete(nb: int = 1) -> int:
+    etat=_etat()
+    etat["requetes_vie"]=int(etat.get("requetes_vie",0))+nb
+    STATE_PATH.parent.mkdir(parents=True,exist_ok=True)
+    STATE_PATH.write_text(json.dumps(etat,indent=2),encoding="utf-8")
+    return etat["requetes_vie"]
 
 
 def _rotating_terms() -> list[str]:
     STATE_PATH.parent.mkdir(parents=True,exist_ok=True)
     per=int(get_credential("JOOBLE_QUERIES_PER_RUN","2") or 2)
     per=max(1,min(3,per))
-    index=0
-    if STATE_PATH.exists():
-        try:index=int(json.loads(STATE_PATH.read_text(encoding="utf-8")).get("index",0))
-        except Exception:index=0
+    etat=_etat()
+    index=int(etat.get("index",0) or 0)
     terms=list(ALL_SEARCH_TERMS)
     chosen=[terms[(index+i)%len(terms)] for i in range(per)]
-    STATE_PATH.write_text(json.dumps({"index":(index+per)%len(terms)},indent=2),encoding="utf-8")
+    etat["index"]=(index+per)%len(terms)
+    STATE_PATH.write_text(json.dumps(etat,indent=2),encoding="utf-8")
     return chosen
 
 
@@ -41,7 +64,12 @@ def collect_jooble_jobs() -> list:
         return []
 
     key=get_credential("JOOBLE_API_KEY")
-    url=BASE_TEMPLATE.format(key=key)
+    hote=(get_credential("JOOBLE_HOST") or HOTE_DEFAUT).strip().removeprefix("https://").strip("/")
+    url=BASE_TEMPLATE.format(host=hote,key=key)
+    deja=int(_etat().get("requetes_vie",0))
+    if deja>=QUOTA_VIE:
+        print(f"JOOBLE | QUOTA_VIE atteint ({deja}/{QUOTA_VIE} requetes) : demander une nouvelle cle sur {hote}/api/about")
+        return []
     session=requests.Session()
     session.headers.update({"Accept":"application/json","Content-Type":"application/json","User-Agent":"JobHunter/7.0 personal job search"})
 
@@ -55,6 +83,9 @@ def collect_jooble_jobs() -> list:
                 "keywords":term,"location":"Belgium","radius":"80",
                 "page":"1","ResultOnPage":20,"companysearch":False,
             },timeout=30)
+            if r.status_code==200:
+                total_vie=_compter_requete()
+                print(f"JOOBLE | {term} | requetes a vie : {total_vie}/500")
             r.raise_for_status()
             data=r.json()
         except Exception as exc:
