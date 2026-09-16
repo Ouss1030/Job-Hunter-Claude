@@ -95,7 +95,7 @@ def employeurs(connecteur: str, actifs_seulement: bool = True) -> list[dict]:
                  "tracks": list(e.get("tracks") or []), "notes": e.get("notes", ""),
                  "_registre_v2": True}
         # Reglages par employeur que les connecteurs savent lire.
-        for cle in ("max_jobs", "include_unknown"):
+        for cle in ("max_jobs", "include_unknown", "lien_regex", "selecteur_contenu"):
             if e.get(cle) is not None:
                 ligne[cle] = e[cle]
         if connecteur == "WORKDAY_ATS" and isinstance(ident, dict):
@@ -149,7 +149,7 @@ def _enregistrer_sans_verrou(ats, connecteur, identifier, label, *, jobs_total, 
     cle = _cle(entree)
     for i, e in enumerate(data["employers"]):
         if _cle(e) == cle:
-            e.update({k: v for k, v in entree.items() if k != "enabled"})
+            e.update({k: v for k, v in entree.items() if k != "enabled" and not (k == "notes" and not v)})
             e["first_seen"] = e.get("first_seen") or entree["verified_at"]
             data["employers"][i] = e
             sauver(data)

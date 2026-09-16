@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-COLLECTEUR HTML GENERIQUE - VERSION 1.0
+COLLECTEUR HTML GENERIQUE - VERSION 1.1
 
 Le dernier repli avant le navigateur : un portail carriere maison, sans
 API, sans flux, sans JSON-LD — Plone (UNamur), Odoo (HENALLUX), Drupal
@@ -18,9 +18,23 @@ hopitaux, hautes ecoles et administrations francophones : sondage du
 
 Garde-fous (l'idee vient du projet principal, job_quality_guard_v416) :
 une page de liste prise pour une offre a un titre du type « 12 emplois »,
-« Offres d'emploi », « Jobs » ; un texte trop court ou identique a la
+« Offres d'emploi », « Jobs », « Legal Jobs » ; une page d'information a
+un titre du type « FAQ », « Charte », « Procedure de recrutement »,
+« Travailler a la Ville de … » ; un texte trop court ou identique a la
 liste n'est pas une offre ; sans aucune preuve belge dans la page et sans
 "include_unknown", l'offre est ecartee.
+
+Preuve d'offre (V1.1, calibree le 17 septembre 2026 sur 190 pages de huit
+portails) : une vraie offre parle d'au moins trois de ces sept choses —
+postuler, profil, missions, contrat, competences, dates, ce qu'on offre.
+Les pages de UNamur, GHdC, Prayon, Brabant wallon en citent 5 a 7 ; les
+pages « Cite des Metiers », « Le Forem », « Resultats de recherche » de
+namur.be et chuliege.be en citent 0 a 2.
+
+Lieu (V1.1) : un code postal n'est retenu que suivi d'un nom (« 6220
+Fleurus », « B-1000 Bruxelles ») — « Ref : 2026-88 », « Top Employer
+2026 », « depuis 1991 » ne sont plus des codes postaux ; a defaut, une
+commune belge connue (location_belgium.BELGIAN_CITIES) donne le lieu.
 
 Un site = {"identifier": "https://jobs.unamur.be/liste_emplois",
 "label": "UNamur", "lien_regex": optionnel, "selecteur_contenu": optionnel}
@@ -30,9 +44,11 @@ dans config/ats_employers_v2.json, connecteur HTML_SITES.
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import re
 import time
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -41,12 +57,13 @@ import requests
 from bs4 import BeautifulSoup
 
 from database.models import JobOffer
-from sources.location_belgium import belgian_postal_code, detect_belgium_multi, BE_CONFIRMED, BE_LIKELY, BE_UNKNOWN
+from sources.location_belgium import (belgian_postal_code, detect_belgium_multi, BELGIAN_CITIES,
+                                      BE_CONFIRMED, BE_LIKELY, BE_UNKNOWN)
 from sources.jsonld_sitemap_v1 import _RE_URL_OFFRE, _RE_EXCLURE, convertir_posting
 from sources.phenom_ats_v1 import extract_job_posting
 
 
-HTML_GENERIQUE_VERSION = "1.0"
+HTML_GENERIQUE_VERSION = "1.1"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "html_sites_cache"
@@ -55,6 +72,7 @@ TIMEOUT = 20
 PAUSE = 0.5
 MAX_PAGES = 120
 MIN_TEXTE = 300
+MIN_INDICES = 3
 CACHE_JOURS = 3
 HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -67,18 +85,60 @@ _TITRES_LISTE = [
     r"^\s*\d+\s+(?:emplois?|jobs?|vacatures?|offres?|postes?|résultats?)\b",
     r"^\s*(?:jobs?|vacatures?|vacancies|carri[eè]res?|emplois?|offres?\s+d['’]emploi|nos offres|travailler chez|werken bij|join us|rejoignez)\b",
     r"\b(?:emplois?|jobs?)\s+(?:pour|voor|in|à|a|en)\b",
+    r"\b(?:jobs|emplois|vacatures|vacancies|offres)\s*$",          # « Legal Jobs » : une rubrique
     r"^\s*(?:accueil|home|contact|actualit|news|login|connexion)\b",
+    r"^\s*(?:faq|charte|atouts|procédure|procedure|résultats? de recherche|zoekresultaten|search results|"
+    r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"
+    r"spontane sollicitatie|offres de stages?|stages? (?:au sein|pour)|nos valeurs|our values|onze waarden)\b",
+    r"^\s*\d+\s*$",
 ]
 _RE_TITRES_LISTE = [re.compile(p, re.I) for p in _TITRES_LISTE]
 _BALISES_BRUIT = ("nav", "header", "footer", "aside", "script", "style", "form", "noscript", "iframe", "svg", "button")
 _SELECTEURS_CONTENU = ("main", "article", "[role=main]", "#main-content", "#content", ".content", "#main", ".main", ".region-content")
 _RE_BELGE = re.compile(r"\b(?:belgi(?:que|ë|e|um)|brussel|bruxelles|wallonie|vlaanderen|flandre)\b", re.I)
 # Plone et consorts : /emploi.2026-09-02.5293710817, /job-12345, /vacature_abc
-_RE_URL_OFFRE_SEP = re.compile(r"/(?:emploi|emplois|job|jobs|vacature|vacatures|offre|offres|poste|vacancy)[._-][^/?#]{3,}$", re.I)
+_RE_URL_OFFRE_SEP = re.compile(r"/(?:emploi|emplois|job|jobs|vacature|vacatures|offre|offres|poste|vacancy)[._-][^/?#]{3,}$"
+                               r"|/(?:job|jobs|emploi|offre|vacature)[_-](?:display|detail|details|view|show|posting|id)/[^/?#]{2,}", re.I)
 # Un hub carriere qui ne liste rien lui-meme : on suit un lien "offres / emploi / jobs"
 _RE_LIEN_LISTE = re.compile(r"(?:offres?-?d?-?emploi|emplois?-?en-?cours|vacatures|jobs?-?list|nos-?offres|liste_?emplois|all-?jobs|toutes)", re.I)
 # "© 2026", "2026-09-02" ne sont pas des codes postaux ; "2000 Antwerpen" en est un.
 _RE_ANNEE = re.compile(r"\b20[0-3]\d\b")
+# Un code postal suivi d'un nom : « 6220 Fleurus », « B-1000 Bruxelles », « 1310 La Hulpe »
+_RE_CP_NOM = re.compile(r"(?<![\d-])(?:B-?|BE-?)?([1-9]\d{3})[ \u00a0,]+([A-ZÀ-Ý][\w'’.-]+)(?:[ \u00a0]+([A-ZÀ-Ý][\w'’.-]+))?")
+# « 1310 La Hulpe », « 1000 Sint Gillis » : le second mot n'est pris qu'apres un article
+_ARTICLES_LIEU = {"la", "le", "les", "de", "den", "het", "sint", "saint", "sainte", "st", "mont", "la-"}
+_PAYS = {"belgique", "belgium", "belgië", "belgie", "be"}
+# « depuis 1991 », « in 1970 », « © 2019 » : une annee, meme suivie d'une majuscule
+_RE_AVANT_ANNEE = re.compile(r"(?:depuis|since|sinds|en|in|of|©|anno|vanaf|dès)\s*$", re.I)
+# Communes qui sont aussi des mots courants (« 3 ans », « to manage », « boom », « spa ») :
+# jamais retenues sur le seul texte libre, il faut un code postal devant.
+_VILLES_AMBIGUES = {"ans", "manage", "mol", "ham", "boom", "spa", "lier", "halle", "asse", "forest", "vorst",
+                    "geel", "waver", "bergen", "namen", "landen", "vise", "mons", "ath", "huy", "olen", "balen",
+                    "zele", "hamme", "temse", "genk", "gent", "diest", "leuze", "ciney", "thuin", "binche", "spa"}
+_RE_VILLE = re.compile(r"(?<![A-Za-z])(?:" + "|".join(sorted((re.escape(v.title()) for v in set(BELGIAN_CITIES)
+                                                             if v not in _VILLES_AMBIGUES), key=len, reverse=True))
+                       + r")(?![a-z])")
+
+
+def _sans_accents(texte: str) -> str:
+    """Accents retires, casse conservee : « Liège » -> « Liege », pour reconnaitre une commune ecrite en majuscule initiale."""
+    return "".join(ch for ch in unicodedata.normalize("NFKD", texte) if not unicodedata.combining(ch))
+# Sept familles de vocabulaire d'une offre ; une vraie offre en cite au moins MIN_INDICES.
+_INDICES_OFFRE = {
+    "postuler": r"\b(?:postule[rz]|candidature|candidater|apply|application|solliciteer|sollicit\w*)\b",
+    "profil": r"\b(?:profil|profile|profiel|qualifications?|requirements?|exigences|vereisten)\b",
+    "missions": r"\b(?:missions?|tâches|taches|responsabilit\w+|responsibilit\w+|fonction|functie|taken|takenpakket|"
+                r"rôle|role|job description|description de (?:la )?fonction)\b",
+    "contrat": r"\b(?:contrat|contract|cdi|cdd|int[ée]rim|temps plein|temps partiel|mi-temps|full[- ]?time|part[- ]?time|"
+               r"voltijds|deeltijds|halftijds|régime de travail|arbeidsregime|durée|duration|horaire|uurrooster)\b",
+    "competences": r"\b(?:compétences?|competences?|skills?|vaardigheden|dipl[ôo]me|diploma|degree|bachelier|bachelor|"
+                   r"master|graduat|expérience|experience|ervaring)\b",
+    "dates": r"\b(?:date limite|deadline|closing date|uiterlijk|entrée en fonction|start date|date d['’]entrée|"
+             r"indiensttreding|dès que possible|as soon as possible)\b",
+    "offre": r"\b(?:nous (?:vous )?offrons|we offer|wij bieden|what we offer|ce que nous offrons|salaire|salary|"
+             r"rémunération|remuneration|barème|loon|avantages|benefits|package)\b",
+}
+_RE_INDICES = {k: re.compile(v, re.I) for k, v in _INDICES_OFFRE.items()}
 
 
 def _clean(v) -> str:
@@ -135,11 +195,16 @@ def liens_offres(listing_url: str, html: str, lien_regex: str | None = None) -> 
 # Detail
 # ------------------------------------------------------------------
 
+def indices_offre(texte: str) -> list[str]:
+    """Les familles de vocabulaire d'offre presentes dans le texte (voir _INDICES_OFFRE)."""
+    return [k for k, r in _RE_INDICES.items() if r.search(texte)]
+
+
 def _titre(soupe: BeautifulSoup) -> str:
     og = soupe.select_one("meta[property='og:title']")
     for cand in ((og.get("content") if og else ""), (soupe.h1.get_text() if soupe.h1 else ""),
                  (soupe.title.get_text() if soupe.title else "")):
-        t = _clean(cand)
+        t = _clean(html.unescape(cand or ""))
         t = re.split(r"\s+[|\-–—]\s+", t)[0].strip() if len(t) > 60 else t
         if t and not any(r.search(t) for r in _RE_TITRES_LISTE):
             return t[:200]
@@ -167,11 +232,23 @@ def _contenu(soupe: BeautifulSoup, selecteur: str | None = None) -> str:
 
 
 def _lieu(texte: str) -> tuple[str, str]:
-    """(lieu lisible, statut) a partir d'un code postal ou d'une commune dans le texte."""
-    cp = belgian_postal_code(_RE_ANNEE.sub(" ", texte[:6000]))
-    if cp:
-        return f"{cp[1]} ({cp[0]})" if isinstance(cp, tuple) and len(cp) == 2 else str(cp), BE_CONFIRMED
-    m = _RE_BELGE.search(texte[:6000])
+    """(lieu lisible, statut) a partir d'un code postal suivi d'un nom, d'une commune ou d'une region belge."""
+    extrait = _RE_ANNEE.sub(" ", texte[:6000])
+    for m in _RE_CP_NOM.finditer(extrait):
+        cp = belgian_postal_code(m.group(1))
+        # 1900-1999 : un code postal du Brabant... ou une annee (« depuis 1991 », « in 1970 »)
+        if cp and not (m.group(1).startswith("19") and _RE_AVANT_ANNEE.search(extrait[max(0, m.start() - 8):m.start()])):
+            nom = m.group(2).strip('.,-')
+            if m.group(3) and nom.lower() in _ARTICLES_LIEU and m.group(3).lower() not in _PAYS:
+                nom += ' ' + m.group(3).strip('.,-')
+            if nom.lower() in _PAYS:
+                continue
+            return f"{nom} ({cp[0]})", BE_CONFIRMED
+    plat = _sans_accents(extrait)
+    m = _RE_VILLE.search(plat)
+    if m:
+        return (extrait if len(plat) == len(extrait) else plat)[m.start():m.end()], BE_LIKELY
+    m = _RE_BELGE.search(extrait)
     if m:
         return m.group(0), BE_LIKELY
     return "", BE_UNKNOWN
@@ -184,12 +261,15 @@ def extraire_page(url: str, html: str, listing_url: str, listing_hash: str, sele
     soupe = BeautifulSoup(html, "html.parser")
     titre = _titre(soupe)
     if not titre:
-        return None
+        return {"rejet": "titre de liste ou de page d'information"}
     texte = _contenu(soupe, selecteur)
     if len(texte) < MIN_TEXTE:
-        return None
+        return {"rejet": "texte trop court"}
     if hashlib.sha1(texte[:2000].encode("utf-8", "ignore")).hexdigest() == listing_hash:
-        return None  # meme contenu que la page de liste : pas une offre
+        return {"rejet": "meme contenu que la liste"}
+    indices = indices_offre(texte)
+    if len(indices) < MIN_INDICES:
+        return {"rejet": f"vocabulaire d'offre insuffisant ({len(indices)}/{len(_INDICES_OFFRE)})"}
     lieu, statut = _lieu(texte + " " + titre)
     return {"titre": titre, "texte": texte[:20000], "lieu": lieu, "statut": statut}
 
@@ -202,7 +282,7 @@ def collect_html_site(company: dict, session=None, include_unknown: bool = True,
     label = _clean(company.get("label")) or urlsplit(listing_url).netloc
     hote = urlsplit(listing_url).netloc.lower()
     meta = {"host": hote, "label": label, "liens": 0, "cache": 0, "visitees": 0, "be": 0,
-            "hors_be": 0, "rejetees": 0, "echecs": 0, "error": None}
+            "hors_be": 0, "rejetees": 0, "echecs": 0, "error": None, "motifs": {}}
     try:
         r = session.get(listing_url, headers=HEADERS, timeout=TIMEOUT)
         r.raise_for_status()
@@ -265,13 +345,16 @@ def collect_html_site(company: dict, session=None, include_unknown: bool = True,
                 continue
             cache[url] = {"lu": maintenant.isoformat(), "page": page}
             time.sleep(PAUSE)
-        if not page:
+        if not page or page.get("rejet"):
             meta["rejetees"] += 1
+            motif = (page or {}).get("rejet") or "page vide ou en erreur"
+            meta["motifs"][motif] = meta["motifs"].get(motif, 0) + 1
             continue
         if page.get("posting"):
             job = convertir_posting(url, page["posting"], source, hote, label)
             if not job:
                 meta["rejetees"] += 1
+                meta["motifs"]["JSON-LD JobPosting incomplet"] = meta["motifs"].get("JSON-LD JobPosting incomplet", 0) + 1
                 continue
             statut = getattr(job, "location_status", BE_UNKNOWN)
         else:

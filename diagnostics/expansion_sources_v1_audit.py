@@ -311,10 +311,13 @@ def main():
 
     # HTML generique (16/09/2026) : liste + contenu principal + preuve belge ; pages de liste rejetees
     from sources import html_generique_v1 as hg
+    from bs4 import BeautifulSoup
     liste = ('<html><body><nav><a href="/jobs/">Jobs</a></nav><main><a href="/emploi.2026-09-02.111">Laborant</a>'
              '<a href="/emploi.2026-09-03.222">Data analyst</a><a href="/emploi.2026-09-04.333">Autre</a><a href="/contact">Contact</a></main></body></html>')
     page_a = ('<html><head><title>Laborant | Labo</title></head><body><nav>menu menu</nav><main><h1>Laborant</h1><p>'
-              + "Analyses en laboratoire a Namur (5000). " * 12 + '</p></main><footer>pied</footer></body></html>')
+              + "Analyses en laboratoire, rue Haute 1, 5000 Namur. " * 10
+              + 'Votre profil : bachelier en chimie. Missions : analyses HPLC. Contrat CDI temps plein. Postuler avant le 30/09.'
+              + '</p></main><footer>pied</footer></body></html>')
     page_b = ("<html><head><title>Offres d'emploi | Labo</title></head><body><main><h1>12 emplois pour vous</h1><p>"
               + "Liste des offres. " * 30 + '</p></main></body></html>')
     page_c = '<html><head><title>Autre</title></head><body><main><h1>Autre</h1><p>court</p></main></body></html>'
@@ -330,6 +333,27 @@ def main():
                        str({k: meta[k] for k in ("liens", "be", "rejetees")}) + (f" loc={jobs[0].location}" if jobs else "")))
     tests.append(check("HTML generique : une annee n'est pas un code postal",
                        hg._lieu("Publie le 2026-09-02, © 2026. Poste a Charleroi.")[0] != "Anvers (2026)"))
+    # V1.1 (17/09/2026) : preuve d'offre, pages d'information, rubriques, communes ambigues, code postal suivi d'un nom
+    page_faq = ('<html><head><title>FAQ</title></head><body><main><h1>FAQ</h1><p>'
+                + "Comment postuler ? Quel profil ? Quel contrat ? Quelles competences ? " * 10 + '</p></main></body></html>')
+    page_info = ('<html><head><title>Le Forem</title></head><body><main><h1>Le Forem</h1><p>'
+                 + "Le Forem accompagne les demandeurs a 5000 Namur. " * 15 + '</p></main></body></html>')
+    tests.append(check("HTML V1.1 : « FAQ » et « Legal Jobs » sont des pages de liste ou d'information, « Laborant (H/F/X) » non",
+                       hg._titre(BeautifulSoup(page_faq, "html.parser")) == ""
+                       and hg._titre(BeautifulSoup("<html><head><title>Legal Jobs</title></head></html>", "html.parser")) == ""
+                       and hg._titre(BeautifulSoup("<html><head><title>Laborant (H/F/X)</title></head></html>", "html.parser")) == "Laborant (H/F/X)"))
+    tests.append(check("HTML V1.1 : une page d'information sans vocabulaire d'offre est rejetee (motif explicite)",
+                       (hg.extraire_page("https://x.be/le-forem", page_info, "https://x.be/", "0") or {}).get("rejet", "").startswith("vocabulaire")
+                       and len(hg.indices_offre("Votre profil : bachelier. Missions : analyses. Contrat CDI. Postuler.")) >= 3))
+    tests.append(check("HTML V1.1 : « 3 ans », « to manage », « depuis 1991 » ne donnent pas de lieu ; « 6220 Fleurus », « 1310 La Hulpe », « site de Charleroi » oui",
+                       hg._lieu("3 ans d'experience, to manage the team, depuis 1991 Nous")[1] == "BE_UNKNOWN"
+                       and hg._lieu("Ref : 2026-88 ; site de 6220 Fleurus")[0] == "Fleurus (6220)"
+                       and hg._lieu("Rue X 1, 1310 La Hulpe, Belgique")[0] == "La Hulpe (1310)"
+                       and hg._lieu("Notre site de Charleroi recrute") == ("Charleroi", "BE_LIKELY"),
+                       str([hg._lieu("3 ans d'experience, to manage the team, depuis 1991 Nous"), hg._lieu("Ref : 2026-88 ; site de 6220 Fleurus")])))
+    tests.append(check("HTML V1.1 : /job_display/N (Eurobrussels) est un lien d'offre ; lien_regex du registre transmis au collecteur",
+                       bool(hg._RE_URL_OFFRE_SEP.search("/job_display/296299/Accounting")) and
+                       "lien_regex" in [c for c in __import__("sources.ats_employers_v2", fromlist=["employeurs"]).employeurs("HTML_SITES") if c["label"] == "Eurobrussels"][0]))
 
     # Teamtailor (16/09/2026) : flux RSS, lieux imbriques tt:locations/tt:location
     from sources import teamtailor_v1 as tt

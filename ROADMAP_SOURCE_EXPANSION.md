@@ -53,6 +53,12 @@ Demander un accès à l'API `Vacatures` (ibm-api-key). En attendant, 8 874 offre
 
 **Première campagne le 16/09/2026** (fichier 0484) : 113 553 entreprises dans les NACE cibles, 2 390 actives avec site web, 1 215 passées au moteur (cabinets médicaux écartés) → 25 sources actives (24 nouvelles), 70 offres belges validées ; 1 166 sans voie publique (PME sans portail carrière). Rendement : 2 %, soit un employeur par 50 domaines — la BCE trouve ce que rien d'autre ne trouve (Allnex, Kronos, Stepan, Covestro, Stora Enso, Intertek, Laborelec, SAS, SDL), mais le gros de l'emploi PME reste sur le Forem. Prochaine tranche possible : NACE 62/63 (informatique, données) et unités d'établissement.
 
+## Étape 8 — le dernier repli : portails maison (HTML)
+
+**Fait le 16–17/09/2026 :** `sources/html_generique_v1.py` (V1.1) lit un portail carrière sans API, sans flux et sans JSON-LD : liens d'offre depuis la page carrière (ou depuis un hub, un cran plus loin), contenu principal de chaque page, lieu par code postal suivi d'un nom ou par commune connue, preuve d'offre par vocabulaire (au moins trois familles parmi postuler / profil / missions / contrat / compétences / dates / ce qu'on offre — calibré sur 190 pages de huit portails). Idée reprise du projet principal (`job_quality_guard`), durcie : leur version prenait toute la page et n'exigeait rien.
+
+Recampagne sur les 46 graines francophones sans voie : 10 enregistrées (Letec → SuccessFactors, Province d'Anvers → CVWarehouse, 8 portails HTML). Après calibrage : **UNamur 8/8, GHdC 10/11, Prayon 14/14, Brabant wallon 5/16, HELHa 24/64 (bourse de stages étudiants), Eurobrussels 21/22 (job board affaires européennes, `lien_regex` = `/job_display/\d+`)** — 82 offres, descriptions de 2 500 à 10 000 caractères. Namur (namur.be : pages d'information) et CHU Liège (résultats rendus en JavaScript) désactivés avec motif. Restent hors de portée : Chirec (TalentFinder), CHU Charleroi, CHwapi, Citadelle, Cliniques de l'Europe, Solidaris, Mithra, Eurogentec, FN Herstal, Spadel, CMI — CMS sans URL d'offre lisible ou liste en JavaScript ; ceux-là passent par le Forem/Actiris quand ils y publient.
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.
