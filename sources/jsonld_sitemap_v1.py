@@ -44,7 +44,7 @@ from sources.location_belgium import detect_belgium_multi, BE_CONFIRMED, BE_LIKE
 from sources.phenom_ats_v1 import extract_job_posting, html_to_text, _location_text
 
 
-JSONLD_SITEMAP_VERSION = "1.2"
+JSONLD_SITEMAP_VERSION = "1.3"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "jsonld_sites_cache"
@@ -381,25 +381,42 @@ def _inconnu_accepte(host: str, company: dict, defaut: bool | None) -> bool:
     return host.lower().rstrip("/").endswith(".be")
 
 
+SITES_EN_PARALLELE = 4
+
+
 def collect_sites(companies: list[dict], verbose: bool = True,
-                  include_unknown: bool | None = None) -> dict:
-    session = requests.Session()
-    jobs, report = [], []
-    for c in companies:
-        if not c.get("enabled", True):
-            continue
+                  include_unknown: bool | None = None, workers: int = SITES_EN_PARALLELE) -> dict:
+    """
+    Tous les sites, quatre a la fois (V1.3, 16/09/2026).
+
+    Sequentiel, 56 sites a 150 pages et 0,35 s de pause pouvaient prendre
+    cinquante minutes sur une premiere passe. Les sites sont independants
+    (une session et un fichier de cache par hote) : on les lit en parallele,
+    la pause entre pages restant par site — la charge par serveur ne change pas.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+
+    actifs = [c for c in companies if c.get("enabled", True)]
+
+    def _un(c):
         host = _clean(c.get("identifier"))
         label = _clean(c.get("label")) or host
         try:
-            trouves, meta = collect_site(host, label, session,
+            trouves, meta = collect_site(host, label, requests.Session(),
                                          include_unknown=_inconnu_accepte(host, c, include_unknown),
                                          verbose=verbose)
-            jobs.extend(trouves)
+            return trouves, meta
         except Exception as erreur:
             meta = {"host": host, "label": label, "error": f"{type(erreur).__name__}: {erreur}", "be": 0}
             if verbose:
                 print(f"  {label:<24} ⚠️  {meta['error']}")
-        report.append(meta)
+            return [], meta
+
+    jobs, report = [], []
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        for trouves, meta in pool.map(_un, actifs):
+            jobs.extend(trouves)
+            report.append(meta)
     dedup = {}
     for job in jobs:
         dedup[job.external_id] = job

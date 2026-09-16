@@ -5,5 +5,5 @@
     "FOREM",
     "ACTIRIS"
   ],
-  "backfill_max_per_run": 3000
+  "backfill_max_per_run": 1500
 }
