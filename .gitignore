@@ -100,3 +100,6 @@ logs/scienceatwork_listing.html
 # Paquets ChatGPT (donnees de candidature) et caches HTML des employeurs directs
 exports/chatgpt_handoff/
 logs/batch2_direct_employers/
+
+# Cles API privees (Jooble, Adzuna, Careerjet, VDAB) : jamais dans git
+config/private/

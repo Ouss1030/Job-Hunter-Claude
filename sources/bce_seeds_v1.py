@@ -91,8 +91,11 @@ def extraire(chemin_zip: Path, nace: list[str], limite: int | None = None, verbo
                 code = str(row.get("NaceCode") or "").replace(".", "")
                 if any(code.startswith(c) for c in nace):
                     num = row.get("EntityNumber") or row.get("EnterpriseNumber") or ""
-                    ent = num.split(".")[0] if "." in num and len(num) > 12 else num
-                    cibles.setdefault(ent, code)
+                    # 0xxx.xxx.xxx = entreprise ; 2.xxx.xxx.xxx = unite d'etablissement.
+                    # V1 : niveau entreprise seulement (l'activite principale y est).
+                    if num.startswith("2."):
+                        continue
+                    cibles.setdefault(num, code)
         if verbose:
             print(f"  activites NACE {nace} : {len(cibles)} entites")
         # 2) sites web declares
@@ -101,8 +104,7 @@ def extraire(chemin_zip: Path, nace: list[str], limite: int | None = None, verbo
             for row in csv.DictReader(f):
                 if str(row.get("ContactType") or "").upper() != "WEB":
                     continue
-                num = row.get("EntityNumber") or ""
-                ent = num if num in cibles else num.split(".")[0] if "." in num else num
+                ent = row.get("EntityNumber") or ""
                 if ent in cibles and ent not in sites:
                     d = _domaine(row.get("Value") or "")
                     if d:
@@ -133,6 +135,7 @@ def extraire(chemin_zip: Path, nace: list[str], limite: int | None = None, verbo
                        "bce": num, "nace": cibles.get(num), "discovered_by": f"bce:{cibles.get(num)}"})
         if limite and len(sortie) >= limite:
             break
+    sortie.sort(key=lambda g: (g["nace"] or "", g["domaine"]))
     if verbose:
         print(f"  entreprises actives, NACE cible, site web : {len(sortie)} domaines distincts")
     return sortie
