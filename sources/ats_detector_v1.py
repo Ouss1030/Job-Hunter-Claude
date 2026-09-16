@@ -221,6 +221,9 @@ def _analyser_reponse(reponse) -> dict | None:
         # page carriere elle-meme est le site a lire.
         if not r["identifiant"] and r["ats"] == "CVWAREHOUSE":
             r["identifiant"] = f"https://{urlsplit(reponse.url).netloc.lower()}/"
+        # Jobtoolz sur domaine propre (jobs.gim.be, careers.etherna.be) : idem, l'hote suffit.
+        if not r["identifiant"] and r["ats"] == "JOBTOOLZ":
+            r["identifiant"] = urlsplit(reponse.url).netloc.lower()
         return r
     return None
 

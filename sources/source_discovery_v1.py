@@ -131,6 +131,11 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
             entrees = lister(identifiant, session, max_pages=2)
             r.update(ok=bool(entrees), total=len(entrees), be=None,
                      erreur=None if entrees else "aucune offre listee")
+        elif connecteur == "JOBTOOLZ":
+            from sources.jobtoolz_v1 import collect_jobtoolz
+            jobs, meta = collect_jobtoolz({"identifier": identifiant, "label": label}, session, max_offres=4)
+            r.update(ok=meta.get("total", 0) > 0 and not meta.get("error"), total=meta.get("total"), be=meta.get("be"),
+                     erreur=meta.get("error") or (None if meta.get("total") else "liste vide"))
         elif connecteur == "CVWAREHOUSE":
             from sources.cvwarehouse_v1 import lister
             lignes = lister(identifiant, "nl-BE", session)

@@ -20,7 +20,7 @@ from __future__ import annotations
 from sources import ats_employers_v2 as registre
 
 
-REGISTRY_EXPANSION_VERSION = "1.3"
+REGISTRY_EXPANSION_VERSION = "1.4"
 
 
 def _collect_ats_v2(ats: str) -> list:
@@ -92,6 +92,18 @@ def _collect_cvwarehouse() -> list:
     return resultat["jobs"]
 
 
+def _collect_jobtoolz() -> list:
+    from sources.jobtoolz_v1 import collect_jobtoolz_jobs
+    companies = registre.employeurs("JOBTOOLZ")
+    if not companies:
+        print("  JOBTOOLZ : aucun employeur enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_jobtoolz_jobs(companies, verbose=True)
+    print(f"JOBTOOLZ - employeurs={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
 def _collect_icims() -> list:
     from sources.icims_v1 import collect_icims_jobs
     companies = registre.employeurs("ICIMS")
@@ -154,6 +166,10 @@ def specs_expansion(SourceSpec) -> tuple:
                    collector=_collect_icims, languages=("fr", "en", "nl"), priority=82,
                    notes="Liste HTML paginee (in_iframe=1), JSON-LD JobPosting par offre via l'extracteur "
                          "universel. Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="JOBTOOLZ", result_key="jobtoolz", label="Jobtoolz (ATS belge, liste embarquee)",
+                   collector=_collect_jobtoolz, languages=("nl", "fr", "en"), priority=84,
+                   notes="Liste complete embarquee dans la page carriere (window.jobComponent), JSON-LD + texte "
+                         "de la page par offre. Employeurs : config/ats_employers_v2.json."),
         SourceSpec(key="TEAMTAILOR", result_key="teamtailor", label="Teamtailor (flux RSS)",
                    collector=_collect_teamtailor, languages=("fr", "en", "nl"), priority=83,
                    notes="Flux RSS public /jobs.rss : une requete par site, descriptions completes, "

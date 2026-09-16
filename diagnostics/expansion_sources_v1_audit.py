@@ -26,6 +26,7 @@ dossier temporaire.
 
 from __future__ import annotations
 
+import html as html_mod
 import json
 import tempfile
 from datetime import datetime
@@ -370,6 +371,33 @@ def main():
                        meta["total"] == 2 and len(jobs) == 1 and jobs[0].location == "Gand, 9000, Belgium"
                        and jobs[0].date_published == "2026-09-14" and "HPLC" in jobs[0].description, str(meta)))
 
+    # Jobtoolz (17/09/2026) : liste embarquee dans window.jobComponent([...]), JSON-LD + texte par offre
+    from sources import jobtoolz_v1 as jt
+    liste_jt = json.dumps([{"id": 11, "title": "QC Associate", "url": "https://jobs.acme.be/fr/qc-associate", "location": "Niel", "types": "Temps plein"},
+                           {"id": 12, "title": "Sales", "url": "https://jobs.acme.be/fr/sales", "location": "Lyon (France)", "types": "Temps plein"}])
+    page_liste = ('<html><body><div x-data="window.jobComponent(' + html_mod.escape(liste_jt, quote=True)
+                  + ', 10, [], [], [])"><template x-for="job in items"></template></div>'
+                  '<img src="https://jobtoolz-assets.imgix.net/x.jpg"></body></html>')
+    page_qc = ('<html><head><script type="application/ld+json">' + json.dumps({"@type": "JobPosting", "title": "QC Associate", "datePosted": "2026-09-14",
+               "description": "court", "hiringOrganization": {"@type": "Organization", "name": "Acme Biotech"}}) + '</script></head><body><nav>menu</nav><main><h1>QC Associate</h1><p>'
+               + "Analyses HPLC en laboratoire, 2845 Niel. Votre profil : bachelier. Contrat CDI. Postuler. " * 6 + '</p></main></body></html>')
+    page_sales = ('<html><head><script type="application/ld+json">' + json.dumps({"@type": "JobPosting", "title": "Sales", "datePosted": "2026-09-14",
+                  "description": "court", "hiringOrganization": {"name": "Acme"}}) + '</script></head><body><main><h1>Sales</h1><p>'
+                  + "Ventes a Lyon, France. Profil commercial. Contrat CDI. Postuler. " * 6 + '</p></main></body></html>')
+    s = _Session({"https://jobs.acme.be/fr": _Reponse(page_liste, 200, "https://jobs.acme.be/fr"),
+                  "https://jobs.acme.be/fr/qc-associate": _Reponse(page_qc, 200, "https://jobs.acme.be/fr/qc-associate"),
+                  "https://jobs.acme.be/fr/sales": _Reponse(page_sales, 200, "https://jobs.acme.be/fr/sales")})
+    with mock.patch.object(jt, "PAUSE", 0):
+        jobs, meta = jt.collect_jobtoolz({"identifier": "jobs.acme.be", "label": "Acme"}, s)
+    tests.append(check("Jobtoolz : liste embarquee lue (2), offre Niel gardee avec texte complet, date JSON-LD et employeur ; offre Lyon ecartee",
+                       meta["total"] == 2 and len(jobs) == 1 and jobs[0].title == "QC Associate" and jobs[0].company == "Acme Biotech"
+                       and jobs[0].date_published == "2026-09-14" and "HPLC" in jobs[0].description and "menu" not in jobs[0].description
+                       and jobs[0].location.startswith("Niel") and jobs[0].external_id == "jobs.acme.be:11", str(meta) + (f" loc={jobs[0].location}" if jobs else "")))
+    from sources import ats_detector_v1 as ad
+    dets = ad.detecter_dans_texte(page_liste, preuve="HTML")
+    tests.append(check("Jobtoolz : signature reconnue dans la page (jobtoolz-assets / window.jobComponent), connecteur JOBTOOLZ",
+                       any(d.get("ats") == "JOBTOOLZ" and d.get("connecteur") == "JOBTOOLZ" for d in dets), str(dets)[:200]))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl
@@ -472,7 +500,7 @@ def main():
     tests.append(check("SOURCE_SPECS : aucune cle ni result_key en double",
                        len(cles) == len(set(cles)) and len(rks) == len(set(rks)), f"{len(cles)} specs"))
     tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES, ORACLE_CLOUD, CVWAREHOUSE",
-                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS", "TEAMTAILOR", "HTML_SITES"} <= set(cles)))
+                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS", "TEAMTAILOR", "HTML_SITES", "JOBTOOLZ"} <= set(cles)))
     tests.append(check("Detection : Oracle Cloud (host/lang/site) et CVWarehouse (URL, casse des parametres conservee)",
                        det.detecter_url("https://ebza.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/nl/sites/CX_1001/job/1")["identifiant"]
                        == {"host": "ebza.fa.em2.oraclecloud.com", "lang": "nl", "site": "CX_1001"}

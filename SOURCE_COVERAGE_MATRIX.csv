@@ -180,6 +180,7 @@ PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 13 employeurs";registry_expansion_v1;"17
 ORACLE_CLOUD;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"148 actives / 148 vues ; 147 avec description";aucune offre au dernier run;;;;
 CVWAREHOUSE;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"206 actives / 206 vues ; 198 avec description";aucune offre au dernier run;;;;
 ICIMS;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"243 actives / 243 vues ; 243 avec description";aucune offre au dernier run;;;;
+JOBTOOLZ;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;19 offres BE validees;declaree mais jamais une offre en base;;;;
 TEAMTAILOR;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;12 offres BE validees;declaree mais jamais une offre en base;;;;
 HTML_SITES;employeur direct;OUI;INCONNU (jamais collectee);registry_expansion_v1;38 offres BE validees;declaree mais jamais une offre en base;;;;
 JSONLD_SITES;universel;OUI;"VALIDE (decouverte) ; 59 employeurs";registry_expansion_v1;"3205 actives / 3359 vues ; 3332 avec description";aucune offre au dernier run;;;;

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T01:09:50+02:00",
+ "updated_at": "2026-09-17T01:23:00+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -341,20 +341,6 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://careers.ing.com/en/search-jobs",
-   "label": "ING",
-   "enabled": true,
-   "verified_at": "2026-09-17T01:08:15+02:00",
-   "jobs_total": 16,
-   "jobs_be": 1,
-   "discovered_by": "original:v417",
-   "career_url": "https://careers.ing.com/en/search-jobs",
-   "notes": "",
-   "first_seen": "2026-09-17T01:08:15+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
    "identifier": "https://www.cegeka.com/en/be/jobs/our-stories",
    "label": "Cegeka",
    "enabled": false,
@@ -426,16 +412,16 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://jobs.trevalco.com/en_GB/jobs",
-   "label": "Trevalco",
+   "identifier": "https://careers.ing.com/en/search-jobs",
+   "label": "ING",
    "enabled": true,
-   "verified_at": "2026-09-17T01:08:37+02:00",
-   "jobs_total": 6,
-   "jobs_be": 3,
+   "verified_at": "2026-09-17T01:08:15+02:00",
+   "jobs_total": 16,
+   "jobs_be": 1,
    "discovered_by": "original:v417",
-   "career_url": "https://jobs.trevalco.com/en_GB/jobs",
+   "career_url": "https://careers.ing.com/en/search-jobs",
    "notes": "",
-   "first_seen": "2026-09-17T01:08:37+02:00"
+   "first_seen": "2026-09-17T01:08:15+02:00"
   },
   {
    "ats": "HTML",
@@ -492,6 +478,20 @@
    "career_url": "https://www.strand.be/en",
    "notes": "",
    "first_seen": "2026-09-17T01:09:09+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://jobs.trevalco.com/en_GB/jobs",
+   "label": "Trevalco",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:08:37+02:00",
+   "jobs_total": 6,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://jobs.trevalco.com/en_GB/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T01:08:37+02:00"
   },
   {
    "ats": "HTML",
@@ -620,6 +620,90 @@
    "first_seen": "2026-09-16T16:02:44+02:00"
   },
   {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "careers.etherna.be",
+   "label": "Etherna",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:22:54+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:72109",
+   "career_url": "https://careers.etherna.be/en",
+   "notes": "",
+   "first_seen": "2026-09-17T01:22:54+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.gim.be",
+   "label": "GIM",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:22:53+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:72100",
+   "career_url": "https://jobs.gim.be/fr",
+   "notes": "",
+   "first_seen": "2026-09-17T01:22:53+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "www.werkenbijgovi.com",
+   "label": "Govi Production Company",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:22:56+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:20590",
+   "career_url": "https://www.werkenbijgovi.com/nl",
+   "notes": "",
+   "first_seen": "2026-09-17T01:22:56+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "dienstencheques-group-f.jobtoolz.com",
+   "label": "Group F (titres-services)",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:22:58+02:00",
+   "jobs_total": 18,
+   "jobs_be": 4,
+   "discovered_by": "federgon",
+   "career_url": "https://www.group-f.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T01:22:58+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.smetgroup.be",
+   "label": "Smet Group",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:22:58+02:00",
+   "jobs_total": 10,
+   "jobs_be": 4,
+   "discovered_by": "forem:webAddress",
+   "career_url": "https://jobs.smetgroup.be/fr/aide-foreur",
+   "notes": "",
+   "first_seen": "2026-09-17T01:22:58+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.westvlees.com",
+   "label": "Westvlees",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:23:00+02:00",
+   "jobs_total": 14,
+   "jobs_be": 4,
+   "discovered_by": "forem:webAddress",
+   "career_url": "https://jobs.westvlees.com/fr/abatteur",
+   "notes": "",
+   "first_seen": "2026-09-17T01:23:00+02:00"
+  },
+  {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
    "identifier": "www.247drive.be",
@@ -660,6 +744,20 @@
    "career_url": "https://careers.abbvie.com/",
    "notes": "",
    "first_seen": "2026-09-15T15:58:17+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "travaillerchezaccent.be",
+   "label": "Accent Jobs (site)",
+   "enabled": true,
+   "verified_at": "2026-09-17T01:09:50+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "original:v417",
+   "career_url": "https://travaillerchezaccent.be/offres-demploi/",
+   "notes": "",
+   "first_seen": "2026-09-17T01:09:50+02:00"
   },
   {
    "ats": "JSONLD",
@@ -716,20 +814,6 @@
    "career_url": "https://axintor.be/en/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:01:47+02:00"
-  },
-  {
-   "ats": "JSONLD",
-   "connector": "JSONLD_SITES",
-   "identifier": "careers.planet-pharma.com",
-   "label": "Planet Pharma",
-   "enabled": false,
-   "verified_at": "2026-09-17T01:08:23+02:00",
-   "jobs_total": 500,
-   "jobs_be": 0,
-   "discovered_by": "original:v417",
-   "career_url": null,
-   "notes": "careers.planet-pharma.com : recruteur pharma mondial, 500 URL pour 1 offre belge — rendement trop faible. Desactive le 17/09/2026.",
-   "first_seen": "2026-09-17T01:08:23+02:00"
   },
   {
    "ats": "JSONLD",
@@ -1210,6 +1294,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "careers.planet-pharma.com",
+   "label": "Planet Pharma",
+   "enabled": false,
+   "verified_at": "2026-09-17T01:08:23+02:00",
+   "jobs_total": 500,
+   "jobs_be": 0,
+   "discovered_by": "original:v417",
+   "career_url": null,
+   "notes": "careers.planet-pharma.com : recruteur pharma mondial, 500 URL pour 1 offre belge — rendement trop faible. Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T01:08:23+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "www.qjobs.be",
    "label": "Qjobs",
    "enabled": true,
@@ -1360,20 +1458,6 @@
    "career_url": "https://www.torfs.be/nl/home",
    "notes": "",
    "first_seen": "2026-09-15T16:01:31+02:00"
-  },
-  {
-   "ats": "JSONLD",
-   "connector": "JSONLD_SITES",
-   "identifier": "travaillerchezaccent.be",
-   "label": "Accent Jobs (site)",
-   "enabled": true,
-   "verified_at": "2026-09-17T01:09:50+02:00",
-   "jobs_total": 9,
-   "jobs_be": 3,
-   "discovered_by": "original:v417",
-   "career_url": "https://travaillerchezaccent.be/offres-demploi/",
-   "notes": "",
-   "first_seen": "2026-09-17T01:09:50+02:00"
   },
   {
    "ats": "JSONLD",
