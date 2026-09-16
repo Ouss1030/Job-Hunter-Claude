@@ -121,6 +121,11 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
             lignes = lister(identifiant["host"], identifiant["site"], session)
             be = sum(1 for r in lignes if _retenir(_statut_be(str(r.get("PrimaryLocation") or ""), str(r.get("PrimaryLocationCountry") or "")), False))
             r.update(ok=True, total=len(lignes), be=be)
+        elif connecteur == "TEAMTAILOR":
+            from sources.teamtailor_v1 import collect_teamtailor
+            jobs, meta = collect_teamtailor({"identifier": identifiant, "label": label}, session)
+            r.update(ok=meta.get("total", 0) > 0, total=meta.get("total"), be=meta.get("be"),
+                     erreur=None if meta.get("total") else "flux RSS vide")
         elif connecteur == "ICIMS":
             from sources.icims_v1 import lister
             entrees = lister(identifiant, session, max_pages=2)

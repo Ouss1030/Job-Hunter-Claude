@@ -2544,7 +2544,7 @@
   },
   {
    "ats": "TEAMTAILOR",
-   "connector": "JSONLD_SITES",
+   "connector": "TEAMTAILOR",
    "identifier": "jobtalentbelgique.teamtailor.com",
    "label": "Equip Interim",
    "enabled": true,
@@ -2558,7 +2558,7 @@
   },
   {
    "ats": "TEAMTAILOR",
-   "connector": "JSONLD_SITES",
+   "connector": "TEAMTAILOR",
    "identifier": "jobs.ml6.eu",
    "label": "Ml6",
    "enabled": true,

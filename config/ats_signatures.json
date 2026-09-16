@@ -132,10 +132,10 @@
         "data-teamtailor"
       ],
       "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.teamtailor\\.com)",
-      "connector": "JSONLD_SITES",
+      "connector": "TEAMTAILOR",
       "config": "config/ats_employers_v2.json",
-      "strategy": "SITEMAP_JSONLD",
-      "endpoint": "https://{identifiant}/sitemap.xml"
+      "strategy": "RSS",
+      "endpoint": "https://{identifiant}/jobs.rss"
     },
     "JOBTOOLZ": {
       "url_patterns": [

@@ -309,6 +309,21 @@ def main():
                        and all("labo" in j.description.lower() or "power bi" in j.description.lower() for j in jobs)
                        and jobs[0].external_id.startswith("acme.cvw.io:"), str(meta)))
 
+    # Teamtailor (16/09/2026) : flux RSS, lieux imbriques tt:locations/tt:location
+    from sources import teamtailor_v1 as tt
+    rss = ('<?xml version="1.0"?><rss xmlns:tt="https://teamtailor.com/locations"><channel>'
+           '<item><title>Laborant</title><link>https://acme.teamtailor.com/jobs/1-laborant</link><guid>https://acme.teamtailor.com/jobs/1-laborant</guid>'
+           '<pubDate>Mon, 14 Sep 2026 08:00:00 +0000</pubDate><description><![CDATA[<p>' + "Analyses HPLC. " * 15 + '</p>]]></description>'
+           '<tt:locations><tt:location><tt:city>Gand</tt:city><tt:zip>9000</tt:zip><tt:country>Belgium</tt:country></tt:location></tt:locations></item>'
+           '<item><title>Sales</title><link>https://acme.teamtailor.com/jobs/2-sales</link><guid>https://acme.teamtailor.com/jobs/2-sales</guid>'
+           '<description>court</description><tt:locations><tt:location><tt:city>Paris</tt:city><tt:country>France</tt:country></tt:location></tt:locations></item>'
+           '</channel></rss>')
+    s = _Session({"https://acme.teamtailor.com/jobs.rss": _Reponse(rss, 200, ctype="application/rss+xml")})
+    jobs, meta = tt.collect_teamtailor({"identifier": "acme.teamtailor.com", "label": "Acme"}, s)
+    tests.append(check("Teamtailor : flux RSS lu, lieu imbrique (Gand, 9000, Belgium) reconnu, offre France ecartee, date convertie",
+                       meta["total"] == 2 and len(jobs) == 1 and jobs[0].location == "Gand, 9000, Belgium"
+                       and jobs[0].date_published == "2026-09-14" and "HPLC" in jobs[0].description, str(meta)))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl
@@ -411,7 +426,7 @@ def main():
     tests.append(check("SOURCE_SPECS : aucune cle ni result_key en double",
                        len(cles) == len(set(cles)) and len(rks) == len(set(rks)), f"{len(cles)} specs"))
     tests.append(check("Nouvelles sources presentes : LEVER, ASHBY, WORKABLE, PERSONIO, JSONLD_SITES, ORACLE_CLOUD, CVWAREHOUSE",
-                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS"} <= set(cles)))
+                       {"LEVER", "ASHBY", "WORKABLE", "PERSONIO", "JSONLD_SITES", "ORACLE_CLOUD", "CVWAREHOUSE", "ICIMS", "TEAMTAILOR"} <= set(cles)))
     tests.append(check("Detection : Oracle Cloud (host/lang/site) et CVWarehouse (URL, casse des parametres conservee)",
                        det.detecter_url("https://ebza.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/nl/sites/CX_1001/job/1")["identifiant"]
                        == {"host": "ebza.fa.em2.oraclecloud.com", "lang": "nl", "site": "CX_1001"}

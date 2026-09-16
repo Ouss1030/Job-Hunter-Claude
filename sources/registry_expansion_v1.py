@@ -20,7 +20,7 @@ from __future__ import annotations
 from sources import ats_employers_v2 as registre
 
 
-REGISTRY_EXPANSION_VERSION = "1.1"
+REGISTRY_EXPANSION_VERSION = "1.2"
 
 
 def _collect_ats_v2(ats: str) -> list:
@@ -104,6 +104,18 @@ def _collect_icims() -> list:
     return resultat["jobs"]
 
 
+def _collect_teamtailor() -> list:
+    from sources.teamtailor_v1 import collect_teamtailor_jobs
+    companies = registre.employeurs("TEAMTAILOR")
+    if not companies:
+        print("  TEAMTAILOR : aucun employeur enregistre (config/ats_employers_v2.json)")
+        return []
+    resultat = collect_teamtailor_jobs(companies, verbose=True)
+    print(f"TEAMTAILOR - employeurs={len(resultat['report'])} offres BE={len(resultat['jobs'])} "
+          f"en erreur={sum(1 for r in resultat['report'] if r.get('error'))}")
+    return resultat["jobs"]
+
+
 def specs_expansion(SourceSpec) -> tuple:
     """Les SourceSpec a ajouter ; SourceSpec est passe pour eviter l'import circulaire."""
     return (
@@ -130,6 +142,10 @@ def specs_expansion(SourceSpec) -> tuple:
                    collector=_collect_icims, languages=("fr", "en", "nl"), priority=82,
                    notes="Liste HTML paginee (in_iframe=1), JSON-LD JobPosting par offre via l'extracteur "
                          "universel. Employeurs : config/ats_employers_v2.json."),
+        SourceSpec(key="TEAMTAILOR", result_key="teamtailor", label="Teamtailor (flux RSS)",
+                   collector=_collect_teamtailor, languages=("fr", "en", "nl"), priority=83,
+                   notes="Flux RSS public /jobs.rss : une requete par site, descriptions completes, "
+                         "ville et pays. Employeurs : config/ats_employers_v2.json."),
         SourceSpec(key="JSONLD_SITES", result_key="jsonld_sites",
                    label="Sites carrière (sitemap + JSON-LD)",
                    collector=_collect_jsonld_sites, languages=("fr", "en", "nl", "de"), priority=79,
