@@ -1,6 +1,29 @@
 """
 JOB HUNTER BELGIUM
-CANONICAL DATABASE - VERSION 3.1.2
+CANONICAL DATABASE - VERSION 3.1.3
+
+V3.1.3 (17/09/2026) — même algorithme, calcul paresseux de la description
+--------------------------------------------------------------------------
+Le run du 16/09/2026 (66 275 offres actives, 1,05 million de paires) a
+passé 2 h 18 dans ce build : la similarité de description
+(SequenceMatcher sur des textes jusqu'à 8 000 caractères) était calculée
+pour chaque paire AVANT de vérifier si le titre, l'entreprise et le lieu
+lui laissaient une chance. Désormais :
+
+    intra  : la description n'est calculée que si titre >= 0.995,
+             entreprise >= 0.90 et lieu >= 0.80 — en dessous, la paire
+             est rejetée quelle que soit la description (evaluate_intra_pair
+             rendait déjà None dans ce cas)
+    cross  : la description n'est calculée que si la paire peut atteindre
+             pair_score >= CROSS_REVIEW_PAIR_MIN avec D = 1 ; sinon elle ne
+             peut être ni auto, ni review (exact_unique et evidence_enough
+             impliquent pair_score >= 0.889), ni dépasser une paire qui
+             le peut — D vaut alors 0 et la paire est inerte
+
+Toutes les décisions, tous les scores persistés et tous les motifs sont
+identiques à V3.1.2 : vérifié sur 6 000 paires réelles par
+diagnostics/canonical_perf_shadow_v1.py (0 écart), passe 1 99 -> 19 min,
+passe 2 55 -> 22 min. Seuils, formules et schéma inchangés.
 
 Fixes par rapport à V3.1
 -------------------------
@@ -30,7 +53,7 @@ python -m database.canonical
 
 Log
 ---
-exports/logs/canonical_v312_YYYYMMDD_HHMMSS.txt
+exports/logs/canonical_v313_YYYYMMDD_HHMMSS.txt
 """
 
 import hashlib
@@ -47,8 +70,8 @@ from pathlib import Path
 from database.db import DB_PATH, get_connection, get_raw_jobs_for_dedup, init_db
 
 
-SCHEMA_VERSION = "3.1.2"
-ALGORITHM_VERSION = "STRICT_CANONICAL_V3_1_2"
+SCHEMA_VERSION = "3.1.3"
+ALGORITHM_VERSION = "STRICT_CANONICAL_V3_1_3"
 
 # Critères validés par l'audit intra-source.
 MIN_DESCRIPTION_CHARS = 250
@@ -106,7 +129,7 @@ class Tee:
 
 def start_logging():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = LOG_DIR / f"canonical_v311_{timestamp}.txt"
+    path = LOG_DIR / f"canonical_v313_{timestamp}.txt"
     file = path.open("w", encoding="utf-8")
     stdout = sys.stdout
     stderr = sys.stderr
@@ -393,12 +416,16 @@ def prepare_jobs(raw_jobs):
     return output
 
 
-def calculate_raw_pair(job_a, job_b):
-    title_score = title_similarity(job_a, job_b)
-    company_score = company_similarity(job_a, job_b)
-    location_score = location_similarity(job_a, job_b)
-    description_score = description_similarity(job_a, job_b)
+def _scores_partiels(job_a, job_b):
+    """Titre, entreprise, lieu : les trois scores bon marché, avant toute description."""
+    return (
+        title_similarity(job_a, job_b),
+        company_similarity(job_a, job_b),
+        location_similarity(job_a, job_b),
+    )
 
+
+def _assembler_raw_pair(job_a, job_b, title_score, company_score, location_score, description_score):
     hash_a = job_a["_description_hash"]
     hash_b = job_b["_description_hash"]
     exact_description = bool(hash_a and hash_b and hash_a == hash_b)
@@ -431,6 +458,12 @@ def calculate_raw_pair(job_a, job_b):
 # PASS 1 : INTRA-SOURCE
 # ============================================================
 
+def calculate_raw_pair(job_a, job_b):
+    title_score, company_score, location_score = _scores_partiels(job_a, job_b)
+    description_score = description_similarity(job_a, job_b)
+    return _assembler_raw_pair(job_a, job_b, title_score, company_score, location_score, description_score)
+
+
 def build_intra_candidate_pairs(jobs):
     buckets = defaultdict(list)
     for index, job in enumerate(jobs):
@@ -449,9 +482,14 @@ def build_intra_candidate_pairs(jobs):
 
 
 def evaluate_intra_pair(job_a, job_b):
-    result = calculate_raw_pair(job_a, job_b)
-    if result["title_score"] < INTRA_TITLE_MIN:
+    title_score, company_score, location_score = _scores_partiels(job_a, job_b)
+    if title_score < INTRA_TITLE_MIN:
         return None
+    if company_score < INTRA_REVIEW_COMPANY_MIN or location_score < INTRA_REVIEW_LOCATION_MIN:
+        # Ni auto, ni strong, ni review : la description ne changerait rien (V3.1.3).
+        return None
+    result = _assembler_raw_pair(job_a, job_b, title_score, company_score, location_score,
+                                 description_similarity(job_a, job_b))
 
     auto_merge = (
         result["title_score"] >= INTRA_TITLE_MIN
@@ -654,11 +692,16 @@ def build_cross_candidate_pairs(atoms):
 
 
 def best_raw_pair_between_atoms(atom_a, atom_b):
-    candidates = [
-        calculate_raw_pair(job_a, job_b)
-        for job_a in atom_a["members"]
-        for job_b in atom_b["members"]
-    ]
+    candidates = []
+    for job_a in atom_a["members"]:
+        for job_b in atom_b["members"]:
+            title_score, company_score, location_score = _scores_partiels(job_a, job_b)
+            # Borne haute du pair_score avec D = 1 : en dessous du seuil review, la
+            # paire est inerte quelle que soit sa description (V3.1.3).
+            borne = title_score * 0.44 + company_score * 0.30 + location_score * 0.18 + 0.08
+            description_score = description_similarity(job_a, job_b) if borne >= CROSS_REVIEW_PAIR_MIN else 0.0
+            candidates.append(_assembler_raw_pair(job_a, job_b, title_score, company_score,
+                                                  location_score, description_score))
     if not candidates:
         return None
     return max(
@@ -1375,7 +1418,7 @@ def main():
     logger = start_logging()
     try:
         print("\n" + "=" * 80)
-        print("       JOB HUNTER - CANONICAL DATABASE V3.1.1")
+        print("       JOB HUNTER - CANONICAL DATABASE V3.1.3")
         print("=" * 80)
         print("\nSQLite    :", DB_PATH)
         print("Schema    :", SCHEMA_VERSION)
@@ -1401,11 +1444,11 @@ def main():
         print("\n" + ("✅ RAW inchangé." if raw_ok else "❌ Nombre RAW modifié."))
 
         print("\n" + "=" * 80)
-        print("VALIDATION V3.1.2")
+        print("VALIDATION V3.1.3")
         print("=" * 80)
         print()
         if raw_ok and sanity_ok:
-            print("✅ DATABASE CANONICAL V3.1.2 VALIDÉE.")
+            print("✅ DATABASE CANONICAL V3.1.3 VALIDÉE.")
             print("\nMAIN V10 peut ensuite être relancé sans modification.")
         else:
             print("⚠️ Ne pas relancer MAIN V10.")

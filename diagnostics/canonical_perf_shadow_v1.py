@@ -1,34 +1,28 @@
 """
 JOB HUNTER BELGIUM
-CANONICAL V3.1.2 - SHADOW DE PERFORMANCE - VERSION 1.0
+CANONICAL - SHADOW DE PERFORMANCE ET D'EQUIVALENCE - VERSION 1.1
 
-    python -m diagnostics.canonical_perf_shadow_v1            # echantillon de 30 000 paires par passe
+    python -m diagnostics.canonical_perf_shadow_v1            # 30 000 paires par passe
     python -m diagnostics.canonical_perf_shadow_v1 --paires 5000
 
 Probleme (run du 16/09/2026) : l'etape « Build canonique » a dure 2 h 18
 sur 3 h 43 de run principal. 66 275 offres actives, 626 576 paires
-intra-source et 424 088 paires cross-source ; pour chacune,
-calculate_raw_pair() calcule la similarite de description
-(difflib.SequenceMatcher sur des textes jusqu'a 8 000 caracteres) AVANT
-de verifier si le titre, l'entreprise et le lieu permettent encore a la
-paire d'aboutir. Or evaluate_intra_pair() rend None des que
-company < 0.90 ou location < 0.80, sans regarder la description.
+intra-source et 424 088 paires cross-source ; pour chacune, V3.1.2
+calculait la similarite de description (difflib.SequenceMatcher sur des
+textes jusqu'a 8 000 caracteres) AVANT de verifier si le titre,
+l'entreprise et le lieu permettaient encore a la paire d'aboutir.
 
-Ce diagnostic NE MODIFIE RIEN : Canonical V3.1.2 est frozen. Il mesure,
-sur un echantillon de paires reelles, ce que donnerait un calcul
-paresseux de la description :
+V3.1.3 calcule la description paresseusement. Ce diagnostic garde ici,
+verbatim, les fonctions de V3.1.2 (reference) et les compare a celles du
+module database/canonical.py en place (candidat), sur un echantillon de
+paires reelles : chaque decision (None / AUTO / STRONG / REVIEW), chaque
+score persiste et chaque motif doivent etre identiques. Il mesure aussi
+le temps et le nombre de descriptions calculees.
 
-    intra  : description calculee seulement si titre >= 0.995,
-             entreprise >= 0.90 et lieu >= 0.80 (sinon la paire est
-             rejetee quelle que soit la description)
-    cross  : description calculee seulement si la paire peut atteindre
-             pair_score >= 0.63 avec D = 1 (sinon elle ne peut etre ni
-             auto, ni review, ni depasser une paire qui le peut)
+Ce diagnostic NE MODIFIE RIEN dans la base.
 
-et verifie que chaque decision (None / AUTO / STRONG / REVIEW, scores,
-motifs) est identique a celle de l'algorithme actuel. Si c'est le cas
-et que le gain est net, l'integration est un patch de trois fonctions
-dans database/canonical.py, a valider avant/apres sur un build complet.
+Resultat du 17/09/2026 (V1.0, avant integration) : 0 ecart sur 6 000
+paires ; passe 1 99 -> 19 min, passe 2 55 -> 22 min.
 """
 
 from __future__ import annotations
@@ -41,21 +35,19 @@ from database import canonical as C
 from database.db import get_raw_jobs_for_dedup
 
 
-SHADOW_VERSION = "1.0"
+SHADOW_VERSION = "1.1"
 
 
 # ------------------------------------------------------------------
-# Variantes paresseuses (memes formules, ordre different)
+# Reference : V3.1.2, copie verbatim (seules les fonctions de similarite,
+# inchangees, sont prises dans le module)
 # ------------------------------------------------------------------
 
-def _raw_pair_partiel(job_a, job_b):
+def _ref_calculate_raw_pair(job_a, job_b):
     title_score = C.title_similarity(job_a, job_b)
     company_score = C.company_similarity(job_a, job_b)
     location_score = C.location_similarity(job_a, job_b)
-    return title_score, company_score, location_score
-
-
-def _raw_pair_final(job_a, job_b, title_score, company_score, location_score, description_score):
+    description_score = C.description_similarity(job_a, job_b)
     hash_a = job_a["_description_hash"]
     hash_b = job_b["_description_hash"]
     exact_description = bool(hash_a and hash_b and hash_a == hash_b)
@@ -72,15 +64,10 @@ def _raw_pair_final(job_a, job_b, title_score, company_score, location_score, de
     }
 
 
-def evaluate_intra_pair_lazy(job_a, job_b):
-    t, c, l = _raw_pair_partiel(job_a, job_b)
-    if t < C.INTRA_TITLE_MIN:
-        return None, False
-    if c < C.INTRA_REVIEW_COMPANY_MIN or l < C.INTRA_REVIEW_LOCATION_MIN:
-        return None, False  # ni auto, ni strong, ni review : la description ne change rien
-    d = C.description_similarity(job_a, job_b)
-    result = _raw_pair_final(job_a, job_b, t, c, l, d)
-    # A partir d'ici : copie exacte d'evaluate_intra_pair
+def _ref_evaluate_intra_pair(job_a, job_b):
+    result = _ref_calculate_raw_pair(job_a, job_b)
+    if result["title_score"] < C.INTRA_TITLE_MIN:
+        return None
     auto_merge = (result["title_score"] >= C.INTRA_TITLE_MIN and result["company_score"] >= C.INTRA_COMPANY_MIN
                   and result["location_score"] >= C.INTRA_LOCATION_MIN and result["same_publication_date"]
                   and (result["exact_description"] or result["description_score"] >= C.INTRA_DESCRIPTION_AUTO_MIN))
@@ -90,35 +77,25 @@ def evaluate_intra_pair_lazy(job_a, job_b):
     review = (not auto_merge and not strong and result["company_score"] >= C.INTRA_REVIEW_COMPANY_MIN
               and result["location_score"] >= C.INTRA_REVIEW_LOCATION_MIN)
     if not auto_merge and not strong and not review:
-        return None, True
+        return None
     level = "AUTO_INTRA_STRICT" if auto_merge else ("STRONG_REVIEW" if strong else "REVIEW")
     reason = (f"{level}; D={result['description_score']:.3f}; "
               + ("même date" if result["same_publication_date"] else "date différente/inconnue"))
     result.update({"scope": "INTRA", "auto_merge": auto_merge, "strong": strong, "review": review, "reason": reason})
-    return result, True
+    return result
 
 
-def best_raw_pair_lazy(atom_a, atom_b):
-    candidates, calcules = [], 0
-    for job_a in atom_a["members"]:
-        for job_b in atom_b["members"]:
-            t, c, l = _raw_pair_partiel(job_a, job_b)
-            borne = t * 0.44 + c * 0.30 + l * 0.18 + 0.08
-            if borne >= C.CROSS_REVIEW_PAIR_MIN:
-                d = C.description_similarity(job_a, job_b)
-                calcules += 1
-            else:
-                d = 0.0  # la paire ne peut ni etre retenue ni depasser une paire retenue
-            candidates.append(_raw_pair_final(job_a, job_b, t, c, l, d))
+def _ref_best_raw_pair_between_atoms(atom_a, atom_b):
+    candidates = [_ref_calculate_raw_pair(a, b) for a in atom_a["members"] for b in atom_b["members"]]
     if not candidates:
-        return None, 0
-    return max(candidates, key=lambda r: (r["pair_score"], r["description_score"], r["title_score"])), calcules
+        return None
+    return max(candidates, key=lambda r: (r["pair_score"], r["description_score"], r["title_score"]))
 
 
-def evaluate_cross_atoms_lazy(atom_a, atom_b, signature_counts):
-    result, calcules = best_raw_pair_lazy(atom_a, atom_b)
+def _ref_evaluate_cross_atoms(atom_a, atom_b, signature_counts):
+    result = _ref_best_raw_pair_between_atoms(atom_a, atom_b)
     if result is None or result["title_score"] < 0.78:
-        return None, calcules
+        return None
     count_a = signature_counts[(atom_a["channel"], C.atom_signature(atom_a))]
     count_b = signature_counts[(atom_b["channel"], C.atom_signature(atom_b))]
     ambiguous = count_a > 1 or count_b > 1
@@ -141,29 +118,59 @@ def evaluate_cross_atoms_lazy(atom_a, atom_b, signature_counts):
     result.update({"scope": "CROSS", "atom_id_a": atom_a["atom_id"], "atom_id_b": atom_b["atom_id"],
                    "ambiguous_signature": ambiguous, "signature_count_a": count_a, "signature_count_b": count_b,
                    "auto_merge": auto_merge, "strong": False, "review": review, "reason": "; ".join(reason_parts)})
-    return result, calcules
+    return result
 
 
 # ------------------------------------------------------------------
 # Comparaison
 # ------------------------------------------------------------------
 
-def _meme_decision_intra(ref, lazy):
-    return ref == lazy
+class _Compteur:
+    """Compte les appels a description_similarity pendant un bloc."""
+
+    def __init__(self):
+        self.n = 0
+        self._orig = C.description_similarity
+
+    def __enter__(self):
+        def compte(a, b):
+            self.n += 1
+            return self._orig(a, b)
+        C.description_similarity = compte
+        return self
+
+    def __exit__(self, *exc):
+        C.description_similarity = self._orig
 
 
-def _meme_decision_cross(ref, lazy):
-    if (ref is None) != (lazy is None):
+def _meme_decision_intra(ref, cand):
+    return ref == cand
+
+
+def _meme_decision_cross(ref, cand):
+    if (ref is None) != (cand is None):
         return False
     if ref is None:
         return True
     retenu_ref = ref["auto_merge"] or ref["review"]
-    retenu_lazy = lazy["auto_merge"] or lazy["review"]
-    if retenu_ref != retenu_lazy:
+    retenu_cand = cand["auto_merge"] or cand["review"]
+    if retenu_ref != retenu_cand:
         return False
     if not retenu_ref:
         return True  # resultat inerte : jamais persiste, jamais utilise
-    return ref == lazy
+    return ref == cand
+
+
+def _mesurer(nom, echantillon, f_ref, f_cand, total_pairs):
+    t0 = time.perf_counter()
+    with _Compteur() as c_ref:
+        ref = [f_ref(*e) for e in echantillon]
+    t_ref = time.perf_counter() - t0
+    t0 = time.perf_counter()
+    with _Compteur() as c_cand:
+        cand = [f_cand(*e) for e in echantillon]
+    t_cand = time.perf_counter() - t0
+    return ref, cand, t_ref, t_cand, c_ref.n, c_cand.n
 
 
 def main() -> int:
@@ -174,7 +181,8 @@ def main() -> int:
     rng = random.Random(args.graine)
 
     print("=" * 78)
-    print(f"CANONICAL V3.1.2 - SHADOW DE PERFORMANCE V{SHADOW_VERSION}  (aucune ecriture)")
+    print(f"CANONICAL - SHADOW DE PERFORMANCE ET D'EQUIVALENCE V{SHADOW_VERSION}  (aucune ecriture)")
+    print(f"reference : V3.1.2 (copie verbatim) | candidat : database/canonical.py V{C.SCHEMA_VERSION}")
     print("=" * 78)
     t0 = time.perf_counter()
     jobs = C.prepare_jobs(get_raw_jobs_for_dedup(active_only=True))
@@ -183,33 +191,20 @@ def main() -> int:
     # ---- PASS 1
     intra_pairs = list(C.build_intra_candidate_pairs(jobs))
     print(f"\nPASS 1 - paires intra-source : {len(intra_pairs)}")
-    echantillon = rng.sample(intra_pairs, min(args.paires, len(intra_pairs)))
-    t0 = time.perf_counter()
-    ref = [C.evaluate_intra_pair(jobs[a], jobs[b]) for a, b in echantillon]
-    t_ref = time.perf_counter() - t0
-    t0 = time.perf_counter()
-    lazy = [evaluate_intra_pair_lazy(jobs[a], jobs[b]) for a, b in echantillon]
-    t_lazy = time.perf_counter() - t0
-    calcules = sum(1 for _, c in lazy if c)
-    ecarts = sum(1 for r, (l, _) in zip(ref, lazy) if not _meme_decision_intra(r, l))
-    retenus = sum(1 for r in ref if r)
-    print(f"  echantillon        : {len(echantillon)} paires ; retenues (auto/strong/review) : {retenus}")
-    print(f"  descriptions calculees : actuel {len(echantillon)} | paresseux {calcules} ({100 * calcules / max(1, len(echantillon)):.1f} %)")
-    print(f"  temps              : actuel {t_ref:.1f} s | paresseux {t_lazy:.1f} s | gain x{t_ref / max(t_lazy, 1e-6):.1f}")
-    proj_ref = t_ref / len(echantillon) * len(intra_pairs)
-    proj_lazy = t_lazy / len(echantillon) * len(intra_pairs)
-    print(f"  projection passe 1 : actuel {proj_ref / 60:.0f} min | paresseux {proj_lazy / 60:.0f} min")
+    echantillon = [(jobs[a], jobs[b]) for a, b in rng.sample(intra_pairs, min(args.paires, len(intra_pairs)))]
+    ref, cand, t_ref, t_cand, d_ref, d_cand = _mesurer("intra", echantillon, _ref_evaluate_intra_pair, C.evaluate_intra_pair, len(intra_pairs))
+    ecarts = sum(1 for r, c in zip(ref, cand) if not _meme_decision_intra(r, c))
+    print(f"  echantillon        : {len(echantillon)} paires ; retenues (auto/strong/review) : {sum(1 for r in ref if r)}")
+    print(f"  descriptions calculees : reference {d_ref} | candidat {d_cand} ({100 * d_cand / max(1, d_ref):.1f} %)")
+    print(f"  temps              : reference {t_ref:.1f} s | candidat {t_cand:.1f} s | gain x{t_ref / max(t_cand, 1e-6):.1f}")
+    print(f"  projection passe 1 : reference {t_ref / len(echantillon) * len(intra_pairs) / 60:.0f} min | candidat {t_cand / len(echantillon) * len(intra_pairs) / 60:.0f} min")
     print(f"  decisions differentes : {ecarts}")
     ok1 = ecarts == 0
 
-    # ---- PASS 2 (atoms construits avec la variante paresseuse, identique par construction si ok1)
-    print("\nPASS 1 complet (paresseux) pour construire les atoms...")
+    # ---- PASS 2 (atoms construits avec le candidat ; identiques a la reference si ok1)
+    print("\nPASS 1 complet (candidat) pour construire les atoms...")
     t0 = time.perf_counter()
-    intra_results = []
-    for a, b in intra_pairs:
-        r, _ = evaluate_intra_pair_lazy(jobs[a], jobs[b])
-        if r:
-            intra_results.append(r)
+    intra_results = [r for a, b in intra_pairs for r in [C.evaluate_intra_pair(jobs[a], jobs[b])] if r]
     atoms, accepted = C.build_intra_atoms(jobs, intra_results)
     print(f"  {len(intra_results)} resultats, {len(accepted)} auto acceptees, {len(atoms)} atoms  ({(time.perf_counter() - t0) / 60:.1f} min)")
 
@@ -217,28 +212,18 @@ def main() -> int:
     counts = C.build_signature_counts(atoms)
     by_id = {a["atom_id"]: a for a in atoms}
     print(f"\nPASS 2 - paires cross-source : {len(cross_pairs)}")
-    echantillon = rng.sample(cross_pairs, min(args.paires, len(cross_pairs)))
-    t0 = time.perf_counter()
-    ref = [C.evaluate_cross_atoms(by_id[a], by_id[b], counts) for a, b in echantillon]
-    t_ref = time.perf_counter() - t0
-    t0 = time.perf_counter()
-    lazy = [evaluate_cross_atoms_lazy(by_id[a], by_id[b], counts) for a, b in echantillon]
-    t_lazy = time.perf_counter() - t0
-    calcules = sum(c for _, c in lazy)
-    total_raw_pairs = sum(len(by_id[a]["members"]) * len(by_id[b]["members"]) for a, b in echantillon)
-    ecarts = sum(1 for r, (l, _) in zip(ref, lazy) if not _meme_decision_cross(r, l))
-    retenus = sum(1 for r in ref if r and (r["auto_merge"] or r["review"]))
-    print(f"  echantillon        : {len(echantillon)} paires d'atoms ({total_raw_pairs} paires RAW) ; retenues (auto/review) : {retenus}")
-    print(f"  descriptions calculees : actuel {total_raw_pairs} | paresseux {calcules} ({100 * calcules / max(1, total_raw_pairs):.1f} %)")
-    print(f"  temps              : actuel {t_ref:.1f} s | paresseux {t_lazy:.1f} s | gain x{t_ref / max(t_lazy, 1e-6):.1f}")
-    proj_ref = t_ref / len(echantillon) * len(cross_pairs)
-    proj_lazy = t_lazy / len(echantillon) * len(cross_pairs)
-    print(f"  projection passe 2 : actuel {proj_ref / 60:.0f} min | paresseux {proj_lazy / 60:.0f} min")
+    echantillon = [(by_id[a], by_id[b], counts) for a, b in rng.sample(cross_pairs, min(args.paires, len(cross_pairs)))]
+    ref, cand, t_ref, t_cand, d_ref, d_cand = _mesurer("cross", echantillon, _ref_evaluate_cross_atoms, C.evaluate_cross_atoms, len(cross_pairs))
+    ecarts = sum(1 for r, c in zip(ref, cand) if not _meme_decision_cross(r, c))
+    print(f"  echantillon        : {len(echantillon)} paires d'atoms ; retenues (auto/review) : {sum(1 for r in ref if r and (r['auto_merge'] or r['review']))}")
+    print(f"  descriptions calculees : reference {d_ref} | candidat {d_cand} ({100 * d_cand / max(1, d_ref):.1f} %)")
+    print(f"  temps              : reference {t_ref:.1f} s | candidat {t_cand:.1f} s | gain x{t_ref / max(t_cand, 1e-6):.1f}")
+    print(f"  projection passe 2 : reference {t_ref / len(echantillon) * len(cross_pairs) / 60:.0f} min | candidat {t_cand / len(echantillon) * len(cross_pairs) / 60:.0f} min")
     print(f"  decisions differentes : {ecarts}")
     ok2 = ecarts == 0
 
     print("\n" + "=" * 78)
-    print("[OK] decisions identiques sur les deux passes" if ok1 and ok2 else "[FAIL] au moins une decision differe : ne pas integrer")
+    print("[OK] decisions identiques sur les deux passes" if ok1 and ok2 else "[FAIL] au moins une decision differe : ne pas integrer / revenir a V3.1.2")
     print("=" * 78)
     return 0 if ok1 and ok2 else 1
 

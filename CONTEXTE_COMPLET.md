@@ -42,7 +42,7 @@ ENRICHISSEMENT DES DESCRIPTIONS
     ↓
 MATCHER V5.1  (score de pertinence métier)
     ↓
-CANONICAL V3.1.2  (déduplication conservatrice)
+CANONICAL V3.1.3  (déduplication conservatrice ; V3.1.3 = même algorithme, description calculée paresseusement, validé 0 écart sur 26 000 paires)
     ↓
 APPLICATION GATE  (éligibilité : diplôme, langue, expérience, credentials)
     ↓
@@ -73,7 +73,7 @@ Elles priment sur toute considération technique.
 5. **Les RAW ne sont jamais supprimés**, même pour « nettoyer ».
 6. **Déduplication conservatrice** : mieux vaut deux doublons qu'une fusion à tort.
 7. **Pas de contournement de protection technique.** Voir §7.
-8. **Composants frozen sans défaut prouvé** : Matcher V5.1, Canonical V3.1.2,
+8. **Composants frozen sans défaut prouvé** : Matcher V5.1, Canonical V3.1.3 (V3.1.2 + calcul paresseux, 17/09/2026),
    Database V2.1, et `matching/application_gate.py` V1.2 conservé intact pour
    permettre un rollback.
 
@@ -477,7 +477,7 @@ Fichiers Python            ~77 900 lignes
 | MAIN | 10.5 |
 | Daily Run | 1.2.0 |
 | Matcher | 5.1 (frozen) |
-| Canonical | 3.1.2 (frozen) |
+| Canonical | 3.1.3 (frozen ; V3.1.2 + calcul paresseux validé le 17/09/2026) |
 | Application Gate | 1.3.2 en production · 1.3.5 disponible |
 | Application Queue | 1.2 |
 | Job Refresh | 1.2 |
