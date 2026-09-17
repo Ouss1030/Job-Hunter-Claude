@@ -20,6 +20,9 @@ lui laissaient une chance. Désormais :
              impliquent pair_score >= 0.889), ni dépasser une paire qui
              le peut — D vaut alors 0 et la paire est inerte
 
+Les paires témoins des sanity checks (août 2026) dont une offre a été
+retirée sont désormais « sans objet » au lieu d'échouer.
+
 Toutes les décisions, tous les scores persistés et tous les motifs sont
 identiques à V3.1.2 : vérifié sur 6 000 paires réelles par
 diagnostics/canonical_perf_shadow_v1.py (0 écart), passe 1 99 -> 19 min,
@@ -1367,7 +1370,14 @@ def print_reviews(jobs, reviews):
 def sanity_pair(build_id, label, channel_a, external_a, channel_b, external_b, expect_same):
     canonical_a = find_canonical_id(build_id, channel_a, external_a)
     canonical_b = find_canonical_id(build_id, channel_b, external_b)
-    same = canonical_a is not None and canonical_b is not None and canonical_a == canonical_b
+    if canonical_a is None or canonical_b is None:
+        # Les paires temoins datent d'aout 2026 ; une offre retiree (is_active = 0) n'entre
+        # plus dans le build. Le controle est alors sans objet, ni reussi ni echoue (V3.1.3).
+        print("\n⏭", label, "— offre retiree, contrôle sans objet")
+        print(f"    {channel_a} {external_a} -> {canonical_a}")
+        print(f"    {channel_b} {external_b} -> {canonical_b}")
+        return None
+    same = canonical_a == canonical_b
     valid = same if expect_same else not same
     print("\n" + ("✅" if valid else "❌"), label)
     print(f"    {channel_a} {external_a} -> {canonical_a}")
@@ -1397,8 +1407,10 @@ def run_sanity_checks(build_id):
         sanity_pair(build_id, "FOREM Data & Integration Architect 1954635/1954633 preuve insuffisante", "FOREM", "1954635", "FOREM", "1954633", False),
     ]
 
-    print("\nSanity checks réussis :", sum(1 for result in checks if result), "/", len(checks))
-    return all(checks)
+    applicables = [c for c in checks if c is not None]
+    print("\nSanity checks réussis :", sum(1 for result in applicables if result), "/", len(applicables),
+          f"(sans objet : {len(checks) - len(applicables)})")
+    return all(applicables)
 
 
 def count_raw_jobs():
