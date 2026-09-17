@@ -54,7 +54,7 @@ from database.models import JobOffer
 from sources.location_belgium import detect_belgium
 
 
-SUCCESSFACTORS_CONNECTOR_VERSION = "1.1"
+SUCCESSFACTORS_CONNECTOR_VERSION = "1.2"
 
 REQUEST_TIMEOUT = 20
 MAX_RETRIES = 2
@@ -134,6 +134,72 @@ def fetch_sitemap_urls(host: str):
     if not urls:
         return [], "sitemap sans URL d'offre"
     return urls, None
+
+
+# V1.2 (17/09/2026) — sans sitemap exploitable (jobs.ulb.be, jobs.elia.be,
+# careers.novonordisk.com, jobs.barry-callebaut.com : sitemap vide ou sans
+# /job/), la page de recherche du site rend la liste en HTML :
+#     https://{host}/search/?q=&startrow=0   (25 ou 100 lignes par page)
+# chaque ligne = lien /job/<Ville-Titre>/<id>/ + colonne lieu. On ne garde
+# que les lignes dont le lieu est belge, avant de charger les pages.
+SEARCH_MAX_PAGES = 40
+_RE_LIGNE = re.compile(r'<tr[^>]*class="[^"]*data-row[^"]*"[^>]*>(.*?)</tr>', re.S | re.I)
+_RE_LIEN_JOB = re.compile(r'href="(/job/[^"]+)"', re.I)
+_RE_LIEU = re.compile(r'class="[^"]*jobLocation[^"]*"[^>]*>(.*?)</', re.S | re.I)
+
+
+def fetch_search_urls(host: str, max_pages: int = SEARCH_MAX_PAGES):
+    """Liste HTML /search/ : renvoie ([(url, lieu)], erreur)."""
+    import html as _html
+    lignes, vus, startrow, pas = [], set(), 0, None
+    for _ in range(max_pages):
+        url = f"https://{host}/search/?q=&startrow={startrow}"
+        try:
+            r = SESSION.get(url, timeout=REQUEST_TIMEOUT)
+        except Exception as error:
+            return lignes, f"réseau : {error}"
+        if r.status_code != 200:
+            break
+        rangs = _RE_LIGNE.findall(r.text)
+        if not rangs:
+            break
+        nouveaux = 0
+        for rang in rangs:
+            m = _RE_LIEN_JOB.search(rang)
+            if not m:
+                continue
+            u = f"https://{host}" + _html.unescape(m.group(1))
+            if u in vus:
+                continue
+            vus.add(u)
+            nouveaux += 1
+            ml = _RE_LIEU.search(rang)
+            lignes.append((u, _clean(_html.unescape(re.sub(r"<[^>]+>", " ", ml.group(1)))) if ml else ""))
+        if not nouveaux:
+            break
+        pas = pas or len(rangs)
+        startrow += pas
+        time.sleep(DELAY_BETWEEN_JOBS)
+    if not lignes:
+        return [], "page de recherche sans offre"
+    return lignes, None
+
+
+def lister_offres(host: str):
+    """
+    (candidates belges, total liste, erreur) : sitemap d'abord (V1.1), sinon
+    la page de recherche HTML (V1.2). Sur la liste HTML, le lieu de la ligne
+    remplace le pre-filtre sur le slug.
+    """
+    urls, erreur = fetch_sitemap_urls(host)
+    if urls:
+        return [u for u in urls if looks_belgian_url(u)], len(urls), None
+    lignes, erreur2 = fetch_search_urls(host)
+    if not lignes:
+        return [], 0, erreur2 or erreur
+    candidates = [u for u, lieu in lignes
+                  if detect_belgium(lieu) in ("BE_CONFIRMED", "BE_LIKELY") or (not lieu and looks_belgian_url(u))]
+    return candidates, len(lignes), None
 
 
 def slug_from_url(url: str) -> str:
@@ -286,9 +352,8 @@ def collect_successfactors_jobs(companies=None, verbose=True):
 
     for company in companies:
         host = company["host"]
-        urls, erreur = fetch_sitemap_urls(host)
-
-        candidates = [u for u in urls if looks_belgian_url(u)]
+        candidates, total_liste, erreur = lister_offres(host)
+        urls = range(total_liste)  # seul len() est utilise dans le rapport
         retenues, hors_be, echecs = 0, 0, 0
         # V1.1 — plafond par employeur : "max_jobs" dans la config, sinon
         # 300 pour un hote .be (il ne publie que pour la Belgique : Infrabel,

@@ -109,7 +109,13 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
                 entrees, erreur2 = urls_offres(identifiant, session, max_sitemaps=8)
                 urls = [u for u, _ in entrees if "/job/" in u]
                 erreur = None if urls else (erreur2 or erreur)
-            r.update(ok=bool(urls), total=len(urls), be=None, erreur=erreur)
+            be = None
+            if not urls and connecteur == "SUCCESSFACTORS_ATS":
+                # V1.2 : la page de recherche HTML (jobs.eliagroup.eu : 374 offres, 165 belges)
+                from sources.successfactors_ats_v1 import lister_offres
+                candidats, total, erreur3 = lister_offres(identifiant)
+                urls, be, erreur = list(range(total)), len(candidats), (None if total else erreur3 or erreur)
+            r.update(ok=bool(urls), total=len(urls), be=be, erreur=erreur)
         elif connecteur in ("LEVER", "ASHBY", "WORKABLE", "PERSONIO"):
             from sources.ats_public_v2 import COLLECTEURS
             kw = {"max_details": 0} if connecteur == "WORKABLE" else {}

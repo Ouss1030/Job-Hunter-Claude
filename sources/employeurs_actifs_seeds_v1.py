@@ -109,12 +109,23 @@ def main() -> int:
     p.add_argument("--limite", type=int, default=None)
     p.add_argument("--workers", type=int, default=4)
     p.add_argument("--decouvrir", action="store_true")
+    p.add_argument("--depuis-fichier", action="store_true",
+                   help="reprendre les graines deja devinees (config/discovery_seeds_employeurs_actifs.json) sans redeviner")
     args = p.parse_args()
     print("=" * 76)
     print(f"EMPLOYEURS ACTIFS FOREM/ACTIRIS -> GRAINES V{EMPLOYEURS_ACTIFS_VERSION}")
     print("=" * 76)
-    candidats = graines(args.min_offres, workers=args.workers, limite=args.limite)
-    chemin = ecrire(candidats)
+    if args.depuis_fichier and SORTIE.exists():
+        from sources.bce_seeds_v1 import domaines_deja_vus
+        deja = domaines_deja_vus()
+        data = json.loads(SORTIE.read_text(encoding="utf-8"))
+        candidats = [{**c, "discovered_by": "employeur-actif"} for c in data["groups"]["employeurs_actifs"]
+                     if not any(c["domaine"].endswith(k) for k in deja)]
+        print(f"  graines reprises du fichier : {len(candidats)} (deja vus ecartes)")
+        chemin = SORTIE
+    else:
+        candidats = graines(args.min_offres, workers=args.workers, limite=args.limite)
+        chemin = ecrire(candidats)
     print(f"\n{len(candidats)} graines -> {chemin}")
     if args.decouvrir and candidats:
         from sources.source_discovery_v1 import decouvrir

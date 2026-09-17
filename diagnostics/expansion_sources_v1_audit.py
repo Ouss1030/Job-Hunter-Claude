@@ -409,6 +409,23 @@ def main():
                        and an.candidats_domaines("Acme Labo SA")[0] == "acmelabo.be",
                        str([an.deviner_domaine("Acme Labo", s), an.candidats_domaines("Acme Labo SA")[:3]])))
 
+    # SuccessFactors V1.2 (17/09/2026) : sans sitemap, la page de recherche HTML, lieu par ligne
+    from sources import successfactors_ats_v1 as sf
+    ligne = ('<tr class="data-row"><td><a class="jobTitle-link" href="/job/{slug}/{id}/">{t}</a></td>'
+             '<td><span class="jobLocation">{loc}</span></td></tr>')
+    page0 = "<table>" + ligne.format(slug="Gembloux-Field-Operator-5032", id=11, t="Field Operator", loc="Gembloux, BE, 5032") \
+            + ligne.format(slug="Lodz-Planner", id=12, t="Planner", loc="Lodz, PL") + "</table>"
+    page1 = "<table>" + ligne.format(slug="Brussels-Analyst-1000", id=13, t="Analyst", loc="Brussels, Belgium") + "</table>"
+    s = _Session({"https://acme.sf.test/sitemap.xml": _Reponse("<urlset></urlset>", 200),
+                  "https://acme.sf.test/search/?q=&startrow=0": _Reponse(page0, 200),
+                  "https://acme.sf.test/search/?q=&startrow=2": _Reponse(page1, 200),
+                  "https://acme.sf.test/search/?q=&startrow=3": _Reponse("<table></table>", 200)})
+    with mock.patch.object(sf, "SESSION", s), mock.patch.object(sf, "DELAY_BETWEEN_JOBS", 0):
+        cands, total, err = sf.lister_offres("acme.sf.test")
+    tests.append(check("SuccessFactors V1.2 : sitemap vide -> liste /search/ paginee (3 lignes), 2 belges gardees par le lieu, Lodz ecartee",
+                       total == 3 and len(cands) == 2 and err is None and all("/job/" in u for u in cands)
+                       and not any("Lodz" in u for u in cands), str((cands, total, err))))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl

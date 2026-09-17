@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T19:15:47+02:00",
+ "updated_at": "2026-09-17T21:12:44+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -397,6 +397,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://jobs.bakkerijaernoudt.be",
+   "label": "Bakkerij Aernoudt",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:50:57+02:00",
+   "jobs_total": 107,
+   "jobs_be": 3,
+   "discovered_by": "bce:10720",
+   "career_url": "https://jobs.bakkerijaernoudt.be",
+   "notes": "",
+   "first_seen": "2026-09-17T18:50:57+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://bambormet.be/nl/vacatures",
    "label": "Bam Bormet",
    "enabled": true,
@@ -453,20 +467,6 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://jobs.bakkerijaernoudt.be",
-   "label": "Bakkerij Aernoudt",
-   "enabled": true,
-   "verified_at": "2026-09-17T18:50:57+02:00",
-   "jobs_total": 107,
-   "jobs_be": 3,
-   "discovered_by": "bce:10720",
-   "career_url": "https://jobs.bakkerijaernoudt.be",
-   "notes": "",
-   "first_seen": "2026-09-17T18:50:57+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
    "identifier": "https://www.bwksierbeton.be/fr/jobs",
    "label": "BWK Sierbeton",
    "enabled": true,
@@ -505,6 +505,20 @@
    "career_url": "https://www.cegeka.com/en/be/jobs/our-stories",
    "notes": "cegeka.com/en/be/jobs : liste d'offres rendue par HubSpot/JavaScript, seules les pages 'about' et 'areas of expertise' sont lisibles. Desactive le 17/09/2026.",
    "first_seen": "2026-09-17T01:08:29+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.chantdeole.be/jobs",
+   "label": "Chant d'Eole",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:56:20+02:00",
+   "jobs_total": 13,
+   "jobs_be": 3,
+   "discovered_by": "bce:11020",
+   "career_url": "https://www.chantdeole.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T18:56:20+02:00"
   },
   {
    "ats": "HTML",
@@ -635,30 +649,16 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://www.chantdeole.be/jobs",
-   "label": "Chant d'Eole",
+   "identifier": "https://dsunits.be/vacatures",
+   "label": "DS UNITS",
    "enabled": true,
-   "verified_at": "2026-09-17T18:56:20+02:00",
-   "jobs_total": 13,
+   "verified_at": "2026-09-17T21:12:24+02:00",
+   "jobs_total": 6,
    "jobs_be": 3,
-   "discovered_by": "bce:11020",
-   "career_url": "https://www.chantdeole.be/jobs",
+   "discovered_by": "employeur-actif",
+   "career_url": "https://dsunits.be/vacatures",
    "notes": "",
-   "first_seen": "2026-09-17T18:56:20+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
-   "identifier": "https://www.elisalee.be/",
-   "label": "Elisa Lee",
-   "enabled": true,
-   "verified_at": "2026-09-17T19:03:19+02:00",
-   "jobs_total": 4,
-   "jobs_be": 2,
-   "discovered_by": "bce:23150",
-   "career_url": "https://www.elisalee.be/",
-   "notes": "",
-   "first_seen": "2026-09-17T19:03:19+02:00"
+   "first_seen": "2026-09-17T21:12:24+02:00"
   },
   {
    "ats": "HTML",
@@ -673,6 +673,20 @@
    "career_url": "https://be.elis.com/fr",
    "notes": "",
    "first_seen": "2026-09-17T19:10:31+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.elisalee.be/",
+   "label": "Elisa Lee",
+   "enabled": true,
+   "verified_at": "2026-09-17T19:03:19+02:00",
+   "jobs_total": 4,
+   "jobs_be": 2,
+   "discovered_by": "bce:23150",
+   "career_url": "https://www.elisalee.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T19:03:19+02:00"
   },
   {
    "ats": "HTML",
@@ -875,20 +889,6 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://www.inoxytech.be/fr",
-   "label": "Inoxytech",
-   "enabled": false,
-   "verified_at": "2026-09-17T19:14:48+02:00",
-   "jobs_total": 4,
-   "jobs_be": 0,
-   "discovered_by": "bce:25530",
-   "career_url": "https://www.inoxytech.be/fr",
-   "notes": "inoxytech.be : pages de rubriques (Construction, Horeca). Desactive le 17/09/2026.",
-   "first_seen": "2026-09-17T19:14:48+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
    "identifier": "https://jobs.idewe.be/nl",
    "label": "IDEWE - EXTERNE DIENST VOOR PREVENTIE EN BESCHERMING OP HET",
    "enabled": true,
@@ -913,6 +913,20 @@
    "career_url": "https://careers.ing.com/en/search-jobs",
    "notes": "",
    "first_seen": "2026-09-17T01:08:15+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.inoxytech.be/fr",
+   "label": "Inoxytech",
+   "enabled": false,
+   "verified_at": "2026-09-17T19:14:48+02:00",
+   "jobs_total": 4,
+   "jobs_be": 0,
+   "discovered_by": "bce:25530",
+   "career_url": "https://www.inoxytech.be/fr",
+   "notes": "inoxytech.be : pages de rubriques (Construction, Horeca). Desactive le 17/09/2026.",
+   "first_seen": "2026-09-17T19:14:48+02:00"
   },
   {
    "ats": "HTML",
@@ -984,6 +998,20 @@
    "career_url": "https://www.peruweld.be/jobs/",
    "notes": "",
    "first_seen": "2026-09-17T19:11:43+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.pleegzorg.be/vacatures",
+   "label": "PLEEGZORG VLAAMS - BRABANT EN BRUSSEL",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:10:09+02:00",
+   "jobs_total": 14,
+   "jobs_be": 2,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.pleegzorg.be/vacatures",
+   "notes": "",
+   "first_seen": "2026-09-17T21:10:09+02:00"
   },
   {
    "ats": "HTML",
@@ -1087,6 +1115,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://sportoase.be/nl/jobs/",
+   "label": "SPORTOASE PHILIPSSITE LEUVEN",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:10:53+02:00",
+   "jobs_total": 8,
+   "jobs_be": 2,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://sportoase.be/nl/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:10:53+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://talents.wallonie.be/emploisdisponibles",
    "label": "SPW - Service public de Wallonie",
    "enabled": true,
@@ -1160,11 +1202,11 @@
    "ats": "HTML",
    "connector": "HTML_SITES",
    "identifier": "https://www.tempo-team.be/kandidaten/vacatures/",
-   "label": "Tempo-Team",
+   "label": "TEMPO-TEAM",
    "enabled": false,
-   "verified_at": "2026-09-17T19:08:26+02:00",
+   "verified_at": "2026-09-17T21:08:18+02:00",
    "jobs_total": 364,
-   "jobs_be": 0,
+   "jobs_be": 93,
    "discovered_by": "employeur-actif",
    "career_url": "https://www.tempo-team.be/kandidaten/vacatures/",
    "notes": "tempo-team.be : pages de rubriques (s-aankoop-verkoop...), offres rendues en JavaScript ; Tempo-Team publie 1 085 offres sur le Forem/Actiris. Desactive le 17/09/2026.",
@@ -1310,6 +1352,20 @@
    "career_url": "https://wolfsonrecruitment.com/vacatures-wolfson/",
    "notes": "",
    "first_seen": "2026-09-17T19:11:55+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://zonneliedvzw.be/",
+   "label": "ZONNELIED",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:11:39+02:00",
+   "jobs_total": 6,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://zonneliedvzw.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:11:39+02:00"
   },
   {
    "ats": "ICIMS",
@@ -1730,6 +1786,20 @@
    "career_url": "https://corbit.be/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:54:27+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "crombe.be",
+   "label": "CROMBE - CROMBE SA",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:11:45+02:00",
+   "jobs_total": 2,
+   "jobs_be": 2,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://crombe.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:11:45+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2304,6 +2374,20 @@
    "career_url": "https://www.randstad.be/werknemers/jobs/",
    "notes": "",
    "first_seen": "2026-09-15T15:49:45+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "jobs.sarawak.be",
+   "label": "SARAWAK",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:10:40+02:00",
+   "jobs_total": 27,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://jobs.sarawak.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:10:40+02:00"
   },
   {
    "ats": "JSONLD",
@@ -3336,6 +3420,20 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.arvesta.eu",
+   "label": "ARVESTA",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:11:23+02:00",
+   "jobs_total": 70,
+   "jobs_be": null,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://jobs.arvesta.eu/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:11:23+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "careers.astellas.com",
    "label": "Astellas",
    "enabled": true,
@@ -3574,6 +3672,20 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.eliagroup.eu",
+   "label": "Elia Group",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:12:44+02:00",
+   "jobs_total": 374,
+   "jobs_be": 165,
+   "discovered_by": "etape3:portails",
+   "career_url": "https://jobs.eliagroup.eu/elia",
+   "notes": "Sitemap vide ; liste HTML /search/ (SF V1.2). 165 offres belges le 17/09/2026.",
+   "first_seen": "2026-09-17T21:12:44+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "corporate.engie.be",
    "label": "Engie",
    "enabled": true,
@@ -3603,14 +3715,14 @@
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
    "identifier": "jobs.exxonmobil.com",
-   "label": "Exxonmobil",
+   "label": "ExxonMobil",
    "enabled": true,
-   "verified_at": "2026-09-15T16:11:48+02:00",
-   "jobs_total": 638,
-   "jobs_be": null,
-   "discovered_by": "seed:chimie_industrie_agro",
+   "verified_at": "2026-09-17T21:12:44+02:00",
+   "jobs_total": 628,
+   "jobs_be": 17,
+   "discovered_by": "etape3:portails",
    "career_url": "https://jobs.exxonmobil.com/",
-   "notes": "",
+   "notes": "Sitemap sans /job/ ; liste HTML /search/ (SF V1.2). Raffinerie d'Anvers, Machelen.",
    "first_seen": "2026-09-15T16:11:48+02:00"
   },
   {
@@ -3794,6 +3906,20 @@
    "career_url": "https://careers.multipharma.be/",
    "notes": "",
    "first_seen": "2026-09-15T15:57:14+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.novonordisk.com",
+   "label": "Novo Nordisk",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:12:44+02:00",
+   "jobs_total": 382,
+   "jobs_be": 0,
+   "discovered_by": "etape3:portails",
+   "career_url": "https://careers.novonordisk.com/",
+   "notes": "Liste HTML /search/ (SF V1.2) ; 0 offre belge le 17/09/2026, garde pour les suivantes.",
+   "first_seen": "2026-09-17T21:12:44+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
