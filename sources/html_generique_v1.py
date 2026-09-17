@@ -89,6 +89,7 @@ _TITRES_LISTE = [
     r"^\s*(?:all|alle|tous|toutes)\s+(?:jobs|vacatures|emplois|offres)\b",  # « All jobs everywhere »
     r"\b(?:jobs|vacatures|emplois|offres)\s*(?:&|et|en|and|/)\s*(?:jobs|vacatures|emplois|offres)\b",  # « Jobs & vacatures »
     r"\b(?:sollicitatieproces|processus de (?:candidature|recrutement)|recruitment process|application process)\b",
+    r"(?<![a-z])(?:candidature spontan[ée]e|spontane sollicitatie|spontaneous application|open sollicitatie|unsolicited application)(?![a-z])",
     r"^\s*(?:accueil|home|contact|actualit|news|login|connexion)\b",
     r"^\s*(?:faq|charte|atouts|procédure|procedure|résultats? de recherche|zoekresultaten|search results|"
     r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"
