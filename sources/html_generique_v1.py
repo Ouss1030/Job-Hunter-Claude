@@ -86,6 +86,7 @@ _TITRES_LISTE = [
     r"^\s*(?:jobs?|vacatures?|vacancies|carri[eè]res?|emplois?|offres?\s+d['’]emploi|nos offres|travailler chez|werken bij|join us|rejoignez)\b",
     r"\b(?:emplois?|jobs?)\s+(?:pour|voor|in|à|a|en)\b",
     r"\b(?:jobs|emplois|vacatures|vacancies|offres)\s*$",          # « Legal Jobs » : une rubrique
+    r"^\s*(?:all|alle|tous|toutes)\s+(?:jobs|vacatures|emplois|offres)\b",  # « All jobs everywhere »
     r"^\s*(?:accueil|home|contact|actualit|news|login|connexion)\b",
     r"^\s*(?:faq|charte|atouts|procédure|procedure|résultats? de recherche|zoekresultaten|search results|"
     r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"

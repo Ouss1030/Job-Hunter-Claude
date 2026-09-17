@@ -257,13 +257,15 @@
   },
   "BULLHORN": {
    "url_patterns": [
-    "bullhorn",
-    "bullhornstaffing\\.com"
+    "bullhornstaffing\\.com",
+    "wp-content/plugins/bullhorn",
+    "bullhorn-career-portal"
    ],
-   "identifier": "https?://(?P<identifiant>[a-z0-9.-]+)/",
+   "identifier": "https?://(?P<identifiant>[a-z0-9.-]+\\.bullhornstaffing\\.com)",
    "connector": null,
    "config": null,
-   "strategy": "HTML"
+   "strategy": "HTML",
+   "notes": "Le plus souvent un plugin WordPress rendu par le serveur : le repli HTML_SITES lit la page /vacatures ou /jobs (Bakker, Experis). Pas de route publique commune : pas de connecteur."
   },
   "JOBVITE": {
    "url_patterns": [
