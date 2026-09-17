@@ -65,6 +65,28 @@ Recampagne sur les 46 graines francophones sans voie : 10 enregistrées (Letec �
 
 **Jobtoolz** (`sources/jobtoolz_v1.py`) : ATS belge très répandu chez les PME, sans sitemap ni flux — la liste complète est embarquée dans la page carrière (`window.jobComponent([...])`), le texte complet dans chaque page d'offre. Six sites enregistrés (GIM, Etherna, Govi, Smet Group, Group F, Westvlees). Chaque nouvelle tranche BCE en trouvera d'autres : c'est l'ATS le plus fréquent parmi les échecs de validation des campagnes précédentes.
 
+## Étape 10 — journée du 17/09/2026 : secteur public, fédérations, employeurs actifs, BCE tranche 2, et le run
+
+Plan validé par l'utilisateur, dans cet ordre : run complet → BCE 2a + employeurs actifs → BCE 2b → portails qui résistent → push.
+
+| Chantier | Résultat |
+|---|---|
+| Secteur public | `werkenvoor.be` = `travaillerpour.be`, déjà couvert (85/89) ; **SPW** (`talents.wallonie.be`) ajouté, 11 offres de 14–19 k caractères ; Vlaanderen, ULB, UCLouvain : JavaScript |
+| Reprise des 89 échecs précédents | 21 enregistrés : les sites « Bullhorn » sont des plugins WordPress lisibles en HTML (**Manpower 21, Select HR 22, Verpoucke 20, Square City 13, Experis 10**), Vivalia (CVWarehouse 51), Envalior, Stad Gent, BDO… |
+| Fédérations (`sources/annuaires_seeds_v1.py`) | pharma.be 76 domaines directs, BioWin 162 noms → domaine deviné (`deviner_domaine`) ; 23 sources, **Janssen 107 offres belges**, Air Liquide 13, Pierre Fabre 12 |
+| Employeurs actifs (`sources/employeurs_actifs_seeds_v1.py`) | 911 employeurs à ≥ 3 offres Forem/Actiris, site deviné, 339 nouveaux → 16 sources (Arvesta, Sportoase, Zonnelied, Skills…) |
+| BCE tranche 2a (NACE 10/11/19/22–27/35/38/46.46/71.1, personnes morales) | 3 048 domaines → **~75 sources** (Abiomis 123, Bakkerij Aernoudt 107, Wolfson 29, Elmos 27, Maxicon, Nexus Venturi, Human37…) |
+| BCE tranche 2b (NACE 62/63) | 3 358 domaines, campagne du 17/09 au soir — résultat à trier |
+| Portails qui résistent | **SuccessFactors V1.2** : sans sitemap, la page `/search/` HTML → **Elia Group 165 offres belges**, ExxonMobil 17 ; TalentFinder et Talentsoft : JavaScript, hors de portée |
+| Canonical V3.1.3 | calcul paresseux de la description, 0 écart sur 26 000 paires ; build **2 h 18 → 17 min** |
+| HTML V1.2 | le tri par collecte réelle (10 % de faux sur ~100 sites vérifiés à la main) est dans le moteur : postuler/profil obligatoires, titre ≥ 5 caractères, sonde de 5 pages avec 2 offres distinctes |
+
+**Run du 17/09 (`--no-handoff`) : 2 h 30 au lieu de 4 h 16.** Collecte 42 min sur 332 employeurs actifs (JSON-LD 4 614, SuccessFactors 1 638, HTML 853, Workday 491, CVWarehouse 249, iCIMS 244, Teamtailor 109, Jobtoolz 80), build 17 min, enrichissement 1 496/1 500. Base : **69 203 offres actives, 66 884 avec texte** (la veille 66 055 / 63 000). Pool final 152, delta 10 nouvelles dont 7 APPLY_NOW — le pool bouge peu (le profil filtre), l'assiette pour les études de termes grandit.
+
+Registre au soir du 17/09 : **405 employeurs, 392 actifs, 17 ATS** (208 le matin).
+
+Reste à faire : trier les sites HTML de 2b (le moteur V1.2 le fera seul pour les campagnes suivantes), étape 6 (clés Adzuna/Careerjet, API VDAB — action utilisateur), et l'étude de termes sur l'historique.
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.

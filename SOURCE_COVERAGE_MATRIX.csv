@@ -175,7 +175,7 @@ PHENOM_ATS;ATS;OUI;INCONNU (jamais collectee);registry_ats_v1;0 offres BE valide
 VDAB;service public;OUI;DESACTIVEE (INCONNU (jamais collectee));registry_ats_v1;-;"pages JS ; API interdite par robots ; desactive";;;;
 LEVER;ATS;OUI;"VALIDE (decouverte) ; 1 employeurs";registry_expansion_v1;"3 actives / 3 vues ; 3 avec description";aucune offre au dernier run;;;;
 ASHBY;ATS;OUI;"VALIDE (decouverte) ; 3 employeurs";registry_expansion_v1;"1 actives / 1 vues ; 1 avec description";aucune offre au dernier run;;;;
-WORKABLE;ATS;OUI;"VALIDE (decouverte) ; 6 employeurs";registry_expansion_v1;"33 actives / 33 vues ; 33 avec description";aucune offre au dernier run;;;;
+WORKABLE;ATS;OUI;"VALIDE (decouverte) ; 7 employeurs";registry_expansion_v1;"33 actives / 33 vues ; 33 avec description";aucune offre au dernier run;;;;
 PERSONIO;ATS;OUI;"VALIDE (decouverte) ; 13 employeurs";registry_expansion_v1;"25 actives / 25 vues ; 22 avec description";aucune offre au dernier run;;;;
 ORACLE_CLOUD;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"146 actives / 150 vues ; 149 avec description";aucune offre au dernier run;;;;
 CVWAREHOUSE;employeur direct;OUI;NON (rien au dernier run);registry_expansion_v1;"249 actives / 252 vues ; 243 avec description";aucune offre au dernier run;;;;
@@ -208,7 +208,7 @@ ATS TALENTSQUARE;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : IPG, 
 ATS ICIMS;ATS sans connecteur;DETECTE;NON;-;4 employeurs detectes : Jandenul, Pepsico, Bdo, Axa;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS WELCOME_TO_THE_JUNGLE;ATS sans connecteur;DETECTE;NON;-;3 employeurs detectes : European Medical Solutions, Trustbuilder Corporation, Trustbuilder Corporation;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS JOBVITE;ATS sans connecteur;DETECTE;NON;-;3 employeurs detectes : ABSOLUTE@WORK, Lhh, Lhh;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;2;ecrire le connecteur generique, brancher via ats_signatures.json
+ATS HOMERUN;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Voxdale Belgium, Sollit Belgium;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS BREEZY;ATS sans connecteur;DETECTE;NON;-;2 employeurs detectes : Mcs, Mcs;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
-ATS HOMERUN;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Voxdale Belgium;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS TALEO;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Uzleuven;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
 ATS BRASSRING;ATS sans connecteur;DETECTE;NON;-;1 employeurs detectes : Thermofisher;connecteur a ecrire;un connecteur = tous ces employeurs;endpoint JSON interne ou sitemap + HTML;3;ecrire le connecteur generique, brancher via ats_signatures.json
