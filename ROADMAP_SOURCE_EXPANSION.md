@@ -87,6 +87,16 @@ Registre au soir du 17/09 : **405 employeurs, 392 actifs, 17 ATS** (208 le matin
 
 Reste à faire : trier les sites HTML de 2b (le moteur V1.2 le fera seul pour les campagnes suivantes), étape 6 (clés Adzuna/Careerjet, API VDAB — action utilisateur), et l'étude de termes sur l'historique.
 
+## Étape 11 — nuit du 17 au 18/09/2026 : ce que les sources apportent au pool, et deux verrous levés
+
+| Constat | Correction |
+|---|---|
+| 8 200 offres scorées par le gate, dont 2 400 venues des sites employeurs : **0 APPLY, 0 STRETCH**. Deux causes : le profil filtre (médiane du score 25–27 sur JSON-LD / SuccessFactors contre 40 sur le Forem — normal), et **un défaut** : Workday, SuccessFactors, Recruitee, Phenom, Greenhouse, SmartRecruiters lisaient la fiche complète sans le déclarer → « provisoire » pour le Matcher → plafonné à VERIFY. 29 offres à score ≥ 65 (Sartorius GMP Technician 100, UCB CMC Data Steward 100, J&J QC Analyst 96, Abbott 96, ExxonMobil, Agfa…) finissaient « à vérifier ». | `ats_public_v2.declarer_detail()` dans les six connecteurs ; la base reprend les indicateurs à la collecte suivante. |
+| Gate : la couche V1.3.3 (frontières de mots) dormait depuis août (replay sur 575 offres : 0 changement). Sur 8 197 offres : 48 changements, dont 32 faux rejets « néerlandais B2 » (« bilingue » seul valait néerlandais ; « OR Dutch », « Dutch is a plus » valaient exigence ; « VIE-Regulated » plus reconnu). | Corrigée puis **branchée** (1.3.5) : 4 récupérées à raison (master data, sous-chaîne « 10 ans »), 15 durcies à raison, 9 stages APPLY → VERIFY. Audits 50/50, 29/29, 12/12. |
+| L'étude de termes existait (`statistiques/conseils.py`) sans sortie lisible. | `python -m statistiques.etude_termes` : TXT + CSV sur toute la base (78 552 offres, 2 467 ciblées). Labo : CAPA 16 %, échantillonnage 15 %, métrologie 12 % demandés et absents de `candidate_truth` — à confirmer par le candidat. Data : SQL 37 %, Python 26 %, Power BI 22 %, Azure 21 %. |
+| HTML V1.2 : le tri par collecte réelle est dans le moteur (postuler/profil obligatoires, titre ≥ 5, sonde de 5 pages, 2 offres distinctes). | Les campagnes suivantes n'ont plus besoin de tri manuel. |
+| BCE tranche 2b (NACE 62/63, 3 358 domaines, personnes morales) : ~50 sources, surtout des ESN — Infocura, Faktion, Ontoforce, Timefold, Nviso 29, Cipal Schaubroeck 13. | **joobs.be** repéré : agrégateur de 38 696 offres qui republie **VDAB** (24 liens sortants sur 8 pages) et le Forem, avec JSON-LD complet. C'est la voie vers la Flandre que VDAB interdit en direct ; désactivé pour l'instant (38 k pages à lire, profil francophone), à rouvrir si la Flandre devient une cible. |
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.

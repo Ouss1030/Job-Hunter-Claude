@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-18T01:07:54+02:00",
+ "updated_at": "2026-09-18T01:11:17+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -1094,6 +1094,20 @@
    "career_url": "https://www.manpower.be/",
    "notes": "",
    "first_seen": "2026-09-17T17:55:55+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://geotracer.be/FR/home/",
+   "label": "Geotracer",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:11:17+02:00",
+   "jobs_total": 3,
+   "jobs_be": 2,
+   "discovered_by": "bce:63910",
+   "career_url": "https://geotracer.be/FR/home/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:11:17+02:00"
   },
   {
    "ats": "HTML",
@@ -3282,7 +3296,7 @@
    "jobs_be": 3,
    "discovered_by": "bce:62100",
    "career_url": "https://joobs.be/careers",
-   "notes": "Agregateur joobs.be : 33 544 URL d'offres (JSON-LD), origine des offres a evaluer avant d'en lire 150 par run. Desactive le 18/09/2026, a decider.",
+   "notes": "Agregateur joobs.be (Novula Network) : 38 696 offres avec JSON-LD complet, qui republie VDAB (24 liens sortants sur 8 pages lues) et le Forem. Voie possible vers la Flandre que VDAB interdit en direct ; desactive le 18/09/2026 (38 k pages, profil francophone), a rouvrir si la Flandre devient une cible.",
    "first_seen": "2026-09-17T23:34:06+02:00"
   },
   {
