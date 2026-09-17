@@ -27,8 +27,11 @@ Regles
 
 from __future__ import annotations
 
+import contextlib
 import json
+import os
 import threading
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -38,6 +41,42 @@ ATS_EMPLOYERS_VERSION = "1.0"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 REGISTRY_PATH = PROJECT_ROOT / "config" / "ats_employers_v2.json"
 _VERROU = threading.Lock()
+
+
+@contextlib.contextmanager
+def _verrou_fichier(attente: float = 15.0):
+    """
+    Verrou entre processus : deux campagnes de decouverte lancees en parallele
+    (constate le 17/09/2026) lisent-modifient-ecrivent le meme JSON ; sans
+    verrou, la derniere ecriture efface les entrees de l'autre. Un fichier
+    .lock cree en O_EXCL sert de mutex ; un verrou plus vieux que 60 s est
+    considere comme abandonne (processus mort) et repris.
+    """
+    chemin = REGISTRY_PATH.with_suffix(".json.lock")
+    debut = time.monotonic()
+    while True:
+        try:
+            fd = os.open(str(chemin), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(fd, str(os.getpid()).encode())
+            os.close(fd)
+            break
+        except FileExistsError:
+            try:
+                if time.time() - chemin.stat().st_mtime > 60:
+                    chemin.unlink(missing_ok=True)
+                    continue
+            except OSError:
+                pass
+            if time.monotonic() - debut > attente:
+                raise TimeoutError(f"registre verrouille depuis trop longtemps : {chemin}")
+            time.sleep(0.2)
+    try:
+        yield
+    finally:
+        try:
+            chemin.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 # Comment chaque connecteur nomme son identifiant.
 _CLE_IDENTIFIANT = {
@@ -131,7 +170,7 @@ def enregistrer(ats: str, connecteur: str | None, identifier, label: str, *,
                 jobs_total: int | None, jobs_be: int | None, discovered_by: str,
                 career_url: str | None = None, enabled: bool = True, notes: str = "") -> dict:
     """Ajoute ou met a jour une entree. Rend l'entree ecrite."""
-    with _VERROU:
+    with _VERROU, _verrou_fichier():
         return _enregistrer_sans_verrou(ats, connecteur, identifier, label, jobs_total=jobs_total,
                                         jobs_be=jobs_be, discovered_by=discovered_by,
                                         career_url=career_url, enabled=enabled, notes=notes)

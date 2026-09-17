@@ -1,0 +1,723 @@
+{
+ "schema_version": "1.0",
+ "generated_at": "2026-09-17T18:29:32",
+ "purpose": "Membres des federations sectorielles (pharma.be, BioWin) a passer au moteur de decouverte.",
+ "groups": {
+  "pharma.be": [
+   {
+    "domaine": "novonordisk.be",
+    "label": "Novonordisk"
+   },
+   {
+    "domaine": "hipra.com",
+    "label": "Hipra"
+   },
+   {
+    "domaine": "ascendispharma.com",
+    "label": "Ascendispharma"
+   },
+   {
+    "domaine": "krystalbio.com",
+    "label": "Krystalbio"
+   },
+   {
+    "domaine": "alnylam.com",
+    "label": "Alnylam"
+   },
+   {
+    "domaine": "bayer.be",
+    "label": "Bayer"
+   },
+   {
+    "domaine": "incyte.com",
+    "label": "Incyte"
+   },
+   {
+    "domaine": "alexion.com",
+    "label": "Alexion"
+   },
+   {
+    "domaine": "bioteqpartner.com",
+    "label": "Bioteqpartner"
+   },
+   {
+    "domaine": "pfizer.be",
+    "label": "Pfizer"
+   },
+   {
+    "domaine": "therabel.com",
+    "label": "Therabel"
+   },
+   {
+    "domaine": "astellas.com",
+    "label": "Astellas"
+   },
+   {
+    "domaine": "merck.be",
+    "label": "Merck"
+   },
+   {
+    "domaine": "tevabelgium.be",
+    "label": "Tevabelgium"
+   },
+   {
+    "domaine": "mirumpharma.com",
+    "label": "Mirumpharma"
+   },
+   {
+    "domaine": "abbvie.be",
+    "label": "Abbvie"
+   },
+   {
+    "domaine": "airliquide.com",
+    "label": "Airliquide"
+   },
+   {
+    "domaine": "camurus.com",
+    "label": "Camurus"
+   },
+   {
+    "domaine": "messer.be",
+    "label": "Messer"
+   },
+   {
+    "domaine": "novadip.com",
+    "label": "Novadip"
+   },
+   {
+    "domaine": "menarini.com",
+    "label": "Menarini"
+   },
+   {
+    "domaine": "insmed.com",
+    "label": "Insmed"
+   },
+   {
+    "domaine": "animalcaregroup.com",
+    "label": "Animalcaregroup"
+   },
+   {
+    "domaine": "msd-animal-health.be",
+    "label": "Msd Animal Health"
+   },
+   {
+    "domaine": "ceres-pharma.com",
+    "label": "Ceres Pharma"
+   },
+   {
+    "domaine": "virbac.be",
+    "label": "Virbac"
+   },
+   {
+    "domaine": "ucb-group.be",
+    "label": "Ucb Group"
+   },
+   {
+    "domaine": "trenker.be",
+    "label": "Trenker"
+   },
+   {
+    "domaine": "chiesi.be",
+    "label": "Chiesi"
+   },
+   {
+    "domaine": "hansabiopharma.com",
+    "label": "Hansabiopharma"
+   },
+   {
+    "domaine": "us.pg.com",
+    "label": "Us"
+   },
+   {
+    "domaine": "boehringer-ingelheim.be",
+    "label": "Boehringer Ingelheim"
+   },
+   {
+    "domaine": "be.alcon.com",
+    "label": "Be"
+   },
+   {
+    "domaine": "stallergenesgreer.be",
+    "label": "Stallergenesgreer"
+   },
+   {
+    "domaine": "avanzanite.com",
+    "label": "Avanzanite"
+   },
+   {
+    "domaine": "almirall.com",
+    "label": "Almirall"
+   },
+   {
+    "domaine": "viforpharma.com",
+    "label": "Viforpharma"
+   },
+   {
+    "domaine": "zambon.be",
+    "label": "Zambon"
+   },
+   {
+    "domaine": "alfasigma.be",
+    "label": "Alfasigma"
+   },
+   {
+    "domaine": "biogen.be",
+    "label": "Biogen"
+   },
+   {
+    "domaine": "amicusrx.nl",
+    "label": "Amicusrx"
+   },
+   {
+    "domaine": "norgine.com",
+    "label": "Norgine"
+   },
+   {
+    "domaine": "ceva.com",
+    "label": "Ceva"
+   },
+   {
+    "domaine": "guerbet.com",
+    "label": "Guerbet"
+   },
+   {
+    "domaine": "ptcbio.com",
+    "label": "Ptcbio"
+   },
+   {
+    "domaine": "aop-health.com",
+    "label": "Aop Health"
+   },
+   {
+    "domaine": "daiichi-sankyo.be",
+    "label": "Daiichi Sankyo"
+   },
+   {
+    "domaine": "vivisol.be",
+    "label": "Vivisol"
+   },
+   {
+    "domaine": "gilead.com",
+    "label": "Gilead"
+   },
+   {
+    "domaine": "pierre-fabre.com",
+    "label": "Pierre Fabre"
+   },
+   {
+    "domaine": "biocryst.com",
+    "label": "Biocryst"
+   },
+   {
+    "domaine": "amgen.com",
+    "label": "Amgen"
+   },
+   {
+    "domaine": "servier.be",
+    "label": "Servier"
+   },
+   {
+    "domaine": "janssenpharmaceutica.be",
+    "label": "Janssenpharmaceutica"
+   },
+   {
+    "domaine": "angelinipharma.com",
+    "label": "Angelinipharma"
+   },
+   {
+    "domaine": "lilly.be",
+    "label": "Lilly"
+   },
+   {
+    "domaine": "inhatarget.com",
+    "label": "Inhatarget"
+   },
+   {
+    "domaine": "prodivet.com",
+    "label": "Prodivet"
+   },
+   {
+    "domaine": "bracco.com",
+    "label": "Bracco"
+   },
+   {
+    "domaine": "jazzpharmaceuticals.com",
+    "label": "Jazzpharmaceuticals"
+   },
+   {
+    "domaine": "besins-healthcare.be",
+    "label": "Besins Healthcare"
+   },
+   {
+    "domaine": "janssen-cilag.be",
+    "label": "Janssen Cilag"
+   },
+   {
+    "domaine": "beigene.com",
+    "label": "Beigene"
+   },
+   {
+    "domaine": "smb.be",
+    "label": "Smb"
+   },
+   {
+    "domaine": "sobi-belux.be",
+    "label": "Sobi Belux"
+   },
+   {
+    "domaine": "idorsia.com",
+    "label": "Idorsia"
+   },
+   {
+    "domaine": "roche.be",
+    "label": "Roche"
+   },
+   {
+    "domaine": "galderma.com",
+    "label": "Galderma"
+   }
+  ],
+  "biowin": [
+   {
+    "domaine": "aboleris-pharma.com",
+    "label": "AbolerIS Pharma"
+   },
+   {
+    "domaine": "abscint.com",
+    "label": "ABSCINT"
+   },
+   {
+    "domaine": "actemium.be",
+    "label": "Actemium"
+   },
+   {
+    "domaine": "hoc.com",
+    "label": "Ad Hoc Clinical"
+   },
+   {
+    "domaine": "altaneos.com",
+    "label": "Altaneos"
+   },
+   {
+    "domaine": "anacura.com",
+    "label": "anacura"
+   },
+   {
+    "domaine": "aptaskil.be",
+    "label": "aptaskil"
+   },
+   {
+    "domaine": "aquilon.com",
+    "label": "Aquilon Pharmaceuticals"
+   },
+   {
+    "domaine": "arsalis.com",
+    "label": "Arsalis"
+   },
+   {
+    "domaine": "aseptic.com",
+    "label": "Aseptic Technologies S.A."
+   },
+   {
+    "domaine": "axinesis.com",
+    "label": "Axinesis"
+   },
+   {
+    "domaine": "196.be",
+    "label": "196"
+   },
+   {
+    "domaine": "b12.be",
+    "label": "B12 Consulting"
+   },
+   {
+    "domaine": "becarv.be",
+    "label": "BECARV"
+   },
+   {
+    "domaine": "belgian.com",
+    "label": "Belgian Volition SRL"
+   },
+   {
+    "domaine": "biocubik.com",
+    "label": "Biocubik"
+   },
+   {
+    "domaine": "catalya.be",
+    "label": "CATALYA"
+   },
+   {
+    "domaine": "cellcarta.com",
+    "label": "CellCarta Biosciences"
+   },
+   {
+    "domaine": "cellistic.com",
+    "label": "Cellistic"
+   },
+   {
+    "domaine": "cenaero.be",
+    "label": "Cenaero"
+   },
+   {
+    "domaine": "cenexi.com",
+    "label": "Cenexi"
+   },
+   {
+    "domaine": "cer.be",
+    "label": "CER Groupe"
+   },
+   {
+    "domaine": "certech.be",
+    "label": "Certech ASBL"
+   },
+   {
+    "domaine": "cetic.be",
+    "label": "CETIC"
+   },
+   {
+    "domaine": "cilyx.eu",
+    "label": "CILYX"
+   },
+   {
+    "domaine": "cluepoints.com",
+    "label": "CluePoints"
+   },
+   {
+    "domaine": "codibel.be",
+    "label": "Codibel Sa"
+   },
+   {
+    "domaine": "comate.be",
+    "label": "Comate"
+   },
+   {
+    "domaine": "comunicare.be",
+    "label": "Comunicare"
+   },
+   {
+    "domaine": "cryoport.com",
+    "label": "Cryoport Systems"
+   },
+   {
+    "domaine": "curewiki.health",
+    "label": "Curewiki"
+   },
+   {
+    "domaine": "tek.com",
+    "label": "D-Tek"
+   },
+   {
+    "domaine": "dekimo.com",
+    "label": "Dekimo Louvain-la-Neuve"
+   },
+   {
+    "domaine": "diagam.com",
+    "label": "Diagam"
+   },
+   {
+    "domaine": "diapath.com",
+    "label": "DIAPath"
+   },
+   {
+    "domaine": "dice-cro.com",
+    "label": "DICE CRO"
+   },
+   {
+    "domaine": "dnalytics.com",
+    "label": "DNAlytics"
+   },
+   {
+    "domaine": "elysia-raytest.com",
+    "label": "Elysia Raytest SA"
+   },
+   {
+    "domaine": "endo.be",
+    "label": "Endo Tools Therapeutics Sa"
+   },
+   {
+    "domaine": "eonix.be",
+    "label": "Eonix"
+   },
+   {
+    "domaine": "eppendorf.com",
+    "label": "Eppendorf Application Technologies"
+   },
+   {
+    "domaine": "campus.be",
+    "label": "EU Biotech Campus"
+   },
+   {
+    "domaine": "exobio.be",
+    "label": "Exo Biologics SA"
+   },
+   {
+    "domaine": "eyedpharma.com",
+    "label": "EyeD Pharma"
+   },
+   {
+    "domaine": "full.com",
+    "label": "Full Life Technology Europe"
+   },
+   {
+    "domaine": "genflow.com",
+    "label": "Genflow Bioscience"
+   },
+   {
+    "domaine": "harmony.be",
+    "label": "Harmony Clinical Research"
+   },
+   {
+    "domaine": "heh.be",
+    "label": "Haute Ecole en Hainaut"
+   },
+   {
+    "domaine": "patheon.com",
+    "label": "Henogen SPRL - C/O Thermo Fisher Scientific"
+   },
+   {
+    "domaine": "hirundo.com",
+    "label": "Hirundo Biosciences"
+   },
+   {
+    "domaine": "hyloris.com",
+    "label": "Hyloris Pharmaceuticals"
+   },
+   {
+    "domaine": "trusted.domainseller.site",
+    "label": "IASO DISCOVERY"
+   },
+   {
+    "domaine": "iba.eu",
+    "label": "IBA"
+   },
+   {
+    "domaine": "iddi.com",
+    "label": "IDDI"
+   },
+   {
+    "domaine": "immunolabs.com",
+    "label": "Immuno Diagnostic Systems (IDS)"
+   },
+   {
+    "domaine": "immunochem.be",
+    "label": "ImmunoChem"
+   },
+   {
+    "domaine": "brandbucket.com",
+    "label": "InnoSer Belgie NV"
+   },
+   {
+    "domaine": "inokura.be",
+    "label": "InoKura"
+   },
+   {
+    "domaine": "institut.com",
+    "label": "Institut Jules Bordet"
+   },
+   {
+    "domaine": "iol.be",
+    "label": "IOL Strategic Design"
+   },
+   {
+    "domaine": "ipg.be",
+    "label": "IPG"
+   },
+   {
+    "domaine": "ire.eu",
+    "label": "IRE ELIT"
+   },
+   {
+    "domaine": "istar-medical.com",
+    "label": "iSTAR MEDICAL SA"
+   },
+   {
+    "domaine": "juniprresearch.com",
+    "label": "JunipR Research"
+   },
+   {
+    "domaine": "kaneka.be",
+    "label": "Kaneka Eurogentec Sa"
+   },
+   {
+    "domaine": "kiomedpharma.com",
+    "label": "KiOmed Pharma"
+   },
+   {
+    "domaine": "lacar.com",
+    "label": "LaCAR MDX Technology"
+   },
+   {
+    "domaine": "levacells.com",
+    "label": "Levacells"
+   },
+   {
+    "domaine": "livedrop.eu",
+    "label": "Livedrop"
+   },
+   {
+    "domaine": "lonza.com",
+    "label": "Lonza Verviers"
+   },
+   {
+    "domaine": "multitel.be",
+    "label": "MULTITEL Asbl"
+   },
+   {
+    "domaine": "narilis.be",
+    "label": "NARILIS"
+   },
+   {
+    "domaine": "neuroclues.com",
+    "label": "neuroClues by P3Lab"
+   },
+   {
+    "domaine": "neuvasq.com",
+    "label": "Neuvasq Biotechnologies"
+   },
+   {
+    "domaine": "nyxoah.com",
+    "label": "NYXOAH Sa"
+   },
+   {
+    "domaine": "oncodesign.com",
+    "label": "Oncodesign Precision Medicine"
+   },
+   {
+    "domaine": "oncodna.com",
+    "label": "OncoDNA Sa"
+   },
+   {
+    "domaine": "ouat.be",
+    "label": "OUAT!"
+   },
+   {
+    "domaine": "phenx.be",
+    "label": "PHéNX"
+   },
+   {
+    "domaine": "polypeptide.com",
+    "label": "PolyPeptide SA"
+   },
+   {
+    "domaine": "progenus-webshop.be",
+    "label": "Progenus"
+   },
+   {
+    "domaine": "qity.be",
+    "label": "Qity"
+   },
+   {
+    "domaine": "pro.com",
+    "label": "QP Pro Services"
+   },
+   {
+    "domaine": "quality-assistance.com",
+    "label": "Quality Assistance Sa"
+   },
+   {
+    "domaine": "quimesis.be",
+    "label": "Quimesis"
+   },
+   {
+    "domaine": "radiomics.bio",
+    "label": "Radiomics"
+   },
+   {
+    "domaine": "revatis.com",
+    "label": "Revatis SA Corp."
+   },
+   {
+    "domaine": "sagittabiotech.com",
+    "label": "Sagitta Biotech"
+   },
+   {
+    "domaine": "salamanderu.com",
+    "label": "Salamander U"
+   },
+   {
+    "domaine": "samantree.com",
+    "label": "Samantree Medical SA"
+   },
+   {
+    "domaine": "sartorius.com",
+    "label": "Sartorius Xpress Biologics"
+   },
+   {
+    "domaine": "secoya.be",
+    "label": "Secoya Technologies"
+   },
+   {
+    "domaine": "seqalis.com",
+    "label": "Seqalis"
+   },
+   {
+    "domaine": "sirris.be",
+    "label": "SIRRIS"
+   },
+   {
+    "domaine": "studia.be",
+    "label": "Studia"
+   },
+   {
+    "domaine": "superbiotics.net",
+    "label": "Superbiotics"
+   },
+   {
+    "domaine": "synabs.be",
+    "label": "SynAbs"
+   },
+   {
+    "domaine": "syngulon.com",
+    "label": "SYNGULON"
+   },
+   {
+    "domaine": "takeda.com",
+    "label": "Takeda Belgium"
+   },
+   {
+    "domaine": "tebubio.com",
+    "label": "Tebubio"
+   },
+   {
+    "domaine": "telemedicine.com",
+    "label": "Telemedicine Technologies Belgium"
+   },
+   {
+    "domaine": "theratrame.com",
+    "label": "THERAtRAME SA"
+   },
+   {
+    "domaine": "tilman.be",
+    "label": "TILMAN Sa"
+   },
+   {
+    "domaine": "trialzen.com",
+    "label": "Trialzen"
+   },
+   {
+    "domaine": "uliege.be",
+    "label": "ULiège"
+   },
+   {
+    "domaine": "universite.eu",
+    "label": "Université de Mons"
+   },
+   {
+    "domaine": "vortal.com",
+    "label": "VORTAL SRL"
+   },
+   {
+    "domaine": "voxdale.com",
+    "label": "Voxdale Belgium"
+   },
+   {
+    "domaine": "white-raven.be",
+    "label": "White Raven"
+   },
+   {
+    "domaine": "wuxiapptec.com",
+    "label": "WuXi AppTec"
+   }
+  ]
+ }
+}

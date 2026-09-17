@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T17:58:12+02:00",
+ "updated_at": "2026-09-17T18:34:41+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -369,6 +369,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.cilyx.eu/en/jobs/",
+   "label": "CILYX",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:33:15+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.cilyx.eu/en/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:33:15+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.eurobrussels.com/jobs",
    "label": "Eurobrussels",
    "enabled": true,
@@ -408,20 +422,6 @@
    "career_url": "https://www.manpower.be/",
    "notes": "",
    "first_seen": "2026-09-17T17:55:55+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
-   "identifier": "https://jobs.gent.be/",
-   "label": "Stad Gent",
-   "enabled": true,
-   "verified_at": "2026-09-17T17:57:50+02:00",
-   "jobs_total": 10,
-   "jobs_be": 3,
-   "discovered_by": "etape3:reprise",
-   "career_url": "https://jobs.gent.be/",
-   "notes": "",
-   "first_seen": "2026-09-17T17:57:50+02:00"
   },
   {
    "ats": "HTML",
@@ -554,6 +554,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.quality-assistance.com/en/jobs",
+   "label": "Quality Assistance",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:34:38+02:00",
+   "jobs_total": 7,
+   "jobs_be": 1,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.quality-assistance.com/en/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T18:34:38+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.selecthr.be/fr/emplois/?domaines%5B%5D=Technical+%26+Engineering",
    "label": "Select HR",
    "enabled": true,
@@ -595,6 +609,20 @@
    "notes": "",
    "first_seen": "2026-09-17T17:56:50+02:00",
    "lien_regex": "/jobs/[^/]+-\\d+/?$"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://jobs.gent.be/",
+   "label": "Stad Gent",
+   "enabled": true,
+   "verified_at": "2026-09-17T17:57:50+02:00",
+   "jobs_total": 10,
+   "jobs_be": 3,
+   "discovered_by": "etape3:reprise",
+   "career_url": "https://jobs.gent.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T17:57:50+02:00"
   },
   {
    "ats": "HTML",
@@ -1174,6 +1202,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "www.wearefaktor.com",
+   "label": "Faktor",
+   "enabled": true,
+   "verified_at": "2026-09-17T17:55:44+02:00",
+   "jobs_total": 719,
+   "jobs_be": 3,
+   "discovered_by": "etape3:reprise",
+   "career_url": "https://www.wearefaktor.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T17:55:44+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "careers.fluxys.com",
    "label": "Fluxys",
    "enabled": true,
@@ -1720,20 +1762,6 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
-   "identifier": "www.wearefaktor.com",
-   "label": "Faktor",
-   "enabled": true,
-   "verified_at": "2026-09-17T17:55:44+02:00",
-   "jobs_total": 719,
-   "jobs_be": 3,
-   "discovered_by": "etape3:reprise",
-   "career_url": "https://www.wearefaktor.com/jobs",
-   "notes": "",
-   "first_seen": "2026-09-17T17:55:44+02:00"
-  },
-  {
-   "ats": "JSONLD",
-   "connector": "JSONLD_SITES",
    "identifier": "www.winsearch.be",
    "label": "Winsearch",
    "enabled": true,
@@ -2230,6 +2258,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "iddi",
+   "label": "IDDI",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:33:31+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "http://iddi.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:33:31+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "itsme",
    "label": "Itsme-Id",
    "enabled": true,
@@ -2482,6 +2524,34 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.angelinipharma.com",
+   "label": "Angelini Pharma",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:06+02:00",
+   "jobs_total": 5,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.angelinipharma.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:06+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.animalcaregroup.com",
+   "label": "Animal Care Group",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:10+02:00",
+   "jobs_total": 3,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.animalcaregroup.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:10+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "job.antwerpen.be",
    "label": "Antwerpen",
    "enabled": true,
@@ -2506,6 +2576,20 @@
    "career_url": "https://jobs.aquafin.be/",
    "notes": "",
    "first_seen": "2026-09-15T15:54:06+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.astellas.com",
+   "label": "Astellas",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:29:51+02:00",
+   "jobs_total": 74,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.astellas.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:29:51+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -2790,6 +2874,34 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.guerbet.com",
+   "label": "Guerbet",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:51+02:00",
+   "jobs_total": 106,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.guerbet.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:51+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.hipra.com",
+   "label": "Hipra",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:29:36+02:00",
+   "jobs_total": 62,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.hipra.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:29:36+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "careers.iba-worldwide.com",
    "label": "Iba-Worldwide",
    "enabled": true,
@@ -2800,6 +2912,20 @@
    "career_url": "https://careers.iba-worldwide.com/",
    "notes": "",
    "first_seen": "2026-09-15T15:58:02+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.idorsia.com",
+   "label": "Idorsia",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:20+02:00",
+   "jobs_total": 15,
+   "jobs_be": null,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.idorsia.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:20+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -3238,6 +3364,48 @@
   {
    "ats": "WORKABLE",
    "connector": "WORKABLE",
+   "identifier": "ascendis-pharma",
+   "label": "Ascendis Pharma",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:29:39+02:00",
+   "jobs_total": 53,
+   "jobs_be": 1,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://ascendispharma.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:29:39+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
+   "identifier": "comate",
+   "label": "Comate",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:32:38+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.comate.be/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T18:32:38+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
+   "identifier": "curewiki-1",
+   "label": "Curewiki",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:32:49+02:00",
+   "jobs_total": 7,
+   "jobs_be": 5,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.curewiki.health/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:32:49+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
    "identifier": "envalior",
    "label": "Envalior Specialty Compounds",
    "enabled": true,
@@ -3303,19 +3471,19 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
-    "tenant": "alcon",
-    "wd": "wd5",
-    "site": "careers_alcon"
+    "tenant": "airliquidehr",
+    "wd": "wd3",
+    "site": "AirLiquideExternalCareer"
    },
-   "label": "Alcon",
+   "label": "Air Liquide",
    "enabled": true,
-   "verified_at": "2026-09-17T01:09:28+02:00",
-   "jobs_total": 4,
-   "jobs_be": 4,
-   "discovered_by": "original:v417",
-   "career_url": "https://alcon.wd5.myworkdayjobs.com/careers_alcon",
-   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
-   "first_seen": "2026-09-17T01:09:28+02:00"
+   "verified_at": "2026-09-17T18:30:01+02:00",
+   "jobs_total": 13,
+   "jobs_be": 13,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.airliquide.com/join-us/careers-air-liquide",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:01+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -3357,6 +3525,42 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "alcon",
+    "wd": "wd5",
+    "site": "careers_alcon"
+   },
+   "label": "Alcon",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:33+02:00",
+   "jobs_total": 4,
+   "jobs_be": 4,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.alcon.com/nl-BE/careers/",
+   "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
+   "first_seen": "2026-09-17T01:09:28+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "beigene",
+    "wd": "wd5",
+    "site": "BeiGene"
+   },
+   "label": "BeOne Medicines (BeiGene)",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:18+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://beonemedicines.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:18+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "athora",
     "wd": "wd3",
     "site": "athora-careers"
@@ -3370,6 +3574,24 @@
    "career_url": "https://jobs.be.athora.com/jobs/team-leader-life-insurance-49c515f8?utm_campaign=jobloom&u",
    "notes": "",
    "first_seen": "2026-09-16T16:08:46+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "biocryst",
+    "wd": "wd501",
+    "site": "External"
+   },
+   "label": "BioCryst",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:00+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.biocryst.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:00+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -3393,6 +3615,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "bracco",
+    "wd": "wd103",
+    "site": "BraccoCareers"
+   },
+   "label": "Bracco",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:12+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.bracco.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:12+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "covestro",
     "wd": "wd3",
     "site": "cov_external"
@@ -3406,6 +3646,24 @@
    "career_url": "https://www.covestro.com/",
    "notes": "",
    "first_seen": "2026-09-16T16:26:35+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "cryoport",
+    "wd": "wd12",
+    "site": "external"
+   },
+   "label": "Cryoport Systems",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:32:47+02:00",
+   "jobs_total": 2,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.cryoport.com/about-us/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:32:47+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -3447,19 +3705,55 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "galderma",
+    "wd": "wd3",
+    "site": "External"
+   },
+   "label": "Galderma",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:21+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.galderma.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:21+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "gilead",
     "wd": "wd1",
     "site": "gileadcareers"
    },
    "label": "Gilead",
    "enabled": true,
-   "verified_at": "2026-09-17T01:09:28+02:00",
+   "verified_at": "2026-09-17T18:30:58+02:00",
    "jobs_total": 1,
    "jobs_be": 1,
-   "discovered_by": "original:v417",
-   "career_url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.gilead.com/careers",
    "notes": "Tenant connu du projet principal (V4.1), verifie le 17/09/2026.",
    "first_seen": "2026-09-17T01:09:28+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "insmed",
+    "wd": "wd504",
+    "site": "EXTERNAL"
+   },
+   "label": "Insmed",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:13+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://careers.insmed.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:13+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -3469,12 +3763,12 @@
     "wd": "wd5",
     "site": "JJ"
    },
-   "label": "Janssen",
+   "label": "Johnson & Johnson / Janssen",
    "enabled": true,
-   "verified_at": "2026-09-15T16:40:55+02:00",
-   "jobs_total": 101,
-   "jobs_be": 88,
-   "discovered_by": "seed:pharma_biotech_medtech",
+   "verified_at": "2026-09-17T18:31:13+02:00",
+   "jobs_total": 123,
+   "jobs_be": 107,
+   "discovered_by": "annuaire:pharma.be",
    "career_url": "https://www.careers.jnj.com/en/",
    "notes": "",
    "first_seen": "2026-09-15T15:57:47+02:00"
@@ -3645,6 +3939,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "pierrefabre",
+    "wd": "wd3",
+    "site": "External_Career_Site"
+   },
+   "label": "Pierre Fabre",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:31:01+02:00",
+   "jobs_total": 12,
+   "jobs_be": 12,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.pierre-fabre.com/fr-be",
+   "notes": "",
+   "first_seen": "2026-09-17T18:31:01+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "pluxee",
     "wd": "wd3",
     "site": "Pluxee_Career_Site"
@@ -3663,6 +3975,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "ptcbio",
+    "wd": "wd5",
+    "site": "PTC_Careers"
+   },
+   "label": "PTC Therapeutics",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:54+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.ptcbio.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:54+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "pwc",
     "wd": "wd3",
     "site": "Global_Experienced_Careers"
@@ -3676,6 +4006,24 @@
    "career_url": "https://www.pwc.be/careers",
    "notes": "",
    "first_seen": "2026-09-15T16:02:23+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "sartorius",
+    "wd": "wd3",
+    "site": "sartoriuscareers"
+   },
+   "label": "Sartorius Xpress Biologics",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:34:41+02:00",
+   "jobs_total": 5,
+   "jobs_be": 5,
+   "discovered_by": "annuaire:biowin",
+   "career_url": "https://www.sartorius.com/en/company/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T18:34:41+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -3766,6 +4114,24 @@
    "career_url": "https://careers.unilever.com/en",
    "notes": "",
    "first_seen": "2026-09-15T16:01:33+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "csl",
+    "wd": "wd1",
+    "site": "CSL_External"
+   },
+   "label": "CSL Vifor",
+   "enabled": true,
+   "verified_at": "2026-09-17T18:30:56+02:00",
+   "jobs_total": 5,
+   "jobs_be": 5,
+   "discovered_by": "annuaire:pharma.be",
+   "career_url": "https://www.csl.com/careers/explore-careers-at-csl",
+   "notes": "",
+   "first_seen": "2026-09-17T18:30:56+02:00"
   },
   {
    "ats": "WORKDAY",
