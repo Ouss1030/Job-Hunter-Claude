@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T21:27:13+02:00",
+ "updated_at": "2026-09-17T22:39:17+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -341,6 +341,34 @@
   {
    "ats": "GREENHOUSE",
    "connector": "GREENHOUSE",
+   "identifier": "durable",
+   "label": "Intem-Consulting",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:24:07+02:00",
+   "jobs_total": 4,
+   "jobs_be": 0,
+   "discovered_by": "bce:71121",
+   "career_url": "https://durable.com/?reason=website-not-found&referrer=intem-consulting.com",
+   "notes": "",
+   "first_seen": "2026-09-17T22:24:07+02:00"
+  },
+  {
+   "ats": "GREENHOUSE",
+   "connector": "GREENHOUSE",
+   "identifier": "englishcanada",
+   "label": "Laporte Euro",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:25:08+02:00",
+   "jobs_total": 22,
+   "jobs_be": 0,
+   "discovered_by": "bce:71121",
+   "career_url": "https://laporteconsultants.com/carrieres/",
+   "notes": "",
+   "first_seen": "2026-09-17T22:25:08+02:00"
+  },
+  {
+   "ats": "GREENHOUSE",
+   "connector": "GREENHOUSE",
    "identifier": "showpad",
    "label": "Showpad",
    "enabled": true,
@@ -425,6 +453,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.axilium.be/vacatures",
+   "label": "Axilium Group",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:13:50+02:00",
+   "jobs_total": 3,
+   "jobs_be": 2,
+   "discovered_by": "bce:71121",
+   "career_url": "https://www.axilium.be/vacatures",
+   "notes": "",
+   "first_seen": "2026-09-17T22:13:50+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://axongroup.com/jobs",
    "label": "Axon",
    "enabled": true,
@@ -491,6 +533,20 @@
    "career_url": "https://www.bimona.be/vacature-overzicht/categorie/life-sciences",
    "notes": "",
    "first_seen": "2026-09-17T01:08:27+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.bopro.be/jobs",
+   "label": "Bopro_Project Managment",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:46:00+02:00",
+   "jobs_total": 7,
+   "jobs_be": 3,
+   "discovered_by": "bce:71111",
+   "career_url": "https://www.bopro.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T21:46:00+02:00"
   },
   {
    "ats": "HTML",
@@ -580,12 +636,12 @@
    "ats": "HTML",
    "connector": "HTML_SITES",
    "identifier": "https://www.cilyx.eu/en/jobs/",
-   "label": "CILYX",
+   "label": "Cilyx",
    "enabled": true,
-   "verified_at": "2026-09-17T18:33:15+02:00",
+   "verified_at": "2026-09-17T22:16:05+02:00",
    "jobs_total": 4,
    "jobs_be": 3,
-   "discovered_by": "annuaire:biowin",
+   "discovered_by": "bce:71121",
    "career_url": "https://www.cilyx.eu/en/jobs/",
    "notes": "",
    "first_seen": "2026-09-17T18:33:15+02:00"
@@ -603,6 +659,20 @@
    "career_url": "https://www.cohezio.be/nl/jobs/",
    "notes": "",
    "first_seen": "2026-09-17T19:11:20+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.saint-leger.be/",
+   "label": "Commune De Saint-Léger (Lux.)",
+   "enabled": false,
+   "verified_at": "2026-09-17T21:38:27+02:00",
+   "jobs_total": 4,
+   "jobs_be": 0,
+   "discovered_by": "bce:38210",
+   "career_url": "https://www.saint-leger.be/",
+   "notes": "Site communal : page « Agence Locale pour l'Emploi », pas d'offres. Desactive le 18/09/2026.",
+   "first_seen": "2026-09-17T21:38:27+02:00"
   },
   {
    "ats": "HTML",
@@ -631,6 +701,20 @@
    "career_url": "https://jobs.leonidas.com/",
    "notes": "",
    "first_seen": "2026-09-17T18:52:24+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://confistruct.be/vacatures/",
+   "label": "Confistruct",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:15:58+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:71121",
+   "career_url": "https://confistruct.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T22:15:58+02:00"
   },
   {
    "ats": "HTML",
@@ -705,6 +789,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://dubecor.be/vacatures/",
+   "label": "Dubecor",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:49:33+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:71111",
+   "career_url": "https://dubecor.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:49:33+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://be.elis.com/fr",
    "label": "Elis",
    "enabled": true,
@@ -743,6 +841,20 @@
    "career_url": "https://www.elmos.be/jobs",
    "notes": "",
    "first_seen": "2026-09-17T19:15:47+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://zorgpuntwaasland.be/vacatures/",
+   "label": "Energiek Sint-Niklaas",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:34:32+02:00",
+   "jobs_total": 10,
+   "jobs_be": 3,
+   "discovered_by": "bce:35150",
+   "career_url": "https://zorgpuntwaasland.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:34:32+02:00"
   },
   {
    "ats": "HTML",
@@ -818,20 +930,6 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
-   "identifier": "https://www.facozinc.com/en/careers/",
-   "label": "Façozinc",
-   "enabled": true,
-   "verified_at": "2026-09-17T21:16:31+02:00",
-   "jobs_total": 3,
-   "jobs_be": 3,
-   "discovered_by": "employeur-actif",
-   "career_url": "https://www.facozinc.com/en/careers/",
-   "notes": "",
-   "first_seen": "2026-09-17T21:16:31+02:00"
-  },
-  {
-   "ats": "HTML",
-   "connector": "HTML_SITES",
    "identifier": "https://www.familiehulp.be/jobs",
    "label": "Familiehulp",
    "enabled": false,
@@ -842,6 +940,20 @@
    "career_url": "https://www.familiehulp.be/jobs",
    "notes": "familiehulp.be/jobs : fiches de metiers (« welke functie past bij jou »), pas des offres. Desactive le 17/09/2026.",
    "first_seen": "2026-09-17T19:09:23+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.facozinc.com/en/careers/",
+   "label": "Façozinc",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:16:31+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.facozinc.com/en/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:16:31+02:00"
   },
   {
    "ats": "HTML",
@@ -931,6 +1043,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.human37.com/careers/",
+   "label": "Human37",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:23:18+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:71121",
+   "career_url": "https://www.human37.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T22:23:18+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.i-mens.be/jobs-en-opleidingen/werken-in-de-zorg",
    "label": "i-mens",
    "enabled": true,
@@ -987,6 +1113,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.interwaas.be/vacatures",
+   "label": "Intergemeentelijk Samenwerkingsverband Van Het Land Van Waas",
+   "enabled": false,
+   "verified_at": "2026-09-17T22:08:16+02:00",
+   "jobs_total": 3,
+   "jobs_be": 0,
+   "discovered_by": "bce:71113",
+   "career_url": "https://www.interwaas.be/vacatures",
+   "notes": "Page de benevolat (« Vrijwilligersvacatures »), pas des offres. Desactive le 18/09/2026.",
+   "first_seen": "2026-09-17T22:08:16+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.isoproc.be/jobs",
+   "label": "Isoproc",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:37:57+02:00",
+   "jobs_total": 3,
+   "jobs_be": 1,
+   "discovered_by": "bce:38210",
+   "career_url": "https://www.isoproc.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T21:37:57+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.joblink.be/vacatures",
    "label": "Joblink",
    "enabled": true,
@@ -1016,6 +1170,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://maxicon.be/nl/jobs/",
+   "label": "Maxicon Engineering",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:26:12+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:71121",
+   "career_url": "https://maxicon.be/nl/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T22:26:12+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.mls.be/nl-be/jobs",
+   "label": "Medisch Labo Service",
+   "enabled": false,
+   "verified_at": "2026-09-17T21:41:03+02:00",
+   "jobs_total": 3,
+   "jobs_be": 0,
+   "discovered_by": "bce:46460",
+   "career_url": "https://www.mls.be/nl-be/jobs",
+   "notes": "Pages sans titre d'offre (« MLS »). Desactive le 18/09/2026.",
+   "first_seen": "2026-09-17T21:41:03+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.namur.be/fr",
    "label": "Namur",
    "enabled": false,
@@ -1026,6 +1208,62 @@
    "career_url": "https://www.namur.be/fr",
    "notes": "namur.be/fr : pages d'information (Cite des Metiers, Le Forem, Travailler a la Ville) ; les offres de la Ville sont ailleurs (a retrouver). Desactive le 17/09/2026.",
    "first_seen": "2026-09-16T19:19:45+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.nexusventuri.com/jobs",
+   "label": "Nexus Venturi",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:28:02+02:00",
+   "jobs_total": 12,
+   "jobs_be": 2,
+   "discovered_by": "bce:71121",
+   "career_url": "https://www.nexusventuri.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T22:28:02+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.novitan.com/careers",
+   "label": "Novitan",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:41:05+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:46460",
+   "career_url": "https://www.novitan.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T21:41:05+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://novoto.be/novotostock/",
+   "label": "Novoto",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:42:43+02:00",
+   "jobs_total": 3,
+   "jobs_be": 1,
+   "discovered_by": "bce:71100",
+   "career_url": "https://novoto.be/novotostock/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:42:43+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.orison.be/werken-bij",
+   "label": "Orison",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:39:17+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:71122",
+   "career_url": "https://www.orison.be/werken-bij",
+   "notes": "",
+   "first_seen": "2026-09-17T22:39:17+02:00"
   },
   {
    "ats": "HTML",
@@ -1142,6 +1380,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://reno.energy/jobs/",
+   "label": "Reno.Energy",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:33:39+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:71121",
+   "career_url": "https://reno.energy/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T22:33:39+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://rumex.be/jobs/",
    "label": "Rumex",
    "enabled": true,
@@ -1181,6 +1433,20 @@
    "career_url": "https://www.skills.be/en/careers",
    "notes": "",
    "first_seen": "2026-09-17T21:17:54+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://odoo.solhyd.eu/jobs",
+   "label": "Solhyd",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:36:36+02:00",
+   "jobs_total": 4,
+   "jobs_be": 2,
+   "discovered_by": "bce:71121",
+   "career_url": "https://odoo.solhyd.eu/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T22:36:36+02:00"
   },
   {
    "ats": "HTML",
@@ -1468,6 +1734,48 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.verelst.be/vacatures",
+   "label": "Woningbouw Verelst",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:37:01+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:71121",
+   "career_url": "https://www.verelst.be/vacatures",
+   "notes": "",
+   "first_seen": "2026-09-17T22:37:01+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.worksphere.be/fr",
+   "label": "Worksphere",
+   "enabled": false,
+   "verified_at": "2026-09-17T22:10:44+02:00",
+   "jobs_total": 4,
+   "jobs_be": 0,
+   "discovered_by": "bce:71119",
+   "career_url": "https://www.worksphere.be/fr",
+   "notes": "Fiches produits (cloisons, cabines) prises pour des offres. Desactive le 18/09/2026.",
+   "first_seen": "2026-09-17T22:10:44+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://xarchitecten.be/vacatures/",
+   "label": "X Architecten",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:59:15+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:71111",
+   "career_url": "https://xarchitecten.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:59:15+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://zonneliedvzw.be/",
    "label": "Zonnelied",
    "enabled": true,
@@ -1506,6 +1814,20 @@
    "career_url": null,
    "notes": "",
    "first_seen": "2026-09-16T15:36:22+02:00"
+  },
+  {
+   "ats": "ICIMS",
+   "connector": "ICIMS",
+   "identifier": "careers-johnsiskandson.icims.com",
+   "label": "John Sisk & Son (Belgium)",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:24:51+02:00",
+   "jobs_total": 100,
+   "jobs_be": null,
+   "discovered_by": "bce:71121",
+   "career_url": "https://sisk.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T22:24:51+02:00"
   },
   {
    "ats": "ICIMS",
@@ -1706,6 +2028,34 @@
   {
    "ats": "JOBTOOLZ",
    "connector": "JOBTOOLZ",
+   "identifier": "jobs.jeco-energies.com",
+   "label": "Jeco Energies",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:25:05+02:00",
+   "jobs_total": 24,
+   "jobs_be": 4,
+   "discovered_by": "bce:71121",
+   "career_url": "https://jobs.jeco-energies.com/nl",
+   "notes": "",
+   "first_seen": "2026-09-17T22:25:05+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.animagroup.be",
+   "label": "Les Trois Arbres",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:32:04+02:00",
+   "jobs_total": 24,
+   "jobs_be": 4,
+   "discovered_by": "bce:35110",
+   "career_url": "https://jobs.animagroup.be/fr/candidature-spontanee",
+   "notes": "",
+   "first_seen": "2026-09-17T21:32:04+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
    "identifier": "jobs.smetgroup.be",
    "label": "Smet Group",
    "enabled": true,
@@ -1730,6 +2080,34 @@
    "career_url": "https://jobs.trafiroad.be/fr",
    "notes": "",
    "first_seen": "2026-09-17T21:19:29+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.valckenier.be",
+   "label": "Valckenier Rent",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:42:53+02:00",
+   "jobs_total": 2,
+   "jobs_be": 2,
+   "discovered_by": "bce:71100",
+   "career_url": "https://jobs.valckenier.be/nl",
+   "notes": "",
+   "first_seen": "2026-09-17T21:42:51+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.veb.be",
+   "label": "Vlaams Energiebedrijf",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:34:19+02:00",
+   "jobs_total": 7,
+   "jobs_be": 4,
+   "discovered_by": "bce:35150",
+   "career_url": "https://jobs.veb.be/nl",
+   "notes": "",
+   "first_seen": "2026-09-17T21:34:19+02:00"
   },
   {
    "ats": "JOBTOOLZ",
@@ -1870,6 +2248,34 @@
    "career_url": "https://axintor.be/en/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:01:47+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.berlam.be",
+   "label": "Berlam",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:45:39+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:71111",
+   "career_url": "https://www.berlam.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:45:39+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "bio-circle.be",
+   "label": "Bio-Circle",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:38:52+02:00",
+   "jobs_total": 2,
+   "jobs_be": 1,
+   "discovered_by": "bce:38330",
+   "career_url": "https://bio-circle.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:38:52+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2560,6 +2966,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "jobs.resa.be",
+   "label": "Resa Innovation Et Technologie",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:34:59+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:35220",
+   "career_url": "https://jobs.resa.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:34:59+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "jobs.sarawak.be",
    "label": "Sarawak",
    "enabled": true,
@@ -3238,6 +3658,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "cmbtech",
+   "label": "Cmb.Tech International",
+   "enabled": true,
+   "verified_at": "2026-09-17T22:15:32+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:71121",
+   "career_url": "https://cmb.tech/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T22:15:32+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "colruytgroup",
    "label": "Colruytgroup",
    "enabled": true,
@@ -3546,6 +3980,20 @@
   {
    "ats": "SMARTRECRUITERS",
    "connector": "SMARTRECRUITERS",
+   "identifier": "Sirtex",
+   "label": "Sirtex Medical Europe Gmbh",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:41:31+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "bce:46460",
+   "career_url": "https://www.sirtex.com/eu/about-sirtex/careers/explore-global-career-opportunities/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:41:31+02:00"
+  },
+  {
+   "ats": "SMARTRECRUITERS",
+   "connector": "SMARTRECRUITERS",
    "identifier": "ni",
    "label": "Sopra Steria Belgium",
    "enabled": true,
@@ -3780,6 +4228,20 @@
    "career_url": "https://jobs.bekaert.com/",
    "notes": "",
    "first_seen": "2026-09-15T15:59:51+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "careers.belden.com",
+   "label": "Belden Solutions",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:31:20+02:00",
+   "jobs_total": 117,
+   "jobs_be": null,
+   "discovered_by": "bce:27900",
+   "career_url": "https://careers.belden.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:31:20+02:00"
   },
   {
    "ats": "SUCCESSFACTORS",
@@ -4926,6 +5388,24 @@
    "career_url": "https://www.galderma.com/careers",
    "notes": "",
    "first_seen": "2026-09-17T18:31:21+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "getec",
+    "wd": "wd103",
+    "site": "External_Careers"
+   },
+   "label": "Getec Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:31:47+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "bce:35110",
+   "career_url": "https://www.getec-energyservices.com",
+   "notes": "",
+   "first_seen": "2026-09-17T21:31:47+02:00"
   },
   {
    "ats": "WORKDAY",
