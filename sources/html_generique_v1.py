@@ -1,6 +1,6 @@
 """
 JOB HUNTER BELGIUM
-COLLECTEUR HTML GENERIQUE - VERSION 1.1
+COLLECTEUR HTML GENERIQUE - VERSION 1.2
 
 Le dernier repli avant le navigateur : un portail carriere maison, sans
 API, sans flux, sans JSON-LD — Plone (UNamur), Odoo (HENALLUX), Drupal
@@ -30,6 +30,19 @@ postuler, profil, missions, contrat, competences, dates, ce qu'on offre.
 Les pages de UNamur, GHdC, Prayon, Brabant wallon en citent 5 a 7 ; les
 pages « Cite des Metiers », « Le Forem », « Resultats de recherche » de
 namur.be et chuliege.be en citent 0 a 2.
+
+V1.2 (18/09/2026) — le tri par collecte reelle, fait a la main sur une
+centaine de sites le 17/09 (10 % de pages d'information, de rubriques ou
+de fiches produits prises pour des offres), est desormais dans le
+collecteur et dans la validation de la decouverte :
+    - une offre cite au moins trois familles ET l'une des deux qui la
+      definissent : postuler (candidature, apply, solliciteer) ou profil
+      (votre profil, requirements) — une fiche produit ou une rubrique
+      parle de missions et de competences, rarement de postuler
+    - un titre de moins de cinq caracteres (« MLS ») n'est pas un titre
+    - benevolat, agence locale pour l'emploi : pages d'information
+    - sonder() lit cinq pages ; un site n'est retenu qu'avec au moins deux
+      offres exploitables portant deux titres distincts
 
 Lieu (V1.1) : un code postal n'est retenu que suivi d'un nom (« 6220
 Fleurus », « B-1000 Bruxelles ») — « Ref : 2026-88 », « Top Employer
@@ -63,7 +76,7 @@ from sources.jsonld_sitemap_v1 import _RE_URL_OFFRE, _RE_EXCLURE, convertir_post
 from sources.phenom_ats_v1 import extract_job_posting
 
 
-HTML_GENERIQUE_VERSION = "1.1"
+HTML_GENERIQUE_VERSION = "1.2"
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_ROOT / "logs" / "html_sites_cache"
@@ -73,6 +86,8 @@ PAUSE = 0.5
 MAX_PAGES = 120
 MIN_TEXTE = 300
 MIN_INDICES = 3
+MIN_TITRE = 5
+_INDICES_DEFINISSANTS = ("postuler", "profil")
 CACHE_JOURS = 3
 HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -91,6 +106,7 @@ _TITRES_LISTE = [
     r"\b(?:sollicitatieproces|processus de (?:candidature|recrutement)|recruitment process|application process)\b",
     r"(?<![a-z])(?:candidature spontan[ée]e|spontane sollicitatie|spontaneous application|open sollicitatie|unsolicited application)(?![a-z])",
     r"^\s*(?:footer|header|menu|navigation|sidebar|breadcrumb)\s*$",
+    r"\b(?:vrijwillig\w*|b[ée]n[ée]vol\w*|volunteer\w*|agence locale pour l['’]emploi|plaatselijk werkgelegenheidsagentschap)\b",
     r"^\s*(?:accueil|home|contact|actualit|news|login|connexion)\b",
     r"^\s*(?:faq|charte|atouts|procédure|procedure|résultats? de recherche|zoekresultaten|search results|"
     r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"
@@ -278,9 +294,12 @@ def extraire_page(url: str, html: str, listing_url: str, listing_hash: str, sele
         return {"rejet": "texte trop court"}
     if hashlib.sha1(texte[:2000].encode("utf-8", "ignore")).hexdigest() == listing_hash:
         return {"rejet": "meme contenu que la liste"}
+    if len(titre) < MIN_TITRE:
+        return {"rejet": "titre trop court"}
     indices = indices_offre(texte)
-    if len(indices) < MIN_INDICES:
-        return {"rejet": f"vocabulaire d'offre insuffisant ({len(indices)}/{len(_INDICES_OFFRE)})"}
+    if len(indices) < MIN_INDICES or not any(i in indices for i in _INDICES_DEFINISSANTS):
+        return {"rejet": f"vocabulaire d'offre insuffisant ({len(indices)}/{len(_INDICES_OFFRE)}"
+                         + ("" if any(i in indices for i in _INDICES_DEFINISSANTS) else ", ni postuler ni profil") + ")"}
     lieu, statut = _lieu(texte + " " + titre)
     return {"titre": titre, "texte": texte[:20000], "lieu": lieu, "statut": statut}
 
@@ -399,10 +418,21 @@ def collect_html_site(company: dict, session=None, include_unknown: bool = True,
     return jobs, meta
 
 
-def sonder(listing_url: str, session=None, pages: int = 3) -> dict:
-    """Pour la decouverte : combien de liens d'offre, et combien de pages exploitables parmi les premieres."""
+SONDE_PAGES = 5
+SONDE_MIN_OFFRES = 2
+
+
+def sonder(listing_url: str, session=None, pages: int = SONDE_PAGES) -> dict:
+    """
+    Pour la decouverte : combien de liens d'offre, combien de pages exploitables
+    parmi les premieres, et « retenu » : au moins SONDE_MIN_OFFRES offres portant
+    des titres distincts (V1.2 — le tri par collecte reelle, automatise).
+    """
     jobs, meta = collect_html_site({"identifier": listing_url}, session, include_unknown=True, max_pages=pages)
     meta["exploitables"] = len(jobs)
+    meta["titres"] = [j.title for j in jobs]
+    distincts = {j.title.strip().lower() for j in jobs}
+    meta["retenu"] = meta["liens"] >= 3 and len(jobs) >= SONDE_MIN_OFFRES and len(distincts) >= 2
     return meta
 
 

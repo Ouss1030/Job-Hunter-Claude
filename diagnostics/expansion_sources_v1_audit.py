@@ -332,6 +332,29 @@ def main():
                        meta["liens"] == 3 and len(jobs) == 1 and jobs[0].title == "Laborant" and jobs[0].location == "Namur (5000)"
                        and "menu menu" not in jobs[0].description and "pied" not in jobs[0].description and meta["rejetees"] == 2,
                        str({k: meta[k] for k in ("liens", "be", "rejetees")}) + (f" loc={jobs[0].location}" if jobs else "")))
+    # V1.2 (18/09/2026) : la validation exige deux offres exploitables a titres distincts ; « MLS » n'est pas un titre ;
+    # une fiche sans « postuler » ni « profil » n'est pas une offre
+    page_d = page_a.replace("Laborant", "Data analyst").replace("Postuler avant le 30/09.", "Candidature via le site.")
+    page_mls = '<html><head><title>MLS</title></head><body><main><h1>MLS</h1><p>' + "Analyses HPLC. Votre profil. Postuler. Contrat CDI. " * 10 + '</p></main></body></html>'
+    page_produit = ('<html><head><title>Cloison vitree</title></head><body><main><h1>Cloison vitree</h1><p>'
+                    + "Nos missions : cloisons sur mesure. Competences : verre, alu. Contrat de maintenance. Delai de livraison. " * 8 + '</p></main></body></html>')
+    liste2 = liste.replace('<a href="/contact">Contact</a>', '<a href="/emploi.2026-09-05.444">MLS</a><a href="/emploi.2026-09-06.555">Cloison</a>')
+    s = _Session({"https://labo.be/liste": _Reponse(liste2, 200, "https://labo.be/liste"),
+                  "https://labo.be/emploi.2026-09-02.111": _Reponse(page_a, 200, "https://labo.be/emploi.2026-09-02.111"),
+                  "https://labo.be/emploi.2026-09-03.222": _Reponse(page_d, 200, "https://labo.be/emploi.2026-09-03.222"),
+                  "https://labo.be/emploi.2026-09-04.333": _Reponse(page_c, 200, "https://labo.be/emploi.2026-09-04.333"),
+                  "https://labo.be/emploi.2026-09-05.444": _Reponse(page_mls, 200, "https://labo.be/emploi.2026-09-05.444"),
+                  "https://labo.be/emploi.2026-09-06.555": _Reponse(page_produit, 200, "https://labo.be/emploi.2026-09-06.555")})
+    with mock.patch.object(hg, "CACHE_DIR", tmp / "html2"), mock.patch.object(hg, "PAUSE", 0):
+        meta = hg.sonder("https://labo.be/liste", s)
+        s2 = _Session({"https://labo.be/liste": _Reponse(liste2, 200, "https://labo.be/liste"),
+                       "https://labo.be/emploi.2026-09-02.111": _Reponse(page_a, 200, "https://labo.be/emploi.2026-09-02.111")})
+        with mock.patch.object(hg, "CACHE_DIR", tmp / "html3"):
+            meta_un = hg.sonder("https://labo.be/liste", s2)
+    tests.append(check("HTML V1.2 : sonde de 5 pages -> 2 offres a titres distincts retenues, « MLS » (titre court) et la fiche produit (ni postuler ni profil) rejetees ; une seule offre ne suffit pas",
+                       meta["retenu"] and meta["exploitables"] == 2 and "titre trop court" in meta["motifs"]
+                       and any("ni postuler ni profil" in k for k in meta["motifs"]) and not meta_un["retenu"] and meta_un["exploitables"] == 1,
+                       str((meta["exploitables"], meta["titres"], dict(meta["motifs"]), meta_un["exploitables"]))))
     tests.append(check("HTML generique : une annee n'est pas un code postal",
                        hg._lieu("Publie le 2026-09-02, © 2026. Poste a Charleroi.")[0] != "Anvers (2026)"))
     # V1.1 (17/09/2026) : preuve d'offre, pages d'information, rubriques, communes ambigues, code postal suivi d'un nom

@@ -149,12 +149,12 @@ def _valider(connecteur: str, identifiant, label: str, session) -> dict:
                      erreur=None if lignes else "aucune offre listee")
         elif connecteur == "HTML_SITES":
             from sources.html_generique_v1 import sonder
-            meta = sonder(identifiant, session, pages=3)
-            # Un site HTML n'est retenu qu'avec au moins trois liens d'offre et
-            # une page exploitable portant une preuve belge (code postal, commune).
-            r.update(ok=meta.get("liens", 0) >= 3 and meta.get("exploitables", 0) >= 1,
-                     total=meta.get("liens"), be=meta.get("exploitables"),
-                     erreur=meta.get("error") or (None if meta.get("exploitables") else "pages non exploitables"))
+            meta = sonder(identifiant, session)
+            # V1.2 : au moins trois liens d'offre et deux offres exploitables a titres
+            # distincts parmi les cinq premieres pages (le tri par collecte reelle).
+            r.update(ok=bool(meta.get("retenu")), total=meta.get("liens"), be=meta.get("exploitables"),
+                     erreur=meta.get("error") or (None if meta.get("retenu") else
+                                                  f"{meta.get('exploitables', 0)} offre(s) exploitable(s) sur {meta.get('visitees', 0)} pages"))
         elif connecteur == "JSONLD_SITES":
             from sources.jsonld_sitemap_v1 import collect_site
             jobs, meta = collect_site(identifiant, label, session, max_pages=VALIDATION_PAGES_JSONLD,
