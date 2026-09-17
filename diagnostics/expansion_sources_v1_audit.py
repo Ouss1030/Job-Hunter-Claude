@@ -398,6 +398,17 @@ def main():
     tests.append(check("Jobtoolz : signature reconnue dans la page (jobtoolz-assets / window.jobComponent), connecteur JOBTOOLZ",
                        any(d.get("ats") == "JOBTOOLZ" and d.get("connecteur") == "JOBTOOLZ" for d in dets), str(dets)[:200]))
 
+    # Deviner un domaine (17/09/2026) : annuaires sans lien (BioWin) et employeurs du Forem/Actiris
+    from sources import annuaires_seeds_v1 as an
+    page_acme = "<html><head><title>Acme Labo - analyses</title></head><body>" + "Acme Labo, laboratoire a Namur. " * 40 + "</body></html>"
+    page_hoc = "<html><head><title>HOC Inc</title></head><body>" + "hoc hoc hoc parked domain. " * 40 + "</body></html>"
+    s = _Session({"https://www.acmelabo.be": _Reponse(page_acme, 200, "https://www.acmelabo.be/"),
+                  "https://www.hoc.com": _Reponse(page_hoc, 200, "https://www.hoc.com/")})
+    tests.append(check("Deviner un domaine : « Acme Labo » -> acmelabo.be (titre), « Ad Hoc Clinical » -> rien (hoc.com ne prouve rien)",
+                       an.deviner_domaine("Acme Labo", s) == "acmelabo.be" and an.deviner_domaine("Ad Hoc Clinical", s) is None
+                       and an.candidats_domaines("Acme Labo SA")[0] == "acmelabo.be",
+                       str([an.deviner_domaine("Acme Labo", s), an.candidats_domaines("Acme Labo SA")[:3]])))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl
