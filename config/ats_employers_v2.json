@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T22:39:17+02:00",
+ "updated_at": "2026-09-18T01:07:54+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -29,6 +29,20 @@
    "career_url": "https://lightspeed.com/careers",
    "notes": "",
    "first_seen": "2026-09-15T17:31:35+02:00"
+  },
+  {
+   "ats": "ASHBY",
+   "connector": "ASHBY",
+   "identifier": "predikt",
+   "label": "Predikt",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:38:28+02:00",
+   "jobs_total": 5,
+   "jobs_be": 5,
+   "discovered_by": "bce:62100",
+   "career_url": "https://predikt.ai/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:38:28+02:00"
   },
   {
    "ats": "ASHBY",
@@ -169,6 +183,20 @@
    "career_url": "https://hogent.cvw.io/?lang=nl-BE#e5c5eee3-6b5d-49dd-9b9d-deb727ec2279",
    "notes": "",
    "first_seen": "2026-09-16T15:19:46+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://kongsbergsystems.cvw.io/",
+   "label": "Kongsberg Precision Cutting Systems Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:34:46+02:00",
+   "jobs_total": 16,
+   "jobs_be": null,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.kongsbergsystems.com/en/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T23:34:46+02:00"
   },
   {
    "ats": "CVWAREHOUSE",
@@ -579,6 +607,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.cartiere.be/careers/",
+   "label": "Cartière",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:51:01+02:00",
+   "jobs_total": 5,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.cartiere.be/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:51:01+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.catalay.com/jobs",
    "label": "Catalay",
    "enabled": true,
@@ -677,6 +719,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.communityconsulting.be/jobs/",
+   "label": "Community Consulting",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:53:51+02:00",
+   "jobs_total": 13,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.communityconsulting.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:53:51+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://conessence.com/vacatures",
    "label": "Conessence",
    "enabled": true,
@@ -715,6 +771,20 @@
    "career_url": "https://confistruct.be/vacatures/",
    "notes": "",
    "first_seen": "2026-09-17T22:15:58+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.connectify.be/jobs",
+   "label": "Connectify",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:29:24+02:00",
+   "jobs_total": 8,
+   "jobs_be": 3,
+   "discovered_by": "bce:62900",
+   "career_url": "https://www.connectify.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:29:24+02:00"
   },
   {
    "ats": "HTML",
@@ -799,6 +869,34 @@
    "career_url": "https://dubecor.be/vacatures/",
    "notes": "",
    "first_seen": "2026-09-17T21:49:33+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://eezee-it.com/fr_BE/jobs",
+   "label": "Eezee-It",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:30:06+02:00",
+   "jobs_total": 4,
+   "jobs_be": 2,
+   "discovered_by": "bce:62900",
+   "career_url": "https://eezee-it.com/fr_BE/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:30:06+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.effix.be/",
+   "label": "Effix Group",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:01:35+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.effix.be/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:01:35+02:00"
   },
   {
    "ats": "HTML",
@@ -912,6 +1010,20 @@
    "notes": "Job board affaires europeennes (Bruxelles) ; offres sous /job_display/N, les /jobs/<rubrique> sont des listes.",
    "first_seen": "2026-09-16T19:20:49+02:00",
    "lien_regex": "/job_display/\\d+"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://eventpay.be/vacatures/",
+   "label": "Eventpay",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:30:38+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62100",
+   "career_url": "https://eventpay.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:30:38+02:00"
   },
   {
    "ats": "HTML",
@@ -1071,6 +1183,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.ictcg.com/jobs",
+   "label": "Ictcg",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:31:38+02:00",
+   "jobs_total": 12,
+   "jobs_be": 3,
+   "discovered_by": "bce:62900",
+   "career_url": "https://www.ictcg.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:31:38+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://jobs.idewe.be/nl",
    "label": "IDEWE - EXTERNE DIENST VOOR PREVENTIE EN BESCHERMING OP HET",
    "enabled": true,
@@ -1081,6 +1207,20 @@
    "career_url": "https://jobs.idewe.be/nl",
    "notes": "",
    "first_seen": "2026-09-17T19:13:48+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.infocura.be/jobs",
+   "label": "Infocura",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:05:23+02:00",
+   "jobs_total": 6,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.infocura.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:05:23+02:00"
   },
   {
    "ats": "HTML",
@@ -1151,6 +1291,34 @@
    "career_url": "https://www.joblink.be/vacatures",
    "notes": "",
    "first_seen": "2026-09-17T19:09:31+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://lesjumelles.be/pages/jobs",
+   "label": "Les Jumelles",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:48:59+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:63100",
+   "career_url": "https://lesjumelles.be/pages/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:48:59+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://sparkx.com/werken-bij-sparkx/",
+   "label": "Lines 'N Tones",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:00:54+02:00",
+   "jobs_total": 20,
+   "jobs_be": 2,
+   "discovered_by": "bce:63100",
+   "career_url": "https://sparkx.com/werken-bij-sparkx/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:00:54+02:00"
   },
   {
    "ats": "HTML",
@@ -1226,6 +1394,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://careers.northwave-cybersecurity.com/",
+   "label": "Northwave Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:11:56+02:00",
+   "jobs_total": 30,
+   "jobs_be": 2,
+   "discovered_by": "bce:62200",
+   "career_url": "https://careers.northwave-cybersecurity.com/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:11:56+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.novitan.com/careers",
    "label": "Novitan",
    "enabled": true,
@@ -1250,6 +1432,34 @@
    "career_url": "https://novoto.be/novotostock/",
    "notes": "",
    "first_seen": "2026-09-17T21:42:43+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.nravl.nl/careers",
+   "label": "Nravl",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:12:09+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.nravl.nl/careers",
+   "notes": "",
+   "first_seen": "2026-09-18T00:12:09+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.nviso.eu/jobs",
+   "label": "Nviso",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:35:01+02:00",
+   "jobs_total": 44,
+   "jobs_be": 2,
+   "discovered_by": "bce:62900",
+   "career_url": "https://www.nviso.eu/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:35:01+02:00"
   },
   {
    "ats": "HTML",
@@ -1352,6 +1562,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.prodata-systems.be/jobs",
+   "label": "Prodata Systems",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:38:34+02:00",
+   "jobs_total": 9,
+   "jobs_be": 2,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.prodata-systems.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T23:38:34+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.produweb.be/jobs/",
    "label": "Produweb",
    "enabled": true,
@@ -1390,6 +1614,34 @@
    "career_url": "https://reno.energy/jobs/",
    "notes": "",
    "first_seen": "2026-09-17T22:33:39+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.ridder.marketing/jobs",
+   "label": "Ridder & Co",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:59:31+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:63100",
+   "career_url": "https://www.ridder.marketing/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:59:31+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://ringtwice.be/fr",
+   "label": "Ring Twice",
+   "enabled": false,
+   "verified_at": "2026-09-18T00:59:43+02:00",
+   "jobs_total": 10,
+   "jobs_be": 0,
+   "discovered_by": "bce:63100",
+   "career_url": "https://ringtwice.be/fr",
+   "notes": "Plateforme de petits boulots : pages de rubriques (« Bricoleur : 100+ offres d'emploi »), pas des offres. Desactive le 18/09/2026.",
+   "first_seen": "2026-09-18T00:59:43+02:00"
   },
   {
    "ats": "HTML",
@@ -1607,6 +1859,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.tricore.be/jobs",
+   "label": "Tricore",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:22:25+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.tricore.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T00:22:25+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://tunity.be/jobs/",
+   "label": "Tunity",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:03:03+02:00",
+   "jobs_total": 12,
+   "jobs_be": 5,
+   "discovered_by": "bce:63100",
+   "career_url": "https://tunity.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:03:03+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.ugent.be/nl/jobs",
    "label": "UGent",
    "enabled": false,
@@ -1645,6 +1925,20 @@
    "career_url": "https://jobs.uzleuven.be/",
    "notes": "",
    "first_seen": "2026-09-17T01:09:25+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://jobs.vanmoer.com/",
+   "label": "Van Moer Brussels",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:05:02+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:63111",
+   "career_url": "https://jobs.vanmoer.com/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:05:02+02:00"
   },
   {
    "ats": "HTML",
@@ -1748,6 +2042,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.getwise.be/vacatures",
+   "label": "Working In A Safe Environment",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:46:51+02:00",
+   "jobs_total": 3,
+   "jobs_be": 2,
+   "discovered_by": "bce:63100",
+   "career_url": "https://www.getwise.be/vacatures",
+   "notes": "",
+   "first_seen": "2026-09-18T00:46:51+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.worksphere.be/fr",
    "label": "Worksphere",
    "enabled": false,
@@ -1786,6 +2094,20 @@
    "career_url": "https://zonneliedvzw.be/",
    "notes": "",
    "first_seen": "2026-09-17T21:11:39+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://zuidnatie.be/vacatures/",
+   "label": "Zuidnatie",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:05:11+02:00",
+   "jobs_total": 5,
+   "jobs_be": 4,
+   "discovered_by": "bce:63111",
+   "career_url": "https://zuidnatie.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:05:11+02:00"
   },
   {
    "ats": "ICIMS",
@@ -1944,6 +2266,20 @@
   {
    "ats": "JOBTOOLZ",
    "connector": "JOBTOOLZ",
+   "identifier": "datadobi.jobtoolz.com",
+   "label": "Datadobi",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:24:20+02:00",
+   "jobs_total": 2,
+   "jobs_be": 2,
+   "discovered_by": "bce:62100",
+   "career_url": "https://datadobi.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:24:20+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
    "identifier": "deprez.jobtoolz.com",
    "label": "Deprez Construct",
    "enabled": true,
@@ -1954,6 +2290,20 @@
    "career_url": "https://deprez.be/nl/",
    "notes": "",
    "first_seen": "2026-09-17T19:06:28+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.dotocean.eu",
+   "label": "Dotocean",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:59:45+02:00",
+   "jobs_total": 5,
+   "jobs_be": 4,
+   "discovered_by": "bce:62200",
+   "career_url": "https://jobs.dotocean.eu/en",
+   "notes": "",
+   "first_seen": "2026-09-17T23:59:45+02:00"
   },
   {
    "ats": "JOBTOOLZ",
@@ -2056,6 +2406,20 @@
   {
    "ats": "JOBTOOLZ",
    "connector": "JOBTOOLZ",
+   "identifier": "nodis-consulting.jobtoolz.com",
+   "label": "Nodis Consulting",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:11:11+02:00",
+   "jobs_total": 4,
+   "jobs_be": 4,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.nodisconsulting.be/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:11:11+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
    "identifier": "jobs.smetgroup.be",
    "label": "Smet Group",
    "enabled": true,
@@ -2136,6 +2500,20 @@
    "career_url": "https://www.247drive.be/vacatures",
    "notes": "",
    "first_seen": "2026-09-16T16:00:22+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.3d-ict.be",
+   "label": "3D-Ict",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:26:46+02:00",
+   "jobs_total": 19,
+   "jobs_be": 3,
+   "discovered_by": "bce:62900",
+   "career_url": "https://www.3d-ict.be/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:26:46+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2476,6 +2854,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "www.ulvio.be",
+   "label": "Envise Development",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:30:19+02:00",
+   "jobs_total": 6,
+   "jobs_be": 1,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.ulvio.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T23:30:19+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "spott.hr",
    "label": "Es99 - Es99",
    "enabled": true,
@@ -2570,6 +2962,20 @@
    "career_url": "https://careers.fluxys.com/jobs",
    "notes": "",
    "first_seen": "2026-09-15T15:54:06+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.galactus.be",
+   "label": "Galactus",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:31:47+02:00",
+   "jobs_total": 4,
+   "jobs_be": 2,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.galactus.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:31:47+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2756,6 +3162,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "echoglobal.tech",
+   "label": "Marvin",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:32:19+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62900",
+   "career_url": "https://echoglobal.tech/technologies/dotnet/?utm_source=kevindockx.com&utm_medium=redirect&utm_campaign=expired",
+   "notes": "",
+   "first_seen": "2026-09-18T00:32:19+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "www.metiselect.be",
    "label": "Metiselect",
    "enabled": true,
@@ -2854,6 +3274,34 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "joobs.be",
+   "label": "Novula Network",
+   "enabled": false,
+   "verified_at": "2026-09-17T23:34:06+02:00",
+   "jobs_total": 33544,
+   "jobs_be": 3,
+   "discovered_by": "bce:62100",
+   "career_url": "https://joobs.be/careers",
+   "notes": "Agregateur joobs.be : 33 544 URL d'offres (JSON-LD), origine des offres a evaluer avant d'en lire 150 par run. Desactive le 18/09/2026, a decider.",
+   "first_seen": "2026-09-17T23:34:06+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "careers.ontoforce.com",
+   "label": "Ontoforce",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:37:39+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62100",
+   "career_url": "https://careers.ontoforce.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:37:39+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "oradeo.com",
    "label": "Oradeo",
    "enabled": true,
@@ -2934,6 +3382,20 @@
    "career_url": null,
    "notes": "careers.planet-pharma.com : recruteur pharma mondial, 500 URL pour 1 offre belge — rendement trop faible. Desactive le 17/09/2026.",
    "first_seen": "2026-09-17T01:08:23+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "careers.qargo.com",
+   "label": "Qargo Tech",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:38:50+02:00",
+   "jobs_total": 35,
+   "jobs_be": 1,
+   "discovered_by": "bce:62100",
+   "career_url": "https://careers.qargo.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:38:50+02:00"
   },
   {
    "ats": "JSONLD",
@@ -3036,6 +3498,34 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "www.sitects.be",
+   "label": "Sitects",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:17:59+02:00",
+   "jobs_total": 9,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.sitects.be/en/careers/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:17:59+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.socialsky.eu",
+   "label": "Socialsky",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:41:00+02:00",
+   "jobs_total": 12,
+   "jobs_be": 3,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.socialsky.eu/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T23:41:00+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "spott.io",
    "label": "Spott",
    "enabled": true,
@@ -3116,6 +3606,20 @@
    "career_url": "https://celestetic.com/jobs",
    "notes": "",
    "first_seen": "2026-09-16T16:29:21+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "jobs.timefold.ai",
+   "label": "Timefold",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:42:29+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62100",
+   "career_url": "https://jobs.timefold.ai/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:42:29+02:00"
   },
   {
    "ats": "JSONLD",
@@ -3244,6 +3748,20 @@
    "first_seen": "2026-09-16T16:20:35+02:00"
   },
   {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "www.yggra.eu",
+   "label": "Yggra",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:44:25+02:00",
+   "jobs_total": 8,
+   "jobs_be": 1,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.yggra.eu/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T23:44:25+02:00"
+  },
+  {
    "ats": "LEVER",
    "connector": "LEVER",
    "identifier": "deliverect",
@@ -3256,6 +3774,34 @@
    "career_url": "https://www.deliverect.com/en/careers",
    "notes": "",
    "first_seen": "2026-09-15T15:47:41+02:00"
+  },
+  {
+   "ats": "LEVER",
+   "connector": "LEVER",
+   "identifier": "actian",
+   "label": "Wobby",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:44:15+02:00",
+   "jobs_total": 11,
+   "jobs_be": 0,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.actian.com/company/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:44:15+02:00"
+  },
+  {
+   "ats": "LEVER",
+   "connector": "LEVER",
+   "identifier": "wypoon",
+   "label": "Wypoon Technologies Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:25:49+02:00",
+   "jobs_total": 2,
+   "jobs_be": 0,
+   "discovered_by": "bce:62200",
+   "career_url": "https://wypoon.com/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:25:49+02:00"
   },
   {
    "ats": "ORACLE_CLOUD",
@@ -3409,10 +3955,10 @@
    "identifier": "intigriti",
    "label": "Intigriti",
    "enabled": true,
-   "verified_at": "2026-09-15T17:18:59+02:00",
-   "jobs_total": 2,
+   "verified_at": "2026-09-18T00:47:45+02:00",
+   "jobs_total": 3,
    "jobs_be": 0,
-   "discovered_by": "seed:tech_data_finance_conseil",
+   "discovered_by": "bce:63100",
    "career_url": "https://intigriti.jobs.personio.com/",
    "notes": "",
    "first_seen": "2026-09-15T16:03:02+02:00"
@@ -3476,6 +4022,20 @@
   {
    "ats": "PERSONIO",
    "connector": "PERSONIO",
+   "identifier": "relu",
+   "label": "Relu",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:16:37+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "bce:62200",
+   "career_url": "https://relu.jobs.personio.com/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:16:37+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
    "identifier": "stp-one",
    "label": "Septeo Corporate Lawyer Solutions Be",
    "enabled": true,
@@ -3486,6 +4046,20 @@
    "career_url": "https://www.stp.one/en/careers",
    "notes": "",
    "first_seen": "2026-09-16T16:41:44+02:00"
+  },
+  {
+   "ats": "PERSONIO",
+   "connector": "PERSONIO",
+   "identifier": "sig",
+   "label": "Software Improvement Group Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T00:18:13+02:00",
+   "jobs_total": 3,
+   "jobs_be": 0,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.softwareimprovementgroup.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-18T00:18:13+02:00"
   },
   {
    "ats": "PERSONIO",
@@ -3728,6 +4302,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "faktionbv1",
+   "label": "Faktion",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:30:45+02:00",
+   "jobs_total": 14,
+   "jobs_be": 14,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.faktion.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T23:30:45+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "habeas",
    "label": "Habeas",
    "enabled": true,
@@ -3794,6 +4382,20 @@
    "career_url": "https://www.jobfixers.be/nl",
    "notes": "",
    "first_seen": "2026-09-16T16:09:17+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
+   "identifier": "luzmo",
+   "label": "Luzmo",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:24:07+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.luzmo.com",
+   "notes": "",
+   "first_seen": "2026-09-17T23:24:07+02:00"
   },
   {
    "ats": "RECRUITEE",
@@ -4484,6 +5086,34 @@
   {
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.gxo.com",
+   "label": "Gxo Logistics Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:05:20+02:00",
+   "jobs_total": 1353,
+   "jobs_be": null,
+   "discovered_by": "bce:63121",
+   "career_url": "https://gxo.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:05:20+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
+   "identifier": "jobs.xpo.com",
+   "label": "Gxo Logistics Chemicals Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:05:48+02:00",
+   "jobs_total": 516,
+   "jobs_be": null,
+   "discovered_by": "bce:63122",
+   "career_url": "https://jobs.xpo.com/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:05:48+02:00"
+  },
+  {
+   "ats": "SUCCESSFACTORS",
+   "connector": "SUCCESSFACTORS_ATS",
    "identifier": "careers.hipra.com",
    "label": "Hipra",
    "enabled": true,
@@ -4974,6 +5604,20 @@
   {
    "ats": "TEAMTAILOR",
    "connector": "TEAMTAILOR",
+   "identifier": "cipalschaubroeck.teamtailor.com",
+   "label": "Cipal Schaubroeck",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:51:18+02:00",
+   "jobs_total": 13,
+   "jobs_be": 13,
+   "discovered_by": "bce:62200",
+   "career_url": "https://www.cipalschaubroeck.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:51:18+02:00"
+  },
+  {
+   "ats": "TEAMTAILOR",
+   "connector": "TEAMTAILOR",
    "identifier": "jobtalentbelgique.teamtailor.com",
    "label": "Equip Interim",
    "enabled": true,
@@ -5044,6 +5688,20 @@
   {
    "ats": "WORKABLE",
    "connector": "WORKABLE",
+   "identifier": "customs4trade",
+   "label": "Customs4Trade",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:24:08+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.customs4trade.com/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T23:24:08+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
    "identifier": "envalior",
    "label": "Envalior Specialty Compounds",
    "enabled": true,
@@ -5058,6 +5716,20 @@
   {
    "ats": "WORKABLE",
    "connector": "WORKABLE",
+   "identifier": "famoco",
+   "label": "Famoco Sas",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:30:46+02:00",
+   "jobs_total": 5,
+   "jobs_be": 0,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.famoco.com/career/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:30:46+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
    "identifier": "hi-jobs",
    "label": "Handicapinternational",
    "enabled": true,
@@ -5068,6 +5740,20 @@
    "career_url": "https://www.handicapinternational.be/fr/offres-d-emploi",
    "notes": "",
    "first_seen": "2026-09-15T17:41:01+02:00"
+  },
+  {
+   "ats": "WORKABLE",
+   "connector": "WORKABLE",
+   "identifier": "izix",
+   "label": "Izix",
+   "enabled": true,
+   "verified_at": "2026-09-17T23:33:54+02:00",
+   "jobs_total": 3,
+   "jobs_be": 2,
+   "discovered_by": "bce:62100",
+   "career_url": "https://www.izix.eu/",
+   "notes": "",
+   "first_seen": "2026-09-17T23:33:54+02:00"
   },
   {
    "ats": "WORKABLE",
@@ -5730,6 +6416,24 @@
    "career_url": "https://www.pwc.be/careers",
    "notes": "",
    "first_seen": "2026-09-15T16:02:23+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "rohlig",
+    "wd": "wd103",
+    "site": "Rohlig_Careers"
+   },
+   "label": "Röhlig Belgium",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:07:54+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:63401",
+   "career_url": "https://www.rohlig.com/career/working-at-roehlig/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:07:54+02:00"
   },
   {
    "ats": "WORKDAY",

@@ -101,6 +101,7 @@ _TITRES_LISTE = [
     r"^\s*(?:jobs?|vacatures?|vacancies|carri[eè]res?|emplois?|offres?\s+d['’]emploi|nos offres|travailler chez|werken bij|join us|rejoignez)\b",
     r"\b(?:emplois?|jobs?)\s+(?:pour|voor|in|à|a|en)\b",
     r"\b(?:jobs|emplois|vacatures|vacancies|offres)\s*$",          # « Legal Jobs » : une rubrique
+    r"\b\d+\s*\+?\s*(?:offres?\s+d['’]emploi|jobs|vacatures|emplois)\b",   # « Bricoleur : 100+ offres d'emploi »
     r"^\s*(?:all|alle|tous|toutes)\s+(?:jobs|vacatures|emplois|offres)\b",  # « All jobs everywhere »
     r"\b(?:jobs|vacatures|emplois|offres)\s*(?:&|et|en|and|/)\s*(?:jobs|vacatures|emplois|offres)\b",  # « Jobs & vacatures »
     r"\b(?:sollicitatieproces|processus de (?:candidature|recrutement)|recruitment process|application process)\b",
