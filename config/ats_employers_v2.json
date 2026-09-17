@@ -1,7 +1,21 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-17T21:12:44+02:00",
+ "updated_at": "2026-09-17T21:27:13+02:00",
  "employers": [
+  {
+   "ats": "ASHBY",
+   "connector": "ASHBY",
+   "identifier": "axelera",
+   "label": "Axelera Ai",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:21:44+02:00",
+   "jobs_total": 11,
+   "jobs_be": 5,
+   "discovered_by": "bce:26200",
+   "career_url": "https://axelera.ai/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T21:21:44+02:00"
+  },
   {
    "ats": "ASHBY",
    "connector": "ASHBY",
@@ -43,6 +57,20 @@
    "career_url": null,
    "notes": "",
    "first_seen": "2026-09-16T16:07:20+02:00"
+  },
+  {
+   "ats": "CVWAREHOUSE",
+   "connector": "CVWAREHOUSE",
+   "identifier": "https://atalian-belgium.cvw.io/",
+   "label": "Atalian",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:14:28+02:00",
+   "jobs_total": 6,
+   "jobs_be": null,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://atalian.be/loopbaan-2/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:14:28+02:00"
   },
   {
    "ats": "CVWAREHOUSE",
@@ -369,6 +397,20 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://artcasting.be/jobs/",
+   "label": "Art - Casting",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:16:48+02:00",
+   "jobs_total": 3,
+   "jobs_be": 1,
+   "discovered_by": "bce:25999",
+   "career_url": "https://artcasting.be/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:16:48+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.ascento.be/nl/",
    "label": "Ascento",
    "enabled": true,
@@ -650,7 +692,7 @@
    "ats": "HTML",
    "connector": "HTML_SITES",
    "identifier": "https://dsunits.be/vacatures",
-   "label": "DS UNITS",
+   "label": "DS Units",
    "enabled": true,
    "verified_at": "2026-09-17T21:12:24+02:00",
    "jobs_total": 6,
@@ -772,6 +814,20 @@
    "career_url": "https://experis.be/nl/jobs-zoeken/",
    "notes": "",
    "first_seen": "2026-09-17T17:56:08+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.facozinc.com/en/careers/",
+   "label": "Façozinc",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:16:31+02:00",
+   "jobs_total": 3,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.facozinc.com/en/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:16:31+02:00"
   },
   {
    "ats": "HTML",
@@ -1003,7 +1059,7 @@
    "ats": "HTML",
    "connector": "HTML_SITES",
    "identifier": "https://www.pleegzorg.be/vacatures",
-   "label": "PLEEGZORG VLAAMS - BRABANT EN BRUSSEL",
+   "label": "Pleegzorg Vlaams-Brabant en Brussel",
    "enabled": true,
    "verified_at": "2026-09-17T21:10:09+02:00",
    "jobs_total": 14,
@@ -1115,8 +1171,22 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.skills.be/en/careers",
+   "label": "Skills",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:17:54+02:00",
+   "jobs_total": 6,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.skills.be/en/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T21:17:54+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://sportoase.be/nl/jobs/",
-   "label": "SPORTOASE PHILIPSSITE LEUVEN",
+   "label": "Sportoase",
    "enabled": true,
    "verified_at": "2026-09-17T21:10:53+02:00",
    "jobs_total": 8,
@@ -1211,6 +1281,20 @@
    "career_url": "https://www.tempo-team.be/kandidaten/vacatures/",
    "notes": "tempo-team.be : pages de rubriques (s-aankoop-verkoop...), offres rendues en JavaScript ; Tempo-Team publie 1 085 offres sur le Forem/Actiris. Desactive le 17/09/2026.",
    "first_seen": "2026-09-17T19:08:26+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.tvl-vanlanduyt.be/vacatures/",
+   "label": "Toeleveringsbedrijf Van Landuyt",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:14:24+02:00",
+   "jobs_total": 4,
+   "jobs_be": 2,
+   "discovered_by": "bce:25530",
+   "career_url": "https://www.tvl-vanlanduyt.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:14:24+02:00"
   },
   {
    "ats": "HTML",
@@ -1313,6 +1397,34 @@
   {
    "ats": "HTML",
    "connector": "HTML_SITES",
+   "identifier": "https://www.vangeel-electrical.com/jobs",
+   "label": "Vangeel Electrical",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:27:13+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:27110",
+   "career_url": "https://www.vangeel-electrical.com/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T21:27:13+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://vlmontage.be/nl/vacatures/",
+   "label": "Vermeir Lansen Montage",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:14:59+02:00",
+   "jobs_total": 5,
+   "jobs_be": 3,
+   "discovered_by": "bce:25530",
+   "career_url": "https://vlmontage.be/nl/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:14:59+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
    "identifier": "https://www.verpoucke.com/jobs/",
    "label": "Verpoucke",
    "enabled": true,
@@ -1357,7 +1469,7 @@
    "ats": "HTML",
    "connector": "HTML_SITES",
    "identifier": "https://zonneliedvzw.be/",
-   "label": "ZONNELIED",
+   "label": "Zonnelied",
    "enabled": true,
    "verified_at": "2026-09-17T21:11:39+02:00",
    "jobs_total": 6,
@@ -1450,6 +1562,20 @@
    "career_url": "https://agrafresh.jobtoolz.com/nl",
    "notes": "",
    "first_seen": "2026-09-17T18:46:19+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.alertis.be",
+   "label": "Alertis",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:26:47+02:00",
+   "jobs_total": 5,
+   "jobs_be": 4,
+   "discovered_by": "bce:27110",
+   "career_url": "https://jobs.alertis.be/nl",
+   "notes": "",
+   "first_seen": "2026-09-17T21:26:47+02:00"
   },
   {
    "ats": "JOBTOOLZ",
@@ -1590,6 +1716,20 @@
    "career_url": "https://jobs.smetgroup.be/fr/aide-foreur",
    "notes": "",
    "first_seen": "2026-09-17T01:22:58+02:00"
+  },
+  {
+   "ats": "JOBTOOLZ",
+   "connector": "JOBTOOLZ",
+   "identifier": "jobs.trafiroad.be",
+   "label": "Trafiroad",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:19:29+02:00",
+   "jobs_total": 8,
+   "jobs_be": 4,
+   "discovered_by": "bce:25999",
+   "career_url": "https://jobs.trafiroad.be/fr",
+   "notes": "",
+   "first_seen": "2026-09-17T21:19:29+02:00"
   },
   {
    "ats": "JOBTOOLZ",
@@ -1776,6 +1916,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "www.cheops.com",
+   "label": "Cheops Technology",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:15:44+02:00",
+   "jobs_total": 25,
+   "jobs_be": 2,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.cheops.com/jobs/stage/?gh_jid=4627059002",
+   "notes": "",
+   "first_seen": "2026-09-17T21:15:44+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "corbit.be",
    "label": "Corbit",
    "enabled": true,
@@ -1791,7 +1945,7 @@
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
    "identifier": "crombe.be",
-   "label": "CROMBE - CROMBE SA",
+   "label": "Crombé",
    "enabled": true,
    "verified_at": "2026-09-17T21:11:45+02:00",
    "jobs_total": 2,
@@ -1870,6 +2024,20 @@
    "career_url": "https://jobs.delhaize.be/be/nl",
    "notes": "",
    "first_seen": "2026-09-15T16:01:19+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "jobs.dentius.be",
+   "label": "Dentius",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:15:45+02:00",
+   "jobs_total": 24,
+   "jobs_be": 3,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://jobs.dentius.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:15:45+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2224,6 +2392,20 @@
   {
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
+   "identifier": "nestorcompany.be",
+   "label": "Nestor Company",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:24:04+02:00",
+   "jobs_total": 4,
+   "jobs_be": 3,
+   "discovered_by": "bce:26300",
+   "career_url": "https://nestorcompany.be/vacatures/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:24:04+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
    "identifier": "careers.netapp.com",
    "label": "NetApp",
    "enabled": true,
@@ -2379,7 +2561,7 @@
    "ats": "JSONLD",
    "connector": "JSONLD_SITES",
    "identifier": "jobs.sarawak.be",
-   "label": "SARAWAK",
+   "label": "Sarawak",
    "enabled": true,
    "verified_at": "2026-09-17T21:10:40+02:00",
    "jobs_total": 27,
@@ -2444,6 +2626,20 @@
    "career_url": "https://spott.io/careers",
    "notes": "",
    "first_seen": "2026-09-16T16:16:05+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "squarehub.eu",
+   "label": "Square Hub",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:13:54+02:00",
+   "jobs_total": 168,
+   "jobs_be": 2,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://squarehub.eu/fr",
+   "notes": "",
+   "first_seen": "2026-09-17T21:13:54+02:00"
   },
   {
    "ats": "JSONLD",
@@ -2584,6 +2780,20 @@
    "career_url": "https://jobs.vito.be/",
    "notes": "",
    "first_seen": "2026-09-15T15:55:43+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "vulkoprin.be",
+   "label": "Vulkoprin",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:19:55+02:00",
+   "jobs_total": 9,
+   "jobs_be": 2,
+   "discovered_by": "bce:25999",
+   "career_url": "https://vulkoprin.be/nl/jobs/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:19:55+02:00"
   },
   {
    "ats": "JSONLD",
@@ -3000,6 +3210,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "azumuta",
+   "label": "Azumuta",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:21:45+02:00",
+   "jobs_total": 9,
+   "jobs_be": 9,
+   "discovered_by": "bce:26200",
+   "career_url": "https://www.azumuta.com/careers/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:21:45+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "berenschot",
    "label": "Berenschot",
    "enabled": true,
@@ -3168,6 +3392,20 @@
   {
    "ats": "RECRUITEE",
    "connector": "RECRUITEE",
+   "identifier": "newelec",
+   "label": "Newelec",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:27:10+02:00",
+   "jobs_total": 5,
+   "jobs_be": 5,
+   "discovered_by": "bce:27120",
+   "career_url": "https://www.newelec.be/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:27:10+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
    "identifier": "normecgroup",
    "label": "Normecgroup",
    "enabled": true,
@@ -3248,6 +3486,20 @@
    "career_url": "https://robovision.ai/about-us/careers",
    "notes": "",
    "first_seen": "2026-09-15T17:31:13+02:00"
+  },
+  {
+   "ats": "RECRUITEE",
+   "connector": "RECRUITEE",
+   "identifier": "scioteq",
+   "label": "Scioteq",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:26:41+02:00",
+   "jobs_total": 37,
+   "jobs_be": 28,
+   "discovered_by": "bce:26700",
+   "career_url": "https://www.scioteq.com/en/jobs",
+   "notes": "",
+   "first_seen": "2026-09-17T21:26:41+02:00"
   },
   {
    "ats": "RECRUITEE",
@@ -3421,7 +3673,7 @@
    "ats": "SUCCESSFACTORS",
    "connector": "SUCCESSFACTORS_ATS",
    "identifier": "jobs.arvesta.eu",
-   "label": "ARVESTA",
+   "label": "Arvesta",
    "enabled": true,
    "verified_at": "2026-09-17T21:11:23+02:00",
    "jobs_total": 70,
@@ -4697,6 +4949,24 @@
    "ats": "WORKDAY",
    "connector": "WORKDAY_ATS",
    "identifier": {
+    "tenant": "heidelberg",
+    "wd": "wd502",
+    "site": "careersHEIDELBERG"
+   },
+   "label": "Heidelberg Benelux",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:16:22+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.heidelberg.com/global/en/about_heidelberg/career/career_overview.jsp",
+   "notes": "",
+   "first_seen": "2026-09-17T21:16:22+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
     "tenant": "insmed",
     "wd": "wd504",
     "site": "EXTERNAL"
@@ -4836,6 +5106,24 @@
    "career_url": "https://www.medtronic.com/en-us/our-company/careers.html",
    "notes": "",
    "first_seen": "2026-09-15T15:58:34+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "minor",
+    "wd": "wd102",
+    "site": "Careers"
+   },
+   "label": "Minor-Ndako",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:17:16+02:00",
+   "jobs_total": 0,
+   "jobs_be": 0,
+   "discovered_by": "employeur-actif",
+   "career_url": "https://www.minor.com/en/careers",
+   "notes": "",
+   "first_seen": "2026-09-17T21:17:16+02:00"
   },
   {
    "ats": "WORKDAY",
@@ -5052,6 +5340,24 @@
    "career_url": "https://www.swift.com/about-us/careers",
    "notes": "",
    "first_seen": "2026-09-15T16:03:46+02:00"
+  },
+  {
+   "ats": "WORKDAY",
+   "connector": "WORKDAY_ATS",
+   "identifier": {
+    "tenant": "ttc",
+    "wd": "wd1",
+    "site": "Toro_External_Careers"
+   },
+   "label": "Toro Europe",
+   "enabled": true,
+   "verified_at": "2026-09-17T21:27:03+02:00",
+   "jobs_total": 1,
+   "jobs_be": 1,
+   "discovered_by": "bce:27110",
+   "career_url": "https://jobs.thetorocompany.com/",
+   "notes": "",
+   "first_seen": "2026-09-17T21:27:03+02:00"
   },
   {
    "ats": "WORKDAY",
