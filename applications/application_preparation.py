@@ -44,7 +44,7 @@ from matching.application_queue_v12 import (
     QUEUE_VERSION,
     build_application_queue_from_gate_payload,
 )
-from matching.application_gate_v13 import GATE_VERSION
+from matching.application_gate_v133 import GATE_VERSION  # 18/09/2026 : couche V1.3.3
 
 
 PREPARATION_VERSION = "1.2"

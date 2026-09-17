@@ -270,7 +270,16 @@ def _explicit_vie_offer_v133(title, text=""):
     if re.search(r"\bV\s*-\s*I\s*-\s*E\b", raw_title, flags=re.IGNORECASE):
         return True
 
-    # V1.3.3 : la règle "\bVIE\b en capitales" est retirée (correctif 4).
+    # V1.3.3 : la règle "\bVIE\b en capitales" est retirée (correctif 4)...
+    # ...mais le replay du 17/09/2026 sur 8 197 offres a montré qu'elle rejetait
+    # aussi de vraies offres V.I.E sans ponctuation : « VIE-Regulated Bioanalyst »,
+    # « VIE Equipment & Computerized systems Officer », « VIE Bioanalytical
+    # Scientist » (4 offres redevenues APPLY/STRETCH à tort). Le sigle en
+    # capitales compte quand le reste du titre est en minuscules et qu'il n'est
+    # pas précédé d'« assurance » ni de « de la » (SCIENCES DE LA VIE, ASSURANCE VIE).
+    if re.search(r"[a-z]", raw_title) and re.search(r"(?<![A-Za-z])VIE(?![A-Za-z])", raw_title) \
+            and not re.search(r"(?:assurance|de la|la|une|ma|sa|votre)\s+VIE\b", raw_title, flags=re.IGNORECASE):
+        return True
 
     if re.search(r"\bvie\s+(?:programme|program)\b", norm_title):
         return True
@@ -362,9 +371,36 @@ def _langue_exigee_sans_niveau(texte_normalise, code_langue):
             ]
             if base_gate.is_optional_context(fenetre):
                 continue
+            # « French and English OR Dutch and English » : la langue est une alternative, pas une exigence.
+            avant = texte_normalise[max(0, m.start() - 12): m.start()]
+            if re.search(r"(?:^|\s)(?:or|ou|of|en/of|et/ou|and/or)\s+(?:het\s+|le\s+)?$", avant):
+                continue
+            # « Dutch is a plus », « le néerlandais constitue un atout » : le marqueur d'exigence de la
+            # fenêtre concerne une autre langue (« English is required and Dutch is a plus »).
+            if code_langue == "nl" and (_RE_ATOUT_APRES.search(texte_normalise[m.start(): m.end() + 60])
+                                        or _RE_ATOUT_AVANT.search(texte_normalise[max(0, m.start() - 70): m.start()])):
+                continue
             if any(_bounded_in(marq, fenetre) for marq in _MAITRISE_MARQUEURS):
                 return fenetre
     return None
+
+
+# Replay du 17/09/2026 sur 8 197 offres : « bilingue » seul rejetait 32 offres,
+# dont « Bilingual in French and English », « Bilingue français - allemand » et
+# « Langues : Français (Expert - Bilingue), Anglais (Courant) » — aucune ne
+# demande le néerlandais. « Bilingue » ne vaut néerlandais que si la fenêtre
+# nomme le néerlandais, ou ne nomme aucune autre langue.
+_AUTRES_LANGUES = ("anglais", "english", "engels", "allemand", "german", "deutsch", "duits",
+                   "espagnol", "spanish", "spaans", "italien", "italian", "italiaans", "francais", "french", "frans")
+_NL_MARQUEURS = ("neerlandais", "nederlands", "dutch", "flamand", "vlaams", "nl")
+_RE_NL_ALTERNATIF = re.compile(r"\b(?:or|ou|of|en/of|et/ou|and/or)\s+(?:het\s+|le\s+)?(?:dutch|neerlandais|nederlands|nl)\b")
+# « bilingue FR/EN », « FR-DE », « EN/FR » : une paire sans neerlandais
+_RE_PAIRE_NON_NL = re.compile(r"\b(?:fr|fra|francais)\s*[/-]\s*(?:en|eng|ang|anglais|english|de|all|allemand|german|es|it)\b"
+                              r"|\b(?:en|eng|ang|anglais|english|de|all|allemand|german)\s*[/-]\s*(?:fr|fra|francais)\b")
+# « Vous marquez un point supplementaire si vous etes bilingue », « nice to have: Dutch »
+_RE_ATOUT_AVANT = re.compile(r"\b(?:point supplementaire|un plus|atout|bonus|apprecie|nice to have|welcome|pluspunt|troef|meegenomen)\b[^.;]{0,50}$")
+# « Dutch is a plus », « le neerlandais constitue un atout » : souhaite, pas exige
+_RE_ATOUT_APRES = re.compile(r"(?:dutch|neerlandais|nederlands|nl)\b[^.;:]{0,45}\b(?:plus|atout|asset|advantage|voordeel|pluspunt|troef|apprecie|appreciated|welcome|bonus|souhaite|wenselijk)\b")
 
 
 def _exigence_bilingue(texte_normalise):
@@ -376,6 +412,15 @@ def _exigence_bilingue(texte_normalise):
         fenetre = texte_normalise[max(0, idx - 60): idx + 90]
         if base_gate.is_optional_context(fenetre):
             continue
+        nomme_nl = any(_bounded_in(m, fenetre) for m in _NL_MARQUEURS)
+        autres = [m for m in _AUTRES_LANGUES if _bounded_in(m, fenetre) and m not in ("francais", "french", "frans")]
+        if not nomme_nl and (autres or _RE_PAIRE_NON_NL.search(fenetre)
+                             or any(_bounded_in(m, fenetre) for m in ("francais", "french", "frans"))):
+            continue  # bilingue FR/EN, FR/DE, ou « Français (Expert - Bilingue) » : pas du néerlandais
+        if nomme_nl and (_RE_NL_ALTERNATIF.search(fenetre) or _RE_ATOUT_APRES.search(fenetre)):
+            continue  # « OR Dutch », « en/of Nederlands », « le néerlandais est un atout » : pas une exigence
+        if _RE_ATOUT_AVANT.search(texte_normalise[max(0, idx - 70): idx]):
+            continue  # « point supplémentaire si vous êtes bilingue » : souhaité, pas exigé
         return fenetre
     return None
 

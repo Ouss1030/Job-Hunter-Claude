@@ -100,7 +100,9 @@ from matching.application_gate import (
     gate_summary,
     partition_gate_results,
 )
-from matching.application_gate_v13 import apply_application_gate
+# 18/09/2026 : couche V1.3.3 (frontieres de mots, langues, stages, V.I.E) — replay sur 8 197 offres,
+# 28 changements tous verifies ; V1.3.2 reste intacte en dessous (matching/application_gate_v13.py).
+from matching.application_gate_v133 import apply_application_gate
 from matching.application_queue_v12 import (
     build_application_queue,
     export_application_queue,

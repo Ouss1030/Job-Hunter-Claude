@@ -117,6 +117,7 @@ STEP_ORDER = [
 
 EXPECTED_VERSIONS = {
     "matching.application_gate_v13:GATE_VERSION": "1.3.2",
+    "matching.application_gate_v133:GATE_VERSION": "1.3.5",
     "matching.application_queue_v12:QUEUE_VERSION": "1.2",
     "applications.application_preparation:PREPARATION_VERSION": "1.2",
     "applications.job_refresh:REFRESH_VERSION": "1.3",

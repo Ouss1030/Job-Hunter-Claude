@@ -42,10 +42,9 @@ from datetime import datetime
 from difflib import SequenceMatcher
 from pathlib import Path
 
-from matching.application_gate_v13 import (
-    detect_mandatory_master_v131,
-    detect_structured_master_requirement,
-)
+from matching.application_gate_v13 import detect_structured_master_requirement
+# 18/09/2026 : la meme detection que le gate branche (couche V1.3.3) — « master data » n'est pas un diplome.
+from matching.application_gate_v133 import detect_mandatory_master_v133 as detect_mandatory_master_v131
 
 from matching.dutch_language_guard import analyze_dutch_dominance
 
