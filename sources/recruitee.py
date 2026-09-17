@@ -55,6 +55,7 @@ import requests
 from config.recruitee_sources import RECRUITEE_VERSION, enabled_companies
 from database.models import JobOffer
 from sources.location_belgium import BE_CONFIRMED, analyze_location
+from sources.ats_public_v2 import declarer_detail
 
 
 RECRUITEE_CONNECTOR_VERSION = "1.0"
@@ -243,6 +244,9 @@ def convert_recruitee_offer(offer: dict, company: dict) -> JobOffer | None:
     setattr(job, "belgium_status", _belgium_status(offer))
     setattr(job, "source_eligibility_status", "ELIGIBLE")
     setattr(job, "source_eligibility_reason", None)
+
+    # La fiche complete a ete lue : le Matcher doit le savoir (17/09/2026).
+    declarer_detail(job)
 
     return job
 

@@ -52,6 +52,7 @@ from config.successfactors_sources import (
 )
 from database.models import JobOffer
 from sources.location_belgium import detect_belgium
+from sources.ats_public_v2 import declarer_detail
 
 
 SUCCESSFACTORS_CONNECTOR_VERSION = "1.2"
@@ -330,6 +331,9 @@ def convert_successfactors_job(url: str, donnees: dict, company: dict):
     setattr(offre, "belgium_status", detect_belgium(slug))
     setattr(offre, "source_eligibility_status", "ELIGIBLE")
     setattr(offre, "source_eligibility_reason", None)
+
+    # La fiche complete a ete lue : le Matcher doit le savoir (17/09/2026).
+    declarer_detail(offre)
 
     return offre
 

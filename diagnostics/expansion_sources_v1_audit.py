@@ -449,6 +449,21 @@ def main():
                        total == 3 and len(cands) == 2 and err is None and all("/job/" in u for u in cands)
                        and not any("Lodz" in u for u in cands), str((cands, total, err))))
 
+    # Confiance du Matcher (17/09/2026) : les six connecteurs qui lisent la fiche complete doivent le declarer
+    from sources.ats_public_v2 import declarer_detail
+    from database.models import JobOffer as _JO
+    j_long = declarer_detail(_JO(source="X", external_id="1", title="t", company="c", location="l", description="x" * 900, url="u",
+                                 date_published=None, contract_type=None, language=None, salary=None, date_collected="d"))
+    j_court = declarer_detail(_JO(source="X", external_id="2", title="t", company="c", location="l", description="x" * 100, url="u",
+                                  date_published=None, contract_type=None, language=None, salary=None, date_collected="d"))
+    modules = ["workday_ats_v1", "successfactors_ats_v1", "recruitee", "phenom_ats_v1", "greenhouse", "smartrecruiters"]
+    appellent = [m for m in modules if "declarer_detail(" in (Path(__file__).resolve().parent.parent / "sources" / f"{m}.py").read_text(encoding="utf-8")]
+    tests.append(check("Confiance Matcher : declarer_detail pose attempted/success/longueur (900 -> HIGH possible, 100 -> pas fiable) ; "
+                       "Workday, SuccessFactors, Recruitee, Phenom, Greenhouse, SmartRecruiters l'appellent",
+                       j_long.detail_enrichment_attempted and j_long.detail_enrichment_success and j_long.detail_matching_text_length == 900
+                       and j_court.detail_enrichment_attempted and not j_court.detail_enrichment_success and len(appellent) == 6,
+                       str(appellent)))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl

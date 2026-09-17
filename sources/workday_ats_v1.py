@@ -45,6 +45,7 @@ import requests
 from config.workday_sources import WORKDAY_VERSION, enabled_companies
 from database.models import JobOffer
 from sources.location_belgium import BE_CONFIRMED, detect_belgium
+from sources.ats_public_v2 import declarer_detail
 
 
 WORKDAY_CONNECTOR_VERSION = "1.0"
@@ -233,6 +234,9 @@ def convert_workday_job(detail: dict, posting: dict, company: dict) -> JobOffer 
 
     setattr(offre, "source_eligibility_status", "ELIGIBLE")
     setattr(offre, "source_eligibility_reason", None)
+
+    # La fiche complete a ete lue : le Matcher doit le savoir (17/09/2026).
+    declarer_detail(offre)
 
     return offre
 

@@ -74,6 +74,28 @@ def _statut_be(localisation: str, pays_iso: str = "") -> str:
     return detect_belgium_multi(localisation)
 
 
+MIN_DETAIL_FIABLE = 250
+
+
+def declarer_detail(job, texte=None):
+    """
+    Le connecteur a lu la fiche complete : il doit le dire au Matcher V5.1.
+
+    evaluate_confidence() ne regarde que detail_enrichment_attempted,
+    detail_enrichment_success et detail_matching_text_length ; sans eux, une
+    offre est « provisoire » et le gate la plafonne a VERIFY, jamais APPLY —
+    constate le 17/09/2026 sur 2 400 offres Workday, SuccessFactors,
+    Recruitee, Phenom et Greenhouse dont la description complete (1 000 a
+    8 000 caracteres) etait pourtant en base : 0 APPLY, 0 STRETCH.
+    """
+    t = str(texte if texte is not None else (getattr(job, "description", "") or ""))
+    n = len(t)
+    job.detail_enrichment_attempted = True
+    job.detail_enrichment_success = n >= MIN_DETAIL_FIABLE
+    job.detail_matching_text_length = n
+    return job
+
+
 def _retenir(statut: str, include_unknown: bool) -> bool:
     return statut in (BE_CONFIRMED, BE_LIKELY) or (statut == BE_UNKNOWN and include_unknown)
 

@@ -46,6 +46,7 @@ import requests
 from config.greenhouse_sources import GREENHOUSE_VERSION, enabled_companies
 from database.models import JobOffer
 from sources.location_belgium import detect_belgium_multi
+from sources.ats_public_v2 import declarer_detail
 
 
 GREENHOUSE_CONNECTOR_VERSION = "1.0"
@@ -192,6 +193,9 @@ def convert_greenhouse_job(job: dict, company: dict) -> JobOffer | None:
 
     setattr(offer, "source_eligibility_status", "ELIGIBLE")
     setattr(offer, "source_eligibility_reason", None)
+
+    # La fiche complete a ete lue : le Matcher doit le savoir (17/09/2026).
+    declarer_detail(offer)
 
     return offer
 

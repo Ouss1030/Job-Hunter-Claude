@@ -42,6 +42,7 @@ from config.smartrecruiters_sources import (
     SMARTRECRUITERS_TIMEOUT_SECONDS,
 )
 from database.models import JobOffer
+from sources.ats_public_v2 import declarer_detail
 
 
 API_BASE = "https://api.smartrecruiters.com/v1/companies"
@@ -416,6 +417,9 @@ def posting_to_job(
 
     setattr(job, "source_eligibility_status", "ELIGIBLE")
     setattr(job, "source_eligibility_reason", None)
+
+    # La fiche complete a ete lue : le Matcher doit le savoir (17/09/2026).
+    declarer_detail(job)
 
     return job
 
