@@ -49,7 +49,7 @@ _FORMES = {"sa", "nv", "sprl", "bvba", "srl", "bv", "scrl", "cvba", "asbl", "vzw
            "et", "and", "en", "van", "der", "des", "du", "ltd", "inc", "gmbh", "ag", "bvba/sprl", "sa/nv", "nv/sa"}
 _MOTS_VIDES = _FORMES | {"pharma", "pharmaceuticals", "pharmaceutical", "bio", "biotech", "medical", "clinical", "solutions",
                          "services", "consulting", "technologies", "technology", "systems", "lab", "labs", "laboratoire"}
-_RE_BELGE = re.compile(r"(?:belgi(?:que|e|um|en)|bruxelles|brussels?|wallonie|vlaanderen|antwerpen|anvers|gent|liege|charleroi|namur|leuven|louvain|mons|hasselt)")
+_RE_BELGE = re.compile(r"(?<![a-z])(?:belgi(?:que|e|um|en)|bruxelles|brussels?|wallonie|vlaanderen|antwerpen|anvers|gent|liege|charleroi|namur|leuven|louvain|mons|hasselt)(?![a-z])")
 _EXCLUS_DOMAINES = ("googletagmanager.com", "google.com", "linkedin.com", "facebook.com", "youtube.com", "twitter.com",
                     "x.com", "instagram.com", "yoast.com", "addtoany.com", "elementor.com", "typekit.net", "tiktok.com")
 
