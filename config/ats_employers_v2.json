@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-18T01:11:17+02:00",
+ "updated_at": "2026-09-18T01:24:42+02:00",
  "employers": [
   {
    "ats": "ASHBY",
@@ -1771,6 +1771,20 @@
    "career_url": "https://jobs.gent.be/",
    "notes": "",
    "first_seen": "2026-09-17T17:57:50+02:00"
+  },
+  {
+   "ats": "HTML",
+   "connector": "HTML_SITES",
+   "identifier": "https://www.straff.be/jobs",
+   "label": "Straff",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:24:42+02:00",
+   "jobs_total": 5,
+   "jobs_be": 4,
+   "discovered_by": "bce:63920",
+   "career_url": "https://www.straff.be/jobs",
+   "notes": "",
+   "first_seen": "2026-09-18T01:24:42+02:00"
   },
   {
    "ats": "HTML",
@@ -3634,6 +3648,20 @@
    "career_url": "https://jobs.timefold.ai/",
    "notes": "",
    "first_seen": "2026-09-17T23:42:29+02:00"
+  },
+  {
+   "ats": "JSONLD",
+   "connector": "JSONLD_SITES",
+   "identifier": "jobs.mbg.be",
+   "label": "Tm Mbg-Vma Bn5",
+   "enabled": true,
+   "verified_at": "2026-09-18T01:23:22+02:00",
+   "jobs_total": 13,
+   "jobs_be": 3,
+   "discovered_by": "bce:63920",
+   "career_url": "https://jobs.mbg.be/",
+   "notes": "",
+   "first_seen": "2026-09-18T01:23:22+02:00"
   },
   {
    "ats": "JSONLD",
