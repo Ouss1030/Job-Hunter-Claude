@@ -1,0 +1,1704 @@
+{
+ "schema_version": "1.0",
+ "generated_at": "2026-09-17T19:08:13",
+ "purpose": "Employeurs qui publient sur le Forem/Actiris, site devine, a passer au moteur de decouverte.",
+ "groups": {
+  "employeurs_actifs": [
+   {
+    "domaine": "adecco.com",
+    "label": "ADECCO PERSONNEL SERVICES",
+    "offres_portails": 1514
+   },
+   {
+    "domaine": "tempo-team.be:443",
+    "label": "TEMPO-TEAM",
+    "offres_portails": 1085
+   },
+   {
+    "domaine": "synergiebrood.be",
+    "label": "SYNERGIE BELGIUM",
+    "offres_portails": 781
+   },
+   {
+    "domaine": "actiefinterim.be",
+    "label": "ACTIEF INTERIM",
+    "offres_portails": 548
+   },
+   {
+    "domaine": "manpower.com",
+    "label": "MANPOWER (BELGIUM)",
+    "offres_portails": 421
+   },
+   {
+    "domaine": "employeur.com",
+    "label": "Employeur non précisé",
+    "offres_portails": 400
+   },
+   {
+    "domaine": "agilitas.com",
+    "label": "AGILITAS GROUP",
+    "offres_portails": 321
+   },
+   {
+    "domaine": "benjamin.be",
+    "label": "BENJAMIN ELENA EMILE - BEE",
+    "offres_portails": 286
+   },
+   {
+    "domaine": "fundingforce.be",
+    "label": "FUNDING FORCE",
+    "offres_portails": 259
+   },
+   {
+    "domaine": "equans.be",
+    "label": "EQUANS",
+    "offres_portails": 230
+   },
+   {
+    "domaine": "robert.com",
+    "label": "ROBERT WALTERS PEOPLE SOLUTIONS",
+    "offres_portails": 177
+   },
+   {
+    "domaine": "xtra.works",
+    "label": "XTRA INTERIM",
+    "offres_portails": 168
+   },
+   {
+    "domaine": "profile.be",
+    "label": "THE PROFILE GROUP",
+    "offres_portails": 153
+   },
+   {
+    "domaine": "stepstone.be",
+    "label": "STEPSTONE",
+    "offres_portails": 142
+   },
+   {
+    "domaine": "dahome.be",
+    "label": "DAHOME",
+    "offres_portails": 139
+   },
+   {
+    "domaine": "ksconsulting.agency",
+    "label": "KS - CONSULTING",
+    "offres_portails": 135
+   },
+   {
+    "domaine": "bacca.be",
+    "label": "BACCA HOMECARE SERVICES",
+    "offres_portails": 128
+   },
+   {
+    "domaine": "kingfisher-recruitment.be",
+    "label": "KINGFISHER RECRUITMENT",
+    "offres_portails": 127
+   },
+   {
+    "domaine": "i-mens.be",
+    "label": "I-MENS",
+    "offres_portails": 123
+   },
+   {
+    "domaine": "apexfire.be",
+    "label": "APEX SERVICES",
+    "offres_portails": 110
+   },
+   {
+    "domaine": "betuned.be",
+    "label": "BETUNED",
+    "offres_portails": 110
+   },
+   {
+    "domaine": "familiehulp.be",
+    "label": "FAMILIEHULP",
+    "offres_portails": 107
+   },
+   {
+    "domaine": "joblink.be",
+    "label": "JOBLINK",
+    "offres_portails": 91
+   },
+   {
+    "domaine": "aeronautica.be",
+    "label": "AERONAUTICA",
+    "offres_portails": 85
+   },
+   {
+    "domaine": "finvisors.be",
+    "label": "FINVISORS",
+    "offres_portails": 83
+   },
+   {
+    "domaine": "jobspower.be",
+    "label": "JOBS POWER",
+    "offres_portails": 80
+   },
+   {
+    "domaine": "societe.com",
+    "label": "S.N.C.B - SOCIÉTÉ NATIONALE DES CHEMINS DE FER BELGES",
+    "offres_portails": 67
+   },
+   {
+    "domaine": "human.com",
+    "label": "HUMAN GOLD",
+    "offres_portails": 64
+   },
+   {
+    "domaine": "police.be",
+    "label": "POLICE FÉDÉRALE",
+    "offres_portails": 60
+   },
+   {
+    "domaine": "iboo.com",
+    "label": "IBOO - IBOO",
+    "offres_portails": 59
+   },
+   {
+    "domaine": "adequat.com",
+    "label": "ADÉQUAT BELGIUM",
+    "offres_portails": 51
+   },
+   {
+    "domaine": "sint.com",
+    "label": "SINT-GOEDELE BRUSSEL",
+    "offres_portails": 40
+   },
+   {
+    "domaine": "vulpia.be",
+    "label": "VULPIA VLAANDEREN",
+    "offres_portails": 40
+   },
+   {
+    "domaine": "onafhankelijke.eu",
+    "label": "ONAFHANKELIJKE ZIEKENFONDSEN - ZORGKAS VLAANDEREN",
+    "offres_portails": 38
+   },
+   {
+    "domaine": "verviers.be",
+    "label": "Verviers",
+    "offres_portails": 38
+   },
+   {
+    "domaine": "abiomis.com",
+    "label": "ABIOMIS BELGIUM",
+    "offres_portails": 36
+   },
+   {
+    "domaine": "raad.be",
+    "label": "RAAD VOOR INSPECTIE EN KWALITEITSZORG NIET-CONFESSIONELE ZED",
+    "offres_portails": 35
+   },
+   {
+    "domaine": "infano.be",
+    "label": "INFANO",
+    "offres_portails": 34
+   },
+   {
+    "domaine": "headcount.be",
+    "label": "HEADCOUNT",
+    "offres_portails": 33
+   },
+   {
+    "domaine": "noelfranklin.be",
+    "label": "NOEL FRANKLIN",
+    "offres_portails": 33
+   },
+   {
+    "domaine": "etreac.be",
+    "label": "ETREAC CONSULTING",
+    "offres_portails": 32
+   },
+   {
+    "domaine": "drummondeconomique.ca",
+    "label": "Drummond économique",
+    "offres_portails": 31
+   },
+   {
+    "domaine": "office.eu",
+    "label": "Office & admin Liège/ Lux",
+    "offres_portails": 31
+   },
+   {
+    "domaine": "vlaanderen.be",
+    "label": "VLAANDEREN CONNECT.",
+    "offres_portails": 31
+   },
+   {
+    "domaine": "sodexo.be",
+    "label": "SODEXO BELGIË - SODEXO BELGIQUE",
+    "offres_portails": 30
+   },
+   {
+    "domaine": "gosselies.be",
+    "label": "Gosselies",
+    "offres_portails": 28
+   },
+   {
+    "domaine": "jobbrands.be",
+    "label": "Jobbrands",
+    "offres_portails": 28
+   },
+   {
+    "domaine": "villers.be",
+    "label": "Villers-le-Bouillet",
+    "offres_portails": 27
+   },
+   {
+    "domaine": "flextra.be",
+    "label": "FLEXTRA INTERIM",
+    "offres_portails": 26
+   },
+   {
+    "domaine": "oliver.be",
+    "label": "OLIVER'S HOME",
+    "offres_portails": 26
+   },
+   {
+    "domaine": "modivo.pl",
+    "label": "MODIVO BELGIUM",
+    "offres_portails": 25
+   },
+   {
+    "domaine": "tempo.com",
+    "label": "TEMPO-TEAM - TEMPO-TEAM",
+    "offres_portails": 25
+   },
+   {
+    "domaine": "kruidvat.be",
+    "label": "KRUIDVAT",
+    "offres_portails": 23
+   },
+   {
+    "domaine": "promatic.com",
+    "label": "PROMATIC-B",
+    "offres_portails": 23
+   },
+   {
+    "domaine": "agojobs.com",
+    "label": "AGO JOBS & HR - Recruitment Team Large Accounts",
+    "offres_portails": 22
+   },
+   {
+    "domaine": "technics.com",
+    "label": "Technics Hainaut BW",
+    "offres_portails": 22
+   },
+   {
+    "domaine": "be.elis.com",
+    "label": "ELIS BELGIUM",
+    "offres_portails": 21
+   },
+   {
+    "domaine": "tucrail.be",
+    "label": "TUC RAIL",
+    "offres_portails": 21
+   },
+   {
+    "domaine": "frameries.be",
+    "label": "Frameries",
+    "offres_portails": 20
+   },
+   {
+    "domaine": "hotelastoria.be",
+    "label": "HÔTEL ASTORIA",
+    "offres_portails": 20
+   },
+   {
+    "domaine": "retail.be",
+    "label": "Retail & Hospitality Ht Ouest",
+    "offres_portails": 20
+   },
+   {
+    "domaine": "vincotte.be",
+    "label": "VINÇOTTE INTERNATIONAL",
+    "offres_portails": 20
+   },
+   {
+    "domaine": "malmedy.be",
+    "label": "Malmedy",
+    "offres_portails": 19
+   },
+   {
+    "domaine": "solistalents.com",
+    "label": "SOLIS TALENTS",
+    "offres_portails": 19
+   },
+   {
+    "domaine": "bofrost.be",
+    "label": "BOFROST ZENTRALE BELGIEN",
+    "offres_portails": 18
+   },
+   {
+    "domaine": "daenens.be",
+    "label": "DAENENS JOBS & INTERIM - DAENENS JOBS & INTERIM",
+    "offres_portails": 17
+   },
+   {
+    "domaine": "poetsbureau.be",
+    "label": "HET POETSBUREAU",
+    "offres_portails": 17
+   },
+   {
+    "domaine": "bozz.com",
+    "label": "THE BOZZ - THE BOZZ",
+    "offres_portails": 17
+   },
+   {
+    "domaine": "alliance.com",
+    "label": "ALLIANCE NATIONALE DES MUTUALITÉS CHRÉTIENNES - LANDSBOND DE",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "cohezio.be",
+    "label": "COHEZIO",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "creamconsulting.com",
+    "label": "CREAM CONSULTING",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "lijn.be",
+    "label": "DE LIJN",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "motmans.eu",
+    "label": "MOTMANS & PARTNERS",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "operational.be",
+    "label": "Operational Libramont",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "ronse.be",
+    "label": "Ronse ots",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "senec.be",
+    "label": "SENEC - SENERCOM - CONFORT MULTI SERVICES",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "solis.de",
+    "label": "SOLIS TALENTS - SOLIS TALENTS",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "wolfsonrecruitment.com",
+    "label": "WOLFSON RECRUITMENT",
+    "offres_portails": 16
+   },
+   {
+    "domaine": "louyet.bmw.be",
+    "label": "BMW BRUSSELS",
+    "offres_portails": 15
+   },
+   {
+    "domaine": "emeis.be",
+    "label": "EMEIS BELGIUM",
+    "offres_portails": 15
+   },
+   {
+    "domaine": "pragma.be",
+    "label": "PRAGMA",
+    "offres_portails": 15
+   },
+   {
+    "domaine": "insurance.com",
+    "label": "AG INSURANCE",
+    "offres_portails": 14
+   },
+   {
+    "domaine": "jacops.be",
+    "label": "J.M. JACOPS",
+    "offres_portails": 14
+   },
+   {
+    "domaine": "randstad.be:443",
+    "label": "RANDSTAD CONSTRUCT",
+    "offres_portails": 14
+   },
+   {
+    "domaine": "woonzorgnet-dijleland.be",
+    "label": "WOONZORGNET-DIJLELAND",
+    "offres_portails": 13
+   },
+   {
+    "domaine": "asconsulting.com",
+    "label": "AS CONSULTING RH - AS CONSULTING RH",
+    "offres_portails": 12
+   },
+   {
+    "domaine": "catalay.com",
+    "label": "CATALAY",
+    "offres_portails": 12
+   },
+   {
+    "domaine": "commune.be",
+    "label": "COMMUNE D'ANDERLECHT",
+    "offres_portails": 12
+   },
+   {
+    "domaine": "flyingservices.at",
+    "label": "FLYING SERVICES",
+    "offres_portails": 12
+   },
+   {
+    "domaine": "tournai.be",
+    "label": "Tournai",
+    "offres_portails": 12
+   },
+   {
+    "domaine": "librairieclub.be",
+    "label": "Club Med - Club Med",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "bidsy.com",
+    "label": "DP World Zeebrugge Terminals",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "fonds.eu",
+    "label": "FONDS VOOR BESTAANSZEKERHEID VAN HET NOTARIAAT",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "ikea.com",
+    "label": "IKEA BELGIUM",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "land.com",
+    "label": "LAND VAN WEZEMBEEK-OPPEM",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "nivelles.be",
+    "label": "Nivelles",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "humanpartner.be",
+    "label": "PEOPLE PARTNER",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "safran.be",
+    "label": "SAFRAN AIRCRAFT ENGINE SERVICES BRUSSELS",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "village.com",
+    "label": "Village n°1 Entreprises - Village n°1 ENTREPRISES",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "yellow.com",
+    "label": "YELLOW SELECTIE ANTWERPEN/LIMBURG",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "young.com",
+    "label": "Young Talents Wallonie",
+    "offres_portails": 11
+   },
+   {
+    "domaine": "babilou.fr",
+    "label": "BABILOU BELGIUM",
+    "offres_portails": 10
+   },
+   {
+    "domaine": "conessence.com",
+    "label": "CONESSENCE",
+    "offres_portails": 10
+   },
+   {
+    "domaine": "samusocial.be",
+    "label": "NEW SAMUSOCIAL",
+    "offres_portails": 10
+   },
+   {
+    "domaine": "steveny.be",
+    "label": "STEVENY",
+    "offres_portails": 10
+   },
+   {
+    "domaine": "enginity.be",
+    "label": "ENGINITY",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "huyzehonighsdries.be",
+    "label": "HUYZE HONIGHSDRIES",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "keolis.be",
+    "label": "KEOLIS BELGIUM",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "maxizoo.be",
+    "label": "MAXI ZOO BELGIUM",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "assurances.be",
+    "label": "P & V ASSURANCES - P & V VERZEKERINGEN",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "wernerpensaert.be",
+    "label": "PENSAERT MANAGEMENT",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "sarens.be",
+    "label": "SARENS",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "seris.be",
+    "label": "SERIS SECURITY",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "takko.com",
+    "label": "TAKKO FASHION BELGIUM 2",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "toptalents.be",
+    "label": "TopTalents",
+    "offres_portails": 9
+   },
+   {
+    "domaine": "clerck.be",
+    "label": "\"DE CLERCK & C°\"",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "3wplus.be",
+    "label": "3WPLUS KINDEROPVANG",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "anima.be",
+    "label": "ANIMA CARE VLAANDEREN",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "nagelmackers.be",
+    "label": "BANQUE NAGELMACKERS",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "comstrat.be",
+    "label": "CENTRE HOSPITALIER REGIONAL DE LA CITADELLE - Site de la Cit",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "centrum.com",
+    "label": "CENTRUM GANSPOEL",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "cronos-groep.be",
+    "label": "CRONOS",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "dumbo.be",
+    "label": "DUMBO & CO",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "familiezorg.be",
+    "label": "FAMILIEZORG OOST-VLAANDEREN",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "idewe.be",
+    "label": "IDEWE - EXTERNE DIENST VOOR PREVENTIE EN BESCHERMING OP HET ",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "satellit.be",
+    "label": "SATELLIT",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "sephora.be",
+    "label": "SEPHORA BELGIQUE",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "union.be",
+    "label": "UNION NATIONALE DES MUTUALITÉS SOCIALISTES-NATIONAAL VERBOND",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "domeinwebshop.nl",
+    "label": "VERENIGING DIESTSE ZIEKENHUIZEN",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "workr.be",
+    "label": "WORKR P & O",
+    "offres_portails": 8
+   },
+   {
+    "domaine": "action.com",
+    "label": "ACTION NON FOOD BELGIUM",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "ausy.it",
+    "label": "AUSY BELGIUM",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "brouwerij.be",
+    "label": "BROUWERIJ HAACHT - BRASSERIE HAACHT",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "carrefour.be",
+    "label": "CARREFOUR BELGIUM",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "cll.be",
+    "label": "CLL - Centres de Langues",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "credendo.com",
+    "label": "CREDENDO - SHORT - TERM NON - EU RISKS",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "gabati.be",
+    "label": "GABATI",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "havinet.be",
+    "label": "HAVINET",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "idee.com",
+    "label": "IDEE KIDS",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "imox.be",
+    "label": "IMOX",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "ninatrans.eu",
+    "label": "NINATRANS",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "talencia.be",
+    "label": "TALENCIA CONSULTING",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "talentsquareinterim.be",
+    "label": "TALENTSQUARE INTERIM",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "ampnet.be",
+    "label": "UBIWAY RETAIL",
+    "offres_portails": 7
+   },
+   {
+    "domaine": "absolute.com",
+    "label": "ABSOLUTE@WORK",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "domaineasy.com",
+    "label": "AD ANSPACH",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "bkinterim.com",
+    "label": "BK INTERIM",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "blankedale.com",
+    "label": "BLANKEDALE",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "bosspaints.be",
+    "label": "BOSS PAINTS",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "myprivacy.dpgmediagroup.net",
+    "label": "DPG MEDIA",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "eligio.be",
+    "label": "ELIGIO",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "erasmushogeschool.be",
+    "label": "ERASMUSHOGESCHOOL BRUSSEL, VLAAMSE AUTONOME HOGESCHOOL",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "entreprises.eu",
+    "label": "Entreprises André Houyoux",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "espacemode.be",
+    "label": "Espace Mode",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "hansanders.be",
+    "label": "HANS ANDERS BELGIË",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "hocke.be",
+    "label": "HOCKÉ",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "in-z.be",
+    "label": "IN-Z",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "katholiek.com",
+    "label": "KATHOLIEK ONDERWIJS BRUSSEL-NOORD",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "atelier.be",
+    "label": "L'Atelier - L'Atelier",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "logistics.com",
+    "label": "Logistics WC Hainaut/BW",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "michiels.be",
+    "label": "Michiels, Elodie",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "pro-industry.nl",
+    "label": "PRO INDUSTRY BELGIË",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "roosens.be",
+    "label": "ROOSENS BETONS - ROOSENS BETONS",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "securitas.be",
+    "label": "SECURITAS",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "silva-medical.be",
+    "label": "SILVA MEDICAL",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "smet.be",
+    "label": "SMET - BORING - Smet boring",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "veeweyde.be",
+    "label": "VEEWEYDE",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "vind.com",
+    "label": "VIND",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "kuub.be",
+    "label": "WOON EN ZORGCENTRUM ONZE-LIEVE-VROUW TE WEZEMBEEK-OPPEM",
+    "offres_portails": 6
+   },
+   {
+    "domaine": "afarax.be",
+    "label": "AFARAX",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "andre.be",
+    "label": "ANDRE CHENE",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "camco.be",
+    "label": "CAMCO TECHNOLOGIES",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "delrue.be",
+    "label": "DELRUE B & M",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "digitribe.be",
+    "label": "DIGI TRIBE",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "ecoworks.be",
+    "label": "ECOWORKS",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "eggo.be",
+    "label": "EGGO GROUP",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "elmos.be",
+    "label": "ELMOS - DMV - NETQ - BITS",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "garage.com",
+    "label": "GARAGE OLLIVIER JOHAN",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "homevogelzang.be",
+    "label": "HOME VOGELZANG",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "builders.com",
+    "label": "HR BUILDERS",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "flux.be",
+    "label": "HR FLUX - HR Flux",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "hotton.be",
+    "label": "Hotton, Louis",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "ignatius.com",
+    "label": "IGNATIUS SCHOLEN BRUSSEL",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "industry.com",
+    "label": "Industry Battice",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "jomasport.shop",
+    "label": "JOMA SPORT",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "levenslust.com",
+    "label": "LEVENSLUST",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "maxi.be",
+    "label": "MAXI ZOO ZUID - MAXI ZOO ZUID",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "nursing.com",
+    "label": "NURSING CARE AT HOME - NURSING CARE AT HOME",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "pastridor.com:443",
+    "label": "PASTRIDOR",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "pleegzorg.be",
+    "label": "PLEEGZORG VLAAMS - BRABANT EN BRUSSEL",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "pour.be",
+    "label": "POUR VIVRE AUTREMENT - POUR VIVRE AUTREMENT",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "produo.com",
+    "label": "PRO - DUO",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "sambre.eu",
+    "label": "SAMBRE & MEUSE HOSPITALITY - Le Sambre et Meuse",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "sarawak.be",
+    "label": "SARAWAK",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "scheut.be",
+    "label": "SCHEUT",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "solidaris-brabant.be",
+    "label": "SOLIDARIS BRABANT",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "sportoase.be",
+    "label": "SPORTOASE PHILIPSSITE LEUVEN",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "stefanini.com",
+    "label": "STEFANINI",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "studentacademy.be",
+    "label": "STUDENT ACADEMY ASBL",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "atlassian.com",
+    "label": "TEAM-ONE EMPLOYMENT SPECIALISTS - TEAM ONE HUY",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "trucks.com",
+    "label": "TH Trucks Liège",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "totalenergies.be",
+    "label": "TotalEnergies Marketing Belgium",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "verdonck.com",
+    "label": "Verdonck Professional Partners",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "zonneliedvzw.be",
+    "label": "ZONNELIED",
+    "offres_portails": 5
+   },
+   {
+    "domaine": "amimetals.com",
+    "label": "AMI METALS EUROPE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "arvesta.eu",
+    "label": "ARVESTA",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "atconglobal.com",
+    "label": "ATCON GLOBAL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "avantor.be",
+    "label": "Avantor Sciences",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "biowanze.be",
+    "label": "BIOWANZE - BioWanze s.a.",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "bnpparibasfortis.be",
+    "label": "BNP Paribas Fortis",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "bucci.com",
+    "label": "BUCCI&CO",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "creche.eu",
+    "label": "CRECHE EUROPEENNE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "crombe.be",
+    "label": "CROMBE - CROMBE SA",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "centrale.be",
+    "label": "Centrale de Services à Domicile - Réseau Solidaris - CENTRAL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "cleaning.com",
+    "label": "Cleaning Liege",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "damart.be",
+    "label": "DAMART T.S.D.",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "debaenst.be",
+    "label": "DEBAENST - Debaenst / Cuisine Catherine / Viangel",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "destiny.com",
+    "label": "DESTINY",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "dsunits.be",
+    "label": "DS UNITS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "express.com",
+    "label": "EXPRESS STOCKEL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "europabank.be",
+    "label": "Europabank",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "garnimetal.com",
+    "label": "GARNIMETAL - GARNIMETAL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "hetraster.be",
+    "label": "HET RASTER",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "jean.be",
+    "label": "Jean Del'cour - JD'C Site des Hauts-Sart",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "kameojobs.be",
+    "label": "KAMEO JOBS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "keylab.eu",
+    "label": "KEYLAB - KEYLAB",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "kiemkracht.be",
+    "label": "KIEMKRACHT",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "lecopaindignace.be",
+    "label": "L'ECOPAIN D'IGNACE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "auberges-de-jeunesse.com",
+    "label": "LES AUBERGES DE JEUNESSE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "lucien.be",
+    "label": "LUCIEN BIKE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "maarif.be",
+    "label": "MAARIF BELGIUM",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "marbrerie.com",
+    "label": "MARBRERIE DE SOIGNIES - Scierie des Carrières de Maffle",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "mingpartners.com",
+    "label": "MING & PARTNERS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "mission.com",
+    "label": "MISSION MASALA & BOMBAY BBQ",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "mistergenius.be",
+    "label": "MISTER GENIUS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "mockel.be",
+    "label": "MOCKEL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "fr.myldes.be",
+    "label": "MYLDES",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "nthcontractors.be",
+    "label": "NTH CONTRACTORS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "onstehuisbrabant.be",
+    "label": "ONS TEHUIS-BRABANT",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "prof-praxis.com",
+    "label": "PROF PRAXIS",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "publicspeaking.com",
+    "label": "PUBLIC SPEAKING",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "puratos.be",
+    "label": "PURATOS - Puratos SA - Andenne",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "pizza.com",
+    "label": "Pizza Chiara - Pizza Chiara",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "rock.com",
+    "label": "ROCK ONE",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "simpex.be",
+    "label": "SIMPEX GROUP INTERNATIONAL",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "squarehub.eu",
+    "label": "SQUARE HUB",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "aarschot.be",
+    "label": "STAD AARSCHOT",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "talents4you.be",
+    "label": "TALENTS4YOU",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "future.com",
+    "label": "The Future Alliance - The Future Alliance",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "velde.be",
+    "label": "VAN DE VELDE MILIEU",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "valk.be",
+    "label": "VAN DER VALK HOTEL WATERLOO",
+    "offres_portails": 4
+   },
+   {
+    "domaine": "aertssen.be",
+    "label": "AERTSSEN GROUP",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "blox.eu",
+    "label": "AI-BLOX",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "ardenne.com",
+    "label": "ARDENNE CONTAINER - Ardenne Container - BELCYCO",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "atalian.be",
+    "label": "ATALIAN",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "audi.be",
+    "label": "AUDI STORE HASSELT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "axis71.com",
+    "label": "AXIS 71",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "azorg.be",
+    "label": "AZORG",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "batir.com",
+    "label": "BATIR RENOVER GERER",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "maverick.zohosites.com",
+    "label": "BLUE TUBE TECHNICS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "subdomain.com",
+    "label": "BR CONSULTING Sàrl",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "briek360.be",
+    "label": "BRIEK360°",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "brik.be",
+    "label": "BRIK - STUDENT IN BRUSSEL",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "briko.com",
+    "label": "BRIKO PLAN-IT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "cegelec.be",
+    "label": "CEGELEC - CEGELEC",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "chang.com",
+    "label": "CHANG XING - CHANG XING",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "cheops.com",
+    "label": "CHEOPS TECHNOLOGY",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "cityone.be",
+    "label": "CITY ONE BELGIUM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "connexis.com",
+    "label": "CONNEXIS WS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "centerparcs.be",
+    "label": "Center Parcs Ardennen - Center Parcs Ardennen",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "sauce-delka.com",
+    "label": "DELKA - DELKA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "dentius.be",
+    "label": "DENTIUS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "development.com",
+    "label": "DEVELOPMENT ` COORDINATION SERVICES",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "ecowerf.be",
+    "label": "ECO WERF, INTERGEMEENTELIJK MILIEUBEDRIJF OOST-BRABANT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "elitestyle.com",
+    "label": "ELITE STYLE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "enterprise.be",
+    "label": "ENTERPRISE APPLICATIONS AND SERVICES INTEGRATION",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "etablissement.com",
+    "label": "ETABLISSEMENT AUTOMATION",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "entraide.be",
+    "label": "Entraide par le Travail - Entraide par le Travail",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "euro.com",
+    "label": "Euro - Locks S.A.",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "facozinc.com",
+    "label": "FACOZINC - FACOMETAL - FACOZINC - FACOMETAL",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "febelco.be",
+    "label": "FEBELCO",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "fiducial.be",
+    "label": "FIDUCIAL",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "fraselle.eu",
+    "label": "FRASELLE ET FILS - Fraselle et Fils",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "heidelberg.com",
+    "label": "HEIDELBERG BENELUX",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "hema.com",
+    "label": "HEMA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "high.be",
+    "label": "HIGH QUALITY CLEAN",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "hoorcentrumaerts.be",
+    "label": "HOORCENTRUM AERTS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "hotel.eu",
+    "label": "HOTEL DE LA POSTE - HOTEL DE LA POSTE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "hubert-vision.be",
+    "label": "HUBERT-VISION",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "impro.be",
+    "label": "IMPRO LE SAULCHOIR",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "inova.org",
+    "label": "INOVA VIP - CONCORDIA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "integrated.com",
+    "label": "INTEGRATED PRODUCTION AND TEST ENGINEERING",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "jadition.be",
+    "label": "JADITION",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "keos.be",
+    "label": "KEOS BRUSSELS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "latelierinformatique.be",
+    "label": "L'ATELIER INFORMATIQUE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "ladbrokeshub.be",
+    "label": "LADBROKES",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "lcl.be",
+    "label": "LCL BELGIUM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "canterbury.nl",
+    "label": "LE CANTERBURY",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "monde.be",
+    "label": "LE MONDE EST PETIT - LE MONDE EST PETIT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "lehibou.be",
+    "label": "LEHIBOU BELGIQUE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "templiers.be",
+    "label": "LES TEMPLIERS - LES TEMPLIERS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "liftexpress.be",
+    "label": "LOCA - LIFT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "lpt.com",
+    "label": "LPT BELGIQUE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "mack.com",
+    "label": "MACK CONSULTING",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "makita.be",
+    "label": "MAKITA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "martinshotels.com",
+    "label": "MARTIN'S HOTELS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "minor.com",
+    "label": "MINOR-NDAKO & JUNA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "move.com",
+    "label": "MOVE JOBS - Move Jobs Menen",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "maloma.com",
+    "label": "MÀLOMA - MÀLOMA",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "nationaal.be",
+    "label": "NATIONAAL MULTIPLE SCLEROSE CENTRUM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "neworch.com",
+    "label": "NEWORCH BELGIUM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "nursingcareathome.be",
+    "label": "NURSING CARE AT HOME",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "oostrem.be",
+    "label": "OOSTREM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "peetersgovers.be",
+    "label": "PEETERS GOVERS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "pierret.com",
+    "label": "PIERRET",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "plateforme.com",
+    "label": "PLATEFORME",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "q-park.be",
+    "label": "Q-PARK BELGIUM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "qualityseekers.be",
+    "label": "QUALITY SEEKERS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "quantaedge.be",
+    "label": "QUANTA EDGE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "repos.be",
+    "label": "REPOS FLEURI",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "residence.com",
+    "label": "RESIDENCE DU FORT - RESIDENCE DU FORT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "russo.eu",
+    "label": "Russo, Sebastiano - Le Monteco",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "schleiper.com",
+    "label": "SCHLEIPER",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "ardennes.com",
+    "label": "SERVICES ARDENNES - RESIDENCE DES ARDENNES",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "siemens.be",
+    "label": "SIEMENS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "sipres.be",
+    "label": "SIPRES",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "skills.be",
+    "label": "SKILLS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "sode.com",
+    "label": "SODE HOTEL LA WOLUWE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "halle.be",
+    "label": "STAD HALLE",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "stevens.be",
+    "label": "STEVENS RETAIL",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "stijn.be",
+    "label": "STIJN",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "talentsquare.com",
+    "label": "TALENTSQUARE INTERIM - TALENTSQUARE INTERIM",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "tinco.be",
+    "label": "TINCO",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "toitures.com",
+    "label": "Toitures DESTRUMENT - TOITURES DESTRUMENT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "eycken.com",
+    "label": "VAN EYCKEN METAL CONSTRUCTION",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "coppensverhuizingen.be",
+    "label": "VERHUIZINGEN COPPENS",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "bilt.living",
+    "label": "WONEN EN WERKEN VOOR PERSONEN MET AUTISME",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "work-perfect.com",
+    "label": "WORK PERFECT",
+    "offres_portails": 3
+   },
+   {
+    "domaine": "mecasoft.ch",
+    "label": "mecanic systems - MECANIC SYSTEMS",
+    "offres_portails": 3
+   }
+  ]
+ }
+}

@@ -87,6 +87,8 @@ _TITRES_LISTE = [
     r"\b(?:emplois?|jobs?)\s+(?:pour|voor|in|à|a|en)\b",
     r"\b(?:jobs|emplois|vacatures|vacancies|offres)\s*$",          # « Legal Jobs » : une rubrique
     r"^\s*(?:all|alle|tous|toutes)\s+(?:jobs|vacatures|emplois|offres)\b",  # « All jobs everywhere »
+    r"\b(?:jobs|vacatures|emplois|offres)\s*(?:&|et|en|and|/)\s*(?:jobs|vacatures|emplois|offres)\b",  # « Jobs & vacatures »
+    r"\b(?:sollicitatieproces|processus de (?:candidature|recrutement)|recruitment process|application process)\b",
     r"^\s*(?:accueil|home|contact|actualit|news|login|connexion)\b",
     r"^\s*(?:faq|charte|atouts|procédure|procedure|résultats? de recherche|zoekresultaten|search results|"
     r"travailler (?:à|au|aux|chez|pour)|werken (?:bij|voor)|working at|candidature spontanée|"
@@ -209,8 +211,11 @@ def _titre(soupe: BeautifulSoup) -> str:
     for cand in ((og.get("content") if og else ""), (soupe.h1.get_text() if soupe.h1 else ""),
                  (soupe.title.get_text() if soupe.title else "")):
         t = _clean(html.unescape(cand or ""))
-        t = re.split(r"\s+[|\-–—]\s+", t)[0].strip() if len(t) > 60 else t
-        if t and not any(r.search(t) for r in _RE_TITRES_LISTE):
+        premier = re.split(r"\s+[|\-–—]\s+", t)[0].strip()
+        t = premier if len(t) > 60 else t
+        # Le garde-fou s'applique au titre entier et a son premier segment
+        # (« Afdelingshoofd Jobs & vacatures | Tempo-Team » n'est pas une offre).
+        if t and not any(r.search(t) or r.search(premier) for r in _RE_TITRES_LISTE):
             return t[:200]
     return ""
 
