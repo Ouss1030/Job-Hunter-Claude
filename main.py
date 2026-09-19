@@ -702,6 +702,33 @@ def select_candidate_jobs(pre_scored_jobs):
 # DETAIL ROUTER
 # ============================================================
 
+# 19/09/2026 : connecteurs anciens dont la collecte lit deja la page de l'offre
+# (fiche complete en description) mais qui ne le declarent pas eux-memes.
+# Verifie source par source ce jour : texte stocke retrouve mot pour mot sur
+# la page en ligne (Adecco, Manpower, Agilitas, Michael Page, Oxford Global,
+# Eurogentec, Qjobs, Pauwels, IRE, BioWin, Synergie, VUB, Umicore, Trasis,
+# Saint-Luc, Odoo, Kela, Hyloris, Capgemini, Biopark, Agfa, Let's Work,
+# Randstad student, Synergie student) ou lecture du module (Start People et
+# StudentJob : HTML brut d'une API ; Medpace et TMC : JSON-LD de la fiche ;
+# N-SIDE : annonce via API ; Cerba et AGO : texte de la page). Sans cette
+# liste, « source sans enrichisseur » les laissait provisoires depuis toujours.
+# La longueur decide ensuite (Matcher V5.1 : >= 700 HIGH, >= 250 MEDIUM).
+#
+# Exclus sciemment : JOOBLE (extraits d'API, 300 car.), KONVERT /
+# KONVERT_STUDENT / TEMPO_TEAM_STUDENT / BPOST (une page de liste stockee
+# comme offre : la declarer fiable ferait scorer une liste de titres),
+# UZ_BRUSSEL / SDWORX_STAFFING (completion manuelle, textes courts), TEMPO_TEAM
+# (seule offre disparue, non verifiable).
+SOURCES_FICHE_LUE_A_LA_COLLECTE = frozenset({
+    "ADECCO", "MANPOWER", "AGILITAS", "START_PEOPLE", "MICHAEL_PAGE", "AGO",
+    "SYNERGIE", "LETS_WORK", "OXFORD_GLOBAL", "QJOBS",
+    "RANDSTAD_STUDENT", "START_PEOPLE_STUDENT", "SYNERGIE_STUDENT", "STUDENTJOB_BE",
+    "EUROGENTEC", "PAUWELS", "MEDPACE", "IRE", "BIOWIN", "VUB_JOBS", "UMICORE",
+    "TRASIS", "SAINT_LUC", "ODOO", "NSIDE", "KELA_VETERINARIA", "HYLORIS", "CERBA",
+    "CAPGEMINI_ENG", "BIOPARK", "AGFA", "TMC",
+})
+
+
 def get_job_detail(job):
     source = get_job_source(job)
 
@@ -1153,6 +1180,18 @@ def get_job_detail(job):
     # On ne se fie qu'a une declaration explicite du connecteur : un
     # connecteur muet (Oracle Cloud, agences, Jooble...) reste provisoire, et
     # un connecteur qui a declare une fiche trop courte (success=False) aussi.
+    if source in SOURCES_FICHE_LUE_A_LA_COLLECTE:
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {},
+                "from_cache": True,
+                "error": None,
+            }
+
     if getattr(job, "detail_enrichment_success", None) is True:
         text = clean_value(getattr(job, "description", ""))
         if text:

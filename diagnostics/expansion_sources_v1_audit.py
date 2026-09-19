@@ -488,6 +488,24 @@ def main():
                        and not d_muet["success"] and _conf(j_muet)["provisional"],
                        str((d_ok["success"], _conf(j_ok)["level"], d_court["error"], d_muet["error"]))))
 
+    # Connecteurs anciens verifies le 19/09/2026 (fiche lue a la collecte, jamais declaree) : liste explicite ;
+    # les pages de liste stockees comme offres (Konvert, bpost...) et les extraits Jooble restent provisoires.
+    def _src(src, n):
+        return _JO(source=src, external_id="1", title="t", company="c", location="l", description="x" * n, url="u",
+                   date_published=None, contract_type=None, language=None, salary=None, date_collected="d")
+    def _niveau(src, n):
+        j = _src(src, n); d = _main.get_job_detail(j)
+        j.detail_enrichment_attempted = True; j.detail_enrichment_success = bool(d["success"]); j.detail_matching_text_length = d["matching_text_length"]
+        return _conf(j)["level"], _conf(j)["provisional"]
+    attendu = {("ADECCO", 1800): ("HIGH", False), ("START_PEOPLE", 2300): ("HIGH", False), ("TMC", 646): ("MEDIUM", False),
+               ("LETS_WORK", 200): ("LOW", True), ("KONVERT", 12000): ("LOW", True), ("JOOBLE", 304): ("LOW", True),
+               ("BPOST", 3800): ("LOW", True), ("TEMPO_TEAM_STUDENT", 19000): ("LOW", True)}
+    obtenu = {k: _niveau(*k) for k in attendu}
+    tests.append(check("Chemin de lecture : SOURCES_FICHE_LUE_A_LA_COLLECTE (32 connecteurs anciens verifies) -> la longueur decide "
+                       "(1800 HIGH, 646 MEDIUM, 200 LOW) ; Konvert / bpost / Tempo-Team student / Jooble restent provisoires",
+                       obtenu == attendu and len(_main.SOURCES_FICHE_LUE_A_LA_COLLECTE) == 32,
+                       str({k: v for k, v in obtenu.items() if v != attendu[k]}) + f" | {len(_main.SOURCES_FICHE_LUE_A_LA_COLLECTE)} sources"))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl
