@@ -97,6 +97,17 @@ Reste à faire : trier les sites HTML de 2b (le moteur V1.2 le fera seul pour le
 | HTML V1.2 : le tri par collecte réelle est dans le moteur (postuler/profil obligatoires, titre ≥ 5, sonde de 5 pages, 2 offres distinctes). | Les campagnes suivantes n'ont plus besoin de tri manuel. |
 | BCE tranche 2b (NACE 62/63, 3 358 domaines, personnes morales) : ~50 sources, surtout des ESN — Infocura, Faktion, Ontoforce, Timefold, Nviso 29, Cipal Schaubroeck 13. | **joobs.be** repéré : agrégateur de 38 696 offres qui republie **VDAB** (24 liens sortants sur 8 pages) et le Forem, avec JSON-LD complet. C'est la voie vers la Flandre que VDAB interdit en direct ; désactivé pour l'instant (38 k pages à lire, profil francophone), à rouvrir si la Flandre devient une cible. |
 
+## Étape 12 — 19/09/2026 : le chemin de lecture, ou pourquoi l'expansion n'arrivait pas au pool
+
+Le run du 18/09 (1 h 45, pool 150) a montré que la correction « confiance du Matcher » de l'étape 11 n'avait rien changé : Workday / SuccessFactors toujours 0 APPLY. Les indicateurs étaient pourtant en base — pour les offres que l'enrichissement n'avait **pas** touchées.
+
+| Constat | Correction |
+|---|---|
+| `main.get_job_detail()` a une branche par source historique et répond « source sans enrichisseur » à toute autre ; juste après, `enrich_standard_candidates` écrase alors ce que le connecteur avait déclaré (`success=False`, longueur 0) → « provisoire » → plafonné à VERIFY. Preuve : les « échecs » à description ≥ 700 car. sont exactement les candidates du dernier run (Workday 112/112, SuccessFactors 494/494, JSON-LD 714/714). Sur l'export gate du 18/09 : **271 offres bloquées pour cette seule raison, 107 à score ≥ 65, 5 à 100**. | Branche générique avant le repli : si le connecteur a déclaré la fiche complète (`detail_enrichment_success is True`), la description sert de texte de matching, sans réseau. Muet ou fiche courte : inchangé. |
+| 52 de ces 107 venaient de connecteurs plus anciens (Adecco, Manpower, Start People, Michael Page, Oxford Global, Eurogentec, IRE, Medpace…) qui lisent la page de l'offre mais ne le déclarent pas : provisoires **depuis toujours**, sans que personne le voie. | Vérification source par source (texte stocké retrouvé mot pour mot sur la page en ligne, ou lecture du module pour les pages JavaScript) → liste explicite `SOURCES_FICHE_LUE_A_LA_COLLECTE` (32 sources). Exclus : Jooble (extraits), Konvert / Tempo-Team student / bpost (**une page de liste stockée comme offre** — à nettoyer), UZ Brussel / SD Worx (textes courts). |
+
+Rejeu des 271 sur l'export du 18/09 avec les deux corrections : **53 APPLY, 203 STRETCH, 15 inchangées** (Jooble, Tempo-Team, textes courts). Les indicateurs en base se réparent d'eux-mêmes à la prochaine collecte de chaque offre (`COALESCE` à l'upsert). Audit 59/59.
+
 ## Hors périmètre, et pourquoi
 
 LinkedIn, Indeed, StepStone, Jobat en direct : anti-bot ou conditions d'utilisation. Le projet ne contourne rien. StepStone, Jobat et Références republient déjà vers Forem/Actiris : ils sont absorbés par là. Une URL d'offre isolée collée par l'utilisateur passe par `extraire_offre(url)` (JSON-LD) ou par l'ATSDetector, sans scraping de liste.
