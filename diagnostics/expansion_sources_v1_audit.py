@@ -464,6 +464,30 @@ def main():
                        and j_court.detail_enrichment_attempted and not j_court.detail_enrichment_success and len(appellent) == 6,
                        str(appellent)))
 
+    # Chemin de lecture (19/09/2026) : main.get_job_detail() n'avait pas de branche pour ces sources et
+    # forcait success=False apres la collecte -> « provisoire » -> VERIFY. Il doit honorer la declaration.
+    import io, contextlib
+    with contextlib.redirect_stdout(io.StringIO()):
+        import main as _main
+    from matching.basic_matcher_v51 import evaluate_confidence as _conf
+    def _wd(desc, succes):
+        j = _JO(source="WORKDAY", external_id="acme:1", title="t", company="c", location="l", description=desc, url="u",
+                date_published=None, contract_type=None, language=None, salary=None, date_collected="d")
+        j.detail_enrichment_attempted = True; j.detail_enrichment_success = succes; j.detail_matching_text_length = len(desc)
+        return j
+    j_ok, j_court, j_muet = _wd("x" * 900, True), _wd("x" * 100, False), _wd("x" * 900, None)
+    d_ok, d_court, d_muet = (_main.get_job_detail(j) for j in (j_ok, j_court, j_muet))
+    # ce que fait enrich_standard_candidates avec la reponse, puis ce qu'en conclut le Matcher
+    j_ok.detail_enrichment_success = bool(d_ok["success"]); j_ok.detail_matching_text_length = int(d_ok["matching_text_length"])
+    j_muet.detail_enrichment_success = bool(d_muet["success"]); j_muet.detail_matching_text_length = int(d_muet["matching_text_length"])
+    tests.append(check("Chemin de lecture : get_job_detail honore la declaration du connecteur (900 declare -> succes, HIGH, sans reseau) ; "
+                       "fiche courte declaree et connecteur muet restent « sans enrichisseur » (provisoire)",
+                       d_ok["success"] and d_ok["matching_text_length"] == 900 and d_ok["from_cache"]
+                       and _conf(j_ok)["level"] == "HIGH" and not _conf(j_ok)["provisional"]
+                       and not d_court["success"] and "sans enrichisseur" in d_court["error"]
+                       and not d_muet["success"] and _conf(j_muet)["provisional"],
+                       str((d_ok["success"], _conf(j_ok)["level"], d_court["error"], d_muet["error"]))))
+
     # iCIMS (16/09/2026) : liste paginee puis JSON-LD par page
     from sources import icims_v1 as ic
     from sources import jsonld_sitemap_v1 as jl

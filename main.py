@@ -1142,6 +1142,29 @@ def get_job_detail(job):
             use_cache=True,
         )
 
+    # 19/09/2026 : les connecteurs de l'expansion (Workday, SuccessFactors,
+    # Recruitee, Phenom, Greenhouse, Workable, JSON-LD, HTML, Teamtailor,
+    # Jobtoolz...) lisent la fiche complete a la collecte et le declarent
+    # (ats_public_v2._offre / declarer_detail). Sans cette branche, « source
+    # sans enrichisseur » forcait success=False juste apres, le Matcher voyait
+    # « provisoire » et le gate plafonnait a VERIFY : le 18/09, 107 offres a
+    # score >= 65 (dont 5 a 100) bloquees pour cette seule raison.
+    #
+    # On ne se fie qu'a une declaration explicite du connecteur : un
+    # connecteur muet (Oracle Cloud, agences, Jooble...) reste provisoire, et
+    # un connecteur qui a declare une fiche trop courte (success=False) aussi.
+    if getattr(job, "detail_enrichment_success", None) is True:
+        text = clean_value(getattr(job, "description", ""))
+        if text:
+            return {
+                "success": True,
+                "matching_text": text,
+                "matching_text_length": len(text),
+                "structured": {},
+                "from_cache": True,
+                "error": None,
+            }
+
     return {
         "success": False,
         "matching_text": "",
